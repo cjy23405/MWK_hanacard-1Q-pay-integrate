@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-agree-terms">약관 동의</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 약관 동의 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-agree-terms">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">약관에 동의합니다.</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-select-multiple-list">
+									<div class="ui-select-multiple-item type-all">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox-all" data-checkbox-group="selectCheckbox" />
+											<label for="selectCheckbox-all" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">약관 전체 동의 (선택적 동의 포함)</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-terms">
+										<div class="ui-select-terms-list-group">
+											<div class="ui-select-terms-list js-ui-accordion">
+												<div class="ui-select-terms-item js-ui-accordion__item" data-initial-open="true">
+													<div class="ui-checkbox-block type-large">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2" data-checkbox-group-child="selectCheckbox" data-checkbox-group="selectCheckbox1-2" />
+														<label for="selectCheckbox1-2" class="ui-label">
+															<span class="ui-checkbox-object"></span>
+															<span class="ui-label-text">휴대폰 인증 동의</span>
+														</label>
+														<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+															<span class="for-a11y">
+																상세내용
+																<span class="open-text">열기</span>
+																<span class="close-text">닫기</span>
+															</span>
+														</button>
+													</div>
+													<div class="ui-select-terms-layer js-ui-accordion__layer">
+														<div class="ui-select-terms-contents">
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2-1" data-checkbox-group-child="selectCheckbox1-2" data-checkbox-group="selectCheckbox1-2-1" />
+																	<label for="selectCheckbox1-2-1" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인정보 제공 및 인증</span>
+																	</label>
+																	<button type="button" class="ui-arrow">
+																		<span class="for-a11y">약관 상세 보기</span>
+																	</button>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2-2" data-checkbox-group-child="selectCheckbox1-2" />
+																	<label for="selectCheckbox1-2-2" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">고유식별정보 처리</span>
+																	</label>
+																	<button type="button" class="ui-arrow">
+																		<span class="for-a11y">약관 상세 보기</span>
+																	</button>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2-3" data-checkbox-group-child="selectCheckbox1-2" />
+																	<label for="selectCheckbox1-2-3" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">통신사 이용약관</span>
+																	</label>
+																	<button type="button" class="ui-arrow">
+																		<span class="for-a11y">약관 상세 보기</span>
+																	</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="ui-select-terms-list js-ui-accordion">
+												<div class="ui-select-terms-item js-ui-accordion__item" data-initial-open="true">
+													<div class="ui-checkbox-block type-large">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3" data-checkbox-group-child="selectCheckbox" data-checkbox-group="selectCheckbox1-3" />
+														<label for="selectCheckbox1-3" class="ui-label">
+															<span class="ui-checkbox-object"></span>
+															<span class="ui-label-text">개인(신용)정보 필수 동의서 전체동의</span>
+														</label>
+														<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+															<span class="for-a11y">
+																상세내용
+																<span class="open-text">열기</span>
+																<span class="close-text">닫기</span>
+															</span>
+														</button>
+													</div>
+													<div class="ui-select-terms-layer js-ui-accordion__layer">
+														<p class="paragraph default-text">
+															귀하는 개인신용정보 수집&middot;이용, 조회 및 제공 동의에 대해 거부하실 수 있습니다. 다만, 개인(신용) 정보 수집&middot;이용, 조회 및 제공에 관한 동의는 상거래관계의 설정,
+															유지에 필수적이거나, 상거래관계에 따라 귀하에게 제공되는 서비스와 직접적으로 관련된 필수적 사항이므로, 아래의 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가
+															가능합니다.
+														</p>
+														<div class="ui-select-terms-contents">
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-1" data-checkbox-group-child="selectCheckbox1-3" data-checkbox-group="selectCheckbox1-3-1" />
+																	<label for="selectCheckbox1-3-1" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인(신용)정보 필수적 수집, 이용에 관한 사항</span>
+																	</label>
+																	<button type="button" class="ui-arrow">
+																		<span class="for-a11y">약관 상세 보기</span>
+																	</button>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-1-1" data-checkbox-group-child="selectCheckbox1-3-1" />
+																		<label for="selectCheckbox1-3-1-1" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">
+																				본인은 상기 목적으로 고유식별정보를 처리하는 것에 동의합니다.<br />
+																				- 고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호
+																			</span>
+																		</label>
+																	</div>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-1-2" data-checkbox-group-child="selectCheckbox1-3-1" />
+																		<label for="selectCheckbox1-3-1-2" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">
+																				본인은 상기 목적으로 개인신용정보 수집·이용에 동의합니다.<br />
+																				- 개인신용정보 : 일반개인정보, 신용거래정보, 신용도 판단정보, 신용능력정보, 공공정보 등
+																			</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-2" data-checkbox-group-child="selectCheckbox1-3" data-checkbox-group="selectCheckbox1-3-2" />
+																	<label for="selectCheckbox1-3-2" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인(신용)정보 조회에 관한 사항</span>
+																	</label>
+																	<button type="button" class="ui-arrow">
+																		<span class="for-a11y">약관 상세 보기</span>
+																	</button>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-2-1" data-checkbox-group-child="selectCheckbox1-3-2" />
+																		<label for="selectCheckbox1-3-2-1" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">
+																				본인은 상기 목적으로 고유식별정보를 처리하는 것에 동의합니다.<br />
+																				- 고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호
+																			</span>
+																		</label>
+																	</div>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-2-2" data-checkbox-group-child="selectCheckbox1-3-2" />
+																		<label for="selectCheckbox1-3-2-2" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">
+																				본인은 상기 목적으로 개인신용정보 수집·이용에 동의합니다.<br />
+																				- 개인신용정보 : 일반개인정보, 신용거래정보, 신용도 판단정보, 신용능력정보, 공공정보 등
+																			</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3" data-checkbox-group-child="selectCheckbox1-3" data-checkbox-group="selectCheckbox1-3-3" />
+																	<label for="selectCheckbox1-3-3" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인(신용)정보 제공에 관한 사항</span>
+																	</label>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-1" data-checkbox-group-child="selectCheckbox1-3-3" data-checkbox-group="selectCheckbox1-3-3-1" />
+																		<label for="selectCheckbox1-3-3-1" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">종합신용정보집중기관 및 신용정보회사에 개인(신용)정보 제공</span>
+																		</label>
+																		<button type="button" class="ui-arrow">
+																			<span class="for-a11y">약관 상세 보기</span>
+																		</button>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-1-1" data-checkbox-group-child="selectCheckbox1-3-3-1" />
+																			<label for="selectCheckbox1-3-3-1-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">
+																					본인은 상기 목적으로 고유식별정보를 처리하는 것에 동의합니다.<br />
+																					- 고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호
+																				</span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-1-2" data-checkbox-group-child="selectCheckbox1-3-3-1" />
+																			<label for="selectCheckbox1-3-3-1-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">
+																					본인은 상기 목적으로 개인신용정보 수집·이용 에 동의합니다.<br />
+																					- 개인신용정보 : 일반개인정보, 신용거래정보, 신용도 판단정보, 신용능력정보, 공공정보 등
+																				</span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-2" data-checkbox-group-child="selectCheckbox1-3-3" data-checkbox-group="selectCheckbox1-3-3-2" />
+																		<label for="selectCheckbox1-3-3-2" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">여신금융협회 등에 개인(신용)정보 제공</span>
+																		</label>
+																		<button type="button" class="ui-arrow">
+																			<span class="for-a11y">약관 상세 보기</span>
+																		</button>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-2-1" data-checkbox-group-child="selectCheckbox1-3-3-2" />
+																			<label for="selectCheckbox1-3-3-2-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">
+																					본인은 상기 목적으로 고유식별정보를 처리하는 것에 동의합니다.<br />
+																					- 고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호
+																				</span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-2-2" data-checkbox-group-child="selectCheckbox1-3-3-2" />
+																			<label for="selectCheckbox1-3-3-2-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">
+																					본인은 상기 목적으로 개인신용정보 수집·이용 에 동의합니다.<br />
+																					- 개인신용정보 : 일반개인정보, 신용거래정보, 신용도 판단정보, 신용능력정보, 공공정보 등
+																				</span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-4" data-checkbox-group-child="selectCheckbox1-3" data-checkbox-group="selectCheckbox1-3-4" />
+																	<label for="selectCheckbox1-3-4" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인(신용)정보의 제공(위탁)에 관한 사항</span>
+																	</label>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-4-1" data-checkbox-group-child="selectCheckbox1-3-4" />
+																		<label for="selectCheckbox1-3-4-1" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">
+																				본인은 귀사가 상기 목적으로 다음과 같은 본인의 개인(신용)정보를 제공하는데 동의합니다. (개인(신용)정보 : 성명, 연락처, 생년월일, 차량구입정보(신청금액,
+																				차량브랜드, 차종, 차량가격)
+																			</span>
+																		</label>
+																		<button type="button" class="ui-arrow">
+																			<span class="for-a11y">약관 상세 보기</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-5" data-checkbox-group-child="selectCheckbox1-3" />
+																	<label for="selectCheckbox1-3-5" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">취급관련 권한위임 및 정보제공 동의</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="ui-select-terms-list js-ui-accordion">
+												<div class="ui-select-terms-item js-ui-accordion__item" data-initial-open="true">
+													<div class="ui-checkbox-block type-large">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4" data-checkbox-group-child="selectCheckbox" data-checkbox-group="selectCheckbox1-4" />
+														<label for="selectCheckbox1-4" class="ui-label">
+															<span class="ui-checkbox-object"></span>
+															<span class="ui-label-text">개인(신용)정보 필수 동의서 전체동의</span>
+														</label>
+														<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+															<span class="for-a11y">
+																상세내용
+																<span class="open-text">열기</span>
+																<span class="close-text">닫기</span>
+															</span>
+														</button>
+													</div>
+													<div class="ui-select-terms-layer js-ui-accordion__layer">
+														<p class="paragraph default-text">
+															아래 등급은 사생활 침해 위험, 혜택, 명확성 등을 종합적으로 고려하여 동의 내용의 평가등급을 제공하는 제도입니다. (자세한 등급안내 : 1800-1221)
+														</p>
+														<ul class="ranking-tag-list margin-top-10">
+															<li class="ranking-tag-item"><span class="ranking-tag ranking-01">안심</span></li>
+															<li class="ranking-tag-item"><span class="ranking-tag ranking-02">다소안심</span></li>
+															<li class="ranking-tag-item"><span class="ranking-tag ranking-03">보통</span></li>
+															<li class="ranking-tag-item"><span class="ranking-tag ranking-04">신중</span></li>
+															<li class="ranking-tag-item"><span class="ranking-tag ranking-05">주의</span></li>
+														</ul>
+														<div class="ui-select-terms-contents">
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1" data-checkbox-group-child="selectCheckbox1-4" data-checkbox-group="selectCheckbox1-4-1" />
+																	<label for="selectCheckbox1-4-1" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인(신용)정보 수집·이용에 관한 사항</span>
+																	</label>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-1" data-checkbox-group-child="selectCheckbox1-4-1" data-checkbox-group="selectCheckbox1-4-1-1" />
+																		<label for="selectCheckbox1-4-1-1" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">카드·금융상품 안내 및 이용권유를 위한 수집·이용</span>
+																		</label>
+																		<button type="button" class="ui-arrow">
+																			<span class="for-a11y">약관 상세 보기</span>
+																		</button>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-5-1" data-checkbox-group-child="selectCheckbox1-4-1-1" />
+																			<label for="selectCheckbox1-3-5-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">
+																					본인은 상기 목적으로 고유식별정보를 처리하는 것에 동의합니다.<br />
+																					- 고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호
+																				</span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-5-2" data-checkbox-group-child="selectCheckbox1-4-1-1" />
+																			<label for="selectCheckbox1-3-5-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">
+																					본인은 상기 목적으로 개인신용정보 수집·이용에 동의합니다.<br />
+																					- 개인신용정보 : 일반개인정보, 신용거래정보, 신용도 판단정보, 신용능력정보, 공공정보 등
+																				</span>
+																			</label>
+																			<span class="ranking-tag ranking-03">보통</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2" data-checkbox-group-child="selectCheckbox1-4-1" data-checkbox-group="selectCheckbox1-4-1-2" />
+																		<label for="selectCheckbox1-4-1-2" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">카드·금융상품 안내 및 이용권유를 위한 수집·이용</span>
+																		</label>
+																		<button type="button" class="ui-arrow">
+																			<span class="for-a11y">약관 상세 보기</span>
+																		</button>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2-1" data-checkbox-group-child="selectCheckbox1-4-1-2" />
+																			<label for="selectCheckbox1-4-1-2-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">
+																					본인은 상기 목적으로 고유식별정보를 처리하는 것에 동의합니다.<br />
+																					- 고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호
+																				</span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2-2" data-checkbox-group-child="selectCheckbox1-4-1-2" />
+																			<label for="selectCheckbox1-4-1-2-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">
+																					본인은 상기 목적으로 개인신용정보 수집·이용에 동의합니다.<br />
+																					- 개인신용정보 : 일반개인정보, 신용거래정보, 신용도 판단정보, 신용능력정보, 공공정보 등
+																				</span>
+																			</label>
+																			<span class="ranking-tag ranking-03">보통</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-3" data-checkbox-group-child="selectCheckbox1-4-1" data-checkbox-group="selectCheckbox1-4-1-3" />
+																		<label for="selectCheckbox1-4-1-3" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">전자적 전송매체를 통한 광고성 정보수신 동의</span>
+																		</label>
+																		<button type="button" class="ui-arrow">
+																			<span class="for-a11y">약관 상세 보기</span>
+																		</button>
+																	</div>
+																	<div class="ui-select-terms-item-group type-col2">
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-3-1" data-checkbox-group-child="selectCheckbox1-4-1-3" />
+																				<label for="selectCheckbox1-4-1-3-1" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">전화</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-3-2" data-checkbox-group-child="selectCheckbox1-4-1-3" />
+																				<label for="selectCheckbox1-4-1-3-2" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">우편</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-3-3" data-checkbox-group-child="selectCheckbox1-4-1-3" />
+																				<label for="selectCheckbox1-4-1-3-3" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">문자</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-3-4" data-checkbox-group-child="selectCheckbox1-4-1-3" />
+																				<label for="selectCheckbox1-4-1-3-4" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">이메일</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2" data-checkbox-group-child="selectCheckbox1-4" data-checkbox-group="selectCheckbox1-4-2" />
+																	<label for="selectCheckbox1-4-2" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인(신용)정보 제공에 관한 사항</span>
+																	</label>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1" data-checkbox-group-child="selectCheckbox1-4-2" data-checkbox-group="selectCheckbox1-4-2-1" />
+																		<label for="selectCheckbox1-4-2-1" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">하나금융 그룹 내 계열사에 제공</span>
+																		</label>
+																		<button type="button" class="ui-arrow">
+																			<span class="for-a11y">약관 상세 보기</span>
+																		</button>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input
+																				type="checkbox"
+																				class="ui-checkbox"
+																				id="selectCheckbox1-4-2-1-1"
+																				data-checkbox-group-child="selectCheckbox1-4-2-1"
+																				data-checkbox-group="selectCheckbox1-4-2-1-1"
+																			/>
+																			<label for="selectCheckbox1-4-2-1-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">제공계열사</span>
+																			</label>
+																		</div>
+																		<div class="ui-select-terms-item-group type-col2">
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-1-1" data-checkbox-group-child="selectCheckbox1-4-2-1-1" />
+																					<label for="selectCheckbox1-4-2-1-1-1" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">㈜하나은행</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-1-2" data-checkbox-group-child="selectCheckbox1-4-2-1-1" />
+																					<label for="selectCheckbox1-4-2-1-1-2" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">하나증권(주)</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-1-3" data-checkbox-group-child="selectCheckbox1-4-2-1-1" />
+																					<label for="selectCheckbox1-4-2-1-1-3" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">하나캐피탈㈜</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-1-4" data-checkbox-group-child="selectCheckbox1-4-2-1-1" />
+																					<label for="selectCheckbox1-4-2-1-1-4" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">하나생명보험㈜</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-1-5" data-checkbox-group-child="selectCheckbox1-4-2-1-1" />
+																					<label for="selectCheckbox1-4-2-1-1-5" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">하나손해보험㈜</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-1-6" data-checkbox-group-child="selectCheckbox1-4-2-1-1" />
+																					<label for="selectCheckbox1-4-2-1-1-6" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">㈜하나저축은행</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-1-7" data-checkbox-group-child="selectCheckbox1-4-2-1-1" />
+																					<label for="selectCheckbox1-4-2-1-1-7" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">㈜핀크</span>
+																					</label>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item margin-top-4">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-2" data-checkbox-group-child="selectCheckbox1-4-2-1" />
+																			<label for="selectCheckbox1-4-2-1-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">
+																					본인은 상기 목적으로 개인신용정보 수집·이용에 동의합니다.<br />
+																					- 개인신용정보 : 일반개인정보, 신용거래정보, 신용도 판단정보, 신용능력정보, 공공정보 등
+																				</span>
+																			</label>
+																			<span class="ranking-tag ranking-04">신중</span>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item margin-top-4">
+																		<div class="ui-checkbox-block">
+																			<input
+																				type="checkbox"
+																				class="ui-checkbox"
+																				id="selectCheckbox1-4-2-1-3"
+																				data-checkbox-group-child="selectCheckbox1-4-2-1"
+																				data-checkbox-group="selectCheckbox1-4-2-1-3"
+																			/>
+																			<label for="selectCheckbox1-4-2-1-3" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">전자적 전송매체를 통한 광고성 정보수신 동의</span>
+																			</label>
+																		</div>
+																		<div class="ui-select-terms-item-group type-col2">
+																			<div class="ui-select-terms-item type-full">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-3-1" data-checkbox-group-child="selectCheckbox1-4-2-1-3" />
+																					<label for="selectCheckbox1-4-2-1-3-1" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">문자메세지 (SMS,LMS,모바일메시지 등)</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-3-2" data-checkbox-group-child="selectCheckbox1-4-2-1-3" />
+																					<label for="selectCheckbox1-4-2-1-3-2" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">전화</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-3-3" data-checkbox-group-child="selectCheckbox1-4-2-1-3" />
+																					<label for="selectCheckbox1-4-2-1-3-3" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">전자우편(이메일)</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-3-4" data-checkbox-group-child="selectCheckbox1-4-2-1-3" />
+																					<label for="selectCheckbox1-4-2-1-3-4" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">우편,택배 등</span>
+																					</label>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 약관 동의 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-agree-terms');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

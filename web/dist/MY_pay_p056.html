@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">할부수수료율 안내</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">할부수수료율 조회</h2>
+						<div class="page-info">
+							<p class="page-info-text">
+								고객님은 할부수수료 <span class="color-primary">할인</span> 대상입니다.<br />
+								(적용기간 : 2020.00.00~2020.00.00)
+							</p>
+						</div>
+
+						<div class="info-table-area margin-top-35">
+							<table class="info-table">
+								<!-- 2022.04.27 : mod : 문구변경 -->
+								<caption class="for-a11y">
+									구분,할부수수료율,100 원당 할부수수료로 구성된 할부수수료율 안내 표입니다.
+								</caption>
+								<thead>
+									<tr>
+										<th scope="col">구분</th>
+										<th scope="col">할부수수료율</th>
+										<th scope="col">100 원당<br />할부수수료</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2개월</td>
+										<td>
+											연 9.2 %<br />
+											→ <span class="color-primary">연 0.0 %</span>
+										</td>
+										<td class="align-right">
+											월 0.76 원<br />
+											→ <span class="color-primary">연 0.00 원</span>
+										</td>
+									</tr>
+									<tr>
+										<td>3개월</td>
+										<td>
+											연 16.3 %<br />
+											→ <span class="color-primary">연 0.0 %</span>
+										</td>
+										<td class="align-right">
+											월 0.76 원<br />
+											→ <span class="color-primary">연 0.00 원</span>
+										</td>
+									</tr>
+									<tr>
+										<td>4~5개월</td>
+										<td>
+											연 16.3 %<br />
+											→ <span class="color-primary">연 0.0 %</span>
+										</td>
+										<td class="align-right">
+											월 0.76 원<br />
+											→ <span class="color-primary">연 0.00 원</span>
+										</td>
+									</tr>
+									<tr>
+										<td>6~9개월</td>
+										<td>
+											연 16.3 %<br />
+											→ <span class="color-primary">연 0.0 %</span>
+										</td>
+										<td class="align-right">
+											월 0.76 원<br />
+											→ <span class="color-primary">연 0.00 원</span>
+										</td>
+									</tr>
+									<tr>
+										<td>10~11개월</td>
+										<td>
+											연 16.3 %<br />
+											→ <span class="color-primary">연 0.0 %</span>
+										</td>
+										<td class="align-right">
+											월 0.76 원<br />
+											→ <span class="color-primary">연 0.00 원</span>
+										</td>
+									</tr>
+									<tr>
+										<td>12~24개월</td>
+										<td>
+											연 16.3 %<br />
+											→ <span class="color-primary">연 0.0 %</span>
+										</td>
+										<td class="align-right">
+											월 0.76 원<br />
+											→ <span class="color-primary">연 0.00 원</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<ul class="info-list type-outside type-inherit margin-top-25">
+							<li class="info-item font-weight-light">할부수수료 = 할부잔액 × 연간 수수료율 × 월이용일수 ÷ 365 (100원당 할부수수료는 1회차에 부담하셔야 할 예상금액입니다.)</li>
+							<li class="info-item font-weight-light">할부 2개월은 "할부거래에 관한 법률"이 적용되지 않아 할부항변권 및 철회권이 적용되지 않습니다.</li>
+							<li class="info-item font-weight-light">24개월 할부초과 허용업체 : 관광여행사, 악기점, 피아노, 국산신차, 수입차, 법률회계서비스에 한하여 할부거래 허용</li>
+							<li class="info-item font-weight-light">할부 매출은 당사 접수일(매입일)로부터 90일 이전에 취소 접수하셔야 할부수수료를 환급받을 수 있습니다.</li>
+							<li class="info-item font-weight-light">할부 개월수 변경 또는 일시불 할부 전환시에는 일반 할부수수료율이 적용됩니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

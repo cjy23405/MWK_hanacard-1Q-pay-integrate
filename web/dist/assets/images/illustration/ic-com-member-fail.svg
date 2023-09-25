@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <g id="ic-com-member-fail" transform="translate(-133 -166)">
+    <circle id="타원_1315" data-name="타원 1315" cx="45" cy="45" r="45" transform="translate(133 166)" fill="#f8f8f8"/>
+    <path id="교차_46" data-name="교차 46" d="M-1721,8991a10,10,0,0,1,10-10,9.987,9.987,0,0,1,3,.458V8998a4.975,4.975,0,0,1-.834,2.765A10.025,10.025,0,0,1-1711,9001,10,10,0,0,1-1721,8991Z" transform="translate(1907 -8774)" fill="#fff"/>
+    <g id="사각형_11100" data-name="사각형 11100" transform="translate(156 192)" fill="#fff" stroke="#2d3239" stroke-width="2">
+      <rect width="44" height="38" rx="6" stroke="none"/>
+      <rect x="1" y="1" width="42" height="36" rx="5" fill="none"/>
+    </g>
+    <rect id="사각형_11340" data-name="사각형 11340" width="4" height="20" transform="translate(196 204)" fill="#fff"/>
+    <rect id="사각형_6085" data-name="사각형 6085" width="14" height="2" rx="1" transform="translate(179 205)" fill="#2d3239"/>
+    <rect id="사각형_6086" data-name="사각형 6086" width="10" height="2" rx="1" transform="translate(180 210)" fill="#2d3239"/>
+    <rect id="사각형_11102" data-name="사각형 11102" width="2" height="4" rx="1" transform="translate(198 202)" fill="#2d3239"/>
+    <g id="타원_878" data-name="타원 878" transform="translate(165.5 202)" fill="none" stroke="#2d3239" stroke-width="2">
+      <circle cx="4.5" cy="4.5" r="4.5" stroke="none"/>
+      <circle cx="4.5" cy="4.5" r="3.5" fill="none"/>
+    </g>
+    <g id="빼기_157" data-name="빼기 157" transform="translate(11205 -4741.5)" fill="none">
+      <path d="M-11027,4960.5h-2V4958a2,2,0,0,0-2-2h-8a2,2,0,0,0-2,2v2.5h-2V4958a4.005,4.005,0,0,1,4-4h8a4.005,4.005,0,0,1,4,4v2.5Z" stroke="none"/>
+      <path d="M -11027.0009765625 4960.501953125 L -11028.9990234375 4960.5009765625 L -11028.9990234375 4958.0009765625 C -11028.9990234375 4956.8974609375 -11029.896484375 4956 -11031 4956 L -11039.0009765625 4956 C -11040.1025390625 4956 -11040.9990234375 4956.8974609375 -11040.9990234375 4958.0009765625 L -11040.9990234375 4960.5009765625 L -11042.9990234375 4960.5009765625 L -11043 4958.0009765625 C -11043 4955.79443359375 -11041.2060546875 4953.9990234375 -11039.0009765625 4953.9990234375 L -11031 4953.9990234375 C -11028.794921875 4953.9990234375 -11027.0009765625 4955.79443359375 -11027.0009765625 4958.0009765625 L -11027.0009765625 4960.501953125 Z" stroke="none" fill="#2d3239"/>
+    </g>
+    <circle id="타원_1320" data-name="타원 1320" cx="1" cy="1" r="1" transform="translate(162 218)" fill="#2d3239"/>
+    <circle id="타원_1321" data-name="타원 1321" cx="1" cy="1" r="1" transform="translate(176 218)" fill="#2d3239"/>
+    <rect id="사각형_11341" data-name="사각형 11341" width="6" height="4" transform="translate(200 207)" fill="#f8f8f8"/>
+    <circle id="타원_1318" data-name="타원 1318" cx="8" cy="8" r="8" transform="translate(188 209)" fill="#ffd1dc"/>
+    <rect id="사각형_11128" data-name="사각형 11128" width="7" height="4" transform="translate(200 207)" fill="#f8f8f8"/>
+    <g id="타원_1317" data-name="타원 1317" transform="translate(190 209)" fill="none" stroke="#2d3239" stroke-width="2">
+      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+      <circle cx="8.5" cy="8.5" r="7.5" fill="none"/>
+    </g>
+    <rect id="사각형_11126" data-name="사각형 11126" width="2" height="9" rx="1" transform="translate(200.964 213.6) rotate(45)" fill="#2d3239"/>
+    <rect id="사각형_11127" data-name="사각형 11127" width="1.999" height="8.999" rx="1" transform="translate(202.377 219.963) rotate(135)" fill="#2d3239"/>
+  </g>
+</svg>

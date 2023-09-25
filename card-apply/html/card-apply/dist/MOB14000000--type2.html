@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-contents-title">
+							함께 발급 받을 카드의 정보를 <br />
+							선택해주세요.
+						</h2>
+
+						<div class="form-list-wrap">
+							<div class="form-item">
+								<div class="ui-form-title">
+									<strong class="title font-weight-regular">카드 디자인</strong>
+								</div>
+								<!-- DD : 세로형일 때 .type-vertical 클래스 추가 -->
+								<div class="select-design type-vertical">
+									<div class="select-design-thumbs">
+										<ul class="select-design-list">
+											<li class="select-design-item">
+												<div class="select-design-block">
+													<div class="ui-radio-block">
+														<input type="radio" class="ui-radio" name="select-design" id="select-design1" checked />
+														<label for="select-design1" class="ui-label">
+															<!-- DD : 이미지 없을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner"></div>
+															</div>
+															<div class="select-design-title">
+																그림비 한정판<br />
+																(Yellow)
+															</div>
+														</label>
+													</div>
+												</div>
+											</li>
+											<li class="select-design-item">
+												<div class="select-design-block">
+													<div class="ui-radio-block">
+														<input type="radio" class="ui-radio" name="select-design" id="select-design2" />
+														<label for="select-design2" class="ui-label">
+															<!-- DD : 이미지 에러 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<div class="select-design-title">
+																그림비 한정판<br />
+																(여행)
+															</div>
+														</label>
+													</div>
+												</div>
+											</li>
+											<li class="select-design-item">
+												<div class="select-design-block">
+													<div class="ui-radio-block">
+														<input type="radio" class="ui-radio" name="select-design" id="select-design3" />
+														<label for="select-design3" class="ui-label">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<div class="select-design-title">
+																그림비 한정판<br />
+																(Sky)
+															</div>
+														</label>
+													</div>
+												</div>
+											</li>
+											<li class="select-design-item">
+												<div class="select-design-block">
+													<div class="ui-radio-block">
+														<input type="radio" class="ui-radio" name="select-design" id="select-design4" />
+														<label for="select-design4" class="ui-label">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<div class="select-design-title">
+																그림비 한정판<br />
+																(Sky)
+															</div>
+														</label>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="ui-form-title">
+									<strong class="title">브랜드</strong>
+									<button type="button" class="ui-button-help"><span class="for-a11y">(도움말)</span></button>
+								</div>
+								<div class="ui-radio-group type-full card-brand-selector">
+									<div class="ui-form-radio-block type-box">
+										<input type="radio" class="ui-radio js-card-design-scroll" name="radioBox1" id="radioBox1-1" checked />
+										<label for="radioBox1-1" class="ui-label">
+											<span class="card-brand-left">
+												<span class="card-brand-logo">
+													<img src="/mkca20/images/contents/ic-brand-mastercard-off.png" alt="마스터카드" class="img" />
+													<img src="/mkca20/images/contents/ic-brand-mastercard-on.png" alt="마스터카드" class="img selected" />
+												</span>
+												<span class="ui-label-text">mastercard</span>
+											</span>
+											<span class="card-brand-right">
+												<span class="ui-label-text">연회비없음</span>
+											</span>
+										</label>
+									</div>
+									<div class="ui-form-radio-block type-box">
+										<input type="radio" class="ui-radio js-card-design-scroll" name="radioBox1" id="radioBox1-2" />
+										<label for="radioBox1-2" class="ui-label">
+											<span class="card-brand-left">
+												<span class="card-brand-logo">
+													<img src="/mkca20/images/contents/ic-brand-visa-off.png" alt="비자" class="img" />
+													<img src="/mkca20/images/contents/ic-brand-visa-on.png" alt="비자" class="img selected" />
+												</span>
+												<span class="ui-label-text">VISA</span>
+											</span>
+											<span class="card-brand-right">
+												<span class="ui-label-text">15,000원</span>
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="ui-form-title">
+									<strong class="title font-weight-regular">후불교통 기능</strong>
+								</div>
+								<div class="ui-radio-group type-grid type-col2">
+									<div class="ui-form-radio-block type-box">
+										<input type="radio" class="ui-radio" name="radioGrid2" id="radioGrid2-1" />
+										<label for="radioGrid2-1" class="ui-label">
+											<!-- 2022.11.17 : mod : 띄어쓰기 수정 -->
+											<span class="ui-label-text">사용 안함</span>
+										</label>
+									</div>
+									<div class="ui-form-radio-block type-box">
+										<input type="radio" class="ui-radio" name="radioGrid2" id="radioGrid2-2" checked />
+										<label for="radioGrid2-2" class="ui-label">
+											<span class="ui-label-text">사용</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 2022.11.01 : del : '확인해주세요' 삭제 -->
+					</div>
+
+					<div class="page-buttons type-fixed type-no-line">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

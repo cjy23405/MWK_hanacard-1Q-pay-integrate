@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">티머니 교통카드</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-section">
+						<div class="page-section-group">
+							<div class="section-contents">
+								<div class="card-image margin-top-30">
+									<div class="img-area type-240 type-h120">
+										<img src="/images/_dummy/card.png" alt="아멕스 아시아나클럽 카드" onerror="this.parentNode.className += ' is-error';" class="img" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-contents type-card-list">
+						<div class="page-tab-panel">
+							<div class="ui-tab">
+								<ul class="ui-tab-list">
+									<li class="ui-tab-item">
+										<a href="" class="ui-tab-link" role="button">관리</a>
+									</li>
+									<li class="ui-tab-item">
+										<a href="" class="ui-tab-link is-active" role="button" title="현재 메뉴 선택 됨">이용내역</a>
+									</li>
+									<li class="ui-tab-item">
+										<a href="" class="ui-tab-link" role="button">안내</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<p class="ui-notice">최근 3개월까지 조회 가능합니다.</p>
+						<div class="sorting-area">
+							<div class="sorting-contents is-init">
+								<div class="sorting-list">
+									<div class="sorting-item">
+										<div class="ui-radio-block type-tab">
+											<input type="radio" name="sorting" class="ui-radio" id="sorting-1" checked />
+											<label for="sorting-1" class="ui-label">
+												<span class="ui-label-text">5월</span>
+											</label>
+										</div>
+									</div>
+									<div class="sorting-item">
+										<div class="ui-radio-block type-tab">
+											<input type="radio" name="sorting" class="ui-radio" id="sorting-2" />
+											<label for="sorting-2" class="ui-label">
+												<span class="ui-label-text">4월</span>
+											</label>
+										</div>
+									</div>
+									<div class="sorting-item">
+										<div class="ui-radio-block type-tab">
+											<input type="radio" name="sorting" class="ui-radio" id="sorting-3" />
+											<label for="sorting-3" class="ui-label">
+												<span class="ui-label-text">3월</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section">
+							<ul class="usage-default-list">
+								<li class="usage-default-item">
+									<button type="button" class="usage-default-block">
+										<div class="logo-image type-subway">
+											<div class="logo-image-inner"></div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">지하철</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">승차</div>
+												<div class="usage-default-etc-item">을지로3가</div>
+											</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">2022.05.19 18:27:41</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,250 원</div>
+										</div>
+									</button>									
+									
+									<button type="button" class="usage-default-block">
+										<div class="logo-image type-subway">
+											<div class="logo-image-inner"></div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">지하철</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">하차</div>
+												<div class="usage-default-etc-item">을지로3가</div>
+											</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">2022.05.19 18:27:41</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,250 원</div>
+										</div>
+									</button>
+									<button type="button" class="usage-default-block">
+										<div class="logo-image type-subway">
+											<div class="logo-image-inner"></div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">지하철</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">승차</div>
+												<div class="usage-default-etc-item">을지로3가</div>
+											</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">2022.05.19 18:27:41</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,250 원</div>
+										</div>
+									</button>									
+									
+									<button type="button" class="usage-default-block">
+										<div class="logo-image type-subway">
+											<div class="logo-image-inner"></div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">지하철</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">하차</div>
+												<div class="usage-default-etc-item">을지로3가</div>
+											</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">2022.05.19 18:27:41</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,250 원</div>
+										</div>
+									</button>
+									<button type="button" class="usage-default-block">
+										<div class="logo-image type-subway">
+											<div class="logo-image-inner"></div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">지하철</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">승차</div>
+												<div class="usage-default-etc-item">을지로3가</div>
+											</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">2022.05.19 18:27:41</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,250 원</div>
+										</div>
+									</button>									
+									
+									<button type="button" class="usage-default-block">
+										<div class="logo-image type-subway">
+											<div class="logo-image-inner"></div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">지하철</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">하차</div>
+												<div class="usage-default-etc-item">을지로3가</div>
+											</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">2022.05.19 18:27:41</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,250 원</div>
+										</div>
+									</button>
+									<button type="button" class="usage-default-block">
+										<div class="logo-image type-subway">
+											<div class="logo-image-inner"></div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">지하철</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">승차</div>
+												<div class="usage-default-etc-item">을지로3가</div>
+											</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">2022.05.19 18:27:41</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,250 원</div>
+										</div>
+									</button>									
+									
+									<button type="button" class="usage-default-block">
+										<div class="logo-image type-subway">
+											<div class="logo-image-inner"></div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">지하철</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">하차</div>
+												<div class="usage-default-etc-item">을지로3가</div>
+											</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">2022.05.19 18:27:41</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,250 원</div>
+										</div>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<script>
+			$(document)
+				.on('slideCardInit', function (e, i) {
+					// 카드 init 이벤트
+					console.log(i);
+				})
+				.on('slideCardChange', function (e, i) {
+					// 카드 변경 이벤트
+					console.log(i);
+				});
+
+			$(function () {
+				// 주요혜택 아코디언 열림 기능
+				$(document).on('click', '.card-benefit-button', function () {
+					var idx = $(this).data('accordion-target-number') - 1;
+					var $accordion = $(this).closest('.ui-tab-panel').find('.accordion-list');
+					var $target = $accordion.find('.accordion-item').eq(idx);
+					var $targetOpener = $target.find('.accordion-opener');
+					$accordion.uiAccordion('open', $target);
+					setTimeout(function () {
+						$('html, body').animate({ scrollTop: $targetOpener.offset().top - $('.header').outerHeight(true) }, 500, function () {
+							$targetOpener.focus();
+						});
+					}, 500);
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

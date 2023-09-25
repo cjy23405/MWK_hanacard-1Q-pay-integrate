@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">내카드관리</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="slide-card">
+							<div class="slide-card-list">
+								<div class="slide-card-item">
+									<div class="card-detail">
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- DD : 이미지 없을 때 -->
+										<div class="card-image">
+											<div class="card-image-inner"></div>
+										</div>
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- 2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+										<p class="basic-text margin-top-minus-15 js-slide-card-label">KB국민은행 계좌결제(0912)</p>
+										<!-- //2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+									</div>
+								</div>
+								<div class="slide-card-item">
+									<div class="card-detail">
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- DD : 이미지 에러 -->
+										<div class="card-image">
+											<div class="card-image-inner">
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- 2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+										<p class="basic-text margin-top-minus-15 js-slide-card-label">KB국민은행 계좌결제(0912)</p>
+										<!-- //2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+									</div>
+								</div>
+								<div class="slide-card-item">
+									<div class="card-detail">
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- DD : 이미지 있을 때 -->
+										<div class="card-image">
+											<div class="card-image-inner">
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- 2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+										<p class="basic-text margin-top-minus-15 js-slide-card-label">KB국민은행 계좌결제(0912)</p>
+										<!-- //2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+									</div>
+								</div>
+							</div>
+							<!-- 2022.03.04 : mod : 태그 변경 -->
+							<div class="slide-card-pagination"></div>
+							<!-- //2022.03.04 : mod : 태그 변경 -->
+						</div>
+
+						<div class="page-section-group type-line">
+							<div class="total-amount type-no-line margin-bottom-25">
+								<div class="total-amount-head type-text-large type-flex">
+									<div class="total-amount-title type-flexible">잔액</div>
+									<button type="button" class="ui-button type-flex">
+										<span class="basic-text font-weight-medium">조회하기</span>
+										<span class="ui-icon-refresh"><span class="for-a11y">새로고침</span></span>
+									</button>
+								</div>
+								<div class="total-amount-val">210,000 원</div>
+							</div>
+						</div>
+
+						<div class="page-section">
+							<div class="menu-link-area">
+								<ul class="menu-link-list">
+									<li class="menu-link-item"><a href="" class="ui-arrow-block menu-link-button" role="button">이용 내역 조회</a></li>
+									<li class="menu-link-item"><a href="" class="ui-arrow-block menu-link-button" role="button">송금</a></li>
+									<!-- 2022.02.25 텍스트 수정 -->
+									<li class="menu-link-item"><a href="" class="ui-arrow-block menu-link-button" role="button">나만의 카드</a></li>
+									<!-- //2022.02.25 텍스트 수정 -->
+									<li class="menu-link-item"><a href="" class="ui-arrow-block menu-link-button" role="button">대표카드 설정/순서변경/삭제</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="page-section-group">
+							<div class="support-notice-area">
+								<p class="support-notice-title">다른 서비스를 찾으셨나요?</p>
+								<div class="support-notice-contents">
+									<ul class="info-list">
+										<li class="info-item"><a href="../guide-component.html" class="text-underline">컴포넌트 가이드 참조</a></li>
+										<li class="info-item"><a href="../guide-component.html" class="text-underline">컴포넌트 가이드 참조</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(document)
+				.on('slideCardInit', function (e, i) {
+					// 카드 init 이벤트
+					console.log(i);
+				})
+				.on('slideCardChange', function (e, i) {
+					// 카드 변경 이벤트
+					console.log(i);
+				});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

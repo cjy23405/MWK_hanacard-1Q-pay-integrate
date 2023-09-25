@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">교통이용내역</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="total-amount type-no-line margin-bottom-none">
+								<div class="total-amount-head">
+									<span class="total-amount-title">이용금액</span>
+								</div>
+								<div class="total-amount-val">총 300,000 원</div>
+								<div class="total-amount-date">(08.05 ~ 08.11 기준)</div>
+							</div>
+
+							<div class="form-detail margin-top-15">
+								<div class="form-detail-block">
+									<dl class="form-detail-list type-text-default">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">교통</dt>
+											<dd class="form-detail-group"><strong>30,000 원</strong></dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">하이패스</dt>
+											<dd class="form-detail-group"><strong>20,000 원</strong></dd>
+										</div>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="check-range">
+								<button type="button" class="ui-button-down">(08.05 ~ 08.11)&middot;[본인1234]&middot;전체(택시제외)</button>
+							</div>
+
+							<ul class="usage-default-list">
+								<!-- [DD] 조회된 내역이 없는 경우-->
+								<li class="type-none">
+									<p class="item-text">교통카드이용내역이 없습니다.</p>
+								</li>
+								<!--// [DD] 조회된 내역이 없는 경우-->
+
+								<li class="usage-default-item">
+									<div class="usage-default-date">2021.07.20</div>
+									<button type="button" class="usage-default-block">
+										<div class="usage-default-left">
+											<div class="usage-default-title">지하철</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">
+													정자 08:33:39<span class="icon type-right"><span class="for-a11y">출발</span></span
+													>가산디지털단지 09:40:08
+												</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,550 원</div>
+										</div>
+									</button>
+								</li>
+								<li class="usage-default-item">
+									<div class="usage-default-date">2021.07.19</div>
+									<button type="button" class="usage-default-block">
+										<div class="usage-default-left">
+											<div class="usage-default-title">버스(81-1)</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">
+													분당중앙고앞 08:33:39<span class="icon type-right"><span class="for-a11y">출발</span></span
+													>정자역 09:40:08
+												</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,550 원</div>
+										</div>
+									</button>
+
+									<button type="button" class="usage-default-block">
+										<div class="usage-default-left">
+											<div class="usage-default-title">통행료(남산1호터널)</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">
+													동서울 08:33:39<span class="icon type-right"><span class="for-a11y">출발</span></span>
+												</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,550 원</div>
+										</div>
+									</button>
+
+									<button type="button" class="usage-default-block">
+										<div class="usage-default-left">
+											<div class="usage-default-title">후불하이패스(동서울요금소)</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">
+													동서울 08:33:39<span class="icon type-right"><span class="for-a11y">출발</span></span>
+												</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">1,550 원</div>
+										</div>
+									</button>
+
+									<button type="button" class="usage-default-block">
+										<div class="usage-default-left">
+											<div class="usage-default-title">경기32바6458</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">VISA본인 08:33:39</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">3,000 원</div>
+										</div>
+									</button>
+								</li>
+							</ul>
+
+							<div class="use-notice-area js-ui-accordion">
+								<div class="use-notice-item js-ui-accordion__item">
+									<button type="button" class="use-notice-opener js-ui-accordion__opener">
+										이용안내
+										<span class="for-a11y">
+											상세 내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="use-notice-contents js-ui-accordion__layer">
+										<ul class="info-list">
+											<li class="info-item">교통카드이용내역의 거래일 및 거래시간은 한국시각 기준입니다.</li>
+											<li class="info-item">최근 1년 이내 최대 3개월 단위로 후불 교통카드이용내역을 확인할 수 있습니다. 단, BC카드인 경우 최근 3개월 이내 후불 교통카드 이용내역 확인이 가능합니다.</li>
+											<li class="info-item">교통카드 이용대금은 결제일에 따른 일시불/할부 이용기간과 동일하게 적용되어 청구됩니다.</li>
+											<li class="info-item">
+												<div class="indent-block">후불교통카드 요금이 과다 청구된 건과 버스 승/하차 정거장명 및 노선표시 누락건은 한국스마트카드, 이비카드, 마이비로 문의해주시기 바랍니다.</div>
+												<ul class="info-list">
+													<li class="info-item type-indent"><span class="indent">-</span>오류금액 신청 및 환불신청<br />: 한국스마트카드 (1644-008)</li>
+												</ul>
+											</li>
+											<li class="info-item">
+												교통기관의 사정으로 인하여 고객님의 이용 내역이 청구일 이후 당사 앞 전송되었을 경우에는 동일한 날짜에 탑승하신 거래의 경우에도 청구일이 달라질 수 있음을 양지하여 주시기
+												바랍니다.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

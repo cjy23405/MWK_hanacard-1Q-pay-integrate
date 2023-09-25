@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-ars-certification">ARS 인증 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: ARS 인증 -->
+			<!-- 2022.09.02 : mod : layer-wrap에 is-not-background-close 클래스 추가 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide is-not-background-close" data-layer="layer-ars-certification">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2022.11.17 : mod : 문구수정 -->
+								<h2 class="header__title">ARS 인증을 진행해주세요.</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<div class="ars-auth-box">
+										<!-- 2022.11.17 : mod : 문구수정 -->
+										<p class="ars-auth-text">
+											안내 음성에 따라 아래 표시된 <br />
+											인증번호 숫자 2자리를 입력하세요.
+										</p>
+										<div class="ars-auth-number-group">
+											<span class="ars-auth-number-item">5</span>
+											<span class="ars-auth-number-item">2</span>
+										</div>
+										<div class="ars-auth-timer-group">
+											<div class="ars-auth-timer" role="timer" aria-live="off">01:59</div>
+										</div>
+									</div>
+									<!-- 2022.11.17 : mod : 문구수정 -->
+									<p class="ui-notice">
+										<span class="normal-text">수신차단 앱이나 착신전환 기능을 사용할 경우 인증전화를 받을 수 없습니다.</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button">인증 완료</a>
+									</li>
+								</ul>
+								<!-- DD : 인증시간 만료 시 “ARS 재요청” 버튼으로 변경 -->
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">ARS 재요청</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: ARS 인증 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-ars-certification');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

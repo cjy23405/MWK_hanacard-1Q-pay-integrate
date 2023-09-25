@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">타이틀</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents page-contents--integrated-auth">
+						<h2 class="page-title margin-bottom-30">본인인증을 진행해 주세요.</h2>
+
+						<div class="auth-wrap">
+							<div class="auth-select">
+								<div class="auth-select-scroller">
+									<div class="auth-select-inner">
+										<ul class="auth-select-list">
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect1" data-checkbox-tab="authForm1" />
+													<label for="authSelect1" class="auth-select-label">
+														<span class="auth-select-icon type-001"></span>
+														<span class="auth-select-title">휴대폰</span>
+													</label>
+												</div>
+											</li>
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect2" data-checkbox-tab="authForm2" />
+													<label for="authSelect2" class="auth-select-label">
+														<span class="auth-select-icon type-002"></span>
+														<span class="auth-select-title">토스</span>
+													</label>
+												</div>
+											</li>
+											<!-- Case : 토스 disabled (input 에 disabled 속성 추가) -->
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect2Disabled" data-checkbox-tab="authForm2" disabled />
+													<label for="authSelect2Disabled" class="auth-select-label">
+														<span class="auth-select-icon type-002"></span>
+														<span class="auth-select-title">토스</span>
+													</label>
+												</div>
+											</li>
+											<!-- //Case : 토스 disabled (input 에 disabled 속성 추가) -->
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect3" data-checkbox-tab="authForm3" />
+													<label for="authSelect3" class="auth-select-label">
+														<span class="auth-select-icon type-003"></span>
+														<span class="auth-select-title">네이버</span>
+													</label>
+												</div>
+											</li>
+											<!-- Case : 네이버 disabled (input 에 disabled 속성 추가) -->
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect3Disabled" data-checkbox-tab="authForm3" disabled />
+													<label for="authSelect3Disabled" class="auth-select-label">
+														<span class="auth-select-icon type-003"></span>
+														<span class="auth-select-title">네이버</span>
+													</label>
+												</div>
+											</li>
+											<!-- //Case : 네이버 disabled (input 에 disabled 속성 추가) -->
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect4" data-checkbox-tab="authForm4" />
+													<label for="authSelect4" class="auth-select-label">
+														<span class="auth-select-icon type-004"></span>
+														<span class="auth-select-title">PASS</span>
+														<span class="auth-select-use">
+															<span class="auth-select-use-inner">23.01.17 이용</span>
+														</span>
+													</label>
+												</div>
+											</li>
+											<!-- Case : PASS disabled (input 에 disabled 속성 추가) -->
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect4Disabled" data-checkbox-tab="authForm4" disabled />
+													<label for="authSelect4Disabled" class="auth-select-label">
+														<span class="auth-select-icon type-004"></span>
+														<span class="auth-select-title">PASS</span>
+													</label>
+												</div>
+											</li>
+											<!-- //Case : PASS disabled (input 에 disabled 속성 추가) -->
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect5" data-checkbox-tab="authForm5" />
+													<label for="authSelect5" class="auth-select-label">
+														<span class="auth-select-icon type-005"></span>
+														<span class="auth-select-title">하나인증서</span>
+													</label>
+												</div>
+											</li>
+											<!-- Case : 하나인증서 disabled (input 에 disabled 속성 추가) -->
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect5Disabled" data-checkbox-tab="authForm5" disabled />
+													<label for="authSelect5Disabled" class="auth-select-label">
+														<span class="auth-select-icon type-005"></span>
+														<span class="auth-select-title">하나인증서</span>
+													</label>
+												</div>
+											</li>
+											<!-- //Case : 하나인증서 disabled (input 에 disabled 속성 추가) -->
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect6" data-checkbox-tab="authForm6" />
+													<label for="authSelect6" class="auth-select-label">
+														<span class="auth-select-icon type-006"></span>
+														<span class="auth-select-title">원큐페이인증</span>
+													</label>
+												</div>
+											</li>
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect7" data-checkbox-tab="authForm7" />
+													<label for="authSelect7" class="auth-select-label">
+														<span class="auth-select-icon type-007"></span>
+														<span class="auth-select-title">공동인증서</span>
+													</label>
+												</div>
+											</li>
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect8" data-checkbox-tab="authForm8" />
+													<label for="authSelect8" class="auth-select-label">
+														<span class="auth-select-icon type-008"></span>
+														<span class="auth-select-title">카드</span>
+													</label>
+												</div>
+											</li>
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect9" data-checkbox-tab="authForm9" />
+													<label for="authSelect9" class="auth-select-label">
+														<span class="auth-select-icon type-009"></span>
+														<span class="auth-select-title">카드본인확인</span>
+													</label>
+												</div>
+											</li>
+											<li class="auth-select-item">
+												<div class="auth-select-block">
+													<input type="radio" class="auth-select-checkbox" name="authSelect" id="authSelect10" data-checkbox-tab="authForm10" />
+													<label for="authSelect10" class="auth-select-label">
+														<span class="auth-select-icon type-010"></span>
+														<span class="auth-select-title">ARS 인증</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="auth-form">
+								<!-- tab : 휴대폰 -->
+								<div class="auth-form-inner" data-checkbox-tab-panel="authForm1">
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">이름</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="text" class="in-input" title="이름 입력" placeholder="이름 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="id-card">주민등록번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="flex-box">
+																<div class="flex-box-cell type-flexible">
+																	<div class="in-input-block">
+																		<input type="number" pattern="\d*" class="in-input" title="주민등록번호 앞자리 입력" placeholder="생년월일 6자리" data-focus-input-target="id-card" />
+																	</div>
+																</div>
+																<div class="flex-box-dash"></div>
+																<div class="flex-box-cell">
+																	<div class="in-input-block type-no-delete input-width-one">
+																		<input type="number" pattern="\d*" class="in-input" title="주민등록번호 뒤 첫자리 입력" placeholder="" />
+																	</div>
+																</div>
+																<div class="flex-box-cell type-regular-margin">
+																	<div class="flex-box-dot type-id-card-number"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<!-- DD : 주민등록 번호 입력 완료 OR 휴대폰번호 입력 폼 선택 시 통신사 선택 팝업 자동 노출 -->
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="tel">휴대폰 번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="flex-box">
+																<div class="flex-box-cell">
+																	<div class="in-select-block">
+																		<button type="button" class="in-select" title="통신사 선택" data-placeholder="선택" data-focus-input-target="tel"></button>
+																	</div>
+																</div>
+																<div class="flex-box-cell type-flexible">
+																	<div class="in-input-block">
+																		<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="- 없이 입력" data-auto-focus="phone" />
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<!-- //DD : 주민등록 번호 입력 완료 OR 휴대폰번호 입력 폼 선택 시 통신사 선택 팝업 자동 노출 -->
+										</dl>
+									</div>
+								</div>
+								<!-- //tab : 휴대폰 -->
+
+								<!-- tab : 토스 -->
+								<div class="auth-form-inner" data-checkbox-tab-panel="authForm2">
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">이름</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="text" class="in-input" title="이름 입력" placeholder="이름 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">생년월일</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="8자리 숫자 입력(예: 20230101)" placeholder="8자리 숫자 입력(예: 20230101)" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="tel">휴대폰 번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="- 제외하고 입력" data-focus-input-target="tel" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+								<!-- //tab : 토스 -->
+
+								<!-- tab : 네이버 -->
+								<div class="auth-form-inner" data-checkbox-tab-panel="authForm3">
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">이름</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="text" class="in-input" title="이름 입력" placeholder="이름 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">생년월일</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="8자리 숫자 입력(예: 20230101)" placeholder="8자리 숫자 입력(예: 20230101)" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="tel">휴대폰 번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="- 제외하고 입력" data-focus-input-target="tel" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+								<!-- //tab : 네이버 -->
+
+								<!-- tab : PASS -->
+								<div class="auth-form-inner" data-checkbox-tab-panel="authForm4">
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">이름</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="text" class="in-input" title="이름 입력" placeholder="이름 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">생년월일</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="8자리 숫자 입력(예: 20230101)" placeholder="8자리 숫자 입력(예: 20230101)" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<!-- DD : 선택 시 통신사 선택 팝업 자동 노출 -->
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="tel">휴대폰 번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="flex-box">
+																<div class="flex-box-cell">
+																	<div class="in-select-block">
+																		<button type="button" class="in-select" title="통신사 선택" data-placeholder="선택" data-focus-input-target="tel"></button>
+																	</div>
+																</div>
+																<div class="flex-box-cell type-flexible">
+																	<div class="in-input-block">
+																		<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="- 없이 입력" data-auto-focus="phone" />
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<!-- //DD : 선택 시 통신사 선택 팝업 자동 노출 -->
+										</dl>
+									</div>
+								</div>
+								<!-- //tab : PASS -->
+
+								<!-- tab : 하나인증서 -->
+								<div class="auth-form-inner" data-checkbox-tab-panel="authForm5">
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">이름</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="text" class="in-input" title="이름 입력" placeholder="이름 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">생년월일</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="8자리 숫자 입력(예: 20230101)" placeholder="8자리 숫자 입력(예: 20230101)" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="tel">휴대폰 번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="- 제외하고 입력" data-focus-input-target="tel" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+								<!-- //tab : 하나인증서 -->
+
+								<!-- tab : 원큐페이인증 -->
+								<div class="auth-form-inner" data-checkbox-tab-panel="authForm6">
+									<div class="auth-form-info">
+										<p class="auth-form-info-text">
+											원큐페이 앱에서<br />
+											비밀번호 <strong class="color-primary">6자리</strong> 또는 <strong class="color-primary">생체인증</strong>을<br />
+											진행합니다.
+										</p>
+									</div>
+								</div>
+								<!-- //tab : 원큐페이인증 -->
+
+								<!-- tab : 공동인증서 -->
+								<div class="auth-form-inner" data-checkbox-tab-panel="authForm7">
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">이름</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="text" class="in-input" title="이름 입력" placeholder="이름 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<!-- DD : 선택 시 통신사 선택 팝업 자동 노출 -->
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="tel">휴대폰 번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="flex-box">
+																<div class="flex-box-cell">
+																	<div class="in-select-block">
+																		<button type="button" class="in-select" title="통신사 선택" data-placeholder="선택" data-focus-input-target="tel"></button>
+																	</div>
+																</div>
+																<div class="flex-box-cell type-flexible">
+																	<div class="in-input-block">
+																		<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="- 없이 입력" data-auto-focus="phone" />
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<!-- //DD : 선택 시 통신사 선택 팝업 자동 노출 -->
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="id-card">주민등록번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="flex-box">
+																<div class="flex-box-cell type-flexible">
+																	<div class="in-input-block">
+																		<input type="number" pattern="\d*" class="in-input" title="주민등록번호 앞자리 입력" placeholder="생년월일 6자리" data-focus-input-target="id-card" />
+																	</div>
+																</div>
+																<div class="flex-box-dash"></div>
+																<div class="flex-box-cell">
+																	<div class="in-input-block type-no-delete input-width-one">
+																		<input type="number" pattern="\d*" class="in-input" title="주민등록번호 뒤 첫자리 입력" placeholder="" />
+																	</div>
+																</div>
+																<div class="flex-box-cell type-regular-margin">
+																	<div class="flex-box-dot type-id-card-number"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+
+									<div class="auth-form-info margin-top-30">
+										<p class="auth-form-info-text">
+											공동인증서는 <strong class="color-primary">원큐페이</strong> 앱에서<br />
+											이용할 수 있습니다.
+										</p>
+									</div>
+								</div>
+								<!-- //tab : 공동인증서 -->
+
+								<!-- tab : 카드 -->
+								<div class="auth-form-inner" data-checkbox-tab-panel="authForm8">
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<!-- case : 카드선택 시 경우 노출 -->
+											<div class="ui-form-item type-only-select">
+												<dt class="ui-form-key" data-focus-input="name">카드</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-select-block">
+																<button type="button" class="in-select ellipsis" title="카드 선택" data-placeholder="카드 선택" data-focus-input-target="name"></button>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<!-- //case : 카드선택 시 경우 노출 -->
+											<!-- case : 카드번호 직접 입력 시 노출 -->
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">카드번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="카드번호 입력" placeholder="0000-0000-0000-0000" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<!-- //case : 카드번호 직접 입력 시 노출 -->
+											<!-- DD : 카드선택 후 비밀번호만 받는 경우 비노출 -->
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">유효기간</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="유효기간 입력" placeholder="MM/YY" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">CVV번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="password" pattern="\d*" class="in-input" title="CVV번호 입력" placeholder="카드 뒷면 서명란의 3자리 숫자 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<!-- //DD : 카드선택 후 비밀번호만 받는 경우 비노출 -->
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">카드 비밀번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="password" pattern="\d*" class="in-input" title="카드 비밀번호 입력" placeholder="카드 비밀번호 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+								<!-- //tab : 카드 -->
+
+								<!-- tab : 카드본인확인 -->
+								<div class="auth-form-inner" data-checkbox-tab-panel="authForm9">
+									<div class="auth-form-info">
+										<p class="auth-form-info-text">
+											<strong class="color-primary">앱카드</strong> 또는 <strong class="color-primary">카드정보(ARS)</strong>로<br />
+											본인인증을 진행합니다.
+										</p>
+									</div>
+								</div>
+								<!-- //tab : 카드본인확인 -->
+
+								<!-- tab : 카드본인확인 -->
+								<div class="auth-form-inner" data-checkbox-tab-panel="authForm10">
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">이름</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="text" class="in-input" title="이름 입력" placeholder="이름 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="tel">휴대폰 번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="- 제외하고 입력" data-focus-input-target="tel" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+									<div class="auth-form-info margin-top-30">
+										<p class="auth-form-info-text"><strong class="color-primary">ARS 인증</strong>을 진행합니다.</p>
+									</div>
+									<p class="ui-form-notice">수신차단 앱이나 착신전환 기능을 사용할 경우 인증전화를 받을 수 없습니다.</p>
+								</div>
+								<!-- //tab : 카드본인확인 -->
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list" data-checkbox-tab-panel="authForm1, authForm2, authForm3, authForm4, authForm5">
+								<li class="ui-buttons-item">
+									<!-- DD : 필수값 입력 완료 후 버튼에 disabled 삭제 -->
+									<button type="button" class="ui-button ui-basic-button type-primary" disabled>다음</button>
+								</li>
+							</ul>
+							<!-- case : [카드], [공동인증서] 일 경우 -->
+							<ul class="ui-buttons-list" data-checkbox-tab-panel="authForm7, authForm8">
+								<li class="ui-buttons-item">
+									<!-- DD : 필수값 입력 완료 후 버튼에 disabled 삭제 -->
+									<button type="button" class="ui-button ui-basic-button type-primary" disabled>확인</button>
+								</li>
+							</ul>
+							<!-- //case : [카드], [공동인증서] 일 경우 -->
+							<!-- case : [원큐페이인증], [카드본인확인] 일 경우 -->
+							<ul class="ui-buttons-list" data-checkbox-tab-panel="authForm6, authForm9">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+							</ul>
+							<!-- //case : [원큐페이인증], [카드본인확인] 일 경우 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

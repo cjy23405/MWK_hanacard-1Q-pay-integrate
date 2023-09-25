@@ -1,0 +1,22 @@
+<svg data-name="ic_home appliances_size36" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <g data-name="사각형 16469" transform="translate(3 4)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+        <rect width="21" height="29" rx="5" style="stroke:none"/>
+        <rect x=".75" y=".75" width="19.5" height="27.5" rx="4.25" style="fill:none"/>
+    </g>
+    <path data-name="패스 12472" d="M4024.189 831.5h17.08" transform="translate(-4020 -813)" style="fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+    <path data-name="패스 12473" d="M4024.189 831.5h2" transform="translate(-4017.188 -816.5)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+    <path data-name="패스 12474" d="M4024.189 831.5h2" transform="translate(-4017.188 -809.5)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+    <g data-name="사각형 16468" transform="translate(15 11)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+        <rect width="18" height="22" rx="5" style="stroke:none"/>
+        <rect x=".75" y=".75" width="16.5" height="20.5" rx="4.25" style="fill:none"/>
+    </g>
+    <path data-name="패스 12479" d="M4024.188 831.5h1" transform="translate(-4004.688 -816.5)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+    <path data-name="패스 12480" d="M4024.188 831.5h1" transform="translate(-4000.688 -816.5)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+    <path data-name="패스 12481" d="M4024.188 831.5h1" transform="translate(-3996.688 -816.5)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+    <circle data-name="타원 1983" cx="5" cy="5" r="5" transform="translate(21 19)" style="fill:#7dedf3"/>
+    <path data-name="패스 12478" d="M4024.189 831.5h1" transform="translate(-4003.188 -807.5)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+    <g data-name="타원 1982" transform="translate(18 18)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+        <circle cx="6" cy="6" r="6" style="stroke:none"/>
+        <circle cx="6" cy="6" r="5.25" style="fill:none"/>
+    </g>
+</svg>

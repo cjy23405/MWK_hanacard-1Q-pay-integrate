@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59" height="50" viewBox="0 0 59 50">
+    <defs>
+        <filter id="합치기_332" x="11.882" y="31.578" width="18.268" height="15.833" filterUnits="userSpaceOnUse">
+            <feOffset dy="1"/>
+            <feGaussianBlur stdDeviation="1.5" result="blur"/>
+            <feFlood flood-opacity=".149"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="사각형_17458" x="11.204" y="31.668" width="18.088" height="16.422" filterUnits="userSpaceOnUse">
+            <feOffset dy="1"/>
+            <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+            <feFlood flood-opacity=".149"/>
+            <feComposite operator="in" in2="blur-2"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="패스_12992" x=".881" y="-6.405" width="67.765" height="62.593" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur-3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur-3"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="패스_12997" x="13.427" y="31.578" width="16.722" height="12.966" filterUnits="userSpaceOnUse">
+            <feOffset dy="1"/>
+            <feGaussianBlur stdDeviation="1.5" result="blur-4"/>
+            <feFlood flood-opacity=".102"/>
+            <feComposite operator="in" in2="blur-4"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="합치기_334" x="-4.413" y="15.088" width="40.233" height="39.36" filterUnits="userSpaceOnUse">
+            <feOffset dy="1"/>
+            <feGaussianBlur stdDeviation="3" result="blur-5"/>
+            <feFlood flood-opacity=".122"/>
+            <feComposite operator="in" in2="blur-5"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <clipPath id="clip-path">
+            <path id="사각형_17465" data-name="사각형 17465" transform="translate(44 304.203)" style="fill:#f5f4f1" d="M0 0h59v50H0z"/>
+        </clipPath>
+        <clipPath id="clip-path-2">
+            <path id="사각형_17460" data-name="사각형 17460" class="cls-2" d="M0 0h10.88v4.229H0z"/>
+        </clipPath>
+        <clipPath id="clip">
+            <use xlink:href="#fill"/>
+        </clipPath>
+        <style>
+            .cls-13,.cls-2{fill:none}.cls-4{fill:#fff}.cls-6{fill:#525266}.cls-13{stroke:#fff;stroke-width:1.2px}.cls-14{stroke:none}
+        </style>
+    </defs>
+    <g id="img_living_02" transform="translate(-44 -304.203)" style="clip-path:url(#clip-path)">
+        <g id="그룹_13732" data-name="그룹 13732" transform="translate(0 -197.06)">
+            <g transform="translate(44 501.26)" style="filter:url(#합치기_332)">
+                <path id="합치기_332-2" data-name="합치기 332" class="cls-4" d="m-12725.031-1474.514-.125-.31a2.247 2.247 0 0 1 1.242-2.929l.241-.1a2.269 2.269 0 0 1 .033-1.445 3.867 3.867 0 0 0 1.09.057l6.447-.7a2.245 2.245 0 0 1-1.354 2.545l-.243.1a2.246 2.246 0 0 1-1.3 2.77l-3.1 1.255a2.243 2.243 0 0 1-.843.165 2.247 2.247 0 0 1-2.088-1.408z" transform="translate(12741.7 1515.02)"/>
+            </g>
+            <g transform="translate(44 501.26)" style="filter:url(#사각형_17458)">
+                <rect id="사각형_17458-2" data-name="사각형 17458" class="cls-4" width="4.834" height="7.849" rx="2.25" transform="rotate(68 -14.58 34.62)"/>
+            </g>
+            <g transform="translate(44 501.26)" style="filter:url(#패스_12992)">
+                <path id="패스_12992-2" data-name="패스 12992" d="M38.013 24.566 8.655 31.46a3.77 3.77 0 0 1-4.532-2.807L.1 11.528A3.772 3.772 0 0 1 2.909 7L32.267.1A3.77 3.77 0 0 1 36.8 2.908l4.022 17.127a3.77 3.77 0 0 1-2.808 4.531" transform="rotate(22 11.905 55.613)" style="fill:#abaaaa"/>
+            </g>
+            <g id="그룹_13729" data-name="그룹 13729" transform="rotate(7 -1516.585 534.732)">
+                <path id="패스_12993" data-name="패스 12993" class="cls-6" d="M38.013 24.566 8.655 31.46a3.77 3.77 0 0 1-4.532-2.807L.1 11.528A3.772 3.772 0 0 1 2.909 7L32.267.1A3.77 3.77 0 0 1 36.8 2.908l4.022 17.127a3.77 3.77 0 0 1-2.808 4.531" transform="translate(43 313.035)"/>
+                <path id="패스_12994" data-name="패스 12994" d="m10 17.253-3.582.842a1.257 1.257 0 0 1-1.51-.936l-.532-2.266a1.255 1.255 0 0 1 .935-1.51l3.589-.842a1.256 1.256 0 0 1 1.51.936l.533 2.266a1.257 1.257 0 0 1-.943 1.51" transform="translate(44.114 316.244)" style="fill:#d6d6d6"/>
+                <g id="그룹_13725" data-name="그룹 13725" transform="translate(65.241 317.271)" style="isolation:isolate;opacity:.2">
+                    <g id="그룹_13724" data-name="그룹 13724">
+                        <g id="그룹_13723" data-name="그룹 13723" style="clip-path:url(#clip-path-2)">
+                            <path id="사각형_17459" data-name="사각형 17459" class="cls-4" transform="matrix(.974 -.229 .229 .974 0 2.457)" d="M0 0h10.749v1.82H0z"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(44 501.26)" style="filter:url(#패스_12997)">
+                <path id="패스_12997-2" data-name="패스 12997" class="cls-4" d="M.138.645a2.234 2.234 0 0 0 .022 1.6l.126.31A2.249 2.249 0 0 0 3.215 3.8L6.32 2.547A2.246 2.246 0 0 0 7.674 0L1.228.7A3.731 3.731 0 0 1 .138.645" transform="translate(17.93 35.08)"/>
+            </g>
+            <g id="그룹_13731" data-name="그룹 13731" transform="translate(-121.687 -27.373)">
+                <path id="다각형_117" data-name="다각형 117" d="M12.205.93a1.5 1.5 0 0 1 2.176.707l.425 1.036a1.5 1.5 0 0 0 1.273.926l1.112.086a1.5 1.5 0 0 1 1.343 1.847l-.266 1.1a1.5 1.5 0 0 0 .484 1.492l.859.734a1.5 1.5 0 0 1 0 2.281l-.859.734a1.5 1.5 0 0 0-.484 1.492l.266 1.1a1.5 1.5 0 0 1-1.343 1.847l-1.112.086a1.5 1.5 0 0 0-1.273.926l-.425 1.036a1.5 1.5 0 0 1-2.176.707l-.943-.583a1.5 1.5 0 0 0-1.577 0l-.943.583a1.5 1.5 0 0 1-2.176-.707l-.425-1.036a1.5 1.5 0 0 0-1.273-.924l-1.112-.086a1.5 1.5 0 0 1-1.343-1.847l.266-1.1a1.5 1.5 0 0 0-.484-1.492l-.859-.734a1.5 1.5 0 0 1 0-2.281l.859-.734a1.5 1.5 0 0 0 .484-1.492l-.266-1.1a1.5 1.5 0 0 1 1.343-1.85L4.868 3.6a1.5 1.5 0 0 0 1.273-.926l.425-1.036A1.5 1.5 0 0 1 8.742.93l.943.583a1.5 1.5 0 0 0 1.577 0z" transform="translate(168.026 530.283)" style="fill:#93b577"/>
+                <g id="그룹_13730" data-name="그룹 13730" transform="translate(173.704 536.104)" style="opacity:.9;isolation:isolate">
+                    <g id="사각형_17462" data-name="사각형 17462" transform="rotate(45 3.433 9.658)" style="stroke-linecap:round;stroke-width:1.5px;stroke:#fff;fill:#fff">
+                        <rect id="fill" class="cls-14" width="1.202" height="10.416" rx=".601"/>
+                        <path d="M0 .75h1.202M.75 0v10.416m.452-.75H0m.452.75V0" style="clip-path:url(#clip);fill:none"/>
+                    </g>
+                    <g id="타원_2172" data-name="타원 2172" class="cls-13">
+                        <circle class="cls-14" cx="1.992" cy="1.992" r="1.992"/>
+                        <circle class="cls-2" cx="1.992" cy="1.992" r="1.392"/>
+                    </g>
+                    <g id="타원_2173" data-name="타원 2173" class="cls-13" transform="translate(5.609 4.807)">
+                        <circle class="cls-14" cx="1.992" cy="1.992" r="1.992"/>
+                        <circle class="cls-2" cx="1.992" cy="1.992" r="1.392"/>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(44 501.26)" style="filter:url(#합치기_334)">
+                <path id="합치기_334-2" data-name="합치기 334" class="cls-4" d="M-12721.762-1658.53a18.344 18.344 0 0 1 1.913-6.3 29.318 29.318 0 0 1 5.313-5.881l1.517 6.363.464 1.718a38.69 38.69 0 0 0 2.718-1.225l3.874-3.874a2.243 2.243 0 0 1 3.18 0l.425.422a2.253 2.253 0 0 1 0 3.183l-4.528 4.529c-.3 1.247-2.592 6.9-8.1 7.843a6.544 6.544 0 0 1-1.109.1c-5.147-.005-5.667-6.878-5.667-6.878z" transform="rotate(7 -20204.121 103232.184)"/>
+            </g>
+            <rect id="사각형_17464" data-name="사각형 17464" class="cls-6" width="11.463" height="5.665" rx="1" transform="rotate(52 -525.365 317.74)"/>
+        </g>
+    </g>
+</svg>

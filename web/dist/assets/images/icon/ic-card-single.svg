@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-3,.cls-6{stroke:#2d3239;stroke-width:1.5px}.cls-3,.cls-6,.cls-8{fill:none}.cls-6{stroke-linecap:round}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_card_single" transform="translate(-252 -1081)">
+        <g id="그룹_9787" data-name="그룹 9787" transform="translate(1 3.5)">
+            <g id="사각형_13783" data-name="사각형 13783" transform="translate(262 1084.5)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+                <rect class="cls-7" width="22" height="30" rx="5"/>
+                <rect class="cls-8" x=".75" y=".75" width="20.5" height="28.5" rx="4.25"/>
+            </g>
+            <g id="사각형_13784" data-name="사각형 13784" class="cls-3" transform="translate(270.25 1090.5)">
+                <rect class="cls-7" width="5.5" height="5.5" rx="2"/>
+                <rect class="cls-8" x=".75" y=".75" width="4" height="4" rx="1.25"/>
+            </g>
+            <circle id="타원_1812" data-name="타원 1812" cx="6" cy="6" r="6" transform="translate(277 1100.5)" style="fill:#fff"/>
+            <circle id="타원_1811" data-name="타원 1811" cx="5.75" cy="5.75" r="5.75" transform="translate(279.5 1102.5)" style="fill:#7dedf3"/>
+            <g id="타원_1810" data-name="타원 1810" class="cls-3" transform="translate(277 1100.5)">
+                <circle class="cls-7" cx="6.5" cy="6.5" r="6.5"/>
+                <circle class="cls-8" cx="6.5" cy="6.5" r="5.75"/>
+            </g>
+            <path id="선_258" data-name="선 258" class="cls-6" transform="translate(281 1107)" d="M0 0h5"/>
+            <path id="선_259" data-name="선 259" class="cls-6" transform="rotate(90 -410.5 694)" d="M0 0h5"/>
+        </g>
+    </g>
+</svg>

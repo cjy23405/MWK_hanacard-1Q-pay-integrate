@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">공지사항</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- 2022.02.21 : add : 주석 추가 -->
+						<!--
+							DD :
+							개발시 카테고리 .sorting-list 영역 태그 구조
+							- 페이지 이동으로 구현되는 경우 [공통 > 카테고리 탭 > 링크형](_category-tab-type-1.html) 이용
+							- ajax 방식으로 구현되는 경우 [공통 > 카테고리 탭 > radio형](_category-tab-type-2.html) 이용
+						-->
+						<!-- 2021.11.29 : mod : .sorting-area 에 type-top 클래스 값 추가 -->
+						<div class="sorting-area type-top js-ui-accordion" data-focus-open="false">
+							<div class="sorting-inner js-ui-accordion__item">
+								<button type="button" class="sorting-opener js-ui-accordion__opener">
+									<span class="for-a11y">
+										탭 영역
+										<span class="open-text">펼치기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<!-- 2021.11.29 : mod : .sorting-layer 추가 및 js-ui-accordion__layer 클래스 값 위치 변경 -->
+								<div class="sorting-layer js-ui-accordion__layer">
+									<div class="sorting-contents">
+										<div class="sorting-list">
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-all" checked />
+													<label for="sorting-all" class="ui-label">
+														<span class="ui-label-text">전체</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-1" />
+													<label for="sorting-1" class="ui-label">
+														<span class="ui-label-text">약관개정</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-2" />
+													<label for="sorting-2" class="ui-label">
+														<span class="ui-label-text">서비스변경</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-3" />
+													<label for="sorting-3" class="ui-label">
+														<span class="ui-label-text">시스템점검</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-4" />
+													<label for="sorting-4" class="ui-label">
+														<span class="ui-label-text">기타</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //2021.11.29 : mod : .sorting-layer 추가 및 js-ui-accordion__layer 클래스 값 위치 변경 -->
+							</div>
+						</div>
+
+						<div class="search-word-area">
+							<!-- 2022.05.30 : mod : .type-input-group, .type-search-black 클래스 삭제 -->
+							<div class="ui-input-block type-use-delete type-search">
+								<input type="text" class="ui-input" title="검색어 입력" placeholder="검색어를 입력해 주세요." />
+								<button type="button" class="ui-button ui-input-delete">
+									<span class="for-a11y">입력 내용 지우기</span>
+								</button>
+								<!-- 2022.05.18 : mod : 검색 버튼 추가 -->
+								<button type="button" class="ui-button ui-input-search">
+									<span class="for-a11y">검색</span>
+								</button>
+							</div>
+						</div>
+
+						<div class="link-list-area">
+							<div class="link-list">
+								<div class="link-item">
+									<a href="" class="item-block ui-arrow-block" role="button">
+										<!-- 2022.04.14 : mod : 새 게시글일 경우 is-new 클래스 추가 -->
+										<div class="item-title is-new">[약관개정] 단기카드대출(현금서비스), 일부결제금액이월약정(리볼빙) 수수료율 변경 안내</div>
+										<div class="item-info">
+											<span class="item">2021.09.02</span>
+										</div>
+									</a>
+								</div>
+								<div class="link-item">
+									<a href="" class="item-block ui-arrow-block" role="button">
+										<div class="item-title">[서비스변경] 하나카드 마스터패스(Masterpass) 서비스 운영 종료 안내</div>
+										<div class="item-info">
+											<span class="item">2021.09.02</span>
+										</div>
+									</a>
+								</div>
+								<div class="link-item type-none">
+									<p class="item-text">검색결과가 없습니다.</p>
+								</div>
+							</div>
+							<button type="button" class="ui-button ui-button-more">더보기</button>
+						</div>
+
+						<div class="support-notice-area">
+							<p class="support-notice-title">다른 정보가 필요하신가요?</p>
+							<div class="support-notice-contents">
+								<ul class="info-list">
+									<li class="info-item"><a href="../guide-component.html" class="text-underline">컴포넌트 가이드 참조</a></li>
+									<li class="info-item"><a href="../guide-component.html" class="text-underline">컴포넌트 가이드 참조</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<h1 class="header-title">혜택</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-push" role="button"><span class="for-a11y">알림</span></a>
+							<!-- DD : 신규 알림이 있으면 is-new 클래스 값 추가 -->
+							<a href="" class="header-button type-push is-new" role="button"><span class="for-a11y">알림</span></a>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- 2022.03.25 : mod : type-benefit-home 클래스 값 추가 -->
+					<div class="page-contents type-benefit-home">
+						<div class="ui-tab type-nav type-bottom-margin-none">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">기본 혜택</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">받은 혜택</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">실적</a>
+								</li>
+							</ul>
+						</div>
+
+						<h2 class="for-a11y">기본 혜택</h2>
+
+						<!-- 2022.02.25 : mod : 설계서 변경으로 전체 수정 -->
+						<div class="menu-top">
+							<!-- 2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+							<!-- Case : 로그인 후 -->
+							<a href="" class="rating-info is-skeleton">
+								<div class="skeleton-before">
+									<div class="rating-info-text"><span class="skeleton-block"></span>님은 <span class="skeleton-block"></span> 등급입니다.</div>
+								</div>
+								<div class="skeleton-after">
+									<div class="rating-info-text">$김하나$님은 <span class="font-weight-medium color-secondary">$로열$</span> 등급입니다.</div>
+								</div>
+							</a>
+							<!-- //Case : 로그인 후 -->
+							<!-- //2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+
+							<div class="benefit-nav">
+								<ul class="benefit-nav-list">
+									<!-- 2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+									<li class="benefit-nav-item is-skeleton">
+										<a href="" class="benefit-nav-block type-link">
+											<div class="benefit-nav-icon type-1"></div>
+											<div class="benefit-nav-title">내 쿠폰함</div>
+											<div class="benefit-nav-count skeleton-before"><span class="skeleton-block"></span></div>
+											<div class="benefit-nav-count skeleton-after">54</div>
+										</a>
+									</li>
+									<li class="benefit-nav-item is-skeleton">
+										<a href="" class="benefit-nav-block type-link">
+											<div class="benefit-nav-icon type-2"></div>
+											<div class="benefit-nav-title">내 쿠폰함</div>
+											<div class="benefit-nav-count skeleton-before"><span class="skeleton-block"></span></div>
+											<div class="benefit-nav-count skeleton-after">37</div>
+										</a>
+									</li>
+									<!-- //2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+								</ul>
+							</div>
+
+							<!-- Case : 원큐페이 가입 & 로그인 & 카드 미 소지 -->
+							<div class="benefit-empty">
+								<div class="benefit-empty-icon type-1"></div>
+								<div class="benefit-empty-text">
+									나에게 맞는 카드를 찾고,<br />
+									다양한 혜택을 누려보세요.
+								</div>
+								<div class="benefit-empty-button-area">
+									<a href="" class="benefit-empty-button">추천 카드 보기</a>
+								</div>
+							</div>
+							<!-- //Case : 원큐페이 가입 & 로그인 & 카드 미 소지 -->
+
+							<!-- Case : 원큐페이 가입 & 미 로그인 -->
+							<div class="benefit-empty">
+								<div class="benefit-empty-icon type-2"></div>
+								<div class="benefit-empty-text">
+									로그인하고,<br />
+									나만의 혜택을 확인해보세요.
+								</div>
+								<div class="benefit-empty-button-area">
+									<a href="" class="benefit-empty-button">로그인하기</a>
+								</div>
+							</div>
+							<!-- //Case : 원큐페이 가입 & 미 로그인 -->
+
+							<!-- Case : 원큐페이 미 가입 -->
+							<div class="benefit-empty">
+								<div class="benefit-empty-icon type-3"></div>
+								<div class="benefit-empty-text">
+									원큐페이에 가입하고,<br />
+									다양한 혜택을 누려보세요.
+								</div>
+								<div class="benefit-empty-button-area">
+									<a href="" class="benefit-empty-button">가입하기</a>
+								</div>
+							</div>
+							<!-- //Case : 원큐페이 미 가입 -->
+
+							<div class="slide-banner">
+								<div class="slide-banner-inner">
+									<div class="slide-banner-controller"></div>
+									<ul class="slide-banner-list">
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-3.png" alt="배너설명 넣어주세요." class="slide-banner-image" />
+											</a>
+										</li>
+										<!-- DD : 버튼 흰색 버전 이용일 경우 is-white 클래스 값 추가 -->
+										<li class="slide-banner-item is-white">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-3.png" alt="배너설명 넣어주세요." class="slide-banner-image" />
+											</a>
+										</li>
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-3.png" alt="배너설명 넣어주세요." class="slide-banner-image" />
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="counting-nav type-group">
+							<ul class="counting-nav-list">
+								<li class="counting-nav-item">
+									<a href="" class="counting-nav-head type-link">
+										<div class="counting-nav-head-title">진행중인 이벤트</div>
+									</a>
+
+									<ul class="counting-nav-child-list">
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">쇼핑/무이자</div>
+												<!-- 2022.03.31 : mod : new 불릿 구조 변경 및 위치 변경 -->
+												<div class="counting-nav-new">
+													<span class="for-a11y">(NEW)</span>
+												</div>
+												<!-- //2022.03.31 : mod : new 불릿 구조 변경 및 위치 변경 -->
+											</a>
+										</li>
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">정기결제</div>
+												<!-- 2022.03.31 : mod : new 불릿 구조 변경 및 위치 변경 -->
+												<div class="counting-nav-new">
+													<span class="for-a11y">(NEW)</span>
+												</div>
+												<!-- //2022.03.31 : mod : new 불릿 구조 변경 및 위치 변경 -->
+											</a>
+										</li>
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">여행/해외</div>
+											</a>
+										</li>
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">문화/생활</div>
+												<!-- 2022.03.31 : mod : new 불릿 구조 변경 및 위치 변경 -->
+												<div class="counting-nav-new">
+													<span class="for-a11y">(NEW)</span>
+												</div>
+												<!-- //2022.03.31 : mod : new 불릿 구조 변경 및 위치 변경 -->
+											</a>
+										</li>
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">할인/캐쉬백</div>
+											</a>
+										</li>
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">응모/경품</div>
+											</a>
+										</li>
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">친구추천</div>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="counting-nav-item">
+									<a href="" class="counting-nav-head type-link">
+										<div class="counting-nav-head-title">우수회원 혜택</div>
+									</a>
+
+									<ul class="counting-nav-child-list">
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">이벤트</div>
+											</a>
+										</li>
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">쿠폰</div>
+												<!-- 2022.03.31 : mod : new 불릿 구조 변경 및 위치 변경 -->
+												<div class="counting-nav-new">
+													<span class="for-a11y">(NEW)</span>
+												</div>
+												<!-- //2022.03.31 : mod : new 불릿 구조 변경 및 위치 변경 -->
+											</a>
+										</li>
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">라운지</div>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<!-- 2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+								<li class="counting-nav-item is-skeleton">
+									<a href="" class="counting-nav-head type-link">
+										<div class="counting-nav-head-title">실시간 쿠폰</div>
+										<div class="counting-nav-head-logo type-pick">
+											<span class="for-a11y">나만의 Pick</span>
+										</div>
+										<!-- 2022.03.31 : mod : new 불릿 구조 변경 및 위치 변경 -->
+										<div class="counting-nav-new">
+											<span class="for-a11y">(NEW)</span>
+										</div>
+										<!-- //2022.03.31 : mod : new 불릿 구조 변경 및 위치 변경 -->
+										<!-- 2022.03.11 : mod : 구조 변경 -->
+										<div class="counting-nav-right">
+											<div class="counting-nav-head-count2 skeleton-before"><span class="skeleton-block"></span></div>
+											<div class="counting-nav-head-count2 skeleton-after">35</div>
+										</div>
+										<!-- //2022.03.11 : mod : 구조 변경 -->
+									</a>
+								</li>
+								<!-- //2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+								<li class="counting-nav-item">
+									<a href="" class="counting-nav-head type-link">
+										<div class="counting-nav-head-title">글로벌</div>
+									</a>
+
+									<ul class="counting-nav-child-list">
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">해외여행</div>
+											</a>
+										</li>
+										<li class="counting-nav-child-item">
+											<a href="" class="counting-nav-child-link">
+												<div class="counting-nav-child-text">해외직구</div>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<!-- 2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+								<li class="counting-nav-item is-skeleton">
+									<a href="" class="counting-nav-head type-link">
+										<div class="counting-nav-head-title">친구추천 혜택</div>
+										<!-- 2022.03.11 : mod : 구조 변경 -->
+										<div class="counting-nav-right">
+											<div class="counting-nav-head-count2 skeleton-before"><span class="skeleton-block"></span></div>
+											<div class="counting-nav-head-count2 skeleton-after">3명</div>
+										</div>
+										<!-- //2022.03.11 : mod : 구조 변경 -->
+									</a>
+									<div class="banner margin-top-25 margin-bottom-none">
+										<a href="" class="banner-link">
+											<img src="./assets/images/contents/img-banner-friends.png" alt="친구에게 하나카드 추천하고 다양한 혜택받기!" class="banner-image" />
+										</a>
+									</div>
+								</li>
+								<!-- //2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+								<li class="counting-nav-item">
+									<a href="" class="counting-nav-head type-link">
+										<div class="counting-nav-head-title">오늘의 운세</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //2022.02.25 : mod : 설계서 변경으로 전체 수정 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- 2022.03.25 : add : 스켈레톤 테스트 스크립트 추가 -->
+		<script>
+			// DD : 스켈레톤 테스트
+			$(window).on('load', function () {
+				setTimeout(function () {
+					$('.rating-info, .benefit-nav-item, .counting-nav-item').removeClass('is-skeleton');
+				}, 1000);
+			});
+		</script>
+		<!-- //2022.03.25 : add : 스켈레톤 테스트 스크립트 추가 -->
+		<!-- //script -->
+	</body>
+</html>

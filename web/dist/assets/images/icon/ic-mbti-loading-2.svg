@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-3,.cls-7{fill:none}.cls-3{stroke:#2d3239;stroke-width:1.5px}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="card_d_l_ic_02" transform="translate(-236 -2029)">
+        <path id="사각형_15870" data-name="사각형 15870" transform="translate(236 2029)" style="fill:transparent" d="M0 0h40v40H0z"/>
+        <g id="그룹_12845" data-name="그룹 12845">
+            <path id="사각형_15871" data-name="사각형 15871" transform="translate(240 2033)" style="fill:transparent" d="M0 0h32v32H0z"/>
+            <g id="사각형_15872" data-name="사각형 15872" class="cls-3">
+                <path class="cls-6" d="M5 0h17a2 2 0 0 1 2 2v21a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" transform="translate(244 2035)"/>
+                <path class="cls-7" d="M5 .75h17A1.25 1.25 0 0 1 23.25 2v21A4.25 4.25 0 0 1 19 27.25H5A4.25 4.25 0 0 1 .75 23V5A4.25 4.25 0 0 1 5 .75z" transform="translate(244 2035)"/>
+            </g>
+            <g id="사각형_15878" data-name="사각형 15878" style="fill:#fff;stroke:#2d3239;stroke-width:1.5px">
+                <path class="cls-6" d="M4.5 0H24v7.2A1.8 1.8 0 0 1 22.2 9H4.5A4.5 4.5 0 0 1 0 4.5 4.5 4.5 0 0 1 4.5 0z" transform="translate(244 2054)"/>
+                <path class="cls-7" d="M4.5.75h18.088a.662.662 0 0 1 .662.662v5.735a1.1 1.1 0 0 1-1.1 1.1H4.5A3.75 3.75 0 0 1 .75 4.5 3.75 3.75 0 0 1 4.5.75z" transform="translate(244 2054)"/>
+            </g>
+            <path id="선_402" data-name="선 402" class="cls-3" transform="translate(249.5 2035.5)" d="M0 0v19"/>
+            <path id="선_403" data-name="선 403" class="cls-3" transform="translate(249.5 2058.5)" d="M18 0H0"/>
+            <rect id="사각형_15880" data-name="사각형 15880" width="10" height="5" rx="2" transform="translate(252 2041)" style="fill:#7dedf3"/>
+            <g id="사각형_15879" data-name="사각형 15879" class="cls-3" transform="translate(253 2039)">
+                <rect class="cls-6" width="11" height="6" rx="2"/>
+                <rect class="cls-7" x=".75" y=".75" width="9.5" height="4.5" rx="1.25"/>
+            </g>
+        </g>
+    </g>
+</svg>

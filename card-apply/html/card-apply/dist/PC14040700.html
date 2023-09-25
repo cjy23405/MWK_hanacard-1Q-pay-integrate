@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-pc-id-card-error">신분증 진위확인전문오류</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 신분증 진위확인전문오류 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide is-not-background-close" data-layer="layer-pc-id-card-error">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">이렇게 해보세요!</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<ul class="guide-info-list font-weight-medium margin-top-none">
+										<li class="guide-info-item">
+											<div class="guide-info-block">
+												<p class="basic-text">주민등록증 음성확인서비스<span class="color-primary">(국번없이 1382)</span>로 진위확인</p>
+											</div>
+											<span class="guide-info-icon type-apply-icon-1"></span>
+										</li>
+										<li class="guide-info-item">
+											<div class="guide-info-block">
+												<p class="basic-text">정부24 홈페이지(gov.kr) <span class="color-primary">[ 서비스 > 사실/진위확인 > 주민등록증 진위확인/잠금해제 ]</span>에서 진위확인</p>
+											</div>
+											<span class="guide-info-icon type-apply-icon-2"></span>
+										</li>
+										<li class="guide-info-item">
+											<div class="guide-info-block">
+												<!-- 2023.03.16 : mod : 문구수정 및 하이라이트 문구 변경 -->
+												<p class="basic-text">
+													<span class="color-primary">PC로 돌아가 </span>신분증정보<br />
+													직접 입력 후 진위확인
+												</p>
+											</div>
+											<span class="guide-info-icon type-apply-icon-6"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button">정부24로 이동</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 신분증 진위확인전문오류 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-pc-id-card-error');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

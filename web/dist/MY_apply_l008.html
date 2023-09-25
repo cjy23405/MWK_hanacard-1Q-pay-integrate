@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-card-mbti">카드 MBTI 질문</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 카드 MBTI 질문 -->
+			<div class="layer-wrap layer-wrap--full layer-card-mbti" data-layer="layer-card-mbti">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<h2 class="for-a11y">카드 MBTI 질문</h2>
+						<div class="ui-layer__head">
+							<div class="header">
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<!--
+							DD :
+								특정 페이지 이동 함수 uiJSStepSlide.goTo('mbti', 2) 이용.
+								파라미터 순서 (name, index)
+						-->
+						<div class="ui-layer__body step-slide" data-step-slide="mbti">
+							<div class="ui-layer__body-inner">
+								<p class="check-detail-title margin-top-minus-10 margin-bottom-25 font-weight-medium">
+									<span><span class="color-secondary" data-step-slide-counting="mbti">1</span> / 9</span>
+								</p>
+
+								<div class="step-slide-inner">
+									<div class="step-slide-list">
+										<!-- 평소에 밥은 -->
+										<div class="step-slide-item">
+											<section class="mbti-section">
+												<div class="mbti-section-head">
+													<h2 class="mbti-section-title">
+														<div class="mbti-section-title-text">평소에 밥은</div>
+														<div class="mbti-section-title-icon type-1"></div>
+													</h2>
+												</div>
+
+												<div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">밖에서 사먹는 편</span>
+														</a>
+													</div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">내가 직접 요리</span>
+														</a>
+													</div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">배달</span>
+														</a>
+													</div>
+												</div>
+											</section>
+										</div>
+										<!-- //평소에 밥은 -->
+
+										<!-- 보고 싶었던 영화가 개봉했다면 -->
+										<div class="step-slide-item">
+											<section class="mbti-section">
+												<div class="mbti-section-head">
+													<h2 class="mbti-section-title">
+														<div class="mbti-section-title-text">
+															보고 싶었던 영화가<br />
+															개봉했다면
+														</div>
+														<div class="mbti-section-title-icon type-2"></div>
+													</h2>
+												</div>
+
+												<div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">큰 스크린과 빵빵한 사운드의 영화관</span>
+														</a>
+													</div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">집에서 이불 덮고 보는게 최고</span>
+														</a>
+													</div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">영화는 그다지…</span>
+														</a>
+													</div>
+												</div>
+											</section>
+										</div>
+										<!-- //보고 싶었던 영화가 개봉했다면 -->
+
+										<!-- 자유시간이 주어졌다면 -->
+										<div class="step-slide-item">
+											<section class="mbti-section">
+												<div class="mbti-section-head">
+													<h2 class="mbti-section-title">
+														<div class="mbti-section-title-text">자유시간이 주어졌다면</div>
+														<div class="mbti-section-title-icon type-3"></div>
+													</h2>
+												</div>
+
+												<div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">골프장</span>
+														</a>
+													</div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">호캉스</span>
+														</a>
+													</div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">놀이공원</span>
+														</a>
+													</div>
+												</div>
+											</section>
+										</div>
+										<!-- //자유시간이 주어졌다면 -->
+
+										<!-- 옷은 주로 -->
+										<div class="step-slide-item">
+											<section class="mbti-section">
+												<div class="mbti-section-head">
+													<h2 class="mbti-section-title">
+														<div class="mbti-section-title-text">옷은 주로</div>
+														<div class="mbti-section-title-icon type-4"></div>
+													</h2>
+													<p class="basic-text color-blur font-weight-light margin-top-4">중복선택 가능</p>
+												</div>
+
+												<div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti4-1" data-area-disabled="mbti4-next" />
+														<label for="mbti4-1" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">백화점에서</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti4-2" data-area-disabled="mbti4-next" />
+														<label for="mbti4-2" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">온라인으로</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti4-3" data-area-disabled="mbti4-next" />
+														<label for="mbti4-3" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">아울렛에서</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti4-4" data-area-disabled="mbti4-next" />
+														<label for="mbti4-4" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">해외직구로</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+												</div>
+
+												<div class="link-row align-right margin-top-35">
+													<button type="button" class="ui-arrow type-black" data-step-slide-next="mbti" data-area-disabled-target="mbti4-next">
+														<span class="default-text">다음</span>
+													</button>
+												</div>
+											</section>
+										</div>
+										<!-- //옷은 주로 -->
+
+										<!-- 내가 선호하는 여행지는 -->
+										<div class="step-slide-item">
+											<section class="mbti-section">
+												<div class="mbti-section-head">
+													<h2 class="mbti-section-title">
+														<div class="mbti-section-title-text">내가 선호하는 여행지는</div>
+														<div class="mbti-section-title-icon type-5"></div>
+													</h2>
+												</div>
+
+												<div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">국내</span>
+														</a>
+													</div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">해외</span>
+														</a>
+													</div>
+												</div>
+											</section>
+										</div>
+										<!-- //내가 선호하는 여행지는 -->
+
+										<!-- 평소에 이동을 할 때 나는 -->
+										<div class="step-slide-item">
+											<section class="mbti-section">
+												<div class="mbti-section-head">
+													<h2 class="mbti-section-title">
+														<div class="mbti-section-title-text">평소에 이동을 할 때 나는</div>
+														<div class="mbti-section-title-icon type-6"></div>
+													</h2>
+												</div>
+
+												<div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">자차로</span>
+														</a>
+													</div>
+													<div class="ui-radio-block type-box margin-top-10">
+														<a href="" class="ui-label type-flex" role="button" data-step-slide-next="mbti">
+															<span class="ui-label-text">대중교통으로</span>
+														</a>
+													</div>
+												</div>
+											</section>
+										</div>
+										<!-- //평소에 이동을 할 때 나는 -->
+
+										<!-- 나는 지금 -->
+										<div class="step-slide-item">
+											<section class="mbti-section">
+												<div class="mbti-section-head">
+													<h2 class="mbti-section-title">
+														<div class="mbti-section-title-text">나는 지금</div>
+														<div class="mbti-section-title-icon type-7"></div>
+													</h2>
+													<p class="basic-text color-blur font-weight-light margin-top-4">중복선택 가능</p>
+												</div>
+
+												<div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti7-1" data-area-disabled="mbti7-next" />
+														<label for="mbti7-1" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">가족과</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti7-2" data-area-disabled="mbti7-next" />
+														<label for="mbti7-2" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">아이와</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti7-3" data-area-disabled="mbti7-next" />
+														<label for="mbti7-3" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">반려동물과</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti7-4" data-area-disabled="mbti7-next" />
+														<label for="mbti7-4" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">혼자</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+												</div>
+
+												<div class="link-row align-right margin-top-35">
+													<button type="button" class="ui-arrow type-black" data-step-slide-next="mbti" data-area-disabled-target="mbti7-next">
+														<span class="default-text">다음</span>
+													</button>
+												</div>
+											</section>
+										</div>
+										<!-- //나는 지금 -->
+
+										<!-- 장을 볼때 -->
+										<div class="step-slide-item">
+											<section class="mbti-section">
+												<div class="mbti-section-head">
+													<h2 class="mbti-section-title">
+														<div class="mbti-section-title-text">장을 볼때</div>
+														<div class="mbti-section-title-icon type-8"></div>
+													</h2>
+													<p class="basic-text color-blur font-weight-light margin-top-4">중복선택 가능</p>
+												</div>
+
+												<div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti8-1" data-area-disabled="mbti8-next" />
+														<label for="mbti8-1" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">편의점</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti8-2" data-area-disabled="mbti8-next" />
+														<label for="mbti8-2" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">대형마트</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large margin-top-10">
+														<input type="checkbox" class="ui-checkbox" id="mbti8-3" data-area-disabled="mbti8-next" />
+														<label for="mbti8-3" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">온라인</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+												</div>
+
+												<div class="link-row align-right margin-top-35">
+													<button type="button" class="ui-arrow type-black" data-step-slide-next="mbti" data-area-disabled-target="mbti8-next">
+														<span class="default-text">다음</span>
+													</button>
+												</div>
+											</section>
+										</div>
+										<!-- //장을 볼때 -->
+
+										<!-- 나의 활력소는 -->
+										<div class="step-slide-item">
+											<section class="mbti-section">
+												<div class="mbti-section-head">
+													<h2 class="mbti-section-title">
+														<div class="mbti-section-title-text">나의 활력소는</div>
+														<div class="mbti-section-title-icon type-9"></div>
+													</h2>
+													<p class="basic-text color-blur font-weight-light margin-top-4">중복선택 가능</p>
+												</div>
+
+												<div class="ui-radio-group type-grid type-grid-basic type-col2">
+													<div class="ui-checkbox-block type-box type-large">
+														<input type="checkbox" class="ui-checkbox" id="mbti9-1" data-area-disabled="mbti9-next" />
+														<label for="mbti9-1" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">운동</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large">
+														<input type="checkbox" class="ui-checkbox" id="mbti9-2" data-area-disabled="mbti9-next" />
+														<label for="mbti9-2" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">독서</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large">
+														<input type="checkbox" class="ui-checkbox" id="mbti9-3" data-area-disabled="mbti9-next" />
+														<label for="mbti9-3" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">여행</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large">
+														<input type="checkbox" class="ui-checkbox" id="mbti9-4" data-area-disabled="mbti9-next" />
+														<label for="mbti9-4" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">맛집투어</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large">
+														<input type="checkbox" class="ui-checkbox" id="mbti9-5" data-area-disabled="mbti9-next" />
+														<label for="mbti9-5" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">쇼핑</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large">
+														<input type="checkbox" class="ui-checkbox" id="mbti9-6" data-area-disabled="mbti9-next" />
+														<label for="mbti9-6" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">영화감상</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large">
+														<input type="checkbox" class="ui-checkbox" id="mbti9-7" data-area-disabled="mbti9-next" />
+														<label for="mbti9-7" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">카페인</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+													<div class="ui-checkbox-block type-box type-large">
+														<input type="checkbox" class="ui-checkbox" id="mbti9-8" data-area-disabled="mbti9-next" />
+														<label for="mbti9-8" class="ui-label type-flex">
+															<span class="ui-label-text"><span class="font-weight-regular">기타</span></span>
+															<span class="ui-checkbox-object"></span>
+														</label>
+													</div>
+												</div>
+
+												<div class="link-row align-right margin-top-35">
+													<button type="button" class="ui-arrow type-black" data-step-slide-next="mbti" data-area-disabled-target="mbti9-next">
+														<span class="default-text">다음</span>
+													</button>
+												</div>
+											</section>
+										</div>
+										<!-- //나의 활력소는 -->
+
+										<!-- 찾는중 -->
+										<div class="step-slide-item">
+											<section class="mbti-section type-result">
+												<div class="mbti-section-head">
+													<h2 class="mbti-section-title">
+														<div class="mbti-section-title-text">
+															내게 맞는 카드를<br />
+															찾고있어요...
+														</div>
+													</h2>
+												</div>
+
+												<div class="mbti-loading">
+													<div class="mbti-loading-list">
+														<div class="mbti-loading-item type-1"></div>
+														<div class="mbti-loading-item type-2"></div>
+														<div class="mbti-loading-item type-3"></div>
+														<div class="mbti-loading-item type-4"></div>
+														<div class="mbti-loading-item type-5"></div>
+													</div>
+												</div>
+											</section>
+										</div>
+										<!-- //찾는중 -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="link-row align-center margin-bottom-35">
+								<button type="button" class="default-text basic-link color-blur" data-step-slide-start="mbti">다시 고를래요</button>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 카드 MBTI 질문 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-card-mbti');
+			});
+
+			// 체크 리스트 리셋
+			$(document).on('click', '[data-step-slide-start="mbti"]', function () {
+				$('.step-slide-item .ui-checkbox').prop('checked', false).removeAttr('checked');
+				uiJSCommon();
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title"><span class="font-weight-regular">카드 정보</span>를 확인해주세요.</h2>
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-contents margin-top-30">
+									<div class="card-select">
+										<div class="card-select-item">
+											<div class="ui-radio-block">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-2" />
+												<label for="radio1-2" class="ui-label type-block">
+													<span class="ui-radio-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 에러 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<!-- 2022.04.27 : mod : alt 값 변경 -->
+															<img src="/images/card/img_card_travel_B.png" alt="트래블로그 카드" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="ui-label-text">travel</span>
+												</label>
+											</div>
+										</div>
+										<div class="card-select-item">
+											<div class="ui-radio-block">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-1" />
+												<label for="radio1-1" class="ui-label type-block">
+													<span class="ui-radio-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 없을 때 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<img src="/images/card/img_card_travel_M.png" alt="트래블로그 카드" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="ui-label-text">passport</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group type-line">
+								<div class="section-title">
+									<h3 class="title font-weight-light">브랜드</h3>
+								</div>
+								<div class="section-contents">
+									<!-- 2021.12.15 로고 이미지 수정, 브랜드 추가 -->
+									<div class="ui-radio-group type-scroll-x card-brand-select">
+										<div class="ui-radio-block type-box type-brand-master">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" checked />
+											<label for="radioBox1-2" class="ui-label type-block">
+												<span class="card-brand-logo">
+													<img src="/images/contents/ic-mastercard.png" alt="마스터카드" class="img" />
+													<img src="/images/contents/ic-mastercard-on.png" alt="마스터카드" class="img selected" />
+												</span>
+												<div class="ui-label-text">
+													해외겸용(MASTER)
+													<div class="sub">연회비 없음</div>
+												</div>
+											</label>
+										</div>
+									</div>
+									<!-- //2021.12.15 로고 이미지 수정, 브랜드 추가 -->
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-contents">
+									<div class="toggle-info-list">
+										<div class="toggle-info-item">
+											<div class="toggle-info-title">
+												<!-- 2022.03.30 문구수정 -->
+												<span class="title">교통카드 기능 추가하기</span>
+											</div>
+											<div class="ui-toggle-block">
+												<input type="checkbox" class="ui-toggle" id="checkboxToggle1-2" checked />
+												<label for="checkboxToggle1-2" class="ui-label">
+													<span class="ui-toggle-object"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+                            <h2 class="page-title">김하나님의 <span class="font-weight-regular">정보</span>를<br />확인해주세요.</h2>
+							<div class="page-section-group">
+								<div class="section-contents">
+									<div class="form-list">
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">이름</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input" title="이름 입력" placeholder="이름 입력" required />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">주민등록번호</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="주민등록번호 13자리 입력" placeholder="숫자만 입력" />
+												</div>
+											</div>
+											<div class="terms-area">
+												<!-- 2022.03.30 드롭다운 상세보기 버튼으로 변경 -->
+												<div class="terms-item">
+													<div class="ui-checkbox-block type-align-top">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" />
+														<label for="selectCheckbox-1" class="ui-label">
+															<span class="ui-checkbox-object"></span>
+															<span class="ui-label-text">실명확인 및 회원여부 확인, 본인 직접 수령 동의</span>
+														</label>
+														<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+													</div>
+												</div>
+												<!-- //2022.03.30 드롭다운 상세보기 버튼으로 변경 -->
+											</div>
+										</div>
+									</div>
+									<div class="status-notice margin-top-25">
+										<div class="status-notice-contents">
+											<h3 class="color-primary font-weight-regular">신분증 준비 안내</h3>
+											<p class="status-notice-text margin-top-5">카드 신청을 위해 신분증을 미리 준비해두세요!</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons type-tooltip">
+							<ul class="ui-buttons-list">
+                                <li class="ui-buttons-item type-narrow">
+									<button type="button" class="ui-button ui-basic-button">취소</button>
+								</li>
+								<li class="ui-buttons-item">
+									<div class="ui-button-tooltip">
+										<!-- 2022.04.27 : mod : 접근성 텍스트 추가 -->
+										<span class="ui-button-tooltip-text"><span class="for-a11y">다음 버튼을 누르면 </span>신분증 정보 입력 화면으로 이동합니다.</span>
+									</div>
+									<a href="" class="ui-basic-button type-primary" data-layer-open="alert01">다음</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- alert - 외국인일 경우 -->
+		<div class="layer-wrap layer-alert" data-layer="alert01">
+			<div class="layer-container">
+				<section class="ui-alert">
+					<div class="ui-alert__body">
+						<div class="ui-alert__body-inner">
+							<p class="ui-alert-message">
+								내국인만<br />
+								발급 가능한 카드에요.
+							</p>
+						</div>
+					</div>
+					<div class="ui-alert__foot">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-regular-button type-primary" data-role="layerClose">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //alert - 외국인일 경우 -->
+
+		<!-- alert - 하나머니 가입 x -->
+		<div class="layer-wrap layer-alert" data-layer="alert02">
+			<div class="layer-container">
+				<section class="ui-alert">
+					<div class="ui-alert__body">
+						<div class="ui-alert__body-inner">
+							<p class="ui-alert-message">
+								하나머니에 가입하셔야<br />
+								트래블로그 체크카드 발급이 가능해요.
+							</p>
+						</div>
+					</div>
+					<div class="ui-alert__foot">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-regular-button type-primary" data-role="layerClose">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //alert - 하나머니 가입 x -->
+
+		<!-- alert - 해당카드 이미 발급o -->
+		<div class="layer-wrap layer-alert" data-layer="alert03">
+			<div class="layer-container">
+				<section class="ui-alert">
+					<div class="ui-alert__body">
+						<div class="ui-alert__body-inner">
+							<p class="ui-alert-message">
+								해당 카드를 이미 발급하셨어요.<br />
+								다른 카드를 둘러보시겠어요?
+							</p>
+						</div>
+					</div>
+					<div class="ui-alert__foot">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-regular-button type-primary" data-role="layerClose">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //alert - 해당카드 이미 발급o -->
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

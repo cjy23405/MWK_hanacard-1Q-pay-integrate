@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">신용보험</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 1</span>
+							보험상품 확인 및 필수항목체크를<br />
+							진행해주세요.
+						</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 2단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="page-section">
+							<div class="page-section-group">
+								<h3 class="page-section-title">보험상품 확인</h3>
+								<div class="ui-select-multiple-list margin-top-15">
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" />
+											<label for="selectCheckbox1-1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">보험상품 내용 확인(필수)</span>
+											</label>
+											<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-25">
+								<h3 class="page-section-title">필수체크 항목 확인</h3>
+								<ul class="info-list type-text-large type-indent-number margin-top-25">
+									<li class="info-item type-indent">
+										<span class="indent">1.</span>
+										<div class="indent-block">
+											최근 5년 이내에 아래의 질병으로 진찰 또는 검사를 받으셨나요?
+											<div class="default-text color-blur margin-top-2">: 뇌혈관 질환, 허혈성심질환, 만성신부전증, 백혈병, 악성암</div>
+											<div class="ui-radio-group-area">
+												<div class="ui-radio-group type-yes-or-no">
+													<div class="ui-radio-block type-circle">
+														<input type="radio" class="ui-radio" name="radiobox1" id="radiobox1-1" />
+														<label for="radiobox1-1" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">네</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-circle">
+														<input type="radio" class="ui-radio" name="radiobox1" id="radiobox1-2" />
+														<label for="radiobox1-2" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">아니오</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="info-item type-indent">
+										<span class="indent">2.</span>
+										<div class="indent-block">
+											최근 5년 이내 아래와 같은 수술을 받으셨나요?
+											<div class="default-text color-blur margin-top-2">: 관상동맥우회로수술, 간장 이식, 신장이식, 췌장이식, 폐장이식, 골수이식</div>
+											<div class="ui-radio-group-area">
+												<div class="ui-radio-group type-yes-or-no">
+													<div class="ui-radio-block type-circle">
+														<input type="radio" class="ui-radio" name="radiobox2" id="radiobox2-1" />
+														<label for="radiobox2-1" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">네</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-circle">
+														<input type="radio" class="ui-radio" name="radiobox2" id="radiobox2-2" />
+														<label for="radiobox2-2" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">아니오</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="page-section-group">
+								<h3 class="page-section-title">가입내용</h3>
+								<ul class="usage-default-list margin-top-none">
+									<li class="usage-default-item">
+										<div class="usage-default-block type-align-middle">
+											<div class="usage-default-left">
+												<span class="medium-text">보험약관</span>
+											</div>
+											<div class="usage-default-right type-auto">
+												<a href="" class="ui-button ui-basic-button type-gray type-small">PDF</a>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block type-align-middle">
+											<div class="usage-default-left">
+												<span class="medium-text">상품설명서</span>
+											</div>
+											<div class="usage-default-right type-auto">
+												<a href="" class="ui-button ui-basic-button type-gray type-small">PDF</a>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block type-align-middle">
+											<div class="usage-default-left">
+												<span class="medium-text">유의사항</span>
+											</div>
+											<div class="usage-default-right type-auto">
+												<a href="" class="ui-button ui-basic-button type-gray type-small">PDF</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">다음</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

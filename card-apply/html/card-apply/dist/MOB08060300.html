@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-dcc-service">해외원화결제(DCC) 차단 서비스 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 해외원화결제(DCC) 차단 서비스 -->
+			<!-- 2022.09.02 : mod : layer-wrap에 is-not-background-close 클래스 추가 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select is-not-background-close" data-layer="layer-dcc-service">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2022.08.18 : mod : 문구수정 -->
+								<h2 class="header__title">해외원화결제(DCC) 차단서비스 안내</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<!-- 2022.08.18 : mod : type-icon-dcc로 클래스 변경 -->
+									<div class="layer-info has-com-icon type-icon-dcc">
+										<p class="layer-info-text font-weight-regular">
+											해외원화결제를 미리 막아두면, 해외에서 <span class="color-primary font-weight-bold">원화(KRW)로 결제할 때 부과되는 추가 수수료를 피할 수 </span>있어요.
+										</p>
+									</div>
+
+									<div class="info-guide type-line">
+										<h3 class="info-guide-title">해외원화결제(DCC) 서비스란?</h3>
+										<!-- 2022.08.18 : mod : 문구수정 -->
+										<p class="info-guide-text">
+											해외에서 카드 결제 시 현지통화가 아닌 원화(KRW)로 결제할 수 있는 서비스입니다. 해외결제금액을 원화로 쉽게 알 수 있지만 3~8%의 해외가맹점 수수료가 발생됩니다.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button" data-role="layerClose">다음에</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">신청</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 해외원화결제(DCC) 차단 서비스 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-dcc-service');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

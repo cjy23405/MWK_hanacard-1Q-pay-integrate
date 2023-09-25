@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">유치 실적 확인</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<h2 class="page-title">
+								모바일 유치 실적 확인
+							</h2>
+
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">저축은행코드</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block">
+											<input type="number" pattern="\d*" class="ui-input" title="저축은행코드 입력" placeholder="저축은행코드 입력" value="123" disabled />
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">추천인 직원번호</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block">
+											<input type="number" pattern="\d*" class="ui-input" title="추천 직원번호 입력" placeholder="추천 직원번호 입력" value="123456" disabled />
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">접수기간</strong>
+									</div>
+									<div class="form-group type-date-range">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible">
+												<div class="ui-input-block type-date">
+													<input type="date" class="ui-input" title="title" placeholder="placeholder" value="2021-01-01" />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<div class="ui-range-dash">-</div>
+											</div>
+											<div class="form-flex-cell type-flexible">
+												<div class="ui-input-block type-date">
+													<input type="date" class="ui-input" title="title" placeholder="placeholder" value="2021-01-31" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">조회</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title"><span class="font-weight-regular">조회결과</span></h3>
+								</div>
+								<div class="section-contents">
+									<table class="info-table">
+										<caption class="for-a11y">
+											구분, 신규, 재유치, 기존, 해지/탈회로 구성된 조회결과 안내 표입니다.
+										</caption>
+										<thead>
+											<tr>
+												<th scope="colgroup">구분</th>
+												<th scope="colgroup">신규</th>
+												<th scope="colgroup">재유치</th>
+												<th scope="colgroup">기존</th>
+												<th scope="colgroup">해지/<br />탈회<br />(M+3內)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="align-center">발급<br />좌수</td>
+												<td class="align-center"></td>
+												<td class="align-center"></td>
+												<td class="align-center"></td>
+												<td class="align-center"></td>
+											</tr>
+											<tr>
+												<td class="align-center">유실적<br />건수</td>
+												<td class="align-center"></td>
+												<td class="align-center"></td>
+												<td class="align-center"></td>
+												<td class="align-center"></td>
+											</tr>
+										</tbody>
+									</table>
+									<ul class="info-list type-inherit color-blur margin-top-20">
+										<li class="info-item">발급좌수 : 조회 기간내 카드 발급 좌수</li>
+										<li class="info-item">유실적건수 : 발급좌수의 종속건으로<br />** 발급월기준(m0)~ M3 총 사용금액 30만원이상건</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

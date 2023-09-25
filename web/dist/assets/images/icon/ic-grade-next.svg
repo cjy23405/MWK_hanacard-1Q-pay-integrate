@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{stroke:#2d3239;stroke-width:1.5px}.cls-5{fill:#2d3239}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_grade_next" transform="translate(-26.33 -750.768)">
+        <path id="사각형_7870" data-name="사각형 7870" class="cls-1" transform="translate(26.33 750.768)" d="M0 0h36v36H0z"/>
+        <g id="사각형_9205" data-name="사각형 9205" class="cls-2" transform="translate(29.33 756.768)">
+            <rect class="cls-7" width="30" height="24" rx="4"/>
+            <rect class="cls-1" x=".75" y=".75" width="28.5" height="22.5" rx="3.25"/>
+        </g>
+        <path id="다각형_62" data-name="다각형 62" d="M4.318.972a.5.5 0 0 1 .906 0l.862 1.848a.5.5 0 0 0 .39.285l2.017.255a.5.5 0 0 1 .281.859L7.286 5.626a.5.5 0 0 0-.148.457L7.521 8.1a.5.5 0 0 1-.734.531l-1.773-.987a.5.5 0 0 0-.485 0l-1.773.984a.5.5 0 0 1-.734-.528L2.4 6.082a.5.5 0 0 0-.148-.457L.769 4.22a.5.5 0 0 1 .281-.859L3.066 3.1a.5.5 0 0 0 .39-.285z" transform="translate(35.57 764.568)" style="fill:#7dedf3"/>
+        <path id="다각형_58" data-name="다각형 58" class="cls-2" d="M4.318.972a.5.5 0 0 1 .906 0l.862 1.848a.5.5 0 0 0 .39.285l2.017.255a.5.5 0 0 1 .281.859L7.286 5.626a.5.5 0 0 0-.148.457L7.521 8.1a.5.5 0 0 1-.734.531l-1.773-.987a.5.5 0 0 0-.485 0l-1.773.984a.5.5 0 0 1-.734-.528L2.4 6.082a.5.5 0 0 0-.148-.457L.769 4.22a.5.5 0 0 1 .281-.859L3.066 3.1a.5.5 0 0 0 .39-.285z" transform="translate(34.055 763.798)"/>
+        <path id="사각형_9207" data-name="사각형 9207" transform="translate(44.33 767.768)" style="fill:#fff" d="M0 0h18v17H0z"/>
+        <rect id="사각형_9206" data-name="사각형 9206" class="cls-5" width="1.8" height="7.2" rx=".9" transform="rotate(-45 967.458 322.084)"/>
+        <rect id="사각형_9208" data-name="사각형 9208" class="cls-5" width="8.4" height="1.8" rx=".9" transform="translate(45.53 764.689)"/>
+        <rect id="사각형_9211" data-name="사각형 9211" class="cls-5" width="2.4" height="1.8" rx=".9" transform="translate(45.53 769.166)"/>
+        <rect id="사각형_9209" data-name="사각형 9209" class="cls-5" width="1.5" height="2.4" rx=".75" transform="translate(57.83 766.368)"/>
+        <rect id="사각형_9210" data-name="사각형 9210" class="cls-5" width="4.8" height="1.5" rx=".75" transform="translate(41.93 779.268)"/>
+        <g id="타원_1049" data-name="타원 1049" transform="translate(47.93 769.717)" style="fill:#fff;stroke:#2d3239;stroke-width:1.5px">
+            <circle class="cls-7" cx="6" cy="6" r="6"/>
+            <circle class="cls-1" cx="6" cy="6" r="5.25"/>
+        </g>
+    </g>
+</svg>

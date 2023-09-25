@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="사각형_16708" data-name="사각형 16708" transform="translate(14689.08 -3494.896)" style="fill:#fff" d="M0 0h11v14H0z"/>
+        </clipPath>
+        <style>
+            .cls-4{fill:none;stroke:#2d3239;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}.cls-6{fill:#2d3239}
+        </style>
+    </defs>
+    <g id="ic_mbti_3_s" transform="translate(-14684.08 3497.896)">
+        <path id="사각형_15597" data-name="사각형 15597" transform="translate(14684.08 -3497.896)" style="fill:none" d="M0 0h20v20H0z"/>
+        <g id="마스크_그룹_246" data-name="마스크 그룹 246" style="clip-path:url(#clip-path)">
+            <circle id="타원_1900" data-name="타원 1900" class="cls-4" cx="6" cy="6" r="6" transform="translate(14688.08 -3493.896)"/>
+        </g>
+        <path id="패스_12269" data-name="패스 12269" d="M4.746 4.117 4.61 2.225A1.761 1.761 0 0 0 2.747.75 1.76 1.76 0 0 0 .883 2.23l-.13 1.892a1.562 1.562 0 0 0 1.084 1.516v8.3a.866.866 0 0 0 .913.811.866.866 0 0 0 .913-.811v-8.3a1.562 1.562 0 0 0 1.083-1.521z" transform="translate(14685.33 -3495.645)" style="stroke:#2d3239;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:#fff"/>
+        <path id="패스_12270" data-name="패스 12270" class="cls-6" d="M18.351 14.751h1.5V1.469c0-.432-.336-1.718-.75-1.718s-.75 1.285-.75 1.718z" transform="translate(14682.222 -3495.146)"/>
+        <path id="패스_12271" data-name="패스 12271" class="cls-6" d="M18.351 14.751h1.5V1.469c0-.432-.336-1.718-.75-1.718s-.75 1.285-.75 1.718z" transform="translate(14680.229 -3495.146)"/>
+        <path id="패스_12272" data-name="패스 12272" d="M13.823 9.735a3 3 0 1 1-3-3 3 3 0 0 1 3 3z" transform="translate(14682.157 -3497.631)" style="fill:#7dedf3"/>
+        <circle id="타원_1901" data-name="타원 1901" class="cls-4" cx="3" cy="3" r="3" transform="translate(14691.08 -3490.896)"/>
+    </g>
+</svg>

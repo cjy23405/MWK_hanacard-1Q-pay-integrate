@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-fee-per-session">회차별 수수료</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 회차별 수수료 -->
+			<div class="layer-wrap layer-wrap layer-wrap--full" data-layer="layer-fee-per-session">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">회차별 수수료</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="info-table-area">
+									<table class="info-table">
+										<!-- 2022.04.27 : mod : 문구변경 -->
+										<caption class="for-a11y">
+											회차,수수료로 구성된 회차별 수수료 안내 표입니다.
+										</caption>
+										<colgroup>
+											<col style="width: 103px" />
+											<col />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">회차</th>
+												<th scope="col">수수료</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="align-center">1</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">2</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">3</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">4</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">5</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">6</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">7</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">8</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">9</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">10</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">11</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">12</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">13</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">14</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">15</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">16</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">17</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">18</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">19</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">20</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">21</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">22</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">23</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+											<tr>
+												<td class="align-center">24</td>
+												<td class="align-center">8,624 원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 회차별 수수료 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-fee-per-session');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

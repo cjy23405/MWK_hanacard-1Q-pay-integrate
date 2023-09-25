@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-annual-fee">연회비 안내</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 연회비 안내 -->
+			<!-- 2022.09.02 : mod : layer-wrap에 is-not-background-close 클래스 추가 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide is-not-background-close" data-layer="layer-annual-fee">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">연회비 안내</h2>
+								<!-- 2022.08.24 :  del : X버튼 삭제 -->
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<div class="annual-fee-list">
+										<div class="annual-fee-item">
+											<div class="annual-fee-block">
+												<span class="brand-image">
+													<!-- 2022.08.12 이미지 추가 -->
+													<img src="/mkca20/images/contents/ic-brand-mastercard-on.png" alt="마스터카드" class="img" />
+												</span>
+												<div class="brand-info">
+													<span class="brand-info-title">Master Card [해외겸용] 12,000원</span>
+													<div class="brand-info-list">
+														<span class="brand-info-item">기본 5,000원 + 제휴 5,000원</span>
+														<!-- 2022.08.18 : mod : 띄어쓰기 -->
+														<span class="brand-info-item">가족카드 5,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="annual-fee-item">
+											<div class="annual-fee-block">
+												<span class="brand-image">
+													<!-- 2022.08.12 이미지 추가 -->
+													<img src="/mkca20/images/contents/ic-brand-visa-on.png" alt="비자" class="img" />
+												</span>
+												<div class="brand-info">
+													<span class="brand-info-title">VISA [해외겸용] 10,000원</span>
+													<div class="brand-info-list">
+														<span class="brand-info-item">기본 5,000원 + 제휴 5,000원</span>
+														<!-- 2022.08.18 : mod : 띄어쓰기 -->
+														<span class="brand-info-item">가족카드 5,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="annual-fee-item">
+											<div class="annual-fee-block">
+												<span class="brand-image">
+													<!-- 2022.08.12 이미지 추가 -->
+													<img src="/mkca20/images/contents/ic-brand-amex-on.png" alt="아멕스" class="img" />
+												</span>
+												<div class="brand-info">
+													<span class="brand-info-title">Amex [해외겸용] 10,000원</span>
+													<div class="brand-info-list">
+														<span class="brand-info-item">기본 5,000원 + 제휴 5,000원</span>
+														<!-- 2022.08.18 : mod : 띄어쓰기 -->
+														<span class="brand-info-item">가족카드 5,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="annual-fee-item">
+											<div class="annual-fee-block">
+												<span class="brand-image">
+													<!-- 2022.08.12 이미지 추가 -->
+													<img src="/mkca20/images/contents/ic-brand-union-on.png" alt="유니온페이" class="img" />
+												</span>
+												<div class="brand-info">
+													<span class="brand-info-title">UnionPay [해외겸용] 10,000원</span>
+													<div class="brand-info-list">
+														<span class="brand-info-item">기본 5,000원 + 제휴 5,000원</span>
+														<!-- 2022.08.18 : mod : 띄어쓰기 -->
+														<span class="brand-info-item">가족카드 5,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="annual-fee-item">
+											<div class="annual-fee-block">
+												<span class="brand-image">
+													<!-- 2022.08.24 이미지 파일명 수정 -->
+													<img src="/mkca20/images/contents/ic-brand-jcb-on.png" alt="JCB" class="img" />
+												</span>
+												<div class="brand-info">
+													<span class="brand-info-title">JCB [해외겸용] 10,000원</span>
+													<div class="brand-info-list">
+														<span class="brand-info-item">기본 5,000원 + 제휴 5,000원</span>
+														<!-- 2022.08.18 : mod : 띄어쓰기 -->
+														<span class="brand-info-item">가족카드 5,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="annual-fee-item">
+											<div class="annual-fee-block">
+												<span class="brand-image">
+													<!-- 2022.08.12 이미지 추가 -->
+													<img src="/mkca20/images/contents/ic-brand-local-on.png" alt="국내전용" class="img" />
+												</span>
+												<div class="brand-info">
+													<span class="brand-info-title">국내전용 10,000원</span>
+													<div class="brand-info-list">
+														<span class="brand-info-item">기본 5,000원 + 제휴 5,000원</span>
+														<!-- 2022.08.18 : mod : 띄어쓰기 -->
+														<span class="brand-info-item">가족카드 5,000원</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 연회비 안내 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-annual-fee');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

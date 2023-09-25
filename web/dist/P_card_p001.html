@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 1</span>
+							원하시는 카드 정보를 선택하고<br />
+							신청자 정보를 입력해 주세요.
+						</h2>
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<!-- 2021.12.24 네이버 페이 진입시 추가 -->
+						<div class="page-section margin-bottom-35">
+							<div class="page-guide type-npay">
+								<p class="guide">네이버페이 회원이라면?</p>
+								<a href="#" class="ui-basic-button type-tiny type-primary" role="button"><img src="./assets/images/contents/symbol-naverpay.svg" alt="네이버페이" class="symbol" />간편입력</a>
+							</div>
+						</div>
+						<!-- //2021.12.24 네이버 페이 진입시 추가 -->
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">카드종류</h3>
+								</div>
+								<div class="section-contents">
+									<div class="card-select">
+										<div class="card-select-item">
+											<div class="ui-radio-block">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-1" />
+												<label for="radio1-1" class="ui-label type-block">
+													<span class="ui-radio-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 없을 때 -->
+													<span class="card-image">
+														<span class="card-image-inner"></span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="ui-label-text">MULTI On <br />모바일카드</span>
+												</label>
+											</div>
+										</div>
+										<div class="card-select-item">
+											<div class="ui-radio-block">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-2" />
+												<label for="radio1-2" class="ui-label type-block">
+													<span class="ui-radio-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 에러 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="ui-label-text">MULTI Living<br />모바일카드</span>
+												</label>
+											</div>
+										</div>
+										<div class="card-select-item">
+											<div class="ui-radio-block">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-3" />
+												<label for="radio1-3" class="ui-label type-block">
+													<span class="ui-radio-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 있을 때 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="ui-label-text">MULTI Living<br />모바일카드</span>
+												</label>
+											</div>
+										</div>
+										<div class="card-select-item">
+											<div class="ui-radio-block">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-4" />
+												<label for="radio1-4" class="ui-label type-block">
+													<span class="ui-radio-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="ui-label-text">MULTI Living<br />모바일카드</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">브랜드</h3>
+								</div>
+								<div class="section-contents">
+									<!-- 2021.12.15 로고 이미지 수정, 브랜드 추가 -->
+									<div class="ui-radio-group type-scroll-x card-brand-select">
+										<div class="ui-radio-block type-box type-brand-union">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" checked />
+											<label for="radioBox1-1" class="ui-label type-block">
+												<span class="card-brand-logo">
+													<img src="./assets/images/contents/ic-unionpay.png" alt="유니온페이" class="img" />
+													<img src="./assets/images/contents/ic-unionpay-on.png" alt="유니온페이" class="img selected" />
+												</span>
+												<div class="ui-label-text">
+													연회비 10,000원
+													<div class="sub">기본 5,000 + 제휴 5,000</div>
+												</div>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box type-brand-master">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" />
+											<label for="radioBox1-2" class="ui-label type-block">
+												<span class="card-brand-logo">
+													<img src="./assets/images/contents/ic-mastercard.png" alt="마스터카드" class="img" />
+													<img src="./assets/images/contents/ic-mastercard-on.png" alt="마스터카드" class="img selected" />
+												</span>
+												<div class="ui-label-text">
+													연회비 10,000원
+													<div class="sub">기본 5,000 + 제휴 5,000</div>
+												</div>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box type-brand-visa">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-3" />
+											<label for="radioBox1-3" class="ui-label type-block">
+												<span class="card-brand-logo">
+													<img src="./assets/images/contents/ic-visa.png" alt="비자" class="img" />
+													<img src="./assets/images/contents/ic-visa-on.png" alt="비자" class="img selected" />
+												</span>
+												<div class="ui-label-text">
+													연회비 10,000원
+													<div class="sub">기본 5,000 + 제휴 5,000</div>
+												</div>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box type-brand-local">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-4" />
+											<label for="radioBox1-4" class="ui-label type-block">
+												<span class="card-brand-logo">
+													<img src="./assets/images/contents/ic-loclacard.png" alt="지역카드" class="img" />
+													<img src="./assets/images/contents/ic-loclacard-on.png" alt="지역카드" class="img selected" />
+												</span>
+												<div class="ui-label-text">
+													연회비 10,000원
+													<div class="sub">기본 5,000 + 제휴 5,000</div>
+												</div>
+											</label>
+										</div>
+										<!-- 2022.01.12 추가 -->
+										<div class="ui-radio-block type-box type-brand-amex">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-5" />
+											<label for="radioBox1-5" class="ui-label type-block">
+												<span class="card-brand-logo">
+													<img src="./assets/images/contents/ic-amex.png" alt="아멕스" class="img" />
+													<img src="./assets/images/contents/ic-amex-on.png" alt="아멕스" class="img selected" />
+												</span>
+												<div class="ui-label-text">
+													연회비 10,000원
+													<div class="sub">기본 5,000 + 제휴 5,000</div>
+												</div>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box type-brand-jcb">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-6" />
+											<label for="radioBox1-6" class="ui-label type-block">
+												<span class="card-brand-logo">
+													<img src="./assets/images/contents/ic-jcb.png" alt="JCB" class="img" />
+													<img src="./assets/images/contents/ic-jcb-on.png" alt="JCB" class="img selected" />
+												</span>
+												<div class="ui-label-text">
+													연회비 10,000원
+													<div class="sub">기본 5,000 + 제휴 5,000</div>
+												</div>
+											</label>
+										</div>
+										<!-- //2022.01.12 추가 -->
+									</div>
+									<!-- //2021.12.15 로고 이미지 수정, 브랜드 추가 -->
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">카드 등급</h3>
+								</div>
+								<div class="section-contents">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" checked />
+											<label for="radioPanel1-1" class="ui-label">
+												<span class="ui-label-text">골드</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" />
+											<label for="radioPanel1-2" class="ui-label">
+												<span class="ui-label-text">플래티늄베이직</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">카드 유형</h3>
+									<button class="ui-button-question"><span class="for-a11y">카드 유형 안내</span></button>
+								</div>
+								<div class="section-contents">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-1" checked />
+											<label for="radioPanel2-1" class="ui-label">
+												<span class="ui-label-text">플라스틱 카드</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<div class="ui-button-tooltip">
+												<!-- 2022.04.27 : mod : 접근성 텍스트 추가 -->
+												<span class="ui-button-tooltip-text"><span class="for-a11y">모바일 전용 카드를 누르면 </span>실물없이 즉시 사용 가능합니다.</span>
+											</div>
+											<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-2" />
+											<label for="radioPanel2-2" class="ui-label">
+												<span class="ui-label-text">모바일 전용 카드</span>
+											</label>
+										</div>
+									</div>
+									<div class="toggle-info-list">
+										<div class="toggle-info-item">
+											<div class="toggle-info-title">
+												<!-- 2022.03.30 문구수정 -->
+												<strong class="title">카드 발급 <span class="color-primary">즉시 사용</span>하기</strong>
+												<!-- 2022.02.25 : mod : 툴팁 추가 -->
+												<div class="ui-tooltip-wrap">
+													<span class="ui-tooltip js-ui-dropdown">
+														<span class="ui-tooltip-head">
+															<button type="button" class="ui-button ui-tooltip-opener js-ui-dropdown__opener">
+																<span class="ui-button-question">
+																	<span class="for-a11y">(도움말 <span class="open-text">열기</span><span class="close-text">닫기</span>)</span>
+																</span>
+															</button>
+														</span>
+														<span class="ui-tooltip-layer js-ui-dropdown__layer">
+															<span class="ui-tooltip-bubble">
+																<span class="ui-tooltip-bubble-message">카드 수령 전에 미리 사용할 수 있도록<br />문자나 push로 안내해드려요</span>
+																<button type="button" class="ui-button ui-tooltip-bubble-close js-ui-dropdown__closer">
+																	<span class="for-a11y">도움말 닫기</span>
+																</button>
+															</span>
+														</span>
+													</span>
+												</div>
+												<!-- //2022.02.25 : mod : 툴팁 추가 -->
+											</div>
+											<!-- 2022.03.30 문구수정 -->
+											<p class="toggle-info-text">앱카드(원큐페이) 신청</p>
+											<div class="ui-toggle-block">
+												<input type="checkbox" class="ui-toggle" id="checkboxToggle1-1" />
+												<label for="checkboxToggle1-1" class="ui-label">
+													<span class="ui-toggle-object"></span>
+													<!-- 2022.07.22 : mod : 히든 텍스트 추가 -->
+													<span class="for-a11y">앱카드(원큐페이) 신청</span>
+												</label>
+											</div>
+										</div>
+										<div class="toggle-info-item">
+											<div class="toggle-info-title">
+												<!-- 2022.03.30 문구수정 -->
+												<strong class="title">교통카드 기능 추가하기</strong>
+											</div>
+											<p class="toggle-info-text">교통기능 필수 신청 카드입니다.</p>
+											<div class="ui-toggle-block">
+												<input type="checkbox" class="ui-toggle" id="checkboxToggle1-2" checked />
+												<label for="checkboxToggle1-2" class="ui-label">
+													<span class="ui-toggle-object"></span>
+													<!-- 2022.07.22 : mod : 히든 텍스트 추가 -->
+													<span class="for-a11y">교통카드 기능 추가하기</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 2022.04.06 : add : 내맘대로 서비스 추가 -->
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">내맘대로 서비스 (선택)</h3>
+									<button class="ui-button-question"><span class="for-a11y">내맘대로 서비스 안내</span></button>
+								</div>
+
+								<div class="section-contents">
+									<div class="ui-radio-group type-full">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox5" id="radioBox5-3" checked />
+											<label for="radioBox5-3" class="ui-label type-block">
+												<span class="guide-info-item type-no-padding">
+													<span class="guide-info-item-inner">
+														<span class="guide-info-icon type-regular type-icon-95"></span>
+														<span class="guide-info-block display-block">
+															<span class="guide-info-left display-block">
+																<strong class="guide-info-title">여행 혜택</strong>
+																<span class="default-text display-block">
+																	<span class="guide-info-text-item font-weight-regular display-block">숙박, 철도, 항공 <span class="color-primary">10%</span> 적립</span>
+																</span>
+																<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+																<span class="ui-badge color-primary-dark font-weight-regular margin-top-10"><span class="color-basic">연회비</span> 1만원</span>
+																<span class="ui-badge color-secondary font-weight-regular margin-top-10 margin-left-10 ui-arrow"
+																	><a href="javascript:void(0);" data-layer-open="test-basic">'22 한정 혜택 안내</a></span
+																>
+															</span>
+														</span>
+													</span>
+												</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox5" id="radioBox5-2" />
+											<label for="radioBox5-2" class="ui-label type-block">
+												<span class="guide-info-item type-no-padding">
+													<span class="guide-info-item-inner">
+														<span class="guide-info-icon type-regular type-icon-97"></span>
+														<span class="guide-info-block display-block">
+															<span class="guide-info-left display-block">
+																<strong class="guide-info-title">케어 혜택</strong>
+																<span class="default-text display-block">
+																	<span class="guide-info-text-item font-weight-regular display-block">병원, 동물병원 <span class="color-primary">10%</span> 적립</span>
+																</span>
+																<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+																<span class="ui-badge color-primary-dark font-weight-regular margin-top-10"><span class="color-basic">연회비</span> 1만원</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox5" id="radioBox5-4" />
+											<label for="radioBox5-4" class="ui-label type-block">
+												<span class="guide-info-item type-no-padding">
+													<span class="guide-info-item-inner">
+														<span class="guide-info-icon type-regular type-icon-96"></span>
+														<span class="guide-info-block display-block">
+															<span class="guide-info-left display-block">
+																<strong class="guide-info-title">골프 혜택</strong>
+																<span class="default-text font-weight-regular display-block">
+																	<span class="info-list type-inherit display-block">
+																		<span class="info-item type-indent">
+																			<span class="indent">-</span>
+																			<span class="indent-block">골프장, 연습장, 스크린, 카카오골프 <span class="color-primary">10%</span> 적립</span>
+																		</span>
+																		<span class="info-item type-indent margin-top-5"><span class="indent">-</span>골프장 클럽하우스 커피 무료 4인</span>
+																	</span>
+																</span>
+																<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+																<span class="ui-badge color-primary-dark font-weight-regular margin-top-10"><span class="color-basic">연회비</span> 2만원</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox5" id="radioBox5-1" />
+											<label for="radioBox5-1" class="ui-label type-block">
+												<span class="guide-info-item type-no-padding">
+													<span class="guide-info-item-inner">
+														<span class="guide-info-icon type-regular type-icon-94"></span>
+														<span class="guide-info-block display-block">
+															<span class="guide-info-left display-block">
+																<strong class="guide-info-title">에듀 혜택</strong>
+																<span class="default-text display-block">
+																	<span class="guide-info-text-item font-weight-regular display-block">학원, 헬스장, 수영장 <span class="color-primary">5%</span> 적립</span>
+																</span>
+																<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+																<span class="ui-badge color-primary-dark font-weight-regular margin-top-10"><span class="color-basic">연회비</span> 2만원</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<p class="ui-notice">선택한 서비스에 따라 추가 연회비가 부과됩니다.</p>
+								</div>
+							</div>
+							<!--// 2022.04.06 : add : 내맘대로 서비스 추가 -->
+
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">선택</h3>
+								</div>
+								<div class="section-contents">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-1" checked />
+											<label for="radioPanel3-1" class="ui-label">
+												<span class="ui-label-text">Together</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-2" />
+											<label for="radioPanel3-2" class="ui-label">
+												<span class="ui-label-text">Joy</span>
+											</label>
+										</div>
+									</div>
+									<div class="form-list">
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">추천인</strong>
+											</div>
+											<div class="form-group">
+												<div class="form-flex">
+													<div class="form-flex-cell type-flexible">
+														<div class="ui-input-block type-use-delete">
+															<input type="text" class="ui-input" title="추천인 이름 입력" placeholder="추천인 이름" />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+													</div>
+													<div class="form-flex-cell">
+														<button type="button" class="ui-button ui-basic-button type-small type-gray">검색</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">추천인</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input" title="추천인 이름 입력" placeholder="추천인 이름" />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">추천인</strong>
+											</div>
+											<div class="form-group">
+												<div class="form-flex">
+													<div class="form-flex-cell type-flexible">
+														<div class="ui-input-block type-use-delete">
+															<input type="text" class="ui-input" title="추천인 사번 입력" placeholder="추천인 사번" />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+													</div>
+													<div class="form-flex-cell">
+														<button type="button" class="ui-button ui-basic-button type-small type-gray">검색</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">추천인</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input" title="추천인 사번 입력" placeholder="추천인 사번" />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+											<p class="ui-notice">검색 버튼을 누르시고 추천인 사번 입력 후 검색버튼을 누르시면 사번, 성명이 자동 입력됩니다.</p>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">추천영업점</strong>
+											</div>
+											<div class="form-group">
+												<div class="form-flex">
+													<div class="form-flex-cell type-flexible">
+														<div class="ui-input-block type-use-delete">
+															<input type="text" class="ui-input" title="추천 영업점명 입력" placeholder="추천 영업점명" />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+													</div>
+													<div class="form-flex-cell">
+														<button type="button" class="ui-button ui-basic-button type-small type-gray">검색</button>
+													</div>
+												</div>
+											</div>
+											<p class="ui-notice">추천 영업점명을 입력 후 검색버튼을 누르시면 해당 영업점이 자동 조회 됩니다.</p>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">본인회원번호</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input" title="본인회원번호 입력" placeholder="본인회원번호" />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">서비스 선택</h3>
+								</div>
+								<div class="section-contents">
+									<div class="ui-radio-group">
+										<div class="ui-radio-block type-box type-align-top">
+											<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-1" checked />
+											<label for="radioBox2-1" class="ui-label">
+												<div class="ui-label-text">
+													Simple<br />
+													서비스
+													<div class="sub">
+														국내 일시불 /할부<br />
+														이용금액 0.7% 할인
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box type-align-top">
+											<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-2" />
+											<label for="radioBox2-2" class="ui-label">
+												<div class="ui-label-text">
+													Life<br />
+													서비스
+													<div class="sub">
+														자동이체 전월 실적<br />
+														30/80만 이상 시<br />
+														1.1만/1.5만 할인
+													</div>
+												</div>
+											</label>
+										</div>
+									</div>
+									<div class="form-list">
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">사업자등록번호</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input" title="사업자등록번호 입력" placeholder="'-'없이 입력" />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+											<p class="ui-notice">사업자 등록번호가 없는 손님께서는 '0000000000' 입력해주시기 바랍니다.</p>
+											<p class="ui-notice">사업자 등록번호가 없는 경우 부가세환급 편의지원 서비스를 받으실 수 없습니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">서비스 선택</h3>
+								</div>
+								<div class="section-contents">
+									<div class="section-contents-title">
+										<h4 class="title">쇼핑서비스 (3가지 옵션 중 택1, 매월 1회 변경 가능)</h4>
+									</div>
+									<div class="ui-radio-group type-full">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox3" id="radioBox3-1" checked />
+											<label for="radioBox3-1" class="ui-label type-block">
+												<span class="ui-label-text type-text-large">오픈마켓 5~10%</span>
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="store-logos type-service margin-top-20">
+													<span class="store-logos-list">
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-1.png" alt="11번가" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-2.png" alt="지마켓" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-3.png" alt="옥션" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-4.png" alt="인터파크" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+											</label>
+										</div>
+										<!-- 2021.12.24 추가 -->
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox3" id="radioBox3-2" />
+											<label for="radioBox3-2" class="ui-label type-block">
+												<span class="ui-label-text type-text-large">슈퍼마켓 5%</span>
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="store-logos type-service margin-top-20">
+													<span class="store-logos-list">
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-5.png" alt="이마트 에브리데이" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-6.png" alt="롯데 슈퍼" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-7.png" alt="GS 슈퍼마켓" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-8.png" alt="홈플러스 익스프레스" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox3" id="radioBox3-3" />
+											<label for="radioBox3-3" class="ui-label type-block">
+												<span class="ui-label-text type-text-large">편의점 5%</span>
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="store-logos type-service margin-top-20">
+													<span class="store-logos-list">
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-9.png" alt="세븐일레븐" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-10.png" alt="CU" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-11.png" alt="GS25" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox3" id="radioBox3-4" />
+											<label for="radioBox3-4" class="ui-label type-block">
+												<span class="ui-label-text type-text-large">백화점 5%</span>
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="store-logos type-service margin-top-20">
+													<span class="store-logos-list">
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-12.png" alt="롯데백화점" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-13.png" alt="현대백화점" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-14.png" alt="신세계백화점" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+											</label>
+										</div>
+										<!-- //2021.12.24 추가 -->
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox3" id="radioBox3-5" />
+											<label for="radioBox3-5" class="ui-label type-block">
+												<span class="ui-label-text type-text-large">소셜커머스 5~10%</span>
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="store-logos type-service margin-top-20">
+													<span class="store-logos-list">
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-15.png" alt="위메프" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-16.png" alt="티몬" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-17.png" alt="쿠팡" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox3" id="radioBox3-6" />
+											<label for="radioBox3-6" class="ui-label type-block">
+												<span class="ui-label-text type-text-large">홈쇼핑 5~10%</span>
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="store-logos type-service margin-top-20">
+													<span class="store-logos-list">
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-18.png" alt="지에스샵" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-19.png" alt="H몰" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-20.png" alt="CJ오쇼핑" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-21.png" alt="NS홈쇼핑" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-22.png" alt="홈&쇼핑" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+														<span class="store-logos-item">
+															<span class="logo-image type-store type-medium-regular">
+																<span class="logo-image-inner">
+																	<img src="./assets/images/contents/affiliate/logo-23.png" alt="롯데홈쇼핑" onerror="this.parentNode.className += ' is-error';" />
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="section-contents">
+									<div class="section-contents-title">
+										<h4 class="title">주유서비스 (3가지 옵션 중 택1, 매월 1회 변경 가능)</h4>
+									</div>
+									<div class="ui-radio-group type-wrap">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox4" id="radioBox4-1" checked />
+											<label for="radioBox4-1" class="ui-label type-block">
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="logo-image type-store type-medium-regular margin-bottom-20">
+													<span class="logo-image-inner">
+														<img src="./assets/images/contents/affiliate/logo-24.png" alt="GS칼텍스" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="ui-label-text">
+													GS칼텍스<br />
+													리터당<br />
+													50~60원 할인
+												</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox4" id="radioBox4-2" />
+											<label for="radioBox4-2" class="ui-label type-block">
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="logo-image type-store type-medium-regular margin-bottom-20">
+													<span class="logo-image-inner">
+														<img src="./assets/images/contents/affiliate/logo-25.png" alt="SK에너지" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="ui-label-text">
+													SK에너지<br />
+													리터당<br />
+													50~60원 할인
+												</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox4" id="radioBox4-3" />
+											<label for="radioBox4-3" class="ui-label type-block">
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="logo-image type-store type-medium-regular margin-bottom-20">
+													<span class="logo-image-inner">
+														<img src="./assets/images/contents/affiliate/logo-26.png" alt="에쓰오일" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="ui-label-text">
+													에쓰오일<br />
+													리터당<br />
+													50~60원 할인
+												</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox4" id="radioBox4-4" />
+											<label for="radioBox4-4" class="ui-label type-block">
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="logo-image type-store type-medium-regular margin-bottom-20">
+													<span class="logo-image-inner">
+														<img src="./assets/images/contents/affiliate/logo-27.png" alt="현대오일뱅크" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="ui-label-text">
+													현대오일뱅크<br />
+													리터당<br />
+													50~60원 할인
+												</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox4" id="radioBox4-5" />
+											<label for="radioBox4-5" class="ui-label type-block">
+												<!-- 2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="logo-image type-store type-medium-regular margin-bottom-20">
+													<span class="logo-image-inner">
+														<img src="./assets/images/contents/affiliate/logo-28.png" alt="알뜰주유소" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.03.16 : mod : 로고 영역 구조 변경 -->
+												<span class="ui-label-text">
+													알뜰주유소<br />
+													리터당<br />
+													50~60원 할인
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">신청자 정보</h3>
+								</div>
+								<div class="section-contents">
+									<div class="form-list">
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">이름</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input" title="이름 입력" placeholder="이름 입력" required />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">주민등록번호</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="주민등록번호 13자리 입력" placeholder="숫자만 입력" />
+												</div>
+											</div>
+											<div class="terms-area">
+												<!-- 2022.03.30 드롭다운 상세보기 버튼으로 변경 -->
+												<div class="terms-item">
+													<div class="ui-checkbox-block type-align-top">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" />
+														<label for="selectCheckbox-1" class="ui-label">
+															<span class="ui-checkbox-object"></span>
+															<span class="ui-label-text">실명확인 및 회원여부 확인, 본인 직접 수령 동의</span>
+														</label>
+														<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+													</div>
+												</div>
+												<!-- //2022.03.30 드롭다운 상세보기 버튼으로 변경 -->
+												<div class="terms-item">
+													<div class="ui-checkbox-block type-align-top">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox-2" />
+														<label for="selectCheckbox-2" class="ui-label">
+															<span class="ui-checkbox-object"></span>
+															<span class="ui-label-text">카드의 실제 소유자입니다.</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons type-tooltip">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<div class="ui-button-tooltip">
+										<!-- 2022.04.27 : mod : 접근성 텍스트 추가 -->
+										<span class="ui-button-tooltip-text"><span class="for-a11y">다음 버튼을 누르면 </span>신분증 정보 입력 화면으로 이동합니다.</span>
+									</div>
+									<a href="" class="ui-basic-button type-primary">다음</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- popup -->
+			<div class="layer-wrap layer-wrap--full" data-layer="test-basic">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">'22 한정 혜택 안내</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<div class="cont_deli">
+										<h2 class="page-title">
+											국내/해외 여행<br />
+											<strong>월 최대 2만 하나머니 추가적립!</strong>
+										</h2>
+
+										<div class="bene_box">
+											<div class="tit">
+												<strong>국내여행</strong>
+												<span>월 최대 <strong>1만 하나머니</strong></span>
+											</div>
+
+											<ul>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_01.png" alt="" />
+													<strong>로컬 맛집 100선</strong>
+													10% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_02.png" alt="" />
+													<strong>빵지순례 10선</strong>
+													10% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_03.png" alt="" />
+													<strong>쏘카, 그린카</strong>
+													10% 적립
+												</li>
+											</ul>
+										</div>
+
+										<div class="bene_box ty02">
+											<div class="tit">
+												<strong>해외여행</strong>
+												<span>월 최대 <strong>1만 하나머니</strong></span>
+											</div>
+											<ul>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_04.png" alt="" />
+													<strong>공항철도/K리무진</strong>
+													50% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_05.png" alt="" />
+													<strong>신라, 롯데, 신세계<br />3대 면세점</strong>
+													10% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_06.png" alt="" />
+													<strong>노랑풍선</strong>
+													10% 적립
+												</li>
+											</ul>
+										</div>
+
+										<div class="bene_box ty03">
+											<div class="tit">
+												<strong>기존 혜택 그대로</strong>
+												<span>월 최대 <strong>1만 하나머니</strong></span>
+											</div>
+											<ul>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_07.png" alt="" />
+													<strong>야놀자, 여기어때</strong>
+													10% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_08.png" alt="" />
+													<strong>6대 항공사</strong>
+													10% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_09.png" alt="" />
+													<strong>KTX, SRT</strong>
+													10% 적립
+												</li>
+											</ul>
+										</div>
+										<div class="wcms-data margin-top-20">
+											<ul class="wcms-list">
+												<li class="wcms-list-item" data-symbol="※">
+													<div class="wcms-list-contents">이벤트는 하나카드 및 제휴사의 사정에 따라 사전 예고 없이 변경되거나 중단 될 수 있습니다.</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- // popup -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

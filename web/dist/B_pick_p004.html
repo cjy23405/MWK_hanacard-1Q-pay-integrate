@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">나만의 Pick 이용내역</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-tab type-nav">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">혜택내역</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">이용실적</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">혜택내역</h2>
+
+						<p class="page-title">
+							이번달 <span class="color-primary">3</span>건의<br />
+							혜택을 받았어요.
+						</p>
+
+						<div class="down-arrow-link-wrap">
+							<button type="button" class="down-arrow-link">2021.09.01 ~ 2021.09.01</button>
+						</div>
+
+						<!-- Case : 내역 없을 때 -->
+						<div class="link-item type-none type-flex type-no-line">
+							<p class="item-text">아직 받은 혜택내역이 없습니다.</p>
+						</div>
+						<!-- Case : //내역 없을 때 -->
+
+						<!-- Case : 내역 있을 때 -->
+						<div class="usage-history">
+							<ul class="usage-history-list">
+								<li class="usage-history-item">
+									<div class="usage-history-block">
+										<a href="" class="usage-history-top type-link">
+											<div class="usage-history-category">나만의 Pick 첫만남 이벤트</div>
+											<div class="usage-history-title">커피빈 2,000원 캐쉬백 혜택</div>
+										</a>
+										<div class="usage-history-body">
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">혜택</dt>
+												<dd class="form-detail-group font-weight-medium">무이자할부</dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">내용</dt>
+												<dd class="form-detail-group font-weight-medium"><span class="color-primary">3개월까지 무이자할부</span></dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">제공일자</dt>
+												<dd class="form-detail-group font-weight-medium">2021.09.15</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+								<li class="usage-history-item">
+									<div class="usage-history-block">
+										<a href="" class="usage-history-top type-link">
+											<div class="usage-history-category">김부섭수학학원 5% 할인</div>
+											<div class="usage-history-title">50,000원 이상 결제 시, 500원까지 (기간 내 월 1회 한도)</div>
+										</a>
+										<div class="usage-history-body">
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">혜택</dt>
+												<dd class="form-detail-group font-weight-medium">무이자할부</dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">내용</dt>
+												<dd class="form-detail-group font-weight-medium"><span class="color-primary">3개월까지 무이자할부</span></dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">제공일자</dt>
+												<dd class="form-detail-group font-weight-medium">2021.09.15</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+								<li class="usage-history-item">
+									<div class="usage-history-block">
+										<a href="" class="usage-history-top type-link">
+											<div class="usage-history-category">
+												별 새겨지는 아름다운 듯합니다. 둘 다하지 자랑처럼 까닭입니다. 다 못 별들을 버리었습니다. 멀듯이, 피어나듯이 별 북간도에 같이 거외다. 밤을 비둘기, 했던 어머님, 듯합니다.
+												까닭이요, 경, 쓸쓸함과 아무 흙으로 이름을 둘 같이 있습니다. 위에도 별이 않은 어머님, 애기 말 버리었습니다. 우는 너무나 하나에 까닭이요, 지나고 그러나 밤이 이 이네들은
+												까닭입니다. 북간도에 사랑과 덮어 불러 어머니 까닭입니다. 추억과 했던 겨울이 계십니다.
+											</div>
+											<div class="usage-history-title">
+												지나가는 사람들의 내 나는 별 마리아 토끼, 못 거외다. 소학교 불러 비둘기, 오면 이름과 차 많은 계십니다. 하나에 나는 봄이 하늘에는 아이들의 우는 남은 계절이 불러 봅니다. 하나에
+												북간도에 별이 버리었습니다. 옥 하나에 벌써 밤을 하나에 언덕 봄이 하나 봅니다. 멀리 별들을 다 경, 이네들은 별 써 봅니다. 피어나듯이 하나에 딴은 된 묻힌 까닭이요, 다하지 당신은
+												있습니다. 애기 우는 내 이름을 보고, 슬퍼하는 가슴속에 같이 봅니다. 없이 어머니, 별 마디씩 계십니다. 어머니, 오는 겨울이 봄이 가슴속에 우는 까닭입니다. 나의 이국 시인의 계절이
+												겨울이 있습니다.
+											</div>
+										</a>
+										<div class="usage-history-body">
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">혜택</dt>
+												<dd class="form-detail-group font-weight-medium">무이자할부</dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">내용</dt>
+												<dd class="form-detail-group font-weight-medium"><span class="color-primary">3개월까지 무이자할부</span></dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">제공일자</dt>
+												<dd class="form-detail-group font-weight-medium">2021.09.15</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- Case : //내역 있을 때 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

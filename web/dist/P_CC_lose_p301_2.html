@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">재발급 신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title"><span class="title-step">STEP 1</span>카드 재발급을 위한 <br />정보를 선택해주세요.</h2>
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 2단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">후불교통기능</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+                                        <div class="ui-radio-block type-box">
+                                            <input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" checked />
+                                            <label for="radioPanel1-1" class="ui-label">
+                                                <span class="ui-label-text">있음</span>
+                                            </label>
+                                        </div>
+                                        <div class="ui-radio-block type-box">
+                                            <input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" />
+                                            <label for="radioPanel1-2" class="ui-label">
+                                                <span class="ui-label-text">없음</span>
+                                            </label>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">현금인출기능</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+                                        <div class="ui-radio-block type-box">
+                                            <input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-1" checked />
+                                            <label for="radioPanel2-1" class="ui-label">
+                                                <span class="ui-label-text">있음</span>
+                                            </label>
+                                        </div>
+                                        <div class="ui-radio-block type-box">
+                                            <input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-2" />
+                                            <label for="radioPanel2-2" class="ui-label">
+                                                <span class="ui-label-text">없음</span>
+                                            </label>
+                                        </div>
+                                    </div>
+								</div>
+                                <ul class="info-list type-default type-inherit type-outside margin-top-10">
+                                    <li class="info-item color-blur type-presa">현금인출 기능은 결제계좌를 하나은행으로 이용하는 경우에 신청할 수 있습니다.</li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

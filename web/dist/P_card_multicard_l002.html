@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-issue-multicard">멀티카드 발급 안내</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 멀티카드 발급 안내 -->
+			<div class="layer-wrap layer-wrap layer-wrap--full" data-layer="layer-info-issue-multicard">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">멀티카드 발급 안내</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<p class="page-title margin-bottom-15">
+									멀티카드(전용 플라스틱 카드)로<br />
+									발급하세요.
+								</p>
+								<ul class="info-list type-outside type-text-large color-blur">
+									<li class="info-item">신청하신 모바일카드를 플라스틱카드로 이용할 수 있는 전용 결제 수단입니다.</li>
+									<li class="info-item">멀티카드는 신청하신 모바일카드와 동일 브랜드로 발급됩니다. (별도 연회비 없음)</li>
+								</ul>
+
+								<div class="page-section-group">
+									<div class="section-title">
+										<h3 class="title">멀티카드 디자인 선택</h3>
+									</div>
+									<div class="section-contents">
+										<div class="card-select">
+											<div class="card-select-item">
+												<div class="ui-radio-block">
+													<input type="radio" class="ui-radio" name="radio2" id="radio2-1" />
+													<label for="radio2-1" class="ui-label type-block">
+														<span class="ui-radio-object"></span>
+														<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+														<!-- DD : 이미지 없을 때 -->
+														<span class="card-image">
+															<span class="card-image-inner"></span>
+														</span>
+														<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+														<span class="ui-label-text">멀티카드 A</span>
+													</label>
+												</div>
+											</div>
+											<div class="card-select-item">
+												<div class="ui-radio-block">
+													<input type="radio" class="ui-radio" name="radio2" id="radio2-2" />
+													<label for="radio2-2" class="ui-label type-block">
+														<span class="ui-radio-object"></span>
+														<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+														<!-- DD : 이미지 에러 -->
+														<span class="card-image">
+															<span class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</span>
+														</span>
+														<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+														<span class="ui-label-text">멀티카드 B</span>
+													</label>
+												</div>
+											</div>
+											<div class="card-select-item">
+												<div class="ui-radio-block">
+													<input type="radio" class="ui-radio" name="radio2" id="radio2-3" />
+													<label for="radio2-3" class="ui-label type-block">
+														<span class="ui-radio-object"></span>
+														<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+														<!-- DD : 이미지 있을 때 -->
+														<span class="card-image">
+															<span class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</span>
+														</span>
+														<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+														<span class="ui-label-text">멀티카드 C</span>
+													</label>
+												</div>
+											</div>
+											<div class="card-select-item">
+												<div class="ui-radio-block">
+													<input type="radio" class="ui-radio" name="radio2" id="radio2-4" />
+													<label for="radio2-4" class="ui-label type-block">
+														<span class="ui-radio-object"></span>
+														<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+														<span class="card-image">
+															<span class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</span>
+														</span>
+														<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+														<span class="ui-label-text">멀티카드 D</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="page-section-group">
+									<div class="toggle-info-list">
+										<div class="toggle-info-item">
+											<div class="toggle-info-title">
+												<strong class="title">클리어 옵션</strong>
+												<button class="ui-button-question"><span class="for-a11y">클리어 옵션 안내</span></button>
+											</div>
+											<!-- 2022.04.06 문구수정 -->
+											<p class="toggle-info-text">카드번호/CVV가 플라스틱카드에 인쇄되지 않습니다.</p>
+											<div class="ui-toggle-block">
+												<input type="checkbox" class="ui-toggle" id="checkboxToggle1-1" />
+												<label for="checkboxToggle1-1" class="ui-label">
+													<span class="ui-toggle-object"></span>
+													<!-- 2022.07.22 : mod : 히든 텍스트 추가 -->
+													<span class="for-a11y">클리어 옵션</span>
+												</label>
+											</div>
+										</div>
+										<div class="toggle-info-item">
+											<div class="toggle-info-title">
+												<strong class="title">원큐페이(앱카드) 신청</strong>
+											</div>
+											<p class="toggle-info-text">실물 카드 없이 바로 사용 가능합니다.</p>
+											<div class="ui-toggle-block">
+												<input type="checkbox" class="ui-toggle" id="checkboxToggle1-2" checked />
+												<label for="checkboxToggle1-2" class="ui-label">
+													<span class="ui-toggle-object"></span>
+													<!-- 2022.07.22 : mod : 히든 텍스트 추가 -->
+													<span class="for-a11y">원큐페이(앱카드) 신청</span>
+												</label>
+											</div>
+										</div>
+										<div class="toggle-info-item">
+											<div class="toggle-info-title">
+												<strong class="title">교통기능</strong>
+											</div>
+											<div class="ui-toggle-block">
+												<input type="checkbox" class="ui-toggle" id="checkboxToggle1-3" checked />
+												<label for="checkboxToggle1-3" class="ui-label">
+													<span class="ui-toggle-object"></span>
+													<!-- 2022.07.22 : mod : 히든 텍스트 추가 -->
+													<span class="for-a11y">교통기능 사용</span>
+												</label>
+											</div>
+										</div>
+										<div class="toggle-info-item">
+											<div class="toggle-info-title">
+												<strong class="title">현금인출 기능</strong>
+											</div>
+											<div class="ui-toggle-block">
+												<input type="checkbox" class="ui-toggle" id="checkboxToggle1-4" checked />
+												<label for="checkboxToggle1-4" class="ui-label">
+													<span class="ui-toggle-object"></span>
+													<!-- 2022.07.22 : mod : 히든 텍스트 추가 -->
+													<span class="for-a11y">현금인출 기능 사용</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="page-section-group">
+									<div class="section-title">
+										<h3 class="title">제휴간편결제 서비스</h3>
+										<button class="ui-button-question"><span class="for-a11y">카드 유형 안내</span></button>
+									</div>
+									<div class="section-contents">
+										<div class="terms-area type-indent">
+											<div class="terms-item">
+												<div class="ui-checkbox-block type-align-top">
+													<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" data-checkbox-tab="selectCheckbox-1" />
+													<label for="selectCheckbox-1" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="ui-label-text">카카오페이</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="terms-area js-ui-accordion margin-top-35" data-checkbox-tab-panel="selectCheckbox-1">
+											<div class="terms-item js-ui-accordion__item">
+												<div class="ui-checkbox-block type-align-top">
+													<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1-1" checked />
+													<label for="selectCheckbox-1-1" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="ui-label-text">개인정보 필수 제공 동의</span>
+													</label>
+												</div>
+												<button type="button" class="terms-opener js-ui-accordion__opener">
+													<span class="for-a11y">
+														상세 내용
+														<span class="open-text">열기</span>
+														<span class="close-text">닫기</span>
+													</span>
+												</button>
+												<div class="terms-detail js-ui-accordion__layer">
+													<div class="terms-detail-inner-scroll">
+														내용<br />
+														내용<br />
+														내용
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button" data-role="layerClose">취소</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 멀티카드 발급 안내 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-info-issue-multicard');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- 2022.03.04 : mod : 컨텐츠 추가 -->
+					<div class="page-contents type-guide">
+						<h1 class="for-a11y">오픈뱅킹 안내</h1>
+						<div class="guide-slide">
+							<div class="guide-slide-controller"></div>
+							<ul class="guide-slide-list">
+								<li class="guide-slide-item">
+									<div class="guide-slide-scroller">
+										<div class="guide-slide-scroller-inner">
+											<div class="guide-slide-block">
+												<div class="guide-slide-title">하나카드 내 계좌(오픈뱅킹)이란?</div>
+												<div class="basic-text font-weight-light color-blur margin-bottom-10">
+													하나카드 내 계좌(오픈뱅킹) 가입시<br />
+													각각의 은행/카드 앱을 설치하지 않고<br />
+													편리하게 확인/이용 가능합니다!
+												</div>
+												<div class="basic-text font-weight-medium color-secondary margin-top-5">1. 은행별 계좌관리 및 입출금(송금)</div>
+												<div class="basic-text font-weight-medium color-secondary margin-top-5">2. 카드사별 보유카드 정보 및 청구금액</div>
+												<!-- 2022.05.30 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/open-banking-guide-1.png" alt="오픈뱅킹 예시 화면" class="image-only margin-top-5" />
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="guide-slide-item">
+									<div class="guide-slide-scroller">
+										<div class="guide-slide-scroller-inner">
+											<div class="guide-slide-block">
+												<div class="guide-slide-title">내 계좌 (오픈뱅킹) 가입 단계</div>
+												<ul class="step-detail-list">
+													<li class="step-detail-item type-joinstep-1">
+														<span class="step-num">STEP 1</span>
+														<p class="step-txt">약관 동의 및 이메일 등록</p>
+													</li>
+													<li class="step-detail-item type-joinstep-2">
+														<span class="step-num">STEP 2</span>
+														<p class="step-txt">ARS로 본인인증</p>
+													</li>
+													<li class="step-detail-item type-joinstep-3">
+														<span class="step-num">STEP 3</span>
+														<p class="step-txt">은행/카드사 추가</p>
+													</li>
+													<li class="step-detail-item type-joinstep-4">
+														<span class="step-num">STEP 4</span>
+														<p class="step-txt">생체인증 또는 비밀번호 입력</p>
+													</li>
+												</ul>
+												<!-- 삭제
+												<section class="page-section margin-top-25">
+													<div class="section-title">
+														<h2 class="basic-text font-weight-medium">가입완료!</h2>
+													</div>
+													<p class="basic-text font-weight-light color-blur">
+														이제 하나카드 내 계좌(오픈뱅킹)에서<br />
+														내 계좌, 내 카드를 확인해보세요
+													</p>
+												</section> -->
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //2022.03.04 : mod : 컨텐츠 추가 -->
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary">서비스 가입하기</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

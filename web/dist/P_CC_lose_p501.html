@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">타사카드 일괄 분실신고</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							다른카드 분실신고도<br />
+							하나카드가 대신 해드릴께요.
+						</h2>
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">연락처</strong>
+								</div>
+								<div class="form-group type-contact">
+									<div class="form-flex">
+										<div class="form-flex-cell">
+											<div class="ui-select-block">
+												<button type="button" class="ui-button ui-select" title="통신사 선택">010</button>
+											</div>
+										</div>
+										<div class="form-flex-cell">
+											<div class="ui-range-dash">-</div>
+										</div>
+										<div class="form-flex-cell type-flexible">
+											<div class="ui-input-block">
+												<input type="number" pattern="\d*" class="ui-input" title="휴대폰 번호 입력" placeholder="‘-’ 제외하고 입력" required />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">카드사 선택</strong>
+									<div class="form-title-right">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" name="checkbox" class="ui-checkbox" id="checkboxGroupAll" data-checkbox-group="checkboxGroup" />
+											<label for="checkboxGroupAll" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">전체 선택</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="ui-checkbox-group type-grid">
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-1" data-checkbox-group-child="checkboxGroup" checked />
+											<label for="checkbox01-1" class="ui-label">
+												<span class="ui-label-text">KB국민카드</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-2" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-2" class="ui-label">
+												<span class="ui-label-text">농협NH카드</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-3" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-3" class="ui-label">
+												<span class="ui-label-text">SC제일은행<br />(BC)</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-4" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-4" class="ui-label">
+												<span class="ui-label-text">신한카드</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-5" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-5" class="ui-label">
+												<span class="ui-label-text">우리카드</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-6" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-6" class="ui-label">
+												<span class="ui-label-text">대구은행<br />(BC)</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-7" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-7" class="ui-label">
+												<span class="ui-label-text">롯데카드</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-8" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-8" class="ui-label">
+												<span class="ui-label-text">바로카드<br />(BC)</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-9" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-9" class="ui-label">
+												<span class="ui-label-text">부산은행<br />(BC)</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-10" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-10" class="ui-label">
+												<span class="ui-label-text">현대카드</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-11" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-11" class="ui-label">
+												<span class="ui-label-text">제주은행<br />(BC)</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-12" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-12" class="ui-label">
+												<span class="ui-label-text">경남은행<br />(BC)</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-13" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-13" class="ui-label">
+												<span class="ui-label-text">삼성카드</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-14" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-14" class="ui-label">
+												<span class="ui-label-text">전북은행<br />(BC)</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-15" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-15" class="ui-label">
+												<span class="ui-label-text">IBK기업은행<br />(BC)</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-16" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-16" class="ui-label">
+												<span class="ui-label-text">씨티카드</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-17" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-17" class="ui-label">
+												<span class="ui-label-text">수협중앙회<br />(BC)</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-18" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-18" class="ui-label">
+												<span class="ui-label-text">광주은행<br />(BC)</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-19" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-19" class="ui-label">
+												<span class="ui-label-text">카카오뱅크</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-box">
+											<input type="checkbox" class="ui-checkbox" name="checkbox" id="checkbox01-20" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkbox01-20" class="ui-label">
+												<span class="ui-label-text">케이뱅크</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">
+											지갑 등 분실로 여러 회사 카드를 동시에 분실하였을 경우 하나카드에서 다른 회사 카드도 분실신고 접수 서비스를 제공해드리고 있습니다. (하나카드 회원에 대해서만 제공)
+										</li>
+										<li class="info-item">여러 카드사에 각각 분실 신고하는 번거로움 해소하고 신속한 분실등록으로 부정사용을 예방할 수 있습니다.</li>
+										<li class="info-item">
+											<span>타사카드(일괄)분실신고 신청 유의사항</span>
+											<ul class="info-list">
+												<li class="info-item type-indent">
+													<span class="indent">-</span>
+													<div><span class="color-basic">신청주체</span> : 하나카드 개인회원 본인만 가능 (주민번호 기준으로 등록됨)</div>
+												</li>
+												<li class="info-item type-indent">
+													<span class="indent">-</span>
+													<div><span class="color-basic">분실등록 대상카드</span> : 본인 명의의 개인카드 (신용,체크,가족)</div>
+												</li>
+												<li class="info-item type-indent">
+													<span class="indent">*</span>타사카드 분실신고 접수 시 해당 “주민등록번호로 발급된 개인카드”가 모두 거래정지됩니다. (예시 : ①본인명의 개인카드 ②본인 주민등록번호로 발급된
+													가족카드)
+												</li>
+												<li class="info-item type-indent"><span class="indent">-</span>특정카드만 선택하여 분실신고 필요 시 해당 카드사로 직접 분실신고 하셔야 합니다.</li>
+												<li class="info-item type-indent"><span class="indent">-</span>BC계열을 발급중인 전문계 카드 선택 시 단독카드와 BC계열카드 모두 거래정지됩니다.</li>
+												<li class="info-item type-indent">
+													<span class="indent">-</span>법인카드(개인형 법인카드 포함)는 일괄신고 대상에서 제외되므로 해당 카드사에 직접 분실신고하셔야 합니다. 개인(신용)정보 제공 미동의시 타사에
+													분실정보를 전송할 수 없어 일괄 등록 신청이 불가하며, 제공하신 정보는 회원 탈회 시까지 보관될 예정입니다.(휴대폰 번호는 5년간 보관)
+												</li>
+												<li class="info-item type-indent">
+													<span class="indent">-</span>공과금 자동납부 또는 해외 등에서 본인명의 카드를 자녀 등이 사용하고 있을 경우에도 거래정지 등록되므로 유의하셔야 합니다.(해당 카드사로 직접
+													연락하여 카드별로 분실 등록하여야합니다.)
+												</li>
+												<li class="info-item type-indent"><span class="indent">-</span>법인카드(공용카드, 개인명의카드 모두 포함), 주민등록번호가 다른 가족은 분실등록 불가합니다.</li>
+												<li class="info-item type-indent">
+													<span class="indent">-</span>
+													<div>
+														<span class="color-basic">해당 카드사로 직접 확인해야 하는 사항</span><br />
+														카드사용내역 확인, 재발급 신청, 부정사용건에 대한 보사신청, 분실등록 해체 등
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+
+									<!-- 2021.12.15 수정 -->
+									<div class="tel-info">
+										<button type="button" class="ui-tel-link">타사분실신고 전화번호</button>
+									</div>
+									<!-- //2021.12.15 수정 -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">신청</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/my-page.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-mypage">
+						<div class="header-load">
+							<div class="header-left">
+								<h1 class="header-logo type-1qpay">
+									<span class="header-logo-image">
+										<span class="for-a11y">1Q원큐페이</span>
+									</span>
+								</h1>
+							</div>
+							<div class="header-right">
+								<a href="" class="header-button type-search" role="button"><span class="for-a11y">통합검색</span></a>
+								<a href="" class="header-button type-push" role="button"><span class="for-a11y">알림</span></a>
+								<!-- DD : 신규 알림이 있으면 is-new 클래스 값 추가 -->
+								<a href="" class="header-button type-push is-new" role="button" title="신규 알림 있음"><span class="for-a11y">알림</span></a>
+							</div>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-mypage">
+						<h2 class="for-a11y">My</h2>
+
+						<!-- 상단 -->
+						<div class="mypage-top">
+							<div class="mypage-top-load">
+								<section class="my-hanamoney">
+									<h3 class="my-hanamoney-title">
+										<a href="" class="my-hanamoney-title-link">하나머니</a>
+									</h3>
+									<div class="my-hanamoney-info">
+										<a href="" class="my-hanamoney-cost">51,000 P</a>
+										<div class="my-hanamoney-text">이번달 적립 160,000 P</div>
+									</div>
+								</section>
+
+								<div class="mypage-top-buttons">
+									<ul class="mypage-top-buttons-list">
+										<li class="mypage-top-buttons-item type-narrow">
+											<!-- 2022.03.31 : mod : a태그에 type-secondary 클래스 제거 -->
+											<a href="" class="mypage-top-button">
+												<span class="mypage-top-button-icon">
+													<img src="/images/_dummy/mypage-top-btn-1.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</span>
+												<span class="mypage-top-button-text">송금</span>
+											</a>
+										</li>
+										<!-- Case : 숨은계좌찾기 -->
+										<li class="mypage-top-buttons-item">
+											<!-- 2022.03.31 : mod : a태그에 type-secondary 클래스 추가 -->
+											<a href="" class="mypage-top-button type-secondary">
+												<span class="mypage-top-button-icon">
+													<img src="/images/_dummy/mypage-top-btn-2.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</span>
+												<span class="mypage-top-button-text">숨은계좌찾기</span>
+											</a>
+										</li>
+										<!-- //Case : 숨은계좌찾기 -->
+										<!-- Case : 가계부 -->
+										<!-- <li class="mypage-top-buttons-item">
+											<a href="" class="mypage-top-button type-secondary">
+												<span class="mypage-top-button-icon">
+													<img src="/images/_dummy/mypage-top-btn-3.png" alt="" onerror="this.parentNode.className += ' is-error';">
+												</span>
+												<span class="mypage-top-button-text">가계부</span>
+											</a>
+										</li> -->
+										<!-- Case : 가계부 -->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //상단 -->
+
+						<div class="mypage-wrap">
+							<div class="mypage-wrap-inner">
+								<!-- 내 소비 -->
+								<section class="mypage-section type-1">
+									<div class="mypage-section-load">
+										<div class="mypage-section-head margin-bottom-30">
+											<h3 class="mypage-section-title"><span class="big-text">내 소비</span></h3>
+										</div>
+										<div class="usage-default">
+											<ul class="usage-default-list">
+												<li class="usage-default-item">
+													<a href="" class="usage-default-block type-align-top">
+														<div class="usage-default-left">
+															<div class="usage-default-title">
+																<div class="medium-text font-weight-bold margin-top-4">카드값</div>
+															</div>
+														</div>
+														<div class="usage-default-right">
+															<div class="usage-default-sum">
+																<div class="color-primary large-text font-weight-bold">6,234,567 원</div>
+															</div>
+															<div class="usage-default-etc">
+																<div class="usage-default-etc-item">3/15(화) 출금</div>
+															</div>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="usage-default type-narrow-line">
+											<ul class="usage-default-list">
+												<li class="usage-default-item">
+													<a href="" class="usage-default-block type-align-top">
+														<div class="usage-default-left">
+															<div class="usage-default-title">
+																<div class="medium-text font-weight-bold margin-top-4">남은 한도</div>
+															</div>
+														</div>
+														<div class="usage-default-right">
+															<div class="usage-default-sum">
+																<div class="color-primary large-text font-weight-bold">6,234,567 원</div>
+															</div>
+															<div class="usage-default-etc">
+																<div class="usage-default-etc-item">총 150만원</div>
+															</div>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="usage-default type-narrow-line">
+											<ul class="usage-default-list">
+												<li class="usage-default-item">
+													<div class="mypage-section-load">
+														<div class="mypage-section-head">
+															<h3 class="mypage-section-title">최근 이용내역</h3>
+														</div>
+														<div class="usage-default">
+															<ul class="usage-default-list">
+																<li class="usage-default-item">
+																	<!-- 2022.04.07 : mod : .usage-default-block 을 a 태그로 변경 -->
+																	<a href="" class="usage-default-block">
+																		<div class="usage-default-left">
+																			<div class="usage-default-block">
+																				<div class="usage-default-left">
+																					<div class="usage-default-title">
+																						<span class="basic-text">스타벅스 청라점</span>
+																					</div>
+																				</div>
+																				<div class="usage-default-right">
+																					<div class="usage-default-sum">10,810 원</div>
+																				</div>
+																			</div>
+																			<div class="usage-default-etc">
+																				<div class="usage-default-etc-item">2022.12.19</div>
+																			</div>
+																		</div>
+																	</a>
+																</li>
+																<li class="usage-default-item">
+																	<a href="" class="usage-default-block">
+																		<div class="usage-default-left">
+																			<div class="usage-default-block">
+																				<div class="usage-default-left">
+																					<div class="usage-default-title">
+																						<span class="basic-text">스타벅스 청라점</span>
+																					</div>
+																				</div>
+																				<div class="usage-default-right">
+																					<div class="usage-default-sum">10,810 원</div>
+																				</div>
+																			</div>
+																			<div class="usage-default-etc">
+																				<div class="usage-default-etc-item">2022.12.19</div>
+																			</div>
+																		</div>
+																	</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<!-- //내 소비 -->
+
+								<!-- 내 자산-->
+								<section class="mypage-section type-6">
+									<div class="mypage-section-load">
+										<div class="mypage-section-head">
+											<h3 class="mypage-section-title"><span class="big-text">내 자산</span></h3>
+											<div class="mypage-section-right">
+												<!-- <button type="button" class="ui-button ui-reload-button">하루 이상</button> -->
+												<!-- DD : 조회하기 누른후 조회중인 시간동안 is-animate 클래스 값 추가 -->
+												<button type="button" class="ui-button ui-reload-button is-animate">하루 이상</button>
+											</div>
+										</div>
+										<div class="usage-default">
+											<ul class="usage-default-list">
+												<li class="usage-default-item">
+													<div class="usage-default-block type-align-middle">
+														<!-- DD : 이미지 있을 때 -->
+														<div class="logo-image">
+															<div class="logo-image-inner">
+																<!-- 2022.04.27 : mod : alt 값 변경 -->
+																<img src="/images/_dummy/logo-hana-card.png" alt="은행명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<div class="usage-default-left">
+															<div class="small-text color-blur ellipsis">신한 주거래 우대통장(저축예금)</div>
+															<div class="usage-default-sum margin-top-2">10,810 원</div>
+														</div>
+														<div class="usage-default-right type-auto">
+															<a href="" class="ui-basic-button type-small type-gray">송금</a>
+														</div>
+													</div>
+												</li>
+												<li class="usage-default-item">
+													<div class="usage-default-block type-align-middle">
+														<!-- DD : 이미지 있을 때 -->
+														<div class="logo-image">
+															<div class="logo-image-inner">
+																<!-- 2022.04.27 : mod : alt 값 변경 -->
+																<img src="/images/_dummy/logo-hana-card.png" alt="은행명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<div class="usage-default-left">
+															<div class="small-text color-blur ellipsis">신한 주거래 우대통장(저축예금)</div>
+															<div class="usage-default-sum margin-top-2">10,810 원</div>
+														</div>
+														<div class="usage-default-right type-auto">
+															<a href="" class="ui-basic-button type-small type-gray">송금</a>
+														</div>
+													</div>
+												</li>
+												<li class="usage-default-item">
+													<div class="usage-default-block type-align-middle">
+														<!-- DD : 이미지 있을 때 -->
+														<div class="logo-image">
+															<div class="logo-image-inner">
+																<!-- 2022.04.27 : mod : alt 값 변경 -->
+																<img src="/images/_dummy/logo-hana-card.png" alt="은행명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<div class="usage-default-left">
+															<div class="small-text color-blur ellipsis">신한 주거래 우대통장(저축예금)</div>
+															<div class="usage-default-sum margin-top-2">10,810 원</div>
+														</div>
+														<div class="usage-default-right type-auto">
+															<a href="" class="ui-basic-button type-small type-gray">송금</a>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<!-- //내 자산-->
+
+								<!-- 이벤트/고객센터 -->
+								<section class="mypage-simple">
+									<div class="menu-horizontal-area type-mypage-tile">
+										<ul class="menu-horizontal-list">
+											<li class="menu-horizontal-item">
+												<a href="" class="menu-horizontal-link" role="button">
+													<div class="basic-text margin-top-2 medium-text font-weight-bold margin-bottom-20">이벤트</div>
+												</a>
+											</li>
+											<li class="menu-horizontal-item">
+												<a href="" class="menu-horizontal-link" role="button">
+													<div class="basic-text margin-top-2 medium-text font-weight-bold margin-bottom-20">고객센터<br />(상담)</div>
+												</a>
+											</li>
+											<li class="menu-horizontal-item">
+												<a href="" class="menu-horizontal-link" role="button">
+													<div class="basic-text margin-top-2 medium-text font-weight-bold margin-bottom-20">분실·사고<br />신고</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</section>
+								<!-- //이벤트/고객센터 -->
+
+								<div class="mypage-foot">
+									<ul class="mypage-foot-list">
+										<li class="mypage-foot-item">
+											<a href="" class="ui-button ui-basic-button type-tiny">기본보기</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<script>
+			// DD : 스크롤 이벤트 가이드
+			$(document).on('scrollPoint', '#loadPoint', function () {
+				console.log('load point');
+			});
+
+			// DD : 스켈레톤 테스트
+			$(window).on('load', function () {
+				setTimeout(function () {
+					$('.header, .mypage-top, .mypage-section').removeClass('is-skeleton');
+				}, 1000);
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

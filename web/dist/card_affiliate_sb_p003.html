@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">심사 진행상태 확인</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<h2 class="page-title">
+								심사 진행상태
+							</h2>
+
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">저축은행코드</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block">
+											<input type="number" pattern="\d*" class="ui-input" title="저축은행코드 입력" placeholder="저축은행코드 입력" value="123" disabled />
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">추천인 직원번호</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block">
+											<input type="number" pattern="\d*" class="ui-input" title="추천 직원번호 입력" placeholder="추천 직원번호 입력" value="123456" disabled />
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">접수기간</strong>
+									</div>
+									<div class="form-group type-date-range">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible">
+												<div class="ui-input-block type-date">
+													<input type="date" class="ui-input" title="title" placeholder="placeholder" value="2021-01-01" />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<div class="ui-range-dash">-</div>
+											</div>
+											<div class="form-flex-cell type-flexible">
+												<div class="ui-input-block type-date">
+													<input type="date" class="ui-input" title="title" placeholder="placeholder" value="2021-01-31" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">조회</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title"><span class="font-weight-regular">조회결과</span></h3>
+								</div>
+								<div class="section-contents">
+									<table class="info-table">
+										<caption class="for-a11y">
+											심사점수, 심사확정(발급, 취소/거절, 배송완료), 심사중 으로 구성된 조회결과 안내 표입니다.
+										</caption>
+										<thead>
+											<tr>
+												<th rowspan="2" scope="colgroup" style="border-right: 1px solid #fff;">심사<br />점수</th>
+												<th colspan="4" scope="colgroup" style="border-right: 1px solid #fff;">심사확정</th>
+												<th rowspan="2" scope="colgroup">심사중</th>
+											</tr>
+											<tr>
+												<th scope="colgroup"></th>
+												<th scope="colgroup" style="background-color: #fdfdfd;">발급</th>
+												<th scope="colgroup" style="background-color: #fdfdfd;">취소/<br />거절</th>
+												<th scope="colgroup" style="background-color: #fdfdfd; border-right: 1px solid #fff;">배송<br />완료</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="align-center">10</td>
+												<td class="align-center">8</td>
+												<td class="align-center">5</td>
+												<td class="align-center">2</td>
+												<td class="align-center">1</td>
+												<td class="align-center">2</td>
+											</tr>
+										</tbody>
+									</table>
+									<ul class="info-list type-inherit color-blur margin-top-20">
+										<li class="info-item">심사접수 : 기간내 카드 신청한 총 건수</li>
+										<li class="info-item">심사확정 : 발급 + 취소/거절 + 배송완료</li>
+										<li class="info-item">심사 중 : 심사 미확정건수</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

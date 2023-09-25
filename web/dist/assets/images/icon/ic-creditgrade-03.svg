@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-1,.cls-8{fill:none}.cls-8{stroke:#2d3239;stroke-width:1.5px}.cls-3{fill:#2d3239}.cls-8{stroke-linecap:round}.cls-9{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_creditgrade_03" transform="translate(-19.33 -746.768)">
+        <path id="사각형_7870" data-name="사각형 7870" class="cls-1" transform="translate(19.33 746.768)" d="M0 0h44v44H0z"/>
+        <g id="그룹_12507" data-name="그룹 12507" transform="translate(-1.549 -.4)">
+            <g id="사각형_12097" data-name="사각형 12097" transform="translate(29.332 752.668)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+                <rect class="cls-9" width="20.519" height="33" rx="5.5"/>
+                <rect class="cls-1" x=".75" y=".75" width="19.019" height="31.5" rx="4.75"/>
+            </g>
+            <path id="사각형_12101" data-name="사각형 12101" class="cls-3" transform="translate(29.596 779.199)" d="M0 0h20.255v1.584H0z"/>
+            <path id="사각형_12139" data-name="사각형 12139" class="cls-3" transform="translate(29.332 757.553)" d="M0 0h19.711v1.584H0z"/>
+            <path id="합치기_172" data-name="합치기 172" d="M2 0h10a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" transform="translate(41.876 762.754)" style="fill:#fff"/>
+            <path id="합치기_173" data-name="합치기 173" d="M3.2 13a2 2 0 0 1-2-2V7.833l-.752-.5a1 1 0 0 1 0-1.664l.752-.5V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2z" transform="translate(41.679 763.754)" style="fill:#7dedf3"/>
+            <g id="합치기_174" data-name="합치기 174" style="fill:none">
+                <path class="cls-9" d="M4.2 13a2 2 0 0 1-2-2V8.5L.446 7.334a1 1 0 0 1 0-1.664L2.2 4.5V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2z" transform="translate(38.681 762.752)"/>
+                <path d="M16.197 11.502a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-12a.5.5 0 0 0-.5.5v3.303L1.902 6.502l1.795 1.197v3.303c0 .276.225.5.5.5h12m0 1.5h-12a2 2 0 0 1-2-2v-2.5L.445 7.334a1 1 0 0 1 0-1.664l1.752-1.168v-2.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2z" style="fill:#2d3239;stroke:none" transform="translate(38.681 762.752)"/>
+            </g>
+            <g id="그룹_12706" data-name="그룹 12706" transform="translate(44.983 767.426)">
+                <path id="패스_2252" data-name="패스 2252" d="m3649.637 5413.028 1.515 4.327 1.515-4.327 1.515 4.327 1.514-4.327" transform="translate(-3648.771 -5413.028)" style="stroke-linejoin:round;stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none"/>
+                <path id="선_11" data-name="선 11" class="cls-8" transform="translate(0 1.73)" d="M0 0h1.298"/>
+                <path id="선_166" data-name="선 166" class="cls-8" transform="translate(6.491 1.73)" d="M0 0h1.298"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드별 이용 내역</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<ul class="card-list">
+									<li class="card-item type-line type-narrow">
+										<a href="" class="card-block ui-arrow-block" role="button">
+											<span class="for-a11y">상세내역 보기</span>
+
+											<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+											<!-- DD : 이미지 없을 때
+											<span class="card-image">
+												<span class="card-image-inner"></span>
+											</span>
+											-->
+
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<!-- DD : 이미지 에러
+											<span class="card-image">
+												<span class="card-image-inner">
+													<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</span>
+											</span>
+											-->
+
+											<!-- DD : 이미지 있을 때 -->
+											<span class="card-image">
+												<span class="card-image-inner">
+													<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+													<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</span>
+											</span>
+											<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+
+											<div class="card-info">
+												<span class="card-name">[본인] 모두의 쇼핑</span>
+												<div class="card-number">
+													<span class="card-number-item">VISA</span>
+													<span class="card-number-item">4365-12**-****-1234</span>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+
+								<div class="form-detail margin-top-25">
+									<div class="form-detail-block">
+										<div class="form-detail-block-head type-white font-weight-medium">
+											<span class="title">결제금액</span>
+											<span class="title-right">1,984,478 원</span>
+										</div>
+										<dl class="form-detail-list type-text-default">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">이용금액 (47건)</dt>
+												<dd class="form-detail-group"><strong>2,705,573 원</strong></dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">수수료 (3건)</dt>
+												<dd class="form-detail-group"><strong>300 원</strong></dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">혜택금액 (9건)</dt>
+												<dd class="form-detail-group"><strong>- 22,579 원</strong></dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-25">
+								<div class="section-title">
+									<h2 class="title type-flexible">
+										<a href="" class="ui-arrow-block" role="button">납부정보</a>
+									</h2>
+								</div>
+								<div class="form-detail margin-top-25">
+									<dl class="form-detail-list">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">납부 계좌</dt>
+											<dd class="form-detail-group">기업<br />324324523432</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">납부일</dt>
+											<dd class="form-detail-group">매월 14일</dd>
+										</div>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="usage-default">
+								<ul class="usage-default-list">
+									<li class="usage-default-item">
+										<div class="usage-default-date">2021.10.23</div>
+										<button type="button" class="usage-default-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 없을 때 -->
+											<div class="logo-image type-store">
+												<div class="logo-image-inner"></div>
+											</div>
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="usage-default-left">
+												<div class="usage-default-title">스타벅스 청라점</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">본인1234</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">128,050 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">할인 2,500 원</div>
+												</div>
+											</div>
+										</button>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-date">2021.10.19</div>
+										<button type="button" class="usage-default-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 에러 -->
+											<div class="logo-image type-store">
+												<div class="logo-image-inner">
+													<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+													<img src="./assets/images/_dummy/brand-icon-3 .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="usage-default-left">
+												<div class="usage-default-title">올리브영</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">본인1234</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">3,000 원</div>
+											</div>
+										</button>
+
+										<button type="button" class="usage-default-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 있을 때 -->
+											<div class="logo-image type-store">
+												<div class="logo-image-inner">
+													<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+													<img src="./assets/images/_dummy/brand-icon-3.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="usage-default-left">
+												<div class="usage-default-title">스타벅스 청라점</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">본인1234</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">5,000 원</div>
+											</div>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

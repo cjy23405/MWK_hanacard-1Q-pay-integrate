@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <clipPath id="abnjhzrnaa">
+            <path data-name="사각형 17736" transform="translate(264 173)" style="fill:#fff;stroke:#707070" d="M0 0h60v60H0z"/>
+        </clipPath>
+        <filter id="2t5ahb8ctb" x="-4" y="2" width="67.765" height="62.593" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 14242" transform="translate(-264 -173)" style="clip-path:url(#abnjhzrnaa)">
+        <g data-name="그룹 14239">
+            <g style="filter:url(#2t5ahb8ctb)">
+                <path data-name="패스 13730" d="M38.013 24.566 8.655 31.46a3.77 3.77 0 0 1-4.532-2.807L.1 11.528A3.772 3.772 0 0 1 2.909 7L32.267.1A3.77 3.77 0 0 1 36.8 2.908l4.022 17.127a3.77 3.77 0 0 1-2.808 4.531" transform="rotate(22 -325.16 812.85)" style="fill:#abaaaa"/>
+            </g>
+            <path data-name="패스 13731" d="M38.013 24.566 8.655 31.46a3.77 3.77 0 0 1-4.532-2.807L.1 11.528A3.772 3.772 0 0 1 2.909 7L32.267.1A3.77 3.77 0 0 1 36.8 2.908l4.022 17.127a3.77 3.77 0 0 1-2.808 4.531" transform="rotate(7 -1374.755 2328.389)" style="fill:#525266"/>
+            <g data-name="그룹 14241" transform="rotate(-6.02 303.391 -859.398)" style="opacity:.2">
+                <rect data-name="사각형 11100" width="12" height="3" rx="1.5" transform="translate(183 187.999)" style="fill:#ced3d8"/>
+                <rect data-name="사각형 17707" width="7" height="3" rx="1.5" transform="translate(188 193.999)" style="fill:#ced3d8"/>
+            </g>
+        </g>
+        <g data-name="그룹 14240" transform="rotate(-7 334.125 -711.257)" style="opacity:.7">
+            <rect data-name="사각형 17705" width="5" height="5" rx="2.5" transform="translate(169.678 185.999)" style="fill:#d6d6d6"/>
+            <path data-name="사각형 17706" d="M3 0h5a3 3 0 0 1 3 3 2 2 0 0 1-2 2H2a2 2 0 0 1-2-2 3 3 0 0 1 3-3z" transform="translate(166.714 193.001)" style="fill:#d6d6d6"/>
+        </g>
+    </g>
+</svg>

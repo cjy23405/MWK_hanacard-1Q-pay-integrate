@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-find-address">주소찾기</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 주소찾기 -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--zip" data-layer="layer-find-address">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">주소찾기</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-tab-panel panel-zip-address">
+								<div class="page-section">
+									<div class="ui-radio-group type-toggle">
+										<!-- 2022.02.17 : mod : 순서 변경 -->
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="radioToggle1" id="radioToggle1-2" data-checkbox-tab="radioToggle1-2" checked />
+											<label for="radioToggle1-2" class="ui-label">
+												<span class="ui-label-text">도로명</span>
+											</label>
+										</div>
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="radioToggle1" id="radioToggle1-1" data-checkbox-tab="radioToggle1-1" />
+											<label for="radioToggle1-1" class="ui-label">
+												<span class="ui-label-text">지번</span>
+											</label>
+										</div>
+										<!-- //2022.02.17 : mod : 순서 변경 -->
+									</div>
+
+									<div class="search-word-address" data-checkbox-tab-panel="radioToggle1-1">
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete">
+												<input type="text" class="ui-input" title="동(읍, 면) 입력" placeholder="동(읍, 면) 입력" />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+											<div class="form-flex type-row">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block type-use-delete">
+														<input type="text" class="ui-input" title="아파트명 입력" placeholder="아파트명 입력" />
+														<button type="button" class="ui-button ui-input-delete">
+															<span class="for-a11y">입력 내용 지우기</span>
+														</button>
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<button type="button" class="ui-button ui-basic-button type-small type-gray">검색</button>
+												</div>
+											</div>
+										</div>
+										<div class="info-list">
+											<p class="info-item">아파트명 조회 시, 단어단위로 끊어서 조회해주세요.<br />(ex. 우성4차아파트 → 우성)</p>
+											<p class="info-item">아파트 주소 조회 시 ‘읍/면/동’을 제외한 명칭만 조회해주세요.<br />(ex, 신정7동 → 신정, 신정7)</p>
+											<p class="info-item">예) 삼성 1동일 경우, ‘삼성’ 만 입력하시면 됩니다.</p>
+										</div>
+									</div>
+
+									<div class="search-word-address" data-checkbox-tab-panel="radioToggle1-2">
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete">
+												<input type="text" class="ui-input" title="도로명 입력" placeholder="도로명 입력" />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+											<div class="form-flex type-row">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block type-use-delete">
+														<input type="text" class="ui-input" title="아파트명 입력" placeholder="아파트명 입력" />
+														<button type="button" class="ui-button ui-input-delete">
+															<span class="for-a11y">입력 내용 지우기</span>
+														</button>
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<button type="button" class="ui-button ui-basic-button type-small type-gray">검색</button>
+												</div>
+											</div>
+										</div>
+										<div class="info-list">
+											<p class="info-item">예) 서울시 강남구 선릉로일 경우, ‘선릉로’ 만 입력하시면 됩니다.</p>
+											<p class="info-item">
+												아파트명 조회 시, 단어단위로 끊어서 조회해주세요.<br />
+												(ex. 우성4차아파트 → 우성)
+											</p>
+											<p class="info-item">아파트 주소 조회 시 ‘읍/면/동’을 제외한 명칭만 조회해주세요.<br />(ex, 신정7동 → 신정, 신정7)</p>
+										</div>
+									</div>
+								</div>
+								<div class="page-section type-line">
+									<!-- 검색결과 없을 경우 -->
+									<div class="type-none">
+										<p class="item-text">검색 결과가 존재하지 않습니다.</p>
+									</div>
+									<!-- //검색결과 없을 경우 -->
+
+									<div class="zip-area">
+										<div class="zip-list">
+											<button type="button" class="zip-item">
+												<div class="zip-item-head type-flex">
+													<strong class="title">현대캐슬</strong>
+													<div class="date-aside"><span class="for-a11y">이체일 지정</span>31일</div>
+												</div>
+												<div class="zip-item-block">
+													<span class="category">도로명</span>
+													<span class="text">서울특별시 신정동 223-43 </span>
+												</div>
+												<div class="zip-item-block">
+													<span class="category">지번</span>
+													<span class="text">서울특별시 신정로 112</span>
+												</div>
+											</button>
+											<button type="button" class="zip-item">
+												<div class="zip-item-head type-flex">
+													<strong class="title">북한산현대홈시티</strong>
+													<div class="date-aside"><span class="for-a11y">이체일 지정</span>1일</div>
+												</div>
+												<div class="zip-item-block">
+													<span class="category">도로명</span>
+													<span class="text">서울특별시 신정동 626</span>
+												</div>
+												<div class="zip-item-block">
+													<span class="category">지번</span>
+													<span class="text">서울특별시 신정로 123</span>
+												</div>
+											</button>
+										</div>
+										<button type="button" class="ui-button ui-button-more">더보기</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 주소찾기 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-find-address');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

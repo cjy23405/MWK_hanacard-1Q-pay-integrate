@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{stroke:#2d3239;stroke-width:1.5px}.cls-5{fill:#2d3239}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_cardissuance_4" transform="translate(102.5 -622)">
+        <path id="사각형_12182" data-name="사각형 12182" class="cls-1" transform="translate(-102.5 622)" d="M0 0h50v50H0z"/>
+        <g id="사각형_13459" data-name="사각형 13459" class="cls-2" transform="translate(-90.502 636.498)">
+            <rect class="cls-6" width="26" height="21" rx="5"/>
+            <rect class="cls-1" x=".75" y=".75" width="24.5" height="19.5" rx="4.25"/>
+        </g>
+        <path id="사각형_13461" data-name="사각형 13461" transform="translate(-71.5 647)" style="fill:#fff" d="M0 0h8.159v11.181H0z"/>
+        <rect id="사각형_13462" data-name="사각형 13462" width="4.504" height="4.504" rx="1.5" transform="translate(-84.124 645.877)" style="fill:#7dedf3"/>
+        <g id="사각형_13463" data-name="사각형 13463" class="cls-2" transform="translate(-86 644)">
+            <rect class="cls-6" width="6.005" height="6.005" rx="2"/>
+            <rect class="cls-1" x=".75" y=".75" width="4.505" height="4.505" rx="1.25"/>
+        </g>
+        <rect id="사각형_13464" data-name="사각형 13464" class="cls-5" width="5.295" height="1.5" rx=".75" transform="translate(-69.323 649.081)"/>
+        <rect id="사각형_13465" data-name="사각형 13465" class="cls-5" width="1.5" height="1.5" rx=".75" transform="translate(-72.501 656)"/>
+        <rect id="사각형_13466" data-name="사각형 13466" class="cls-5" width="1.5" height="1.5" rx=".75" transform="translate(-66.001 646.26)"/>
+        <rect id="사각형_13467" data-name="사각형 13467" class="cls-5" width="5.295" height="1.5" rx=".75" transform="translate(-69.323 654.375)"/>
+        <rect id="사각형_13468" data-name="사각형 13468" class="cls-5" width="6.618" height="1.5" rx=".75" transform="translate(-67.999 651.728)"/>
+    </g>
+</svg>

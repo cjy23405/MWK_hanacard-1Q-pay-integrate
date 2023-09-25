@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">4대 보험료</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							정기적으로 나가는 4대 사회보험료<br />
+							하나카드가 잊지 않게 챙겨드려요.
+						</h2>
+
+						<div class="page-section">
+							<div class="usage-total-wrap margin-top-none">
+								<dl class="usage-total">
+									<dt class="usage-total-title">납입중인 보험</dt>
+									<dd class="usage-total-value"><span class="color-primary">건강보험</span></dd>
+								</dl>
+							</div>
+
+							<div class="form-detail margin-top-25">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">납부자번호</dt>
+										<dd class="form-detail-group">30046494102</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">납부자명</dt>
+										<dd class="form-detail-group">김*나</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">신청일자</dt>
+										<dd class="form-detail-group">2021.09.01</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이체희망일</dt>
+										<dd class="form-detail-group">10일</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">납부카드</dt>
+										<dd class="form-detail-group">1234-****-**12-1234</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item type-narrow">
+											<a href="" class="ui-basic-button" role="button">조회</a>
+										</li>
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">신청</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">서비스 대상</h3>
+								</div>
+								<div class="section-contents">
+									<p class="basic-text color-blur">4대 사회 보험료(국민건강/연금/고용/산재)</p>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">대상회원</h3>
+								</div>
+								<div class="section-contents">
+									<p class="basic-text color-blur">하나 신용/체크카드 (법인/하나BC/기프트/선불/하이패스 카드 제외)</p>
+									<div class="ui-notice margin-top-10">외국인은 공단으로 자동이체 신청요청</div>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">신청방법</h3>
+								</div>
+								<div class="section-contents basic-text">
+									<ul class="info-list color-blur type-inherit type-outside">
+										<li class="info-item">하나카드 홈페이지, 모바일 App</li>
+										<li class="info-item">하나카드 고객센터 (1800-1111)</li>
+									</ul>
+									<div class="ui-notice margin-top-10">공단 신청 가능시간 : 영업일 기준 09:00~22:00</div>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">납부일</h3>
+								</div>
+								<div class="section-contents basic-text">
+									<ul class="info-list color-blur type-inherit type-outside">
+										<li class="info-item">정기청구일(매월10일), 말일청구일(매월 말일) 선택 가능하며, 말일청구는 선납의 개념으로 당월 보험료를 당월 납부합니다.</li>
+										<li class="info-item">납부일이 말일인 경우 미납 시 다음 달 10일에 추가 승인되며 연체금이 미발생합니다.<br />10일에도 미납될 경우 연체료 포함된 금액을 25일에 재청구합니다.</li>
+										<li class="info-item">납부일이 10일인 경우 미납 시 일할 연체료가 포함된 금액을 25일에 추가 승인합니다.</li>
+										<li class="info-item">납부일이 공휴일인 경우 다음 영업일에 승인합니다.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">승인 및 해지 안내</h3>
+								</div>
+								<div class="section-contents basic-text">
+									<ul class="info-list color-blur type-inherit type-outside">
+										<li class="info-item">4대 보험료 청구 작업 일정에 따라 당월 또는 익월부터 카드로 납부 또는 해지될 수 있습니다.</li>
+										<li class="info-item">
+											<div class="indent-block">공단 청구 작업일정 : 납부일 -2영업일 19시 이후</div>
+											<ul class="info-list type-outside">
+												<li class="info-item type-indent">
+													<span class="indent">예)</span>
+													<div class="indent-block">
+														<div class="indent-block">10일 납부일 청구기준</div>
+														<ul class="info-list type-outside">
+															<li class="info-item">2020.07.08 19시 이전 신청 시2020.07.10 카드납부</li>
+															<li class="info-item">2020.07.08 19시 이전 신청 시 2020.07.10 카드납부</li>
+														</ul>
+													</div>
+												</li>
+												<li class="info-item type-indent">
+													<span class="indent">예)</span>
+													<div class="indent-block">
+														<div class="indent-block">10일 납부일 해지기준</div>
+														<ul class="info-list type-outside">
+															<li class="info-item">2020.07.08 19시 이전 해지 시 당월부터 미승인</li>
+															<li class="info-item">2020.07.08 19시 이후 해지 시<br />2020.07.10 카드납부, 익월부터 미승인</li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">수수료</h3>
+								</div>
+								<div class="section-contents">
+									<p class="basic-text color-blur">
+										4대 사회 보험료 납부금액의 신용카드 0.8% 체크카드 0.5% 가산되어 청구<br />
+										(국민건강보험법 제 79조 2항 및 국민연금법 제 90조 2항에 따라 고객 부담)
+									</p>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">자동승계</h3>
+								</div>
+								<div class="section-contents">
+									<p class="basic-text color-blur">
+										자동납부 신청카드가 변경된 경우, 보험료 연체 방지를 위해 변경된 카드로 요금이 자동납부 됩니다.<br />
+										자동승계를 원하지 않으실 경우<br />
+										하나카드 자동납부 전용 고객센터(1800-2183)으로 문의주시기 바랍니다.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<div class="info-list">
+										<p class="info-item">타금융기관으로 수납 중인 경우 반드시 국민건강보험공단을 통해 해지신청 후 자동납부 신청이 가능합니다.</p>
+										<p class="info-item">납부된 보험료는 취소가 불가능하며, 취소 및 이중수납에 관련된 문의는 국민건강보험공단 고객센터 또는 관할지사로 연락하여 주시기 바랍니다.</p>
+										<p class="info-item">카드로 승인된 4대보험료 납부금액은 소득공제 합산에서 제외됩니다.</p>
+										<p class="info-item">4대보험 사회보험료 자동납부매출은 카드상품에 따라 전월 실적 산정 및 하나머니 적립 대상에서 제외될 수 있습니다.</p>
+										<p class="info-item">신청카드의 거래정지 및 해지 등응로 인해 승인이 거절된 경우 공단 약관에 따라 납부자에게 사전 통지 없이 카드 자동납부가 해지되어, 지로수납으로 변경됩니다.</p>
+										<p class="info-item">납부자번호와 보험 종류, 납부 예정일이 정확한지 반드시 확인 부탁드립니다.</p>
+										<p class="info-item">
+											카드 자동납부 개시 이전 발생된 미납요금은 최초 승인금액에 합산되지 않으며, 미납요금에 대한 처리는 국민건강보험공단을 통해 확인 및 납부하셔야 합니다.<br />(국민건강보험공단
+											고객센터: 1577-1000)
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

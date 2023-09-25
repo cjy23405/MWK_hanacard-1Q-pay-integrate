@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">HANA Mile 전환</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title margin-bottom-25">
+							HANA Mile 마일리지를<br />
+							다양하게 사용해보세요.
+						</h2>
+						<!-- 2022.03.10 : mod : 클래스 type-7로 변경 -->
+						<div class="ui-illust type-7"></div>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-secondary" role="button">전환내역</a>
+									</li>
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button">신청</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="page-section-group">
+							<div class="section-title margin-bottom-25">
+								<h3 class="title">마일리지 활용 방법</h3>
+							</div>
+							<ul class="usage-default-list">
+								<li class="usage-default-item">
+									<div class="usage-default-block type-align-middle">
+										<!-- 2022.02.17 : mod : 아이콘 변경 -->
+										<div class="usage-default-icon type-6"></div>
+										<!-- //2022.02.17 : mod : 아이콘 변경 -->
+										<div class="usage-default-left">
+											<div class="usage-default-title">HANA Mile 전환</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">항공사 마일리지로 전환하여 사용</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-default-item">
+									<div class="usage-default-block type-align-middle">
+										<!-- 2022.02.17 : mod : 아이콘 변경 -->
+										<div class="usage-default-icon type-7"></div>
+										<!-- //2022.02.17 : mod : 아이콘 변경 -->
+										<div class="usage-default-left">
+											<div class="usage-default-title">하나머니 전환</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">1 HANA Miile 당 10 하나머니로 전환하여<br />현금처럼 사용</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-default-item">
+									<a href="" class="usage-default-block type-align-middle ui-arrow" role="button">
+										<!-- 2022.02.17 : mod : 아이콘 변경 -->
+										<div class="usage-default-icon type-2"></div>
+										<!-- //2022.02.17 : mod : 아이콘 변경 -->
+										<div class="usage-default-left">
+											<div class="usage-default-title">이용대금 결제</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">1 HANA Miile 당 11원으로 이용대금 결제</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item" data-initial-open="true">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<div class="info-list">
+										<li class="info-item">HANA Mile 전환신청은 본인회원에 한해 제공됩니다.</li>
+										<li class="info-item">정확한 정보가 필요하며 정보가 부정확할 경우 제휴사(항공사 또는 호텔)의 정책에 따라 HANA Mile 전환신청이 거절되므로 유의하시기 바랍니다.</li>
+										<li class="info-item">
+											HANA Mile 전환신청의 취소는 신청당일 영업시간 중에 한하여 고객센터(1800-1111)를 통해 요청하실 수 있으며, 제휴사(항공사 또는 호텔)로 전환한 HANA Mile은 다시 환원할 수 없습니다.
+										</li>
+										<li class="info-item">HANA Mile 전환신청은 영업일에만 가능합니다.</li>
+										<li class="info-item">
+											전환대상 사용처별 1일 1회만 가능하며, 1회 전환 시 대한항공은 최대 65,000, 아시아나항공은 최대 83,000, AMEX FUSION은 최대 99,000 HANA Mile까지 이용이 가능합니다.
+										</li>
+										<li class="info-item">제휴사(항공사 또는 호텔)에 따라 최장 2주가 소요될 수 있으며 전환 결과는 고객님의 핸드폰으로 통지하여 드립니다.</li>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

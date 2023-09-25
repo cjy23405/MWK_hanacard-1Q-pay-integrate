@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- 2022.04.06 : mod : 헤더 공통 수정 -->
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">대출신청</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+				<!--// 2022.04.06 : mod : 헤더 공통 수정 -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-title-section form-flex type-align-top">
+							<div class="form-flex-cell type-flexible">
+								<h2 class="page-title">
+									신분증 정보를<br />
+									입력해 주세요.
+								</h2>
+							</div>
+							<div class="form-flex-cell">
+								<button type="button" class="ui-button ui-basic-button type-secondary type-tiny type-icon-tel" role="button">전화상담</button>
+							</div>
+						</div>
+
+						<div class="page-section">
+							<div class="ui-radio-group type-toggle">
+								<div class="ui-radio-block">
+									<input type="radio" class="ui-radio" name="radioToggle1" id="radioToggle1-1" data-checkbox-tab="radioToggle1-1" checked />
+									<label for="radioToggle1-1" class="ui-label">
+										<span class="ui-label-text">주민등록증</span>
+									</label>
+								</div>
+								<div class="ui-radio-block">
+									<input type="radio" class="ui-radio" name="radioToggle1" id="radioToggle1-2" data-checkbox-tab="radioToggle1-2" />
+									<label for="radioToggle1-2" class="ui-label">
+										<span class="ui-label-text">운전면허증</span>
+									</label>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="img-area type-260">
+									<!-- 2022.05.04 : mod : alt값 변경 -->
+									<img src="./assets/images/contents/img-personallicense.png" alt="주민등록증 예시 이미지" class="img" data-checkbox-tab-panel="radioToggle1-1" />
+									<img src="./assets/images/contents/img-drivelicense.png" alt="자동차 운전면허증 예시 이미지" class="img" data-checkbox-tab-panel="radioToggle1-2" />
+									<!--// 2022.05.04 : mod : alt값 변경 -->
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="form-list">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">이름</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block">
+												<input type="text" class="ui-input" title="이름 입력" placeholder="이름 입력" value="김하나" disabled />
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">주민등록번호</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block">
+												<input type="text" class="ui-input" title="주민등록번호 13자리 입력" placeholder="‘-’ 제외하고 입력" value="123456-1234567" disabled />
+											</div>
+										</div>
+									</div>
+									<div class="form-item" data-checkbox-tab-panel="radioToggle1-1">
+										<div class="form-title">
+											<strong class="title">발급일자</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block">
+												<input type="number" pattern="\d*" class="ui-input" title="발급일자 입력" placeholder="발급일자 입력" value="20180101" />
+											</div>
+										</div>
+										<p class="ui-notice">실제 정보와 다른 경우 거래가 제한될 수 있습니다.</p>
+									</div>
+									<div class="form-item type-license" data-checkbox-tab-panel="radioToggle1-2">
+										<div class="form-group form-flex">
+											<div class="form-flex-cell type-narrow">
+												<div class="form-title">
+													<strong class="title">발행기관</strong>
+												</div>
+												<div class="ui-select-block">
+													<button type="button" class="ui-button ui-select" title="발행기관 선택">11(서울)</button>
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<div class="ui-range-dash">-</div>
+											</div>
+											<div class="form-flex-cell type-flexible">
+												<div class="form-title">
+													<strong class="title">면허번호</strong>
+												</div>
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="면허번호 입력" placeholder="면허번호 입력" value="12345678" />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

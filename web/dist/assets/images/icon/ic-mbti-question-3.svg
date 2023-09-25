@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="ic-mbti-question-3" transform="translate(5)">
+    <rect id="사각형_15576" data-name="사각형 15576" width="40" height="40" transform="translate(-5)" fill="none"/>
+    <circle id="타원_2303" data-name="타원 2303" cx="8" cy="8" r="8" transform="translate(-0.498 4.498)" fill="#fff"/>
+    <rect id="사각형_15577" data-name="사각형 15577" width="32" height="32" transform="translate(-1 4)" fill="none"/>
+    <circle id="타원_1989" data-name="타원 1989" cx="7.5" cy="7.5" r="7.5" transform="translate(-1.5 5.798)" fill="#7dedf3"/>
+    <g id="타원_1987" data-name="타원 1987" transform="translate(-0.496 4.498)" fill="none" stroke="#2d3239" stroke-width="1.5">
+      <circle cx="8" cy="8" r="8" stroke="none"/>
+      <circle cx="8" cy="8" r="7.25" fill="none"/>
+    </g>
+    <path id="패스_12525" data-name="패스 12525" d="M-36.029-326.245h3.3v-3.5" transform="translate(40.229 339.246)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <g id="사각형_16713" data-name="사각형 16713" transform="translate(8.5 13.798)" fill="#fff" stroke="#2d3239" stroke-width="1.5">
+      <path d="M3,0H16a3,3,0,0,1,3,3V13a8,8,0,0,1-8,8H8a8,8,0,0,1-8-8V3A3,3,0,0,1,3,0Z" stroke="none"/>
+      <path d="M3,.75H16A2.25,2.25,0,0,1,18.25,3V13A7.25,7.25,0,0,1,11,20.25H8A7.25,7.25,0,0,1,.75,13V3A2.25,2.25,0,0,1,3,.75Z" fill="none"/>
+    </g>
+    <rect id="사각형_16714" data-name="사각형 16714" width="22" height="1.5" rx="0.75" transform="translate(7.258 33.298)" fill="#2d3239"/>
+    <g id="사각형_16715" data-name="사각형 16715" transform="translate(26 19.498)" fill="none" stroke="#2d3239" stroke-width="1.5">
+      <path d="M0,0H3A2,2,0,0,1,5,2V6A2,2,0,0,1,3,8H0A0,0,0,0,1,0,8V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M.75.75H3A1.25,1.25,0,0,1,4.25,2V6A1.25,1.25,0,0,1,3,7.25H.75a0,0,0,0,1,0,0V.75A0,0,0,0,1,.75.75Z" fill="none"/>
+    </g>
+    <rect id="사각형_16718" data-name="사각형 16718" width="1.5" height="8.299" transform="translate(20.264 13.797)" fill="#2d3239"/>
+    <g id="사각형_16719" data-name="사각형 16719" transform="translate(18.5 20.798)" fill="#fff" stroke="#2d3239" stroke-width="1.5">
+      <rect width="5" height="5" rx="1.5" stroke="none"/>
+      <rect x="0.75" y="0.75" width="3.5" height="3.5" rx="0.75" fill="none"/>
+    </g>
+  </g>
+</svg>

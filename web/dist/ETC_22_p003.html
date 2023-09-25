@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">결제일 변경</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">결제일 변경 시뮬레이션</h2>
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-title margin-bottom-25">
+									<h3 class="title type-flexible">도래하는 첫번째 결제일<span class="date color-primary">(yyyy.mm.dd)</span></h3>
+									<button type="button" class="ui-arrow type-black">자세히 보기</button>
+								</div>
+								<div class="section-contents">
+									<div class="info-table-area">
+										<table class="info-table">
+											<!-- 2022.04.27 : mod : 텍스트 수정 -->
+											<caption class="for-a11y">
+												구분, 신용공여기간, 결제대상금액로 구성된 도래하는 첫번째 결제일 안내 표입니다.
+											</caption>
+											<colgroup>
+												<col style="width: 28%" />
+												<col />
+												<col />
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">구분</th>
+													<th scope="col">신용공여기간</th>
+													<th scope="col">결제대상금액</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														일시불<br />
+														(리볼빙)
+													</td>
+													<td>
+														2018.04.01<br />
+														~ 2018.04.30
+													</td>
+													<td class="align-right">13,440,126 원</td>
+												</tr>
+												<tr>
+													<td>할부</td>
+													<td>
+														2018.04.01<br />
+														~ 2018.04.30
+													</td>
+													<td class="align-right">0 원</td>
+												</tr>
+												<tr>
+													<td>현금서비스(리볼빙)</td>
+													<td>
+														전전월 19일<br />
+														~전월 18일
+													</td>
+													<td class="align-right">0 원</td>
+												</tr>
+												<tr>
+													<td>카드론</td>
+													<td>
+														2018.04.01<br />
+														~ 2018.04.30
+													</td>
+													<td class="align-right">0 원</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<dl class="usage-total margin-top-25">
+										<dt class="usage-total-title">합계</dt>
+										<dd class="usage-total-value"><span class="color-primary">13,440,126</span> 원</dd>
+									</dl>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title margin-bottom-25">
+									<h3 class="title type-flexible">도래하는 두번째 결제일<span class="date color-primary">(yyyy.mm.dd)</span></h3>
+									<button type="button" class="ui-arrow type-black">자세히 보기</button>
+								</div>
+								<div class="section-contents">
+									<div class="info-table-area">
+										<table class="info-table">
+											<!-- 2022.04.27 : mod : 텍스트 수정 -->
+											<caption class="for-a11y">
+												구분, 신용공여기간, 결제대상금액로 구성된 도래하는 두번째 결제일 안내 표입니다.
+											</caption>
+											<colgroup>
+												<col style="width: 28%" />
+												<col />
+												<col />
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">구분</th>
+													<th scope="col">신용공여기간</th>
+													<th scope="col">결제대상금액</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														일시불<br />
+														(리볼빙)
+													</td>
+													<td>
+														2018.04.01<br />
+														~ 2018.04.30
+													</td>
+													<td class="align-right">13,440,126 원</td>
+												</tr>
+												<tr>
+													<td>할부</td>
+													<td>
+														2018.04.01<br />
+														~ 2018.04.30
+													</td>
+													<td class="align-right">0 원</td>
+												</tr>
+												<tr>
+													<td>현금서비스(리볼빙)</td>
+													<td>
+														전전월 19일<br />
+														~전월 18일
+													</td>
+													<td class="align-right">0 원</td>
+												</tr>
+												<tr>
+													<td>카드론</td>
+													<td>
+														2018.04.01<br />
+														~ 2018.04.30
+													</td>
+													<td class="align-right">0 원</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<dl class="usage-total margin-top-25">
+										<dt class="usage-total-title">합계</dt>
+										<dd class="usage-total-value"><span class="color-primary">13,440,126</span> 원</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="page-section-group">
+							<div class="terms-area">
+								<div class="terms-item">
+									<div class="ui-checkbox-block type-align-top">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" />
+										<label for="selectCheckbox-1" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">변경 결제일 스케줄 및 이용안내를 확인하였습니다.</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 하단 버튼영역 -->
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--// 하단 버튼영역 -->
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

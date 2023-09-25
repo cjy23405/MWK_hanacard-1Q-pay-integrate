@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-V47163063B");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Fincube OCR</title>
+
+    <meta name="application-name" content="Fincube OCR" />
+    <meta name="msapplication-tooltip" content="Fincube OCR" />
+    <meta id="meta_og_title" property="og:title" content="Fincube OCR" />
+    <meta name="description" content="Fincube 신분증 인식, Fincube OCR" />
+    <meta
+      property="og:description"
+      content="Fincube 신분증 인식, Fincube OCR"
+    />
+    <meta
+      id="meta_og_image"
+      property="og:image"
+      content="./js/resource/fincube_logo.png"
+    />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:type" content="website" />
+    <meta name="keywords" content="신용카드, 신분증인식, OCR" />
+
+    <!-- <link rel="icon" type="image/png" href="./js/resource/ic_launcher.png" sizes="96x96" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+
+    <style>
+      html,
+      body {
+        background-color: rgba(55, 55, 55, 255);
+      }
+    </style>
+    <link rel="stylesheet" href="./js/ui.css" />
+    <script src="./fincube.js"></script>
+
+    <div class="container form d-none" id="container">
+      <form></form>
+      <section class="top">
+        <div class="row-fluid justify-content-md-center mt-4 mb-5">
+          <div class="col text-center"></div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="col">
+            <p class="text-center text-white">신분증 인식을 시작합니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mid text-center">
+        <div class="row-fluid">
+          <div class="col">
+            <div class="stage" id="test-stage">
+              <video autoplay muted playsinline></video>
+              <canvas id="id-card" class="d-none"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-green text-small pt-5 text-guide">
+          신분증을 가이드 영역에 맞춰 주세요.
+          <br />※조명의 빛 반사를 유의해 주세요.
+        </p>
+      </section>
+
+      <section class="mid text-center container mt-4">
+        <!-- 주민등록증 -->
+        <form class="form form-idcard d-none" id="form-idcard">
+          <input type="hidden" name="userName" id="userName" />
+          <input type="hidden" name="identity" id="identity" />
+          <input type="hidden" class="birthDate" />
+
+          <div class="form-group row">
+            <label for="Name1" class="col-4 col-form-label text-left"
+              >이름</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="Name1"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="RrNumber1" class="col-4 col-form-label text-left"
+              >주민등록번호</label
+            >
+            <div class="col-8">
+              <div class="eye off"></div>
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="RrNumber1"
+                maxlength="14"
+              />
+              <input type="hidden" id="juminNoShow" />
+              <input type="hidden" id="juminNoHide" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Region1" class="col-4 col-form-label text-left"
+              >발행처</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="Region1"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="issueDate1" class="col-4 col-form-label text-left"
+              >발급일자</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                name="issueDate1"
+                id="issueDate1"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label
+              for="OverseasResident"
+              class="col-4 col-form-label text-left"
+              id="overseasResidentLabel"
+              >재외국민</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="OverseasResident"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label
+              for="ColorPoint1"
+              class="col-4 col-form-label text-left"
+              id="colorPointLabel1"
+              >색상</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="ColorPoint1"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              for="FaceScore1"
+              class="col-4 col-form-label text-left"
+              id="faceScoreLabel1"
+              >얼굴 점수</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="FaceScore1"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              for="Specular1"
+              class="col-4 col-form-label text-left"
+              id="specularLabel1"
+              >반사광</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="Specular1"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              for="Start1"
+              class="col-4 col-form-label text-left"
+              id="startLabel1"
+              >시작</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="Start1"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              for="End1"
+              class="col-4 col-form-label text-left"
+              id="endLabel1"
+              >끝</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="End1"
+              />
+            </div>
+          </div>
+        </form>
+
+        <!-- 운전면허증 -->
+        <form class="form form-driver d-none" id="form-driver">
+          <input type="hidden" name="userName" id="userName2" />
+          <input type="hidden" class="birthDate" />
+
+          <div class="form-group row">
+            <label for="Name2" class="col-4 col-form-label text-left"
+              >이름</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="Name2"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="RrNumber2" class="col-4 col-form-label text-left"
+              >주민등록번호</label
+            >
+            <div class="col-8">
+              <div class="eye off"></div>
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="RrNumber2"
+                maxlength="14"
+              />
+              <input type="hidden" id="juminNoShow" />
+              <input type="hidden" id="juminNoHide" />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="licenseNo" class="col-4 col-form-label text-left"
+              >운전면허번호</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                name="licenseNo"
+                id="licenseNo"
+                maxlength="15"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Region2" class="col-4 col-form-label text-left"
+              >발행처</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="Region2"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="issueDate2" class="col-4 col-form-label text-left"
+              >발급일자</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                name="issueDate2"
+                id="issueDate2"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="Serial" class="col-4 col-form-label text-left"
+              >시리얼</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="Serial"
+                maxlength="6"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="licenseType" class="col-4 col-form-label text-left"
+              >면허타입</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="licenseType"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              for="ColorPoint2"
+              class="col-4 col-form-label text-left"
+              id="colorPointLabel2"
+              >색상</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="ColorPoint2"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              for="FaceScore2"
+              class="col-4 col-form-label text-left"
+              id="faceScoreLabel2"
+              >얼굴 점수</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="FaceScore2"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              for="Specular2"
+              class="col-4 col-form-label text-left"
+              id="specularLabel2"
+              >반사광</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="Specular2"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              for="Start2"
+              class="col-4 col-form-label text-left"
+              id="startLabel2"
+              >시작</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="Start2"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label
+              for="End2"
+              class="col-4 col-form-label text-left"
+              id="endLabel2"
+              >끝</label
+            >
+            <div class="col-8">
+              <input
+                type="text"
+                class="form-control text-secondary"
+                id="End2"
+              />
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section class="bottom mt-5">
+        <!-- 버튼 -->
+        <div class="row-fluid justify-content-md-center button-box">
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-lg btn-block btn-secondary d-none"
+              id="takePictureAgain"
+              disabled="disabled"
+            >
+              재촬영
+            </button>
+            <button
+              type="button"
+              class="btn btn-lg btn-block btn-primary d-none"
+              id="reload"
+              disabled="disabled"
+            >
+              재시작
+            </button>
+
+            <div class="row button-block d-none">
+              <div class="col-6 pl-1">
+                <button
+                  type="button"
+                  class="btn btn-lg btn-inline btn-primary btn-block"
+                  id="btn-ocr"
+                >
+                  다음
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-lg btn-inline btn-primary btn-block d-none"
+                  id="btn-verify"
+                >
+                  확인
+                </button>
+              </div>
+            </div>
+
+            <div class="text-center text-white" id="Resolution"></div>
+            <img src="./js/resource/fincube_logo.png" class="logo-bottom" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <input type="hidden" id="flag" value="1" />
+    <div class="resolution">
+      <div class="success">
+        <section class="top">
+          <div class="row-fluid mt-5">
+            <div class="col">
+              <p class="text-center text-bold">
+                정보이용 약관에 동의해 주세요.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mid text-center">
+          <div class="row-fluid">
+            <div class="col">
+              <!-- <img src="../realpass/assets/img/secure_img.svg" class="secure-img"> -->
+              <p class="text-center text-secondary text-small">
+                안심하세요.<br />본인 확인을 위한 용도 외에는<br />
+                개인 정보가 사용 또는 저장되지 않습니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="agreement mt-70">
+          <div class="row">
+            <div class="col">
+              <div class="row row-box">
+                <div class="col-12">
+                  <p class="text-smaller">개인정보 수집 및 이용 동의(필수)</p>
+                </div>
+              </div>
+              <div class="row row-box">
+                <div class="col-12">
+                  <p class="text-smaller">
+                    고유식별정보 수집 및 이용 동의(필수)
+                  </p>
+                </div>
+              </div>
+              <div class="row row-box sensitive-info">
+                <div class="col-12">
+                  <p class="text-smaller">
+                    민감개인정보 수집 및 이용 동의(필수)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="flex flex-col text-start">
+            <span class="customer--label" style="margin-bottom: 8px">이름</span>
+            <input
+              id="userinfo_name"
+              type="text"
+              placeholder="홍길동 or GILDONG HONG"
+              class="input_txt_kr customer--input"
+            />
+            <span
+              class="customer--label"
+              style="margin-top: 8px; line-height: 120%; font-size: 0.6rem"
+            >
+              &nbsp; * 외국인의 경우 <b>Lastname Firstname Middlename</b>으로
+              입력하세요.
+            </span>
+          </div>
+          <div class="flex flex-col text-start">
+            <span class="customer--label" style="margin-bottom: 8px"
+              >생년월일</span
+            >
+            <input
+              id="userinfo_birth"
+              type="number"
+              minlength="6"
+              maxlength="6"
+              placeholder="YYMMDD"
+              class="input_txt_kr customer--input"
+            />
+          </div>
+        </section>
+
+        <section class="bottom mt-5">
+          <!-- 버튼 -->
+          <div class="row-fluid justify-content-md-center button-box">
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-lg btn-block btn-primary btn-agree"
+              >
+                전체 동의하고 시작하기
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+
+    <script src="./js/webcam.js"></script>
+  </head>
+
+  <body onload="webcam.setupWebcam()">
+    <script>
+      var user_infos;
+      var user_name;
+      var user_birth;
+
+      function userInput() {
+        $(".resolution").addClass("d-none");
+        $(".container").removeClass("d-none");
+        card_name = document
+          .getElementById("userinfo_name")
+          .value.trim()
+          .toUpperCase();
+        card_birth = document.getElementById("userinfo_birth").value.trim();
+
+        return [card_name, card_birth];
+      }
+
+      function clearInput() {
+        var el1 = document.getElementById("userinfo_name");
+        var el2 = document.getElementById("userinfo_birth");
+        el1.value = null;
+        el2.value = null;
+      }
+
+      $(".btn-agree").click(function () {
+        user_infos = userInput();
+        user_name = user_infos[0];
+        user_birth = user_infos[1];
+        clearInput();
+      });
+
+      var detected = false;
+      var address = 0;
+      var PageEnd = false;
+      var timer = 0;
+      var curOrientation = window.orientation;
+      webcam.changeStage(3);
+
+      $(document).ready(function () {
+        //$(window).load(function () {
+        $("#Resolution").text("load wasm.");
+
+        var resolution;
+        var DlcLength = 14;
+        var RrcLength = 12;
+        var loadFinished = false;
+
+        //시작
+        $(".stage video").addClass("d-none");
+        console.log("2. address : " + address);
+        Module.onRuntimeInitialized = async (_) => {
+          //Module.onRuntimeInitialized = () => {
+          timer = setInterval(function () {
+            if (detected) {
+              webcam.sleep(10);
+              return;
+            }
+
+            if (
+              address === 0 &&
+              !PageEnd &&
+              webcam.getResolutionCompatibility()
+            ) {
+              webcam.changeStage(1);
+
+              address = getIDCardScanner();
+
+              loadFinished === false;
+              {
+                loadFinished = true;
+                $(".stage video").removeClass("d-none");
+              }
+
+              console.log("getIDCardScanner address : " + address);
+
+              //return;
+            }
+
+            if (address === 0 || PageEnd) {
+              webcam.sleep(10);
+              return;
+            }
+
+            resolution = webcam.getResolution();
+            $("#Resolution").text(resolution);
+            //var timer_sec = Number($("#span_sec").text());
+            //$("#span_sec").text(timer_sec + 1);
+
+            if (!detected) {
+              var type;
+              var name;
+              var number;
+              var licenseNumber;
+              var Date;
+              var region;
+              var serial;
+              var licenseType;
+              var Completed;
+              var birth;
+              var overseasResident;
+              var color_point;
+              var face_score;
+              var specular;
+              var start_t;
+              var end_t;
+
+              var detect_card = webcam.detectCardbox(address);
+
+              if (detect_card) {
+                webcam.changeStage(2);
+                var result = webcam.startRecognition(address, 0);
+
+                if (!result.indexOf("true")) {
+                  // && result != "" && result !== undefined && result !== null)
+                  console.log(`result : ${result}`);
+                  resultSplit = result.split("/");
+                  detected = true;
+                  var resultIndex = 0;
+                  (Completed = resultSplit[resultIndex]), resultIndex++;
+                  (type = resultSplit[resultIndex]), resultIndex++;
+
+                  if (
+                    detected &&
+                    (resultSplit.length == RrcLength ||
+                      resultSplit.length == DlcLength)
+                  ) {
+                    if (type === "1" && resultSplit.length == RrcLength) {
+                      (name = resultSplit[resultIndex]), resultIndex++;
+                      (number = resultSplit[resultIndex]), resultIndex++;
+                      (Date = resultSplit[resultIndex]), resultIndex++;
+                      (region = resultSplit[resultIndex]), resultIndex++;
+
+                      region = region.trim();
+                      birth = number.slice(0, 6);
+
+                      if (number.length == 13)
+                        number = number.slice(0, 6) + "-" + number.slice(6, 13);
+                      else number = "";
+
+                      (overseasResident = resultSplit[resultIndex]),
+                        resultIndex++;
+                    } else if (
+                      type === "2" &&
+                      resultSplit.length == DlcLength
+                    ) {
+                      (name = resultSplit[resultIndex]), resultIndex++;
+                      (number = resultSplit[resultIndex]), resultIndex++;
+                      (licenseNumber = resultSplit[resultIndex]), resultIndex++;
+                      (Date = resultSplit[resultIndex]), resultIndex++;
+                      (region = resultSplit[resultIndex]), resultIndex++;
+                      region = region.trim();
+                      (serial = resultSplit[resultIndex]), resultIndex++;
+                      (licenseType = resultSplit[resultIndex]), resultIndex++;
+                      birth = number.slice(0, 6);
+
+                      if (number.length == 13)
+                        number = number.slice(0, 6) + "-" + number.slice(6, 13);
+                      else number = "";
+                    }
+
+                    (color_point = resultSplit[resultIndex]), resultIndex++;
+                    (face_score = resultSplit[resultIndex]), resultIndex++;
+                    (specular = resultSplit[resultIndex]), resultIndex++;
+                    (start_t = resultSplit[resultIndex]), resultIndex++;
+                    (end_t = resultSplit[resultIndex]), resultIndex++;
+
+                    //if (detected) {
+                    //chageStage(true);
+
+                    $(".stage video").addClass("d-none");
+                    $(".stage canvas").removeClass("d-none");
+
+                    //webcam.stopStreamedVideo();
+                    //webcam.drawImage();
+                    webcam.drawJpg(address);
+                    //webcam.drawRgba(address);
+                    $("#takePictureAgain").removeClass("d-none");
+                    $("#takePictureAgain").attr("disabled", false);
+                    $("#reload").removeClass("d-none");
+                    $("#reload").attr("disabled", false);
+
+                    if (type === "1") {
+                      $("#Name1").val(name);
+                      $("#RrNumber1").val(number);
+                      $("#Region1").val(region);
+                      $("#issueDate1").val(Date);
+
+                      if (overseasResident === "true")
+                        $("#OverseasResident").val("예");
+                      else if (overseasResident === "false")
+                        $("#OverseasResident").val("아니오");
+
+                      $("#ColorPoint1").val(color_point);
+                      $("#FaceScore1").val(face_score);
+                      $("#Specular1").val(specular);
+                      $("#Start1").val(start_t);
+                      $("#End1").val(end_t);
+                      $(".form-idcard").removeClass("d-none");
+                    } else if (type === "2") {
+                      $("#Name2").val(name);
+                      $("#RrNumber2").val(number);
+                      $("#licenseNo").val(licenseNumber);
+                      $("#Region2").val(region);
+                      $("#issueDate2").val(Date);
+                      $("#Serial").val(serial);
+                      $("#licenseType").val(licenseType);
+                      $("#ColorPoint2").val(color_point);
+                      $("#FaceScore2").val(face_score);
+                      $("#Specular2").val(specular);
+                      $("#Start2").val(start_t);
+                      $("#End2").val(end_t);
+                      $(".form-driver").removeClass("d-none");
+                    }
+                    $("#Resolution").addClass("d-none");
+
+                    if (name === user_name && birth === user_birth) {
+                      // alert("Correct");
+                    } else {
+                      // alert("Wrong");
+                      console.log(name, user_name);
+                      console.log(birth, user_birth);
+                    }
+                    webcam.stopStreamedVideo();
+                    //}
+                  }
+                }
+                //chageStage(1);
+              } else {
+                webcam.changeStage(0);
+              }
+            }
+          }, 1);
+        };
+      });
+
+      $("#takePictureAgain").click(function () {
+        webcam.changeStage(0);
+        destroyIDCardScanner(address);
+        address = 0;
+
+        console.log("재촬영");
+
+        // Memory Leak check
+        //Module.doLeakCheck();
+
+        detected = false;
+
+        $("canvas").addClass("d-none");
+        $("video").removeClass("d-none");
+        $(".form-idcard").addClass("d-none");
+        $(".form-driver").addClass("d-none");
+        $("#Resolution").removeClass("d-none");
+        $("#takePictureAgain").addClass("d-none");
+        $("#takePictureAgain").attr("disabled", true);
+        $("#reload").addClass("d-none");
+        $("#reload").attr("disabled", true);
+
+        webcam.setupWebcam();
+      });
+
+      $("#reload").click(function () {
+        //PageEnd = true;
+        //clearInterval(timer);
+        //destroyIDCardScanner(address);
+        //address = 0;
+        //location.replace(location.href);
+        //(location || window.location || document.location).reload();
+
+        webcam.changeStage(0);
+        destroyIDCardScanner(address);
+        address = 0;
+
+        console.log("재시작");
+
+        detected = false;
+
+        $("canvas").addClass("d-none");
+        $("video").removeClass("d-none");
+        $(".form-idcard").addClass("d-none");
+        $(".form-driver").addClass("d-none");
+        $("#Resolution").removeClass("d-none");
+        $("#takePictureAgain").addClass("d-none");
+        $("#takePictureAgain").attr("disabled", true);
+        $("#reload").addClass("d-none");
+        $("#reload").attr("disabled", true);
+        $(".container").addClass("d-none");
+        $(".resolution").removeClass("d-none");
+
+        webcam.setupWebcam();
+      });
+
+      window.addEventListener("beforeunload", (event) => {
+        // 명세에 따라 preventDefault는 호출해야하며, 기본 동작을 방지합니다.
+        //event.preventDefault();
+        // 대표적으로 Chrome에서는 returnValue 설정이 필요합니다.
+        PageEnd = true;
+
+        clearInterval(timer);
+
+        webcam.destroyPrevImage();
+        destroyIDCardScanner(address);
+        address = 0;
+
+        event.preventDefault();
+      });
+
+      window.addEventListener(
+        "orientationchange",
+        function () {
+          if (curOrientation !== window.orientation && !detected) {
+            curOrientation = window.orientation;
+            webcam.setupWebcam();
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

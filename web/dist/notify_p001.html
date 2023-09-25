@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">알림</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-account-book"><span class="for-a11y">가계부</span></button>
+							<button type="button" class="header-button type-search" data-toggle-search-button="toggleSearch"><span class="for-a11y">검색</span></button>
+							<button type="button" class="header-button type-delete"><span class="for-a11y">삭제</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-notify">
+						<div class="toggle-search margin-bottom-35" data-toggle-search="toggleSearch">
+							<div class="toggle-search-tab type-no-side-button">
+								<div class="ui-tab">
+									<ul class="ui-tab-list">
+										<!-- 2022.02.09 : mod : 탭 구성 변경 -->
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link is-active" role="button">전체</a>
+										</li>
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link" role="button">결제</a>
+										</li>
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link" role="button">혜택</a>
+										</li>
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link" role="button">쿠폰</a>
+										</li>
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link" role="button">내자산</a>
+										</li>
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link" role="button">안내</a>
+										</li>
+										<!-- //2022.02.09 : mod : 탭 구성 변경 -->
+									</ul>
+								</div>
+							</div>
+							<div class="toggle-search-form">
+								<div class="search-word-area">
+									<!-- 2022.05.30 : mod : .type-search-black 클래스 삭제 -->
+									<div class="ui-input-block type-use-delete type-search">
+										<input type="search" class="ui-input" title="검색어 입력" placeholder="검색어를 입력해 주세요." />
+										<button type="button" class="ui-button ui-input-delete">
+											<span class="for-a11y">입력 내용 지우기</span>
+										</button>
+										<!-- 2022.05.30 : mod : 검색 버튼 추가 -->
+										<button type="button" class="ui-button ui-input-search">
+											<span class="for-a11y">검색</span>
+										</button>
+									</div>
+								</div>
+								<button type="button" class="ui-button toggle-search-button type-close">
+									<span class="for-a11y">검색 폼 닫기</span>
+								</button>
+							</div>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">전체</h2>
+
+						<div class="usage-default type-line-medium-margin type-line-medium-margin-last-none">
+							<ul class="usage-default-list">
+								<!-- Case : 최근 알림 없을 때 -->
+								<li class="usage-default-item">
+									<div class="link-item type-none type-flex type-no-line type-no-padding">
+										<p class="item-text">최근 알림 메시지가 없습니다.</p>
+									</div>
+								</li>
+								<!-- //Case : 최근 알림 없을 때 -->
+								<li class="usage-default-item">
+									<div class="usage-default-date">7월 20일</div>
+									<div class="usage-default">
+										<ul class="usage-default-list">
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<a href="" class="usage-default-left">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="status-tag type-small type-secondary">혜택</span>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="usage-default-title">최대 1줄 노출 최대 1줄 노출</div>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">
+																<div class="default-text multi-ellipsis type-line-2">최대 2줄 노출 최대 2줄 노출 최대 2줄 노출 최대 2줄 노출 최대 2줄 노출 최대 2줄 노출</div>
+															</div>
+														</div>
+													</a>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">11:40</div>
+														</div>
+														<div class="link-row">
+															<a href="" class="coupon-detail-button type-share type-inline-block" role="button">
+																<span class="for-a11y">공유하기</span>
+															</a>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block type-disabled">
+													<a href="" class="usage-default-left">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="status-tag type-small type-gray-secondary">안내</span>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="usage-default-title">PUSH 타이틀명</div>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">
+																<div class="default-text multi-ellipsis type-line-2">코웨이 렌탈하면 최대 25만 하나머니 적립 사은품</div>
+															</div>
+														</div>
+													</a>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">11:40</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="usage-default-item">
+									<div class="usage-default-date">7월 19일</div>
+									<div class="usage-default">
+										<ul class="usage-default-list">
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<a href="" class="usage-default-left">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="status-tag type-small type-secondary">혜택</span>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="usage-default-title">코웨이 렌탈 신청 고객</div>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">
+																<div class="default-text multi-ellipsis type-line-2">코웨이 렌탈하면 최대 25만 하나머니 적립 사은품</div>
+															</div>
+														</div>
+													</a>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">11:40</div>
+														</div>
+														<div class="link-row">
+															<a href="" class="coupon-detail-button type-share type-inline-block" role="button">
+																<span class="for-a11y">공유하기</span>
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="banner">
+													<a href="" class="banner-link">
+														<!-- 2022.04.27 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/banner-2.png" alt="배너 설명 넣어주세요." class="banner-image" />
+													</a>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<a href="" class="usage-default-left">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="status-tag type-small type-primary">결제</span>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="usage-default-title">-15,000 원</div>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">가맹점명</div>
+															<div class="usage-default-etc-item">신용(일시불)</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">누적이용금액 158,000 원 (청구금액과 상이할 수 있습니다.)</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">2021.08.30 18:27</div>
+														</div>
+													</a>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">11:40</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<a href="" class="usage-default-left">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="status-tag type-small type-primary">결제</span>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="usage-default-title">PUSH 타이틀명</div>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">가맹점명</div>
+															<div class="usage-default-etc-item">신용(일시불)</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">누적이용금액 158,000 원 (청구금액과 상이할 수 있습니다.)</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">2021.08.30 18:27</div>
+														</div>
+													</a>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">11:40</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="usage-default-item">
+									<div class="usage-default-date">7월 18일</div>
+									<div class="usage-default">
+										<ul class="usage-default-list">
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<a href="" class="usage-default-left">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="status-tag type-small">내자산</span>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="usage-default-title">PUSH 타이틀명</div>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">
+																<div class="default-text multi-ellipsis type-line-2">가맹점명 노출</div>
+															</div>
+														</div>
+													</a>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">11:40</div>
+														</div>
+														<div class="link-row">
+															<a href="" class="coupon-detail-button type-share type-inline-block" role="button">
+																<span class="for-a11y">공유하기</span>
+															</a>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<a href="" class="usage-default-left">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="status-tag type-small type-tertiary">금융</span>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="usage-default-title">PUSH 타이틀명</div>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">
+																<div class="default-text multi-ellipsis type-line-2">가맹점명 노출</div>
+															</div>
+														</div>
+													</a>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">11:40</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<a href="" class="usage-default-left">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="status-tag type-small type-warning">쿠폰</span>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="usage-default-title">PUSH 타이틀명</div>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">
+																<div class="default-text multi-ellipsis type-line-2">가맹점명 노출</div>
+															</div>
+														</div>
+													</a>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">11:40</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<a href="" class="usage-default-left">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="status-tag type-small type-gray-secondary">안내</span>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="usage-default-title">PUSH 타이틀명</div>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">
+																<div class="default-text multi-ellipsis type-line-2">가맹점명 노출</div>
+															</div>
+														</div>
+													</a>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">11:40</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<a href="" class="usage-default-left">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="status-tag type-small type-gray-secondary">안내</span>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="usage-default-title">PUSH 타이틀명</div>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">
+																<div class="default-text multi-ellipsis type-line-2">가맹점명 노출</div>
+															</div>
+														</div>
+													</a>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">11:40</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<button type="button" class="ui-button ui-button-more">더보기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

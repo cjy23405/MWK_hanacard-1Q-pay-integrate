@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-select-authentication-method">인증방법 선택 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 인증방법 선택 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select" data-layer="layer-select-authentication-method">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">인증방법을 선택해주세요.</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-list => .ui-select-grid -->
+								<div class="ui-select-grid has-icon">
+									<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-item => .ui-select-cell -->
+									<div class="ui-select-cell">
+										<!-- DD : 먼저 체크 된 옵션이 있으면 is-checked 클래스 값 및 title 속성 추가 -->
+										<button type="button" class="ui-radio-block type-auth is-checked" title="선택 됨" data-layer-select-option="optionGroupName">
+											<span class="ui-label">
+												<span class="ui-label-icon type-large type-phone"></span>
+												<span class="ui-label-text">휴대폰</span>
+											</span>
+										</button>
+									</div>
+									<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-item => .ui-select-cell -->
+									<div class="ui-select-cell">
+										<button type="button" class="ui-radio-block type-auth" data-layer-select-option="optionGroupName">
+											<span class="ui-label">
+												<span class="ui-label-icon type-large type-toss"></span>
+												<span class="ui-label-text">토스</span>
+											</span>
+										</button>
+									</div>
+									<!-- Case : 토스 disabled (button 에 disabled 속성 추가) -->
+									<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-item => .ui-select-cell -->
+									<div class="ui-select-cell">
+										<button type="button" class="ui-radio-block type-auth" data-layer-select-option="optionGroupName" disabled>
+											<span class="ui-label">
+												<span class="ui-label-icon type-large type-toss"></span>
+												<span class="ui-label-text">토스</span>
+											</span>
+										</button>
+									</div>
+									<!-- //Case : 토스 disabled (button 에 disabled 속성 추가) -->
+									<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-item => .ui-select-cell -->
+									<div class="ui-select-cell">
+										<button type="button" class="ui-radio-block type-auth" data-layer-select-option="optionGroupName">
+											<span class="ui-label">
+												<span class="ui-label-icon type-large type-naver"></span>
+												<span class="ui-label-text">네이버</span>
+											</span>
+										</button>
+									</div>
+									<!-- Case : 네이버 disabled (button 에 disabled 속성 추가) -->
+									<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-item => .ui-select-cell -->
+									<div class="ui-select-cell">
+										<button type="button" class="ui-radio-block type-auth" data-layer-select-option="optionGroupName" disabled>
+											<span class="ui-label">
+												<span class="ui-label-icon type-large type-naver"></span>
+												<span class="ui-label-text">네이버</span>
+											</span>
+										</button>
+									</div>
+									<!-- //Case : 네이버 disabled (button 에 disabled 속성 추가) -->
+									<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-item => .ui-select-cell -->
+									<div class="ui-select-cell">
+										<button type="button" class="ui-radio-block type-auth" data-layer-select-option="optionGroupName">
+											<span class="ui-label">
+												<span class="ui-label-icon type-large type-pass"></span>
+												<span class="ui-label-text">PASS</span>
+											</span>
+										</button>
+									</div>
+									<!-- Case : PASS disabled (button 에 disabled 속성 추가) -->
+									<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-item => .ui-select-cell -->
+									<div class="ui-select-cell">
+										<button type="button" class="ui-radio-block type-auth" data-layer-select-option="optionGroupName" disabled>
+											<span class="ui-label">
+												<span class="ui-label-icon type-large type-pass"></span>
+												<span class="ui-label-text">PASS</span>
+											</span>
+										</button>
+									</div>
+									<!-- //Case : PASS disabled (button 에 disabled 속성 추가) -->
+									<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-item => .ui-select-cell -->
+									<div class="ui-select-cell">
+										<button type="button" class="ui-radio-block type-auth" data-layer-select-option="optionGroupName">
+											<span class="ui-label">
+												<span class="ui-label-icon type-large type-hana"></span>
+												<!-- 2023.03.21 : mod : 문구수정 하나원사인 => 하나인증서 -->
+												<span class="ui-label-text">하나인증서</span>
+											</span>
+										</button>
+									</div>
+									<!-- Case : PASS disabled (button 에 disabled 속성 추가) -->
+									<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-item => .ui-select-cell -->
+									<div class="ui-select-cell">
+										<button type="button" class="ui-radio-block type-auth" data-layer-select-option="optionGroupName" disabled>
+											<span class="ui-label">
+												<span class="ui-label-icon type-large type-hana"></span>
+												<!-- 2023.03.21 : mod : 문구수정 하나원사인 => 하나인증서 -->
+												<span class="ui-label-text">하나인증서</span>
+											</span>
+										</button>
+									</div>
+									<!-- //Case : PASS disabled (button 에 disabled 속성 추가) -->
+									<!-- 2023.03.21 : mod : UI변경으로 인한 클래스명 변경 .ui-select-item => .ui-select-cell -->
+									<div class="ui-select-cell">
+										<button type="button" class="ui-radio-block type-auth" data-layer-select-option="optionGroupName">
+											<span class="ui-label">
+												<span class="ui-label-icon type-large type-card"></span>
+												<span class="ui-label-text">카드</span>
+											</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 인증방법 선택 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-select-authentication-method');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

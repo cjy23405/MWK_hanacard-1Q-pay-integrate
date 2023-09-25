@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <g id="ic-com-suggest" transform="translate(-135 -151)">
+    <circle id="타원_1315" data-name="타원 1315" cx="45" cy="45" r="45" transform="translate(135 151)" fill="#f8f8f8"/>
+    <g id="그룹_8078" data-name="그룹 8078" transform="translate(2 1)">
+      <g id="사각형_11123" data-name="사각형 11123" transform="translate(157 172)" fill="#fff" stroke="#2d3239" stroke-width="2">
+        <rect width="33" height="40" rx="6" stroke="none"/>
+        <rect x="1" y="1" width="31" height="38" rx="5" fill="none"/>
+      </g>
+      <g id="사각형_11100" data-name="사각형 11100" transform="translate(163 178)" fill="#fff" stroke="#2d3239" stroke-width="2">
+        <rect width="33" height="40" rx="6" stroke="none"/>
+        <rect x="1" y="1" width="31" height="38" rx="5" fill="none"/>
+      </g>
+      <rect id="사각형_6085" data-name="사각형 6085" width="17" height="2" rx="1" transform="translate(171 190)" fill="#2d3239"/>
+      <rect id="사각형_18383" data-name="사각형 18383" width="6" height="15" transform="translate(192 192)" fill="#fff"/>
+      <rect id="사각형_18384" data-name="사각형 18384" width="6" height="15" transform="translate(196 192)" fill="#f8f8f8"/>
+      <circle id="타원_2425" data-name="타원 2425" cx="8.5" cy="8.5" r="8.5" transform="translate(186 196)" fill="#fff"/>
+      <path id="교차_49" data-name="교차 49" d="M-2392,8976a10,10,0,0,1,10-10,9.969,9.969,0,0,1,4,.832V8984a6.026,6.026,0,0,1-.124,1.22A9.964,9.964,0,0,1-2382,8986,10,10,0,0,1-2392,8976Z" transform="translate(2574 -8772)" fill="#fff"/>
+      <rect id="사각형_6086" data-name="사각형 6086" width="8" height="2" rx="1" transform="translate(171 196)" fill="#2d3239"/>
+      <rect id="사각형_11102" data-name="사각형 11102" width="2" height="4" rx="1" transform="translate(194 189)" fill="#2d3239"/>
+      <circle id="타원_1318" data-name="타원 1318" cx="8" cy="8" r="8" transform="translate(184 196)" fill="#7dedf3"/>
+      <g id="타원_1317" data-name="타원 1317" transform="translate(186 196)" fill="none" stroke="#2d3239" stroke-width="2">
+        <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+        <circle cx="8.5" cy="8.5" r="7.5" fill="none"/>
+      </g>
+      <path id="패스_3490" data-name="패스 3490" d="M-10169.5,5363l2.476,2.5,4.524-5" transform="translate(10360.5 -5158.5)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

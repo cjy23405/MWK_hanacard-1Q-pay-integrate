@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">거래내역조회</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="card-list">
+								<div class="card-item">
+									<span class="card-block">
+										<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+										<!-- DD : 이미지 없을 때
+										<div class="logo-image">
+											<div class="logo-image-inner"></div>
+										</div>
+										-->
+
+										<!-- DD : 이미지 에러
+										<div class="logo-image">
+											<div class="logo-image-inner">
+												<img src="./assets/images/_dummy/logo-hana-card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										-->
+
+										<!-- DD : 이미지 있을 때 -->
+										<div class="logo-image">
+											<div class="logo-image-inner">
+												<!-- 2022.04.27 : mod : alt값 변경 -->
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+
+										<div class="card-info type-has-change">
+											<h3 class="card-name basic-text">우리은행 직장인제테크저축통장</h3>
+											<button type="button" class="ui-button card-change"><span class="for-a11y">계좌 변경</span></button>
+											<div class="card-number-block">
+												<div class="card-number">
+													<span class="card-number-item">011020112341311</span>
+													<span class="card-number-item">예적금</span>
+												</div>
+											</div>
+											<div class="card-total-amount">
+												<span class="card-total-amount-val">18,880,017 원</span>
+											</div>
+										</div>
+									</span>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<!-- 2022.03.25 아이콘, 툴팁 추가 -->
+							<div class="check-range margin-bottom-none type-flex">
+								<div class="ui-tooltip-wrap">
+									<!-- 2022.04.06 : mod : data-vertical 속성 추가 -->
+									<span class="ui-tooltip js-ui-dropdown" data-vertical="top">
+										<span class="ui-tooltip-head">
+											<button type="button" class="ui-button ui-tooltip-opener js-ui-dropdown__opener">
+												<span class="ui-notice-icon type-warning">
+													<span class="for-a11y">(도움말 <span class="open-text">열기</span><span class="close-text">닫기</span>)</span>
+												</span>
+											</button>
+										</span>
+										<span class="ui-tooltip-layer js-ui-dropdown__layer">
+											<span class="ui-tooltip-bubble">
+												<span class="ui-tooltip-bubble-message"
+													>안전한 금융거래를 위해<br />
+													1원 입금 입금자명은 마스킹되었습니다.
+												</span>
+												<button type="button" class="ui-button ui-tooltip-bubble-close js-ui-dropdown__closer">
+													<span class="for-a11y">도움말 닫기</span>
+												</button>
+											</span>
+										</span>
+									</span>
+								</div>
+								<button type="button" class="ui-button-down">1개월&middot;전체</button>
+							</div>
+							<!-- //2022.03.25 아이콘, 툴팁 추가 -->
+
+							<!-- [DD] 거래내역이 없을 때 -->
+							<div class="type-none">
+								<p class="item-text">거래내역이 없습니다.</p>
+							</div>
+							<!--// [DD] 거래내역이 없을 때 -->
+
+							<div class="usage-default-area">
+								<ul class="usage-default-list">
+									<li class="usage-default-item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title">던킨도너츠 을지로입구점</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.04.12 12:59:29</div>
+												</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">출금</div>
+													<div class="usage-default-etc-item">현금</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum"><span class="color-wrong">-10,000</span> 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">잔액 50,000 원</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title">하나오픈김하나</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.04.12 12:59:29</div>
+												</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">입금</div>
+													<div class="usage-default-etc-item">현금</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum"><span class="color-primary">+10,000</span> 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">잔액 60,000 원</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title">하나오픈김하나</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.04.12 12:59:29</div>
+												</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">지급</div>
+													<div class="usage-default-etc-item">현금</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">+10,000 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">잔액 50,000 원</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title">하나오픈김하나</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.04.12 12:59:29</div>
+												</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">기타</div>
+													<div class="usage-default-etc-item">현금</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">0 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">잔액 40,000 원</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<button type="button" class="ui-button ui-button-more">더보기</button>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

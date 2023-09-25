@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">보험</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-tab type-nav type-bottom-margin-none">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link">전문설계사 상담신청</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active">다이렉트보험 가입</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">다이렉트보험 가입</h2>
+
+						<!-- 2022.03.31 : mod : type-banner-only 클래스 추가 -->
+						<div class="menu-top type-top-padding-none type-banner-only">
+							<!-- 2022.03.31 : mod : margin-top-none 클래스 제거 -->
+							<div class="slide-banner">
+								<div class="slide-banner-inner">
+									<div class="slide-banner-controller"></div>
+									<ul class="slide-banner-list">
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<img src="./assets/images/_dummy/banner-3.png" alt="" class="slide-banner-image" />
+											</a>
+										</li>
+										<!-- 2022.02.22 : add : 주석 추가 -->
+										<!-- DD : 버튼 흰색 버전 이용일 경우 is-white 클래스 값 추가 -->
+										<li class="slide-banner-item is-white">
+											<a href="" class="slide-banner-link">
+												<img src="./assets/images/_dummy/banner-3.png" alt="" class="slide-banner-image" />
+											</a>
+										</li>
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<img src="./assets/images/_dummy/banner-3.png" alt="" class="slide-banner-image" />
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section">
+							<div class="round-block">
+								<ul class="round-block-list">
+									<li class="round-block-item">
+										<a href="" class="round-block-box type-link type-color-basic">
+											<strong class="round-block-text">꼭! 필요한 BEST 보험</strong>
+											<div class="small-text color-blur margin-top-10">소중한 나를 지키는 알찬 보험</div>
+										</a>
+									</li>
+									<li class="round-block-item">
+										<a href="" class="round-block-box type-link type-color-basic">
+											<strong class="round-block-text">하나 손해보험</strong>
+											<div class="small-text color-blur margin-top-10">지금 필요한 보험만 모아</div>
+											<ul class="info-list margin-top-5">
+												<li class="info-item">
+													준법감시인확인필<br />
+													제2021204(2021.06.29~2022.06.28)
+												</li>
+											</ul>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="page-section type-line js-ui-tab-panel">
+							<div class="menu-horizontal-area">
+								<ul class="menu-horizontal-list type-no-bg">
+									<li class="menu-horizontal-item">
+										<a href="" class="menu-horizontal-link" data-tab-open="tab1">
+											<span class="menu-horizontal-icon type-11"></span>
+											<span class="menu-horizontal-title"><span class="title">자동차</span></span>
+										</a>
+									</li>
+									<li class="menu-horizontal-item">
+										<a href="" class="menu-horizontal-link" data-tab-open="tab2">
+											<span class="menu-horizontal-icon type-12"></span>
+											<span class="menu-horizontal-title"><span class="title">건강</span></span>
+										</a>
+									</li>
+									<li class="menu-horizontal-item">
+										<a href="" class="menu-horizontal-link" data-tab-open="tab3">
+											<span class="menu-horizontal-icon type-13"></span>
+											<span class="menu-horizontal-title"><span class="title">여행·유학·레저</span></span>
+										</a>
+									</li>
+									<li class="menu-horizontal-item">
+										<a href="" class="menu-horizontal-link" data-tab-open="tab4">
+											<span class="menu-horizontal-icon type-14"></span>
+											<span class="menu-horizontal-title"><span class="title">반려동물</span></span>
+										</a>
+									</li>
+									<li class="menu-horizontal-item">
+										<a href="" class="menu-horizontal-link" data-tab-open="tab5">
+											<span class="menu-horizontal-icon type-15"></span>
+											<span class="menu-horizontal-title"><span class="title">소상공인</span></span>
+										</a>
+									</li>
+									<li class="menu-horizontal-item">
+										<a href="" class="menu-horizontal-link" data-tab-open="tab6">
+											<span class="menu-horizontal-icon type-16"></span>
+											<span class="menu-horizontal-title"><span class="title">신용·연금</span></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<!-- [DD] 자동차 선택시 노출 -->
+							<div class="menu-link-list type-line" data-tab="tab1">
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hana-insurance-s.png" alt="하나손해보험" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">하나 에듀카(다이렉트)자동차보험</span>
+										<div class="small-text color-blur margin-top-10">
+											30만원이상 결제 시 3만원 캐시백!<br />
+											하나 신용/체크카드 결제고객<br />
+											(법인/기프트/선불카드 제외)
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">준법감시인 확인필 제 2021-171호(2021.05.28)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hana-insurance-s.png" alt="하나손해보험" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">One-day 자동차보험</span>
+										<div class="small-text color-blur margin-top-10">
+											130만의 선택, 렌터카나 남의 차 이용할 때<br />
+											꼭 필요한 1일 단위의 자동차보험
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">손해보험협회 심의필 제 35316호(2020.10.14)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hana-insurance-s.png" alt="하나손해보험" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">무배당 하나 가득 담은 운전자보험<br />(다이렉트)</span>
+										<div class="small-text color-blur margin-top-10">
+											운전자보험 가성비 비교해 보셨나요?<br />
+											체크하나마나 하나 가득 담은 운전자보험
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">손해보험협회 심의필 제 35316호(2020.10.14)</li>
+										</ul>
+									</a>
+								</div>
+							</div>
+							<!--// [DD] 자동차 선택시 노출 -->
+
+							<!-- [DD] 건강 선택시 노출 -->
+							<div class="menu-link-list type-line" data-tab="tab2">
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-lina-s.png" alt="Cigna 라이나생명" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">(무) 9900 ONE 암보험</span>
+										<div class="small-text color-blur margin-top-10">
+											라이나생명이 만든 암보험!<br />
+											2030을 위한 인터넷 전용보험<br />
+											본 상품은 가입연령/성별에 따라서 보장금액 다름<br />
+											가입 후 91일부터 보장.2년이내 치료 시 50% 보장
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">생명보험협회 심의필 제 2020-03386호 (2020.11.24)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-lina-s.png" alt="Cigna 라이나생명" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">(무) 라이나 다이렉트 암보험(갱신형)</span>
+										<div class="small-text color-blur margin-top-10">
+											라이나생명이 만든 인터넷 전용보험<br />
+											<span class="color-wrong"
+												>10년 만기 갱신형 상품으로 갱신 시 보험료 인상<br />
+												가능(갱신 시 최대 100세까지 보장 가능)<br
+											/></span>
+											가입 후 91일부터 보장. 2년이내 치료 시 50% 보장
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">생명보험협회 심의필 제 2020-03386호 (2020.11.24)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-lina-s.png" alt="Cigna 라이나생명" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">(무) 9900 ONE 치아보험</span>
+										<div class="small-text color-blur margin-top-10">
+											치아보험은 라이나!<br />
+											2030을 위한 인터넷 전용보험<br />
+											본 상품은 가입연령/성별에 따라서 보장금액 다름<br />
+											가입 후 91일부터 보장.2년이내 치료 시 50% 보장
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">생명보험협회 심의필 제 2020-03386호 (2020.11.24)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-lina-s.png" alt="Cigna 라이나생명" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">(무) 라이나 다이렉트 치아보험Ⅱ(갱신형)</span>
+										<div class="small-text color-blur margin-top-10">
+											치아보험은 라이나!<br />
+											2030을 위한 인터넷 전용보험<br />
+											<span class="color-wrong">
+												10년 만기 갱신형 상품으로 갱신 시 보험료 인상<br />
+												가능(갱신 시 최대 80세까지 보장 가능) </span
+											><br />
+											가입 후 91일부터 보장. 1년이내 치료 시 50% 보장
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">생명보험협회 심의필 제 2020-03386호 (2020.11.24)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-chubb-s.png" alt="CHUBB" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">(무) Chubb 다이렉트 치아안심보험</span>
+										<div class="small-text color-blur margin-top-10">첫 보험료 그대로 만기까지 변동없이!</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">손해보험협회 심의필 제 42415호 (2021.05.03)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hana-life-s.png" alt="하나생명" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">(무)가족사랑 정기보험</span>
+										<div class="small-text color-blur margin-top-10">내가 없어도 소중한 우리가족을 지켜주는 건?</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">준법감시인심의필하생2021-771<br />(2021.07.06~2022.07.05)</li>
+											<li class="info-item margin-top-5">생명보험협회 심의필 제2021-02724호<br />(2021.07.13~2022.07.12)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hana-life-s.png" alt="하나생명" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">(무)내가PICK한 암보험</span>
+										<div class="small-text color-blur margin-top-10">필요한 보장만 쏙쏙 골라 담는 내가 만드는 암보험</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">준법감시인심의필하생2021-77<br />(2021.07.06~2022.07.05)</li>
+											<li class="info-item margin-top-5">생명보험협회 심의필 제2021-02724호<br />(2021.07.13~2022.07.12)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hana-life-s.png" alt="하나생명" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">(무)간폐보장보험</span>
+										<div class="small-text color-blur margin-top-10">
+											평소 잘못된 식생활 및 환경적인요인 등으로<br />
+											간/폐가 걱정되신다면?
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">준법감시인심의필하생2021-771<br />(2021.07.06~2022.07.05)</li>
+											<li class="info-item margin-top-5">생명보험협회 심의필 제2021-02724호<br />(2021.07.13~2022.07.12)</li>
+										</ul>
+									</a>
+								</div>
+							</div>
+							<!--// [DD] 건강 선택시 노출 -->
+
+							<!-- [DD] 유행 유학 레저 선택시 노출 -->
+							<div class="menu-link-list type-line" data-tab="tab3">
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-mg-s.png" alt="MG 손해보험" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">MG손해보험 해외여행보험</span>
+										<div class="small-text color-blur margin-top-10">
+											상해(국내.해외)의료비, 질병(국내.해외)<br />
+											의료비, 휴대품(분실 제외) 손해 보장으로<br />
+											안전하게 [특약 가입 시]
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">손해보험협회 심의필 제 44412호 (2021.06.30)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hana-insurance-s.png" alt="하나손해보험" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">해외여행보험</span>
+										<div class="small-text color-blur margin-top-10">
+											다이렉트로 빠르게! 담보로 알차게!!<br />
+											직접 설계로 저렴하게!!!
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">손해보험협회 심의필 제 35316호(2020.10.14)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hana-insurance-s.png" alt="하나손해보험" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">해외유학보험</span>
+										<div class="small-text color-blur margin-top-10">
+											유학, 연수, 해외주재원<br />
+											장기간 해외체류할때 든든하게
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">손해보험협회 심의필 제 58570 호<br />(2021.12.03~2022.12.02)</li>
+										</ul>
+									</a>
+								</div>
+							</div>
+							<!--// [DD] 유행 유학 레저 선택시 노출 -->
+
+							<!-- [DD] 반려동물 선택시 노출 -->
+							<div class="menu-link-list type-line" data-tab="tab4">
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-ipet-s.png" alt="ipet" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">반려동물보험</span>
+										<div class="small-text color-blur margin-top-10">
+											내 반려동물에게 딱 맞는 보험은?<br />
+											국내 최초 보험사별 상품 간편비교 서비스!
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">의료실비/치료비/배상책임/장례비 보장<br />[특약 가입 시]</li>
+										</ul>
+									</a>
+								</div>
+							</div>
+							<!--// [DD] 반려동물 선택시 노출 -->
+
+							<!-- [DD] 소상공인 선택시 노출 -->
+							<div class="menu-link-list type-line" data-tab="tab5">
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hyundai-s.png" alt="현대해상" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">소상공인 의무보험 가입서비스</span>
+										<div class="small-text color-blur margin-top-10">
+											어디서나 온라인으로 간편하게!<br />
+											공동인증서가 없어도 가입 가능<br />
+											사업자번호 발급 전 고객도 ‘개인형’으로 가입 가능!
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">손해보험협회 심의필 제 36359호 (2020.11.20)</li>
+										</ul>
+									</a>
+								</div>
+
+								<strong class="page-section-title">업종별 주요 의무보험 7종</strong>
+								<div class="accordion-list js-ui-accordion margin-top-25" data-once="true">
+									<div class="accordion-item js-ui-accordion__item">
+										<button type="button" class="accordion-opener js-ui-accordion__opener">
+											<strong class="accordion-opener-title">개인정보보호 배상책임보험II</strong>
+											<div class="accordion-opener-text">개인정보 보유 사업자</div>
+										</button>
+										<div class="js-ui-accordion__layer">
+											<div class="accordion-contents">
+												온라인으로 서비스를 운영, 지난해 매출이 5,000만원 이상이고 전년도 말 3개월(10월~12월) 일평균 1,000명 이상의 개인정보를 저장하고 있다면 필수가입 대상
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item js-ui-accordion__item">
+										<button type="button" class="accordion-opener js-ui-accordion__opener">
+											<strong class="accordion-opener-title">다중이용업소 화재배상책임보험</strong>
+											<div class="accordion-opener-text">지하/2층이상 음식점.PC방.노래방 등</div>
+										</button>
+										<div class="js-ui-accordion__layer">
+											<div class="accordion-contents">
+												지하(약 20평(66m2) 이상) 또x는 2층 이상 (약 30평(100m2) 이상)의 음식점, 노래방, PC방, 실내골프연습장은 필수가입 대상 (관할 소방서 문의를 통해 대상여부 확인 가능)
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item js-ui-accordion__item">
+										<button type="button" class="accordion-opener js-ui-accordion__opener">
+											<strong class="accordion-opener-title">재난 배상책임보험</strong>
+											<div class="accordion-opener-text">1층 음식점.숙박업 등</div>
+										</button>
+										<div class="js-ui-accordion__layer">
+											<div class="accordion-contents">1층(약 30평(100m2) 이상) 음식점, 숙박시설을 운영한다면 필수가입 대상</div>
+										</div>
+									</div>
+									<div class="accordion-item js-ui-accordion__item">
+										<button type="button" class="accordion-opener js-ui-accordion__opener">
+											<strong class="accordion-opener-title">학원 배상책임보험</strong>
+											<div class="accordion-opener-text">학원.독서실 사업자</div>
+										</button>
+										<div class="js-ui-accordion__layer">
+											<div class="accordion-contents">학원, 독서실 필수가입 대상</div>
+										</div>
+									</div>
+									<div class="accordion-item js-ui-accordion__item">
+										<button type="button" class="accordion-opener js-ui-accordion__opener">
+											<strong class="accordion-opener-title">가스사고 배상책임보험</strong>
+											<div class="accordion-opener-text">LNG.LPG 사용 사업자</div>
+										</button>
+										<div class="js-ui-accordion__layer">
+											<div class="accordion-contents">
+												LNG는 월 3,000m2 이상 사용, LPG는 250kg 이상 저장용량이면 필수가입 대상<br />
+												지하 음식점 또는 학원, 숙박업소 등에서 30평 이상의 음식점을 운영한다면 필수가입 대상
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item js-ui-accordion__item">
+										<button type="button" class="accordion-opener js-ui-accordion__opener">
+											<strong class="accordion-opener-title">어린이놀이시설 배상책임보험</strong>
+											<div class="accordion-opener-text">놀이기구 설치 사업자</div>
+										</button>
+										<div class="js-ui-accordion__layer">
+											<div class="accordion-contents">어린이 놀이기구가 설치되어 있는 유치원, 어린이집, 키즈카페, 식당은 필수가입 대상</div>
+										</div>
+									</div>
+									<div class="accordion-item js-ui-accordion__item">
+										<button type="button" class="accordion-opener js-ui-accordion__opener">
+											<strong class="accordion-opener-title">야영장사고 배상책임보험</strong>
+											<div class="accordion-opener-text">캠핑장.오토캠핑 사업자</div>
+										</button>
+										<div class="js-ui-accordion__layer">
+											<div class="accordion-contents">캠핑장, 오토캠핑을 운영한다면 필수가입 대상</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--// [DD] 소상공인 선택시 노출 -->
+
+							<!-- [DD] 신용·연금 선택시 노출 -->
+							<div class="menu-link-list type-line" data-tab="tab6">
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hyundai-s.png" alt="현대해상" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">현대해상 파이낸스 세이프보험</span>
+										<div class="small-text color-blur margin-top-10">
+											특정질병의 진단 또는 사망 시,<br />
+											카드채무금액 면제! (특약, 가입금액 한도)
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">손해보험협회 심의필 제 42071호 (2021.04.22)</li>
+										</ul>
+									</a>
+								</div>
+								<div class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button type-flex-column type-no-left-padding" role="button">
+										<img src="./assets/images/contents/logo-hana-life-s.png" alt="하나생명" class="insurance-logo-img-s" />
+										<!-- 2022.04.14 : mod : font-weight-medium 클래스 값 추가 -->
+										<span class="medium-text margin-top-5 font-weight-medium">(무)하나원큐연금저축보험</span>
+										<div class="small-text color-blur margin-top-10">
+											선택의 여지가 없는 필수<br />
+											세액공제부터 절세 혜택까지!
+										</div>
+										<ul class="info-list margin-top-5">
+											<li class="info-item">준법감시인심의필하생2021-1010<br />(2021.08.24~2022.08.23)</li>
+											<li class="info-item margin-top-5">생명보험협회 심의필 제2021-03284호<br />(2021.08.31~2022.08.30)</li>
+										</ul>
+									</a>
+								</div>
+							</div>
+							<!--// [DD] 신용·연금 선택시 노출 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

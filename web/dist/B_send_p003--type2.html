@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">상세내역</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<section class="total-amount type-no-line">
+							<div class="total-amount-head">
+								<h4 class="total-amount-title">11월 시크릿포인트</h4>
+							</div>
+							<div class="total-amount-val">총 6,000 p</div>
+							<!-- 2022.03.30 추가 -->
+							<p class="ui-notice">카드 이용, 이벤트로 받은 혜택입니다</p>
+						</section>
+
+						<section class="page-section type-line">
+							<div class="usage-default">
+								<ul class="usage-default-list">
+									<li class="usage-default-item">
+										<!-- 2022.03.30 날짜 삭제 -->
+										<ul class="usage-default-list">
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<div class="usage-default-left">
+														<div class="usage-default-title">SKT통신할인</div>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-sum">3,000 P</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<!-- 2022.03.30 승인일자/확정일자 구분 -->
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">2020.11.20 <span class="color-primary">확정</span></div>
+															<div class="usage-default-etc-item">2020.11.20 <span class="color-secondary">거래</span></div>
+														</div>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">이용금액 30,000 원</div>
+														</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item ellipsis">1Q Living</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<div class="usage-default-left">
+														<div class="usage-default-title">스타벅스</div>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-sum">210 P</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<!-- 2022.03.30 승인일자/확정일자 구분 -->
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">2020.11.20 <span class="color-primary">확정</span></div>
+															<div class="usage-default-etc-item">2020.11.20 <span class="color-secondary">거래</span></div>
+														</div>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">이용금액 30,000 원</div>
+														</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item ellipsis">Multi On</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<div class="usage-default-left">
+														<div class="usage-default-title">이디야커피 청라점</div>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-sum">410 P</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<!-- 2022.03.30 승인일자/확정일자 구분 -->
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">2020.11.20 <span class="color-primary">확정</span></div>
+															<div class="usage-default-etc-item">2020.11.20 <span class="color-secondary">거래</span></div>
+														</div>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">이용금액 30,000 원</div>
+														</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item ellipsis">Multi On</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+
+									<li class="usage-default-item">
+										<!-- 2022.03.30 확정일자 삭제 -->
+										<ul class="usage-default-list">
+											<li class="usage-default-item">
+												<div class="usage-default-block">
+													<div class="usage-default-left">
+														<div class="usage-default-title">가맹점명</div>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-sum">999,999,999 P</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<!-- 2022.03.30 승인일자/확정일자 구분 -->
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">$접수일자$ <span class="color-primary">확정</span></div>
+															<div class="usage-default-etc-item">$승인일자$ <span class="color-secondary">거래</span></div>
+														</div>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">이용금액 999,999,999 원</div>
+														</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item ellipsis">카드상품명 최대1줄표시 카드상품명 최대1줄표시 카드상품명 최대1줄표시 카드상품명 최대1줄표시</div>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-living-fee-national -tax">제휴사에서 신청 (국세 납부)</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 제휴사에서 신청 (국세 납부) -->
+			<div class="layer-wrap layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-living-fee-national -tax">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">국세 납부</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section-group margin-top-minus-5">
+									<div class="section-title type-medium">
+										<h3 class="title">서비스 안내</h3>
+									</div>
+									<div class="section-contents-info">하나카드로 간편하게 국세를 납부하실 수 있는 서비스 입니다.</div>
+								</div>
+
+								<div class="page-section-group margin-top-25">
+									<div class="section-title type-medium">
+										<h3 class="title">대상카드</h3>
+									</div>
+									<div class="section-contents-info">
+										<ul class="info-list type-default type-inherit type-outside">
+											<li class="info-item">
+												<span class="color-basic">개인</span>
+												<div class="indent-block margin-top-5">납부자 본인 명의로 발급된 카드 중 신용카드, 체크카드에 한하여 납부 가능</div>
+											</li>
+											<li class="info-item">
+												<span class="color-basic">법인</span>
+												<div class="indent-block margin-top-5">납부대상 사업자번호로 발급된 신용카드, 체크카드에 한하여 납부가능</div>
+											</li>
+											<li class="info-item type-indent type-side-no-padding font-weight-regular"><span class="indent">※</span>이용불가카드 : 본인 명의 확인 불가 카드 (기프트카드 등)</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="page-section-group margin-top-25">
+									<div class="section-title type-medium">
+										<h3 class="title">납세 세목</h3>
+									</div>
+									<div class="section-contents-info">조회 납부 가능한 모든 국세(소득세, 부가가치세, 종부세 등) 및 관세</div>
+								</div>
+
+								<div class="page-section-group margin-top-25">
+									<div class="section-title type-medium">
+										<h3 class="title">납부대행 수수료</h3>
+									</div>
+									<div class="section-contents-info">
+										<ul class="info-list type-default type-inherit type-outside">
+											<li class="info-item">세액의 0.8% (체크카드 납부 시 세액의 0.5%)</li>
+											<li class="info-item">관련법령에 따라 납부자 부담이며 체크카드 결제 시에도 부과</li>
+											<li class="info-item">국세 카드 납부 시 승인금액에 더하여 일괄 결제</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="page-section-group margin-top-25">
+									<div class="section-title type-medium">
+										<h3 class="title">납부 방법</h3>
+									</div>
+									<div class="section-contents-info">
+										<ul class="info-list type-default type-inherit type-outside">
+											<li class="info-item">
+												<span class="color-basic">인터넷 납부</span>
+												<ul class="info-list">
+													<li class="info-item type-indent type-side-no-padding">
+														<span class="indent">-</span>
+														<div class="indent-block">
+															카드로택스<a href="" target="_blank" role="button">(www.cardrotax.or.kr)</a> 또는 인터넷지로<a href="" target="_blank" role="button">(www.gifo.or.kr)</a>
+															를 통해 납부
+														</div>
+													</li>
+													<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>납부시간 : 매일 오전 00:30 ~ 오후 23:30 (365일 가능)</li>
+												</ul>
+											</li>
+											<li class="info-item">
+												<span class="color-basic">방문 납부</span>
+												<ul class="info-list">
+													<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>각 세무서 직접 방문하여 창구 납부<br />(단, 관세는 인천국제공항 세관에서만 납부 가능)</li>
+													<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>납부시간 : 매일 오전 07:00 ~ 오후 23:00<br />(단, 세무서/공항 업무시간 중 납부 가능)</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="use-notice-area js-ui-accordion">
+									<div class="use-notice-item js-ui-accordion__item">
+										<button type="button" class="use-notice-opener js-ui-accordion__opener">
+											이용안내
+											<span class="for-a11y">
+												상세 내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+										<div class="use-notice-contents js-ui-accordion__layer">
+											<div class="info-list">
+												<p class="info-item">국세 납부 시 본인명의의 카드로만 납부가 가능합니다.</p>
+												<p class="info-item">국세 납부 후 취소 및 결제방법(일시불/할부), 할부개월 수 변경 등이 불가합니다.</p>
+												<p class="info-item">
+													포인트/마일리지 적립, 캐쉬백 제공 불가 및 소득공제 혜택을 받으실 수 없습니다.<br />
+													(단, 일부상품별 약관에 따라 적립 가능함)
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 제휴사에서 신청 (국세 납부) -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-living-fee-national -tax');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

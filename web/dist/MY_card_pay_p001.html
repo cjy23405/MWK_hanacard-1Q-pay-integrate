@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">Pay서비스 등록</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-pay-service">
+						<div class="slide-card">
+							<div class="slide-card-list">
+								<div class="slide-card-item">
+									<div class="card-detail">
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- DD : 이미지 없을 때 -->
+										<div class="card-image">
+											<div class="card-image-inner"></div>
+										</div>
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<div class="global-card-brand-group">
+											<span class="global-card-brand type-medium">
+												<img src="./assets/images/contents/global-card-brand/ic-familycard.png" alt="가족카드" />
+											</span>
+											<span class="global-card-brand type-medium">
+												<img src="./assets/images/contents/global-card-brand/mastercard.png" alt="mastercard" />
+											</span>
+										</div>
+										<!-- 2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+										<p class="basic-text js-slide-card-label">[본인] 1Q 내맘대로 카드</p>
+										<!-- 2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+									</div>
+								</div>
+								<div class="slide-card-item">
+									<div class="card-detail">
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- DD : 이미지 에러 -->
+										<div class="card-image">
+											<div class="card-image-inner">
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<div class="global-card-brand-group">
+											<span class="global-card-brand type-medium">
+												<img src="./assets/images/contents/global-card-brand/ic-familycard.png" alt="가족카드" />
+											</span>
+											<span class="global-card-brand type-medium">
+												<img src="./assets/images/contents/global-card-brand/mastercard.png" alt="mastercard" />
+											</span>
+										</div>
+										<!-- 2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+										<p class="basic-text js-slide-card-label">[본인] 1Q 내맘대로 카드</p>
+										<!-- 2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+									</div>
+								</div>
+								<div class="slide-card-item">
+									<div class="card-detail">
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- DD : 이미지 있을 때 -->
+										<div class="card-image">
+											<div class="card-image-inner">
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<div class="global-card-brand-group">
+											<span class="global-card-brand type-medium">
+												<img src="./assets/images/contents/global-card-brand/ic-familycard.png" alt="가족카드" />
+											</span>
+											<span class="global-card-brand type-medium">
+												<img src="./assets/images/contents/global-card-brand/mastercard.png" alt="mastercard" />
+											</span>
+										</div>
+										<!-- 2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+										<p class="basic-text js-slide-card-label">[본인] 1Q 내맘대로 카드</p>
+										<!-- 2022.07.01 : mod : js-slide-card-label 클래스 값 추가 -->
+									</div>
+								</div>
+							</div>
+							<!-- 2022.03.04 : mod : 태그 변경 -->
+							<div class="slide-card-pagination"></div>
+							<!-- //2022.03.04 : mod : 태그 변경 -->
+						</div>
+
+						<!-- section -->
+						<div class="page-section-group type-line">
+							<div class="section-title type-block">
+								<h3 class="title">서비스 등록 현황</h3>
+								<p class="page-section-sub-title font-weight-light color-basic margin-top-15">
+									카드 별 Pay서비스 등록 현황 확인 및 바로 등록을<br />
+									이용해 보세요.
+								</p>
+							</div>
+
+							<!-- 2022.03.25 : mod : 제휴사 없을 때 케이스 추가 -->
+							<!-- Case : 제휴사 없을 때 -->
+							<div class="link-item type-none type-flex type-no-line">
+								<p class="item-text">등록할 제휴사가 없습니다</p>
+							</div>
+							<!-- Case : //제휴사 없을 때 -->
+							<!-- //2022.03.25 : mod : 제휴사 없을 때 케이스 추가 -->
+
+							<div class="section-contents margin-top-25">
+								<!-- 2022.03.31 : mod : 페이항목 추가 및 이미지 경로 수정 -->
+								<div class="service-group type-grid type-col2">
+									<!-- 등록완료시 success 클래스 추가 -->
+									<div class="service-item type-box success">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-1.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">SAMSUNG PAY</h3>
+										<div class="service-conditions">
+											<div class="success-text">등록완료</div>
+										</div>
+									</div>
+									<div class="service-item type-box">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-2.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">쿠페이</h3>
+										<div class="service-conditions">
+											<button type="button" class="ui-button ui-basic-button type-secondary type-small">등록하기</button>
+										</div>
+									</div>
+									<div class="service-item type-box">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-3.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">네이버페이</h3>
+										<div class="service-conditions">
+											<button type="button" class="ui-button ui-basic-button type-secondary type-small">등록하기</button>
+										</div>
+									</div>
+									<div class="service-item type-box success">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-4.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">카카오페이</h3>
+										<div class="service-conditions">
+											<div class="success-text">등록완료</div>
+										</div>
+									</div>
+									<div class="service-item type-box">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-5.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">PAYCO</h3>
+										<div class="service-conditions">
+											<button type="button" class="ui-button ui-basic-button type-secondary type-small">등록하기</button>
+										</div>
+									</div>
+									<div class="service-item type-box">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-6.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">배민페이</h3>
+										<div class="service-conditions">
+											<button type="button" class="ui-button ui-basic-button type-secondary type-small">등록하기</button>
+										</div>
+									</div>
+									<div class="service-item type-box">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-7.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">SSGPAY</h3>
+										<div class="service-conditions">
+											<button type="button" class="ui-button ui-basic-button type-secondary type-small">등록하기</button>
+										</div>
+									</div>
+									<div class="service-item type-box">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-8.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">L PAY</h3>
+										<div class="service-conditions">
+											<button type="button" class="ui-button ui-basic-button type-secondary type-small">등록하기</button>
+										</div>
+									</div>
+									<div class="service-item type-box">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-9.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">LG PAY</h3>
+										<div class="service-conditions">
+											<button type="button" class="ui-button ui-basic-button type-secondary type-small">등록하기</button>
+										</div>
+									</div>
+									<div class="service-item type-box">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-10.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">토스페이</h3>
+										<div class="service-conditions">
+											<button type="button" class="ui-button ui-basic-button type-secondary type-small">등록하기</button>
+										</div>
+									</div>
+									<div class="service-item type-box">
+										<div class="service-img">
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<img src="./assets/images/contents/pay/logo-11.png" alt="" class="img" />
+										</div>
+										<h3 class="service-title">TV페이</h3>
+										<div class="service-conditions">
+											<button type="button" class="ui-button ui-basic-button type-secondary type-small">등록하기</button>
+										</div>
+									</div>
+								</div>
+								<!-- //2022.03.31 : mod : 페이항목 추가 및 이미지 경로 수정 -->
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(document)
+				.on('slideCardInit', function (e, i) {
+					// 카드 init 이벤트
+					console.log(i);
+				})
+				.on('slideCardChange', function (e, i) {
+					// 카드 변경 이벤트
+					console.log(i);
+				});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

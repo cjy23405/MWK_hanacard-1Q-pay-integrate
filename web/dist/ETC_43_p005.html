@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">하나카드</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-title type-block">
+									<h2 class="title">환불안내 및 동의</h2>
+									<div class="default-text color-blur margin-top-4">오토서비스 취소 요청시 고객이 선택하시는 계좌로 환불됩니다. (단, 결제 잔액 환급 시에는 카드지정 주결제계좌로 환불됩니다.)</div>
+								</div>
+								<div class="section-contents">
+									<div class="form-list margin-top-10">
+										<div class="form-item">
+											<div class="form-group">
+												<div class="ui-radio-group type-panel">
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" checked />
+														<label for="radioPanel1-1" class="ui-label">
+															<span class="ui-label-text">동의</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" />
+														<label for="radioPanel1-2" class="ui-label">
+															<span class="ui-label-text">미동의</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="ui-notice">가상계좌불가</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title type-block">
+									<h2 class="title">계좌선택</h2>
+								</div>
+								<div class="section-contents">
+									<div class="form-list margin-top-10">
+										<div class="form-item">
+											<div class="form-group">
+												<div class="ui-radio-group type-panel">
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-1" data-checkbox-tab="radioTab01" checked />
+														<label for="radioPanel2-1" class="ui-label">
+															<span class="ui-label-text">주결제 계좌</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-2" data-checkbox-tab="radioTab02" />
+														<label for="radioPanel2-2" class="ui-label">
+															<span class="ui-label-text">기타계좌</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="ui-notice type-no-icon margin-top-7" data-checkbox-tab-panel="radioTab02">
+												기타계좌는 하나카드에 등록된 계좌번호 기준으로 계좌확인 및 환불이 가능하며, 이외 계좌는 신청이 불가합니다.
+											</div>
+										</div>
+
+										<div class="form-item" data-checkbox-tab-panel="radioTab02">
+											<div class="form-title">
+												<strong class="title">계좌번호</strong>
+											</div>
+											<div class="form-group">
+												<div class="form-flex">
+													<div class="form-flex-cell type-flexible">
+														<div class="ui-input-block">
+															<input type="number" pattern="\d*" class="ui-input" title="계좌번호 입력" placeholder="'-'없이 입력" />
+														</div>
+													</div>
+													<div class="form-flex-cell">
+														<button type="button" class="ui-button ui-basic-button type-small type-gray">계좌확인</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-item" data-checkbox-tab-panel="radioTab02">
+											<div class="form-title">
+												<strong class="title">은행명</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete is-disabled">
+													<input type="text" class="ui-input" title="은행명 입력" disabled />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="section-title type-block">
+								<h2 class="title">개인(신용)정보 필수적 전체 동의서</h2>
+								<div class="default-text color-blur margin-top-4">
+									귀하는 개인신용정보 수집·이용, 제공 동의에 대해 거부하실 수 있습니다. 다만, 개인(신용)정보 수집·이용, 제공에 관한 동의는 귀하에게 제공되는 서비스의 필수적 사항이므로, 아래의 사항에
+									동의하셔야만 오토서비스와 관련된 상품 및 서비스 안내, 카드발급안내 등의 편의를 제공받으실 수 있습니다.
+								</div>
+							</div>
+							<div class="section-contents">
+								<div class="terms-area margin-top-25">
+									<div class="terms-item">
+										<div class="ui-checkbox-block type-align-top">
+											<input type="checkbox" class="ui-checkbox" id="termCheckbox-1" />
+											<label for="termCheckbox-1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">개인신용정보 수집·이용에 동의 합니다.</span>
+											</label>
+											<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+										</div>
+									</div>
+									<div class="terms-item">
+										<div class="ui-checkbox-block type-align-top">
+											<input type="checkbox" class="ui-checkbox" id="termCheckbox-2" />
+											<label for="termCheckbox-2" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">개인신용정보 제공에 동의합니다. </span>
+											</label>
+											<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h2 class="title">오토서비스 권유 상담자 기재</h2>
+								</div>
+								<div class="form-list margin-top-25">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">AG 코드</strong>
+										</div>
+										<div class="form-group">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<input type="text" class="ui-input" title="AG 코드 입력" placeholder="AG 코드 입력" />
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<button type="button" class="ui-button ui-basic-button type-small type-gray">조회</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">AG 명</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete is-disabled">
+												<input type="text" class="ui-input" title="AG 명 입력" disabled />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">CM 휴대폰 번호</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block">
+												<input type="number" pattern="\d*" class="ui-input" title="CM 휴대폰 번호 입력" placeholder="‘-’ 제외하고 입력" />
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">CM 명</strong>
+										</div>
+										<div class="form-group">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block type-use-delete">
+														<input type="text" class="ui-input" title="CM 명 입력" placeholder="CM 명 입력" />
+														<button type="button" class="ui-button ui-input-delete">
+															<span class="for-a11y">입력 내용 지우기</span>
+														</button>
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<button type="button" class="ui-button ui-basic-button type-small type-gray">조회</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">CM 코드</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete is-disabled">
+												<input type="text" class="ui-input" title="CM 코드 입력" disabled />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">전달사항</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete">
+												<input type="text" class="ui-input" title="전달사항 입력" placeholder="전달사항 입력" />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title">
+									<h2 class="title">카드추가발급 요청여부</h2>
+								</div>
+								<div class="terms-area margin-top-25">
+									<div class="terms-item">
+										<div class="ui-checkbox-block type-align-top">
+											<input type="checkbox" class="ui-checkbox" id="termCheckbox-3" />
+											<label for="termCheckbox-3" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">추가발급을 요청합니다.</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">다음</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

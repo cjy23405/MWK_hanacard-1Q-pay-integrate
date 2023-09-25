@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">분실신고&middot;해제</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							신고할 내용과<br />
+							카드를 선택해 주세요.
+						</h2>
+						<div class="card-list-area">
+							<ul class="card-list">
+								<li class="card-item">
+									<button type="button" class="card-block ui-arrow-block">
+										<span class="for-a11y">카드 상세정보 보기</span>
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- DD : 이미지 없을 때 -->
+										<span class="card-image">
+											<span class="card-image-inner"></span>
+										</span>
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<div class="card-info">
+											<span class="card-name">[본인] 모두의 쇼핑</span>
+											<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+											<div class="card-status color-primary">정상</div>
+										</div>
+									</button>
+									<div class="ui-buttons">
+										<ul class="ui-buttons-list">
+											<li class="ui-buttons-item">
+												<a href="" class="ui-button ui-basic-button type-primary" role="button">분실신고</a>
+											</li>
+											<li class="ui-buttons-item">
+												<a href="" class="ui-button ui-basic-button type-secondary" role="button">보이스피싱<br />신고</a>
+											</li>
+											<li class="ui-buttons-item">
+												<a href="" class="ui-button ui-basic-button type-gray" role="button">재발급</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="card-item">
+									<button type="button" class="card-block ui-arrow-block">
+										<span class="for-a11y">카드 상세정보 보기</span>
+										<!-- DD : 이미지 에러 -->
+										<span class="card-image">
+											<span class="card-image-inner">
+												<!-- 2022.05.04 : mod  : alt값 변경 -->
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</span>
+										</span>
+										<div class="card-info">
+											<span class="card-name">하나멤버스 1Q 체크카드</span>
+											<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+											<div class="card-status color-wrong">분실</div>
+										</div>
+									</button>
+									<div class="ui-buttons">
+										<ul class="ui-buttons-list">
+											<li class="ui-buttons-item">
+												<a href="" class="ui-button ui-basic-button type-primary" role="button">분실신고<br />해제</a>
+											</li>
+											<li class="ui-buttons-item">
+												<a href="" class="ui-button ui-basic-button type-gray" role="button">재발급</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="card-item">
+									<button type="button" class="card-block ui-arrow-block">
+										<span class="for-a11y">카드 상세정보 보기</span>
+										<!-- DD : 이미지 있을 때 -->
+										<span class="card-image">
+											<span class="card-image-inner">
+												<!-- 2022.05.04 : mod  : alt값 변경 -->
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</span>
+										</span>
+										<div class="card-info">
+											<span class="card-name">Multi Living</span>
+											<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+											<div class="card-status color-wrong">보이스피싱 신고</div>
+										</div>
+									</button>
+									<div class="ui-buttons">
+										<ul class="ui-buttons-list">
+											<li class="ui-buttons-item">
+												<a href="" class="ui-button ui-basic-button type-gray" role="button">재발급</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="card-item type-none">
+									<p class="item-text">신청 가능한 카드가 없습니다.</p>
+								</li>
+							</ul>
+						</div>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-basic-button type-secondary">타사카드 일괄 분실신고 신청 결과</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<dl class="use-notice-group">
+										<dt class="group-title">분실&middot;도난</dt>
+										<dd class="group-contents">
+											<ul class="info-list">
+												<li class="info-item">신용&middot;체크카드를 분실하거나 도난당한 경우 즉시 하나카드로 신고하여 주시기 바랍니다.</li>
+												<li class="info-item">분실/도난을 인지하고도 정당한 사유없이 신고를 지연하신 경우 회원님께 책임이 부과될 수 있습니다.</li>
+												<li class="info-item">분실/도난 신고는 전화(1800-1111) 또는 가까운 하나은행 영업점에서 신고하실 수 있습니다.</li>
+											</ul>
+										</dd>
+										<dt class="group-title">보상신청</dt>
+										<dd class="group-contents">
+											<ul class="info-list">
+												<li class="info-item">보상신청은 서면신청을 원칙으로 하며, 신고일 당일을 포함하여 직전 60일 내에 발생한 부정사용대금에 대하여 보상신청이 가능합니다.</li>
+												<li class="info-item">서면신청은 고객센터(1800-1111) 상담 후 제출하실 수 있으며, 신청 시 하나카드에서 사고조사를 진행하여 결과를 안내 드립니다.</li>
+											</ul>
+										</dd>
+										<dt class="group-title">자동납부 카드 교체에 대한 안내</dt>
+										<dd class="group-contents">
+											<ul class="info-list">
+												<li class="info-item">
+													통신, 전기요금, 보험료 등을 자동납부 중인 고객님께서는 분실 또는 파손으로 카드를 교체하실 경우 미납방지를 위해 다른 유효한 카드로 자동 승계되어 납부 처리 됩니다.
+												</li>
+												<li class="info-item">자동승계를 원치 않으실 경우 당사 고객센터(1800-2183)로 전화 주시기 바랍니다.</li>
+												<li class="info-item">카드교체로 자동승계가 불가한 가맹점의 경우에는 요금이 미납될 수 있으므로 해당 업체에 다른 카드번호로 재등록하여 주시기 바랍니다.</li>
+											</ul>
+										</dd>
+										<dt class="group-title">타사카드 일괄 분실신고 안내</dt>
+										<dd class="group-contents">
+											<ul class="info-list">
+												<li class="info-item">지갑 분실 등 여러 카드사의 카드를 동시에 분실할 경우, 각각 신고하는 불편을 해소하고 신속한 사고등록으로 부정사용을 방지할 목적으로 운영됩니다.</li>
+												<li class="info-item">하나카드 분실등록 후 타사카드를 선택적으로 분실신고 하실 수 있습니다.</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

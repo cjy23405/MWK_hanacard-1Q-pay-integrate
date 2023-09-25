@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">타이틀</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-manage"><span class="for-a11y">관리</span></button>
+							<a href="" class="header-button type-search" role="button"><span class="for-a11y">통합검색</span></a>
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+							<a href="" class="header-button type-push" role="button"><span class="for-a11y">알림</span></a>
+							<!-- DD : 신규 알림이 있으면 is-new 클래스 값 추가 -->
+							<a href="" class="header-button type-push is-new" role="button"><span class="for-a11y">알림</span></a>
+							<button type="button" class="header-button type-compare">
+								<span class="for-a11y">카드비교함</span>
+								<!-- DD : 비교함 내용 있을 경우 -->
+								<span class="header-button-number">2</span><span class="for-a11y">개</span>
+							</button>
+						</div>
+					</header>
+
+					<!-- 제휴페이지 - BG Black -->
+					<header class="header type-partner">
+						<h1 class="header-title">타이틀</h1>
+					</header>
+					<!-- //제휴페이지 - BG Black -->
+
+					<!-- 제휴페이지 - BG White -->
+					<header class="header type-white">
+						<h1 class="header-title">타이틀</h1>
+					</header>
+					<!-- //제휴페이지 - BG White -->
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-페이지이름">
+						<div style="height: 100px"></div>
+						<div>"<strong>.page-contents</strong>"에 "<strong>type-페이지클래스</strong>"로 멀티클래스를 추가하여 페이지별 스타일 제어</div>
+
+						<br /><br />
+
+						<h2 class="page-title">페이지 타이틀</h2>
+						<div class="page-info">
+							<p class="page-info-text">페이지 서브텍스트</p>
+						</div>
+
+						<br /><br />
+
+						<h2 class="page-title">
+							<span class="title-step">STEP 1</span>
+							스텝형 페이지 타이틀
+						</h2>
+						<div class="page-info">
+							<p class="page-info-text">페이지 서브텍스트</p>
+						</div>
+						<div class="page-progress" role="img" aria-label="총 3단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+
+						<div style="height: 1000px; border: 10px dotted #666">스크롤 생기게 하기 위한 더미</div>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-secondary">컨텐츠 내 버튼</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button">취소</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- 높이 100% 컨텐츠용 -->
+					<div class="page-buttons type-full-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button">취소</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- 페이지 하단 플로팅일 경우 type-fixed 클래스 추가 -->
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button">취소</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer-wrap">
+					<!-- DD : 긴 버전 -->
+					<footer class="footer">
+						<div class="footer-nav">
+							<ul class="footer-nav-list">
+								<li class="footer-nav-item">
+									<a href="" class="footer-nav-link">고객센터</a>
+								</li>
+								<li class="footer-nav-item">
+									<a href="" class="footer-nav-link">분실 &middot; 사고신고</a>
+								</li>
+								<li class="footer-nav-item">
+									<a href="" class="footer-nav-link">개인정보처리방침</a>
+								</li>
+								<li class="footer-nav-item">
+									<a href="" class="footer-nav-link">구) 하나카드</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-tel">
+							<ul class="footer-tel-list">
+								<li class="footer-tel-item">
+									<a href="tel:1800-1111" class="footer-tel-link">전화상담 1800-1111</a>
+								</li>
+								<li class="footer-tel-item">
+									<a href="tel:82-1800-1111" class="footer-tel-link">해외상담 82-1800-1111</a>
+								</li>
+								<li class="footer-tel-item">
+									<a href="" class="footer-tel-link ui-basic-button type-tiny xsmall-text padding-top-bottom-5">로그아웃</a>
+								</li>
+							</ul>
+						</div>
+						<address class="footer-address">서울특별시 중구 을지로 66</address>
+						<div class="footer-text">
+							<ul class="footer-text-list">
+								<li class="footer-text-item">대표이사 권길주</li>
+								<li class="footer-text-item">사업자번호 104-86-56659</li>
+							</ul>
+						</div>
+						<address class="footer-copy">COPYRIGHT&copy; 2014 Hana Card, ALL RIGHTS RESERVERD.</address>
+						<div class="footer-logo">
+							<span class="for-a11y">하나카드</span>
+						</div>
+						<div class="footer-marks">
+							<ul class="footer-marks-list">
+								<li class="footer-marks-item">
+									<div class="footer-marks-logo type-ccm"></div>
+									<div class="footer-marks-text">
+										소비자중심경영 인증<br />
+										(20121.1.1 ~ 2022.12.31)
+									</div>
+								</li>
+								<li class="footer-marks-item">
+									<div class="footer-marks-logo type-webwatch"></div>
+									<div class="footer-marks-text">
+										웹접근성 인증<br />
+										웹와치 주식회사
+									</div>
+								</li>
+							</ul>
+						</div>
+					</footer>
+					<!-- //DD : 긴 버전 -->
+
+					<!-- DD : 짧은 버전 -->
+					<footer class="footer type-short">
+						<address class="footer-address">서울특별시 중구 을지로 66</address>
+						<div class="footer-text">
+							<ul class="footer-text-list">
+								<li class="footer-text-item">대표이사 권길주</li>
+								<li class="footer-text-item">사업자번호 104-86-56659</li>
+							</ul>
+						</div>
+						<address class="footer-copy">COPYRIGHT&copy; 2014 Hana Card, ALL RIGHTS RESERVERD.</address>
+						<div class="footer-logo-area">
+							<div class="footer-logo">
+								<span class="for-a11y">하나카드</span>
+							</div>
+							<a href="" class="footer-button">구) 하나카드</a>
+						</div>
+					</footer>
+					<!-- //DD : 짧은 버전 -->
+				</div>
+
+				<div class="page-button-top-wrap">
+					<a href="#wrap" class="page-button-top" role="button"><span class="for-a11y">페이지 최상단으로 이동</span></a>
+				</div>
+
+				<!-- DD : 앱일 경우 이 영역 제거 -->
+				<!-- fix bottom area -->
+				<div class="fix-bottom-wrap">
+					<div class="dock-menu">
+						<ul class="dock-menu-list">
+							<!-- DD : 해당 페이지면 is-active 클래스 값 추가 -->
+							<li class="dock-menu-item type-my is-active">
+								<a href="" class="dock-menu-link">마이</a>
+							</li>
+							<li class="dock-menu-item type-benefit">
+								<a href="" class="dock-menu-link">혜택</a>
+							</li>
+							<li class="dock-menu-item type-payment">
+								<a href="" class="dock-menu-link">결제</a>
+							</li>
+							<li class="dock-menu-item type-asset">
+								<a href="" class="dock-menu-link">내 자산</a>
+							</li>
+							<li class="dock-menu-item type-all">
+								<a href="" class="dock-menu-link">전체</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //fix bottom area -->
+				<!-- //DD : 앱일 경우 이 영역 제거 -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">계좌 입금 신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 5</span>
+							대출안내장을<br />
+							우편으로도 받아보시겠어요?<span class="ui-tooltip-wrap">
+								<span class="ui-tooltip js-ui-dropdown">
+									<span class="ui-tooltip-head">
+										<button type="button" class="ui-button ui-tooltip-opener js-ui-dropdown__opener">
+											<span class="ui-button-question">
+												<span class="for-a11y">(도움말 <span class="open-text">열기</span><span class="close-text">닫기</span>)</span>
+											</span>
+										</button>
+									</span>
+									<span class="ui-tooltip-layer js-ui-dropdown__layer">
+										<span class="ui-tooltip-bubble">
+											<span class="ui-tooltip-bubble-message">
+												금융서비스 신청완료 시 E-Mail과 LMS로<br />
+												대출 안내장이 발송됩니다.<br />
+												우편으로도 받아보시겠어요?
+											</span>
+											<button type="button" class="ui-button ui-tooltip-bubble-close js-ui-dropdown__closer">
+												<span class="for-a11y">도움말 닫기</span>
+											</button>
+										</span>
+									</span>
+								</span>
+							</span>
+						</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 6단계 중 5단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">대출안내장 우편수령</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" data-checkbox-tab="radioPanel1-1" checked />
+											<label for="radioPanel1-1" class="ui-label">
+												<span class="ui-label-text">예</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" data-checkbox-tab="radioPanel1-2" />
+											<label for="radioPanel1-2" class="ui-label">
+												<span class="ui-label-text">아니오</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-item" data-checkbox-tab-panel="radioPanel1-1">
+								<div class="form-title">
+									<strong class="title">우편물 수령지</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-full">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" checked />
+											<label for="radioBox1-1" class="ui-label type-block">
+												<div class="ui-label-text">
+													<span class="title">직장</span>
+													<div class="margin-top-4 font-weight-regular">(111-222) 인천 서구 에코로 181, 1층 (청라동, 하나금융그룹통합센터)</div>
+												</div>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" />
+											<label for="radioBox1-2" class="ui-label type-block">
+												<div class="ui-label-text">
+													<span class="title">자택</span>
+													<div class="margin-top-4 font-weight-regular">(111-222) 인천 서구 에코로 181, 1층 (청라동, 하나금융그룹통합센터)</div>
+												</div>
+											</label>
+										</div>
+									</div>
+								</div>
+								<p class="ui-notice">당사에 등록된 주소정보가 현재 주소가 아니거나 다른 주소로 수령을 원하시는 경우 신청 완료 후 마이페이지 >개인정보조회/변경에서 변경해주시기 바랍니다.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+
+		<style></style>
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-ocr-pc">신분증 촬영(OCR) 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 신분증 촬영(OCR) 팝업 -->
+			<div class="layer-wrap layer-wrap--full layer-ocr-full" data-layer="layer-ocr-pc">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header-title">신분증 촬영</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ocr-wrap type-pc type-full" id="scanContainer">
+									<div class="ocr-view">
+										<div class="ocr-view-inner">
+											<video id="scanView" playsinline autoplay></video>
+										</div>
+										<div class="ocr-view-mask" id="scanBoxMask"></div>
+										<div class="ocr-view-border" id="scanBoxBorder"></div>
+										<div class="ocr-view-guide" id="scanBoxGuide">
+											<div class="ocr-view-guide-inner"></div>
+											<div class="ocr-guide">
+												<!-- 2023.02.22 : mod : ocr-guide-title 문구수정 -->
+												<h3 class="ocr-guide-title">오렌지색 사각형에 신분증을 맞춰주세요.</h3>
+												<div class="ocr-guide-contents">
+													<ul class="ocr-guide-list">
+														<li class="ocr-guide-item has-icon type-1">흔들리거나 빛이 반사되지 않도록 해주세요.</li>
+														<li class="ocr-guide-item has-icon type-2">어두운 바닥에서 촬영해주세요.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="ui-loading-wrap">
+										<div class="ui-loading">
+											<div class="ui-loading-block">
+												<div></div>
+												<div></div>
+												<div></div>
+												<div></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<div class="ui-toast-alert" id="layerOCRToastAlert"></div>
+				</div>
+			</div>
+			<!-- //layer: 신분증 촬영(OCR) 팝업 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- OCR관련 js -->
+		<script type="text/javascript" src="/mkca20/lib/fincube-full/scripts/vendor/blob-util-2.0.2.min.js"></script>
+		<script type="text/javascript" src="/mkca20/lib/fincube-full/scripts/vendor/crypto-js/crypto-js.js"></script>
+		<script type="text/javascript" src="/mkca20/lib/fincube-full/scripts/vendor/jsencrypt/bin/jsencrypt.min.js"></script>
+		<script type="text/javascript" src="/mkca20/lib/fincube-full/scripts/vendor/modernizr-3.11.2.min.js"></script>
+		<script type="text/javascript" src="/mkca20/lib/fincube-full/scripts/robi_logger.js"></script>
+		<script type="text/javascript" src="/mkca20/lib/fincube-full/scripts/cardscanner.js"></script>
+		<script type="text/javascript" src="/mkca20/lib/fincube-full/scripts/webcamera.js"></script>
+		<script type="text/javascript" src="/mkca20/lib/fincube-full/scripts/checkvalidation.js"></script>
+		<script type="text/javascript" src="/mkca20/lib/fincube-full/scripts/logger.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-ocr-pc');
+			});
+
+			/* OCR 웹 서비스 실행 */
+			// ====================================================================================================
+
+			// 디텍팅 가이드 박스의 위치(엔진과 UI 함께 이동 필요)
+			const DETECT_BOX_X_POS_NORM = 0.5; // 0 ~ 1.0 사이로 정규화됨(작을수록 왼쪽, 클수록 오른쪽에 위치함)
+			const DETECT_BOX_Y_POS_NORM = 0.3; // 0 ~ 1.0 사이로 정규화됨(작을수록 하단, 클수록 상단에 위치함)
+
+			let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+			let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+			const logger = new RobiLogger(RobiLoggerLevel.DEBUG, true, true); // 로그 출력용 객체 생성
+			// amouse add : 1000 ms 의미 card_detect 시간이 1초 초과시 recog를 하지 않고 이미지 반환
+			const webrtc = new WebCamera(logger, 0); // webcamera 객체 생성
+			const video = document.getElementById('scanView'); // video element 객체 참조
+			const logManager = new LogManager('Robi-V Recognizer(webRTC)', 'v1.0.0', 'WebOCR', 'varDeviceId', 'varUserId', 'IDCARD');
+
+			let recogTime;
+			let { osSimple, browser, camera_type } = getCameraType();
+
+			// 서비스 시작
+			window.onload = function () {
+				// 디텍팅 UI 가이드 위치 설정
+				document.getElementById('scanBoxMask').style.top = DETECT_BOX_Y_POS_NORM * 100 + '%';
+				document.getElementById('scanBoxMask').style.left = DETECT_BOX_X_POS_NORM * 100 + '%';
+				document.getElementById('scanBoxBorder').style.top = DETECT_BOX_Y_POS_NORM * 100 + '%';
+				document.getElementById('scanBoxBorder').style.left = DETECT_BOX_X_POS_NORM * 100 + '%';
+				document.getElementById('scanBoxGuide').style.top = DETECT_BOX_Y_POS_NORM * 100 + '%';
+
+				wasmFeatureDetect.simd().then((simdSupported) => {
+					logger.info('SIMD : ' + simdSupported);
+					logger.info('osSimple : ' + osSimple);
+					logger.info('browser : ' + browser);
+					if (simdSupported) {
+						/* SIMD support */
+						// if (osSimple === 'ANDROID' && browser === 'chrome'){
+						//   loadJS("/mkca20/lib/fincube-full/scripts/scanner.js");
+						// } else {
+						loadJS('/mkca20/lib/fincube-full/scripts/scanner_simd.js');
+						// }
+					} else {
+						alert('Browser not support SIMD');
+						loadJS('/mkca20/lib/fincube-full/scripts/scanner.js');
+						//return;
+					}
+				});
+
+				startScanner();
+				logManager.startDetect(new Date().valueOf());
+			};
+
+			// 해당 웹페이지 벗어날 때 발생하는 이벤트
+			window.addEventListener('beforeunload', () => {
+				// must set this code on beforeunload
+				webrtc.closeCamera();
+			});
+
+			// 웹페이지 사이즈 변경할 때 발생하는 이벤트
+			window.addEventListener('resize', () => {
+				vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+				vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+			});
+
+			/*
+				// "처음으로" 버튼 클릭 시 발생하는 이벤트
+				document.getElementById('resetBtn').addEventListener('click', () => {
+					window.location.href = './';
+				});
+
+				// "재촬영" 버튼 클릭 시 발생하는 이벤트
+				document.getElementById('redetectBtn').addEventListener('click', () => {
+					renderDetectUI(ScannerStatus.SCANNER_INIT);
+
+					startScanner();
+
+					// LogManager에 재시도 detect 기능 동작
+					logManager.againDetect(new Date().valueOf());
+				});
+
+				// "서버전송" 버튼 클릭 시 발생하는 이벤트
+				document.getElementById('sendBtn').addEventListener('click', () => {
+					alert('OCR인식 결과 서버전송 시작!!!');
+
+					generateKeys();
+				});
+				*/
+
+			// 조건에 따라 특정 스크립트 로드
+			function loadJS(file) {
+				let jsElm = document.createElement('script');
+				jsElm.type = 'application/javascript';
+				jsElm.src = file;
+				document.body.appendChild(jsElm);
+				logger.info('SIMD file : ' + file);
+			}
+
+			// ScannerStatus 값에 따라 UI를 렌더링
+			function renderDetectUI(status) {
+				if (!status) return;
+
+				var allClassNames = 'is-init is-ready is-detect is-complete';
+
+				if (status === ScannerStatus.SCANNER_INIT) {
+					$('#scanContainer').removeClass(allClassNames).addClass('is-init');
+				} else if (status === ScannerStatus.SCANNER_READY) {
+					$('#scanContainer').removeClass(allClassNames).addClass('is-ready');
+				} else if (status === ScannerStatus.SCAN_DETECT) {
+					$('#scanContainer').removeClass(allClassNames).addClass('is-detect');
+				} else if (status === ScannerStatus.SCAN_COMPLETE) {
+					$('#scanContainer').removeClass(allClassNames).addClass('is-complete');
+				}
+			}
+
+			// 카드 박스 검출 callback
+			function detectCallback(detection) {
+				logger.debug('card detection = ' + detection);
+				if (detection === 0) {
+					// 카드 박스 검출 있음
+					renderDetectUI(ScannerStatus.SCAN_DETECT);
+				} else {
+					// 카드 박스 검출 없음
+					renderDetectUI(ScannerStatus.SCANNER_READY);
+				}
+			}
+
+			// 카드 인식 과정 및 결과를 전달하는 callback
+			function resultCallback(status, scanResult) {
+				console.log('status = ' + status);
+				if (status === ScannerStatus.GET_DEVICE) {
+					// 시스템에서 device 정보를 얻오기 진행
+				} else if (status === ScannerStatus.CAMERA_OPENING) {
+					// 카메라 오픈 진행
+				} else if (status === ScannerStatus.CAMERA_OPENNED) {
+					// 카메라 오픈 완료
+					let width = scanResult.cameraWidth;
+					let height = scanResult.cameraHeight;
+
+					logger.debug('window orientation = ' + window.orientation);
+
+					if (window.orientation === 0 || window.orientation === 180) {
+						let temp = width;
+						width = height;
+						height = temp;
+					}
+
+					video.width = vw;
+					video.height = (vw * height) / width;
+
+					logger.debug('resolution info : ');
+					logger.debug('- camera : ' + width + ' x ' + height);
+					logger.debug('- view : ' + vw + ' x ' + vh);
+					logger.debug('- video : ' + video.width + ' x ' + video.height);
+				} else if (status === ScannerStatus.SCANNER_INIT) {
+					// 스캐너 초기화 진행
+
+					renderDetectUI(ScannerStatus.SCANNER_INIT);
+				} else if (status === ScannerStatus.SCANNER_READY) {
+					// 스캐너 로딩 완료
+					logger.info('Scanner Ready!!');
+					//webrtc.setFrame_config(window.orientation, 0.25, 0.5, 0, 0, 1.0, false);
+					webrtc.setFrame_config(0, DETECT_BOX_X_POS_NORM, DETECT_BOX_Y_POS_NORM, 0, 0, 1.0, false);
+					renderDetectUI(ScannerStatus.SCANNER_READY);
+				} else if (status === ScannerStatus.SCAN_DETECT) {
+					// Card box를 찾음
+					// ! detectCallback 메소드에서 대신 동작함
+					// renderDetectUI(ScannerStatus.SCAN_DETECT);
+				} else if (status === ScannerStatus.SCAN_COMPLETE) {
+					// 스캔이 완료됨
+
+					renderDetectUI(ScannerStatus.SCAN_COMPLETE);
+
+					let warnStatus = 0;
+
+					if (scanResult !== null) {
+						let resultDesc = '';
+						let cardType = '';
+
+						if (scanResult.faceScore < 0.9) {
+							//alert("warning : faceScore is lower than the threshold(0.935) : " + scanResult.colorScore);
+							// showToast('warning : FaceScore is lower than the threshold(0.9) : ' + scanResult.faceScore);
+							uiJSToastAlert('#layerOCRToastAlert', 'warning : FaceScore is lower than the threshold(0.9) : ' + scanResult.faceScore);
+							warnStatus = 1;
+						} else if (scanResult.colorScore < 0.35) {
+							//alert("warning : ColorScore is lower than the threshold(0.4) : " + scanResult.colorScore);
+							// showToast('warning : ColorScore is lower than the threshold(0.35) : ' + scanResult.colorScore);
+							uiJSToastAlert('#layerOCRToastAlert', 'warning : ColorScore is lower than the threshold(0.35) : ' + scanResult.colorScore);
+							warnStatus = 2;
+						} else if (scanResult.specularRatio > 0.1) {
+							// alert("warning : SpecularRatio is higher than the threshold(0.06) : " + scanResult.specularRatio);
+							// showToast('warning : SpecularRatio is higher than the threshold(0.1) : ' + scanResult.specularRatio);
+							uiJSToastAlert('#layerOCRToastAlert', 'warning : SpecularRatio is higher than the threshold(0.1) : ' + scanResult.specularRatio);
+							warnStatus = 3;
+						} else {
+							if (scanResult.cardType === ScanCardType.IDCARD) {
+								logger.result('=================================================');
+								logger.result('ID Card');
+								logger.result('ID Number : ' + scanResult.idNumber);
+								logger.result('Name      : ' + scanResult.name);
+								logger.result('IssueDate : ' + scanResult.issueDate);
+								logger.result('Issuer    : ' + scanResult.issuer);
+								logger.result('Overseas  : ' + scanResult.overseas);
+								// amouse add
+								logger.result('Face score : ' + scanResult.faceScore);
+								logger.result('Color score : ' + scanResult.colorScore);
+								logger.result('Specular ratio : ' + scanResult.specularRatio);
+								logger.result('=================================================');
+								cardType = 'ID Card';
+								resultDesc += `&bull;Scan Type: ID Card<br/>`;
+								resultDesc += `&bull;ID Number: ${scanResult.idNumber}<br/>`;
+								resultDesc += `&bull;Name: ${scanResult.name}<br/>`;
+								resultDesc += `&bull;IssueDate: ${scanResult.issueDate}<br/>`;
+								resultDesc += `&bull;Issuer: ${scanResult.issuer}<br/>`;
+								resultDesc += `&bull;Overseas: ${scanResult.overseas}<br/>`;
+								resultDesc += `&bull;Face Score: ${scanResult.faceScore}<br/>`;
+								resultDesc += `&bull;Color Score: ${scanResult.colorScore}<br/>`;
+								resultDesc += `&bull;Specular Ratio: ${scanResult.specularRatio}<br/>`;
+							} else if (scanResult.cardType == ScanCardType.DRIVERLICENSE) {
+								logger.result('=================================================');
+								logger.result('DriverLicense Card');
+								logger.result('ID Number     : ' + scanResult.idNumber);
+								logger.result('Name          : ' + scanResult.name);
+								logger.result('IssueDate     : ' + scanResult.issueDate);
+								logger.result('Issuer        : ' + scanResult.issuer);
+								logger.result('DL Number     : ' + scanResult.driverLicenseNumber);
+								logger.result('DL Aptitude   : ' + scanResult.aptitude);
+								logger.result('DL Type       : ' + scanResult.driverLicenseType);
+								logger.result('DL Serial     : ' + scanResult.serial);
+								logger.result('DL LicenseKor : ' + scanResult.driverLicenseKor);
+								// amouse add
+								logger.result('Face score : ' + scanResult.faceScore);
+								logger.result('Color score : ' + scanResult.colorScore);
+								logger.result('Specular ratio : ' + scanResult.specularRatio);
+								logger.result('=================================================');
+								cardType = 'DriverLicense Card';
+								resultDesc += `&bull;Scan Type: DriverLicense Card<br/>`;
+								resultDesc += `&bull;ID Number: ${scanResult.idNumber}<br/>`;
+								resultDesc += `&bull;Name: ${scanResult.name}<br/>`;
+								resultDesc += `&bull;IssueDate: ${scanResult.issueDate}<br/>`;
+								resultDesc += `&bull;Issuer: ${scanResult.issuer}<br/>`;
+								resultDesc += `&bull;DL Number: ${scanResult.driverLicenseNumber}<br/>`;
+								resultDesc += `&bull;DL Aptitude: ${scanResult.aptitude}<br/>`;
+								resultDesc += `&bull;DL Type: ${scanResult.driverLicenseType}<br/>`;
+								resultDesc += `&bull;DL Serial: ${scanResult.serial}<br/>`;
+								resultDesc += `&bull;DL LicenseKor: ${scanResult.driverLicenseKor}<br/>`;
+								resultDesc += `&bull;Face Score: ${scanResult.faceScore}<br/>`;
+								resultDesc += `&bull;Color Score: ${scanResult.colorScore}<br/>`;
+								resultDesc += `&bull;Specular Ratio: ${scanResult.specularRatio}<br/>`;
+							}
+
+							// document.getElementById('resultBoxDesc').innerHTML = resultDesc;
+							console.log(resultDesc.replace(/&bull;/g, '').replace(/<br\/>/g, '\n'));
+
+							// draw Image
+							// let resultCanvasEl = document.getElementById('resultCanvas');
+							// let resultCtx = resultCanvasEl.getContext('2d');
+
+							// get image from scanresult
+							// let robiImage = scanResult.maskedCardImage;
+							let robiImage = scanResult.maskedCardImage;
+
+							let encodedstream = robiImage.encodedstream;
+							let encodedLength = robiImage.encodedsize;
+
+							// test code for show result image
+							// base64 encoding
+							let binaryString = [encodedLength];
+							while (encodedLength--) {
+								binaryString[encodedLength] = String.fromCharCode(encodedstream[encodedLength]);
+							}
+							let encodeddata = binaryString.join('');
+							let base64 = window.btoa(encodeddata);
+							// server send image ()
+							imageData = base64;
+							// locad image form base64 buffer
+							let img = new Image();
+							img.src = 'data:image/jpeg;base64,' + base64;
+							img.onload = function () {
+								// resultCanvasEl.width = img.width;
+								// resultCanvasEl.height = img.height;
+								// resultCtx.drawImage(img, 0, 0, img.width, img.height, 0, 0, img.width, img.height);
+							};
+							img.onerror = function (stuff) {
+								logger.error('img load fail : ', stuff);
+							};
+
+							//logger.info("scanner recog time ====> " + recogTime);
+							// * LogManager에 detect 종료 기능
+							logManager.endDetect(new Date().valueOf(), cardType, recogTime, scanResult.faceScore, scanResult.colorScore, scanResult.specularRatio);
+
+							// release wasm native allocation memory
+							scanResult.release();
+						}
+					}
+					webrtc.closeCamera();
+					if (warnStatus > 0) {
+						renderDetectUI(ScannerStatus.SCANNER_INIT);
+						startScanner();
+						// * LogManager에 재시도 detect 기능 동작
+						logManager.againDetect(new Date().valueOf());
+						logManager.logModel.setPopupType('faceerror');
+					}
+				} else if (status === ScannerStatus.SCAN_TO_SERVER) {
+					//  amouse add
+
+					logger.info('Scan To Server');
+					// 이미지 추출
+					let encodedStream = scan_result.fullImage;
+					// 전송
+				} else {
+					logger.error('status = ' + status);
+				}
+			}
+
+			// 웹카메라로 스케너를 실행
+			function startScanner() {
+				if (!webrtc) return;
+
+				// camera_type: 모바일 카메라의 전면(CameraType.FACING_FRONT)/후면(CameraType.FACING_BACK), PC 테스트시에는 FACING_UNKOWN으로 적용
+				webrtc.open(
+					camera_type,
+					video,
+					ScannerType.IDCARD_SCANNER, // scanner 종류, 현재는 ScannerType.IDCARD_SCANNER만 존재함
+					resultCallback,
+					detectCallback,
+					'N/av1st0NxH1rJTsDrZpAVRQgLdohrRa21eerPchvOkCROO7jTM+L3LN+BV8WXGA0Lys+KAO0Ndm/OUwg7DYmQ==' // license key
+				);
+			}
+
+			// 화면에 토스트 알림 띄우기
+			/*
+			function showToast(msg, slot) {
+				let msgTimerId = 0;
+				let toast = $('#toast');
+
+				if (slot === 'top') {
+					toast.css('top', '33px');
+					toast.css('bottom', '');
+				} else if (slot === 'bottom') {
+					toast.css('top', '');
+					toast.css('bottom', '-13px');
+				} else {
+					toast.css('top', '15%');
+					toast.css('bottom', '');
+				}
+
+				toast.children().html(msg);
+				setTimeout(function () {
+					toast.fadeIn(500, function () {
+						msgTimerId = setTimeout(function () {
+							toast.fadeOut(1000);
+							clearTimeout(msgTimerId);
+						}, 1000);
+					});
+				}, 200);
+			}
+			*/
+
+			// 실행하는 장비와 카메라 정보 반환
+			function getCameraType() {
+				let os = '';
+				let ua = navigator.userAgent;
+				let osSimple = '';
+				let browser = '';
+
+				if (ua.match(/Win(dows )?NT 6\.0/)) {
+					os = 'Windows Vista';
+					osSimple = 'WIN';
+				} else if (ua.match(/Win(dows )?(NT 5\.1|XP)/)) {
+					os = 'Windows XP';
+					osSimple = 'WIN';
+				} else {
+					if (ua.indexOf('Windows NT 5.1') !== -1 || ua.indexOf('Windows XP') !== -1) {
+						os = 'Windows XP';
+						osSimple = 'WIN';
+					} else if (ua.indexOf('Windows NT 7.0') !== -1 || ua.indexOf('Windows NT 6.1') !== -1) {
+						os = 'Windows 7';
+						osSimple = 'WIN';
+					} else if (ua.indexOf('Windows NT 8.0') !== -1 || ua.indexOf('Windows NT 6.2') !== -1) {
+						os = 'Windows 8';
+						osSimple = 'WIN';
+					} else if (ua.indexOf('Windows NT 8.1') !== -1 || ua.indexOf('Windows NT 6.3') !== -1) {
+						os = 'Windows 8.1';
+						osSimple = 'WIN';
+					} else if (ua.indexOf('Windows NT 10.0') !== -1 || ua.indexOf('Windows NT 6.4') !== -1) {
+						os = 'Windows 10';
+						osSimple = 'WIN';
+					} else if (ua.indexOf('iPad') !== -1 || ua.indexOf('iPhone') !== -1 || ua.indexOf('iPod') !== -1) {
+						os = 'Apple iOS';
+						osSimple = 'IOS';
+					} else if (ua.indexOf('Android') !== -1) {
+						os = 'Android OS';
+						osSimple = 'ANDROID';
+					} else if (ua.match(/Win(dows )?NT( 4\.0)?/)) {
+						os = 'Windows NT';
+						osSimple = 'WIN';
+					} else if (ua.match(/Mac|PPC/)) {
+						os = 'Mac OS';
+						osSimple = 'MAC';
+					} else if (ua.match(/Linux/)) {
+						os = 'Linux';
+						osSimple = 'LINUX';
+					} else if (ua.match(/(Free|Net|Open)BSD/)) {
+						os = RegExp.$1 + 'BSD';
+					} else if (ua.match(/SunOS/)) {
+						os = 'Solaris';
+						osSimple = 'SOLARIS';
+					}
+
+					let agent = navigator.userAgent.toLowerCase(),
+						name = navigator.appName;
+					// MS 계열 브라우저를 구분하기 위함.
+					if (name === 'Micr	osoft Internet Explorer' || agent.indexOf('trident') > -1 || agent.indexOf('edge/') > -1) {
+						browser = 'ie';
+						if (name === 'Microsoft Internet Explorer') {
+							// IE old version (IE 10 or Lower)
+							agent = /msie ([0-9]{1,}[\.0-9]{0,})/.exec(agent);
+							browser += parseInt(agent[1]);
+						} else {
+							// IE 11+
+							if (agent.indexOf('trident') > -1) {
+								// IE 11
+								browser += 11;
+							} else if (agent.indexOf('edge/') > -1) {
+								// Edge
+								browser = 'edge';
+							}
+						}
+					} else if (agent.indexOf('safari') > -1) {
+						// Chrome or Safari
+						if (agent.indexOf('opr') > -1) {
+							// Opera
+							browser = 'opera';
+						} else if (agent.indexOf('samsungbrowser') > -1) {
+							// Chrome
+							browser = 'Samsung';
+						} else if (agent.indexOf('chrome') > -1) {
+							// Chrome
+							browser = 'chrome';
+						} else {
+							// Safari
+							browser = 'safari';
+						}
+					} else if (agent.indexOf('firefox') > -1) {
+						// Firefox
+						browser = 'firefox';
+					}
+				}
+
+				let camera_type = -1;
+				if (osSimple === 'IOS' || osSimple === 'ANDROID') {
+					camera_type = 0;
+				}
+
+				logger.debug('userAgent :: br :' + browser);
+				logger.debug('userAgent :: os :' + os);
+				logger.debug('userAgent :: osSimple :' + osSimple);
+				logger.debug('userAgent :: camera_type :' + camera_type);
+
+				return {
+					osSimple,
+					browser,
+					camera_type,
+				};
+			}
+
+			/* webRTC 신분증 OCR 인식 결과(이미지) 서버 전송 */
+			// ====================================================================================================
+			// (webRTC Scan Image buffer 담기)
+			// loadImageFromDataURL('./image/test.jpeg', function(dataUrl) {
+			// //imageData = dataUrl
+			// console.log('imageData - dataUrl :'+dataUrl);
+			// imageData = dataUrl.replace(/^data:image\/[a-z]+;base64,/, "");
+			// console.log('RESULT:', imageData)
+			// });
+			let Destination = 'https://52.231.69.255:9090';
+			let URL_ALT_TOKEN = Destination + '/ocr/alttoken';
+			let URL_OCR_CERT = Destination + '/ocr/cert';
+			let URL_DATA_UPLOAD = Destination + '/personal/data/upload';
+			//let URL_DATA_UPLOAD = Destination + "/ocr/upload/lowspec";
+			let URL_CONFIRM = Destination + '/personal/confirm';
+			let URL_SENDLOG = Destination + '/ocr/log/send';
+
+			let CRYPT = null; // RSA Key 생성용
+			let SIGN = null; // SIGNATURE 생성
+			let VERIFY = null; // SIGNATURE 검증
+
+			let privateKey = null; // RSA PrivateKey
+			let publicKey = null; // RSA PublicKey
+
+			let varTimeStamp = null; // TimeStamp
+			let varUserId = 'UUID-1234-1234-12345-12345566'; // UserID
+			let varDeviceId = '0123456789abcdef01234567890abcdef'; // DeviceID
+			let varRandom = null; // Random value
+
+			let signature = null; // SIGNATURE
+
+			let resStatus = null;
+			let errorThrow = null;
+
+			let CONSTANT_CTTT = 'application/json';
+			let CONSTANT_APPID = 'com.hanacard_ocr_webrtc';
+			let CONSTANT_METHOD = 'POST';
+			let CONSTANT_JSON = 'json';
+
+			let CONSTANT_DEVICE_PIP = '10.1.2.3';
+			let CONSTANT_DEVICE_UID = 'device_uid_property';
+
+			let CONSTANT_IMAGE_TYPE = 'jpg';
+			let CONSTANT_REQ_CHANNEL = '04'; //01-학생증, 02-교직원, 03-의약사, 04-개인카드신청(즉발), 05-기업, 06-가맹점, 07-챗봇
+			let CONSTANT_INPUT_TYPE = '01'; //01-신분증, 02-문서, 03-증명사진
+			let CONSTANT_ENC_TYPE = 'Y';
+			//let today = new Date().toISOString().substring(0,10).replace(/-/g,'');
+			let CONSTANT_SAVE_PATH = 'ocr_data/appedms';
+
+			// RSA Key 발급
+			function generateKeys() {
+				CRYPT = new JSEncrypt({ default_key_size: 2048 });
+
+				CRYPT.getKey();
+
+				privateKey = CRYPT.getPrivateKey();
+				publicKey = CRYPT.getPublicKey();
+
+				varTimeStamp = new Date().getTime();
+				varRandom = makeid();
+
+				let message = varTimeStamp + varUserId + varDeviceId;
+				+'client-posicubeocrwebrtc-clientId2022101201002440' + varRandom + 'client-secret-13400400122204467';
+
+				generateSignature(message);
+			}
+
+			// SIGNATURE 발급
+			function generateSignature(sigstr) {
+				SIGN = new JSEncrypt();
+				SIGN.setPrivateKey(privateKey);
+				signature = SIGN.sign(sigstr, CryptoJS.SHA256, 'sha256');
+
+				VERIFY = new JSEncrypt();
+				VERIFY.setPublicKey(publicKey);
+
+				let verified = VERIFY.verify(sigstr, signature, CryptoJS.SHA256);
+
+				if (verified) {
+					ocrAltToken();
+				} else {
+					alert('Something went wrong....');
+				}
+			}
+
+			// ====================================================================================================
+			let resAltHref = null; // AltToken Response URL
+			let resAltAltToken = null; // AltToken Response Token
+			let resAltTimeStamp = null; // AltToken Response TimeStamp
+
+			// Alt Token
+			function ocrAltToken() {
+				publicKey = publicKey.replace('-----BEGIN PUBLIC KEY-----\n', '');
+				publicKey = publicKey.replace('\n-----END PUBLIC KEY-----', '');
+
+				// console.log ("varUserId : " + varUserId);
+				// console.log ("varDeviceId : " + varDeviceId);
+				// console.log ("varTimeStamp : " + varTimeStamp);
+				// console.log ("publicKey : " + publicKey);
+				// console.log ("signature : " + signature);
+
+				let params = {
+					appId: CONSTANT_APPID,
+					userId: varUserId,
+					deviceId: varDeviceId,
+					timeStamp: varTimeStamp,
+					content: publicKey,
+					signature: signature,
+				};
+
+				let jsonInfo = JSON.stringify(params);
+
+				$.ajax({
+					url: URL_ALT_TOKEN,
+					type: CONSTANT_METHOD,
+					datatype: CONSTANT_JSON,
+					data: jsonInfo,
+					headers: {
+						'Content-type': CONSTANT_CTTT,
+						Authorization: signature,
+						'Device-Pip': CONSTANT_DEVICE_PIP,
+						'Device-Uid': CONSTANT_DEVICE_UID,
+					},
+					success: function (responseDto) {
+						resAltHref = responseDto.href;
+						resAltAltToken = responseDto.altToken;
+						resAltTimeStamp = responseDto.timeStamp;
+						console.log('Alt Token completed.');
+						ocrCert();
+					},
+					error: function (XMLHttpRequest, textStatus, errorThrown) {
+						// 비동기 통신이 실패할경우 error 콜백으로 들어옵니다.
+						resStatus = textStatus;
+						errorThrow = errorThrown;
+						alert('Alt Token fail : ' + resStatus);
+					},
+				});
+			}
+
+			// ====================================================================================================
+			let resCertHref = null; // OCR Cert Response URL
+			let resCertContent = null; // OCR Cert Response Content
+			let resCertTimeStamp = null; // AltToken Response TimeStamp
+
+			// OCR CERT
+			function ocrCert() {
+				let params = {
+					appId: CONSTANT_APPID,
+					userId: varUserId,
+					timeStamp: varTimeStamp,
+					deviceId: varDeviceId,
+				};
+
+				let jsonInfo = JSON.stringify(params);
+
+				$.ajax({
+					url: URL_OCR_CERT,
+					type: CONSTANT_METHOD,
+					datatype: CONSTANT_JSON,
+					data: jsonInfo,
+					headers: {
+						'Content-type': CONSTANT_CTTT,
+						Authorization: resAltAltToken,
+						'Device-Pip': CONSTANT_DEVICE_PIP,
+						'Device-Uid': CONSTANT_DEVICE_UID,
+					},
+					success: function (responseDto) {
+						resCertHref = responseDto.href;
+						resCertContent = responseDto.content;
+						resCertTimeStamp = responseDto.timeStamp;
+						console.log('OCR Certification completed.');
+						ocrDataUpload();
+					},
+					error: function (XMLHttpRequest, textStatus, errorThrown) {
+						resStatus = textStatus;
+						errorThrow = errorThrown;
+						alert('OCR Certification fail : ' + resStatus);
+					},
+				});
+			}
+
+			// ====================================================================================================
+			let xOcrKey = null; // 파일명(확장자 제거 필요?)
+			let xIMSType = '';
+
+			let encryptedPath = null; // Encrypted Path   (AES Encrypt)
+			let encryptedIv = null; // Encrypted IV     (RSA Encrypt)
+			let encryptedKey = null; // Encrypted Key    (RSA Encrypt)
+			let encryptedData = null; // Encrypted Data   (AES Encrype)
+
+			let aes256Key = null;
+			let aes256Iv = null;
+			let aes256EncodeData = '';
+			let imageName = null;
+			let imageData = '';
+
+			let resOcrUploadURL = null;
+
+			function ocrDataUpload() {
+				aes256Iv = getIv(); //"0123456789abcdef";
+				aes256Key = getAesKey(); //"0123456789abcdef0123456789abcdef"; //
+
+				//console.log ("AesIV : " + aes256Iv.toString());
+				//console.log ("AesKEY : " + aes256Key.toString());
+
+				let RSAEncrypt = new JSEncrypt();
+				RSAEncrypt.setKey(resCertContent);
+
+				//console.log ("RSAKey : " + resCertContent.toString());
+
+				encryptedIv = RSAEncrypt.encrypt(aes256Iv);
+				encryptedKey = RSAEncrypt.encrypt(aes256Key);
+
+				//console.log ("encIV : " + encryptedIv.toString());
+				//console.log ("encKEY : " + encryptedKey.toString());
+
+				encryptedData = aes256Encode(aes256Key, aes256Iv, imageData);
+				//console.log('encryptedIv.length : '+encryptedIv.length);
+				//console.log ("encryptedData : " + encryptedData.toString());
+
+				let params = {
+					appId: CONSTANT_APPID,
+					encY: encryptedKey,
+					content: encryptedData,
+					encX: encryptedIv,
+					timeStamp: varTimeStamp,
+				};
+
+				let jsonInfo = JSON.stringify(params);
+
+				$.ajax({
+					url: URL_DATA_UPLOAD,
+					type: CONSTANT_METHOD,
+					datatype: CONSTANT_JSON,
+					data: jsonInfo,
+					headers: {
+						'Content-type': CONSTANT_CTTT,
+						Authorization: resAltAltToken,
+						'Device-Pip': CONSTANT_DEVICE_PIP,
+						'Device-Uid': CONSTANT_DEVICE_UID,
+						'x-user-id': varUserId,
+						'x-data-key': varUserId + '_' + varTimeStamp,
+						ReqChannel: CONSTANT_REQ_CHANNEL, //01-학생증, 02-교직원, 03-의약사, 04-개인카드신청(즉발), 05-기업, 06-가맹점, 07-챗봇
+						ImgType: CONSTANT_IMAGE_TYPE,
+						InputType: CONSTANT_INPUT_TYPE, //01-신분증, 02-문서, 03-증명사진
+						EncType: CONSTANT_ENC_TYPE,
+						SavePath: CONSTANT_SAVE_PATH,
+					},
+
+					success: function (responseDto) {
+						const json = JSON.stringify(responseDto);
+						//console.log("Server Upload Result : " + json);
+						//resOcrUploadResult  = responseDto.content;
+						console.log('Data Upload completed successfully : ' + json);
+						//alert("Image Uploaded Success !!!");
+
+						uploadConfirm();
+					},
+					error: function (XMLHttpRequest, textStatus, errorThrown) {
+						resStatus = textStatus;
+						errorThrow = errorThrown;
+						alert('Encrypted image Upload fail : ' + resStatus);
+					},
+				});
+			}
+
+			function uploadConfirm() {
+				let params = {
+					timeStamp: varTimeStamp,
+					confirm: true,
+				};
+
+				let jsonInfo = JSON.stringify(params);
+
+				$.ajax({
+					url: URL_CONFIRM,
+					type: CONSTANT_METHOD,
+					datatype: CONSTANT_JSON,
+					data: jsonInfo,
+					headers: {
+						'Content-type': CONSTANT_CTTT,
+						Authorization: resAltAltToken,
+						'Device-Pip': CONSTANT_DEVICE_PIP,
+						'Device-Uid': CONSTANT_DEVICE_UID,
+						'x-user-id': varUserId,
+						'x-data-key': imageName,
+						SavePath: CONSTANT_SAVE_PATH,
+						ImgType: CONSTANT_IMAGE_TYPE,
+						ReqChannel: CONSTANT_REQ_CHANNEL, //01-학생증, 02-교직원, 03-의약사, 04-개인카드신청(즉발), 05-기업, 06-가맹점, 07-챗봇
+					},
+
+					success: function (responseDto) {
+						const json = JSON.stringify(responseDto);
+						//console.log("Server Upload Result : " + json);
+						//resOcrUploadResult  = responseDto.content;
+						console.log('Upload Confirm completed successfully : ' + json);
+						console.log('sendLogData : ' + logger.result);
+						alert('Upload Confirm Success !!!');
+
+						sendLogData();
+					},
+					error: function (XMLHttpRequest, textStatus, errorThrown) {
+						resStatus = textStatus;
+						errorThrow = errorThrown;
+						alert('Encrypted image Upload Confirm fail : ' + resStatus);
+					},
+				});
+			}
+
+			function sendLogData() {
+				let jsonInfo = JSON.stringify(logManager.makeLog());
+
+				$.ajax({
+					url: URL_SENDLOG,
+					type: CONSTANT_METHOD,
+					datatype: CONSTANT_JSON,
+					data: jsonInfo,
+					headers: {
+						'Content-type': CONSTANT_CTTT,
+						Authorization: resAltAltToken,
+						'Device-Pip': CONSTANT_DEVICE_PIP,
+						'Device-Uid': CONSTANT_DEVICE_UID,
+						'x-user-id': varUserId,
+						ReqChannel: CONSTANT_REQ_CHANNEL, //01-학생증, 02-교직원, 03-의약사, 04-개인카드신청(즉발), 05-기업, 06-가맹점, 07-챗봇
+						InputType: CONSTANT_INPUT_TYPE, //01-신분증, 02-문서, 03-증명사진
+					},
+
+					success: function (responseDto) {
+						const json = JSON.stringify(responseDto);
+						//console.log("Server Upload Result : " + json);
+						//resOcrUploadResult  = responseDto.content;
+						console.log('Send LogData completed successfully : ' + json);
+						alert('Send LogData Success !!!');
+					},
+					error: function (XMLHttpRequest, textStatus, errorThrown) {
+						resStatus = textStatus;
+						errorThrow = errorThrown;
+						alert('Send LogData fail : ' + resStatus);
+					},
+				});
+			}
+
+			function aes256Encode(secretKey, Iv, data) {
+				// console.log("");
+				// console.log("[aes256Encode] : [start]");
+				// console.log("[secretKey] : " + secretKey);
+				// console.log("[Iv] : " + Iv);
+				// console.log("[data] : " + data);
+				const cipher = CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(secretKey), {
+					iv: CryptoJS.enc.Utf8.parse(Iv),
+					padding: CryptoJS.pad.Pkcs7,
+					mode: CryptoJS.mode.CBC,
+				});
+
+				aes256EncodeData = cipher.toString();
+				// console.log("");
+				// console.log("[aes256Encode] : [encode]");
+				// console.log("[data] : " + aes256EncodeData);
+				// console.log("");
+
+				return aes256EncodeData;
+			}
+
+			function getIv() {
+				function s4() {
+					return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+				}
+
+				return (s4() + s4() + s4() + s4()).toString(16);
+			}
+
+			function getAesKey() {
+				function s4() {
+					return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+				}
+
+				return (s4() + s4() + s4() + s4() + s4() + s4() + s4() + s4()).toString(32);
+			}
+
+			function makeid() {
+				let result = '';
+				let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+				let charactersLength = characters.length;
+				for (let i = 0; i < 16; i++) {
+					result += characters.charAt(Math.floor(Math.random() * charactersLength));
+				}
+				console.log('random : ' + result);
+				return result;
+			}
+		</script>
+		<!-- //OCR관련 js -->
+		<!-- //script -->
+	</body>
+</html>

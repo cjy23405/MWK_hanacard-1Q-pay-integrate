@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">금리인하요구권</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-title">대출금리인하요구권</div>
+						<div class="page-info">
+							<p class="page-info-text">
+								대출금리인하요구권이란 신용상태가 개선된 경우 합리적 근거를 토대로 대출금리인하를 요구할 수 있는 권리입니다.<br />
+								당사의 권리인하요구권 운영과 관련 다음과 같이 안내드리니 이용에 참고하시기 바랍니다.
+							</p>
+						</div>
+
+						<div class="page-section margin-top-35">
+							<div class="page-section-group">
+								<div class="section-title margin-bottom-10">
+									<h2 class="title">대상대출상품</h2>
+								</div>
+								<div class="section-contents">
+									<span class="basic-text color-primary">장기카드대출(카드론), 단기카드대출(현금서비스), 일부결제금액이월약정(리볼빙), 신용대출</span>
+									<p class="ui-notice">차주의 신용상태가 금리에 영향을 주지 않는 오토할부/오토론의 경우, 금리인하요구권의 대상이 아닙니다.</p>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title margin-bottom-10">
+									<h2 class="title">신청사유</h2>
+								</div>
+								<div class="section-contents">
+									<div class="info-table-area">
+										<table class="info-table type-tbody-heading">
+											<!-- 2022.05.04 : mod : caption 값 변경 -->
+											<caption class="for-a11y">
+												소득증가, 신용도상승, 기타로 구성된 신청사유 표
+											</caption>
+											<colgroup>
+												<col style="width: 92px" />
+												<col />
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>소득 증가</th>
+													<td>소득 증가 등 재무상태 개선</td>
+												</tr>
+												<tr>
+													<th>신용도 상승</th>
+													<td>신용평가회사의 개인신용평점 개선</td>
+												</tr>
+												<tr>
+													<th>기타</th>
+													<td>기타 본인의 신용도가 상승하였다고 판단되는 경우</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title margin-bottom-10">
+									<h2 class="title">신청방법</h2>
+								</div>
+								<div class="section-contents">
+									<div class="info-table-area">
+										<table class="info-table">
+											<!-- 2022.05.04 : mod : caption 값 변경 -->
+											<caption class="for-a11y">
+												상품, pc홈페이지, 고객센터로 구성된 신청방법 표
+											</caption>
+											<colgroup>
+												<col style="width: 31%" />
+												<col />
+												<col style="width: 30%" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">상품</th>
+													<th scope="col">PC 홈페이지</th>
+													<th scope="col">고객센터</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														장기카드대출
+														<a href="" class="ui-arrow small-text color-blur margin-top-5">바로가기</a>
+													</td>
+													<td rowspan="4" class="info-table-left-line">
+														금융<br />
+														> 금리인하요구권<br />
+														> 금리인하요구권 안내<br />
+														> 상품별 바로가기
+													</td>
+													<td rowspan="3">
+														<div>
+															1800-1111<br />
+															(고객센터)
+														</div>
+														<div class="margin-top-10">
+															1800-1000<br />
+															(금융전담)
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														단기카드대출
+														<a href="" class="ui-arrow small-text color-blur margin-top-5">바로가기</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														일부결제금액 이월약정
+														<a href="" class="ui-arrow small-text color-blur margin-top-5">바로가기</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														신용대출
+														<a href="" class="ui-arrow small-text color-blur margin-top-5">바로가기</a>
+													</td>
+													<td>
+														1800-1207<br />
+														(신용대출<br />
+														고객센터)
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<p class="ui-notice">장기카드대출(카드론)과 신용대출은 국세청의 소득금액증명원을 통해 별도 소득 증가 증빙이 가능하며, 해당 증빙은 고객센터를 통해 신청 가능합니다.</p>
+									<p class="ui-notice">결제일 1영업일 전(금결원 계좌의 경우 2영업일 전)까지 금리인하요구 신청이 가능합니다.</p>
+									<p class="ui-notice">
+										당월 청구분 선결제(부분 또는 전액)가 존재할 경우 금리인하요구 신청이 불가하며, 금리인하요구 수용 금리 적용 전 선결제하실 경우 당월 청구분에 인하된 금리가 적용되지 않습니다.
+									</p>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title margin-bottom-10">
+									<h2 class="title">결과통지</h2>
+								</div>
+								<div class="section-contents">
+									<span class="basic-text color-blur"> 신청 접수 후 10영업일 이내에 고객센터 또는 SMS 등을 통해 결과를 알려드립니다.</span>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title margin-bottom-10">
+									<h2 class="title">조건</h2>
+								</div>
+								<div class="section-contents">
+									<div class="basic-text color-blur">
+										<ul class="info-list type-inherit type-outside color-blur">
+											<li class="info-item">금리인하요구 시점에 회원이 당사 및 타 금융회사의 채무를 연체하고 있지 않은 경우</li>
+											<li class="info-item">이용하고 있는 대출의 금리가 당사가 고시하고 있는 최저 이율 이상일 경우</li>
+											<li class="info-item">이용하고 있는 단기카드대출, 일부결제금액이월약정, 신용대출의 금리가 기준가격 이상일 경우</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									유의사항
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">심사시점 고객님의 신용상태 변동 및 심사 결과에 따라 금리 인하가 되지 않을 수 있습니다.</li>
+										<li class="info-item">신용상태개선이 금리 산정에 영향을 주지 않는 경우 금리인하요구가 거절될 수 있습니다.</li>
+										<li class="info-item">신용상태 개선이 발생한 경우 신청횟수, 신청시점에 관계없이 금리인하요구 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

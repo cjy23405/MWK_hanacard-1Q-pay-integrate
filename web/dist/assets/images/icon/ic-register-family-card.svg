@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-2,.cls-5{fill:#fff}.cls-2,.cls-4{stroke:#2d3239;stroke-width:1.5px}.cls-4,.cls-9{fill:none}.cls-6{fill:#2d3239}.cls-8{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_register_family_card" data-name="ic_register family card" transform="translate(-27 -655)">
+        <g id="사각형_11970" data-name="사각형 11970" class="cls-2">
+            <path class="cls-8" d="M5 0h12a8 8 0 0 1 8 8v17a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" transform="translate(36 662)"/>
+            <path class="cls-9" d="M5 .75h12A7.25 7.25 0 0 1 24.25 8v17A4.25 4.25 0 0 1 20 29.25H5A4.25 4.25 0 0 1 .75 25V5A4.25 4.25 0 0 1 5 .75z" transform="translate(36 662)"/>
+        </g>
+        <g id="교차_10" data-name="교차 10" style="fill:none">
+            <path class="cls-8" d="M4.52 7.21a4 4 0 0 1-4-4v-4a8 8 0 0 1 8 8z" transform="translate(52.48 662.79)"/>
+            <path d="M6.845 5.71A6.522 6.522 0 0 0 2.019.884V3.21c0 1.38 1.122 2.5 2.5 2.5h2.326m1.674 1.5h-4a4 4 0 0 1-4-4l.001-4a8 8 0 0 1 8 8z" style="fill:#2d3239;stroke:none" transform="translate(52.48 662.79)"/>
+        </g>
+        <g id="그룹_13631" data-name="그룹 13631" transform="translate(-220 -425.433)">
+            <g id="사각형_13454" data-name="사각형 13454" class="cls-4" transform="translate(262.444 1096.848)">
+                <rect class="cls-8" width="5" height="5" rx="2.5"/>
+                <rect class="cls-9" x=".75" y=".75" width="3.5" height="3.5" rx="1.75"/>
+            </g>
+            <g id="사각형_13807" data-name="사각형 13807" class="cls-2">
+                <path class="cls-8" d="M3.5 0h3A3.5 3.5 0 0 1 10 3.5V6H0V3.5A3.5 3.5 0 0 1 3.5 0z" transform="translate(260 1102.847)"/>
+                <path class="cls-9" d="M3.5.75h3A2.75 2.75 0 0 1 9.25 3.5v1a.75.75 0 0 1-.75.75h-7a.75.75 0 0 1-.75-.75v-1A2.75 2.75 0 0 1 3.5.75z" transform="translate(260 1102.847)"/>
+            </g>
+            <path id="사각형_16944" data-name="사각형 16944" class="cls-5" transform="translate(259.5 1107.019)" d="M0 0h11v3H0z"/>
+            <rect id="사각형_16945" data-name="사각형 16945" class="cls-6" width="1.5" height="2" rx=".75" transform="translate(260 1105.847)"/>
+            <rect id="사각형_16956" data-name="사각형 16956" class="cls-6" width="1.5" height="2" rx=".75" transform="translate(268.5 1105.847)"/>
+        </g>
+        <g id="그룹_13633" data-name="그룹 13633" transform="translate(-213 -425.433)">
+            <g id="사각형_13454-2" data-name="사각형 13454" class="cls-4" transform="translate(262.444 1096.848)">
+                <rect class="cls-8" width="5" height="5" rx="2.5"/>
+                <rect class="cls-9" x=".75" y=".75" width="3.5" height="3.5" rx="1.75"/>
+            </g>
+            <g id="사각형_13807-2" data-name="사각형 13807" class="cls-2">
+                <path class="cls-8" d="M3.5 0h3A3.5 3.5 0 0 1 10 3.5V6H0V3.5A3.5 3.5 0 0 1 3.5 0z" transform="translate(260 1102.847)"/>
+                <path class="cls-9" d="M3.5.75h3A2.75 2.75 0 0 1 9.25 3.5v1a.75.75 0 0 1-.75.75h-7a.75.75 0 0 1-.75-.75v-1A2.75 2.75 0 0 1 3.5.75z" transform="translate(260 1102.847)"/>
+            </g>
+            <path id="사각형_16944-2" data-name="사각형 16944" class="cls-5" transform="translate(259.5 1107.019)" d="M0 0h11v3H0z"/>
+            <rect id="사각형_16945-2" data-name="사각형 16945" class="cls-6" width="1.5" height="2" rx=".75" transform="translate(260 1105.847)"/>
+            <rect id="사각형_16956-2" data-name="사각형 16956" class="cls-6" width="1.5" height="2" rx=".75" transform="translate(268.5 1105.847)"/>
+        </g>
+        <g id="그룹_11905" data-name="그룹 11905" transform="translate(-31 -89.982)">
+            <rect id="사각형_16957" data-name="사각형 16957" class="cls-5" width="17" height="5" rx="2.5" transform="rotate(-35.02 1267.735 260.01)"/>
+            <rect id="사각형_12064" data-name="사각형 12064" width="15.629" height="4" rx="2" transform="rotate(-35.02 1270.207 257.295)" style="fill:#7dedf3"/>
+            <g id="사각형_12063" data-name="사각형 12063" class="cls-4" transform="rotate(-35.02 1267.735 260.01)">
+                <rect class="cls-8" width="17" height="5" rx="2.5"/>
+                <rect class="cls-9" x=".75" y=".75" width="15.5" height="3.5" rx="1.75"/>
+            </g>
+        </g>
+    </g>
+</svg>

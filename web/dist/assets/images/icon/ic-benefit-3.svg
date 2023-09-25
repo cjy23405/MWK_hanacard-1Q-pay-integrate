@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+  <g id="ic_benefit_3" transform="translate(6054 -1114)">
+    <rect id="사각형_7186" data-name="사각형 7186" width="21" height="21" transform="translate(-6054 1114)" fill="none"/>
+    <rect id="사각형_14396" data-name="사각형 14396" width="15" height="15" transform="translate(-6051 1117)" fill="rgba(255,255,255,0)"/>
+    <g id="사각형_14407" data-name="사각형 14407" transform="translate(-6049.4 1118)" fill="none" stroke="#888" stroke-width="1.5">
+      <rect width="12" height="13" rx="2" stroke="none"/>
+      <rect x="0.75" y="0.75" width="10.5" height="11.5" rx="1.25" fill="none"/>
+    </g>
+    <g id="사각형_14408" data-name="사각형 14408" transform="translate(-6046.4 1121)" fill="none" stroke="#888" stroke-width="1.5">
+      <rect width="6" height="4" rx="1" stroke="none"/>
+      <rect x="0.75" y="0.75" width="4.5" height="2.5" rx="0.25" fill="none"/>
+    </g>
+    <rect id="사각형_16971" data-name="사각형 16971" width="3.5" height="1.5" rx="0.75" transform="translate(-6050.25 1120.75)" fill="#888"/>
+    <rect id="사각형_16972" data-name="사각형 16972" width="3.5" height="1.5" rx="0.75" transform="translate(-6050.25 1123.75)" fill="#888"/>
+    <rect id="사각형_16973" data-name="사각형 16973" width="3.5" height="1.5" rx="0.75" transform="translate(-6050.25 1126.75)" fill="#888"/>
+  </g>
+</svg>

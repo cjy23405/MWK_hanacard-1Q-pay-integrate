@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">추천카드</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="search-word-area">
+							<!-- 2022.05.30 : mod : .type-search-black .type-input-group 클래스 삭제 -->
+							<div class="ui-input-block type-use-delete type-search">
+								<input type="search" class="ui-input" title="검색어 입력" placeholder="찾으시는 혜택이 있나요? 예) 스타벅스" />
+								<button type="button" class="ui-button ui-input-delete">
+									<span class="for-a11y">입력 내용 지우기</span>
+								</button>
+								<!-- 2022.05.30 : mod : 검색 버튼 추가 -->
+								<button type="button" class="ui-button ui-input-search">
+									<span class="for-a11y">검색</span>
+								</button>
+							</div>
+						</div>
+
+						<section class="page-section">
+							<div class="section-title type-large type-block margin-bottom-25">
+								<h2 class="title">신규카드</h2>
+								<p class="basic-text font-weight-light color-blur">새로 나왔어요!</p>
+							</div>
+
+							<div class="info-cards">
+								<div class="info-cards-inner">
+									<!-- 2022.03.30 : mod : 하드코딩으로 확인 되어 이미지, 텍스트 반영 -->
+									<ul class="info-cards-list">
+										<li class="info-cards-item">
+											<a href="" class="info-cards-link">
+												<div class="card-image">
+													<div class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/contents/my-branch/card-bbm-multi-01.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="info-cards-explain">
+													<div class="info-cards-title">내맘대로 쁨</div>
+													<div class="info-cards-text">예쁨, 미쁨, 기쁨을 하나로</div>
+												</div>
+											</a>
+										</li>
+										<li class="info-cards-item">
+											<a href="" class="info-cards-link">
+												<div class="card-image">
+													<div class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/contents/my-branch/card-life-shopping-01.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="info-cards-explain">
+													<div class="info-cards-title">모두의 신세계 하나카드</div>
+													<div class="info-cards-text">신세계 백화점 5% 할인</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<!-- //2022.03.30 : mod : 하드코딩으로 확인 되어 이미지, 텍스트 반영 -->
+								</div>
+							</div>
+						</section>
+
+						<!-- 2022.04.04 : mod : .page-section 에 멀티 클래스 값 수정 -->
+						<section class="page-section type-line type-large-margin">
+							<!-- 2022.04.04 : mod : 타이틀 영역 클래스 값 수정 및 문구 수정 -->
+							<div class="section-title type-large type-align-top margin-bottom-25">
+								<h2 class="title type-flexible">
+									<button type="button" class="down-arrow-link type-black"><span class="display-block title-text font-weight-medium">30대 남성</span></button>&nbsp;&nbsp;의<br />
+									혜택카드 TOP3
+								</h2>
+								<span class="ui-tooltip-wrap margin-top-5">
+									<span class="ui-tooltip js-ui-dropdown">
+										<span class="ui-tooltip-head">
+											<button type="button" class="ui-button ui-tooltip-opener js-ui-dropdown__opener">
+												<span class="ui-notice-icon">
+													<span class="for-a11y">(도움말 <span class="open-text">열기</span><span class="close-text">닫기</span>)</span>
+												</span>
+											</button>
+										</span>
+										<span class="ui-tooltip-layer js-ui-dropdown__layer">
+											<span class="ui-tooltip-bubble">
+												<span class="ui-tooltip-bubble-message">
+													해당 성별/연령의 손님들이<br />
+													가장 많은 혜택을 받은 카드입니다.
+												</span>
+												<button type="button" class="ui-button ui-tooltip-bubble-close js-ui-dropdown__closer">
+													<span class="for-a11y">도움말 닫기</span>
+												</button>
+											</span>
+										</span>
+									</span>
+								</span>
+							</div>
+							<!-- //2022.04.04 : mod : 타이틀 영역 클래스 값 수정 및 문구 수정 -->
+
+							<section class="page-section type-round-white">
+								<div class="rank">
+									<!-- 2022.03.30 더미 이미지와 텍스트 고정으로 교체 -->
+									<ol class="rank-list">
+										<li class="rank-item">
+											<a href="" class="rank-block">
+												<div class="rank-cell type-card">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/contents/my-branch/card-oil-traffic-travel-04.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+												</div>
+												<div class="rank-cell type-number">
+													<div class="rank-number">1</div>
+													<div class="rank-fluctuation">
+														<span class="fluctuation-arrow type-up">2<span class="for-a11y">상승</span></span>
+													</div>
+												</div>
+												<div class="rank-cell type-flexible">
+													<div class="rank-title">하나 스카이패스 아멕스 플래티늄 카드</div>
+													<div class="link-row margin-top-10">
+														<div class="ui-tip type-small margin-top-none">
+															<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+															<strong class="ui-tip-title color-primary-dark">TIP</strong>예상 혜택 <span class="color-primary-dark">7,450원</span>
+														</div>
+													</div>
+													<div class="rank-text">
+														<div class="rank-text-item">1천원당 최대 2마일 적립</div>
+														<div class="rank-text-item">신세계백화점 5% 할인</div>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li class="rank-item">
+											<a href="" class="rank-block">
+												<div class="rank-cell type-card">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/contents/my-branch/card-life-shopping-01.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+												</div>
+												<div class="rank-cell type-number">
+													<div class="rank-number">2</div>
+													<div class="rank-fluctuation">
+														<span class="fluctuation-arrow">-</span>
+													</div>
+												</div>
+												<div class="rank-cell type-flexible">
+													<div class="rank-title">모두의 신세계 하나카드</div>
+													<div class="link-row margin-top-10">
+														<div class="ui-tip type-small margin-top-none">
+															<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+															<strong class="ui-tip-title color-primary-dark">TIP</strong>예상 혜택 <span class="color-primary-dark">7,200원</span>
+														</div>
+													</div>
+													<div class="rank-text">
+														<div class="rank-text-item">신세계백화점 5% 할인</div>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li class="rank-item">
+											<a href="" class="rank-block">
+												<div class="rank-cell type-card">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/contents/my-branch/card-bbm-multi-03.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+												</div>
+												<div class="rank-cell type-number">
+													<div class="rank-number">3</div>
+													<div class="rank-fluctuation">
+														<span class="fluctuation-arrow type-down">2<span class="for-a11y">하락</span></span>
+													</div>
+												</div>
+												<div class="rank-cell type-flexible">
+													<div class="rank-title">MULTI On</div>
+													<div class="link-row margin-top-10">
+														<div class="ui-tip type-small margin-top-none">
+															<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+															<strong class="ui-tip-title color-primary-dark">TIP</strong>예상 혜택 <span class="color-primary-dark">6,000원</span>
+														</div>
+													</div>
+													<div class="rank-text">
+														<div class="rank-text-item">조건도 한도도 없이 1% 적립</div>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ol>
+									<!-- //2022.03.30 더미 이미지와 텍스트 고정으로 교체 -->
+								</div>
+							</section>
+						</section>
+
+						<!--
+							DD :
+							전체메뉴(GNB)에서 해외특화카드 영역으로 바로 보이게끔 하려면 url 뒤에 #overseasSpecializedCard 을 붙여주세요.
+							ex: http://domain.com/dist/MY_apply_p001.html#overseasSpecializedCard
+						-->
+						<!-- 2022.04.04 : mod : .page-section 에 멀티 클래스 값 수정 -->
+						<section class="page-section type-line type-large-margin" id="overseasSpecializedCard">
+							<div class="section-title type-large type-block margin-bottom-25">
+								<!-- 2022.03.30 타이틀에 링크연결 -->
+								<h2 class="title">
+									<a href="">해외특화카드</a>
+								</h2>
+								<p class="basic-text font-weight-light color-blur">글로벌은 하나카드!</p>
+							</div>
+
+							<div class="info-cards">
+								<div class="info-cards-inner">
+									<!-- 2022.03.30 : mod : 하드코딩으로 확인 되어 이미지, 텍스트 반영 -->
+									<ul class="info-cards-list">
+										<li class="info-cards-item">
+											<a href="" class="info-cards-link">
+												<div class="card-image">
+													<div class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/contents/my-branch/card-global-01.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="info-cards-explain">
+													<div class="info-cards-title">VIVA X 체크카드</div>
+													<div class="info-cards-text">해외수수료 완전면제</div>
+												</div>
+											</a>
+										</li>
+										<li class="info-cards-item">
+											<a href="" class="info-cards-link">
+												<div class="card-image">
+													<div class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/contents/my-branch/card-myseries-04.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="info-cards-explain">
+													<div class="info-cards-title">MY Trip 1Q Global VIVA</div>
+													<div class="info-cards-text">해외여행/직구족을 위한<br />MUST HAVE</div>
+												</div>
+											</a>
+										</li>
+										<li class="info-cards-item">
+											<a href="" class="info-cards-link">
+												<div class="card-image">
+													<div class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/contents/card/amex.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="info-cards-explain">
+													<div class="info-cards-title">하나 스카이패스 아멕스 플래티늄 카드</div>
+													<div class="info-cards-text">1천원당 최대 2마일!<br />라운지 무료혜택까지</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<!-- //2022.03.30 : mod : 하드코딩으로 확인 되어 이미지, 텍스트 반영 -->
+								</div>
+							</div>
+						</section>
+
+						<section class="page-section type-line margin-top-45">
+							<div class="card-mbti margin-top-minus-35">
+								<h2 class="card-mbti-title">카드 MBTI</h2>
+								<p class="card-mbti-text">
+									나는 어떤 카드가<br />
+									어울리는 사람일까?
+								</p>
+								<button type="button" class="card-mbti-go">
+									<span class="for-a11y">확인하기</span>
+								</button>
+							</div>
+
+							<!-- 2022.07.01 : mod : slide 기능 변경 swiper적용 -->
+							<div class="mbti-tags">
+								<div class="slide-mbti-tags">
+									<div class="slide-mbti-controller"></div>
+									<div class="slide-mbti-reverse mbti-tags-row typr-reverse">
+										<ul class="mbti-tags-list">
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-1">카페인러버</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-2">영화관출석</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-3">미식가</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-4">뚜벅이</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-5">건강이 최고</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-6">독서는 마음의 양식</div>
+											</li>
+										</ul>
+									</div>
+									<div class="slide-mbti-forward mbti-tags-row">
+										<ul class="mbti-tags-list">
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-7">내 꿈은 세계일주</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-8">이불 밖은 위험해</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-9">이 구역의 큰 손</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-10">내가 제일 잘나가</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-11">편의점만랩</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- //2022.07.01 : mod : slide 기능 변경 swiper적용 -->
+
+							<div class="full-contents">
+								<div class="banner type-full margin-top-none margin-bottom-none">
+									<a href="" class="banner-link">
+										<!-- 2022.04.04 : mod : 이미지 변경 -->
+										<!-- 2022.04.27 : mod : alt 값 변경 -->
+										<img src="./assets/images/_dummy/banner-12.png" alt="나와 비슷한 사람들은 '이카드'에서 가장 많은 혜택을 받고있어요. 링크 바로가기" class="banner-image" />
+									</a>
+								</div>
+							</div>
+
+							<section class="page-section-group type-light-line margin-top-none">
+								<div class="section-title margin-bottom-5">
+									<h2 class="title type-flexible">
+										<div class="basic-text align-center">찾고있는 카드가 없다면?</div>
+									</h2>
+								</div>
+								<div class="welcome-nav type-fill-white type-color-blur">
+									<ul class="welcome-nav-list">
+										<li class="welcome-nav-item">
+											<a href="" class="welcome-nav-link"><div class="default-text font-weight-regular">신용카드</div></a>
+										</li>
+										<li class="welcome-nav-item">
+											<a href="" class="welcome-nav-link"><div class="default-text font-weight-regular">체크카드</div></a>
+										</li>
+										<li class="welcome-nav-item">
+											<a href="" class="welcome-nav-link"><div class="default-text font-weight-regular">제휴카드</div></a>
+										</li>
+										<!-- 2022.03.25 : add : 메뉴 추가 -->
+										<li class="welcome-nav-item">
+											<a href="" class="welcome-nav-link"><div class="default-text font-weight-regular">기타카드</div></a>
+										</li>
+										<!-- //2022.03.25 : add : 메뉴 추가 -->
+									</ul>
+								</div>
+							</section>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

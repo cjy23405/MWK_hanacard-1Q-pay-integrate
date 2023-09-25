@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <g data-name="사각형 17884" transform="rotate(180 20 20.5)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+        <rect width="32" height="32" rx="5" style="stroke:none"/>
+        <rect x=".75" y=".75" width="30.5" height="30.5" rx="4.25" style="fill:none"/>
+    </g>
+    <g data-name="그룹 14336" transform="translate(16.574 15.134)">
+        <g data-name="사각형 13454" transform="translate(3.038)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+            <rect width="8.776" height="8.776" rx="4.388" style="stroke:none"/>
+            <rect x=".75" y=".75" width="7.276" height="7.276" rx="3.638" style="fill:none"/>
+        </g>
+        <g data-name="사각형 13807" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+            <path d="M4 0h6.852a4 4 0 0 1 4 4v5.451H0V4a4 4 0 0 1 4-4z" style="stroke:none" transform="translate(0 9.789)"/>
+            <path d="M4 .75h6.852A3.25 3.25 0 0 1 14.1 4v4.7H.75V4A3.25 3.25 0 0 1 4 .75z" style="fill:none" transform="translate(0 9.789)"/>
+        </g>
+        <path data-name="사각형 13808" transform="translate(0 15.865)" style="fill:#fff" d="M0 0h14.852v4.051H0z"/>
+        <rect data-name="사각형 13809" width="1.5" height="2.7" rx=".75" transform="translate(0 14.515)" style="fill:#2d3239"/>
+        <rect data-name="사각형 13810" width="1.5" height="2.7" rx=".75" transform="translate(13.351 14.515)" style="fill:#2d3239"/>
+    </g>
+    <g data-name="그룹 14337">
+        <path data-name="패스 12225" d="M.015 2.7C.39 1.62 7.218-1 8.3-1s7.764 2.953 8.279 3.7-.489 6.483-1.948 9.259-5.063 5.558-6.331 5.558-4.914-2.99-6.331-5.555S-.36 3.786.015 2.7z" transform="translate(28.552 29.483)" style="fill:#fff"/>
+        <path data-name="패스 12149" d="M.006 2.472C.342 1.457 6.465-1 7.43-1s6.96 2.768 7.423 3.472-.438 6.078-1.747 8.68S8.265 16.36 7.43 16.36s-4.406-2.8-5.676-5.208S-.33 3.487.006 2.472z" transform="translate(32.024 30.062)" style="fill:#7dedf3"/>
+        <path data-name="패스 12150" d="m-10170 5361.62 2.388 2.431 3.979-4.05" transform="translate(10203.979 -5324.574)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+        <g data-name="패스 12151" style="fill:none">
+            <path d="M.015 2.7C.39 1.62 7.218-1 8.3-1s7.764 2.953 8.279 3.7-.489 6.483-1.948 9.259-5.063 5.558-6.331 5.558-4.914-2.99-6.331-5.555S-.36 3.786.015 2.7z" style="stroke:none" transform="translate(28.552 29.483)"/>
+            <path d="M8.284.507c-.438.074-1.87.524-3.575 1.223-1.942.798-2.908 1.364-3.278 1.63-.013.493.061 1.643.398 3.33.377 1.888.918 3.587 1.448 4.547.53.959 1.542 2.145 2.708 3.173 1.158 1.022 2.008 1.49 2.32 1.593.312-.095 1.154-.533 2.279-1.506 1.182-1.021 2.171-2.2 2.715-3.233.54-1.027 1.095-2.733 1.485-4.566.339-1.588.43-2.661.429-3.167-.508-.315-1.643-.912-3.278-1.635C10.02 1.05 8.693.59 8.284.506M8.295-1c1.077 0 7.764 2.953 8.28 3.703.515.751-.49 6.484-1.949 9.259-1.459 2.775-5.058 5.555-6.33 5.555-1.273 0-4.915-2.99-6.332-5.555C.547 9.397-.36 3.786.015 2.703.39 1.62 7.22-1 8.295-1z" style="fill:#2d3239;stroke:none" transform="translate(28.552 29.483)"/>
+        </g>
+    </g>
+</svg>

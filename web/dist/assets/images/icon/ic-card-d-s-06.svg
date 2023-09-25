@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+    <g data-name="그룹 12301" transform="translate(-244 -1218)">
+        <rect data-name="사각형 7186" width="27" height="27" rx="8" transform="translate(244 1218)" style="fill:#f5f6f8"/>
+    </g>
+    <path data-name="사각형 14476" transform="translate(6 6)" style="fill:transparent" d="M0 0h15v15H0z"/>
+    <text transform="translate(8.2 15.6)" style="stroke:#111;fill:#111;stroke-width:.5px;font-size:5.5px;font-family:SpoqaHanSansNeo-Bold,Spoqa Han Sans Neo;font-weight:700"><tspan x="0" y="0">PAY</tspan></text>
+    <g data-name="사각형 14477" transform="rotate(180 10.5 9.75)" style="stroke-width:1.5px;fill:none;stroke:#111">
+        <rect width="15" height="12" rx="2" style="stroke:none"/>
+        <rect x=".75" y=".75" width="13.5" height="10.5" rx="1.25" style="fill:none"/>
+    </g>
+</svg>

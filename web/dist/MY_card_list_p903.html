@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">하이브리드</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 1</span>
+							하이브리드 신청 정보를<br />
+							입력해 주세요.
+						</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 2단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-title margin-bottom-15">
+									<h2 class="title">서비스 이용내역</h2>
+								</div>
+								<!-- 이용내역 없음 -->
+								<div class="type-none type-insert">
+									<p class="item-text">
+										고객님께서는 하이브리드<br />
+										이용내역이 없습니다.
+									</p>
+								</div>
+								<!-- //이용내역 없음 -->
+								<!-- 이용내역 있음 -->
+								<div class="section-contents">
+									<div class="form-detail">
+										<div class="form-detail-block">
+											<dl class="form-detail-list type-text-default">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">고객명</dt>
+													<dd class="form-detail-group type-block"><strong>홍길동</strong></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일</dt>
+													<dd class="form-detail-group type-block"><strong>2018.06.15</strong></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">사용현황</dt>
+													<dd class="form-detail-group type-block"><strong>미 사용</strong></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">하이브리드 한도</dt>
+													<dd class="form-detail-group type-block"><strong>30 만원</strong></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">총 회원 한도</dt>
+													<dd class="form-detail-group type-block"><strong>300 만원</strong></dd>
+												</div>
+											</dl>
+										</div>
+										<div class="form-detail-block">
+											<dl class="form-detail-list type-text-default">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">고객명</dt>
+													<dd class="form-detail-group type-block"><strong>홍길동</strong></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일</dt>
+													<dd class="form-detail-group type-block"><strong>2018.06.15</strong></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">사용현황</dt>
+													<dd class="form-detail-group type-block"><strong>미 사용</strong></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">하이브리드 한도</dt>
+													<dd class="form-detail-group type-block"><strong>30 만원</strong></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">총 회원 한도</dt>
+													<dd class="form-detail-group type-block"><strong>300 만원</strong></dd>
+												</div>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<!-- //이용내역 있음 -->
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h2 class="title">고객 확인 정보</h2>
+								</div>
+								<div class="section-contents">
+									<div class="form-list">
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">연간 소득</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-select-block type-placeholder">
+													<button type="button" class="ui-button ui-select" title="연간 소득 선택">선택</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">신용 점수 선택</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-radio-group type-panel">
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" data-checkbox-tab="radioPanel1-1" checked />
+														<label for="radioPanel1-1" class="ui-label">
+															<span class="ui-label-text">474점 초과</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" data-checkbox-tab="radioPanel1-2" />
+														<label for="radioPanel1-2" class="ui-label">
+															<span class="ui-label-text">
+																474점 이하<br />
+																(연체, 대출과다 등에만 해당)
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-detail margin-top-25">
+										<dl class="form-detail-list">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">결제일</dt>
+												<dd class="form-detail-group">13일</dd>
+											</div>
+										</dl>
+									</div>
+									<ul class="info-list margin-top-25">
+										<li class="info-item type-presa">상기 정보는 동 서비스가 고객님 상황에 적합한지 여부를 확인하기 위해 활용 됩니다.</li>
+										<li class="info-item type-presa">신용점수 미달 시 하이브리드 신청이 거절되며, 당일 재신청이 불가합니다.</li>
+										<li class="info-item type-presa">변제 계획인 결제일 변경을 원하시는 경우, 앱 내 결제일 변경 메뉴 또는 콜센터를 통해 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">하이브리드 서비스는 신용카드 개인회원 표준약관에 의거하여 운용됩니다.</li>
+										<li class="info-item">상품 이용 전 하이브리드 서비스 약관,신용카드 개인회원 표준약관, 하이브리드 일반설명서 및 핵심 설명서를 반드시 확인하시고 신청해주시기 바랍니다.</li>
+										<li class="info-item">하이브리드 서비스 신청 시에는 개인(신용)정보 조회 동의가 필수 입니다.</li>
+										<li class="info-item">
+											<div>
+												연체이자율(약정이율+최대3%)은 회원별/이용상품별로 차등 적용되며, 법정 최고금리(20%)를 초과하지 않습니다. 단, 연체 발생 시점에 약정이율이 없는 경우는 아래와 같이 적용합니다.
+											</div>
+											<ul class="info-list">
+												<li class="info-item type-indent"><span class="indent">-</span>일시불 거래 연체 시 : 거래 발생 시점의 최소기간(2개월) 유이자 할부 금리</li>
+												<li class="info-item type-indent"><span class="indent">-</span>무이자 할부 거래 연체 시 : 거래발생 시점의 동일한 할부 계약기간의 유이자 할부 금리</li>
+												<li class="info-item type-indent">
+													<span class="indent">-</span>그 외의 경우 : 약정이율은 상법상 상사법정이율과 상호금융 가계자금대출금리* 중 높은 금리 적용<br />
+													* 한국은행에서 매월 발표하는 가장 최근의 비은행 금융기관 가중평균 대출금리(신규대출 기준)
+												</li>
+											</ul>
+										</li>
+										<li class="info-item">신용카드 남용은 가계경제에 위협이 됩니다.</li>
+										<li class="info-item">여신금융상품 이용 시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">신청</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

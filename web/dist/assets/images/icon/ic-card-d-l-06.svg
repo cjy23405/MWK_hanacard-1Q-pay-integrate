@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1,.cls-2,.cls-4{fill:none}.cls-2,.cls-4{stroke:#2d3239;stroke-width:1.5px}.cls-3{fill:#7dedf3}.cls-4{stroke-linecap:round;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="card_d_l_ic_06" transform="translate(-24 -858)">
+        <path id="사각형_15576" data-name="사각형 15576" class="cls-1" transform="translate(24 858)" d="M0 0h40v40H0z"/>
+        <g id="그룹_12564" data-name="그룹 12564" transform="translate(-14658 3797)">
+            <path id="사각형_15596" data-name="사각형 15596" class="cls-1" transform="translate(14686 -2935)" d="M0 0h32v32H0z"/>
+            <path id="패스_12262" data-name="패스 12262" class="cls-2" d="M7.251 26.177h-5.5V17.1a2.879 2.879 0 0 1 2.839-2.92h2.661z" transform="translate(14684.997 -2929.927)"/>
+            <path id="패스_12263" data-name="패스 12263" class="cls-2" d="M1.751 26.177h5.5V17.1a2.879 2.879 0 0 0-2.839-2.92H1.751z" transform="translate(14709.999 -2929.927)"/>
+            <path id="패스_12268" data-name="패스 12268" class="cls-3" d="M20.442 7.251a6.5 6.5 0 1 1-6.5-6.5 6.5 6.5 0 0 1 6.5 6.5z" transform="translate(14686.559 -2933.507)"/>
+            <path id="패스_12267" data-name="패스 12267" class="cls-3" d="M16.893 24.29h-8V17.6a1.382 1.382 0 0 1 1.445-1.31h5.111a1.383 1.383 0 0 1 1.445 1.31z" transform="translate(14687.107 -2927.386)"/>
+            <g id="그룹_12563" data-name="그룹 12563" transform="translate(0 .579)">
+                <path id="선_320" data-name="선 320" class="cls-4" transform="translate(14699.414 -2928.335)" d="M0 0h5.171"/>
+                <path id="선_321" data-name="선 321" class="cls-4" transform="translate(14702 -2930.921)" d="M0 0v5.171"/>
+            </g>
+            <path id="패스_12264" data-name="패스 12264" class="cls-2" d="M21.567 6.373a8.649 8.649 0 0 1 3.56 7.067v17.518H5.626V13.44A8.662 8.662 0 0 1 9 6.513" transform="translate(14686.622 -2934.708)"/>
+            <path id="패스_12265" data-name="패스 12265" class="cls-2" d="M20.442 7.251a6.5 6.5 0 1 1-6.5-6.5 6.5 6.5 0 0 1 6.5 6.5z" transform="translate(14688.057 -2935.007)"/>
+            <path id="선_322" data-name="선 322" class="cls-4" transform="translate(14698.936 -2917.256)" d="M0 0h6.13"/>
+            <path id="패스_12266" data-name="패스 12266" class="cls-2" d="M16.893 25.29h-8v-7.526a1.459 1.459 0 0 1 1.445-1.474h5.111a1.46 1.46 0 0 1 1.445 1.474z" transform="translate(14689.107 -2929.04)"/>
+        </g>
+    </g>
+</svg>

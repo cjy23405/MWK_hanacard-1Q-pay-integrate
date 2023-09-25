@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-my-pick-detail">나만의 pick 상세</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 나만의 pick 상세 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-my-pick-detail">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="coupon-detail type-layer-head">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+									<div class="coupon-detail-info">
+										<div class="coupon-detail-brand">나만의 Pick 첫만남 이벤트</div>
+										<!-- 2022.03.25 굵기 수정 -->
+										<h2 class="coupon-detail-name font-weight-medium">커피빈 2,000원 캐쉬백</h2>
+									</div>
+								</div>
+
+								<section class="page-section-group">
+									<div class="section-title">
+										<h2 class="title">기간</h2>
+									</div>
+									<p class="basic-text color-blur">2020.01.01 ~ 2020.01.31</p>
+								</section>
+
+								<section class="page-section-group">
+									<div class="section-title">
+										<h2 class="title">대상</h2>
+									</div>
+									<p class="basic-text color-blur">
+										하나 신용/체크 카드회원<br />
+										(법인, 선불, 기프트카드 제외)
+									</p>
+								</section>
+
+								<section class="page-section-group">
+									<div class="section-title">
+										<h2 class="title">주소</h2>
+									</div>
+									<p class="basic-text color-blur">서울 중구 을지로 66 하나금융금룹 (을지로 2가) 통합데이터센터 1층 안내데스크</p>
+									<div class="margin-top-25">
+										<div style="line-height: 200px; background-color: var(--gray-30); text-align: center">MAP AREA</div>
+									</div>
+								</section>
+
+								<section class="page-section-group">
+									<div class="section-title">
+										<h2 class="title">연락처</h2>
+									</div>
+									<p class="basic-text color-blur"><a href="tel:02-1234-5678">02-1234-5678</a></p>
+								</section>
+
+								<section class="page-section-group">
+									<div class="section-title">
+										<h2 class="title">바로가기</h2>
+									</div>
+									<p class="basic-text color-blur"><a href="">www.abcedf.com</a></p>
+								</section>
+
+								<div class="use-notice-area js-ui-accordion">
+									<div class="use-notice-item js-ui-accordion__item">
+										<button type="button" class="use-notice-opener js-ui-accordion__opener">
+											이용안내
+											<span class="for-a11y">
+												상세 내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+										<div class="use-notice-contents js-ui-accordion__layer">
+											<div class="info-list">
+												<p class="info-item">할인금액은 결제대금에서 차감(신용) 또는 캐쉬백(체크) 됩니다.</p>
+												<p class="info-item">이용금액을 취소하시면 할인 한도가 복원됩니다.</p>
+												<p class="info-item">가족카드 이용 시 본인 회원 이용금액에 포함됩니다.</p>
+												<p class="info-item">다른 청구할인 혜택과 중복되는 경우 큰 금액으로 할인이 적용됩니다.</p>
+												<p class="info-item">할부 이용건은 이용 일자의 실적으로 전액 합산 반영됩니다.</p>
+												<p class="info-item">카드사 및 제휴사의 사정으로 변경/중단 될 수 있습니다.</p>
+												<p class="info-item">업체정보(주소/연락처 등)는 가맹점에서 직접 등록한 내용으로, 실제와 다를 수 있습니다.</p>
+												<p class="info-item color-wrong">신용카드 남용은 가계경제에 위협이 됩니다.</p>
+												<p class="info-item color-wrong">여신금융상품 이용시 귀하의 신용등급이 하락할 수 있습니다.</p>
+												<p class="info-item type-presa">준법심의번호 : 준법심의 19-0324 (2019.02.08~2019.12.31)</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot type-fixed">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<div class="ui-basic-button type-primary type-icon type-icon-pick type-disabled">신청완료</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 나만의 pick 상세 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-my-pick-detail');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

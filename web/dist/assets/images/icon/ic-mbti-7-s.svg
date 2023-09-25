@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <clipPath id="clip-path">
+            <circle id="타원_1947" data-name="타원 1947" class="cls-1" cx="8" cy="8" r="8" transform="translate(38.5 314.5)"/>
+        </clipPath>
+        <style>
+            .cls-1,.cls-7{fill:none}.cls-1{stroke:#2d3239;stroke-width:1.5px}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_mbti_7_s" transform="translate(-36 -312)">
+        <path id="빼기_357" data-name="빼기 357" d="M-23313 12271.5a7.487 7.487 0 0 1-6.641-4.014 7.464 7.464 0 0 0 2.73.513 7.509 7.509 0 0 0 7.5-7.5 7.52 7.52 0 0 0-.859-3.488 7.481 7.481 0 0 1 3.426 2.711 7.439 7.439 0 0 1 1.338 4.271 7.509 7.509 0 0 1-7.494 7.507z" transform="translate(23359.656 -11941.344)" style="fill:#7dedf3"/>
+        <g id="타원_1942" data-name="타원 1942" class="cls-1" transform="translate(38 314)">
+            <circle class="cls-6" cx="8" cy="8" r="8"/>
+            <circle class="cls-7" cx="8" cy="8" r="7.25"/>
+        </g>
+        <g id="사각형_16598" data-name="사각형 16598" style="fill:#fff;stroke:#2d3239">
+            <path class="cls-6" d="M0 0h1.5v14.254H0z" transform="rotate(90 -134.095 187.155)"/>
+            <path class="cls-7" d="M.5.5H1v13.254H.5z" transform="rotate(90 -134.095 187.155)"/>
+        </g>
+        <g id="마스크_그룹_241" data-name="마스크 그룹 241" transform="translate(-.5 -.5)" style="clip-path:url(#clip-path)">
+            <g id="타원_1944" data-name="타원 1944" class="cls-1" transform="translate(42.767 313.433)">
+                <ellipse class="cls-6" cx="3.733" cy="9.067" rx="3.733" ry="9.067"/>
+                <ellipse class="cls-7" cx="3.733" cy="9.067" rx="2.983" ry="8.317"/>
+            </g>
+            <g id="타원_1945" data-name="타원 1945" class="cls-1" transform="rotate(90 -127.6 182.633)">
+                <ellipse class="cls-6" cx="4.8" cy="8.533" rx="4.8" ry="8.533"/>
+                <ellipse class="cls-7" cx="4.8" cy="8.533" rx="4.05" ry="7.783"/>
+            </g>
+            <g id="타원_1946" data-name="타원 1946" class="cls-1" transform="rotate(90 -135.067 190.1)">
+                <ellipse class="cls-6" cx="4.8" cy="8.533" rx="4.8" ry="8.533"/>
+                <ellipse class="cls-7" cx="4.8" cy="8.533" rx="4.05" ry="7.783"/>
+            </g>
+        </g>
+    </g>
+</svg>

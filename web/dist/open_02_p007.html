@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">청구내역</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title type-wrap">
+										<strong class="title">청구년월</strong>
+										<span class="title-exp">(*최근 1년 이내 조회가능)</span>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block">
+											<button type="button" class="ui-button ui-select" title="청구년월 선택">2021년 7월</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">청구서 목록</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block">
+											<button type="button" class="ui-button ui-select" title="청구서 목록 선택">청구서1</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="total-amount type-no-line margin-bottom-none">
+								<div class="total-amount-head">
+									<h3 class="total-amount-title">결제일 14일</h3>
+								</div>
+								<div class="total-amount-val">총 60,000 원</div>
+							</div>
+
+							<div class="usage-default-area">
+								<ul class="usage-default-list js-ui-accordion margin-top-10">
+									<!-- 청구내역 없는 경우 -->
+									<li class="type-none type-line">
+										<p class="item-text">청구내역이 없습니다.</p>
+									</li>
+									<!-- //청구내역 없는 경우 -->
+									<li class="usage-default-item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title type-multi-ellipsis">던킨도너츠 을지로입구점</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">60,000 원</div>
+											</div>
+										</div>
+										<div class="usage-default-block type-flex-column type-align-middle margin-top-none">
+											<div class="usage-default-left">
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">458745******3456</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.04.12 12:59:29</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item js-ui-accordion__item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title type-multi-ellipsis">TRAVEL RESERVATION</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">10,000 원</div>
+											</div>
+										</div>
+										<!-- 2022.02.04 : mod : .usage-default-block 에 type-align-middle 클래스 값 제거 -->
+										<div class="usage-default-block type-flex-column margin-top-none">
+											<div class="usage-default-left">
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">458745******3456</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.04.12 12:59:29</div>
+												</div>
+											</div>
+											<div class="usage-default-right type-auto">
+												<button type="button" class="usage-default-opener js-ui-accordion__opener">
+													<span class="for-a11y">
+														상세내용
+														<span class="open-text">열기</span>
+														<span class="close-text">닫기</span>
+													</span>
+												</button>
+											</div>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="form-detail-block margin-top-15">
+												<dl class="form-detail-list type-text-default">
+													<div class="form-detail-item">
+														<!-- 2022.02.04 : mod : 문구 수정 -->
+														<dt class="form-detail-title">수수료</dt>
+														<!-- //2022.02.04 : mod : 문구 수정 -->
+														<dd class="form-detail-group">
+															<strong>300 원</strong>
+														</dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<button type="button" class="ui-button ui-button-more">더보기</button>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">오픈뱅킹을 통해 타사카드 청구내역을 조회하는 경우 실제청구금액과 다를 수 있으니 정확한 청구금액은 해당 금융기관을 이용해 주시기 바랍니다.</li>
+										<li class="info-item">청구내역은 카드별 용내역 안내가 아니며, 해당 금융기관에서 보내준 조회 청구년월의 청구서 정보 기준으로 조회됩니다.</li>
+										<li class="info-item">가족카드 및 체크카드 이용내역은 조회 대상에서 제외됩니다. 단, 체크카드 이용내역 중 청구금액이 존재하는 경우는 조회 가능합니다.</li>
+										<li class="info-item">-로 표기된 항목은 해당 금융기관에서 보내는 정보가 불명확한 경우로 해당 금융기관으로 문의해 주시기 바랍니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

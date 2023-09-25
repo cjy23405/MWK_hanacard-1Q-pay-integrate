@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-transaction-account">거래내역 조회 계좌선택</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 거래내역 조회 계좌선택 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--find" data-layer="layer-transaction-account">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">계좌선택</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<!-- 계좌 리스트 -->
+									<div class="ui-select-list type-unset">
+										<div class="ui-select-item">
+											<div class="ui-radio-block">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-1" />
+												<label for="radio1-1" class="ui-label type-block">
+													<div class="card-list">
+														<div class="card-item">
+															<span class="card-block">
+																<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																<!-- DD : 이미지 없을 때 -->
+																<span class="logo-image">
+																	<span class="logo-image-inner"></span>
+																</span>
+																<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																<div class="card-info">
+																	<h3 class="card-name basic-text">우리은행 직장인제테크저축통장</h3>
+																	<div class="card-number-block">
+																		<div class="card-number">
+																			<span class="card-number-item">011020112341311</span>
+																		</div>
+																	</div>
+																	<div class="card-total-amount">
+																		<span class="card-total-amount-val">18,880,017 원</span>
+																	</div>
+																</div>
+															</span>
+														</div>
+													</div>
+												</label>
+											</div>
+										</div>
+										<div class="ui-select-item">
+											<div class="ui-radio-block">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-2" />
+												<label for="radio1-2" class="ui-label type-block">
+													<div class="card-list">
+														<div class="card-item">
+															<span class="card-block">
+																<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																<!-- DD : 이미지 에러 -->
+																<span class="logo-image">
+																	<span class="logo-image-inner">
+																		<!-- 2022.04.27 : mod : alt값 변경 -->
+																		<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																		<img src="./assets/images/_dummy/logo-hana-card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																<div class="card-info">
+																	<h3 class="card-name basic-text">IBK기업은행 직장인우대저축통장</h3>
+																	<div class="card-number-block">
+																		<div class="card-number">
+																			<span class="card-number-item">011020112341311</span>
+																		</div>
+																	</div>
+																	<div class="card-total-amount">
+																		<span class="card-total-amount-val">35,000 원</span>
+																	</div>
+																</div>
+															</span>
+														</div>
+													</div>
+												</label>
+											</div>
+										</div>
+										<!-- 2022.02.25 : mod : type-cancel 클래스 추가 -->
+										<!-- DD : 잔액조회 오류시 -->
+										<div class="ui-select-item type-cancel">
+											<div class="ui-radio-block">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-3" disabled />
+												<label for="radio1-3" class="ui-label type-block">
+													<div class="card-list">
+														<div class="card-item">
+															<span class="card-block">
+																<!-- DD : 이미지 있을 때 -->
+																<span class="logo-image">
+																	<span class="logo-image-inner">
+																		<!-- 2022.04.27 : mod : alt값 변경 -->
+																		<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																		<img src="./assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<div class="card-info">
+																	<h3 class="card-name basic-text">SC제일은행 에이스통장</h3>
+																	<div class="card-number-block">
+																		<div class="card-number">
+																			<span class="card-number-item">011020112341311</span>
+																		</div>
+																	</div>
+																	<div class="card-result-group margin-top-4">
+																		<span class="card-result color-wrong">잔여조회오류</span>
+																	</div>
+																</div>
+															</span>
+														</div>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<!-- //계좌 리스트 -->
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 거래내역 조회 계좌선택 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-transaction-account');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

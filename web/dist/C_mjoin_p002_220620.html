@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">회원가입</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title"><span class="title-step">STEP 2</span> 정보를 입력해주세요.</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 2단계 중 2단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-contents">
+									<div class="form-list">
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">아이디</strong>
+											</div>
+											<div class="form-group">
+												<div class="form-flex">
+													<div class="form-flex-cell type-flexible">
+														<div class="ui-input-block type-use-delete">
+															<!-- 2022.04.27 : mod : title 값 수정 -->
+															<input type="text" class="ui-input" title="아이디 영문/숫자 6~12자리 입력" placeholder="영문/숫자 6~12자리 입력" required />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+													</div>
+													<div class="form-flex-cell">
+														<button type="button" class="ui-button ui-basic-button type-small type-gray">중복확인</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">비밀번호</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block">
+													<!-- 2022.04.27 : mod : title 값 수정 -->
+													<input type="password" class="ui-input" title="비밀번호 영문/숫자/특수문자 조합 8~15자리 입력" placeholder="영문/숫자/특수문자 조합 8~15자리" required />
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">비밀번호 확인</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block">
+													<input type="password" class="ui-input" title="비밀번호 재입력" placeholder="비밀번호 재입력" required />
+												</div>
+												<ul class="info-list type-row">
+													<li class="info-item">영문 대문자, 영문 소문자, 숫자, 특수문자(~ ! @ # $ % ^ & * _ + ?) 중 3종 이상을 조합. 단, 특수문자 필수 포함</li>
+													<li class="info-item">주민등록번호, 전화번호, 아이디와 4자리 이상 순환, 역순으로 중복되거나 연속된 4개 이상의 문자, 숫자 사용불가</li>
+												</ul>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">이메일 주소</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input" title="이메일 주소 입력" placeholder="이메일 주소 입력" />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+                        <div class="ui-select-multiple-item type-all margin-top-35 has-tooltip">
+                            <div class="ui-checkbox-block type-large">
+                                <input type="checkbox" class="ui-checkbox" id="selectCheckbox-all" data-checkbox-group="selectCheckbox" />
+                                <label for="selectCheckbox-all" class="ui-label">
+                                    <span class="ui-checkbox-object"></span>
+                                    <span class="ui-label-text">간편 비밀번호 사용</span>
+                                </label>
+                                <div class="ui-tooltip-wrap">
+                                    <span class="ui-tooltip js-ui-dropdown">
+                                        <span class="ui-tooltip-head">
+                                            <button type="button" class="ui-button ui-tooltip-opener js-ui-dropdown__opener">
+                                                <span class="ui-notice-icon">
+                                                    <span class="for-a11y">(도움말 <span class="open-text">열기</span><span class="close-text">닫기</span>)</span>
+                                                </span>
+                                            </button>
+                                        </span>
+                                        <span class="ui-tooltip-layer js-ui-dropdown__layer">
+                                            <span class="ui-tooltip-bubble">
+												<span class="ui-tooltip-bubble-message">
+													6자리 숫자만으로 간편하게 로그인<br />
+													할 수 있는 안전한 인증수단입니다.<br />
+													(브라우저당 1명만 이용가능)
+												</span>
+                                                <button type="button" class="ui-button ui-tooltip-bubble-close js-ui-dropdown__closer">
+                                                    <span class="for-a11y">도움말 닫기</span>
+                                                </button>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+						<div class="use-notice-area">
+							<div class="use-notice-item">
+								<h3 class="use-notice-title">이용안내</h3>
+								<div class="use-notice-contents">
+									<ul class="info-list">
+										<li class="info-item">이메일 정보를 변경하시는 경우, 이메일 청구서 등을 받으시는 카드회원정보의 이메일 주소가 업데이트 됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">신청</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

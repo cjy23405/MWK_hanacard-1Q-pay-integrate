@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">송금</h1>
+						</div>
+						<div class="header-right">
+							<!-- 2022.02.21 : mod : 버튼 변경 -->
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+							<!-- //2022.02.21 : mod : 버튼 변경 -->
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							<strong class="color-primary">김하나</strong>님에게 <strong class="color-primary">1,000원</strong><br />
+							송금 대기중입니다.
+						</h2>
+						<div class="page-info has-com-icon type-icon-talk">
+							<p class="page-info-text">
+								<div>
+									송금 받을 계좌를 입력할 수 있도록<br />
+									김하나님께 문자 메시지를 발송하였습니다.
+								</div>
+								<div class="margin-top-10">
+									받는 분이 2021.12.02 14:30까지(24시간)<br/>
+									받지 않으면 홍길동님께 돌려드립니다.
+								</div>
+							</p>
+						</div>
+
+						<div class="page-section">
+							<div class="form-detail type-line">
+								<div class="coupon-detail-buttons type-only margin-top-minus-10">
+									<!-- 2022.03.31 : mod : 공유하기 버튼 수정 -->
+									<div class="ui-button-tooltip-wrap type-share">
+										<div class="ui-button-tooltip">
+											<!-- 2022.04.27 : mod : 히든텍스트 추가 -->
+											<span class="for-a11y">공유하기 버튼을 누르면</span>
+											<span class="ui-button-tooltip-text">받는 분에게 알려줄 수 있어요.</span>
+										</div>
+										<button type="button" class="ui-badge type-icon-share type-icon-share">공유하기</button>
+									</div>
+									<!-- //2022.03.31 : mod : 공유하기 버튼 수정 -->
+								</div>
+								<div class="form-detail-list margin-top-25">
+									<div class="form-detail-item">
+										<span class="form-detail-title">출금 계좌</span>
+										<!-- 2022.02.21 : mod : 표기법 변경 -->
+										<span class="form-detail-group">신한은행  011020112341311</span>
+										<!-- //2022.02.21 : mod : 표기법 변경 -->
+									</div>
+									<div class="form-detail-item">
+										<span class="form-detail-title">받는 분 연락처</span>
+										<span class="form-detail-group">홍길동 010-1234-1342</span>
+									</div>
+									<div class="form-detail-item">
+										<span class="form-detail-title">수수료</span>
+										<!-- 2022.02.21 : mod : 표기법 변경 -->
+										<span class="form-detail-group">면제 (프리미엄 우수 회원)</span>
+										<!-- //2022.02.21 : mod : 표기법 변경 -->
+									</div>
+									<div class="form-detail-item">
+										<span class="form-detail-title">받는 분에게 표기</span>
+										<span class="form-detail-group">홍길동</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">확인</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-simple-lift">Simple Life 서비스</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: Simple Life 서비스 -->
+			<!-- 2022.09.02 : mod : layer-wrap에 is-not-background-close 클래스 추가 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select is-not-background-close" data-layer="layer-simple-lift">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2022.11.28 : mod : 구조변경 및 상단 카드명 추가 -->
+								<div class="header__left">
+									<p class="card-name color-primary">Simple Life 카드</p>
+									<!-- 2022.11.28 : mod : 문구수정 -->
+									<h2 class="header__title">혜택을 선택해주세요.</h2>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="form-list-wrap margin-bottom-20">
+									<div class="form-item">
+										<div class="ui-radio-group type-grid type-col2">
+											<!-- 2022.10.27 : mod : label에 type-block 클래스 추가 및 문구 추가 -->
+											<div class="ui-form-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-1" checked />
+												<label for="radioGrid1-1" class="ui-label type-block">
+													<span class="ui-label-text">
+														<!-- 2022.11.17 : mod : 문구수정 -->
+														<span class="text-medium">Simple 혜택</span>
+													</span>
+													<span class="ui-label-info-text">
+														국내 일시불/할부<br />
+														이용금액 0.7% 할인
+													</span>
+												</label>
+											</div>
+											<div class="ui-form-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-2" />
+												<label for="radioGrid1-2" class="ui-label type-block">
+													<span class="ui-label-text">
+														<!-- 2022.11.17 : mod : 문구수정 -->
+														<span class="text-medium">Life 혜택</span>
+													</span>
+													<span class="ui-label-info-text">
+														자동이체 전월 실적<br />
+														30/80만 이상 시<br />
+														1.1/1.5만 할인
+													</span>
+												</label>
+											</div>
+											<!-- //2022.10.27 : mod : label에 type-block 클래스 추가 및 문구 추가 -->
+										</div>
+									</div>
+								</div>
+
+								<div class="ui-form">
+									<dl class="ui-form-list">
+										<!-- 2022.11.30 : mod : .ui-form-item 의 .type-inputed 클래스 삭제 -->
+										<div class="ui-form-item">
+											<!-- 2022.11.17 : mod : 문구수정 -->
+											<dt class="ui-form-key" data-focus-input="name">봄코리아 회원번호</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="in-input-block">
+															<!-- 2022.09.13 : mod : type 값 변경, pattern 속성 추가 -->
+															<input type="number" pattern="\d*" class="in-input" title="봄코리아 회원번호 8자리 입력" placeholder="봄코리아 회원번호 8자리" data-focus-input-target="name" />
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<!-- 2022.08.24 : del : 에러 케이스 삭제 $('input').uiFormInvalid(true, '에러 메세지'); 함수 이용해주세요. (컴포넌트 가이드 참고)
+										<div class="ui-form-item is-invalid">
+											<dt class="ui-form-key" data-focus-input="name">회원번호</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="in-input-block is-invalid">
+															<input type="text" class="in-input" title="봄코리아 회원번호 8자리 입력" placeholder="봄코리아 회원번호 8자리" data-focus-input-target="name" />
+														</div>
+														<p class="ui-form-invalid-message" aria-role="alert" aria-live="assertive">회원번호 8자리를 입력해주세요.</p>
+													</div>
+												</div>
+											</dd>
+										</div>
+										 -->
+									</dl>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: Simple Life 서비스 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-simple-lift');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

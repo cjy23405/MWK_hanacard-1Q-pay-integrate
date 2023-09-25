@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">제휴쿠폰</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-coupon">
+						<div class="toggle-search">
+							<div class="toggle-search-tab">
+								<div class="ui-tab">
+									<ul class="ui-tab-list">
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link is-active" role="button">모든 쿠폰</a>
+										</li>
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link" role="button">내 쿠폰</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">모든 쿠폰</h2>
+
+						<!-- 2022.02.21 : add : 주석 추가 -->
+						<!--
+							DD :
+							개발시 카테고리 .sorting-list 영역 태그 구조
+							- 페이지 이동으로 구현되는 경우 [공통 > 카테고리 탭 > 링크형](_category-tab-type-1.html) 이용
+							- ajax 방식으로 구현되는 경우 [공통 > 카테고리 탭 > radio형](_category-tab-type-2.html) 이용
+						-->
+						<div class="sorting-area js-ui-accordion" data-focus-open="false">
+							<div class="sorting-inner js-ui-accordion__item">
+								<button type="button" class="sorting-opener js-ui-accordion__opener">
+									<span class="for-a11y">
+										탭 영역
+										<span class="open-text">펼치기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="sorting-layer js-ui-accordion__layer">
+									<div class="sorting-contents">
+										<div class="sorting-list">
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab type-vip">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-all" checked />
+													<label for="sorting-all" class="ui-label">
+														<span class="ui-label-text">국내호텔</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab type-vip">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-1" />
+													<label for="sorting-1" class="ui-label">
+														<span class="ui-label-text">여행</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab type-vip">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-2" />
+													<label for="sorting-2" class="ui-label">
+														<span class="ui-label-text">골프</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab type-vip">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-3" />
+													<label for="sorting-3" class="ui-label">
+														<span class="ui-label-text">명품/쇼핑</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab type-vip">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-4" />
+													<label for="sorting-4" class="ui-label">
+														<span class="ui-label-text">레스토랑</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab type-vip">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-5" />
+													<label for="sorting-5" class="ui-label">
+														<span class="ui-label-text">생활/가전</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-list margin-top-none">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">제휴사 선택</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block">
+										<button type="button" class="ui-button ui-select" title="제휴사 선택">파크 하얏트 서울</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Case : 제휴쿠폰 없을 때 -->
+						<div class="link-item type-none type-flex type-no-line">
+							<p class="item-text">이용가능한 쿠폰이 없습니다.</p>
+						</div>
+						<!-- Case : //제휴쿠폰 없을 때 -->
+
+						<!-- Case : 제휴쿠폰 있을 때 -->
+						<div class="coupons">
+							<ul class="coupons-list">
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- DD : 이미지 없을 때 -->
+												<div class="logo-image type-vip-thumb">
+													<div class="logo-image-inner"></div>
+												</div>
+												<div class="coupon-card-brand">파크 하얏트 서울</div>
+												<div class="coupon-card-name">객실 10% 할인</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- DD : 이미지 에러 -->
+												<div class="logo-image type-vip-thumb">
+													<div class="logo-image-inner">
+														<img src="./assets/images/_dummy/event-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="coupon-card-brand">제휴사명<br />(최대 2줄까지 노출)</div>
+												<div class="coupon-card-name">쿠폰명<br />(최대 2줄까지 노출)</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- DD : 이미지 있을 때 -->
+												<div class="logo-image type-vip-thumb">
+													<div class="logo-image-inner">
+														<img src="./assets/images/_dummy/event-4.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="coupon-card-brand">제휴사명<br />(최대 2줄까지 노출)</div>
+												<div class="coupon-card-name">쿠폰명<br />(최대 2줄까지 노출)</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //Case : 제휴쿠폰 있을 때 -->
+
+						<div class="page-section type-line">
+							<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+							<h3 class="page-section-title">파크 하얏트 서울</h3>
+
+							<!-- 2022.02.24 : mod : 상세 영역 구조 변경 -->
+							<div class="wcms-data margin-top-15">
+								<section class="vip-event-data">
+									<!-- DD : 이 안에 wcms 상세 데이터 출력 -->
+									<div class="company-detail">
+										<img src="./assets/images/_dummy/main_detail_hd_211220.png" class="dt-img" alt="현대백화점 DUTY FREE" />
+
+										<div class="text mgt15">
+											<p style="color: #ae8d48">내 여행 최고의 목적지 현대백화점 DUTY FREE</p>
+											<p class="sub mgt15">
+												<strong>현대백화점 DUTY FREE는 유통전문 ‘현대백화점 그룹’에서 탄생한 면세점 브랜드입니다.</strong><br />
+												쇼핑부터 여행까지, 즐거움의 차원이 다른곳! <br />
+												면세점 최초 뷰티 체험공간에서부터 품격을 더해줄 퍼그널 쇼퍼 서비스와 유명 브랜드와의 콜라보래이션 스토어, 새로운 랜드마크인 디지털 사이니지까지 쇼핑의 즐거움이 여행의
+												즐거움으로 바뀌는 특별한 경험을 선사합니다.
+											</p>
+										</div>
+										<div class="wr mgt15">
+											<ul class="info">
+												<li><span class="call">이용처</span><span class="val" style="padding-left: 30px">현대백화점 DUTY FREE 시내면세점 (무역센터점, 동대문점)</span></li>
+												<li>
+													<span class="addr">주소</span
+													><span class="val" style="padding-left: 30px"
+														>· 무역센터점 : 서울시 강남구 테헤란로 517<br />
+														· 동대문점 : 서울시 중구 장충단로 275</span
+													>
+												</li>
+											</ul>
+											<a href="tel:1811-6688" class="btn-call"><img src="./assets/images/_dummy/btn-call-typ1.png" alt="전화하기" /></a>
+										</div>
+
+										<div style="margin: 30px auto 20px; text-align: center">
+											<a href="https://bit.ly/2N7R5MV" style="background: #000; color: #fff; font-weight: bold; padding: 15px; display: block" target="_blank">자세히 보기</a>
+										</div>
+
+										<div style="margin-top: 30px; border: 1px solid #a07830; padding: 20px; background: #fff">
+											<span class="tit" style="padding-bottom: 20px; display: block; font-size: 18px; font-weight: bold">[ 하나카드 우수회원 상시 혜택 ]</span>
+											<p style="padding-bottom: 10px; color: #000; line-height: 150%">
+												- <b>제공기간 :</b> 2022. 1. 1 ~ 12. 31<br />
+												- <b>이용처 :</b> 무역센터점, 동대문점<br />
+												- <b>문의 :</b> 고객센터 1811-6688<br /><span style="padding-left: 41px">홈페이지 <a href="https://hddfs.com/store" target="_blank">https://hddfs.com/store</a></span
+												><br /><br />
+												<strong>※ 자세한 사항은 상단 쿠폰 확인 바랍니다.</strong>
+											</p>
+
+											<style type="text/css">
+												.cnt-tb-wr {
+													margin-top: 3px;
+												}
+												.cnt-tb {
+													border-collapse: collapse;
+													display: block;
+													width: 100%;
+												}
+												.cnt-tb th,
+												.cnt-tb td {
+													border: solid #ddd;
+													border-width: 0 1px 1px 1px;
+													padding: 10px;
+													line-height: 140%;
+												}
+												.cnt-tb th {
+													text-align: center;
+												}
+												.cnt-tb td {
+													text-align: left;
+												}
+												.cnt-tb th:first-child {
+													border-left: 0;
+												}
+												.cnt-tb thead th {
+													background: #d5ccc2;
+												}
+												.cnt-tb tbody th {
+													background: #ece8e2;
+												}
+												.cnt-tb td:last-child {
+													border-right: 0;
+												}
+												.ib {
+													display: inline-block;
+												}
+											</style>
+
+											<div class="cnt-tb-wr" style="100%;">
+												<table class="cnt-tb" width="100%">
+													<colgroup>
+														<col style="width: 30%" />
+														<col style="width: 70%" />
+													</colgroup>
+													<thead>
+														<tr>
+															<th>제공 등급</th>
+															<th>혜택</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row"><span class="ib"></span>하나카드 VVIP</th>
+															<td>
+																멤버십 BLACK 등급 부여
+																<span style="color: #666; display: block; margin-top: 7px">* 멤버십 BLACK이란?</span>
+																<span style="padding-left: 8px; color: #666; display: block">최대 20% 상시 할인 제공, 인도장 First Pass Service 제공</span>
+																<span style="padding-left: 8px; color: #666; display: block">※ 바우처 미제공</span>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row"><span class="ib"></span>하나카드 퍼스트, 로열, 클래식</th>
+															<td>
+																멤버십 GOLD 등급 부여
+																<span style="color: #666; display: block; margin-top: 7px">* 멤버십 GOLD란?</span>
+																<span style="padding-left: 8px; color: #666; display: block">최대 15% 상시 할인 제공</span>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row"><span class="ib"></span>전 등급</th>
+															<td>
+																시내점 H선불카드 3만원 증정 (당일 $200 이상 구매 시)
+																<span style="color: #666; display: block; margin-top: 7px">* H선불카드란?</span>
+																<span style="padding-left: 8px; color: #666; display: block">본인 여권에 적립되는 선불카드로서, 여권만 있어도 언제든지 사용 가능</span>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+
+										<div class="law_txt mgt30">
+											<ul class="txt_li" style="font-weight: normal">
+												<li>계약 체결전 상품설명서 및 상품약관을 반드시 확인하시기 바랍니다.</li>
+												<li>신용카드 발급이 부적정한 경우(개인신용평점 낮음 등) 카드발급이 제한될 수 있습니다.</li>
+												<li>카드이용대금과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환하여야 합니다.</li>
+												<li>금융소비자는 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있습니다.</li>
+											</ul>
+											<ul class="txt_li">
+												<li>상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</li>
+												<li>신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</li>
+												<li>일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</li>
+											</ul>
+											<p class="pdt10">[준법심의 A-21-2141(2021.12.31~9999.12.31)]</p>
+										</div>
+									</div>
+								</section>
+							</div>
+							<!-- //2022.02.24 : mod : 상세 영역 구조 변경 -->
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-gray" role="button">제휴사 목록으로 이동</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

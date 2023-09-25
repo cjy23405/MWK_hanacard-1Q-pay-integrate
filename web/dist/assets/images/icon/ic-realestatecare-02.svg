@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <g data-name="그룹 13196">
+        <g data-name="그룹 11899" transform="translate(8 8)">
+            <g data-name="사각형 14112" style="stroke-width:1.5px;stroke:#2d3239;fill:#fff">
+                <path d="M5 0h10a8 8 0 0 1 8 8v16a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" style="stroke:none"/>
+                <path d="M5 .75h10A7.25 7.25 0 0 1 22.25 8v16A4.25 4.25 0 0 1 18 28.25H5A4.25 4.25 0 0 1 .75 24V5A4.25 4.25 0 0 1 5 .75z" style="fill:none"/>
+            </g>
+            <g data-name="교차 25" style="fill:none">
+                <path d="M4 8a4 4 0 0 1-4-4V0a8 8 0 0 1 8 8z" style="stroke:none" transform="translate(15)"/>
+                <path d="M6.325 6.5A6.523 6.523 0 0 0 1.5 1.674V4c0 1.378 1.122 2.5 2.5 2.5h2.325M8 8H4a4 4 0 0 1-4-4V0a8 8 0 0 1 8 8z" style="fill:#2d3239;stroke:none" transform="translate(15)"/>
+            </g>
+            <rect data-name="사각형 6085" width="6.267" height="1.567" rx=".783" transform="translate(5.222 7.311)" style="fill:#2d3239"/>
+            <rect data-name="사각형 6086" width="8.356" height="1.567" rx=".783" transform="translate(5.222 11.489)" style="fill:#2d3239"/>
+        </g>
+        <g data-name="그룹 12201" transform="translate(22.291 21.509)">
+            <circle data-name="타원 1877" cx="5.483" cy="5.483" r="5.483" transform="translate(3.104 1.306)" style="fill:#7dedf3"/>
+            <g data-name="타원 1878" style="fill:none;stroke-width:1.5px;stroke:#2d3239">
+                <circle cx="6.267" cy="6.267" r="6.267" style="stroke:none"/>
+                <circle cx="6.267" cy="6.267" r="5.517" style="fill:none"/>
+            </g>
+            <g data-name="사각형 14362" transform="rotate(-45 17.484 -5.09)" style="stroke:#2d3239;fill:#fff">
+                <rect width="1.567" height="5.222" rx=".783" style="stroke:none"/>
+                <rect x=".5" y=".5" width=".567" height="4.222" rx=".283" style="fill:none"/>
+            </g>
+        </g>
+    </g>
+</svg>

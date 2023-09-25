@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.121" height="10.121" viewBox="0 0 10.121 10.121">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-linecap:round;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="btn_close_s" transform="translate(-3.939 -3.939)">
+        <path id="사각형_11758" data-name="사각형 11758" transform="translate(4 4)" style="fill:none" d="M0 0h10v10H0z"/>
+        <path id="선_13" data-name="선 13" class="cls-2" transform="translate(5 5)" d="m0 0 8 8"/>
+        <path id="선_14" data-name="선 14" class="cls-2" transform="translate(5 5)" d="M8 0 0 8"/>
+    </g>
+</svg>

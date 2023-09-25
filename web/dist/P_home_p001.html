@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<h1 class="for-a11y">앱 소개</h1>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-app-intro">
+						<div class="tutorial-slide type-app-intro">
+							<ul class="tutorial-slide-list">
+								<li class="tutorial-slide-item">
+									<div class="tutorial-slide-scroller">
+										<div class="tutorial-slide-scroller-inner">
+											<div class="tutorial-slide-block">
+												<!-- 2022.04.08 : mod : 문구 변경 -->
+												<div class="tutorial-slide-title">
+													결제는 앱에서<br />
+													안전하게 이용하세요
+												</div>
+												<div class="tutorial-slide-text">
+													지갑이 없어도, 어디서나<br />
+													쉽고 빠르게 이용 가능합니다.
+												</div>
+												<!-- //2022.04.08 : mod : 문구 변경 -->
+												<div class="tutorial-slide-image type-5"></div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="tutorial-slide-item">
+									<div class="tutorial-slide-scroller">
+										<div class="tutorial-slide-scroller-inner">
+											<div class="tutorial-slide-block">
+												<div class="tutorial-slide-title">압도적인 쉬움</div>
+												<div class="tutorial-slide-text">앱의 상식을 바꾼 원큐페이</div>
+												<div class="tutorial-slide-image type-6"></div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="tutorial-slide-item">
+									<div class="tutorial-slide-scroller">
+										<div class="tutorial-slide-scroller-inner">
+											<div class="tutorial-slide-block">
+												<div class="tutorial-slide-title">결제는 더욱 강력</div>
+												<div class="tutorial-slide-text">
+													더하고, 고르고, 대고<br />
+													원큐페이로 고고고
+												</div>
+												<div class="tutorial-slide-image type-7"></div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="tutorial-slide-item">
+									<div class="tutorial-slide-scroller">
+										<div class="tutorial-slide-scroller-inner">
+											<div class="tutorial-slide-block">
+												<div class="tutorial-slide-title">메가급 기능, 앱은 하나</div>
+												<div class="tutorial-slide-text">하나카드니까 하나면 끝</div>
+												<div class="tutorial-slide-image type-8"></div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="app-intro-floating">
+							<!-- 2022.07.22 : mod : title 추가 -->
+							<a href="" class="app-intro-floating-link" title="새창열림">
+								<div class="form-flex">
+									<div class="form-flex-cell">
+										<img src="./assets/images/common/logo-1-q.svg" alt="1qpay" />
+									</div>
+									<div class="form-flex-cell">
+										<strong class="medium-text">하나카드앱 열기</strong>
+										<div class="basic-text color-blur margin-top-5">앱으로 안전하고 간편하게</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- DD : 앱일 경우 이 영역 제거 -->
+				<!-- fix bottom area -->
+				<div class="fix-bottom-wrap">
+					<div class="dock-menu">
+						<ul class="dock-menu-list">
+							<!-- DD : 해당 페이지면 is-active 클래스 값 추가 -->
+							<li class="dock-menu-item type-my is-active">
+								<a href="" class="dock-menu-link">마이</a>
+							</li>
+							<li class="dock-menu-item type-benefit">
+								<a href="" class="dock-menu-link">혜택</a>
+							</li>
+							<li class="dock-menu-item type-payment">
+								<a href="" class="dock-menu-link">결제</a>
+							</li>
+							<li class="dock-menu-item type-asset">
+								<a href="" class="dock-menu-link">내 자산</a>
+							</li>
+							<li class="dock-menu-item type-all">
+								<a href="" class="dock-menu-link">전체</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //fix bottom area -->
+				<!-- //DD : 앱일 경우 이 영역 제거 -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

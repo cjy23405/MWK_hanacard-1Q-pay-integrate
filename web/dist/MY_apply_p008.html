@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<h1 class="header-title">체크카드</h1>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-card-list">
+						<!-- 2022.02.21 : add : 주석 추가 -->
+						<!--
+							DD :
+							개발시 카테고리 .sorting-list 영역 태그 구조
+							- 페이지 이동으로 구현되는 경우 [공통 > 카테고리 탭 > 링크형](_category-tab-type-1.html) 이용
+							- ajax 방식으로 구현되는 경우 [공통 > 카테고리 탭 > radio형](_category-tab-type-2.html) 이용
+						-->
+						<div class="sorting-area">
+							<div class="sorting-inner">
+								<div class="sorting-layer">
+									<div class="sorting-contents">
+										<div class="sorting-list">
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-0" checked />
+													<label for="sorting-0" class="ui-label">
+														<span class="ui-label-text">해외</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-1" />
+													<label for="sorting-1" class="ui-label">
+														<span class="ui-label-text">캐쉬백</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-2" />
+													<label for="sorting-2" class="ui-label">
+														<span class="ui-label-text">멤버쉽</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section">
+							<div class="usage-area-head">
+								<div class="title">
+									<strong>총 <strong class="color-secondary">14</strong>개</strong>
+								</div>
+							</div>
+							<div class="cards">
+								<div class="card-list-area">
+									<ul class="card-list">
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<!-- DD : 이미지 없을 때 -->
+												<span class="card-image">
+													<a href="" class="display-block">
+														<span class="card-image-inner"></span>
+													</a>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<a href="" class="card-info" role="button">
+													<span class="card-name">아멕스 아시아나클럽 카드</span>
+													<div class="card-number">
+														<div>국내 1,500원당 <span class="color-primary">1마일</span> 적립</div>
+														<div>해외 1,500원당 <span class="color-primary">1.2마일</span> 적립</div>
+													</div>
+													<div class="card-badges">
+														<span class="ui-badge type-point">New</span>
+														<span class="ui-badge color-wrong">추천</span>
+														<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+														<span class="ui-badge color-primary-dark">바로발급</span>
+													</div>
+												</a>
+											</div>
+										</li>
+
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<!-- DD : 이미지 에러 -->
+												<span class="card-image">
+													<a href="" class="display-block">
+														<span class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</a>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<a href="" class="card-info" role="button">
+													<span class="card-name">아멕스 아시아나클럽 카드</span>
+													<div class="card-number">
+														<div>국내 1,500원당 <span class="color-primary">1마일</span> 적립</div>
+														<div>해외 1,500원당 <span class="color-primary">1.2마일</span> 적립</div>
+													</div>
+													<div class="card-badges">
+														<span class="ui-badge type-point">New</span>
+														<span class="ui-badge color-wrong">추천</span>
+														<span class="ui-badge color-secondary">가족카드</span>
+													</div>
+												</a>
+											</div>
+										</li>
+
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<!-- DD : 이미지 있을 때 -->
+												<span class="card-image">
+													<a href="" class="display-block">
+														<span class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</a>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<a href="" class="card-info" role="button">
+													<span class="card-name">모두의 건강 카드</span>
+													<div class="card-number">
+														<div>국내 모든 가맹점 <span class="color-primary">1.0%</span></div>
+														<div>통신비 <span class="color-primary">10%</span></div>
+													</div>
+													<div class="card-badges">
+														<span class="ui-badge color-wrong">추천</span>
+														<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+														<span class="ui-badge color-primary-dark">바로발급</span>
+														<span class="ui-badge color-secondary">가족카드</span>
+													</div>
+												</a>
+											</div>
+										</li>
+
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.24 : mod : 세로형 케이스 추가 -->
+												<!-- DD : 세로형 type-vertical 클래스 값 추가 -->
+												<span class="card-image type-vertical">
+													<a href="" class="display-block">
+														<span class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</a>
+												</span>
+												<!-- //2022.02.24 : mod : 세로형 케이스 추가 -->
+												<a href="" class="card-info" role="button">
+													<span class="card-name">모두의 건강 카드</span>
+													<div class="card-number">
+														<div>국내 모든 가맹점 <span class="color-primary">1.0%</span></div>
+														<div>통신비 <span class="color-primary">10%</span></div>
+													</div>
+													<div class="card-badges">
+														<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+														<span class="ui-badge color-primary-dark">바로발급</span>
+														<span class="ui-badge color-secondary">가족카드</span>
+													</div>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<button type="button" class="ui-button ui-button-more">더보기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+
+		<style>
+			.survey {
+
+			}
+			.survey .page-contents {
+				padding-top: 15px;
+			}
+			.survey .header {
+				background-color: #b6f5ed;
+			}
+			.survey .page-contents {
+				background:linear-gradient(#b6f5ed, #fff 34%);
+			}
+			.survey .page-title {
+				margin-bottom: 108px;
+				text-align: center;
+				font-size: 1.6rem;
+			}
+			.survey .form-detail {
+				margin-bottom: 13px;
+			}
+			.survey .form-detail-head .title {
+				font-size: 1.5rem;
+			}
+			.survey .form-detail .form-detail-head {
+				margin-top: 0;
+				margin-bottom: 15px;
+			}
+			.survey .box-wrap {
+				position: relative;
+				padding: 19px 15px;
+				border-radius: 6px;
+				background: #fff;
+				box-shadow: inset 0 0 0 1px var(--gray-30);
+			}
+			.survey .box-wrap:before {
+				content: '';
+				position: absolute;
+				top: -102px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				display: block;
+				width: 220px;
+				height: 102px;
+				background: url(/images/contents/bg_survey.png) no-repeat center / 100%;
+				/* background-size: contain; */
+			}
+			.survey .ui-radio-group.type-wrap {
+				margin-bottom: 0;
+			}
+			.survey .ui-radio-group.type-wrap .ui-radio-block {
+				flex: 0 0 40%;
+				margin-bottom: 12px;
+				margin-right: 10px;
+			}
+			.survey .ui-radio-block {
+				margin-bottom: 10px;
+			}
+			.survey .ui-radio-block + .ui-radio-block {
+				margin-left: 0;
+			}
+			.survey .ui-radio-object {
+				width: 18px;
+				height: 18px;
+			}
+			.survey .ui-label-text {
+				font-size: 1.4rem;
+			}
+			.survey .ui-input {
+				font-size: 1.4rem;
+			}
+			.survey .etc_box {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<!--2022.06.08 : survey 클래스 위치 변경-->
+			<div class="layout-wrap survey">				
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">하나카드 상담 서비스 만족도 조사</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							설문 예상 소요시간은 약 1분이며,<br />
+							잠시 시간을 내어 응답해 주시면 감사하겠습니다.
+						</h2>
+						<div class="box-wrap">
+							<!-- 상담 내용 만족도 조사-->
+							<div class="form-detail">
+								<div class="form-detail-head">
+									<h3 class="title">1. 오늘 상담 내용은 만족 하셨나요?</h3>
+								</div>
+								<div class="ui-radio-group">
+									<div class="ui-radio-block type-circle">
+										<input type="radio" class="ui-radio" id="radio1-1" name="survey01" />
+										<label for="radio1-1" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">매우 만족</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle">
+										<input type="radio" class="ui-radio" id="radio1-2" name="survey01" />
+										<label for="radio1-2" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">만족</span>
+										</label>
+									</div>
+								</div>
+								<div class="ui-radio-group">
+									<div class="ui-radio-block type-circle" style="width: 20%">
+										<input type="radio" class="ui-radio" id="radio1-3" name="survey01" />
+										<label for="radio1-3" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">보통</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle" style="width: 20%">
+										<input type="radio" class="ui-radio" id="radio1-4" name="survey01" />
+										<label for="radio1-4" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">불만족</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle" style="width: 30%">
+										<input type="radio" class="ui-radio" id="radio1-5" name="survey01" />
+										<label for="radio1-5" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">매우 불만족</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- //상담 내용 만족도 조사-->
+
+							<!-- 만족내용 조사 -->
+							<!--2022.05.26 : 기타 체크시 텍스트 박스 노출기능-->
+							<div class="form-detail survey02">
+								<div class="form-detail-head">
+									<h3 class="title">2. 어떤 점이 만족스러우셨나요?</h3>
+								</div>
+								<div class="ui-radio-group type-wrap">
+									<div class="ui-radio-block type-circle">
+										<input type="radio" class="ui-radio" id="radio2-1" name="survey02" onchange="setDisplay()" />
+										<label for="radio2-1" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">신속한 상담 연결</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle">
+										<input type="radio" class="ui-radio" id="radio2-2" name="survey02" onchange="setDisplay()" />
+										<label for="radio2-2" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">정확한 업무 처리</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle">
+										<input type="radio" class="ui-radio" id="radio2-3" name="survey02" onchange="setDisplay()" />
+										<label for="radio2-3" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">친절한 응대</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle">
+										<input type="radio" class="ui-radio" id="radio2-4" name="survey02" onchange="setDisplay()" />
+										<label for="radio2-4" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">쉬운 설명</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle etc_box">
+										<input type="radio" class="ui-radio" id="radio_etc01" name="survey02" onchange="setDisplay()" />
+										<label for="radio_etc01" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">기타</span>
+										</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block type-textarea type-has-counting" id="etc_view01" style="display: none">
+										<textarea class="ui-input" title="title" placeholder="(30자 이내)" rows="3" style="height: 118px"></textarea>
+										<span class="ui-counting"></span>
+									</div>
+								</div>
+							</div>
+							
+							<!--//2022.05.26 : 기타 체크시 텍스트 박스 노출기능-->
+							<!-- //만족내용 조사 -->
+
+							<!-- 아쉬운점 조사 -->
+							<!--2022.05.26 : 기타 체크시 텍스트 박스 노출기능-->
+							<div class="form-detail">
+								<div class="form-detail-head">
+									<h3 class="title">3. 아쉬운 점은 있으셨나요?</h3>
+								</div>
+								<div class="ui-radio-group type-wrap">
+									<div class="ui-radio-block type-circle">
+										<input type="radio" class="ui-radio" id="radio3-1" name="survey03" onchange="setDisplay2()" />
+										<label for="radio3-1" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">신속한 상담 연결</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle">
+										<input type="radio" class="ui-radio" id="radio3-2" name="survey03" onchange="setDisplay2()" />
+										<label for="radio3-2" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">정확한 업무 처리</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle">
+										<input type="radio" class="ui-radio" id="radio3-3" name="survey03" onchange="setDisplay2()" />
+										<label for="radio3-3" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">친절한 응대</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle">
+										<input type="radio" class="ui-radio" id="radio3-4" name="survey03" onchange="setDisplay2()" />
+										<label for="radio3-4" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">쉬운 설명</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-circle etc_box">
+										<input type="radio" class="ui-radio" id="radio_etc02" name="survey03" onchange="setDisplay2()" />
+										<label for="radio_etc02" class="ui-label">
+											<span class="ui-radio-object"></span>
+											<span class="ui-label-text">기타</span>
+										</label>
+									</div>
+								</div>
+								<div class="form-group margin-top-15">
+									<div class="ui-input-block type-textarea type-has-counting" id="etc_view02" style="display: none">
+										<textarea class="ui-input" title="title" placeholder="(30자 이내)" rows="3" style="height: 118px"></textarea>
+										<span class="ui-counting"></span>
+									</div>
+								</div>
+							</div>
+							<!--//2022.05.26 : 기타 체크시 텍스트 박스 노출기능-->
+							<!-- //아쉬운점 조사 -->
+
+							<!-- 응원의 메시지 -->
+							<div class="form-detail margin-bottom-none">
+								<div class="form-detail-head">
+									<h3 class="title">4. 하나카드 고객센터가 대한민국 1등 고객센터가 되기 위한 응원의 메시지를 보내주세요.</h3>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block type-textarea type-has-counting">
+										<textarea class="ui-input" title="title" placeholder="(50자 이내)" rows="3" style="height: 118px"></textarea>
+										<span class="ui-counting"></span>
+									</div>
+								</div>
+							</div>
+							<!-- //응원의 메시지 -->
+						</div>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button">완료</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			//2022.05.26 기타 체크시 체크박스 노출
+			function setDisplay() {
+				if ($('input:radio[id=radio_etc01]').is(':checked')) {
+					$('#etc_view01').show();
+					$('#etc_view01 .ui-input').css('height', '118px');
+				} else {
+					$('#etc_view01').hide();
+				}
+			}
+
+			function setDisplay2() {
+				if ($('input:radio[id=radio_etc02]').is(':checked')) {
+					$('#etc_view02').show();
+					$('#etc_view02 .ui-input').css('height', '118px');
+				} else {
+					$('#etc_view02').hide();
+				}
+			}
+		</script>
+		<!-- //script -->
+	</body>
+</html>

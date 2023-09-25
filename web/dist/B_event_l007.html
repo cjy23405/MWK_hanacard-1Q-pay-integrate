@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-enter-event">로그인 간편응모</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 로그인 간편응모-->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-enter-event">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="header">
+								<h2 class="header__title">
+									이벤트 응모를 위해<br />
+									회원정보를 입력해 주세요.
+								</h2>
+							</div>
+							<div class="js-ui-tab-panel">
+								<div class="ui-tab">
+									<ul class="ui-tab-list">
+										<li class="ui-tab-item">
+											<button type="button" class="ui-button ui-tab-link" data-tab-open="layer-tab-enter-event">간편응모</button>
+										</li>
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link" role="button">로그인</a>
+										</li>
+									</ul>
+								</div>
+								<div class="ui-tab-panel" data-tab="layer-tab-enter-event">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+									<h3 class="for-a11y">간편응모</h3>
+									<!-- 2022.07.22 : mod : .margin-top-none 클래스 추가 -->
+									<div class="form-list margin-top-none">
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">이름</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input" title="이름 입력" placeholder="이름 입력" required />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">생년월일</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="생년월일 입력" placeholder="생년월일 6자리 (예시 : 880101)" />
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">휴대폰번호 뒤 4자리</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="휴대폰번호 뒤 4자리 입력" placeholder="번호입력" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="terms-area js-ui-accordion margin-top-35">
+										<div class="terms-item js-ui-accordion__item">
+											<div class="ui-checkbox-block type-align-top">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" />
+												<label for="selectCheckbox-1" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">개인(신용)정보 수집 및 이용 동의</span>
+												</label>
+											</div>
+											<button type="button" class="terms-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+											<div class="terms-detail js-ui-accordion__layer">
+												<div class="small-text color-blur">
+													개인(신용)정보 수집 및 이용 동의(필수)
+													<ul class="info-list type-inherit margin-top-10">
+														<li class="info-item type-indent">
+															<span class="indent">1.</span>
+															<div class="indent-block">
+																<div>개인(신용)정보 수집, 이용목적</div>
+																<ul class="info-list type-inherit">
+																	<li class="info-item type-indent"><span class="indent">-</span>하나카드 온라인 이벤트 응모를 위한 정보 조회</li>
+																</ul>
+															</div>
+														</li>
+														<li class="info-item type-indent">
+															<span class="indent">2.</span>
+															<div class="indent-block">
+																<div>수집, 이용할 개인(신용)정보 항목</div>
+																<ul class="info-list type-inherit">
+																	<li class="info-item type-indent"><span class="indent">-</span>성명, 생년월일, 휴대폰번호(뒤 4자리) 정보</li>
+																</ul>
+															</div>
+														</li>
+														<li class="info-item type-indent">
+															<span class="indent">3.</span>
+															<div class="indent-block">
+																<div>개인(신용)정보의 보유, 이용기간</div>
+																<ul class="info-list type-inherit">
+																	<li class="info-item type-indent"><span class="indent">-</span>하나카드 온라인 이벤트 응모 자격 확인 후 별도 보관하지 않음</li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+													<ul class="info-list type-inherit margin-top-10">
+														<li class="info-item type-presa">위 사항에 대해 동의를 거부할 수 있으나 동의하지 않으시는 경우에는 본 행사 참여가 불가능함을 알려 드립니다.</li>
+														<li class="info-item type-presa">하나카드㈜는 단순조회 용도로 정보를 이용하고 있습니다. 상기사항에 동의하지 않은 경우 이벤트 응모 신청이 불가합니다.</li>
+														<li class="info-item type-presa">
+															하나카드㈜에 대하여 ‘별도의 개인(신용)정보에 관한 동의’를 한 경우 (금융거래 등 상거래의 체결&middot;유지?관리 목적 등)로서 해당 동의 목적으로 위 개인정보가 수집 및
+															이용되는 경우에는 해당 동의에 따른 보유 및 이용기간이 적용됩니다.
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">응모하기</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 로그인 간편응모-->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-enter-event');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

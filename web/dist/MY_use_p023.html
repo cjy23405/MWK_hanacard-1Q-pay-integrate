@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">해외청구내역</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="total-amount type-no-line margin-bottom-none">
+								<div class="total-amount-head">
+									<span class="total-amount-title">이용금액</span>
+								</div>
+								<div class="total-amount-val">총 3,390,450원</div>
+								<div class="total-amount-date">(08.05 ~ 08.11 기준)</div>
+							</div>
+							<!-- 2022.02.25 삭제
+								<div class="form-detail margin-top-25">
+								<div class="form-detail-block">
+									<dl class="form-detail-list type-text-default">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">일시불</dt>
+											<dd class="form-detail-group"><strong>1,000,000 원</strong></dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">할부</dt>
+											<dd class="form-detail-group"><strong>2,390,000 원</strong></dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">할부금액</dt>
+											<dd class="form-detail-group">
+												<a href="" class="ui-arrow type-black font-weight-medium" role="button">10,000원</a>
+											</dd>
+										</div>
+									</dl>
+								</div>
+							</div> -->
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="check-range margin-bottom-none">
+								<button type="button" class="ui-button-down">전체카드&middot;일시불</button>
+								<!-- 2022.02.25 조회가능한 카드 없을시 case 추가 -->
+								<button type="button" class="ui-button-down" disabled>조회가능한 카드가 없습니다.</button>
+							</div>
+
+							<!-- [DD] 이용내역이 없을 때 -->
+							<!-- 2022.02.25 하단라인 삭제 -->
+							<div class="type-none">
+								<p class="item-text">해외청구내역이 없습니다.</p>
+							</div>
+							<!--// [DD] 이용내역이 없을 때 -->
+
+							<div class="usage-default-area">
+								<!-- 2022.02.11 삭제
+									<h2 class="usage-default-list-title">이번 납부 (08.10 출금)</h2> -->
+								<ul class="usage-default-list margin-top-none">
+									<li class="usage-default-item">
+										<div class="usage-default-date">2021.10.23</div>
+										<button type="button" class="usage-default-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 없을 때 -->
+											<!-- 2022.02.25 가맹점 아이콘 삭제
+												<div class="logo-image type-store">
+												<div class="logo-image-inner"></div>
+											</div> -->
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="usage-default-left">
+												<div class="usage-default-title">TRAVEL RESERVATION</div>
+												<div class="usage-default-etc">
+													<!-- 2022.02.11 이용시간 삭제
+														<div class="usage-default-etc-item">02:09</div> -->
+													<div class="usage-default-etc-item">영국</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">128,050 원</div>
+											</div>
+										</button>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-date">2021.10.19</div>
+										<button type="button" class="usage-default-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 에러 -->
+											<!-- 2022.02.25 가맹점 아이콘 삭제
+												<div class="logo-image type-store">
+												<div class="logo-image-inner">
+													<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div> -->
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="usage-default-left">
+												<div class="usage-default-title">올리브영</div>
+												<div class="usage-default-etc">
+													<!-- 2022.02.11 이용시간 삭제
+														<div class="usage-default-etc-item">02:09</div> -->
+													<div class="usage-default-etc-item">일본</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">-30,000 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item color-wrong">승인취소</div>
+												</div>
+											</div>
+										</button>
+
+										<button type="button" class="usage-default-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 있을 때 -->
+											<!-- 2022.02.25 가맹점 아이콘 삭제
+												<div class="logo-image type-store">
+												<div class="logo-image-inner">
+													<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div> -->
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="usage-default-left">
+												<div class="usage-default-title">ZARA 가로수길점</div>
+												<div class="usage-default-etc">
+													<!-- 2022.02.11 이용시간 삭제
+														<div class="usage-default-etc-item">02:09</div> -->
+													<div class="usage-default-etc-item">일본</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">100,000 원</div>
+											</div>
+										</button>
+									</li>
+								</ul>
+							</div>
+
+							<button type="button" class="ui-button ui-button-more">3개월 더보기</button>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<div class="use-notice-section">
+										<dl class="use-notice-group">
+											<dt class="group-title">해외청구내역</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">해외청구내역조회에 있는 금액이 실제 청구되는 확정금액으로 고객께서 결제하실 금액입니다.</li>
+													<li class="info-item">
+														미화로 환산한 해외이용금액(해외사이트 거래 포함)에 국제브랜드사가 부과하는 수수료(VISA 1.0% 또는1.1%, Master 1.0%, Amex 1.4%, UPI 0.6% 또는 0.8%, One Way(JCB) 1.0%)를
+														포함하여 접수일의 하나은행 최초 고시 전산환매도율을 적용한 후, 하나카드가 부과하는 해외서비스수수료(신용카드 0.2%, 체크카드 US$0.5)를 추가한 금액이 청구됩니다.
+													</li>
+													<li class="info-item">국제 브랜드사 수수료는 취소 시에도 부과될 수 있습니다.</li>
+													<li class="info-item">
+														<div class="indent-block">해외결제금액=원화금액+해외서비스 수수료</div>
+														<ul class="info-list">
+															<li class="info-item type-indent"><span class="indent">-</span>원화금액=(미화환산금액+국제브랜드사 수수료 포함) x 당사 접수일자의 하나은행 1회차 고시 전신환 매도율</li>
+															<li class="info-item type-indent"><span class="indent">-</span>해외서비스 수수료=미화환산금액 x 당사 접수일자의 하나은행 1회차 고시 전신환매도율 0.2% (신용카드 기준)</li>
+														</ul>
+													</li>
+													<li class="info-item">해외 가맹점에서 원화거래시(DCC) 추가 수수료가 부과되므로 현지통화 또는 미화로 거래하시기 바랍니다.</li>
+												</ul>
+											</dd>
+											<dt class="group-title">해외결제 이용예시</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">
+														<div class="indent-block">[일본에서 비자(마스터)신용카드로 10,000엔을 결제하였을 때]</div>
+														<ul class="info-list">
+															<li class="info-item type-indent"><span class="indent">1.</span>일본에서 10,000엔을 결제하면 이 데이터가 브랜드사(비자, 마스터, 아멕스)로 전송</li>
+															<li class="info-item type-indent"><span class="indent">2.</span>각 브랜드사는 자체 환율을 적용하여 10,000엔을 100달러로 변환(1달러=100엔 적용이라 가정)</li>
+															<li class="info-item type-indent">
+																<span class="indent">3.</span>브랜드사는 이 100달러에 브랜드사 수수료 (비자, 마스터 1% / 아멕스 1.4%)를 포함하여 101달러를 당사로 접수
+															</li>
+															<li class="info-item type-indent">
+																<span class="indent">4.</span>당사는 101달러에 접수일의 하나은행 1회차고시 전신환매도율 (1달러=1,000원이라 가정)을 곱하여 원화금액 101,000원을 확정
+															</li>
+															<li class="info-item type-indent">
+																<span class="indent">5.</span>당사는 100달러의 0.2%에 당사 접수일의 하나은행 1회차고시 전신환매도율 (1달러=1,000원이라 가정)을 곱하여 해외서비스 수수료 200원을 확정
+															</li>
+															<li class="info-item type-indent"><span class="indent">6.</span>최종적으로 결제되는 금액은 101,200원으로 확정됨 [원화환산금액 (101,000원) + 해외서비스수수료 (200원)]</li>
+														</ul>
+													</li>
+												</ul>
+											</dd>
+											<dt class="group-title">BC카드 해외결제내역</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">BC카드 해외매출문의는 BC사를 통해 문의해 주시기 바랍니다.</li>
+													<li class="info-item">
+														결제금액 (USD)은 해외브랜드사 (비자/마스터/아멕스)에서 매출접수일자의 환율이 적용하여 USD로 나타낸 금액으로서 해외이용수수료 (비자/마스터 1%, 아멕스 1.4%)가 포함된
+														금액입니다. 즉, 결제내역의 ‘결제금액(USD)’과 승인내역의 승인요청달러’ 금액은 서로 다르니 양지하시기 바랍니다.
+													</li>
+													<li class="info-item">고객께 청구되는 원화금액=[결제금액(US$) x 접수일자 전신환매도율] + 해외서비스수수료</li>
+												</ul>
+											</dd>
+											<dt class="group-title">해외결제 유의사항</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">청구 확정된 거래의 취소는 해당 가맹점으로 직접 요청하셔야 하며, 해당 가맹점 및 매입사에서 취소데이터를 접수한 경우에만 당사에서 취소처리됩니다.</li>
+													<li class="info-item">
+														이용하지 않은 해외 거래건이 발생한 경우, 고객센터(1800-1111)로 문의하여 분실재발급 또는 해외거래정지 등록 후 해외이의신청으로 접수해주시기 바랍니다. (추가적인 피해 방지 및
+														국제 브랜드사 분쟁 규정상 해외거래정지 필수) 해외이의신청은 거래유형 및 사유에 따라 45일 ~ 110일 이내에만 신청 가능하니 반드시 기한 내에 신청해주시기 바랍니다.
+													</li>
+												</ul>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="support-notice-area">
+							<p class="support-notice-title">다른 정보가 필요하신가요?</p>
+							<div class="support-notice-contents">
+								<ul class="info-list">
+									<li class="info-item"><a href="../guide-component.html" class="text-underline">컴포넌트 가이드 참조</a></li>
+									<li class="info-item"><a href="../guide-component.html" class="text-underline">컴포넌트 가이드 참조</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

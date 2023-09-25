@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="../../../dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">진행중인 이벤트</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="wcms-data">
+							<section class="event-data">
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">하나라도 충족되면 즉시 할인되는 금리!</h2>
+									<div class="wcms-box-gray wcms-margin-regular">
+										<div class="wcms-flex">
+											<div class="wcms-flex-cell type-flexible">
+												<h2 class="wcms-title-normal wcms-margin-none"><span class="wcms-color-green">하나카드</span>를 이용한다면</h2>
+												<p class="wcms-text wcms-size-small wcms-color-gray wcms-margin-none">최대 <span class="wcms-color-green">0.4%p</span> 할인</p>
+											</div>
+											<div class="wcms-flex-cell">
+												<img src="../../../dist/assets/images/event/step-icon-4.png" alt="" class="wcms-image" style="width: 44px" />
+											</div>
+										</div>
+										<div class="wcms-hr-1 wcms-margin-regular"></div>
+										<div class="wcms-flex">
+											<div class="wcms-flex-cell type-flexible">
+												<h2 class="wcms-title-normal wcms-margin-none">결제계좌가 <span class="wcms-color-green">하나은행</span>이라면</h2>
+												<p class="wcms-text wcms-size-small wcms-color-gray wcms-margin-none"><span class="wcms-color-green">0.3%p</span> 할인</p>
+											</div>
+											<div class="wcms-flex-cell">
+												<img src="../../../dist/assets/images/event/step-icon-5.png" alt="" class="wcms-image" style="width: 44px" />
+											</div>
+										</div>
+										<div class="wcms-hr-1 wcms-margin-regular"></div>
+										<div class="wcms-flex">
+											<div class="wcms-flex-cell type-flexible">
+												<h2 class="wcms-title-normal wcms-margin-none"><span class="wcms-color-green">하나원큐페이</span>를 이용한다면</h2>
+												<p class="wcms-text wcms-size-small wcms-color-gray wcms-margin-none"><span class="wcms-color-green">0.3%p</span> 할인</p>
+											</div>
+											<div class="wcms-flex-cell">
+												<img src="../../../dist/assets/images/event/step-icon-6.png" alt="" class="wcms-image" style="width: 44px" />
+											</div>
+										</div>
+									</div>
+									<ol class="wcms-list wcms-size-normal wcms-margin-normal">
+										<li class="wcms-list-item wcms-margin-regular" data-symbol="1.">
+											<div class="wcms-list-contents">
+												<div class="wcms-margin-regular">전월 하나카드 <span class="wcms-color-green">일시불 + 할부</span> 이용 시 최대 0.4%p 할인</div>
+												<div class="wcms-table">
+													<div class="wcms-table-inner">
+														<table>
+															<caption>
+																일시불 + 할부 금리 할인 안내
+															</caption>
+															<colgroup>
+																<col style="width: 105px" />
+																<col />
+															</colgroup>
+															<thead>
+																<tr>
+																	<th class="wcms-align-center">이용금액</th>
+																	<th class="wcms-align-center">
+																		장기카드대출, 단기카드대출,<br />
+																		일부결제금액이월약정 일시불
+																	</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>50만원 이상</td>
+																	<td>0.2%P</td>
+																</tr>
+																<tr>
+																	<td>100만원 이상</td>
+																	<td>0.4%P</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<ul class="wcms-list wcms-size-small wcms-weight-light wcms-margin-regular">
+													<li class="wcms-list-item wcms-color-gray" data-symbol="※">
+														<div class="wcms-list-contents">체크카드 제외</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="wcms-list-item wcms-margin-regular" data-symbol="2.">
+											<div class="wcms-list-contents">하나은행 <span class="wcms-color-green">결제계좌</span> 이용 시 0.3%p 할인</div>
+										</li>
+										<li class="wcms-list-item wcms-margin-regular" data-symbol="3.">
+											<div class="wcms-list-contents">전월 <span class="wcms-color-green">하나원큐페이 앱</span> 결제 시 0.3%p 할인</div>
+										</li>
+									</ol>
+								</section>
+
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">금리 할인 사용 예시</h2>
+									<p class="wcms-text wcms-size-normal wcms-color-gray">전월 하나카드 100만원 이용, 하나은행 결제계좌 이용, 전월 하나원큐페이 앱 이용으로 최대 1.0%p 할인 기준</p>
+									<div class="wcms-table wcms-margin-regular">
+										<div class="wcms-table-inner">
+											<table>
+												<caption>
+													금리 할인 사용 예시 안내
+												</caption>
+												<colgroup>
+													<col style="width: 36%" />
+													<col />
+													<col />
+												</colgroup>
+												<tbody>
+													<tr>
+														<td>
+															장기카드대출<br />
+															<span class="wcms-color-gray">
+																100만원<br />
+																12개월 이용 시
+															</span>
+														</td>
+														<td>
+															금리<br />
+															<span class="wcms-color-gray">
+																<del>연 11%</del><br />
+																→ 연 10%
+															</span>
+														</td>
+														<td>
+															이자<br />
+															<span class="wcms-color-gray">
+																<del>686,865원</del><br />
+																→ 624,423원
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															장기카드대출<br />
+															<span class="wcms-color-gray">
+																100만원<br />
+																12개월 이용 시
+															</span>
+														</td>
+														<td>
+															금리<br />
+															<span class="wcms-color-gray">
+																<del>연 11%</del><br />
+																→ 연 10%
+															</span>
+														</td>
+														<td>
+															이자<br />
+															<span class="wcms-color-gray">
+																<del>686,865원</del><br />
+																→ 624,423원
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td>
+															장기카드대출<br />
+															<span class="wcms-color-gray">
+																100만원<br />
+																12개월 이용 시
+															</span>
+														</td>
+														<td>
+															금리<br />
+															<span class="wcms-color-gray">
+																<del>연 11%</del><br />
+																→ 연 10%
+															</span>
+														</td>
+														<td>
+															이자<br />
+															<span class="wcms-color-gray">
+																<del>686,865원</del><br />
+																→ 624,423원
+															</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<ul class="wcms-list wcms-size-small wcms-weight-light">
+										<li class="wcms-list-item wcms-color-gray" data-symbol="※">
+											<div class="wcms-list-contents">금리 및 이용일자, 결제일자에 따라 변경될 수 있습니다.</div>
+										</li>
+										<li class="wcms-list-item wcms-color-gray" data-symbol="※">
+											<div class="wcms-list-contents">장기카드대출은 대출일자 5월 1일, 결제일 매월 1일 고객이 원금 균등상환 방식으로 만기까지 사용한 시뮬레이션 결과입니다.</div>
+										</li>
+									</ul>
+								</section>
+
+								<div class="wcms-flex wcms-margin-large">
+									<div class="wcms-flex-cell type-flexible">
+										<a href="" class="wcms-button type-purple"><span class="wcms-button-text">이자율 확인하기</span></a>
+									</div>
+									<div class="wcms-flex-cell type-flexible">
+										<a href="" class="wcms-button type-purple"><span class="wcms-button-text">결제계좌 변경하기</span></a>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="../../../dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">약정 결제비율 변경</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<p class="page-title">
+							변경하실 결제비율 및<br />
+							약정기간을 선택해 주세요.
+						</p>
+
+						<div class="page-section">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">약정결제비율</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-radio-group type-grid">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" checked />
+												<label for="radioPanel1-1" class="ui-label">
+													<span class="ui-label-text">100 %</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" />
+												<label for="radioPanel1-2" class="ui-label">
+													<span class="ui-label-text">80 %</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-3" />
+												<label for="radioPanel1-3" class="ui-label">
+													<span class="ui-label-text">50 %</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-4" />
+												<label for="radioPanel1-4" class="ui-label">
+													<span class="ui-label-text">30 %</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-5" />
+												<label for="radioPanel1-5" class="ui-label">
+													<span class="ui-label-text">10 %</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-6" />
+												<label for="radioPanel1-6" class="ui-label">
+													<span class="ui-label-text">기타</span>
+												</label>
+											</div>
+											<!-- Case : 기타 선택 후 -->
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-6" />
+												<label for="radioPanel1-6" class="ui-label">
+													<span class="ui-label-text">기타<br />45 %</span>
+												</label>
+											</div>
+											<!-- //Case : 기타 선택 후 -->
+										</div>
+									</div>
+									<p class="ui-notice">당사에서 정한 최소결제비율(10% 이상)은 고객님이 변경할 수 없습니다.</p>
+								</div>
+
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">약정기간</strong>
+									</div>
+									<div class="form-group is-invalid">
+										<div class="ui-radio-group type-grid">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-1" />
+												<label for="radioPanel2-1" class="ui-label">
+													<span class="ui-label-text">5년</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-2" />
+												<label for="radioPanel2-2" class="ui-label">
+													<span class="ui-label-text">4년</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-3" />
+												<label for="radioPanel2-3" class="ui-label">
+													<span class="ui-label-text">3년</span>
+												</label>
+											</div>
+										</div>
+										<div class="ui-radio-group type-grid type-half margin-top-6">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-4" />
+												<label for="radioPanel2-4" class="ui-label">
+													<span class="ui-label-text">2년</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-5" />
+												<label for="radioPanel2-5" class="ui-label">
+													<span class="ui-label-text">1년</span>
+												</label>
+											</div>
+										</div>
+										<span class="ui-invalid">약정기간을 선택해 주세요.</span>
+									</div>
+								</div>
+
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">종료일자</strong>
+									</div>
+									<div class="form-group">
+										<!-- 2022.06.23 : mod : date picker 라이브러리 적용 -->
+										<div class="ui-date-picker">
+											<duet-date-picker identifier="date" title="종료일자" value="2022-06-20" disabled></duet-date-picker>
+										</div>
+										<!-- //2022.06.23 : mod : date picker 라이브러리 적용 -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">변경</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

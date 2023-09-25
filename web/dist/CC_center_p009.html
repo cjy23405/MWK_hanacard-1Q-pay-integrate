@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">민원건수&middot;실태평가 결과</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents has-no-top-padding type-complaint-result">
+						<div class="js-ui-tab-panel page-tab-panel">
+							<div class="ui-tab">
+								<ul class="ui-tab-list">
+									<li class="ui-tab-item">
+										<a href="" class="ui-button ui-tab-link" role="button">민원건수</a>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="init">실태평가 결과</button>
+									</li>
+									<li class="ui-tab-item">
+										<a href="" class="ui-button ui-tab-link" role="button">실태평가 평가항목</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="ui-tab-panel" data-tab="init">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">실태평가 결과</h2>
+								<div class="page-section">
+									<h3 class="info-detail-title">
+										최근 3년간 금융소비자보호<br />
+										실태평가 결과
+									</h3>
+									<div class="page-section-group">
+										<div class="section-title">
+											<h4 class="title">계량 평가 부문</h4>
+										</div>
+										<div class="section-contents">
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														평가부문별 최근 3년간 금융소비자보호 계량 평가 결과 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th scope="col">평가부문</th>
+															<!-- 2021.11.29 클래스 수정 -->
+															<th scope="col" class="align-left">항목별 평가등급<br />(2017년)</th>
+															<th scope="col" class="align-left">항목별 평가등급<br />(2018년)</th>
+															<th scope="col" class="align-left">항목별 평가등급<br />(2019년)</th>
+															<!-- //2021.11.29 클래스 수정 -->
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>종합등급</td>
+															<td>-</td>
+															<td>양호</td>
+															<td>보통</td>
+														</tr>
+														<tr>
+															<td>민원발생건수</td>
+															<td>양호</td>
+															<td>양호</td>
+															<td>양호</td>
+														</tr>
+														<tr>
+															<td>민원처리노력</td>
+															<td>양호</td>
+															<td>우수</td>
+															<td>양호</td>
+														</tr>
+														<tr>
+															<td>소송 관련</td>
+															<td>양호</td>
+															<td>우수</td>
+															<td>보통</td>
+														</tr>
+														<tr>
+															<td>영업지속가능성</td>
+															<td>양호</td>
+															<td>우수</td>
+															<td>우수</td>
+														</tr>
+														<tr>
+															<td>금융사고</td>
+															<td>양호</td>
+															<td>양호</td>
+															<td>우수</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="page-section-group">
+										<div class="section-title">
+											<h4 class="title">비계량 평가 부문</h4>
+										</div>
+										<div class="section-contents">
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														평가부문별 최근 3년간 금융소비자보호 비계량 평가 결과 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th scope="col">평가부문</th>
+															<!-- 2021.11.29 클래스 수정 -->
+															<th scope="col" class="align-left">항목별 평가등급<br />(2017년)</th>
+															<th scope="col" class="align-left">항목별 평가등급<br />(2018년)</th>
+															<th scope="col" class="align-left">항목별 평가등급<br />(2019년)</th>
+															<!-- //2021.11.29 클래스 수정 -->
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>소비자보호 지배구조</td>
+															<td>양호</td>
+															<td>양호</td>
+															<td>양호</td>
+														</tr>
+														<tr>
+															<td>상품개발과정의 소비자보호 체계 구축 및 운영</td>
+															<td>보통</td>
+															<td>보통</td>
+															<td>보통</td>
+														</tr>
+														<tr>
+															<td>상품판매과정의 소비자보호 체계 구축 및 운영</td>
+															<td>양호</td>
+															<td>보통</td>
+															<td>보통</td>
+														</tr>
+														<tr>
+															<td>소비자보호 정책 참여 인원 및 민원 시스템 운영</td>
+															<td>양호</td>
+															<td>보통</td>
+															<td>보통</td>
+														</tr>
+														<tr>
+															<td>소비자정보 공시</td>
+															<td>양호</td>
+															<td>양호</td>
+															<td>양호</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="use-notice-area">
+									<div class="use-notice-contents">
+										<ul class="info-list">
+											<li class="info-item">
+												매년 금융감독원이 금융소비자에게 직접적인 영향을 미치는 민원 및 소송건수 등의 계량항목과 금융소비자보호 조직 및 제도, 금융상품 기획&middot;개발 과정, 금융상품 판매 과정 등의
+												비계량항목을 종합적으로 고려하여 평가 [우수, 양호, 보통, 미흡, 취약]
+												<ul class="info-list">
+													<li class="info-item type-indent">
+														<span class="indent">→</span>2017년도 실태평가 결과부터 ‘우수’ 등급 추가, <br />
+														2018년도 실태평가 결과부터 ‘취약’ 및 종합등급 추가
+													</li>
+												</ul>
+											</li>
+											<li class="info-item">금융소비자보호 실태평가 제도에 따라 금융감독원이 직접 평가하는 7개 신용카드사 민원건수 공시자료를 확인하실 수 있습니다.</li>
+										</ul>
+										<div class="use-notice-link-list">
+											<div class="use-notice-link-item">
+												<a href="https://gongsi.crefia.or.kr/portal/creditcard/creditcardDisclosureDetail24?cgcMode=24" target="_blank" class="link-button">여신금융협회 공시실</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

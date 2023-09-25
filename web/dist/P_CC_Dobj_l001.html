@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-contents-proof">내용증명 발송방법</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 내용증명 발송방법 -->
+			<div class="layer-wrap layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-info-contents-proof">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">내용증명 발송방법</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<dl class="use-notice-group type-text-large">
+									<dt class="group-title">내용증명이란?</dt>
+									<dd class="group-contents">
+										<ul class="info-list">
+											<li class="info-item">
+												내용증명은 "발신인이 수신인에게 어떤 내용의 문서를 언제 발송했다"라는 사실에 우체국장이 공적인 입장에서 증명하는 우체국의 특수 우편 제도입니다. (우편법시행규칙 46조)
+											</li>
+											<li class="info-item">내용증명은 특별한 형식이나 양식이 있는 것은 아니지만 할부이의신청을 위한 내용증명 양식은 아래와 같습니다.</li>
+										</ul>
+									</dd>
+									<dt class="group-title type-indent">내용증명양식 (할부철회항변)</dt>
+									<dd class="group-contents">
+										<div class="ui-buttons type-full">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item">
+													<a href="" class="ui-basic-button type-secondary" role="button">PDF양식 다운로드 </a>
+												</li>
+											</ul>
+										</div>
+									</dd>
+									<dt class="group-title type-indent">내용증명 발송방법</dt>
+									<dd class="group-contents">
+										<ul class="info-list">
+											<li class="info-item">
+												내용증명 3부 작성 (내용증명을 A4 용지에 작성(원본) 후 2부를 복사하여 발신인에 날인) > 가까운 우체국 방문 > 내용증명 우편으로 발송요청 > 우체국에서 발송 영수증과
+												내용증명우편(본인보관용)1부 수령 > 하나카드 이의신청 담당자 앞 팩스 송부
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 내용증명 발송방법 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-info-contents-proof');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

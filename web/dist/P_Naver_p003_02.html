@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap NaverPay">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title"></h1>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+					    <h2 class="page-title">
+							정보를 확인해 주세요
+						</h2>
+							
+						
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-contents">
+									<div class="form-list">
+										<div class="form-item">
+											<div class="form-title">
+												영문 이름
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input" title="영문이름 입력" value="Choibg" required />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-group">
+												<div class="form-detail-item type-block basic-text">
+													<dt class="form-detail-title font-weight-light">집 주소</dt>
+													<dd class="form-detail-group color-blur margin-top-4 font-weight-regular">
+														<div class="form-detail-group-item">12345</div>
+														<div class="form-detail-group-item">경기도 성남시 분당구 판교원로 46</div>
+														<div class="form-detail-group-item">105동 300호</div>
+													</dd>
+												</div>
+												<div class="form-bottom margin-top-20">
+													<div class="ui-buttons">
+														<ul class="ui-buttons-list">
+															<li class="ui-buttons-item">
+																<button type="button" class="ui-button ui-basic-button type-quaternary" data-area-disabled-target="nextButton">주소 검색</button>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+											    카드배송지
+											    <!-- <span class="ui-required"><span class="for-a11y">필수항목</span></span> -->
+											</div>
+											<div class="form-group">
+												<div class="ui-radio-group type-panel">
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel3" id="testCheckboxTabA1" data-checkbox-tab="testCheckboxTabA1" checked="" />
+														<label for="testCheckboxTabA1" class="ui-label">
+															<span class="ui-label-text">집</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel3" id="testCheckboxTabA2" data-checkbox-tab="testCheckboxTabA2" />
+														<label for="testCheckboxTabA2" class="ui-label">
+															<span class="ui-label-text">직장</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-checkbox-tab-panel="testCheckboxTabA1" class="margin-top-25">
+
+											<div class="form-item">
+												<div class="form-group">
+													<div class="form-detail-item type-block basic-text">
+														<dt class="form-detail-title font-weight-light">
+															결제 계좌
+															<div class="ui-tooltip-wrap">
+																<span class="ui-tooltip js-ui-dropdown">
+																	<span class="ui-tooltip-head">
+																		<button type="button" class="ui-button ui-tooltip-opener js-ui-dropdown__opener">
+																			<span class="ui-button-question">
+																				<span class="for-a11y">(도움말 <span class="open-text">열기</span><span class="close-text">닫기</span>)</span>
+																			</span>
+																		</button>
+																	</span>
+																	<span class="ui-tooltip-layer js-ui-dropdown__layer">
+																		<span class="ui-tooltip-bubble">
+																			<span class="ui-tooltip-bubble-message">
+																				<p class="font-weight-medium margin-bottom-4">결제 계좌 안내</p>
+																				네이버페이 머니 하나통장만 결제 계좌로<br /> 등록할 수 있어요. 페이머니 하나 체크카드는<br /> 페이머니 통장의 현금 출금 기능을 제공합니다.
+																			</span>
+																			<button type="button" class="ui-button ui-tooltip-bubble-close js-ui-dropdown__closer">
+																				<span class="for-a11y">도움말 닫기</span>
+																			</button>
+																		</span>
+																	</span>
+																</span>
+															</div>
+														</dt>
+														<dd class="form-detail-group color-blur margin-top-4 font-weight-regular">
+															<div class="form-detail-group-item">하나은행 123-4555-9999</div>
+														</dd>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													이메일 주소(청구서 수신)
+												</div>
+												<div class="form-group type-email">
+													<div class="ui-input-block type-use-delete">
+														<input type="text" class="ui-input" title="이메일 주소 입력" value="choibg@gmail.com" />
+														<button type="button" class="ui-button ui-input-delete">
+															<span class="for-a11y">입력 내용 지우기</span>
+														</button>
+														<!-- 도메인 자동완성(하단 스크립트 참고) -->
+														<div class="domain-auto">
+															<ul class="domain-auto-list">
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@naver.com</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@daum.net</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@hanmail.net</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@gmail.com</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@kakao.com</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@icloud.com</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@nate.com</span></button>
+																</li>
+															</ul>
+														</div>
+														<!-- //도메인 자동완성(하단 스크립트 참고) -->
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													거래 목적
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block">
+														<select class="ui-select" title="title">
+															<option value="-1" disabled selected>물품 대금 결제</option>
+															<option value="">option 1</option>
+															<option value="">option 2</option>
+															<option value="">option 3</option>
+															<option value="">option 4</option>
+															<option value="">option 5</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													자금 출처
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block">
+														<select class="ui-select" title="title">
+															<option value="-1" disabled selected>근로 및 연금소득</option>
+															<option value="">option 1</option>
+															<option value="">option 2</option>
+															<option value="">option 3</option>
+															<option value="">option 4</option>
+															<option value="">option 5</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													직업정보
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block">
+														<select class="ui-select" title="title">
+															<option value="-1" disabled selected>급여소득자</option>
+															<option value="">option 1</option>
+															<option value="">option 2</option>
+															<option value="">option 3</option>
+															<option value="">option 4</option>
+															<option value="">option 5</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													결제 알림 서비스
+												</div>
+												<div class="form-group pay-service">
+													<div class="ui-radio-block type-circle margin-top-15">
+														<input type="radio" class="ui-radio" id="radio1-1" name="pay-service" />
+														<label for="radio1-1" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">스마트폰 앱 무료</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-circle margin-top-15">
+														<input type="radio" class="ui-radio" id="radio1-2" name="pay-service" />
+														<label for="radio1-2" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">모든 결제월 300원</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-circle margin-top-15">
+														<input type="radio" class="ui-radio" id="radio1-3" name="pay-service" />
+														<label for="radio1-3" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">건당 5만원 이상 무료</span>
+														</label>
+													</div>
+													<p class="ui-notice ty02">이 서비스는 모든 하나 카드에 적용됩니다.</p>
+												</div>
+											</div>
+										</div>
+										<div data-checkbox-tab-panel="testCheckboxTabA2" class="margin-top-20">
+											<div class="form-item">
+												<div class="form-group">
+													<div class="form-detail-item type-block basic-text">
+														<dt class="form-detail-title font-weight-light">직장 주소</dt>
+														<dd class="form-detail-group color-blur margin-top-4 font-weight-regular">
+															<div class="form-detail-group-item">12345</div>
+															<div class="form-detail-group-item">경기도 성남시 분당구 판교원로 46</div>
+															<div class="form-detail-group-item">105동 300호</div>
+														</dd>
+													</div>
+													<div class="form-bottom margin-top-20">
+														<div class="ui-buttons">
+															<ul class="ui-buttons-list">
+																<li class="ui-buttons-item">
+																	<button type="button" class="ui-button ui-basic-button type-quaternary" data-area-disabled-target="nextButton">직장 주소 검색</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-item">
+												<div class="form-group">
+													<div class="form-detail-item type-block basic-text">
+														<dt class="form-detail-title font-weight-light">
+															결제 계좌
+															<div class="ui-tooltip-wrap">
+																<span class="ui-tooltip js-ui-dropdown">
+																	<span class="ui-tooltip-head">
+																		<button type="button" class="ui-button ui-tooltip-opener js-ui-dropdown__opener">
+																			<span class="ui-button-question">
+																				<span class="for-a11y">(도움말 <span class="open-text">열기</span><span class="close-text">닫기</span>)</span>
+																			</span>
+																		</button>
+																	</span>
+																	<span class="ui-tooltip-layer js-ui-dropdown__layer">
+																		<span class="ui-tooltip-bubble">
+																			<span class="ui-tooltip-bubble-message">
+																				<p class="font-weight-medium margin-bottom-4">결제 계좌 안내</p>
+																				네이버페이 머니 하나통장만 결제 계좌로<br /> 등록할 수 있어요. 페이머니 하나 체크카드는<br /> 페이머니 통장의 현금 출금 기능을 제공합니다.
+																			</span>
+																			<button type="button" class="ui-button ui-tooltip-bubble-close js-ui-dropdown__closer">
+																				<span class="for-a11y">도움말 닫기</span>
+																			</button>
+																		</span>
+																	</span>
+																</span>
+															</div>
+														</dt>
+														<dd class="form-detail-group color-blur margin-top-4 font-weight-regular">
+															<div class="form-detail-group-item">하나은행 123-4555-9999</div>
+														</dd>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+												    이메일 주소(청구서 수신)
+												</div>
+												<div class="form-group type-email">
+													<div class="ui-input-block type-use-delete">
+														<input type="text" class="ui-input" title="이메일 주소 입력" value="choibg@gmail.com" />
+														<button type="button" class="ui-button ui-input-delete">
+															<span class="for-a11y">입력 내용 지우기</span>
+														</button>
+														<!-- 도메인 자동완성(하단 스크립트 참고) -->
+														<div class="domain-auto">
+															<ul class="domain-auto-list">
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@naver.com</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@daum.net</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@hanmail.net</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@gmail.com</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@kakao.com</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@icloud.com</span></button>
+																</li>
+																<li class="domain-auto-item">
+																	<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@nate.com</span></button>
+																</li>
+															</ul>
+														</div>
+														<!-- //도메인 자동완성(하단 스크립트 참고) -->
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													거래 목적
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block">
+														<select class="ui-select" title="title">
+															<option value="-1" disabled selected>물품 대금 결제</option>
+															<option value="">option 1</option>
+															<option value="">option 2</option>
+															<option value="">option 3</option>
+															<option value="">option 4</option>
+															<option value="">option 5</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													자금 출처
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block">
+														<select class="ui-select" title="title">
+															<option value="-1" disabled selected>근로 및 연금소득</option>
+															<option value="">option 1</option>
+															<option value="">option 2</option>
+															<option value="">option 3</option>
+															<option value="">option 4</option>
+															<option value="">option 5</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													직업정보
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block">
+														<select class="ui-select" title="title">
+															<option value="-1" disabled selected>급여소득자</option>
+															<option value="">option 1</option>
+															<option value="">option 2</option>
+															<option value="">option 3</option>
+															<option value="">option 4</option>
+															<option value="">option 5</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													결제 알림 서비스
+												</div>
+												<div class="form-group pay-service">
+													<div class="ui-radio-block type-circle margin-top-15">
+														<input type="radio" class="ui-radio" id="radio2-1" name="pay-service-2" />
+														<label for="radio2-1" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">스마트폰 앱 무료</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-circle margin-top-15">
+														<input type="radio" class="ui-radio" id="radio2-2" name="pay-service-2" />
+														<label for="radio2-2" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">모든 결제월 300원</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-circle margin-top-15">
+														<input type="radio" class="ui-radio" id="radio2-3" name="pay-service-2" />
+														<label for="radio2-3" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">건당 5만원 이상 무료</span>
+														</label>
+													</div>
+													<p class="ui-notice ty02">이 서비스는 모든 하나 카드에 적용됩니다.</p>
+												</div>
+											</div>
+										</div>
+									</div>		
+								</div>
+							</div>
+						</div>
+							<!-- //section -->
+					</div>
+
+					<div class="page-buttons type-naver-button">
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-area-disabled-target="nextButton">다음</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

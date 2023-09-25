@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <linearGradient id="9726j2kn8b" x1=".36" y1=".014" x2=".352" y2=".925" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#11cdab"/>
+            <stop offset=".18" stop-color="#11cdab"/>
+            <stop offset=".983" stop-color="#cc3f9a"/>
+            <stop offset="1" stop-color="#cc3f9a"/>
+        </linearGradient>
+        <linearGradient id="lcshvugw9d" x1=".041" y1=".078" x2=".939" y2=".997" gradientUnits="objectBoundingBox">
+            <stop offset=".239" stop-color="#009d9d"/>
+            <stop offset=".308" stop-color="#0b979c"/>
+            <stop offset=".43" stop-color="#298a9c"/>
+            <stop offset=".592" stop-color="#59739b"/>
+            <stop offset=".783" stop-color="#9c549a"/>
+            <stop offset=".909" stop-color="#cc3f9a"/>
+        </linearGradient>
+        <clipPath id="0q0tlbncma">
+            <path data-name="패스 11001" d="M15 0A14.993 14.993 0 0 0 0 14.986v.028a15 15 0 0 0 30 0v-.028A14.993 14.993 0 0 0 15 0z" style="fill:none"/>
+        </clipPath>
+        <clipPath id="b66hoqjm1c">
+            <path data-name="사각형 17329" style="fill:none" d="M0 0h30v30H0z"/>
+        </clipPath>
+    </defs>
+    <path data-name="사각형 14076" style="fill:none" d="M0 0h36v36H0z"/>
+    <g data-name="그룹 14101">
+        <g data-name="그룹 14098">
+            <g data-name="그룹 14097" style="clip-path:url(#0q0tlbncma)" transform="translate(3 3)">
+                <path data-name="사각형 17328" transform="rotate(-42.35 10.105 26.096)" style="fill:url(#9726j2kn8b)" d="M0 0h42.402v42.4H0z"/>
+            </g>
+        </g>
+        <g data-name="그룹 14100">
+            <g data-name="그룹 14099" style="clip-path:url(#b66hoqjm1c)" transform="translate(3 3)">
+                <path data-name="패스 11002" d="m62.633 63.992-1.453-11.7a1.375 1.375 0 0 0-1.365-1.205h-.187c-.04 0-.079 0-.118.005H59.467a1.376 1.376 0 0 0-1.111.79L54.827 59.5l-3.533-7.614a1.376 1.376 0 0 0-1.212-.8h-.269a1.375 1.375 0 0 0-1.365 1.205l-1.453 11.7a1.375 1.375 0 0 0 1.365 1.544h.464a1.376 1.376 0 0 0 1.369-1.235l.673-6.7 2.691 5.7a1.418 1.418 0 0 0 2.54 0l2.669-5.65.669 6.652a1.375 1.375 0 0 0 1.365 1.234h.463a1.375 1.375 0 0 0 1.365-1.544" transform="translate(-39.814 -43.296)" style="fill:#fff"/>
+            </g>
+        </g>
+    </g>
+    <g data-name="그룹 14102">
+        <g data-name="타원 2013" style="stroke:#e5e5e5;fill:#fff">
+            <circle cx="18" cy="18" r="18" style="stroke:none"/>
+            <circle cx="18" cy="18" r="17.5" style="fill:none"/>
+        </g>
+        <path data-name="패스 12602" d="m110.447 153.718-1.756-14.163a1.664 1.664 0 0 0-1.651-1.459h-.226c-.048 0-.1 0-.143.007h-.047a1.663 1.663 0 0 0-1.343.955l-4.271 9.216-4.272-9.216a1.663 1.663 0 0 0-1.466-.963h-.326a1.664 1.664 0 0 0-1.651 1.459l-1.757 14.163a1.664 1.664 0 0 0 1.651 1.869h.561a1.664 1.664 0 0 0 1.655-1.5l.814-8.107 3.254 6.9a1.714 1.714 0 0 0 3.072 0l3.227-6.839.809 8.05a1.664 1.664 0 0 0 1.655 1.5h.56a1.664 1.664 0 0 0 1.651-1.872z" transform="translate(-82.992 -128.841)" style="fill:url(#lcshvugw9d)"/>
+    </g>
+</svg>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- progress bar -->
+					<div class="fixed-step">
+						<div class="step-box" role="img" aria-label="총 14단계 중 1단계">
+							<span class="step-bar" style="width: 20%"></span>
+						</div>
+					</div>
+					<!-- //progress bar -->
+
+					<div class="page-contents">
+						<h2 class="page-contents-title">부가정보를 입력해주세요.</h2>
+
+						<div class="form-list-wrap">
+							<!-- case : 신규일 경우에만 노출 -->
+							<div class="form-item">
+								<div class="ui-form-title">
+									<strong class="title">이용대금명세서</strong>
+								</div>
+								<div class="ui-form">
+									<dl class="ui-form-list">
+										<div class="ui-form-item type-only-select">
+											<dt class="ui-form-key" data-focus-input="name">받는 방법</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="in-select-block">
+															<button type="button" class="in-select" title="받는 방법 선택" data-placeholder="받는 방법 선택" data-focus-input-target="name"></button>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<div class="ui-form-item">
+											<dt class="ui-form-key" data-focus-input="mail">이메일</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="flex-box">
+															<!-- 2022.12.12 : mod : .type-flexible클래스 추가 -->
+															<div class="flex-box-cell type-flexible">
+																<!-- 2022.12.12 : mod : .input-width-mail-id 클래스 삭제 .type-no-delete 클래스 추가 -->
+																<!-- DD : input 클리어 버튼 사용 시에는 .type-no-delete 클래스 삭제 -->
+																<div class="in-input-block type-no-delete">
+																	<input type="text" class="in-input" title="이메일 아이디 입력" data-focus-input-target="mail" />
+																</div>
+															</div>
+															<div class="flex-box-cell type-form-text">@</div>
+															<!-- 2022.12.12 : mod : .type-flexible 클래스 삭제 -->
+															<div class="flex-box-cell">
+																<!-- 2022.12.12 : mod : .select-width-mail 클래스 추가 .in-select에 .ellipsis 클래스 추가 -->
+																<div class="in-select-block select-width-mail">
+																	<button type="button" class="in-select ellipsis" title="이메일 도메인 선택" data-placeholder="선택"></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+									</dl>
+								</div>
+								<!-- case : “Smart Any 쇼핑 카드”의 경우 안내문구 노출 -->
+								<!-- 2022.10.14 : del : 삭제
+									<p class="ui-form-notice">Smart Any 쇼핑 카드는 이메일로만 받을 수 있습니다.</p> -->
+							</div>
+							<!-- //case : 신규일 경우에만 노출 -->
+							<div class="form-item">
+								<div class="ui-form-title">
+									<strong class="title">부가 서비스</strong>
+								</div>
+								<div class="toggle-list-box">
+									<!-- 2022.10.14 : add : 추가 -->
+									<!-- case : 결제계좌 은행이 “하나은행”인 경우에만 노출 / “모바일 전용 카드“의 경우 영역 미노출 -->
+									<div class="toggle-item">
+										<div class="toggle-info-title">
+											<strong class="title">현금인출 기능</strong>
+										</div>
+										<div class="ui-toggle-block">
+											<input type="checkbox" class="ui-toggle" id="checkboxToggle1" checked />
+											<label for="checkboxToggle1" class="ui-label">
+												<span class="ui-toggle-object"></span>
+											</label>
+										</div>
+									</div>
+									<!-- //case : 결제계좌 은행이 “하나은행”인 경우에만 노출 / “모바일 전용 카드“의 경우 영역 미노출 -->
+									<!-- //2022.10.14 : add : 추가 -->
+
+									<!-- 2022.10.14 : add : 컨텐츠 추가 -->
+									<!-- case : KT휴대폰요금 자동납부 off -->
+									<div class="toggle-item">
+										<div class="toggle-info-title">
+											<strong class="title">KT휴대폰요금 자동납부</strong>
+										</div>
+										<div class="ui-toggle-block">
+											<input type="checkbox" class="ui-toggle" id="checkboxToggle5" />
+											<label for="checkboxToggle5" class="ui-label">
+												<span class="ui-toggle-object"></span>
+											</label>
+										</div>
+									</div>
+									<!-- //case : KT휴대폰요금 자동납부 off -->
+									<!-- case : KT휴대폰요금 자동납부 on -->
+									<div class="toggle-item type-on">
+										<div class="toggle-info-head">
+											<strong class="toggle-info-title">KT휴대폰요금 자동납부</strong>
+											<strong class="toggle-info-text">김하나 010-1234-1234</strong>
+										</div>
+										<div class="ui-toggle-block">
+											<input type="checkbox" class="ui-toggle" id="checkboxToggle5" checked />
+											<label for="checkboxToggle5" class="ui-label">
+												<span class="ui-toggle-object"></span>
+											</label>
+										</div>
+									</div>
+									<!-- //case : KT휴대폰요금 자동납부 on -->
+									<!-- case : 아파트관리비 자동납부 off -->
+									<div class="toggle-item">
+										<div class="toggle-info-title">
+											<strong class="title">아파트관리비 자동납부</strong>
+										</div>
+										<div class="ui-toggle-block">
+											<input type="checkbox" class="ui-toggle" id="checkboxToggle6" />
+											<label for="checkboxToggle6" class="ui-label">
+												<span class="ui-toggle-object"></span>
+											</label>
+										</div>
+									</div>
+									<!-- //case : 아파트관리비 자동납부 off -->
+									<!-- case : 아파트관리비 자동납부 on -->
+									<div class="toggle-item type-on">
+										<div class="toggle-info-head">
+											<strong class="toggle-info-title">아파트관리비 자동납부</strong>
+											<strong class="toggle-info-text">아파트명이 길어질 경우 케이스 101동 101호</strong>
+										</div>
+										<div class="ui-toggle-block">
+											<input type="checkbox" class="ui-toggle" id="checkboxToggle6" checked />
+											<label for="checkboxToggle6" class="ui-label">
+												<span class="ui-toggle-object"></span>
+											</label>
+										</div>
+									</div>
+									<!-- //case : 아파트관리비 자동납부 on -->
+									<!-- //2022.10.14 : add : 컨텐츠 추가 -->
+								</div>
+
+								<!-- 2022.11.17 : mod : UI, 위치 변경 -->
+								<!-- DD : 일반 체크카드의 경우 -->
+								<div class="form-item">
+									<div class="ui-form-title">
+										<strong class="title">해외원화결제(DOC) 차단서비스</strong>
+										<button type="button" class="ui-button-help"><span class="for-a11y">(도움말)</span></button>
+									</div>
+									<div class="ui-form-info">해외원화결제를 미리 막아두면, 해외에서 <span class="color-primary">원화(KRW)로 결제할 때 부과되는 추가 수수료를 피할 수</span> 있어요.</div>
+									<div class="ui-radio-group type-grid type-col2">
+										<div class="ui-form-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioGrid4" id="radioGrid4-1" />
+											<label for="radioGrid4-1" class="ui-label">
+												<span class="ui-label-text">신청 안함</span>
+											</label>
+										</div>
+										<div class="ui-form-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioGrid4" id="radioGrid4-2" checked />
+											<label for="radioGrid4-2" class="ui-label">
+												<span class="ui-label-text">신청</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<!-- //DD : 일반 체크카드의 경우 -->
+								<!-- DD : 트래블로그 체크카드의 경우 -->
+								<div class="form-item">
+									<div class="toggle-item ui-form-none">
+										<p class="ui-form-none-text">
+											트래블로그 체크카드는<br />
+											해외원화결제(DCC)가 이용되지 않습니다.
+										</p>
+									</div>
+								</div>
+								<!-- //DD : 트래블로그 체크카드의 경우 -->
+								<!-- //2022.11.17 : mod : UI, 위치 변경 -->
+
+								<!-- 2022.10.14 : add : 컨텐츠 추가 -->
+								<!-- case : 추가정보, 단체코드(추천인) 등록이 필요한 경우 노출 -->
+								<div class="form-item">
+									<div class="ui-form-title">
+										<strong class="title">추가정보</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-form">
+											<dl class="ui-form-list">
+												<div class="ui-form-item">
+													<dt class="ui-form-key" data-focus-input="name">ITIC 고객확인번호</dt>
+													<dd class="ui-form-val">
+														<div class="ui-form-val-inner">
+															<div class="ui-form-contents">
+																<div class="in-input-block">
+																	<input type="number" pattern="\d*" class="in-input" title="ITIC 고객확인번호 입력" placeholder="숫자 13자리 입력" data-focus-input-target="name" />
+																</div>
+															</div>
+														</div>
+													</dd>
+												</div>
+											</dl>
+										</div>
+										<p class="ui-form-notice">ITIC 국제교사증 온라인 신청서 작성 완료 시 확인 가능합니다.(www.itic.co.kr)</p>
+									</div>
+									<div class="ui-form margin-top-20">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">대한간호조무사협회 회원번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="대한간호조무사협회 회원번호 입력" placeholder="숫자 8자리 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+									<div class="ui-form margin-top-10">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">하이패스 전자카드 번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="하이패스 전자카드 번호 입력" placeholder="'-' 제외하고 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="ui-form-title">
+										<strong class="title">단체코드(추천인) 등록</strong>
+									</div>
+									<div class="ui-form-info">
+										등록할 단체코드(추천인)가 있으면 단체코드를 선택 후, <br />
+										추천인 번호를 입력해주세요.
+									</div>
+
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<div class="ui-form-item type-only-select">
+												<dt class="ui-form-key" data-focus-input="name">단체코드 선택</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-select-block">
+																<button type="button" class="in-select" title="단체코드 선택" data-placeholder="단체코드 선택" data-focus-input-target="name"></button>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">추천인 번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="추천인 번호 입력" placeholder="숫자 7자리 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+								<!-- //case : 추가정보, 단체코드(추천인) 등록이 필요한 경우 노출 -->
+								<!-- 2022.10.14 : add : 컨텐츠 추가 -->
+							</div>
+							<!-- 2022.10.14 : del : 간편결제 연결 서비스 삭제 -->
+						</div>
+
+						<!-- 2022.10.14 : del : "확인해주세요" 삭제 -->
+					</div>
+
+					<!-- 2022.10.14 : add : 이벤트 배너 영역 추가 -->
+					<div class="banner-area">
+						<div class="banner margin-top-10">
+							<a href="" class="banner-link">
+								<img src="/mkca20/images/contents/banner.png" class="banner-image" />
+							</a>
+						</div>
+					</div>
+					<!-- //2022.10.14 : add : 이벤트 배너 영역 추가 -->
+
+					<!-- 2022.08.31 : mod : .page-buttons에 .type-fixed.type-no-line 클래스 추가 -->
+					<div class="page-buttons type-fixed type-no-line">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">다음</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

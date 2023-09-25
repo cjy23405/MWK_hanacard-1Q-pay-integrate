@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">상세내역</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="card-details">
+								<div class="card-details-head">
+									<div class="card-details-etc">2021.11 기준</div>
+									<!-- 2022.04.27 : mod : alt값 변경 -->
+									<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+									<img src="../dist/assets/images/_dummy/img-card-xs.png" alt="" class="card-details-img" />
+									<h3 class="card-details-name">[본인1234] 아멕스 아시아나클럽 카드</h3>
+								</div>
+								<div class="form-detail margin-top-15">
+									<div class="form-detail-block">
+										<dl class="form-detail-list type-text-default">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">이용금액 (8건)</dt>
+												<dd class="form-detail-group"><strong>65,000 원</strong></dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">실적산정금액 (5건)</dt>
+												<dd class="form-detail-group">
+													<strong><span class="color-primary">50,000</span> 원</strong>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+							<p class="ui-notice">일부 서비스 중 <span class="color-wrong">매출취소</span> 및 <span class="color-wrong">조회일자</span>에 따라 서비스 제공실적이 상이할 수 있습니다.</p>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<!-- [DD] 내역 없을 경우 -->
+							<div class="type-none">
+								<p class="item-text">이용금액 상세 내역이 없습니다.</p>
+							</div>
+							<!--// [DD] 내역 없을 경우 -->
+
+							<div class="check-range">
+								<button type="button" class="ui-button-down">전체</button>
+							</div>
+							<div class="usage-default">
+								<ul class="usage-default-list">
+									<li class="usage-default-item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title">스타벅스 청라점</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.05.20</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">3,000 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item color-primary">실적포함</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title">이디야커피 청라점</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.05.20</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">3,000 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">실적미포함</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title">스타벅스 청라점</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.05.20</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">3,000 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item color-primary">실적포함</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title">이디야커피 청라점</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.05.19</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">5,000 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">실적미포함</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title">이용가맹점명 1줄까지 노출</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.05.19</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">999,999,999 원</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item color-primary">실적포함</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">홈으로 이동</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

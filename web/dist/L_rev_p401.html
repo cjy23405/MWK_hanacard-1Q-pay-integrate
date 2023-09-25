@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">약정 결제비율 변경</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-tab type-nav">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link">변경</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active">해지</a>
+								</li>
+							</ul>
+						</div>
+
+						<h2 class="for-a11y">해지</h2>
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">청구단위</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block">
+										<button type="button" class="ui-button ui-select" title="청구단위 선택 팝업 열기">구.하나SK카드</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<section class="page-section type-line">
+							<div class="section-title margin-bottom-25">
+								<h2 class="title">일부결제금액이월약정 이용내역</h2>
+							</div>
+							<div class="form-detail">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">등록일</dt>
+										<dd class="form-detail-group">2021.01.01</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">약정결제비율</dt>
+										<dd class="form-detail-group">100%</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">최소결제비율</dt>
+										<dd class="form-detail-group">10%</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">종료일자</dt>
+										<dd class="form-detail-group">2021.01.01</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">수수료율(일시불)</dt>
+										<dd class="form-detail-group">연 13.37%</dd>
+									</div>
+									<!-- 2022.01.21 : add : 항목 추가 -->
+									<div class="form-detail-item">
+										<dt class="form-detail-title">수수료율<br />(단기카드대출(현금서비스))</dt>
+										<dd class="form-detail-group">연 15.72%</dd>
+									</div>
+									<!-- //2022.01.21 : add : 항목 추가 -->
+								</dl>
+							</div>
+						</section>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									유의사항
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">일부결제금액이월약정(리볼빙) 서비스를 해지하시면, 소지하고 계신 모든 카드에 대해 일부결제금액이월약정(리볼빙) 서비스가 일괄 해지됩니다. (가족카드 포함)</li>
+										<li class="info-item">
+											단, 청구단위가 통합되지 않은 회원님 중 구.하나SK, 구.외환 신용카드를 모두 소지하신 회원님의 경우 선택하신 신용카드에 대해서만 일부결제금액이월약정(리볼빙) 서비스 약정이 해지되며,
+											해당 결제계좌에서만 일부결제금액이월약정이 적용되지 않으니 주의하시기 바랍니다.
+										</li>
+										<li class="info-item color-primary">결제일 2영업일 전 까지 약정 해지하시면, 당월 결제일에 일부결제금액이월약정(리볼빙) 잔액은 전액 청구됩니다.</li>
+										<li class="info-item color-primary">
+											해지 신청 후 일부결제금액이월약정(리볼빙)을 다시 신청하실 경우에는 재 신청일 기준으로 일부결제금액이월약정(리볼빙) 자격여부를 다시 심사하므로 서비스 이용이 불가할 수 있습니다.
+										</li>
+										<li class="info-item">
+											결제일의 전 영업일 혹은 결제일 당일에 약정 해지하시면 익월 결제일부터 적용되고, 도래하는 당월 결제일은 해지 전 결제비율대로 일부결제금액이월약정(리볼빙)이 적용됩니다.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">다음</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

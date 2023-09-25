@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">진행중인 이벤트</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents has-no-top-padding">
+						<div class="slide-top margin-bottom-20">
+							<div class="slide-banner">
+								<div class="slide-banner-inner">
+									<div class="slide-banner-controller"></div>
+									<ul class="slide-banner-list">
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-4.png" alt="배너 설명 넣어주세요." class="slide-banner-image" />
+											</a>
+										</li>
+										<!-- 2022.02.22 : add : 주석 추가 -->
+										<!-- DD : 버튼 흰색 버전 이용일 경우 is-white 클래스 값 추가 -->
+										<li class="slide-banner-item is-white">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-4.png" alt="배너 설명 넣어주세요." class="slide-banner-image" />
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="toggle-search type-no-line margin-top-none">
+							<div class="toggle-search-tab">
+								<div class="ui-buttons type-scroll">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-tiny type-gray" role="button">찜한 혜택</a>
+										</li>
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-tiny type-gray" role="button">응모현황</a>
+										</li>
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-tiny type-gray" role="button">종료 이벤트</a>
+										</li>
+									</ul>
+								</div>
+								<button type="button" class="ui-button toggle-search-button type-open">
+									<span class="for-a11y">검색 폼 열기</span>
+								</button>
+							</div>
+							<div class="toggle-search-form">
+								<div class="search-word-area">
+									<!-- 2022.05.30 : mod : .type-input-group, .type-search-black 클래스 삭제 -->
+									<div class="ui-input-block type-use-delete type-search">
+										<input type="search" class="ui-input" title="검색어 입력" placeholder="검색어를 입력해 주세요." />
+										<button type="button" class="ui-button ui-input-delete">
+											<span class="for-a11y">입력 내용 지우기</span>
+										</button>
+										<!-- 2022.05.18 : mod : 검색 버튼 추가 -->
+										<button type="button" class="ui-button ui-input-search">
+											<span class="for-a11y">검색</span>
+										</button>
+									</div>
+								</div>
+								<button type="button" class="ui-button toggle-search-button type-close">
+									<span class="for-a11y">검색 폼 닫기</span>
+								</button>
+							</div>
+						</div>
+
+						<!-- 2022.02.21 : add : 주석 추가 -->
+						<!--
+							DD :
+							개발시 카테고리 .sorting-list 영역 태그 구조
+							- 페이지 이동으로 구현되는 경우 [공통 > 카테고리 탭 > 링크형](_category-tab-type-1.html) 이용
+							- ajax 방식으로 구현되는 경우 [공통 > 카테고리 탭 > radio형](_category-tab-type-2.html) 이용
+						-->
+						<div class="sorting-area js-ui-accordion" data-focus-open="false">
+							<div class="sorting-inner js-ui-accordion__item">
+								<button type="button" class="sorting-opener js-ui-accordion__opener">
+									<span class="for-a11y">
+										탭 영역
+										<span class="open-text">펼치기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="sorting-layer js-ui-accordion__layer">
+									<div class="sorting-contents">
+										<div class="sorting-list">
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-all" checked />
+													<label for="sorting-all" class="ui-label">
+														<span class="ui-label-text">전체</span>
+													</label>
+												</div>
+											</div>
+											<!-- 2022.03.31 : add : vip 링크 버튼 위치 변경 -->
+											<!-- Case : VIP -->
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab type-vip-link">
+													<a href="" class="ui-label">
+														<span class="ui-label-text">우수회원</span>
+													</a>
+												</div>
+											</div>
+											<!-- //Case : VIP -->
+											<!-- //2022.03.31 : add : vip 링크 버튼 위치 변경 -->
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-1" />
+													<label for="sorting-1" class="ui-label">
+														<span class="ui-label-text">쇼핑/무이자</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-2" />
+													<label for="sorting-2" class="ui-label">
+														<span class="ui-label-text">정기결제</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-3" />
+													<label for="sorting-3" class="ui-label">
+														<span class="ui-label-text">여행/해외</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-4" />
+													<label for="sorting-4" class="ui-label">
+														<span class="ui-label-text">문화/생활</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-5" />
+													<label for="sorting-5" class="ui-label">
+														<span class="ui-label-text">할인/캐쉬백</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-6" />
+													<label for="sorting-6" class="ui-label">
+														<span class="ui-label-text">응모/경품</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-7" />
+													<label for="sorting-7" class="ui-label">
+														<span class="ui-label-text">친구추천</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 2022.03.31 : del : vip 링크 버튼 위치 변경
+						< !-- Case : VIP -- >
+						<div class="form-bottom margin-top-none margin-bottom-35">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-vip">VIP 전용 이벤트 바로가기</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						< !-- Case : //VIP -- >
+						-->
+
+						<div class="page-section-group type-line margin-top-none">
+							<div class="usage-default margin-top-minus-10">
+								<ul class="usage-default-list">
+									<!-- Case : 진행중인 이벤트 없을 때 -->
+									<li class="usage-default-item type-line">
+										<div class="link-item type-none type-flex type-no-line type-no-padding">
+											<p class="item-text">진행중인 이벤트가 없습니다</p>
+										</div>
+									</li>
+									<!-- Case : //진행중인 이벤트 없을 때 -->
+
+									<!-- Case : 검색결과 없을 때 -->
+									<li class="usage-default-item type-line">
+										<div class="link-item type-none type-flex type-no-line type-no-padding">
+											<p class="item-text">검색결과가 없습니다.</p>
+										</div>
+									</li>
+									<!-- Case : //검색결과 없을 때 -->
+
+									<li class="usage-default-item type-line">
+										<div class="usage-default-block type-event">
+											<a href="" class="usage-default-left-group type-align-middle">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 없을 때 -->
+												<div class="logo-image type-store type-medium">
+													<div class="logo-image-inner"></div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="usage-default-left">
+													<div class="usage-default-brand type-multi-ellipsis">G9</div>
+													<div class="usage-default-title type-multi-ellipsis">이십일년 피.땀.눈.물 닦아드림</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="usage-default-item type-line">
+										<div class="usage-default-block type-event">
+											<a href="" class="usage-default-left-group type-align-middle">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 에러 -->
+												<div class="logo-image type-store type-medium">
+													<div class="logo-image-inner">
+														<!-- 2022.05.04 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="usage-default-left">
+													<div class="usage-default-brand type-multi-ellipsis">스타벅스</div>
+													<div class="usage-default-title type-multi-ellipsis">스타벅스 정기결제하고 커피한잔 받아가자!</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+													</div>
+												</div>
+											</a>
+											<div class="usage-default-right type-auto">
+												<span class="icon-heart margin-top-2 is-active">
+													<span class="for-a11y">(찜)</span>
+												</span>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item type-line">
+										<div class="usage-default-block type-event">
+											<a href="" class="usage-default-left-group type-align-middle">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 있을 때 -->
+												<div class="logo-image type-store type-medium">
+													<div class="logo-image-inner">
+														<!-- 2022.05.04 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="usage-default-left">
+													<div class="usage-default-brand type-multi-ellipsis">포시즌스 호텔 서울 (랜딩관, 메이러트관)</div>
+													<div class="usage-default-title type-multi-ellipsis">ALL DAY HOCANCE 패키지</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="usage-default-item type-line">
+										<div class="usage-default-block type-event">
+											<a href="" class="usage-default-left-group type-align-middle">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="logo-image type-store type-medium">
+													<div class="logo-image-inner">
+														<!-- 2022.05.04 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/brand-icon-4.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="usage-default-left">
+													<div class="usage-default-brand type-multi-ellipsis">올리브영</div>
+													<div class="usage-default-title type-multi-ellipsis">기프트카드 구매하고 최대 2만5천원 받기!</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="usage-default-item type-line">
+										<div class="usage-default-block type-event">
+											<a href="" class="usage-default-left-group type-align-middle">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="logo-image type-store type-medium">
+													<div class="logo-image-inner">
+														<!-- 2022.05.04 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/brand-icon-5.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="usage-default-left">
+													<div class="usage-default-brand type-multi-ellipsis">브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출</div>
+													<div class="usage-default-title type-multi-ellipsis">이벤트명 최대 2줄 노출 이벤트명 최대 2줄 노출 이벤트명 최대 2줄 노출 이벤트명 최대 2줄 노출</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+													</div>
+												</div>
+											</a>
+											<div class="usage-default-right type-auto">
+												<span class="icon-heart margin-top-2 is-active">
+													<span class="for-a11y">(찜)</span>
+												</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<button type="button" class="ui-button ui-button-more">더보기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

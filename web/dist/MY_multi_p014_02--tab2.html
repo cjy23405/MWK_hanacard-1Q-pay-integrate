@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">멀티서비스</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="section-title type-medium margin-bottom-15">
+							<h2 class="title type-flexible align-center"><div class="font-weight-regular">후불교통 우선결제예약 카드</div></h2>
+						</div>
+
+						<div class="info-cards-item type-detail">
+							<!-- DD : 이미지 없을 때
+							<div class="card-image">
+								<div class="card-image-inner"></div>
+							</div>
+							-->
+
+							<!-- DD : 이미지 에러
+							<div class="card-image">
+								<div class="card-image-inner">
+									<img src="./assets/images/_dummy/multi-card-1 .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+								</div>
+							</div>
+							-->
+
+							<!-- DD : 이미지 있을 때 -->
+							<div class="card-image">
+								<div class="card-image-inner">
+									<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/_dummy/multi-card-1.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+								</div>
+							</div>
+
+							<div class="info-cards-explain">
+								<div class="card-badges type-card-info margin-bottom-5">
+									<span class="ui-badge color-secondary">국내</span>
+									<span class="ui-badge color-secondary">해외</span>
+								</div>
+								<div class="info-cards-title">멀티카드 A</div>
+								<div class="link-row aling-center margin-top-25">
+									<button type="button" class="ui-button ui-badge type-right-icon type-icon-card-delete">
+										<span class="color-basic font-weight-regular">설정해제</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<!--
+							DD : .js-set-date 상태 클래스
+							- is-init : 설정이 안된 상태
+							- is-set : 설정이 된 상태
+							- is-edit : 편집 모드 상태
+						-->
+						<section class="page-section js-set-date is-init">
+							<div class="section-title margin-top-35 margin-bottom-25">
+								<h2 class="title type-flexible">우선결제예약기간</h2>
+								<div class="ui-buttons type-right type-small-margin">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item js-set-date-init">
+											<button type="button" class="ui-button ui-basic-button type-tiny type-quinary js-set-date-button-init">기간설정</button>
+										</li>
+										<li class="ui-buttons-item js-set-date-edit">
+											<button type="button" class="ui-button ui-basic-button type-tiny type-quinary js-set-date-button-submit">설정완료</button>
+										</li>
+										<li class="ui-buttons-item js-set-date-edit">
+											<button type="button" class="ui-button ui-basic-button type-tiny js-set-date-button-cancel">취소</button>
+										</li>
+										<li class="ui-buttons-item js-set-date-set">
+											<button type="button" class="ui-button ui-basic-button type-tiny type-quinary js-set-date-button-edit">기간변경</button>
+										</li>
+										<li class="ui-buttons-item js-set-date-set">
+											<button type="button" class="ui-button ui-basic-button type-tiny js-set-date-button-clear">해제</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="form-group margin-bottom-25 js-set-date-edit">
+								<div class="ui-radio-group type-panel">
+									<div class="ui-radio-block type-box">
+										<!-- 2022.07.01 : mod : data-area-disabled값 수정 -->
+										<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-1" data-area-disabled="rangePanel1-1" checked />
+										<label for="rangePanel1-1" class="ui-label">
+											<span class="ui-label-text">오늘</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-box">
+										<!-- 2022.07.01 : mod : data-area-disabled값 수정 -->
+										<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-2" data-area-disabled="rangePanel1-2" />
+										<label for="rangePanel1-2" class="ui-label">
+											<span class="ui-label-text">2주</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-box">
+										<!-- 2022.07.01 : mod : data-area-disabled값 수정 -->
+										<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-3" data-area-disabled="rangePanel1-3" />
+										<label for="rangePanel1-3" class="ui-label">
+											<span class="ui-label-text">1개월</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-box">
+										<!-- 2022.07.01 : mod : data-area-disabled값 수정 -->
+										<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-4" data-area-disabled="rangePanel1-4" />
+										<label for="rangePanel1-4" class="ui-label">
+											<span class="ui-label-text">3개월</span>
+										</label>
+									</div>
+									<div class="ui-radio-block type-box">
+										<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-5" data-area-disabled="rangePanel1-5" />
+										<label for="rangePanel1-5" class="ui-label">
+											<span class="ui-label-text">직접입력</span>
+										</label>
+									</div>
+								</div>
+								<div class="date-range" data-area-disabled-target="rangePanel1-5">
+									<div class="form-flex type-row">
+										<div class="form-flex-cell type-flexible">
+											<!-- 2022.06.23 : mod : date picker 라이브러리 적용 -->
+											<div class="ui-date-picker">
+												<duet-date-picker identifier="date" title="예약기간 시작일" value="2021-01-01" disabled></duet-date-picker>
+											</div>
+											<!-- //2022.06.23 : mod : date picker 라이브러리 적용 -->
+										</div>
+										<div class="form-flex-cell">
+											<div class="ui-range-dash">-</div>
+										</div>
+										<div class="form-flex-cell type-flexible">
+											<!-- 2022.06.23 : mod : date picker 라이브러리 적용 -->
+											<div class="ui-date-picker">
+												<duet-date-picker identifier="date" title="예약기간 종료일" value="2021-04-01" disabled></duet-date-picker>
+											</div>
+											<!-- //2022.06.23 : mod : date picker 라이브러리 적용 -->
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<p class="medium-text margin-bottom-25 js-set-date-set">2021.09.06 ~ 2021.12.31</p>
+
+							<ul class="info-list">
+								<li class="info-item">예약기간 미 설정 시, 카드를 등록한 날부터 우선결제예약에 등록한 카드로 우선 결제됩니다.</li>
+								<li class="info-item">예약기간동안 해당 카드로 우선 결제됩니다.</li>
+								<li class="info-item">예약기간 설정은 국내 시간 기준으로 설정됩니다.</li>
+								<li class="info-item">예약기간 종료 후 해외 이용 시 결제카드로 결제되며, 결제카드를 설정하지 않은 경우 멀티카드로 결제됩니다.</li>
+							</ul>
+						</section>
+
+						<div class="ui-tab type-nav margin-top-25 margin-bottom-none">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">해외</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">후불교통</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h3 class="for-a11y">후불교통</h3>
+
+						<!-- Case : 카드 없을 때 -->
+						<div class="link-item type-none type-flex">
+							<p class="item-text">변경할 카드가 없습니다.</p>
+						</div>
+						<!-- Case : //카드 없을 때 -->
+
+						<!-- Case : 카드 있을 때 -->
+						<div class="card-list margin-top-35">
+							<div class="ui-radio-group type-full">
+								<div class="ui-radio-block type-box">
+									<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" checked />
+									<label for="radioBox1-1" class="ui-label card-block">
+										<!-- DD : 이미지 없을 때 -->
+										<span class="card-image">
+											<span class="card-image-inner"></span>
+										</span>
+										<span class="card-info">
+											<span class="card-name"><span class="color-basic font-weight-regular">MULTI On 모바일카드</span></span>
+											<span class="card-number">
+												<span class="card-number-item">
+													뷰티 <span class="color-primary">5%</span> 적립<br />
+													스타벅스 <span class="color-primary">50%</span> 적립
+												</span>
+											</span>
+											<span class="card-badges">
+												<span class="ui-badge color-secondary">국내</span>
+												<span class="ui-badge color-secondary">해외</span>
+											</span>
+										</span>
+									</label>
+								</div>
+								<div class="ui-radio-block type-box">
+									<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" />
+									<label for="radioBox1-2" class="ui-label card-block">
+										<!-- DD : 이미지 에러 -->
+										<span class="card-image">
+											<span class="card-image-inner">
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</span>
+										</span>
+										<span class="card-info">
+											<span class="card-name"><span class="color-basic font-weight-regular">MULTI Living 모바일카드</span></span>
+											<span class="card-number">
+												<span class="card-number-item">
+													뷰티 <span class="color-primary">5%</span> 적립<br />
+													스타벅스 <span class="color-primary">50%</span> 적립
+												</span>
+											</span>
+											<span class="card-badges">
+												<span class="ui-badge color-secondary">국내</span>
+												<span class="ui-badge color-secondary">해외</span>
+											</span>
+										</span>
+									</label>
+								</div>
+								<div class="ui-radio-block type-box">
+									<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-3" />
+									<label for="radioBox1-3" class="ui-label card-block">
+										<!-- DD : 이미지 있을 때 -->
+										<span class="card-image">
+											<span class="card-image-inner">
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</span>
+										</span>
+										<span class="card-info">
+											<span class="card-name"><span class="color-basic font-weight-regular">MULTI Living 모바일카드</span></span>
+											<span class="card-number">
+												<span class="card-number-item">
+													뷰티 <span class="color-primary">5%</span> 적립<br />
+													스타벅스 <span class="color-primary">50%</span> 적립
+												</span>
+											</span>
+											<span class="card-badges">
+												<span class="ui-badge color-secondary">국내</span>
+												<span class="ui-badge color-secondary">해외</span>
+											</span>
+										</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- //Case : 카드 있을 때 -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">아래의 경우, 우선결제예약이 불가합니다.</li>
+										<li class="info-item">
+											해외 업종 우선결제예약
+											<ul class="info-list margin-top-10">
+												<li class="info-item type-hyphen">멀티카드 : 브랜드가 'Local'인 경우</li>
+												<li class="info-item type-hyphen">
+													우선결제예약카드
+													<p class="small-text font-weight-light color-blur margin-top-10">: 브랜드가 'Local'인 경우</p>
+													<p class="small-text font-weight-light color-blur margin-top-10">: 멀티카드와 브랜드가 다른 경우</p>
+												</li>
+											</ul>
+										</li>
+										<li class="info-item">
+											후불교통 업종 우선결제예약
+											<ul class="info-list margin-top-10">
+												<li class="info-item type-hyphen">멀티카드 : 후불교통 기능이 없는 경우</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

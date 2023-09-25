@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-search-zip-code">우편번호 찾기</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 우편번호 찾기 -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--zip" data-layer="layer-search-zip-code">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">우편번호 찾기</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="js-ui-tab-panel">
+								<!-- 2022.10.11 : mod : ui-tab에 type-full-panel 클래스 추가 및 문구수정 -->
+								<div class="ui-tab type-full-panel">
+									<ul class="ui-tab-list">
+										<li class="ui-tab-item">
+											<button type="button" class="ui-button ui-tab-link" data-tab-open="layer-zip-word">검색어</button>
+										</li>
+										<li class="ui-tab-item">
+											<button type="button" class="ui-button ui-tab-link" data-tab-open="layer-zip-address">도로명/지번</button>
+										</li>
+									</ul>
+								</div>
+								<!-- //2022.10.11 : mod : ui-tab에 type-full-panel 클래스 추가 및 문구수정 -->
+								<!-- tab contents -->
+								<!-- tab: 검색어로 찾기 -->
+								<div class="ui-tab-panel panel-zip-word" data-tab="layer-zip-word">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+									<h3 class="for-a11y">검색어로 찾기</h3>
+									<!-- 2022.10.11 : mod : search-word-area에 간격 클래스 추가 및 구조변경 -->
+									<div class="search-word-area margin-bottom-20">
+										<div class="ui-form">
+											<dl class="ui-form-list">
+												<div class="ui-form-item">
+													<dt class="ui-form-key" data-focus-input="name">통합검색</dt>
+													<dd class="ui-form-val">
+														<div class="ui-form-val-inner">
+															<div class="ui-form-contents">
+																<!-- 2022.11.28 : mod : type-center-delete 클래스 추가 -->
+																<div class="in-input-block type-center-delete">
+																	<input type="search" class="in-input" title="우편번호 검색어 입력" placeholder="통합검색" data-focus-input-target="name" />
+																</div>
+															</div>
+														</div>
+														<div class="ui-form-side">
+															<button type="button" class="ui-button ui-button-search">
+																<span class="for-a11y">검색</span>
+															</button>
+														</div>
+													</dd>
+												</div>
+											</dl>
+										</div>
+									</div>
+									<!-- //2022.10.11 : mod : search-word-area에 간격 클래스 추가 및 구조변경 -->
+
+									<div class="page-section">
+										<!-- 2022.11.17 : add : 안내문구 추가 -->
+										<p class="ui-form-notice color-basic margin-bottom-10">주소를 이렇게 입력해보세요.</p>
+
+										<!-- 2022.11.17 : mod : 문구수정 -->
+										<ul class="info-list type-text-regular">
+											<li class="info-item">도로명+건물번호 : 을지로 66</li>
+											<li class="info-item">지번 : 을지로2가 181</li>
+											<li class="info-item">건물명 : 하나금융그룹</li>
+										</ul>
+										<!-- //2022.11.17 : mod : 문구수정 -->
+									</div>
+									<!-- 검색결과 없을 경우 -->
+									<!-- 2022.10.11 : mod : 클래스 변경 및 추가 / 검색 결과 있을경우와 별도의 섹션으로 나눠 구성 -->
+									<div class="page-section-group row-group type-line">
+										<div class="type-none type-height-auto">
+											<p class="item-text">검색결과가 없습니다.</p>
+										</div>
+									</div>
+									<!-- //검색결과 없을 경우 -->
+									<!-- 2022.10.11 : mod : .zip-area에 타입클래스 추가 / 검색 결과 없을경우와 별도의 섹션으로 나눠 구성  -->
+									<div class="page-section type-line row-contents-group">
+										<div class="zip-area type-apply">
+											<div class="zip-head">
+												<!-- 2022.10.11 : mod : 클래스명 변경 .color-secondary => .color-primary -->
+												<strong class="total">총 <strong class="color-primary">561</strong>건</strong>
+												<p class="text">아래 해당하는 주소를 선택해주세요.</p>
+											</div>
+											<div class="zip-list">
+												<div class="zip-item">
+													<div class="zip-item-head"><strong class="number">22742</strong></div>
+													<button type="button" class="zip-item-block">
+														<span class="category">도로명</span>
+														<span class="text">인천 서구 에코로 163 청라국제도시역</span>
+													</button>
+													<button type="button" class="zip-item-block">
+														<span class="category">지번</span>
+														<span class="text">인천 서구 경서동 519-2 청라국제도시역</span>
+													</button>
+												</div>
+												<div class="zip-item">
+													<div class="zip-item-head"><strong class="number">22742</strong></div>
+													<button type="button" class="zip-item-block">
+														<span class="category">도로명</span>
+														<span class="text">인천 서구 에코로 181 하나금융그룹통합데이터센터</span>
+													</button>
+													<button type="button" class="zip-item-block">
+														<span class="category">지번</span>
+														<span class="text">인천 서구 청라 7-5 하나금융그룹통합데이터센터</span>
+													</button>
+												</div>
+											</div>
+											<!-- 2022.10.11 : mod : 클래스 명 변경 .ui-button-more => .ui-button-view-more -->
+											<button type="button" class="ui-button ui-button-view-more">더보기</button>
+										</div>
+									</div>
+								</div>
+								<!-- //tab: 검색어로 찾기 -->
+								<!-- tab: 도로명/지번으로 찾기 -->
+								<div class="ui-tab-panel panel-zip-address" data-tab="layer-zip-address">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+									<h3 class="for-a11y">도로명/지번으로 찾기</h3>
+									<!-- 2022.10.11 : mod : 전반적인 구조변경 -->
+									<div class="page-section">
+										<div class="js-ui-tab-panel page-tab-panel">
+											<div class="ui-tab-area margin-bottom-20">
+												<ul class="ui-tab-list">
+													<li class="ui-tab-item">
+														<button type="button" class="ui-button ui-tab-link" data-tab-open="tab-panel-01">도로명</button>
+													</li>
+													<li class="ui-tab-item">
+														<button type="button" class="ui-button ui-tab-link" data-tab-open="tab-panel-02">지번</button>
+													</li>
+												</ul>
+											</div>
+
+											<!-- tab contents -->
+											<!-- tab: 번호 -->
+											<div class="ui-tab-panel padding-none" data-tab="tab-panel-01">
+												<div class="search-word-address">
+													<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+													<h4 class="for-a11y">도로명</h4>
+													<div class="ui-form">
+														<div class="ui-form-list">
+															<div class="ui-form-item type-only-select">
+																<dt class="ui-form-key" data-focus-input="name">시/군/도</dt>
+																<dd class="ui-form-val">
+																	<div class="ui-form-val-inner">
+																		<div class="ui-form-contents">
+																			<div class="in-select-block">
+																				<button type="button" class="in-select" title="시/군/도 선택" data-placeholder="시/군/도 선택" data-focus-input-target="name"></button>
+																			</div>
+																		</div>
+																	</div>
+																</dd>
+															</div>
+															<div class="ui-form-item type-only-select">
+																<dt class="ui-form-key" data-focus-input="name">읍/면/군</dt>
+																<dd class="ui-form-val">
+																	<div class="ui-form-val-inner">
+																		<div class="ui-form-contents">
+																			<div class="in-select-block">
+																				<button type="button" class="in-select" title="시/군/도 선택" data-placeholder="시/군/도 선택" data-focus-input-target="name"></button>
+																			</div>
+																		</div>
+																	</div>
+																</dd>
+															</div>
+															<div class="ui-form-item">
+																<dt class="ui-form-key" data-focus-input="name">도로명</dt>
+																<dd class="ui-form-val">
+																	<div class="ui-form-val-inner">
+																		<div class="ui-form-contents">
+																			<!-- 2022.11.28 : mod : type-center-delete 클래스 추가 -->
+																			<div class="in-input-block type-center-delete">
+																				<!-- 2022.11.17 : mod : title, placeholder 문구수정 -->
+																				<input type="search" class="in-input" title="직접 입력" placeholder="직접 입력" data-focus-input-target="name" />
+																			</div>
+																		</div>
+																	</div>
+																	<div class="ui-form-side">
+																		<button type="button" class="ui-button ui-button-search">
+																			<span class="for-a11y">검색</span>
+																		</button>
+																	</div>
+																</dd>
+															</div>
+														</div>
+													</div>
+													<!-- 2022.10.11 : mod : 타입클래스, 간격 클래스 추가 및 문구변경 -->
+													<div class="info-list type-text-regular margin-top-20">
+														<p class="info-item">
+															찾으실 도로명을 정확히 입력해주세요.<br />
+															예 ) 서울시 중구 을지로일 경우, ‘을지로’만 입력
+														</p>
+													</div>
+													<!-- //2022.10.11 : mod : 타입클래스, 간격 클래스 추가 및 문구변경 -->
+												</div>
+											</div>
+											<!-- //tab: 번호 -->
+
+											<!-- tab: 지역 -->
+											<div class="ui-tab-panel padding-none" data-tab="tab-panel-02">
+												<div class="search-word-address">
+													<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+													<h4 class="for-a11y">지번</h4>
+													<div class="ui-form">
+														<div class="ui-form-list">
+															<div class="ui-form-item">
+																<dt class="ui-form-key" data-focus-input="name">지번입력</dt>
+																<dd class="ui-form-val">
+																	<div class="ui-form-val-inner">
+																		<div class="ui-form-contents">
+																			<!-- 2022.11.28 : mod : type-center-delete 클래스 추가 -->
+																			<div class="in-input-block type-center-delete">
+																				<!-- 2022.11.17 : mod : title, placeholder 문구수정 -->
+																				<input type="search" class="in-input" title="동/읍/면 직접 입력" placeholder="동/읍/면 직접 입력" data-focus-input-target="name" />
+																			</div>
+																		</div>
+																	</div>
+																	<div class="ui-form-side">
+																		<button type="button" class="ui-button ui-button-search">
+																			<span class="for-a11y">검색</span>
+																		</button>
+																	</div>
+																</dd>
+															</div>
+														</div>
+													</div>
+													<div class="info-list">
+														<p class="info-item">
+															찾으실 동(읍, 면)을 정확히 입력해주세요.<br />
+															예) 삼성 1동일 경우 ‘삼성1’만 입력
+														</p>
+													</div>
+												</div>
+											</div>
+											<!-- //tab: 지역 -->
+											<!-- //tab contents -->
+										</div>
+									</div>
+
+									<!-- 검색결과 없을 경우 -->
+									<!-- 2022.10.11 : mod : 클래스 변경 및 추가 / 검색 결과 있을경우와 별도의 섹션으로 나눠 구성 -->
+									<div class="page-section-group row-group type-line">
+										<div class="type-none type-height-auto row-contents-group">
+											<p class="item-text">검색결과가 없습니다.</p>
+										</div>
+									</div>
+									<!-- //검색결과 없을 경우 -->
+
+									<!-- 2022.10.11 : mod : .zip-area에 타입클래스 추가 / 검색 결과 없을경우와 별도의 섹션으로 나눠 구성  -->
+									<div class="page-section type-line row-contents-group">
+										<div class="zip-area type-apply">
+											<div class="zip-head">
+												<!-- 2022.10.11 : mod : 클래스명 변경 .color-secondary => .color-primary -->
+												<strong class="total">총 <strong class="color-primary">561</strong>건</strong>
+												<p class="text">아래 해당하는 주소를 선택해주세요.</p>
+											</div>
+											<div class="zip-list">
+												<div class="zip-item">
+													<div class="zip-item-head"><strong class="number">22742</strong></div>
+													<button type="button" class="zip-item-block">
+														<span class="category">도로명</span>
+														<span class="text">인천 서구 에코로 163 청라국제도시역</span>
+													</button>
+													<button type="button" class="zip-item-block">
+														<span class="category">지번</span>
+														<span class="text">인천 서구 경서동 519-2 청라국제도시역</span>
+													</button>
+												</div>
+												<div class="zip-item">
+													<div class="zip-item-head"><strong class="number">22742</strong></div>
+													<button type="button" class="zip-item-block">
+														<span class="category">도로명</span>
+														<span class="text">인천 서구 에코로 181 하나금융그룹통합데이터센터</span>
+													</button>
+													<button type="button" class="zip-item-block">
+														<span class="category">지번</span>
+														<span class="text">인천 서구 청라 7-5 하나금융그룹통합데이터센터</span>
+													</button>
+												</div>
+											</div>
+											<!-- 2022.10.11 : mod : 클래스 명 변경 .ui-button-more => .ui-button-view-more -->
+											<button type="button" class="ui-button ui-button-view-more">더보기</button>
+										</div>
+									</div>
+									<!-- //2022.10.11 : mod : 전반적인 구조변경 -->
+								</div>
+								<!-- //tab: 도로명/지번으로 찾기 -->
+								<!-- //tab contents -->
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 우편번호 찾기 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-search-zip-code');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

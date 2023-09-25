@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-3{fill:#2d3239}
+        </style>
+    </defs>
+    <g id="ic_browser" transform="translate(-2 -564)">
+        <g id="사각형_15775" data-name="사각형 15775" transform="translate(11.5 574.5)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+            <rect width="25" height="23" rx="5" style="stroke:none"/>
+            <rect x=".75" y=".75" width="23.5" height="21.5" rx="4.25" style="fill:none"/>
+        </g>
+        <path id="사각형_16365" data-name="사각형 16365" class="cls-3" transform="translate(12.5 580)" d="M0 0h24v1.5H0z"/>
+        <rect id="사각형_16366" data-name="사각형 16366" class="cls-3" width="14" height="1.5" rx=".75" transform="translate(16 585)"/>
+        <rect id="사각형_16367" data-name="사각형 16367" class="cls-3" width="8" height="1.5" rx=".75" transform="translate(16 588.5)"/>
+        <circle id="타원_1975" data-name="타원 1975" class="cls-3" cx=".75" cy=".75" r=".75" transform="translate(14.5 577.5)"/>
+        <circle id="타원_1976" data-name="타원 1976" class="cls-3" cx=".75" cy=".75" r=".75" transform="translate(17 577.5)"/>
+        <path id="다각형_58" data-name="다각형 58" d="M5.549.947a.5.5 0 0 1 .9 0l1.233 2.582a.5.5 0 0 0 .39.281l2.86.354a.5.5 0 0 1 .278.863L9.117 6.963a.5.5 0 0 0-.151.462l.541 2.785a.5.5 0 0 1-.729.535l-2.54-1.378a.5.5 0 0 0-.477 0l-2.538 1.378a.5.5 0 0 1-.729-.535l.541-2.785a.5.5 0 0 0-.151-.462L.791 5.028a.5.5 0 0 1 .278-.863l2.86-.354a.5.5 0 0 0 .39-.281z" transform="translate(27 586.5)" style="fill:#fff"/>
+        <path id="다각형_90" data-name="다각형 90" d="M6.049.947a.5.5 0 0 1 .9 0l1.381 2.9a.5.5 0 0 0 .39.281l3.21.4a.5.5 0 0 1 .278.863L9.86 7.559a.5.5 0 0 0-.151.462l.607 3.126a.5.5 0 0 1-.729.535l-2.849-1.545a.5.5 0 0 0-.477 0l-2.847 1.545a.5.5 0 0 1-.729-.535l.607-3.126a.5.5 0 0 0-.151-.462L.791 5.386a.5.5 0 0 1 .278-.863l3.21-.4a.5.5 0 0 0 .39-.281z" transform="translate(29 587.5)" style="fill:#7dedf3"/>
+        <path id="다각형_91" data-name="다각형 91" d="M6.049.947a.5.5 0 0 1 .9 0l1.381 2.9a.5.5 0 0 0 .39.281l3.21.4a.5.5 0 0 1 .278.863L9.86 7.559a.5.5 0 0 0-.151.462l.607 3.126a.5.5 0 0 1-.729.535l-2.849-1.545a.5.5 0 0 0-.477 0l-2.847 1.545a.5.5 0 0 1-.729-.535l.607-3.126a.5.5 0 0 0-.151-.462L.791 5.386a.5.5 0 0 1 .278-.863l3.21-.4a.5.5 0 0 0 .39-.281z" transform="translate(27 586.5)" style="fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+    </g>
+</svg>

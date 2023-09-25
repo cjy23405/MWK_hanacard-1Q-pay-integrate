@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합 - WCMS 컨텐츠 가이드</title>
+
+		<meta charset="euc-kr" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- favicon -->
+		<link rel="icon" href="../dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="../dist/assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="../dist/assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="../dist/assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="../dist/assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="../dist/assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="../dist/assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="../dist/assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="../dist/assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../dist/assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="../dist/assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/highlightjs/vs2015.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/codemirror/lib/codemirror.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/codemirror/theme/vscode-dark.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<header class="header">
+					<h1 class="header__title">
+						<a href="./" class="header__title__link">
+							<span class="header__title__top-text">하나카드 원큐페이 통합</span>
+							<span class="header__title__text"> WCMS 컨텐츠 가이드</span>
+						</a>
+					</h1>
+					<nav class="gnb">
+						<ul class="gnb__list"></ul>
+					</nav>
+				</header>
+
+				<div class="lnb">
+					<div class="lnb__head">
+						<h2 class="lnb__title"></h2>
+					</div>
+					<nav class="lnb__nav">
+						<ul class="lnb__list"></ul>
+					</nav>
+				</div>
+
+				<div class="contents">
+					<section class="section">
+						<div class="section__head">
+							<h3 class="section__title">본문 샘플</h3>
+						</div>
+						<section class="sub-section">
+							<div class="sub-section__head">
+								<h4 class="sub-section__title">Type 1</h4>
+							</div>
+							<div class="example">
+								<section class="example__section example__section--viewer">
+									<div class="example__section-head">
+										<h5 class="example__section-title">미리보기</h5>
+									</div>
+									<div class="viewer">
+										<iframe src="./example/faq/001-body-sample-1.html" frameborder="0"></iframe>
+									</div>
+								</section>
+								<section class="example__section example__section--code">
+									<div class="example__section-head">
+										<h5 class="example__section-title">HTML</h5>
+									</div>
+									<div class="code-viewer">
+										<pre><code class="language-html">
+<p class="wcms-text wcms-size-small wcms-color-gray">카드 비밀번호 변경을 원하시는 경우, 다음과 같은 방법으로 변경해주시기 바랍니다.</p>
+
+<section class="wcms-section">
+	<h2 class="wcms-title-small">[비밀번호 변경]</h2>
+	<p class="wcms-text wcms-size-small wcms-color-gray">하나카드 홈페이지 접속 > 로그인 > 카드 > 발급조회/사용등록 > 카드비밀번호등록/변경 에서 변경 가능합니다.</p>
+	<a href="" class="wcms-button type-inline type-line type-light-gray"><span class="wcms-button-text">카드비밀번호 등록/변경</span></a>
+</section>
+										</code></pre>
+									</div>
+								</section>
+							</div>
+						</section>
+						<section class="sub-section">
+							<div class="sub-section__head">
+								<h4 class="sub-section__title">Type 2</h4>
+							</div>
+							<div class="example">
+								<section class="example__section example__section--viewer">
+									<div class="example__section-head">
+										<h5 class="example__section-title">미리보기</h5>
+									</div>
+									<div class="viewer">
+										<iframe src="./example/faq/002-body-sample-2.html" frameborder="0"></iframe>
+									</div>
+								</section>
+								<section class="example__section example__section--code">
+									<div class="example__section-head">
+										<h5 class="example__section-title">HTML</h5>
+									</div>
+									<div class="code-viewer">
+										<pre><code class="language-html">
+<p class="wcms-text wcms-size-small wcms-color-gray">
+	체크카드 사용이 잘 되지 않는다면 <strong class="wcms-weight-medium">통장에 잔액이 충분한지</strong> 확인하시기 바랍니다.<br />
+	체크카드와 연계된 통장에 잔액이 충분한데도 잘 사용되지 않는다면 아래 사항을 체크해 주세요.
+</p>
+
+<ol class="wcms-list wcms-size-small">
+	<li class="wcms-list-item wcms-color-gray" data-symbol="①">
+		<div class="wcms-list-contents">
+			<div class="wcms-margin-small"><strong class="wcms-weight-medium">일일 사용한도를 초과</strong>한 경우</div>
+			<ul class="wcms-list">
+				<li class="wcms-list-item" data-symbol="-">
+					<div class="wcms-list-contents">1일 500만원 / 월간 2,000만원</div>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li class="wcms-list-item wcms-color-gray" data-symbol="②">
+		<div class="wcms-list-contents">
+			<div class="wcms-margin-small">당일에 <strong class="wcms-weight-medium">타행 자기앞수표를 입금</strong>하신 경우</div>
+			<ul class="wcms-list">
+				<li class="wcms-list-item" data-symbol="-">
+					<div class="wcms-list-contents">타행 자기앞수표가 자금화 된 이후 이용이 가능합니다.</div>
+				</li>
+				<li class="wcms-list-item" data-symbol="-">
+					<div class="wcms-list-contents">자금화란? 입금하신 수표가 현금화 되는 것으로써 익일(은행 영업일 기준) 오후 2시 20분을 말합니다.</div>
+				</li>
+				<li class="wcms-list-item" data-symbol="※">
+					<div class="wcms-list-contents">자금화 시간은 사정에 따라 연장될 수 있습니다.</div>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li class="wcms-list-item wcms-color-gray" data-symbol="③">
+		<div class="wcms-list-contents">
+			<div class="wcms-margin-small">기타</div>
+			<ul class="wcms-list">
+				<li class="wcms-list-item" data-symbol="-">
+					<div class="wcms-list-contents">
+						<strong class="wcms-weight-medium">마그네틱이 손상</strong>되었거나, 일시적인 <strong class="wcms-weight-medium">전산장애</strong>로 승인이 안될 수 있습니다.
+					</div>
+				</li>
+				<li class="wcms-list-item" data-symbol="-">
+					<div class="wcms-list-contents">
+						통장 잔액과 출금가능금액이 같은지 확인해주세요. 해외사용건이 있다면 승인시점 금액이 지급정지 되어 출금가능금액이 더 적을 수 있습니다.
+					</div>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li class="wcms-list-item wcms-color-gray" data-symbol="※">
+		<div class="wcms-list-contents">체크카드의 결제계좌를 타 은행계좌로 설정하신 경우 해외결제 승인이 불가합니다.</div>
+	</li>
+</ol>
+										</code></pre>
+									</div>
+								</section>
+							</div>
+						</section>
+						<section class="sub-section">
+							<div class="sub-section__head">
+								<h4 class="sub-section__title">Type 3</h4>
+							</div>
+							<div class="example">
+								<section class="example__section example__section--viewer">
+									<div class="example__section-head">
+										<h5 class="example__section-title">미리보기</h5>
+									</div>
+									<div class="viewer">
+										<iframe src="./example/faq/003-body-sample-3.html" frameborder="0"></iframe>
+									</div>
+								</section>
+								<section class="example__section example__section--code">
+									<div class="example__section-head">
+										<h5 class="example__section-title">HTML</h5>
+									</div>
+									<div class="code-viewer">
+										<pre><code class="language-html">
+<p class="wcms-text wcms-size-small wcms-color-gray">
+	기존에 소지하셨던 카드를 [분실/훼손/종류변경] 등의 사유로 교체 또는 추가 발급을 받으시는 경우 『카드 비밀번호』는 다음과 같이 적용됩니다.
+</p>
+
+<section class="wcms-section">
+	<h2 class="wcms-title-small">카드 교체/추가 발급 시 비밀번호 운영기준</h2>
+	<div class="wcms-table type-2">
+		<div class="wcms-table-inner">
+			<table>
+				<caption>
+					테이블이름
+				</caption>
+				<colgroup>
+					<col style="width: 30%" />
+					<col />
+				</colgroup>
+				<thead>
+					<tr>
+						<th class="wcms-align-center">구분</th>
+						<th class="wcms-align-center">내용</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="wcms-align-center">교체 발급</th>
+						<td>
+							<ol class="wcms-list wcms-size-small">
+								<li class="wcms-list-item" data-symbol="①">
+									<div class="wcms-list-contents">최근 6개월 유실적 카드 중 가장 최근 발급한 카드의 비밀번호</div>
+								</li>
+								<li class="wcms-list-item" data-symbol="②">
+									<div class="wcms-list-contents">
+										<div class="wcms-margin-small">①이 없을 경우, 사용등록이 된 카드 중 가장 최근 발급받은 카드의 비밀번호</div>
+										<ul class="wcms-list">
+											<li class="wcms-list-item" data-symbol="※">
+												<div class="wcms-list-contents">단, 가족카드는 비밀번호 승계 우선순서 대상카드(①, ②)에서 제외</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ol>
+						</td>
+					</tr>
+					<tr>
+						<th class="wcms-align-center">추가 발급</th>
+						<td>
+							이용카드가 없을 시 가장 최근에 발급한 카드와 동일한 비밀번호 사용<br />
+							단, 기존 비밀번호가 없을 시, 카드 발급 시 ARS를 통해 비밀번호 등록
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>
+										</code></pre>
+									</div>
+								</section>
+							</div>
+						</section>
+						<section class="sub-section">
+							<div class="sub-section__head">
+								<h4 class="sub-section__title">Type 4</h4>
+							</div>
+							<div class="example">
+								<section class="example__section example__section--viewer">
+									<div class="example__section-head">
+										<h5 class="example__section-title">미리보기</h5>
+									</div>
+									<div class="viewer">
+										<iframe src="./example/faq/004-body-sample-4.html" frameborder="0"></iframe>
+									</div>
+								</section>
+								<section class="example__section example__section--code">
+									<div class="example__section-head">
+										<h5 class="example__section-title">HTML</h5>
+									</div>
+									<div class="code-viewer">
+										<pre><code class="language-html">
+<p class="wcms-text wcms-size-small wcms-color-gray">
+	해외 이용 시(해외사이트 거래 포함)미화(USD)기준 거래 금액에 접수일의 하나은행 최초고시 전신환 매도율을 적용한 후, 국제브랜드사가 부과하는 국제브랜드수수료와 하나카드가
+	부과하는 해외서비스수수료를 포함하여 청구됩니다.<br />
+	(단, 체크카드의 경우 1회 승인금액 100만원 이상의 거래(단, T&E업종* 제외), 또는 카드사가 정한 특정 브랜드(BC/Maestro/Amex Globalpay 등) 및 상품의 카드이용대금은 미화(USD) 기준
+	거래 금액에 카드승인시점의 하나은행이 고시한 전신환매도율을 적용한 원화금액으로 회원의 계좌잔액에서 즉시 인출됩니다.)
+</p>
+
+<ul class="wcms-list wcms-size-small">
+	<li class="wcms-list-item wcms-color-gray" data-symbol="*">
+		<div class="wcms-list-contents">T&E 업종 : Travel and Entertainment 업종, 여행과 여가 관련 업종(항공, 호텔, 숙박, 렌터카 등)</div>
+	</li>
+</ul>
+
+<section class="wcms-box-white wcms-margin-regular">
+	<h2 class="wcms-title-small">해외 이용시 청구금액 산출방법</h2>
+	<p class="wcms-text wcms-size-small wcms-color-gray">해외 이용 시 청구금액 = (거래미화금액 X 전신환 매도율¹) + 국제브랜드수수료² + 해외서비스수수료³</p>
+	<ol class="wcms-list wcms-size-small">
+		<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+			<div class="wcms-list-contents">전신환 매도율 : 접수일의 하나은행 최초고시 전신환 매도율</div>
+		</li>
+		<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+			<div class="wcms-list-contents">국제브랜드수수료 = (거래미화금액 X 국제브랜드 이용수수료율(VISA, MASTER, JCB : 1%, Amex : 1.4%, UPI : 0.6%)) X 전신환 매도율</div>
+		</li>
+		<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+			<div class="wcms-list-contents">국제브랜드수수료 = (거래미화금액 X 국제브랜드 이용수수료율(VISA, MASTER, JCB : 1%, Amex : 1.4%, UPI : 0.6%)) X 전신환 매도율</div>
+		</li>
+	</ol>
+</section>
+
+<ul class="wcms-list wcms-size-small">
+	<li class="wcms-list-item type-dot wcms-color-gray">
+		<div class="wcms-list-contents">
+			<div class="wcms-margin-small">단기카드대출(현금서비스) 거래에 대해서는 청구금액에 단기카드대출(현금서비스) 수수료가 별도로 포함 됩니다.</div>
+			<ul class="wcms-list">
+				<li class="wcms-list-item" data-symbol="-">
+					<div class="wcms-list-contents">단기카드대출(현금서비스) 수수료 = 청구금액 x 단기카드대출(현금서비스) 수수료율 x 신용공여기간 ÷ 365</div>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li class="wcms-list-item type-dot wcms-color-gray">
+		<div class="wcms-list-contents">해외현금인출 거래에 대해서는 $3 수수료가 별도로 포함됩니다.(해외서비스수수료는 부과 안됨)</div>
+	</li>
+</ul>
+										</code></pre>
+									</div>
+								</section>
+							</div>
+						</section>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="../dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/highlightjs/highlight.min.js"></script>
+		<script type="text/javascript" src="./assets/highlightjs/highlightjs-line-numbers.min.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/lib/codemirror.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/xml/xml.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/css/css.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/javascript/javascript.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+		<script type="text/javascript" src="./assets/script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

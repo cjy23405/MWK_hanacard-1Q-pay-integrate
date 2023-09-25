@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드대금결제신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							신청하신 상품이 고객님께<br />
+							적합&middot;적정한지 확인합니다.
+						</h2>
+
+						<div class="page-info">
+							<h3 class="page-info-title type-icon-bulb">무엇을 확인하나요?</h3>
+							<p class="page-info-text">「금융소비자 보호에 관한 법률」 에 의거하여 고객님의 재산상황,금융상품 취득&middot;처분 경험 등을 파악합니다.</p>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="accordion-step-list js-ui-accordion" data-once="true">
+								<div class="accordion-step-item js-ui-accordion__item" data-initial-open="true">
+									<button type="button" class="accordion-step-opener js-ui-accordion__opener">
+										<strong class="accordion-step-opener-title"><span class="num">01</span>상품이용 적합성 확인</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-step-contents">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-title">
+														<strong class="title">연령</strong>
+													</div>
+													<div class="form-group">
+														<div class="form-flex">
+															<div class="form-flex-cell form-prefix">만</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="ui-input-block">
+																	<input type="number" pattern="\d*" class="ui-input" title="연령 입력" required />
+																</div>
+															</div>
+															<div class="form-flex-cell form-unit">세</div>
+														</div>
+													</div>
+												</div>
+												<!-- 2022.02.17 추가 -->
+												<div class="form-item">
+													<div class="form-title">
+														<strong class="title">변제계획</strong>
+													</div>
+													<div class="form-group">
+														<div class="form-flex">
+															<div class="form-flex-cell form-prefix">매월</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="ui-input-block">
+																	<input type="number" pattern="\d*" class="ui-input" title="변제계획일 입력" required />
+																</div>
+															</div>
+															<div class="form-flex-cell form-unit">일</div>
+														</div>
+													</div>
+												</div>
+												<!-- //2022.02.17 추가 -->
+												<div class="form-item">
+													<div class="form-title">
+														<strong class="title">대출용도</strong>
+													</div>
+													<div class="form-group">
+														<div class="ui-radio-group type-grid type-col2">
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" data-checkbox-tab="radioPanel1-1" />
+																<label for="radioPanel1-1" class="ui-label">
+																	<span class="ui-label-text">가계자금</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" data-checkbox-tab="radioPanel1-2" />
+																<label for="radioPanel1-2" class="ui-label">
+																	<span class="ui-label-text">사업자금</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-3" data-checkbox-tab="radioPanel1-3" />
+																<label for="radioPanel1-3" class="ui-label">
+																	<span class="ui-label-text">자동차구입</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-4" data-checkbox-tab="radioPanel1-4" />
+																<label for="radioPanel1-4" class="ui-label">
+																	<span class="ui-label-text">주택자금</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-6" data-checkbox-tab="radioPanel1-6" />
+																<label for="radioPanel1-6" class="ui-label">
+																	<span class="ui-label-text">교육비</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-7" data-checkbox-tab="radioPanel1-7" />
+																<label for="radioPanel1-7" class="ui-label">
+																	<span class="ui-label-text">의료비</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-8" data-checkbox-tab="radioPanel1-8" />
+																<label for="radioPanel1-8" class="ui-label">
+																	<span class="ui-label-text">타기관 대출금 상환</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-9" data-checkbox-tab="radioPanel1-9" />
+																<label for="radioPanel1-9" class="ui-label">
+																	<span class="ui-label-text">기타</span>
+																</label>
+															</div>
+														</div>
+
+														<!-- [DD] 기타 선택시 노출 -->
+														<div class="ui-input-block type-use-delete type-row" data-checkbox-tab-panel="radioPanel1-9">
+															<input type="text" class="ui-input" title="대출용도 입력" placeholder="대출용도 입력" />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+														<!--// [DD] 기타 선택시 노출 -->
+													</div>
+												</div>
+												<div class="form-item">
+													<div class="form-title">
+														<strong class="title">자산상황</strong>
+													</div>
+													<div class="form-group">
+														<div class="ui-radio-group type-panel">
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-1" checked />
+																<label for="radioPanel2-1" class="ui-label">
+																	<span class="ui-label-text">1억 미만</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-2" />
+																<label for="radioPanel2-2" class="ui-label">
+																	<span class="ui-label-text">
+																		1억 초과<br />
+																		~5억원 미만
+																	</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-3" />
+																<label for="radioPanel2-3" class="ui-label">
+																	<span class="ui-label-text">5억원 초과</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-item">
+													<div class="form-title">
+														<strong class="title">연간소득</strong>
+													</div>
+													<div class="form-group">
+														<div class="ui-radio-group type-panel">
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-1" checked />
+																<label for="radioPanel3-1" class="ui-label">
+																	<span class="ui-label-text">5천만원 이하</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-2" />
+																<label for="radioPanel3-2" class="ui-label">
+																	<span class="ui-label-text">1억원 이하</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-3" />
+																<label for="radioPanel3-3" class="ui-label">
+																	<span class="ui-label-text">1억원 초과</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-item">
+													<div class="form-title">
+														<strong class="title">신용점수</strong>
+													</div>
+													<div class="form-group">
+														<div class="ui-radio-group type-panel">
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel4" id="radioPanel4-1" checked />
+																<label for="radioPanel4-1" class="ui-label">
+																	<span class="ui-label-text">500점 이하</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel4" id="radioPanel4-2" />
+																<label for="radioPanel4-2" class="ui-label">
+																	<span class="ui-label-text">500점 초과</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-item">
+													<div class="form-title">
+														<strong class="title">부채</strong>
+													</div>
+													<div class="form-group">
+														<div class="ui-radio-group type-panel">
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel5" id="radioPanel5-1" checked />
+																<label for="radioPanel5-1" class="ui-label">
+																	<span class="ui-label-text">1억원 이하</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel5" id="radioPanel5-2" />
+																<label for="radioPanel5-2" class="ui-label">
+																	<span class="ui-label-text">3억원 이하</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel5" id="radioPanel5-3" />
+																<label for="radioPanel5-3" class="ui-label">
+																	<span class="ui-label-text">3억원 초과</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-item">
+													<div class="form-title">
+														<strong class="title">고정지출</strong>
+													</div>
+													<div class="form-group">
+														<div class="ui-radio-group type-panel">
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel6" id="radioPanel6-1" checked />
+																<label for="radioPanel6-1" class="ui-label">
+																	<span class="ui-label-text">연간소득 60% 이하</span>
+																</label>
+															</div>
+															<div class="ui-radio-block type-box">
+																<input type="radio" class="ui-radio" name="radioPanel6" id="radioPanel6-2" />
+																<label for="radioPanel6-2" class="ui-label">
+																	<span class="ui-label-text">연간소득 60% 초과</span>
+																</label>
+															</div>
+														</div>
+
+														<div class="info-area type-line-box">
+															<ul class="info-list">
+																<li class="info-item type-indent"><span class="indent">1. </span>당사에 제공한 적합 관련 정보는 본인의 재산상황, 용도 등의 정보를 정확히 알려드린 것입니다.</li>
+																<li class="info-item type-indent">
+																	<span class="indent">2. </span>본인이 제공한 정보가 정확하지 않거나, 정보에 변경사항이 발생한 경우에는 적합성 판단이 달라질 수 있음을 설명 받았습니다.
+																</li>
+																<li class="info-item type-indent"><span class="indent">3. </span>상기 목적을 위해 본인의 개인정보를 수집, 이용, 제공하는 것에 동의합니다.</li>
+															</ul>
+														</div>
+
+														<div class="terms-area">
+															<div class="terms-item">
+																<div class="ui-checkbox-block type-align-top">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" />
+																	<label for="selectCheckbox-1" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">본인은 당사에서 제공한 적합성 관련 정보와 관련하여 다음의 사항을 확인합니다.</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-step-item js-ui-accordion__item">
+									<button type="button" class="accordion-step-opener js-ui-accordion__opener">
+										<strong class="accordion-step-opener-title"><span class="num">02</span>적합성 체크리스트</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-step-contents">
+											<div class="info-area">
+												<ul class="info-list type-text-large type-indent-number">
+													<li class="info-item type-indent">
+														<span class="indent">1.</span>
+														<div class="indent-block">
+															대출원리금을 연체할 경우, 원리금에 연체이자율이 적용되고 금융거래가 제약되며 신용점수 등이 하락하는 <span class="color-wrong">불이익이 발생</span>할 수 있다는 점을
+															확인하셨습니까?
+															<div class="ui-radio-group-area">
+																<div class="ui-radio-group type-yes-or-no">
+																	<div class="ui-radio-block type-circle">
+																		<input type="radio" class="ui-radio" name="radiobox1" id="radiobox1-1" />
+																		<label for="radiobox1-1" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label-text">네</span>
+																		</label>
+																	</div>
+																	<div class="ui-radio-block type-circle">
+																		<input type="radio" class="ui-radio" name="radiobox1" id="radiobox1-2" />
+																		<label for="radiobox1-2" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label-text">아니오</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="info-item type-indent">
+														<span class="indent">2.</span>
+														<div class="indent-block">
+															최초 심사 시점에 비해 <span class="color-wrong">신용도가 하락</span>하거나 <span class="color-wrong">연체 등이 발생</span>했을 경우, 대출계약의 연장이 거절될 수 있다는
+															점을 인지하셨습니까?
+															<div class="ui-radio-group-area">
+																<div class="ui-radio-group type-yes-or-no">
+																	<div class="ui-radio-block type-circle">
+																		<input type="radio" class="ui-radio" name="radiobox2" id="radiobox2-1" />
+																		<label for="radiobox2-1" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label-text">네</span>
+																		</label>
+																	</div>
+																	<div class="ui-radio-block type-circle">
+																		<input type="radio" class="ui-radio" name="radiobox2" id="radiobox2-2" />
+																		<label for="radiobox2-2" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label-text">아니오</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="info-item type-indent">
+														<span class="indent">3.</span>
+														<div class="indent-block">
+															동일한 카드사를 대상으로 최근 1개월 내에 2회 이상 대출계약을 철회하는 경우,
+															<span class="color-wrong">신규대출&middot;만기연장거절, 대출한도 축소, 금리우대 제한 등의 불이익이</span> 발생할 수 있음을 확인하셨습니까?
+															<div class="ui-radio-group-area">
+																<div class="ui-radio-group type-yes-or-no">
+																	<div class="ui-radio-block type-circle">
+																		<input type="radio" class="ui-radio" name="radiobox3" id="radiobox3-1" />
+																		<label for="radiobox3-1" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label-text">네</span>
+																		</label>
+																	</div>
+																	<div class="ui-radio-block type-circle">
+																		<input type="radio" class="ui-radio" name="radiobox3" id="radiobox3-2" />
+																		<label for="radiobox3-2" class="ui-label">
+																			<span class="ui-radio-object"></span>
+																			<span class="ui-label-text">아니오</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

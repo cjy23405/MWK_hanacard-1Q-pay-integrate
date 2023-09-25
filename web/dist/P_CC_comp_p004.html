@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">사고보상 신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 3</span>
+							사고에 대한<br />
+							상세정보를 입력해 주세요.
+						</h2>
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 3단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">사고인지일</strong>
+								</div>
+								<div class="form-group">
+									<!-- 2022.06.23 : mod : date picker 라이브러리 적용 -->
+									<div class="ui-date-picker">
+										<duet-date-picker identifier="date" title="사고인지일 입력" required></duet-date-picker>
+									</div>
+									<!-- //2022.06.23 : mod : date picker 라이브러리 적용 -->
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">사고인지경로</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block type-use-delete">
+										<input type="text" class="ui-input" title="사고인지경로 입력" placeholder="" required />
+										<button type="button" class="ui-button ui-input-delete">
+											<span class="for-a11y">입력 내용 지우기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">지연신고 사유</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block type-use-delete">
+										<input type="text" class="ui-input" title="지연신고 사유 입력" placeholder="" />
+										<button type="button" class="ui-button ui-input-delete">
+											<span class="for-a11y">입력 내용 지우기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">SMS서비스 이용여부</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" checked />
+											<label for="radioPanel1-1" class="ui-label">
+												<span class="ui-label-text">이용</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" />
+											<label for="radioPanel1-2" class="ui-label">
+												<span class="ui-label-text">이용안함</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">카드서명 여부</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-1" checked />
+											<label for="radioPanel2-1" class="ui-label">
+												<span class="ui-label-text">이용</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-2" />
+											<label for="radioPanel2-2" class="ui-label">
+												<span class="ui-label-text">이용안함</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">미서명 사유</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block type-use-delete">
+										<input type="text" class="ui-input" title="미서명 사유 입력" placeholder="" />
+										<button type="button" class="ui-button ui-input-delete">
+											<span class="for-a11y">입력 내용 지우기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">분실도난 당시 카드소유자</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-1" data-checkbox-tab="radioPanel3" checked />
+											<label for="radioPanel3-1" class="ui-label">
+												<span class="ui-label-text">본인</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-2" data-checkbox-tab="radioPanel3" />
+											<label for="radioPanel3-2" class="ui-label">
+												<span class="ui-label-text">가족</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-3" data-checkbox-tab="radioPanel3" />
+											<label for="radioPanel3-3" class="ui-label">
+												<span class="ui-label-text">친족</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-4" data-checkbox-tab="radioPanel3" />
+											<label for="radioPanel3-4" class="ui-label">
+												<span class="ui-label-text">친구</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-5" data-checkbox-tab="radioPanel3-5" />
+											<label for="radioPanel3-5" class="ui-label">
+												<span class="ui-label-text">기타</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-input-block type-textarea type-row" data-checkbox-tab-panel="radioPanel3-5">
+										<textarea class="ui-input" title="분실도난 당시 카드소유자 입력" placeholder="내용 입력" rows="3"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">분실 발생 카드사명</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block type-use-delete">
+										<input type="text" class="ui-input" title="분실 발생 카드사명 입력" placeholder="" required />
+										<button type="button" class="ui-button ui-input-delete">
+											<span class="for-a11y">입력 내용 지우기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">타사 부정사용금액</strong>
+								</div>
+								<div class="form-group">
+									<div class="form-flex">
+										<div class="form-flex-cell type-flexible type-has-unit">
+											<div class="ui-input-block">
+												<input type="number" pattern="\d*" class="ui-input" title="타사 부정사용금액 입력" placeholder="금액 입력" />
+											</div>
+											<span class="form-unit">원</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">사고경위</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block type-textarea type-has-counting">
+										<textarea class="ui-input" title="사고경위 입력" placeholder="내용 입력" rows="3" required></textarea>
+										<span class="ui-counting">(0/2000byte)</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ui-notice">
+							아래 내용을 포함하여 작성해 주세요.
+							<div class="sub-ui-notice">
+								① 사고인지 경위, ② 사고매출 발생 전&middot;후 있었던 일,<br />
+								③ 분실/도난 추정 일시, ④ 카드보관장소,<br />
+								⑤ 도난(분실)물품 등 상세히 기재
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">
+											위 보상신청과 관련하여 귀사의 조사에 성실히 협조하며, 부정사용자가 확인되는 경우 민 ,형사상 손해배상청구권 등의 모든 권리 행사는 귀사 앞 위임합니다. 또한, 위 기재 사항이 사실과
+											다른 경우에는 이로 인하여 발생되는 모든 민,형사상의 책임을 본인이 부담할 것을 확약합니다.
+										</li>
+										<li class="info-item">조사종결 후 "신용(체크/선불)카드 개인회원 약관"에 따라 보상처리수수료가 청구됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">신청</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

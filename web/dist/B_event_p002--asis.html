@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">진행중인 이벤트</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents has-no-top-padding">
+						<div class="event-detail-header">
+							<div class="full-contents">
+								<img src="./assets/images/_dummy/image.png" alt="" class="image-only" />
+							</div>
+
+							<div class="coupon-detail-buttons type-only margin-top-10">
+								<a href="" class="coupon-detail-button type-share" role="button"><span class="for-a11y">공유하기</span></a>
+								<!-- data-toggle 속성으로 토글기능 사용 / 활성화시 is-active 클래스 추가 -->
+								<button type="button" class="coupon-detail-button type-heart" data-toggle="true"><span class="for-a11y">찜하기</span></button>
+							</div>
+
+							<div class="page-section-group type-line margin-top-10">
+								<section class="page-section-group">
+									<div class="section-title">
+										<h2 class="title">제목</h2>
+									</div>
+									<p class="basic-text color-blur">정기 구독하고 최대 2만5천원 받기!</p>
+								</section>
+								<section class="page-section-group margin-top-25">
+									<div class="section-title">
+										<h2 class="title">기간</h2>
+									</div>
+									<p class="basic-text color-blur">2021.05.01 ~ 2021.07.31</p>
+								</section>
+								<section class="page-section-group margin-top-25">
+									<div class="section-title">
+										<h2 class="title">대상</h2>
+									</div>
+									<p class="basic-text color-blur">하나 프리미엄 우수회원, 프리미엄카드 보유회원 (플래티늄 등급 이상, 체크 포함), 법인카드 전회원</p>
+								</section>
+							</div>
+						</div>
+
+						<div class="page-section-group type-line">
+							<div class="wcms-data">
+								<section class="event-data">
+									<!-- DD : 이 안에 wcms 상세 데이터 출력 -->
+									<article class="cont line_b">
+										<h4 class="t_tit">탑승기간</h4>
+										<p class="t_point">2018. 6. 15 ~ 9. 30</p>
+									</article>
+
+									<article class="cont ty03">
+										<h4 class="t_tit">혜택</h4>
+
+										<p class="t_txt mg_b10">
+											벅스뮤직 듣기 + 스마트폰 저장 서비스 자동납부 신규 신청 시, <span class="t_point02">첫 달</span> 900원, 이후 <span class="t_point02">3개월간</span> 5,900원
+										</p>
+
+										<ul class="txt_li">
+											<li class="blt1">벅스 뮤직 듣기 + 스마트폰 저장 (정상가 10,900원)</li>
+											<li class="blt1">스마트폰, 태블릿에서 무제한 저장</li>
+											<li class="blt1">PC + 모바일 모든 기기 무제한 듣기</li>
+										</ul>
+
+										<ul class="btn_area">
+											<li>
+												<a href="#none" class="btn_b btn_ty11">신청 바로가기</a>
+											</li>
+										</ul>
+
+										<dl class="info_box on">
+											<dt><a href="#none">유의사항</a></dt>
+											<dd>
+												<ul>
+													<li class="blt1">제공되는 서비스는 캐세이패시픽의 책임 하에 운영되며, 자세한 내용은 해당 항공권 구매 페이지에서 확인 가능 합니다.</li>
+													<li class="blt1">할인코드가 적용되는 항공권에 대해서는 캐세이패시픽의 약관과 조건이 적용됩니다.</li>
+													<li class="blt1">타 이벤트와 중복 적용이 불가합니다.</li>
+													<li class="blt1">본 이벤트 내 '캐세이패시픽항공 바로가기' 를 링크하여 하나카드로 구매 시 혜택이 적용됩니다.</li>
+													<li class="blt1">하나머니는 7월 중순경 지급 예정입니다.</li>
+													<li class="blt1">본 이벤트는 하나카드 및 제휴사의 사정으로 사전고지 없이 변경되거나 중단될 수 있습니다.</li>
+												</ul>
+											</dd>
+										</dl>
+
+										<p class="t_txt mg_t10">신용카드 남용은 가계경제에 위협이 됩니다.</p>
+									</article>
+
+									<script>
+										function goOutLink() {
+											if (_isAppChannelRequest) {
+												openExtBrowser('https://linq.kr:9000/LQ201806200000010033');
+											} else if (_isWebChannelRequest) {
+												location.href = 'https://linq.kr:9000/LQ201806200000010033';
+											}
+										}
+									</script>
+									<div id="mobile_main">
+										<img class="ImgEvent" src="./assets/images/_dummy/banner-4.png" style="margin: 0px" />
+										<div class="eM_wrap">
+											<dl class="eM_noti">
+												<dt>기 간</dt>
+												<dd>2018. 8. 8 ~ 9. 7</dd>
+												<dt>대 상</dt>
+												<dd>
+													하나카드 홈페이지를 통해 자유이용권(주중/주말)을 구매한 고객(하나 신용/체크카드)<br />
+													※ 하나 BC/법인/선불카드 제외
+												</dd>
+												<dt>내 용</dt>
+												<dd>
+													아래 '구매하기' 버튼을 통해 몬스터VR (건대점) 자유이용권(주중/주말) 구매 시
+													<b><span class="t_point">2,500원 즉시 할인 및 마스터카드 결제 시 2,500원 추가 캐쉬백</span></b> 제공(기간 중 선착순 6,000매이며, 1인당 4매/구매 제한)
+													<p class="t_basic t3">몬스터VR 건대점 오픈일 : 2018. 8. 10 예정</p>
+												</dd>
+												<div class="mt15">
+													<a onclick="goOutLink();" target="_blank" class="btn_mgo btn_ty09"><span>구매하기</span></a>
+												</div>
+												<dt>몬스터VR 테마파크</dt>
+												<dd>
+													국내 최대 규모의 도심형 VR 테마파크로 가상현실(VR)의 다양한 경험을 할 수 있는 최고의 시설을 개장하여 전 세계적으로 많은 관심을 받고 있으며, 현재 정글 어드벤처 존, 시네마존,
+													게이밍존, 레이싱존 등 총 40개의 가상현실을 체험할 수 있는 세계 최고의 VR 테마파크를 구축해 나가고 있다.
+												</dd>
+											</dl>
+											<dl class="attention_point">
+												<dt>유의사항</dt>
+												<dd class="t4">해당 이벤트는 몬스터VR 건대점에 한하며, 개인회원 만을 대상으로 합니다.</dd>
+												<dd class="t4">해당 이벤트는 QR을 통해 하나카드 1Q페이에서 결제 시에 한합니다.</dd>
+												<dd class="t4">해당 이벤트의 내용은 하나카드 및 몬스터VR의 사정에 따라 사전 예고없이 변경되거나 중단될 수 있습니다.</dd>
+												<dd class="t4">해당 이벤트는 기간중 선착순 6,000매 및 1인당 4매/구매 제한하며, 조기 종료 될 수 있습니다.</dd>
+												<dd class="t4">
+													추가 캐쉬백 제공은 하나 마스터카드로 결제 시 한하며 하나카드에 등록된 결제계좌로 지급합니다.<br />
+													(기간 중 최대 1인당 1만원 한도)
+												</dd>
+												<dd class="t4">캐쉬백 지급 예정일은 2018.9.20 입니다.(결제 취소 시 캐쉬백은 지급되지 않습니다.)</dd>
+												<dd class="t4">자세한 사항은 몬스터VR 고객센터로(<a href="tel:07052083155">070-5208-3155</a>) 문의하시기 바랍니다.</dd>
+											</dl>
+										</div>
+									</div>
+									<p class="law_num">
+										- 준법심의 18-1991 (2018.08.07~2018.09.07)<br />
+										- 신용카드 남용은 가계경제에 위협이 됩니다.
+									</p>
+								</section>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<!-- 2022.01.05 page-section-group 태그 추가 -->
+							<div class="page-section-group">
+								<div class="section-title margin-bottom-15">
+									<h3 class="title">#제주 여행은 하나로!</h3>
+								</div>
+								<div class="usage-default">
+									<ul class="usage-default-list margin-top-none">
+										<li class="usage-default-item type-box">
+											<a href="" class="usage-default-block type-align-middle">
+												<div class="usage-default-left-group type-align-middle">
+													<!-- DD : 이미지 없을 때 -->
+													<div class="logo-image type-store">
+														<div class="logo-image-inner"></div>
+													</div>
+													<div class="usage-default-left">
+														<div class="usage-default-brand type-multi-ellipsis color-primary">G9</div>
+														<div class="usage-default-title type-multi-ellipsis">이십일년 피.땀.눈.물 닦아드림</div>
+														<div class="usage-default-etc margin-top-10">
+															<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+														</div>
+													</div>
+												</div>
+												<div class="usage-default-right type-auto">
+													<span class="ui-badge color-primary-fill ui-arrow">GO</span>
+												</div>
+											</a>
+										</li>
+										<li class="usage-default-item type-box">
+											<a href="" class="usage-default-block type-align-middle">
+												<div class="usage-default-left-group type-align-middle">
+													<!-- DD : 이미지 에러 -->
+													<div class="logo-image type-store">
+														<div class="logo-image-inner">
+															<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<div class="usage-default-left">
+														<div class="usage-default-brand type-multi-ellipsis color-primary">스타벅스</div>
+														<div class="usage-default-title type-multi-ellipsis">스타벅스 정기결제하고 커피한잔 받아가자!</div>
+														<div class="usage-default-etc margin-top-10">
+															<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+														</div>
+													</div>
+												</div>
+												<div class="usage-default-right type-auto">
+													<span class="ui-badge color-primary-fill ui-arrow">GO</span>
+												</div>
+											</a>
+										</li>
+										<li class="usage-default-item type-box">
+											<a href="" class="usage-default-block type-align-middle type-disabled">
+												<div class="usage-default-left-group type-align-middle">
+													<!-- DD : 이미지 있을 때 -->
+													<div class="logo-image type-store">
+														<div class="logo-image-inner">
+															<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<div class="usage-default-left">
+														<div class="usage-default-brand type-multi-ellipsis color-primary">스타벅스</div>
+														<div class="usage-default-title type-multi-ellipsis">스타벅스 정기결제하고 커피한잔 받아가자!</div>
+														<div class="usage-default-etc margin-top-10">
+															<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+														</div>
+													</div>
+												</div>
+												<div class="usage-default-right type-auto">
+													<span class="ui-badge">종료</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //2022.01.05 page-section-group 태그 추가 -->
+							<!-- 2022.01.05 연관이벤트 복수 케이스 추가 -->
+							<div class="page-section-group type-line">
+								<div class="section-title margin-bottom-15">
+									<h3 class="title">#제주 여행은 하나로!</h3>
+								</div>
+								<div class="usage-default">
+									<ul class="usage-default-list margin-top-none">
+										<li class="usage-default-item type-box">
+											<a href="" class="usage-default-block type-align-middle">
+												<div class="usage-default-left-group type-align-middle">
+													<!-- DD : 이미지 없을 때 -->
+													<div class="logo-image type-store">
+														<div class="logo-image-inner"></div>
+													</div>
+													<div class="usage-default-left">
+														<div class="usage-default-brand type-multi-ellipsis color-primary">스타벅스</div>
+														<div class="usage-default-title type-multi-ellipsis">스타벅스 정기결제하고 커피한잔 받아가자!</div>
+														<div class="usage-default-etc margin-top-10">
+															<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+														</div>
+													</div>
+												</div>
+												<div class="usage-default-right type-auto">
+													<span class="ui-badge color-primary-fill ui-arrow">GO</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="page-section-group type-line">
+								<div class="usage-default">
+									<ul class="usage-default-list margin-top-none">
+										<li class="usage-default-item type-box">
+											<a href="" class="usage-default-block type-align-middle">
+												<div class="usage-default-left-group type-align-middle">
+													<!-- DD : 이미지 에러 -->
+													<div class="logo-image type-store">
+														<div class="logo-image-inner">
+															<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<div class="usage-default-left">
+														<div class="usage-default-brand type-multi-ellipsis color-primary">스타벅스</div>
+														<div class="usage-default-title type-multi-ellipsis">스타벅스 정기결제하고 커피한잔 받아가자!</div>
+														<div class="usage-default-etc margin-top-10">
+															<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+														</div>
+													</div>
+												</div>
+												<div class="usage-default-right type-auto">
+													<span class="ui-badge color-primary-fill ui-arrow">GO</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="page-section-group type-line">
+								<div class="usage-default">
+									<ul class="usage-default-list margin-top-none">
+										<li class="usage-default-item type-box">
+											<a href="" class="usage-default-block type-align-middle">
+												<div class="usage-default-left-group type-align-middle">
+													<!-- DD : 이미지 있을 때 -->
+													<div class="logo-image type-store">
+														<div class="logo-image-inner">
+															<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<div class="usage-default-left">
+														<div class="usage-default-brand type-multi-ellipsis color-primary">스타벅스</div>
+														<div class="usage-default-title type-multi-ellipsis">스타벅스 정기결제하고 커피한잔 받아가자!</div>
+														<div class="usage-default-etc margin-top-10">
+															<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+														</div>
+													</div>
+												</div>
+												<div class="usage-default-right type-auto">
+													<span class="ui-badge color-primary-fill ui-arrow">GO</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //2022.01.05 연관이벤트 복수 케이스 추가 -->
+						</div>
+
+						<!-- Case : 제휴쿠폰 -->
+						<div class="page-section type-line">
+							<div class="coupons">
+								<ul class="coupons-list">
+									<li class="coupons-item">
+										<div class="coupon-card">
+											<div class="coupon-card-left">
+												<div class="coupon-card-info">
+													<!-- DD : 이미지 없을 때 -->
+													<div class="logo-image type-store">
+														<div class="logo-image-inner"></div>
+													</div>
+													<div class="coupon-card-brand">포시즌스 호텔 서울</div>
+													<div class="coupon-card-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+													<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+													<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+												</div>
+											</div>
+											<div class="coupon-card-right">
+												<button type="button" class="ui-button coupon-card-action type-download">
+													<span class="for-a11y">다운로드</span>
+												</button>
+											</div>
+										</div>
+									</li>
+									<li class="coupons-item">
+										<div class="coupon-card">
+											<div class="coupon-card-left">
+												<div class="coupon-card-info">
+													<!-- DD : 이미지 에러 -->
+													<div class="logo-image type-store">
+														<div class="logo-image-inner">
+															<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<div class="coupon-card-brand">G9</div>
+													<div class="coupon-card-name">20만원 이상 구매 시, 2만원 즉시 할인</div>
+													<div class="coupon-card-date">2021.05.01 ~ 2021.07.31 <span class="color-wrong">(7일 남음)</span></div>
+													<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+												</div>
+											</div>
+											<div class="coupon-card-right">
+												<button type="button" class="ui-button coupon-card-action type-link">
+													<span class="for-a11y">쿠폰 바로가기</span>
+												</button>
+											</div>
+										</div>
+									</li>
+									<li class="coupons-item">
+										<div class="coupon-card">
+											<div class="coupon-card-left">
+												<div class="coupon-card-info">
+													<!-- DD : 이미지 있을 때 -->
+													<div class="logo-image type-store">
+														<div class="logo-image-inner">
+															<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<div class="coupon-card-brand">브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출</div>
+													<div class="coupon-card-name">쿠폰명 최대 2줄 노출 쿠폰명 최대 2줄 노출 쿠폰명 최대 2줄 노출</div>
+													<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+													<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+												</div>
+											</div>
+											<div class="coupon-card-right">
+												<button type="button" class="ui-button coupon-card-action type-download">
+													<span class="for-a11y">다운로드</span>
+												</button>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //Case : 제휴쿠폰 -->
+
+						<!-- DD : AS-IS는 wcms 이용안내 데이터 없음 -->
+
+						<div class="page-section-group">
+							<p class="basic-text">
+								상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.<br />
+								신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.<br />
+								일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.
+							</p>
+							<div class="wcms-data margin-top-15">
+								<section class="event-data">
+									<!-- DD : 이 안에 wcms 준법심의 데이터 출력 -->
+									<span class="dp_bl t_point05">[준법심의 18-1538 (2018.05.29~2018.07.19)]</span>
+								</section>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-gray">목록으로 이동</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

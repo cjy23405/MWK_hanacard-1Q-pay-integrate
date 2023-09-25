@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108">
+  <g id="ic_d_store_03" transform="translate(-376 -197)">
+    <rect id="사각형_17708" data-name="사각형 17708" width="108" height="108" transform="translate(376 197)" fill="#f8f8f8"/>
+    <rect id="사각형_17709" data-name="사각형 17709" width="72" height="72" transform="translate(394 215)" fill="rgba(255,255,255,0)"/>
+    <g id="사각형_17742" data-name="사각형 17742" transform="translate(394 222)" fill="#fff" stroke="#2d3239" stroke-width="4.5">
+      <rect width="72" height="58" rx="12" stroke="none"/>
+      <rect x="2.25" y="2.25" width="67.5" height="53.5" rx="9.75" fill="none"/>
+    </g>
+    <rect id="사각형_17743" data-name="사각형 17743" width="9.809" height="9.809" rx="2" transform="translate(410.303 249.104)" fill="#7dedf3"/>
+    <g id="사각형_17744" data-name="사각형 17744" transform="translate(404.801 243.6)" fill="none" stroke="#2d3239" stroke-width="4.5">
+      <rect width="14.412" height="14.412" rx="4" stroke="none"/>
+      <rect x="2.25" y="2.25" width="9.912" height="9.912" rx="1.75" fill="none"/>
+    </g>
+  </g>
+</svg>

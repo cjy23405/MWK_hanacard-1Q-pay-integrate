@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <defs>
+        <style>
+            .cls-4,.cls-5{stroke:none}.cls-5{fill:#888}
+        </style>
+    </defs>
+    <g id="ic_info__" data-name="ic_info_!" transform="translate(-59 -847)">
+        <path id="사각형_11200" data-name="사각형 11200" transform="translate(59 847)" style="fill:none" d="M0 0h18v18H0z"/>
+        <g id="패스_10960" data-name="패스 10960" style="fill:none">
+            <path class="cls-4" d="M8 0a8 8 0 1 1-8 8 8 8 0 0 1 8-8z" transform="translate(60 848)"/>
+            <path class="cls-5" d="M8 1.5A6.507 6.507 0 0 0 1.5 8c0 3.584 2.916 6.5 6.5 6.5s6.5-2.916 6.5-6.5S11.584 1.5 8 1.5M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0z" transform="translate(60 848)"/>
+        </g>
+        <g id="합치기_128" data-name="합치기 128" style="fill:#fff">
+            <path class="cls-4" d="M-8199.001 16976.5a.501.501 0 1 1 0-1.002.501.501 0 0 1 0 1.002zm0-2.998a.502.502 0 0 1-.501-.502v-4c0-.28.22-.498.501-.498s.501.219.501.498v4a.502.502 0 0 1-.501.502z" transform="translate(8267 -16116.5)"/>
+            <path class="cls-5" d="m-8199.001 16973.002.001-.002-.002-3.998v4h.001m0 3.998a1 1 0 1 1 1.001-1 1 1 0 0 1-1.001 1zm0-2.998a1 1 0 0 1-1.001-1.002v-4a.997.997 0 0 1 1.001-.998.997.997 0 0 1 1.001.998v4a1 1 0 0 1-1.001 1.002z" transform="translate(8267 -16116.5)"/>
+        </g>
+    </g>
+</svg>

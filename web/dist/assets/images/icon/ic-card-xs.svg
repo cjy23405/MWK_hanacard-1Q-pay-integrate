@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-2{fill:#fff;stroke:#2d3239;stroke-width:1.5px}.cls-8{fill:none}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_card_xs" transform="translate(-252 -1666)">
+        <g id="그룹_9800" data-name="그룹 9800" transform="translate(-5.781 1.75)">
+            <g id="사각형_11970" data-name="사각형 11970" class="cls-2" transform="translate(267.781 1672.25)">
+                <rect class="cls-7" width="19" height="27" rx="5"/>
+                <rect class="cls-8" x=".75" y=".75" width="17.5" height="25.5" rx="4.25"/>
+            </g>
+            <g id="사각형_12414" data-name="사각형 12414" class="cls-2" transform="translate(274.531 1677)">
+                <rect class="cls-7" width="5.5" height="5.5" rx="2"/>
+                <rect class="cls-8" x=".75" y=".75" width="4" height="4" rx="1.25"/>
+            </g>
+            <g id="그룹_9780" data-name="그룹 9780" transform="translate(280.469 1688.078)">
+                <path id="패스_11011" data-name="패스 11011" d="M6.5 0A6.5 6.5 0 1 1 0 6.5 6.5 6.5 0 0 1 6.5 0z" transform="translate(-1.438 .172)" style="fill:#fff"/>
+                <path id="패스_10995" data-name="패스 10995" d="M6 0a6 6 0 1 1-6 6 6 6 0 0 1 6-6z" transform="translate(.312 1.672)" style="fill:#7dedf3"/>
+                <g id="타원_1977" data-name="타원 1977" transform="translate(-1.688 .172)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+                    <circle class="cls-7" cx="6.5" cy="6.5" r="6.5"/>
+                    <circle class="cls-8" cx="6.5" cy="6.5" r="5.75"/>
+                </g>
+                <path id="패스_3490" data-name="패스 3490" d="m-10170.5 5361 1.978 1.922 3.022-3.25" transform="translate(10172.812 -5354.496)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+            </g>
+        </g>
+    </g>
+</svg>

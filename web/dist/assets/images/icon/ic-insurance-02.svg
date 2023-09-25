@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-2{fill:#fff}.cls-2,.cls-5{stroke:#2d3239;stroke-width:1.5px}.cls-5,.cls-7{fill:none}.cls-5{stroke-linecap:round}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_insurance_02" transform="translate(-186 -789)">
+        <g id="사각형_16906" data-name="사각형 16906" class="cls-2" transform="translate(193 804)">
+            <rect class="cls-6" width="30" height="22" rx="5"/>
+            <rect class="cls-7" x=".75" y=".75" width="28.5" height="20.5" rx="4.25"/>
+        </g>
+        <g id="사각형_16908" data-name="사각형 16908" class="cls-2">
+            <path class="cls-6" d="M2 0h2a2 2 0 0 1 2 2v4H0V2a2 2 0 0 1 2-2z" transform="translate(205 795.5)"/>
+            <path class="cls-7" d="M2 .75h2A1.25 1.25 0 0 1 5.25 2v3.25H.75V2A1.25 1.25 0 0 1 2 .75z" transform="translate(205 795.5)"/>
+        </g>
+        <g id="사각형_16907" data-name="사각형 16907" class="cls-2">
+            <path class="cls-6" d="M5 0h2a5 5 0 0 1 5 5v1H0V5a5 5 0 0 1 5-5z" transform="translate(202 799.5)"/>
+            <path class="cls-7" d="M5 .75h2A4.25 4.25 0 0 1 11.25 5v.25H.75V5A4.25 4.25 0 0 1 5 .75z" transform="translate(202 799.5)"/>
+        </g>
+        <g id="타원_2060" data-name="타원 2060" class="cls-2" transform="translate(200 807)">
+            <circle class="cls-6" cx="8" cy="8" r="8"/>
+            <circle class="cls-7" cx="8" cy="8" r="7.25"/>
+        </g>
+        <circle id="타원_2061" data-name="타원 2061" cx="4" cy="4" r="4" transform="translate(206 812)" style="fill:#7dedf3"/>
+        <g id="타원_2062" data-name="타원 2062" transform="translate(203 810)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+            <circle class="cls-6" cx="5" cy="5" r="5"/>
+            <circle class="cls-7" cx="5" cy="5" r="4.25"/>
+        </g>
+        <path id="선_577" data-name="선 577" class="cls-5" transform="translate(196.5 809.5)" d="M0 0h2"/>
+        <path id="선_578" data-name="선 578" class="cls-5" transform="translate(196.5 813)" d="M0 0h2"/>
+    </g>
+</svg>

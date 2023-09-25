@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">대구형 청년수당 조회</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							조회하실 카드를<br />
+							선택해 주세요.
+						</h2>
+						<div class="page-info">
+							<p class="page-info-text">대구 청년응원 <span class="color-primary">Young Hana 체크카드</span>를 소지한 고객님께만 제공되는 서비스입니다.</p>
+						</div>
+
+						<div class="card-list-area">
+							<ul class="card-list type-has-btn">
+								<!-- [DD] 조회 내역 없을 경우 -->
+								<li class="type-none">
+									<p class="item-text">서비스 대상 카드가 없습니다.</p>
+								</li>
+
+								<!-- DD : 이미지 없을 때 -->
+								<li class="card-item">
+									<div class="card-block">
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<span class="card-image">
+											<span class="card-image-inner"></span>
+										</span>
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<div class="card-info-group">
+											<div class="card-info">
+												<h3 class="card-name">[본인] 대구 청년응원 Young Hana 체크카드_GREEN</h3>
+												<div class="card-number">
+													<span class="card-number-item">국내전용</span>
+													<span class="card-number-item">4365-12**-****-1234</span>
+												</div>
+											</div>
+											<!-- 2021.12.08 type-small 클래스 추가 -->
+											<a href="" class="ui-basic-button type-gray type-small" role="button">조회</a>
+										</div>
+									</div>
+								</li>
+								<!-- //DD : 이미지 없을 때 -->
+
+								<!-- DD : 이미지 에러 -->
+								<li class="card-item">
+									<div class="card-block">
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<span class="card-image">
+											<span class="card-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</span>
+										</span>
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<div class="card-info-group">
+											<div class="card-info">
+												<h3 class="card-name">[본인] 대구 청년응원 Young Hana 체크카드_GREEN</h3>
+												<div class="card-number">
+													<span class="card-number-item">국내전용</span>
+													<span class="card-number-item">4365-12**-****-1234</span>
+												</div>
+											</div>
+											<!-- 2021.12.08 type-small 클래스 추가 -->
+											<a href="" class="ui-basic-button type-gray type-small" role="button">조회</a>
+										</div>
+									</div>
+								</li>
+								<!-- //DD : 이미지 에러 -->
+
+								<!-- DD : 이미지 있을 때 -->
+								<li class="card-item">
+									<div class="card-block">
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<span class="card-image">
+											<span class="card-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</span>
+										</span>
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<div class="card-info-group">
+											<div class="card-info">
+												<h3 class="card-name">[본인] 대구 청년응원 Young Hana 체크카드_GREEN</h3>
+												<div class="card-number">
+													<span class="card-number-item">국내전용</span>
+													<span class="card-number-item">4365-12**-****-1234</span>
+												</div>
+											</div>
+											<!-- 2021.12.08 type-small 클래스 추가 -->
+											<a href="" class="ui-basic-button type-gray type-small" role="button">조회</a>
+										</div>
+									</div>
+								</li>
+								<!-- //DD : 이미지 있을 때 -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

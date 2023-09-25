@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">쿠폰</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-coupon">
+						<div class="toggle-search">
+							<div class="toggle-search-tab">
+								<div class="ui-tab">
+									<ul class="ui-tab-list">
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link is-active" role="button">모든 쿠폰</a>
+										</li>
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link" role="button">나만의 Pick</a>
+										</li>
+										<li class="ui-tab-item">
+											<a href="" class="ui-tab-link" role="button">내 쿠폰</a>
+										</li>
+									</ul>
+								</div>
+								<button type="button" class="ui-button toggle-search-button type-open">
+									<span class="for-a11y">검색 폼 열기</span>
+								</button>
+							</div>
+							<div class="toggle-search-form">
+								<div class="search-word-area">
+									<!-- 2022.05.30 : mod : .type-input-group, .type-search-black 클래스 삭제 -->
+									<div class="ui-input-block type-use-delete type-search">
+										<input type="search" class="ui-input" title="검색어 입력" placeholder="검색어를 입력해 주세요." />
+										<button type="button" class="ui-button ui-input-delete">
+											<span class="for-a11y">입력 내용 지우기</span>
+										</button>
+										<!-- 2022.05.18 : mod : 검색 버튼 추가 -->
+										<button type="button" class="ui-button ui-input-search">
+											<span class="for-a11y">검색</span>
+										</button>
+									</div>
+								</div>
+								<button type="button" class="ui-button toggle-search-button type-close">
+									<span class="for-a11y">검색 폼 닫기</span>
+								</button>
+							</div>
+						</div>
+
+						<!-- 2022.03.31 : del : vip 링크 버튼 위치 변경
+						< !-- Case : VIP -- >
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-vip">VIP 전용 쿠폰 바로가기</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						< !-- Case : //VIP -- >
+						-->
+
+						<!-- 2022.02.21 : add : 주석 추가 -->
+						<!--
+							DD :
+							개발시 카테고리 .sorting-list 영역 태그 구조
+							- 페이지 이동으로 구현되는 경우 [공통 > 카테고리 탭 > 링크형](_category-tab-type-1.html) 이용
+							- ajax 방식으로 구현되는 경우 [공통 > 카테고리 탭 > radio형](_category-tab-type-2.html) 이용
+						-->
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">모든 쿠폰</h2>
+
+						<div class="sorting-area js-ui-accordion" data-focus-open="false">
+							<div class="sorting-inner js-ui-accordion__item">
+								<button type="button" class="sorting-opener js-ui-accordion__opener">
+									<span class="for-a11y">
+										탭 영역
+										<span class="open-text">펼치기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="sorting-layer js-ui-accordion__layer">
+									<div class="sorting-contents">
+										<div class="sorting-list">
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-all" checked />
+													<label for="sorting-all" class="ui-label">
+														<span class="ui-label-text">전체</span>
+													</label>
+												</div>
+											</div>
+											<!-- 2022.03.31 : add : vip 링크 버튼 위치 변경 -->
+											<!-- Case : VIP -->
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab type-vip-link">
+													<a href="" class="ui-label">
+														<span class="ui-label-text">우수회원</span>
+													</a>
+												</div>
+											</div>
+											<!-- //Case : VIP -->
+											<!-- //2022.03.31 : add : vip 링크 버튼 위치 변경 -->
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-1" />
+													<label for="sorting-1" class="ui-label">
+														<span class="ui-label-text">쇼핑</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-2" />
+													<label for="sorting-2" class="ui-label">
+														<span class="ui-label-text">여행</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-3" />
+													<label for="sorting-3" class="ui-label">
+														<span class="ui-label-text">해외</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-4" />
+													<label for="sorting-4" class="ui-label">
+														<span class="ui-label-text">금융</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-5" />
+													<label for="sorting-5" class="ui-label">
+														<span class="ui-label-text">외식</span>
+													</label>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<input type="radio" name="sorting" class="ui-radio" id="sorting-6" />
+													<label for="sorting-6" class="ui-label">
+														<span class="ui-label-text">기타</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 22.05.16 니콘내콘 배너추가 -->
+						<div class="banner margin-bottom-none margin-top-10">
+							<p class="color-blur margin-bottom-10">하나카드 손님만을 위한 제휴서비스</p>
+							<div>
+								<a href="" class="banner-link">
+									<img src="./assets/images/banner/m_img_coupon_bn_01.png" alt="스타벅스 아메리카노 평균 13.4% 할인 니콘내콘 바로가기" class="banner-image" />
+								</a>
+								<!--<a href="" class="banner-link">
+									<img src="./assets/images/banner/m_img_coupon_bn_04.png" alt="CU,GS25,세븐일레븐 평균 30% 할인 니콘내콘 바로가기" class="banner-image" />
+								</a>
+								<a href="" class="banner-link">
+									<img src="./assets/images/banner/m_img_coupon_bn_02.png" alt="아웃백 평균 24.4% 할인 니콘내콘 바로가기" class="banner-image" />
+								</a>
+								<a href="" class="banner-link">
+									<img src="./assets/images/banner/m_img_coupon_bn_03.png" alt="교촌치킨, BHC 평균 15% 할인 니콘내콘 바로가기" class="banner-image" />
+								</a>-->
+							</div>
+						</div>
+						<!--// 22.05.16 니콘내콘 배너추가 -->
+						<!-- Case : 쿠폰이 없을 때 -->
+						<div class="link-item type-none type-flex type-no-line">
+							<p class="item-text">
+								아직 쿠폰이 없습니다.<br />
+								실시간 맞춤 쿠폰을 확인해 보세요.
+							</p>
+							<div class="empty-buttons">
+								<div class="empty-buttons-list">
+									<div class="empty-buttons-item">
+										<a href="" class="ui-badge color-basic empty-button">나만의 Pick</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Case : //쿠폰이 없을 때 -->
+
+						<!-- Case : 검색 결과 없을 때 -->
+						<div class="link-item type-none type-flex type-no-line">
+							<p class="item-text">검색결과가 없습니다.</p>
+						</div>
+						<!-- Case : //검색 결과 없을 때 -->
+
+						<!-- Case : 쿠폰이 있을 때 및 검색 결과 있을 때 -->
+						<div class="coupons">
+							<ul class="coupons-list">
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 없을 때 -->
+												<div class="logo-image type-store">
+													<div class="logo-image-inner"></div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="coupon-card-brand">포시즌스 호텔 서울</div>
+												<div class="coupon-card-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 에러 -->
+												<div class="logo-image type-store">
+													<div class="logo-image-inner">
+														<!-- 2022.04.27 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="coupon-card-brand">G9</div>
+												<div class="coupon-card-name">20만원 이상 구매 시, 2만원 즉시 할인</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31 <span class="color-wrong">(7일 남음)</span></div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-link">
+												<span class="for-a11y">쿠폰 바로가기</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 있을 때 -->
+												<div class="logo-image type-store">
+													<div class="logo-image-inner">
+														<!-- 2022.04.27 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="coupon-card-brand">스타벅스</div>
+												<div class="coupon-card-name">아메리카노 1잔 무료</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="logo-image type-store">
+													<div class="logo-image-inner">
+														<!-- 2022.04.27 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/brand-icon-4.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="coupon-card-brand">올리브영 온라인몰 및 구로디지털점 오프라인 매장</div>
+												<div class="coupon-card-name">10만원 이상 구매시, 1만원 즉시 할인</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<button type="button" class="ui-button ui-button-more">더보기</button>
+						<!-- //Case : 쿠폰이 있을 때 및 검색 결과 있을 때 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

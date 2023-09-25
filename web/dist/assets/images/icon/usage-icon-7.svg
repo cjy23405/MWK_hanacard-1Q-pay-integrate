@@ -1,0 +1,26 @@
+<svg data-name="ic_won to money_size36" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <g data-name="타원 1992" transform="translate(3.486 3.537)" style="stroke-width:1.5px;stroke:#2d3239;fill:#fff">
+        <circle cx="8" cy="8" r="8" style="stroke:none"/>
+        <circle cx="8" cy="8" r="7.25" style="fill:none"/>
+    </g>
+    <g data-name="그룹 13173">
+        <path data-name="패스 12361" d="m3649.636 5413.028 1.75 5 1.75-5 1.75 5 1.75-5" transform="translate(-3641.65 -5403.991)" style="stroke-linejoin:round;stroke-linecap:round;fill:none;stroke-width:1.5px;stroke:#2d3239"/>
+        <path data-name="선 347" transform="translate(6.986 11.037)" style="stroke-linecap:round;fill:none;stroke-width:1.5px;stroke:#2d3239" d="M0 0h1.5"/>
+        <path data-name="선 346" transform="translate(14.486 11.037)" style="stroke-linecap:round;fill:none;stroke-width:1.5px;stroke:#2d3239" d="M0 0h1.5"/>
+    </g>
+    <path data-name="패스 12496" d="M7 0a7 7 0 1 1-7 7 7 7 0 0 1 7-7z" transform="translate(16.013 16.723)" style="fill:#fff"/>
+    <path data-name="패스 12497" d="M7 0a7 7 0 1 1-7 7 7 7 0 0 1 7-7z" transform="translate(18.514 17.941)" style="fill:#7dedf3"/>
+    <g data-name="타원 1989" transform="translate(15.543 16.463)" style="fill:none;stroke-width:1.5px;stroke:#2d3239">
+        <circle cx="8" cy="8" r="8" style="stroke:none"/>
+        <circle cx="8" cy="8" r="7.25" style="fill:none"/>
+    </g>
+    <text transform="translate(19.3 27.941)" style="fill:#2d3239;stroke-width:.5px;font-size:10px;font-family:NanumSquareRoundB,NanumSquareRound;stroke:#2d3239"><tspan x="0" y="0">M</tspan></text>
+    <g data-name="그룹 13175">
+        <path data-name="패스 12506" d="M1200.436 327.161a7.25 7.25 0 0 1-7.25-7.25" transform="translate(-1186.508 -297.438)" style="stroke-linecap:round;fill:none;stroke-width:1.5px;stroke:#2d3239"/>
+        <path data-name="패스 12507" d="M3.168 3.188 3.232 0 .161.217" transform="rotate(-43 31.644 6.059)" style="stroke-linejoin:round;stroke-linecap:round;fill:none;stroke-width:1.5px;stroke:#2d3239"/>
+    </g>
+    <g data-name="그룹 13174">
+        <path data-name="패스 12508" d="M1193.186 319.911a7.25 7.25 0 0 1 7.25 7.25" transform="translate(-1172.085 -313.593)" style="stroke-linecap:round;fill:none;stroke-width:1.5px;stroke:#2d3239"/>
+        <path data-name="패스 12509" d="M3.007 3.188 3.071 0 0 .217" transform="rotate(137 12.723 12.487)" style="stroke-linejoin:round;stroke-linecap:round;fill:none;stroke-width:1.5px;stroke:#2d3239"/>
+    </g>
+</svg>

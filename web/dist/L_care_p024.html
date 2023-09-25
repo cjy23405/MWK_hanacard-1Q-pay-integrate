@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">투어메이트</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<h2 class="page-title">
+								월 <span class="color-primary">4,900</span> 원으로<br />
+								여행관련 토탈 할인 멤버쉽 서비스 이용
+							</h2>
+							<ul class="guide-info-list">
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">패키지 여행 할인</strong>
+									</div>
+									<div class="benefit-icon type-21"></div>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">호텔/숙박 할인</strong>
+									</div>
+									<div class="benefit-icon type-22"></div>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">여행자보험<br />동반 1인 무료</strong>
+									</div>
+									<div class="benefit-icon type-23"></div>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">해외 렌터카 할인</strong>
+									</div>
+									<div class="benefit-icon type-24"></div>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">KTX 예매 할인</strong>
+									</div>
+									<div class="benefit-icon type-25"></div>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">해외 데이터/통신 할인</strong>
+									</div>
+									<div class="benefit-icon type-26"></div>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">환율 우대 및 여행 e 매거진</strong>
+									</div>
+									<div class="benefit-icon type-27"></div>
+								</li>
+							</ul>
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">신청하기</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-secondary">조회/해지</button>
+									</li>
+								</ul>
+							</div>
+							<div class="accordion-list margin-top-35 js-ui-accordion" data-once="true">
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">패키지 여행 최대 30만원 할인</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">주요내용</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10 color-primary">참좋은여행 여행패키지 상품 할인 (국내/외 상품 모두 가능)</div>
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															30만원 할인 (상품단가 3백만원 이상 패키지 여행상품 구매시, 단, 6개월 이상 투어메이트 유지회원 대상)
+														</li>
+														<li class="info-item">
+															10만원 할인 (상품단가 1백만원 이상 패키지 여행상품 구매시)
+														</li>
+														<li class="info-item">
+															5만원 할인 (상품단가 70만원 이상 패키지 여행상품 구매시)
+														</li>
+														<li class="info-item">
+															3만원 할인 (상품단가 50만원 이상 패키지 여행상품 구매시)
+														</li>
+													</ul>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">서비스 이용방법</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10">참좋은여행에서 여행패키지 상품 상담 및 결제 시, 참좋은여행 상담원에게</div>
+													<div class="default-text margin-bottom-10">① 하나카드 투어메이트 회원</div>
+													<div class="default-text margin-bottom-10">② 할인쿠폰</div>
+													<div class="default-text margin-bottom-10">위 두가지 사항을 알려주어야 합니다.</div>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">유의사항</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															각 할인혜택은 투어메이트 가입회원 본인에 한해 월별 1회 적용 (타인 양도불가)
+														</li>
+														<li class="info-item">
+															할인쿠폰은 1인 패키지 여행상품 금액이 해당 기준금액 이상일 경우, 1개의 할인 혜택에만 적용<br>(동일상품 중복 적용 불가)
+														</li>
+														<li class="info-item">
+															각 할인혜택은 해외패키지, 국내패키지 여행상품에 적용 가능
+														</li>
+														<li class="info-item">
+															할인쿠폰은 참좋은여행 상담원에게 예약 시 적용 요청
+														</li>
+														<li class="info-item">
+															참좋은여행 정책에 의해 일부 상품은 할인 혜택이 제한될 수 있음
+														</li>
+														<li class="info-item">
+															패키지 여행 관련 모든 사항은 참좋은여행 이용약관에 따르며, 서비스 관련 모든 책임은 참좋은여행에 있음
+														</li>
+														<li class="info-item">
+															참좋은여행 고객센터(1588-7557 / 운영시간 평일 9:00 ~ 18:00)
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">국내외 호텔 숙박 최대 8%할인</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">주요내용</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10">
+														<span class="color-primary">
+														'투어메이트 전용 호텔스닷컴 바로가기'를 통해 국내 &middot; 외 숙박 예약 시, 최대 8%할인된 가격으로 이용하실 수 있습니다.</span><br>
+														(단, 하나카드로 즉시 결제 시 적용 가능)<br>
+														<span class="color-primary">
+														1만원 캐쉬백 혜택을 추가로 드립니다.</span><br>
+														(단, 3개월 이상 상품 유지 회원에 한하며, 3개월 1회로 제한, 캐쉬백 받은날로부터 3개월 이후 산정)
+													</div>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">서비스 이용방법</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10">① 투어메이트 전용 호텔스닷컴 바로가기</div>
+													<div class="default-text margin-bottom-10">② 원하는 날짜와 호텔 선택</div>
+													<div class="default-text margin-bottom-10">③ 예약정보 및 지불정보 입력</div>
+													<div class="default-text margin-bottom-10">④ '쿠폰적용'선택 후 할인코드 입력</div>
+													<div class="default-text margin-bottom-10">⑤ 입력 후 쿠폰 적용하기 선택</div>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">유의사항</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															‘투어메이트 전용 호텔스닷컴 바로가기’를 통해 접속 및 결제한 회원에 한해 할인혜택이 적용
+														</li>
+														<li class="info-item">
+															즉시 할인은 결제가 완료된 후에는 적용이 불가하며, 최종 결제 전 할인코드 적용 확인 필수
+														</li>
+														<li class="info-item">
+															일부 호텔은 할인 제외되며 사전 고지 없이 변경될 수 있음 (할인제외호텔 확인하기)
+														</li>
+														<li class="info-item">
+															객실 이용요금에 한해 할인 적용되며 세금, 서비스요금, 추가이용요금은 할인 제외
+														</li>
+														<li class="info-item">
+															예약 전 취소, 환불 등의 조건 확인 필수, 예약 및 결제 후, 숙박을 취소할 경우 혜택은 자동취소 
+														</li>
+														<li class="info-item">
+															예약 1건당 1개의 할인쿠폰만 사용 가능, 여러 객실 이용해도 할인은 1개 객실에만 적용
+														</li>
+														<li class="info-item color-wrong">
+															원화 결제시에만 상기 혜택 적용 가능
+														</li>
+														<li class="info-item color-wrong">
+															결제 불가 카드 : 기업, 가족, 하나BC, Toss신용, 체크카드(only), 하이패스(only)
+														</li>
+														<li class="info-item">
+															다른 할인서비스 및 쿠폰과 중복 적용 불가
+														</li>
+														<li class="info-item">호
+															텔/숙박 관련 사항은 호텔스닷컴 이용약관에 따르며, 서비스 관련 모든 책임은 호텔스닷컴에 있음
+														</li>
+														<li class="info-item">
+															상기혜택은 당사 제휴사 사정에 의해 변경 또는 중단 가능
+														</li>
+														<li class="info-item">
+															호텔스닷컴 고객센터 (02-3480-0145 / 운영시간 매일 09:00~18:00 / E-mail : CS@koreasupport.hotels.com
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">여행자보험 동반 1인 무료</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">주요내용</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10 color-primary">
+														여행자보험 가입 시, 동반 1인의 여행자 보험료 무료 제공 (단, 3개월에 1회 혜택 제공)
+													</div>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">유의사항</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															‘투어메이트 전용 여행자보험 상담 및 예약센터’를 통해 가입 시 적용
+														</li>
+														<li class="info-item">
+															회원 본인과 동일한 일정으로 여행하는 동반 1인에 한해 혜택 적용
+														</li>
+														<li class="info-item">
+															여행 출발(출국) 전날까지 여행자보험에 가입하고, 보험료 납부가 완료 되어야 보험 효력이 개시됨<br>
+															(여행자보험 상담시간 : 평일 9시~18시)
+														</li>
+														<li class="info-item">
+															회원 본인의 여행자보험 취소 시, 동반자 여행자보험은 자동 취소됨
+														</li>
+														<li class="info-item">
+															보험사 사정에 의해 제공 가능한 여행자보험은 변경될 수 있음
+														</li>
+														<li class="info-item">
+															여행자보험 관련 사항은 보험사 정책에 따르며, 여행자보험 관련 모든 책임은 보험사에 있음
+														</li>
+														<li class="info-item">
+															여행자 보험 상담 및 예약센터 (02-360-2521 / 평일 09:00~18:00, 주말 및 공휴일 제외)
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">허츠 렌터카 최대 10%할인</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">주요내용</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10 color-primary">
+														'투어메이트 전용 허츠 바로가기'를 통해 예약 시, 허츠 렌터카 최대 10% 할인된 가격으로 이용
+													</div>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">서비스 이용방법</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10">① 투어메이트 전용 허츠 바로가기</div>
+													<div class="default-text margin-bottom-10">② 임차도시 or 공항코드 선택</div>
+													<div class="default-text margin-bottom-10">③ 수령일자 선택 후 할인코드 입력</div>
+													<div class="default-text margin-bottom-10">④ 렌터카 선택</div>
+													<div class="default-text margin-bottom-10">⑤ 요금할인 및 +버튼 선택</div>
+													<div class="default-text margin-bottom-10">⑥ 비용은 현지 렌터카 카운터에서 지불</div>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">유의사항</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															‘투어메이트 전용 허츠 바로가기’를 통해 접속 및 결제한 회원에 한해 서비스 적용
+														</li>
+														<li class="info-item">
+															예약시 ‘할인프로그램 (CDP)번호’ 란에 할인코드 입력되었는지 확인
+														</li>
+														<li class="info-item">
+															할인요금은 출국 최소 24시간 사전 예약시 적용
+														</li>
+														<li class="info-item">
+															차량모델 및 스펙은 영업소에 따라 다를 수 있으며, 영업소 차량 수급사정에 따라 변경될 수 있음
+														</li>
+														<li class="info-item">
+															다른 할인행사 및 프로모션과 중복적용은 예약시 확인
+														</li>
+														<li class="info-item">
+															Hertz의 기본 임차가격 및 이용규정과 지역별 임차기간 및 반납규정, 예약 요금제별 규정 및 
+															조건이 적용
+														</li>
+														<li class="info-item">
+															일시적으로 할인이 제한되는 기간이 적용됨
+														</li>
+														<li class="info-item">
+															본 혜택은 사전고지 없이 변경 또는 취소 될 수 있음
+														</li>
+														<li class="info-item">
+															허츠렌터카 관련 사항은 허츠 이용약관에 따르며, 서비스 관련 모든 책임은 허츠에 있음
+														</li>
+														<li class="info-item">
+															허츠 고객센터 (1600-2288 / E-mail : cskorea@hertz.com)
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">KTX 최대 35% 할인</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">주요내용</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10">
+														<span class="color-primary">'투어메이트 전용 KTX예매 바로가기'를 통해 KTX승차권 예매시, 최대 35% 할인된 가격으로 이용</span><br>
+														(시간대별, 일자별 할인율 상이, ~최대 35%)
+													</div>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">서비스 이용방법</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10">최초 1회 간편가입절차 진행</div>
+													<div class="default-text margin-bottom-10">① 투어메이트전용 KTX예매 바로가기</div>
+													<div class="default-text margin-bottom-10">② 기차 예매 화면 이동</div>
+													<div class="default-text margin-bottom-10">③ 승차권 선택 및 예약정보 입력</div>
+													<div class="default-text margin-bottom-20">④ 결제하기</div>
+													<div class="default-text margin-bottom-10">예약정보 확인 경로</div>
+													<div class="default-text margin-bottom-10">좌측 햄버거 메뉴 > 여행레저 > 국내여행 > 기차예약 > 우측 상단 '예약확인'</div>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">유의사항</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															최초 1회 간편가입절차 진행 후 이용 가능 
+														</li>
+														<li class="info-item">
+															‘투어메이트 전용 KTX예매 바로가기’를 통해 접속 및 결제한 회원에 한해 혜택 적용
+														</li>
+														<li class="info-item">
+															예약 및 결제취소 시, 혜택은 자동취소
+														</li>
+														<li class="info-item">
+															제휴사 사정에 의해 할인율 또는 할인가능한 열차종류가 제한될 수 있음
+														</li>
+														<li class="info-item">
+															KTX예매 관련 사항은 현대이지웰 이용약관에 따르며, 서비스 관련 모든 책임은 현대이지웰에 있음
+														</li>
+														<li class="info-item">
+															현대이지웰 고객센터 (02-2222-2655, 02-2222-2632, 평일 10:00~17:00)
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">해외 데이터 통신 최대 10% 할인</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">주요내용</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10 color-primary">
+														해외 데이터 통신 최대 10% 할인 (상품별 상이)
+													</div>
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															와이파이도시락 : 10%할인 + 2천원 할인권 추가 할인(단, 할인권은 매월 단위로 1회 제공)
+														</li>
+														<li class="info-item">
+															도시락 USIM : 5%할인
+														</li>
+													</ul>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">서비스 이용방법</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10">① 투어메이트전용 페이지 바로가기</div>
+													<div class="default-text margin-bottom-10">② 방문국가, 일정, 수령장소 선택 후 예약하기 버튼 클릭</div>
+													<div class="default-text margin-bottom-10">③ 와이파이도시락 또는 유심 선택 후 이용자 정보를 입력하고 결제하기</div>
+													<div class="default-text margin-bottom-10">④ 결제 시 "할인권/금액권" 부분에서 "사용"버튼 클릭 (와이파이도시락에 한함)</div>
+													<div class="default-text margin-bottom-10">⑤ 할인코드 입력</div>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">유의사항</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															2천원 할인권은 월별 1회 제공 및 적용 가능
+														</li>
+														<li class="info-item">
+															2천원 할인권은 와이파이도시락만 적용 가능
+														</li>
+														<li class="info-item">
+															와이드모바일 다른 할인쿠폰과 중복사용 불가
+														</li>
+														<li class="info-item">
+															예약, 결제 및 취소 관련은 와이드모바일 이용약관 및 취소/환불 규정에 따름
+														</li>
+														<li class="info-item">
+															와이파이도시락, 유심, eSIM 서비스 관련 모든 사항은 와이드모바일 이용약관에 따르며, 서비스 관련 모든 책임은 와이드모바일에 있음
+														</li>
+														<li class="info-item">
+															사용방법에 대한 문의가 있을 경우 와이드모바일 고객센터 이용
+														</li>
+														<li class="info-item">
+															와이드모바일 고객센터 (1566-9070)
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">하나은행 환율우대 최대 80% 여행관련 e매거진 제공</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">주요내용</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10 color-primary">
+														하나은행 환율 우대 최대 80% (통화별 우대율 상이)
+													</div>
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															주요 통화 (USD, EUR, JPY) : 최대 80% 우대
+														</li>
+														<li class="info-item">
+															주요 통화 외 기타 통화 : 최대 30% 우대
+														</li>
+													</ul>
+												</div>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">환율우대 서비스 이용방법</h3>
+												</div>
+												<ul class="info-list type-inherit type-outside">
+													<li class="info-item">
+														하나은행 지점 방문 시 '투어메이트'회원 전용 우대코드 제시
+													</li>
+													<li class="info-item">
+														하나은행 전 지점 가능 (단, 인천국제공항지점 제외)
+													</li>
+												</ul>
+											</div>
+											
+											
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">유의사항</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															2022년 12월 31일까지 사용 가능
+														</li>
+														<li class="info-item">
+															본 우대코드는 다른 우대조건과 중복 사용 불가
+														</li>
+														<li class="info-item">
+															보유 통화는 지점마다 다르므로 확인 후 방문
+														</li>
+														<li class="info-item">
+															우대대상 통화 및 우대율은 하나카드와 하나은행 및 제휴사의 사정에 따라 변경 또는 중단 될 수 있음</li>
+														<li class="info-item">
+															문의 : 하나은행 고객센터 (1599-1111, 1588-1111)
+														</li>
+													</ul>
+												</div>
+											</div>
+
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">여행관련 e매거진 이용방법</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															포인트샵 App 이동 및 e매거진 확인 (포인트샵 App > 마이페이지)
+														</li>
+														<li class="info-item">
+															최초 이용시 App 다운로드 및 회원가입, 자동로그인 체크 필요
+														</li>
+														<li class="info-item">
+															매거진 종류는 제휴사 사정에 의해 변경될 수 있음
+														</li>
+														<li class="info-item">
+															매거진은 제휴사 사정에 의해 순차적으로 업데이트 됨
+														</li>
+													</ul>
+												</div>
+											</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

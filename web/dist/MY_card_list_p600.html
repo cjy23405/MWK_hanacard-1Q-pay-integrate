@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">Simple Life 서비스</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 1</span>
+							서비스를 변경합니다.
+						</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 2단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="page-section-group">
+							<div class="form-detail">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용중인 서비스</dt>
+										<dd class="form-detail-group type-block"><span class="color-primary">Simple</span> 서비스</dd>
+									</div>
+								</dl>
+							</div>
+						</div>
+
+						<!-- 다음달 변경 신청 이력이 있는 경우 -->
+						<div class="page-section-group type-line">
+							<div class="form-detail">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">다음달 변경 예정 서비스</dt>
+										<dd class="form-detail-group type-block"><span class="color-primary">Life</span> 서비스</dd>
+									</div>
+								</dl>
+							</div>
+						</div>
+						<!-- //다음달 변경 신청 이력이 있는 경우 -->
+
+						<div class="page-section type-line">
+							<div class="section-contents-title margin-top-none">
+								<h3 class="title">서비스 변경</h3>
+							</div>
+							<div class="ui-radio-group type-panel">
+								<div class="ui-radio-block type-box">
+									<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" data-checkbox-tab="radioPanel1-1" checked />
+									<label for="radioPanel1-1" class="ui-label">
+										<span class="ui-label-text">Simple</span>
+									</label>
+								</div>
+								<div class="ui-radio-block type-box">
+									<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" data-checkbox-tab="radioPanel1-2" />
+									<label for="radioPanel1-2" class="ui-label">
+										<span class="ui-label-text">Life</span>
+									</label>
+								</div>
+							</div>
+							<ul class="info-list type-default margin-top-10" data-checkbox-tab-panel="radioPanel1-1">
+								<li class="info-item type-indent"><span class="indent">-</span>국내 일시불/할부 0.7% 할인</li>
+							</ul>
+							<ul class="info-list type-default margin-top-10" data-checkbox-tab-panel="radioPanel1-2">
+								<li class="info-item type-indent"><span class="indent">-</span>통신요금(SKT, KT, LGU+, SK텔링크, CJ헬로비전, U+알뜰모바일 등)</li>
+								<li class="info-item type-indent"><span class="indent">-</span>렌탈요금(청호나이스, 코웨이, 쿠쿠, 쿠첸 등) 자동이체</li>
+								<li class="info-item type-indent"><span class="indent">-</span>전월실적 30만 / 80만 이상 시 1.1만원/1.5만원 할인</li>
+							</ul>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">해당 서비스는 월 1회만 변경 가능하며, 매 월 최초 변경 신청한 기준으로 변경 반영됩니다.</li>
+										<li class="info-item">변경된 서비스는 신청하신 다음달 1일부터 적용됩니다.</li>
+										<li class="info-item">가족카드는 본인카드 기준으로 서비스 적용되며, 선택 서비스 신청은 본인회원만 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 변경 내용이 있을 경우 -->
+					<div class="page-buttons">
+						<div class="ui-buttons type-tooltip">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<div class="ui-button-tooltip">
+										<!-- 2022.04.27 : mod : 접근성 텍스트 추가 -->
+										<span class="ui-button-tooltip-text"><span class="for-a11y">변경 버튼을 누르면 </span>다음달 1일부터 변경됩니다.</span>
+									</div>
+									<button type="button" class="ui-button ui-basic-button type-primary">변경</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //변경 내용이 있을 경우 -->
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

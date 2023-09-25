@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-identification-error">본인확인 안내(불일치)</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-identification-wrong">본인확인 안내(5회이상 틀림)</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-repayment-plan">카드이용금액 상환 계획 안내</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 본인확인 안내(불일치) -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-identification-error">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									본인확인 번호가<br />
+									일치하지 않습니다.
+								</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<div class="layer-info">
+										<p class="layer-info-text">
+											본인확인 번호가 일치하지 않습니다.<br />
+											다시 한번 입력해주세요.
+										</p>
+									</div>
+									<div class="form-bottom">
+										<div class="ui-buttons">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item">
+													<button type="button" class="ui-button ui-basic-button type-secondary">재입력</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="page-section type-line">
+									<div class="layer-info">
+										<p class="layer-info-text">
+											본인확인번호를 잊으셨나요?<br />
+											다른 방법으로 인증할 수 있습니다.
+										</p>
+									</div>
+									<div class="form-bottom">
+										<div class="ui-buttons">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item">
+													<a href="" class="ui-basic-button type-primary" role="button">다른 방법으로 인증</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 본인확인 안내(불일치) -->
+
+			<!-- layer: 본인확인 안내(5회이상 틀림) -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-identification-wrong">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">본인확인 안내</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<div class="layer-info">
+										<p class="layer-info-text">
+											본인확인번호를 잊으셨나요?<br />
+											다른 방법으로 인증할 수 있습니다.
+										</p>
+									</div>
+									<div class="form-bottom">
+										<div class="ui-buttons">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item">
+													<a href="" class="ui-basic-button type-primary" role="button">다른 방법으로 인증</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 본인확인 안내(5회이상 틀림) -->
+
+			<!-- layer: 카드이용금액 상환 계획 안내 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-info-repayment-plan">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									카드이용금액 상환가능일을<br />
+									선택해 주세요.
+								</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<div class="layer-info">
+										<p class="layer-info-text">
+											금융소비자보호법에 따라 카드신청 시<br />
+											손님의 연소득, 신용정보, 채무변제금액<br />
+											상환계획을 확인받고, 이를 유지/관리해야합니다.
+										</p>
+									</div>
+									<div class="form-bottom">
+										<div class="ui-buttons">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item">
+													<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 카드이용금액 상환 계획 안내 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-credit-instructions');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

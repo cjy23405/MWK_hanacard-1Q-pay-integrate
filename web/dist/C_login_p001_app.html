@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-login">
+						<!-- 2021.11.02 텍스트 수정 -->
+                        <h1 class="page-title">반갑습니다!</h1>
+
+                        <p class="big-text font-weight-light">하나카드 앱으로<br>편리하게 로그인하세요</p>
+
+                        <div class="ui-buttons type-full">
+                            <ul class="ui-buttons-list">
+                                <li class="ui-buttons-item">
+                                    <button type="button" class="ui-button ui-basic-button type-goapp"><span>하나카드 앱으로 1초 로그인</span></button>
+                                </li>
+                                <li class="ui-buttons-item">
+                                    <button type="button" class="ui-button type-underline" data-layer-open="layer-other-login"><span>다른 방법으로 로그인</span><i class="ui-arrow-opener"></i></button>
+                                </li>
+                            </ul>
+                        </div>
+					</div>
+                    <div class="page-buttons type-fixed padding-none">
+                        <button type="button" class="ui-button type-new" data-layer-open="layer-login-new">
+                            <span>TIP</span> 하나카드 홈페이지가 <strong>처음</strong>이신가요?
+                        </button>
+                    </div>
+				</div>
+			</div>
+            <div class="footer-wrap">
+				 <footer class="footer type-short">
+					<address class="footer-address">서울특별시 중구 을지로 66</address>
+					<div class="footer-text">
+					   <ul class="footer-text-list">
+						  <li class="footer-text-item">대표이사 권길주</li>
+						  <li class="footer-text-item">사업자번호 104-86-56659</li>
+					   </ul>
+					</div>
+					<address class="footer-copy">COPYRIGHT&copy; 2017 Hana Card, ALL RIGHTS RESERVERD.
+					</address>
+					<div class="footer-logo-area" id="footer-wrap-oldlogo">
+					   <div class="footer-logo"></div>
+					   <a class="footer-button" role="button" onclick="goNewWin('https://smart.hanacard.co.kr/');">구) 하나카드</a>
+					</div>
+				 </footer>
+			</div>
+
+<!-- layer: 로그인 방법을 선택해주세요. -->
+<div class="layer-wrap layer-wrap--slide" data-layer="layer-other-login">
+    <div class="layer-container">
+        <section class="ui-layer">
+            <div class="ui-layer__head">
+                <div class="header">
+                    <h2 class="header__title">로그인 방법을 선택해주세요.</h2>
+                    <div class="header__right">
+                        <button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+                            <span class="for-a11y">레이어 닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-layer__body">
+                <div class="ui-layer__body-inner">
+                    <ul class="login-method-list2">
+                        <li class="login-method-item type-simple">
+                            <button type="button" class="ui-button login-method-button">간편인증(휴대폰/카드)</button>
+                        </li>
+                        <li class="login-method-item type-id">
+                            <button type="button" class="ui-button login-method-button">아이디</button>
+                        </li>
+                        <li class="login-method-item type-certificate">
+                            <button type="button" class="ui-button login-method-button">공동인증서</button>
+                        </li>
+                        <li class="login-method-item type-app">
+                            <button type="button" class="ui-button login-method-button">하나카드 앱</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- //layer: 로그인 방법을 선택해주세요. -->            
+
+<!-- layer: 하나카드 홈페이지가 처음이신가요? -->
+<div class="layer-wrap layer-wrap--slide" data-layer="layer-login-new">
+    <div class="layer-container layer-login-new">
+        <section class="ui-layer">
+            <div class="ui-layer__head">
+                <div class="header">
+                    <h2 class="header__title"><span>TIP</span>하나카드 홈페이지가 <strong>처음</strong>이신가요?</h2>
+                    <div class="header__right">
+                        <button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+                            <span class="for-a11y">레이어 닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-layer__body">
+                <div class="ui-layer__body-inner">
+
+                    <h3 class="join-type-tit">하나카드가 있다면</h3>
+                    <ul class="join-type-list">
+                        <li class="join-type-item type-simple">
+                            <button type="button" class="ui-button join-type-button">휴대폰/카드로 간편인증</button>
+                        </li>
+                        <li class="join-type-item type-join">
+                            <button type="button" class="ui-button join-type-button">쉽고 빠른 회원가입</button>
+                        </li>
+                    </ul>
+
+                    <h3 class="join-type-tit">하나카드가 없어도</h3>
+                    <ul class="join-type-list">
+                        <li class="join-type-item type-app">
+                            <button type="button" class="ui-button join-type-button">
+                                <div class="txt-area">
+                                    <strong>앱으로 이용하기</strong>
+                                    <p>계좌결제, 자산관리, 송금이 가능해요</p>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- //layer: 하나카드 홈페이지가 처음이신가요? -->            
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

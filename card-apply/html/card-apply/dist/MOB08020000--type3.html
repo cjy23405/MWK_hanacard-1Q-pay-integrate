@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- progress bar -->
+					<div class="fixed-step">
+						<div class="step-box" role="img" aria-label="총 14단계 중 1단계">
+							<span class="step-bar" style="width: 20%"></span>
+						</div>
+					</div>
+					<!-- //progress bar -->
+
+					<div class="page-contents">
+						<h2 class="page-contents-title">직업 및 카드 이용정보를 알려주세요.</h2>
+
+						<div class="form-list-wrap">
+							<div class="form-item">
+								<div class="ui-form">
+									<dl class="ui-form-list">
+										<div class="ui-form-item type-only-select">
+											<!-- 2022.08.18 : mod : 문구수정 -->
+											<dt class="ui-form-key" data-focus-input="name">직업구분</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<!-- 2022.08.18 : mod : 문구수정 -->
+														<div class="in-select-block">
+															<button type="button" class="in-select" title="직업구분 선택" data-placeholder="직업구분 선택" data-focus-input-target="name">주부</button>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<!-- case : 바로발급 자격 없을 시에만 노출 -->
+										<div class="ui-form-item type-only-select">
+											<dt class="ui-form-key" data-focus-input="name">소득구분</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="in-select-block">
+															<button type="button" class="in-select" title="소득구분 선택" data-placeholder="소득구분 선택" data-focus-input-target="name">배우자 직장</button>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<!-- //case : 바로발급 자격 없을 시에만 노출 -->
+										<!-- case : 소득구분 배우자 직장 선택 시 노출 -->
+										<div class="ui-form-item">
+											<dt class="ui-form-key" data-focus-input="name">배우자 이름</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="in-input-block">
+															<input type="text" class="in-input" title="배우자 이름 입력" placeholder="배우자 이름 입력" data-focus-input-target="name" />
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<div class="ui-form-item">
+											<!-- 2022.08.18 : mod : 문구수정 -->
+											<dt class="ui-form-key" data-focus-input="id-card">배우자 주민등록번호</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="flex-box">
+															<div class="flex-box-cell type-flexible">
+																<div class="in-input-block">
+																	<!-- 2022.08.18 : mod : 문구수정 -->
+																	<input type="number" pattern="\d*" class="in-input" title="배우자 주민등록번호 앞자리 입력" placeholder="900101" data-focus-input-target="id-card" />
+																</div>
+															</div>
+															<div class="flex-box-dash"></div>
+															<div class="flex-box-cell">
+																<div class="in-input-block type-no-delete input-width-one">
+																	<!-- 2022.08.18 : mod : 문구수정 -->
+																	<input type="number" pattern="\d*" class="in-input" title="배우자 주민등록번호 뒤 첫자리 입력" placeholder="0" />
+																</div>
+															</div>
+															<div class="flex-box-cell type-regular-margin">
+																<div class="flex-box-dot type-id-card-number"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<div class="ui-form-item">
+											<dt class="ui-form-key" data-focus-input="name">배우자 회사명</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="in-input-block">
+															<input type="text" class="in-input" title="배우자 회사명 입력" placeholder="배우자 회사명 입력" data-focus-input-target="name" />
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<!-- DD : 입력된 정보 없을 시 -->
+										<div class="ui-form-item">
+											<dt class="ui-form-key">배우자 회사주소</dt>
+											<dd class="ui-form-val">
+												<button type="button" class="ui-form-hidden-button"></button>
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="form-inputed-text"></div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<!-- //DD : 입력된 정보 없을 시 -->
+										<!-- DD : 입력 완료 시 .type-inputed 클래스 추가 -->
+										<div class="ui-form-item type-inputed">
+											<dt class="ui-form-key">배우자 회사주소</dt>
+											<dd class="ui-form-val">
+												<button type="button" class="ui-form-hidden-button"></button>
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<!-- 2022.08.24 : mod : display-block 클래스 추가 -->
+														<div class="form-inputed-text"><span class="sub-text display-block">(12345)</span> 서울 동대문구 이문로 10-17 (이문동) 205</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<!-- //DD : 입력 완료 시 .type-inputed 클래스 추가 -->
+										<div class="ui-form-item">
+											<dt class="ui-form-key" data-focus-input="tel">배우자 회사 전화번호</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="flex-box">
+															<div class="flex-box-cell">
+																<div class="in-select-block input-width-tel-exchange">
+																	<button type="button" class="in-select" title="지역번호 선택" data-placeholder="선택" data-focus-input-target="tel"></button>
+																</div>
+															</div>
+															<div class="flex-box-cell type-flexible">
+																<div class="in-input-block">
+																	<!-- 2022.08.18 : mod : placeholder 문구수정 -->
+																	<input type="number" pattern="\d*" class="in-input" title="전화번호 입력" placeholder="숫자만 입력" />
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<!-- //case : 소득구분 배우자 직장 선택 시 노출 -->
+										<div class="ui-form-item type-only-select">
+											<dt class="ui-form-key" data-focus-input="name">거래목적</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="in-select-block">
+															<button type="button" class="in-select" title="거래목적 선택" data-placeholder="거래목적 선택" data-focus-input-target="name"></button>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+										<div class="ui-form-item type-only-select">
+											<dt class="ui-form-key" data-focus-input="name">자금출처</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<div class="in-select-block">
+															<button type="button" class="in-select" title="자금출처 선택" data-placeholder="자금출처 선택" data-focus-input-target="name"></button>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</div>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 2022.08.18 : mod : 태그변경 -->
+					<!-- DD : 모든 필수값 입력됐을 경우 활성화 disabled 속성 삭제 -->
+					<!-- 2022.08.31 : mod : .page-buttons에 .type-fixed.type-no-line 클래스 추가 -->
+					<div class="page-buttons type-fixed type-no-line">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary" disabled>배우자 본인인증</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //DD : 모든 필수값 입력됐을 경우 활성화 disabled 속성 삭제 -->
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

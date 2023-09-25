@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <linearGradient id="axlf4i5v5a" x1=".041" y1=".078" x2=".939" y2=".997" gradientUnits="objectBoundingBox">
+            <stop offset=".239" stop-color="#009d9d"/>
+            <stop offset=".308" stop-color="#0b979c"/>
+            <stop offset=".43" stop-color="#298a9c"/>
+            <stop offset=".592" stop-color="#59739b"/>
+            <stop offset=".783" stop-color="#9c549a"/>
+            <stop offset=".909" stop-color="#cc3f9a"/>
+        </linearGradient>
+    </defs>
+    <g data-name="타원 2013" style="fill:#fff;stroke:#e5e5e5">
+        <circle cx="18" cy="18" r="18" style="stroke:none"/>
+        <circle cx="18" cy="18" r="17.5" style="fill:none"/>
+    </g>
+    <path data-name="패스 12602" d="m110.447 153.718-1.756-14.163a1.664 1.664 0 0 0-1.651-1.459h-.226c-.048 0-.1 0-.143.007h-.047a1.663 1.663 0 0 0-1.343.955l-4.271 9.216-4.272-9.216a1.663 1.663 0 0 0-1.466-.963h-.326a1.664 1.664 0 0 0-1.651 1.459l-1.757 14.163a1.664 1.664 0 0 0 1.651 1.869h.561a1.664 1.664 0 0 0 1.655-1.5l.814-8.107 3.254 6.9a1.714 1.714 0 0 0 3.072 0l3.227-6.839.809 8.05a1.664 1.664 0 0 0 1.655 1.5h.56a1.664 1.664 0 0 0 1.651-1.872z" transform="translate(-82.992 -128.841)" style="fill:url(#axlf4i5v5a)"/>
+</svg>

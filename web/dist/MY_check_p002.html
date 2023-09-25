@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드발급조회</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section">
+							<div class="issue-accordion-list js-ui-accordion" data-once="true">
+								<!-- 카드접수완료 -->
+								<div class="issue-accordion-item js-ui-accordion__item" data-initial-open="true">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-secondary">카드접수완료</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice"><strong>신청하신 카드 접수가 완료</strong>되었습니다.</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수<span class="for-a11y">현재 단계</span></div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //카드접수완료 -->
+								<!-- 심사중 -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-secondary">심사중</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice"><strong>신청 내역 심사중</strong>입니다.</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중<span class="for-a11y">현재 단계</span></div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //심사중 -->
+								<!-- 심사완료 -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-secondary">심사완료</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice"><strong>심사가 완료</strong>되었습니다.</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료<span class="for-a11y">현재 단계</span></div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //심사완료 -->
+								<!-- 심사완료 (카드신청 취소) -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-secondary">심사완료</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice">
+												<strong>카드신청이 취소</strong>되었습니다.<br />
+												고객센터(1800-1111)로 문의 부탁드립니다.
+											</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료<span class="for-a11y">현재 단계</span></div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //심사완료 (카드신청 취소) -->
+								<!-- 심사완료 (심사 중단) -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-secondary">심사완료</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice"><strong>내부 기준에 따라 심사가 중단</strong>되었습니다.</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료<span class="for-a11y">현재 단계</span></div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //심사완료 (심사 중단) -->
+								<!-- 발급중 -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-secondary">발급중</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice"><strong>카드를 제작 중</strong>입니다.</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료</div>
+													</li>
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중<span class="for-a11y">현재 단계</span></div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //발급중 -->
+								<!-- 배송중 -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-secondary">배송중</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice"><strong>카드 배송이 시작</strong>되었습니다.</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중<span class="for-a11y">현재 단계</span></div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary">배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //배송중 -->
+								<!-- 영업점 보관중 -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-secondary">영업점 보관중</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice">
+												<strong>카드가 요청하신 영업점으로</strong><br />
+												<strong>배송</strong>되었습니다.
+											</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중<span class="for-a11y">현재 단계</span></div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //영업점 보관중 -->
+								<!-- 발급가능 -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-secondary">발급가능</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice">
+												앱 카드 발급이 가능합니다.<br />
+												<strong>1QPay앱을 통해 발급</strong>해주세요.
+											</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능<span class="for-a11y">현재 단계</span></div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //발급가능 -->
+								<!-- 배송/교부완료 -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-secondary">배송/교부완료</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice"><strong>카드 배송이 완료</strong>되었습니다.</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료<span class="for-a11y">현재 단계</span></div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary">배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //배송/교부완료 -->
+								<!-- 반송 -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge color-wrong">반송</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice">
+												<strong>카드가 반송</strong>되었습니다.<br />
+												추가 문의는 고객센터(1800-1111)로<br />
+												연락 부탁드립니다.
+											</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item is-active">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료<span class="for-a11y">현재 단계</span></div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //반송 -->
+								<!-- 미존재상태 -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge">미존재상태</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice">
+												<strong>점검 중</strong>입니다.<br />
+												고객센터(1800-1111)로 문의 부탁드립니다.
+											</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //미존재상태 -->
+								<!-- 카드신청취소 -->
+								<div class="issue-accordion-item js-ui-accordion__item">
+									<button class="issue-accordion-opener js-ui-accordion__opener">
+										<span class="ui-badge">카드신청취소</span>
+										<span class="issue-accordion-title">하나멤버스 1Q체크카드</span>
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="issue-accordion-detail js-ui-accordion__layer">
+										<div class="issue-accordion-detail-inner">
+											<p class="issue-progress-notice"><strong>카드신청이 취소</strong>되었습니다.</p>
+											<div class="issue-progress progress-area">
+												<ol class="issue-progress-list">
+													<!-- [DD] 활성화 is-active 클래스 추가 -->
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-01"></span>접수</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-02"></span>심사중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-03"></span>심사완료</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-04"></span>발급중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-05"></span>배송중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-06"></span>완료</div>
+													</li>
+													<!--li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-07"></span>보관중</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-08"></span>발급가능</div>
+													</li>
+													<li class="issue-progress-item">
+														<div class="issue-progress-step"><span class="issue-progress-icon type-10"></span>반송</div>
+													</li-->
+												</ol>
+											</div>
+											<dl class="form-detail-list">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">신청일자</dt>
+													<dd class="form-detail-group">2021.08.05</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">배송예정지</dt>
+													<dd class="form-detail-group">자택</dd>
+												</div>
+											</dl>
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" disabled>배송조회</button>
+										</div>
+									</div>
+								</div>
+								<!-- //카드신청취소 -->
+							</div>
+						</div>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<!-- 2022.03.30 버튼 추가 -->
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-secondary" role="button">카드신청서 조회</a>
+									</li>
+									<!-- //2022.03.30 버튼 추가 -->
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item" data-initial-open="true">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">가족카드의 발급조회는 본인회원 정보로 조회하시기 바랍니다.</li>
+										<li class="info-item">최근 6개월 이내의 신청내역이 조회됩니다.</li>
+										<li class="info-item">카드신청내역이 조회 되지 않으실 경우 고객센터(1800-1111)로 문의해 주시기 바랍니다.</li>
+										<li class="info-item">안전한 카드 사용을 위해 카드 수령 시 본인이 직접 ARS(1800-1111) 또는 카드사용등록 메뉴를 통해 카드사용등록 후 이용 가능합니다.</li>
+										<li class="info-item">선불 내(內)카드/팝 모바일 선불카드는 2017년 1월 26일자로 발급 중단되어, 카드발급조회를 원하실 경우 하나카드 고객센터(1800-1111)로 문의 바랍니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-postpaid-high-pass">후불하이패스 카드 약관동의 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 후불하이패스 카드 약관동의 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide is-not-background-close" data-layer="layer-postpaid-high-pass">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2022.11.17 : mod : 문구수정 -->
+								<h2 class="header__title">후불하이패스 서비스 약관 동의</h2>
+								<!-- 2022.11.17 : add : 레이어 닫기 버튼 추가 -->
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+								<!-- //2022.11.17 : add : 레이어 닫기 버튼 추가 -->
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<div class="ui-multiple-list margin-top-minus-10">
+										<div class="ui-multiple-item type-all type-medium">
+											<div class="ui-form-check-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-all" data-checkbox-group="selectCheckbox1" />
+												<label for="selectCheckbox1-all" class="ui-label">
+													<span class="ui-check-object"></span>
+													<span class="ui-label-text">전체동의</span>
+												</label>
+											</div>
+										</div>
+										<div class="ui-check-terms type-margin-6">
+											<div class="ui-check-terms-list-group">
+												<div class="ui-check-terms-list">
+													<div class="ui-check-terms-item">
+														<div class="ui-form-check-block">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" data-checkbox-group-child="selectCheckbox1" />
+															<label for="selectCheckbox1-1" class="ui-label">
+																<span class="ui-check-object"></span>
+																<span class="ui-label-text">고유식별정보 제공 동의</span>
+															</label>
+															<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-form-check-block">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2" data-checkbox-group-child="selectCheckbox1" />
+															<label for="selectCheckbox1-2" class="ui-label">
+																<span class="ui-check-object"></span>
+																<span class="ui-label-text">개인(신용)정보 제공 동의</span>
+															</label>
+															<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<!-- 2022.11.17 : del : 버튼 삭제 -->
+									<li class="ui-buttons-item">
+										<!-- 2022.11.17 : mod : 문구수정 -->
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">모두 동의하고 신청</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 후불하이패스 카드 약관동의 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-postpaid-high-pass');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

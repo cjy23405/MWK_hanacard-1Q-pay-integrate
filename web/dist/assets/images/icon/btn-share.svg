@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{stroke:#111;stroke-width:1.5px}.cls-3{fill:#111}.cls-4{stroke:none}
+        </style>
+    </defs>
+    <g id="btn_share" transform="translate(16313 19034)">
+        <path id="사각형_8740" data-name="사각형 8740" class="cls-1" transform="translate(-16313 -19034)" d="M0 0h15v15H0z"/>
+        <g id="타원_1351" data-name="타원 1351" class="cls-2" transform="translate(-16312 -19029)">
+            <circle class="cls-4" cx="2.5" cy="2.5" r="2.5"/>
+            <circle class="cls-1" cx="2.5" cy="2.5" r="1.75"/>
+        </g>
+        <g id="타원_1352" data-name="타원 1352" class="cls-2" transform="translate(-16305 -19033)">
+            <circle class="cls-4" cx="2.5" cy="2.5" r="2.5"/>
+            <circle class="cls-1" cx="2.5" cy="2.5" r="1.75"/>
+        </g>
+        <g id="타원_1353" data-name="타원 1353" class="cls-2" transform="translate(-16305 -19025)">
+            <circle class="cls-4" cx="2.5" cy="2.5" r="2.5"/>
+            <circle class="cls-1" cx="2.5" cy="2.5" r="1.75"/>
+        </g>
+        <path id="사각형_11241" data-name="사각형 11241" class="cls-3" transform="rotate(60 8328.628 -23635.392)" d="M0 0h1.5v4H0z"/>
+        <path id="사각형_11242" data-name="사각형 11242" class="cls-3" transform="rotate(-60 -24629.7 4610.892)" d="M0 0h1.5v4H0z"/>
+    </g>
+</svg>

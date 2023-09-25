@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">대출내역조회</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							내역을 조회할<br />
+							대출을 선택해 주세요.
+						</h2>
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">조회구분</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-radio-group type-panel">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" data-checkbox-tab="radioPanel1-1" checked />
+												<label for="radioPanel1-1" class="ui-label">
+													<span class="ui-label-text">대출기본정보</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" data-checkbox-tab="radioPanel1-2" />
+												<label for="radioPanel1-2" class="ui-label">
+													<span class="ui-label-text">상환스케줄</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">대출번호</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-radio-group type-full">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" checked />
+												<label for="radioBox1-1" class="ui-label type-block">
+													<div class="ui-label-text">
+														<span class="title">일반대출</span>
+														<div>1520999001530</div>
+													</div>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" />
+												<label for="radioBox1-2" class="ui-label">
+													<div class="ui-label-text">
+														<span class="title">상품명</span>
+														<div>상품번호</div>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<!-- [DD] 대출이용내역이 없는 경우 -->
+									<div class="form-group type-none">
+										<p class="item-text">대출이용내역이 없습니다.</p>
+									</div>
+									<!-- //[DD] 대출이용내역이 없는 경우 -->
+								</div>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">조회</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<!-- [DD] 대출이용내역이 없는 경우 -->
+							<div class="form-detail type-none">
+								<p class="item-text">조회 결과가 없습니다.</p>
+							</div>
+							<!-- //[DD] 대출이용내역이 없는 경우 -->
+
+							<!-- 조회구분 : ‘대출기본정보’ -->
+							<div class="form-detail" data-checkbox-tab-panel="radioPanel1-1">
+								<div class="form-detail-head">
+									<h3 class="title">기본정보</h3>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">대출번호</dt>
+										<dd class="form-detail-group">1520999001530</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">대출종류</dt>
+										<dd class="form-detail-group">오토할부</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">대출기간</dt>
+										<dd class="form-detail-group">36개월</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">최소대출금액</dt>
+										<dd class="form-detail-group">20,000,000 원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">대출일자</dt>
+										<dd class="form-detail-group">2021.01.01</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">만기일자</dt>
+										<dd class="form-detail-group">2023.01.01</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">거치기간</dt>
+										<dd class="form-detail-group">0개월</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">실행시점 적용금리</dt>
+										<dd class="form-detail-group">3.50%</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="form-detail type-line" data-checkbox-tab-panel="radioPanel1-1">
+								<div class="form-detail-head">
+									<h3 class="title">상환정보</h3>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">상환방법</dt>
+										<dd class="form-detail-group">원리금균등상환</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">경과개월수</dt>
+										<dd class="form-detail-group">2개월</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">현재적용금리</dt>
+										<dd class="form-detail-group">3.50%</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">대출잔액</dt>
+										<dd class="form-detail-group">19,000,000 원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">대출일자</dt>
+										<dd class="form-detail-group">2021.01.01</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">채권상태</dt>
+										<dd class="form-detail-group">정상</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">다음회차납부일</dt>
+										<dd class="form-detail-group">2021.02.01</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">연체금액</dt>
+										<dd class="form-detail-group"><button type="button" class="ui-arrow">100,000 원</button></dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">차회납부액</dt>
+										<dd class="form-detail-group"><button type="button" class="ui-arrow">300,000 원</button></dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">자동이체 계좌번호</dt>
+										<dd class="form-detail-group type-block">
+											<div>KEB하나은행(하나)</div>
+											<div>123456******100</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+							<!-- //조회구분 : ‘대출기본정보’ -->
+
+							<!-- 조회구분 : ‘상환스케줄’ -->
+							<div class="form-detail" data-checkbox-tab-panel="radioPanel1-2">
+								<div class="form-detail-head">
+									<h3 class="title">상환스케줄</h3>
+									<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+								</div>
+								<div class="info-table-area type-scroll-x">
+									<table class="info-table">
+										<!-- 2022.05.04 : mod : caption 문구변경 -->
+										<caption class="for-a11y">
+											상환일자,대출원금,대출이자,대출잔금으로 구성된 상환스케줄 상세 내역 표입니다.
+										</caption>
+										<thead>
+											<tr>
+												<!-- 2022.05.04 : mod : scope 값 수정 -->
+												<th scope="col">상환일자</th>
+												<th scope="col">대출원금</th>
+												<th scope="col">대출이자</th>
+												<th scope="col">대출잔금</th>
+												<!-- //2022.05.04 : mod : scope 값 수정 -->
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2020.05.11</td>
+												<td class="align-right">166,706원</td>
+												<td class="align-right">3,227원</td>
+												<td class="align-right">9,833,294원</td>
+											</tr>
+											<tr>
+												<td>2020.06.11</td>
+												<td class="align-right">99,999,999원</td>
+												<td class="align-right">99,999,999원</td>
+												<td class="align-right">99,999,999원</td>
+											</tr>
+											<tr>
+												<td>2020.07.11</td>
+												<td class="align-right">99,999,999원</td>
+												<td class="align-right">99,999,999원</td>
+												<td class="align-right">99,999,999원</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- //조회구분 : ‘상환스케줄’ -->
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

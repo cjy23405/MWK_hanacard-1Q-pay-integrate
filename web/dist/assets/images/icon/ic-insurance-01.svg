@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-1{fill:#a2a2a2;opacity:0}.cls-2{fill:#fff}.cls-3,.cls-9{fill:none}.cls-3{stroke:#2d3239;stroke-width:1.5px}.cls-8{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_insurance_01" transform="translate(-89 -789)">
+        <path id="사각형_16989" data-name="사각형 16989" class="cls-2" d="M0 0h18v19.75a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V0z" transform="translate(99.299 799.43)"/>
+        <path id="패스_12827" data-name="패스 12827" class="cls-3" d="M1039.345 273.186c0 1.919-3.951 3.477-8.825 3.477s-8.824-1.558-8.824-3.477" transform="translate(-922.098 547.236)"/>
+        <g id="타원_2079" data-name="타원 2079" transform="translate(98.849 794.368)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+            <ellipse class="cls-8" cx="9.562" cy="4.5" rx="9.562" ry="4.5"/>
+            <ellipse class="cls-9" cx="9.562" cy="4.5" rx="8.812" ry="3.75"/>
+        </g>
+        <path id="선_580" data-name="선 580" class="cls-3" transform="translate(99.598 798.929)" d="M0 0v21.493"/>
+        <path id="선_581" data-name="선 581" class="cls-3" transform="translate(117.247 798.929)" d="M0 0v21.493"/>
+        <path id="패스_12828" data-name="패스 12828" class="cls-3" d="M1039.335 273.186c0 1.919-3.949 3.477-8.82 3.477s-8.82-1.558-8.82-3.477" transform="translate(-922.089 531.116)"/>
+        <path id="패스_12829" data-name="패스 12829" class="cls-3" d="M1039.336 273.186c0 1.919-3.949 3.477-8.82 3.477s-8.82-1.558-8.82-3.477" transform="translate(-922.089 536.489)"/>
+        <path id="패스_12830" data-name="패스 12830" class="cls-3" d="M1039.336 273.186c0 1.919-3.949 3.477-8.82 3.477s-8.82-1.558-8.82-3.477" transform="translate(-922.089 541.863)"/>
+        <g id="그룹_13437" data-name="그룹 13437" transform="translate(-713.451 -1222.789)">
+            <path id="합치기_188" data-name="합치기 188" class="cls-2" d="m7 14.456-6.739-4.4A1 1 0 0 1 .8 8.222h.979V2a2 2 0 0 1 2-2H11.3a2 2 0 0 1 2 2v6.222h.978a1 1 0 0 1 .546 1.837l-6.739 4.4a1 1 0 0 1-1.093 0z" transform="translate(824.007 2034)"/>
+            <path id="합치기_186" data-name="합치기 186" d="M7.343 15.522.25 10.657a1 1 0 0 1 .565-1.825h1.21V2a2 2 0 0 1 2-2h7.769a2 2 0 0 1 2 2v6.832H15a1 1 0 0 1 .566 1.825l-7.092 4.865a1 1 0 0 1-1.131 0z" transform="translate(825.598 2034.723)" style="fill:#7dedf3"/>
+            <path id="합치기_187" data-name="합치기 187" d="m7 14.456-6.739-4.4A1 1 0 0 1 .8 8.222h.979V2a2 2 0 0 1 2-2H11.3a2 2 0 0 1 2 2v6.222h.978a1 1 0 0 1 .546 1.837l-6.739 4.4a1 1 0 0 1-1.093 0z" transform="translate(824.007 2034)" style="stroke-linejoin:round;stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none"/>
+            <g id="그룹_12813" data-name="그룹 12813" transform="translate(828.752 2037.107)">
+                <g id="타원_1796" data-name="타원 1796" class="cls-3">
+                    <circle class="cls-8" cx="1.119" cy="1.119" r="1.119"/>
+                    <circle class="cls-9" cx="1.119" cy="1.119" r=".369"/>
+                </g>
+                <g id="타원_1797" data-name="타원 1797" class="cls-3" transform="translate(3.357 3.357)">
+                    <circle class="cls-8" cx="1.119" cy="1.119" r="1.119"/>
+                    <circle class="cls-9" cx="1.119" cy="1.119" r=".369"/>
+                </g>
+                <path id="선_313" data-name="선 313" transform="translate(1.119 1.119)" style="stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none" d="M3.357 0 0 3.357"/>
+            </g>
+        </g>
+    </g>
+</svg>

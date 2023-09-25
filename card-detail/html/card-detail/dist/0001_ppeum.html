@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드상세 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-detail.css" />
+		<!-- //카드상세 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">내맘대로 쁨 카드</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents page-contents--visual-card-detail">
+						<!-- top visual -->
+						<div class="detail-top-visual">
+							<!-- 2022.11.23 : mod : 상단 비쥬얼 영역 구조 변경 -->
+							<style type="text/css">
+								.detail-top-visual-buttons {
+									-webkit-transition-delay: 100ms;
+									transition-delay: 100ms;
+									-webkit-transform: translateY(100%);
+									transform: translateY(100%);
+								}
+								.detail-top-visual.is-animation-end .detail-top-visual-buttons {
+									-webkit-transform: translateY(0);
+									transform: translateY(0);
+								}
+								.detail-top-visual-first-view-objects {
+									background-color: #fde44b;
+								}
+								.detail-top-visual-object.type-bg {
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background: url('/mkca20/images/card-detail/cards/0001_ppeum/bg.png') no-repeat 50% 100% / 720px auto;
+								}
+								.detail-top-visual-object.type-clear-card {
+									left: 50%;
+									bottom: -32px;
+									width: 254px;
+									height: 380px;
+									margin-left: -127px;
+									background-image: url('/mkca20/images/card-detail/cards/0001_ppeum/img-card-01.png');
+									-webkit-transform-style: preserve-3d;
+									transform-style: preserve-3d;
+								}
+								.detail-top-visual-object.type-icchip {
+									top: 48px;
+									left: 132px;
+									width: 24px;
+									height: 32px;
+									background-image: url('/mkca20/images/card-detail/cards/0001_ppeum/img-ic.png');
+								}
+								.detail-top-visual-object.type-front {
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									background: url('/mkca20/images/card-detail/cards/0001_ppeum/front.png') no-repeat 50% 100% / 720px auto;
+								}
+							</style>
+							<script type="text/javascript">
+								var uiJSCardDetailTopVisualAnimation = function (cardDetailTopVisual) {
+									var $wrap = cardDetailTopVisual.$wrap;
+									var completeFn = cardDetailTopVisual.completeFn;
+									var $view = $wrap.find('.detail-top-visual-first-view');
+									var $title = $view.find('.detail-top-visual-title');
+									var $controller = $view.find('.detail-top-visual-dummy-controller');
+									var $bg = $view.find('.detail-top-visual-object.type-bg');
+									var $clearCard = $view.find('.detail-top-visual-object.type-clear-card');
+									var $icChip = $view.find('.detail-top-visual-object.type-icchip');
+									var $front = $view.find('.detail-top-visual-object.type-front');
+
+									function frame1() {
+										$clearCard.prop('transformPer', 0).animate(
+											{
+												transformPer: 1,
+												opacity: 1,
+											},
+											{
+												duration: 500,
+												easing: 'easeOutCubic',
+												step: function (now, fx) {
+													if (fx.prop === 'transformPer') {
+														$clearCard.css('transform', 'translateY(' + now * -100 + 'px) rotateY(180deg) translateZ(0)');
+													}
+												},
+												complete: frame2,
+											}
+										);
+									}
+									function frame2() {
+										$clearCard.delay(100).animate(
+											{
+												transformPer: 0,
+											},
+											{
+												duration: 550,
+												easing: 'easeOutCubic',
+												step: function (now, fx) {
+													if (fx.prop === 'transformPer') {
+														$clearCard.css('transform', 'translateY(-100px) rotateY(' + now * 180 + 'deg) translateZ(0)');
+													}
+												},
+												complete: frame3,
+											}
+										);
+									}
+									function frame3() {
+										$clearCard
+											.prop('transformPer', 1)
+											.delay(100)
+											.animate(
+												{
+													transformPer: 0,
+												},
+												{
+													duration: 400,
+													easing: 'easeOutCubic',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$clearCard.css('transform', 'translateY(' + now * -100 + 'px) rotateY(0deg) translateZ(0)');
+														}
+													},
+													complete: frame4,
+												}
+											);
+									}
+									function frame4() {
+										$front.animate(
+											{
+												opacity: 1,
+											},
+											400
+										);
+										$icChip.animate(
+											{
+												opacity: 1,
+											},
+											400,
+											frame5
+										);
+									}
+									function frame5() {
+										$bg.animate(
+											{
+												opacity: 1,
+											},
+											300
+										);
+										$title.prop('transformPer', 1).animate(
+											{
+												transformPer: 0,
+												opacity: 1,
+											},
+											{
+												duration: 300,
+												easing: 'easeOutCubic',
+												step: function (now, fx) {
+													if (fx.prop === 'transformPer') {
+														$title.css('transform', 'translateY(' + now * 10 + 'px) translateZ(0)');
+													}
+												},
+												complete: frame6,
+											}
+										);
+									}
+									function frame6() {
+										$controller.prop('transformPer', 1).animate(
+											{
+												transformPer: 0,
+												opacity: 1,
+											},
+											{
+												duration: 300,
+												easing: 'easeOutCubic',
+												step: function (now, fx) {
+													if (fx.prop === 'transformPer') {
+														$controller.css('transform', 'translateY(' + now * -5 + 'px) translateZ(0)');
+													}
+												},
+												complete: completeFn,
+											}
+										);
+									}
+									frame1();
+								};
+							</script>
+							<div class="detail-top-visual-first-view">
+								<div class="detail-top-visual-first-view-inner">
+									<p class="detail-top-visual-title">
+										예쁨, 미쁨, 기쁨<br />
+										내가 원하는<br />
+										모든 쁨을 위해!
+									</p>
+									<div class="detail-top-visual-dummy-controller">
+										<div class="detail-top-visual-dummy-controller-pagination">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+										</div>
+									</div>
+								</div>
+								<div class="detail-top-visual-first-view-objects">
+									<div class="detail-top-visual-object type-bg"></div>
+									<div class="detail-top-visual-object type-clear-card">
+										<div class="detail-top-visual-object type-icchip"></div>
+									</div>
+									<div class="detail-top-visual-object type-front"></div>
+								</div>
+							</div>
+							<div class="detail-top-visual-contents">
+								<div class="detail-top-visual-contents-inner">
+									<p class="detail-top-visual-title">
+										예쁨, 미쁨, 기쁨<br />
+										내가 원하는<br />
+										모든 쁨을 위해!
+									</p>
+									<div class="detail-top-visual-controller"></div>
+								</div>
+								<div class="detail-top-visual-slide">
+									<div class="detail-top-visual-list">
+										<div class="detail-top-visual-item">
+											<div class="detail-top-visual-block">
+												<div class="detail-top-visual-first-view-objects">
+													<div class="detail-top-visual-object type-bg"></div>
+													<div class="detail-top-visual-object type-clear-card">
+														<div class="detail-top-visual-object type-icchip"></div>
+													</div>
+													<div class="detail-top-visual-object type-front"></div>
+												</div>
+											</div>
+										</div>
+										<div class="detail-top-visual-item">
+											<div class="detail-top-visual-block" style="background-color: #ecf5f9">
+												<div class="detail-top-visual-card">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<img src="/mkca20/images/card-detail/cards/0001_ppeum/13879.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="detail-top-visual-item">
+											<div class="detail-top-visual-block" style="background-color: #ecf5ef">
+												<div class="detail-top-visual-card">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<img src="/mkca20/images/card-detail/cards/0001_ppeum/13615.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="detail-top-visual-item">
+											<div class="detail-top-visual-block" style="background-color: #f1ebe7">
+												<div class="detail-top-visual-card">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<img src="/mkca20/images/card-detail/cards/0001_ppeum/13616.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //2022.11.23 : mod : 상단 비쥬얼 영역 구조 변경 -->
+							<div class="detail-top-visual-buttons">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-primary">카드신청</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //top visual -->
+
+						<!-- 상단 혜택 -->
+						<div class="page-section">
+							<section class="annual-fee">
+								<div class="annual-fee-head">
+									<h2 class="annual-fee-title">
+										<a href="" class="detail-arrow-link" data-layer-open="layer-annual-fee">연회비</a>
+									</h2>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">국내전용</dt>
+										<dd class="form-detail-group">12,000원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">국내외겸용</dt>
+										<dd class="form-detail-group">12,000원</dd>
+									</div>
+								</dl>
+							</section>
+							<div class="top-benefit">
+								<ul class="top-benefit-list">
+									<li class="top-benefit-item">
+										<div class="top-benefit-block">
+											<div class="top-benefit-icon type-001"></div>
+											<div class="top-benefit-sub-text">신규발급 연회비 캐쉬백</div>
+											<div class="top-benefit-title">
+												지금이 바로<br />
+												카드 신청할 때!
+											</div>
+										</div>
+									</li>
+									<li class="top-benefit-item">
+										<div class="top-benefit-block">
+											<div class="top-benefit-icon type-002"></div>
+											<div class="top-benefit-sub-text">5% 할인쿠폰, 무료주차</div>
+											<div class="top-benefit-title">
+												신세계백화점<br />
+												제휴 서비스
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //상단 혜택 -->
+
+						<!-- layer: 연회비 안내 -->
+						<div class="layer-wrap layer-wrap--slide" data-layer="layer-annual-fee">
+							<div class="layer-container">
+								<section class="ui-layer">
+									<div class="ui-layer__head">
+										<div class="header">
+											<h2 class="header__title">연회비</h2>
+											<div class="header__right">
+												<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+													<span class="for-a11y">레이어 닫기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="ui-layer__body">
+										<div class="ui-layer__body-inner">
+											<ul class="annual-fee-list">
+												<li class="annual-fee-list-item">
+													<div class="annual-fee-list-block">
+														<div class="annual-fee-list-logo">
+															<img src="/mkca20/images/card-detail/contents/brand/ic-brand-mastercard-on.png" alt="mastercard" />
+														</div>
+														<div class="annual-fee-list-contents">
+															<div class="annual-fee-list-title">MASTERCARD 12,000원</div>
+															<div class="annual-fee-list-text">기본연회비 12,000원+제휴연회비 0원</div>
+														</div>
+													</div>
+												</li>
+												<li class="annual-fee-list-item">
+													<div class="annual-fee-list-block">
+														<div class="annual-fee-list-logo">
+															<img src="/mkca20/images/card-detail/contents/brand/ic-brand-local-on.png" alt="mastercard" />
+														</div>
+														<div class="annual-fee-list-contents">
+															<div class="annual-fee-list-title">국내전용 12,000원</div>
+															<div class="annual-fee-list-text">기본연회비 12,000원+제휴연회비 0원</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+											<div class="hr"></div>
+											<ul class="info-list">
+												<li class="info-item type-presa font-weight-regular"><strong class="font-weight-bold">제휴연회비</strong> 에듀/골프 2만원, 여행/케어 1만원</li>
+												<li class="info-item type-presa font-weight-regular">가족카드 연회비 없음</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+						<!-- //layer: 연회비 안내 -->
+
+						<!-- 하단 혜택 -->
+						<div class="page-section type-line">
+							<div class="benefit-section-group">
+								<section class="benefit-section">
+									<div class="benefit-section-visual type-001">
+										<div class="benefit-section-visual-object-1"></div>
+										<div class="benefit-section-visual-object-2"></div>
+										<div class="benefit-section-visual-object-3"></div>
+										<div class="benefit-section-visual-object-4"></div>
+										<div class="benefit-section-visual-object-5"></div>
+									</div>
+									<p class="benefit-section-sub-title">전월 실적 제한 없이!</p>
+									<p class="benefit-section-title">
+										국내외 전 가맹점<br />
+										<mark>0.5%</mark> 적립
+									</p>
+									<p class="benefit-section-title">
+										페이 결제<br />
+										<mark>1.0%</mark> 적립
+									</p>
+									<div class="benefit-section-link-area">
+										<a href="" class="detail-arrow-link">자세히보기</a>
+									</div>
+								</section>
+
+								<section class="benefit-section">
+									<div class="benefit-section-visual type-002">
+										<div class="benefit-section-visual-object-1"></div>
+										<div class="benefit-section-visual-object-2"></div>
+										<div class="benefit-section-visual-object-3"></div>
+										<div class="benefit-section-visual-object-4"></div>
+										<div class="benefit-section-visual-object-5"></div>
+										<div class="benefit-section-visual-object-6"></div>
+										<div class="benefit-section-visual-object-7"></div>
+										<div class="benefit-section-visual-object-8"></div>
+										<div class="benefit-section-visual-object-9"></div>
+									</div>
+									<p class="benefit-section-sub-title">‘쁨’ 트렌디 쇼핑</p>
+									<p class="benefit-section-title">
+										쇼핑/패션/명품<br />
+										<mark>5.0%</mark> 적립
+									</p>
+									<div class="benefit-section-link-area">
+										<a href="" class="detail-arrow-link">자세히보기</a>
+									</div>
+								</section>
+
+								<section class="benefit-section">
+									<div class="benefit-section-visual type-003">
+										<div class="benefit-section-visual-object-1"></div>
+										<div class="benefit-section-visual-object-2"></div>
+										<div class="benefit-section-visual-object-3"></div>
+									</div>
+									<p class="benefit-section-sub-title">‘쁨’ 모빌리티</p>
+									<p class="benefit-section-title">주유 <mark>5.0%</mark> 적립</p>
+									<p class="benefit-section-title">EV충전 <mark>20%</mark> 적립</p>
+									<div class="benefit-section-link-area">
+										<a href="" class="detail-arrow-link">자세히보기</a>
+									</div>
+								</section>
+							</div>
+						</div>
+						<!-- //하단 혜택 -->
+
+						<!-- 이용안내 -->
+						<div class="page-section type-line">
+							<section class="page-section-group">
+								<div class="section-title type-medium">
+									<h2 class="title">이용안내</h2>
+								</div>
+								<ul class="info-list">
+									<li class="info-item font-weight-regular">
+										2개 이상 카드사의 카드를 소지하실 경우, 회원님의 복수카드 정보가 종합신용정보집중기관을 통해 카드사간 공유되어 신용등급 또는 개인신용평점이나 이용한도 등에 영향을 미칠 수 있습니다.
+									</li>
+									<li class="info-item font-weight-regular">카드 발급 신청 시 상품설명서 및 상품 약관을 반드시 확인하시기 바랍니다.</li>
+									<li class="info-item font-weight-regular">신용카드 발급이 부적정한 경우(개인 신용평점 낮음 등) 카드발급이 제한될 수 있습니다.</li>
+									<li class="info-item font-weight-regular">카드이용대금과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환하여야 합니다.</li>
+									<li class="info-item font-weight-regular">금융소비자는 해당상품 또는 서비스에 대하여 설명을 받을 권리가 있습니다.</li>
+									<li class="info-item font-weight-regular">본 상품설명서는 법령 및 내부통제기준에 따른 절차를 거쳐 제공됩니다.</li>
+									<li class="info-item font-weight-regular">상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</li>
+									<li class="info-item font-weight-regular">신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</li>
+									<li class="info-item font-weight-regular">일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</li>
+									<li class="info-item font-weight-regular">연체이자율(약정이율+최대 3%)은 회원별·이용상품별로 차등 적용되며, 법정 최고금리(20%)를 초과하지 않습니다.</li>
+									<li class="info-item font-weight-regular">단, 연체 발생 시점에 약정이율이 없는 경우는 아래와 같이 적용함</li>
+									<li class="info-item font-weight-regular">일시불 거래 연체 시 : 거래발생 시점의 최소기간(2개월) 유이자 할부금리</li>
+									<li class="info-item font-weight-regular">무이자 할부 거래 연체 시 : 거래발생 시점의 동일한 할부 계약기간의 유이자 할부금리</li>
+									<li class="info-item font-weight-regular">
+										그 외의 경우 : 약정이율은 상법상 상사법정이율과 상호금융 가계자금대출금리* 중 높은 금리 적용<br /><br />
+										* 한국은행에서 매월 발표하는 가장 최근의 비은행 금융기관 가중평균대출금리(신규대출 기준)
+									</li>
+									<li class="info-item color-basic font-weight-medium">카드 출시 시기 : 2021.12.29</li>
+									<li class="info-item color-basic font-weight-medium">준법심의 A-22-0200 (2022.02.22)</li>
+									<li class="info-item color-basic font-weight-medium">여신금융협회 심의필 제2022-C1a-01226호(2022.02.23)</li>
+								</ul>
+							</section>
+						</div>
+						<!-- //이용안내 -->
+					</div>
+
+					<div class="page-buttons type-fixed type-detail-top-visual">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary">카드신청</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드상세 js -->
+		<script type="text/javascript" src="/mkca20/js/card-detail.js"></script>
+		<!-- //카드상세 js -->
+		<!-- //script -->
+	</body>
+</html>

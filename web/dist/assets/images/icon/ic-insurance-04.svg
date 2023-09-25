@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-1{fill:#d2d2d2;opacity:0}.cls-10,.cls-13,.cls-9{fill:none}.cls-3,.cls-4,.cls-5,.cls-7{fill:#fff}.cls-10,.cls-4,.cls-9{stroke:#2d3239;stroke-width:1.5px}.cls-10,.cls-4,.cls-5{stroke-linecap:round}.cls-4,.cls-5{stroke-linejoin:round}.cls-5{stroke:#2a2d33}.cls-11,.cls-12{stroke:none}.cls-12{fill:#2d3239}
+        </style>
+    </defs>
+    <g id="ic_insurance_01" transform="translate(-272 -318)">
+        <path id="사각형_7870-2" data-name="사각형 7870" transform="translate(276 322)" style="opacity:.37;fill:none" d="M0 0h36v36H0z"/>
+        <g id="패스_10993" data-name="패스 10993" class="cls-3">
+            <path class="cls-11" d="M20.991 7.25H1.01l1.084-3.605c.282-.94.692-1.657 1.22-2.132C3.881.999 4.597.75 5.5.75h11c.876 0 1.615.27 2.196.802.534.49.942 1.194 1.21 2.092l1.085 3.606z" transform="translate(281 325.5)"/>
+            <path class="cls-12" d="M5.5 1.5c-.709 0-1.26.186-1.686.57-.424.382-.761.984-1.003 1.79L2.018 6.5h17.964l-.794-2.641c-.226-.756-.572-1.362-.999-1.754-.444-.407-.997-.605-1.689-.605h-11m0-1.5h11c2.278 0 3.554 1.522 4.125 3.429L22 8H0l1.375-4.571C1.981 1.405 3.222 0 5.5 0z" transform="translate(281 325.5)"/>
+        </g>
+        <g id="패스_10994" data-name="패스 10994" class="cls-3">
+            <path class="cls-11" d="M27.955 14.25H2.045A1.297 1.297 0 0 1 .75 12.955V6.818A6.075 6.075 0 0 1 6.818.75h16.364a6.075 6.075 0 0 1 6.068 6.068v6.137c0 .714-.581 1.295-1.295 1.295z" transform="translate(277 332)"/>
+            <path class="cls-12" d="M6.818 1.5A5.324 5.324 0 0 0 1.5 6.818v6.137c0 .3.245.545.545.545h25.91c.3 0 .545-.245.545-.545V6.818A5.324 5.324 0 0 0 23.182 1.5H6.818m0-1.5h16.364A6.818 6.818 0 0 1 30 6.818v6.137c0 1.13-.916 2.045-2.045 2.045H2.045A2.045 2.045 0 0 1 0 12.955V6.818A6.818 6.818 0 0 1 6.818 0z" transform="translate(277 332)"/>
+        </g>
+        <g id="사각형_5282" data-name="사각형 5282" class="cls-4">
+            <path class="cls-11" d="M0 0h5v3.5A2.5 2.5 0 0 1 2.5 6 2.5 2.5 0 0 1 0 3.5V0z" transform="translate(281 345.5)"/>
+            <path class="cls-13" d="M.75.75h3.5V3.5A1.75 1.75 0 0 1 2.5 5.25h0A1.75 1.75 0 0 1 .75 3.5V.75h0z" transform="translate(281 345.5)"/>
+        </g>
+        <g id="사각형_16612" data-name="사각형 16612" class="cls-4">
+            <path class="cls-11" d="M0 0h5v3.5A2.5 2.5 0 0 1 2.5 6 2.5 2.5 0 0 1 0 3.5V0z" transform="translate(298 345.5)"/>
+            <path class="cls-13" d="M.75.75h3.5V3.5A1.75 1.75 0 0 1 2.5 5.25h0A1.75 1.75 0 0 1 .75 3.5V.75h0z" transform="translate(298 345.5)"/>
+        </g>
+        <g id="사각형_14430" data-name="사각형 14430" class="cls-5" transform="translate(303.5 330)">
+            <rect class="cls-11" width="3.5" height="1.5" rx=".75"/>
+            <rect class="cls-13" x=".5" y=".5" width="2.5" height=".5" rx=".25"/>
+        </g>
+        <g id="사각형_16699" data-name="사각형 16699" class="cls-5" transform="translate(277 330)">
+            <rect class="cls-11" width="3.5" height="1.5" rx=".75"/>
+            <rect class="cls-13" x=".5" y=".5" width="2.5" height=".5" rx=".25"/>
+        </g>
+        <g id="사각형_16611" data-name="사각형 16611" class="cls-5" transform="translate(300 339.5)">
+            <rect class="cls-11" width="3" height="1.5" rx=".75"/>
+            <rect class="cls-13" x=".5" y=".5" width="2" height=".5" rx=".25"/>
+        </g>
+        <g id="사각형_16698" data-name="사각형 16698" class="cls-5" transform="translate(281 339.5)">
+            <rect class="cls-11" width="3" height="1.5" rx=".75"/>
+            <rect class="cls-13" x=".5" y=".5" width="2" height=".5" rx=".25"/>
+        </g>
+        <g id="사각형_14429" data-name="사각형 14429" class="cls-5" transform="translate(286 339.5)">
+            <rect class="cls-11" width="12" height="1.5" rx=".75"/>
+            <rect class="cls-13" x=".5" y=".5" width="11" height=".5" rx=".25"/>
+        </g>
+        <path id="사각형_11997" data-name="사각형 11997" d="M0 0h.5a.5.5 0 0 1 .5.5.5.5 0 0 1-.5.5H0V0z" transform="translate(297 346)" style="fill:#2d3239"/>
+        <g id="그룹_13690" data-name="그룹 13690" transform="translate(-9907.75 -202.021)">
+            <rect id="사각형_17288" data-name="사각형 17288" class="cls-7" width="17" height="15" rx="3" transform="translate(10204 541)"/>
+            <rect id="사각형_17234" data-name="사각형 17234" class="cls-7" width="17" height="15" rx="3" transform="translate(10204 541)"/>
+            <path id="사각형_17236" data-name="사각형 17236" d="M3 0h10a3 3 0 0 1 3 3v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a3 3 0 0 1 3-3z" transform="translate(10206 542.021)" style="fill:#7dedf3"/>
+            <path id="선_656" data-name="선 656" class="cls-9" transform="translate(10205.5 546.5)" d="M0 0h14"/>
+            <path id="선_657" data-name="선 657" class="cls-10" transform="translate(10208.5 540.544)" d="M0 0v3.181"/>
+            <path id="선_658" data-name="선 658" class="cls-10" transform="translate(10216.5 540.544)" d="M0 0v3.181"/>
+            <path id="선_667" data-name="선 667" class="cls-10" transform="translate(10208.05 549.321)" d="M0 0h1"/>
+            <path id="선_671" data-name="선 671" class="cls-10" transform="translate(10208.05 552.321)" d="M0 0h1"/>
+            <path id="선_668" data-name="선 668" class="cls-10" transform="translate(10212 549.321)" d="M0 0h1"/>
+            <path id="선_670" data-name="선 670" class="cls-10" transform="translate(10212 552.321)" d="M0 0h1"/>
+            <path id="선_669" data-name="선 669" class="cls-10" transform="translate(10215.95 549.321)" d="M0 0h1"/>
+            <path id="선_672" data-name="선 672" class="cls-10" transform="translate(10215.95 552.321)" d="M0 0h1"/>
+            <g id="사각형_17235" data-name="사각형 17235" class="cls-9" transform="translate(10204 541)">
+                <rect class="cls-11" width="17" height="15" rx="3"/>
+                <rect class="cls-13" x=".75" y=".75" width="15.5" height="13.5" rx="2.25"/>
+            </g>
+        </g>
+    </g>
+</svg>

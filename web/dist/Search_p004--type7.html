@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">통합검색</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-search-form">
+							<div class="search-word-area">
+								<!-- 2022.02.11 : mod : is-inputed 클래스 값 추가 -->
+								<!-- 2022.05.30 : mod : .type-input-group 클래스 삭제 -->
+								<div class="ui-input-block type-use-delete type-search is-inputed">
+									<input type="search" class="ui-input" title="검색어 입력" placeholder="검색어를 입력해 주세요." value="카드" />
+									<button type="button" class="ui-button ui-input-delete">
+										<span class="for-a11y">입력 내용 지우기</span>
+									</button>
+									<!-- 2022.05.18 : mod : 검색 버튼 추가 -->
+									<button type="button" class="ui-button ui-input-search">
+										<span class="for-a11y">검색</span>
+									</button>
+								</div>
+							</div>
+
+							<!-- 2022.03.04 : mod : 최근 검색어, 자동 완성 검색어 영역 수정 -->
+							<!-- 최근 검색어 -->
+							<div class="ui-search-kewords-layer type-latest">
+								<div class="ui-search-kewords">
+									<ul class="ui-search-kewords-list">
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">단기카드대출</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">장기카드대출</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">최근 검색어 최대 2줄 노출 최근 검색어 최대 2줄 노출 최근 검색어 최대 2줄 노출 최근 검색어 최대 2줄 노출</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //최근 검색어 -->
+
+							<!-- 자동 완성 검색어 -->
+							<div class="ui-search-kewords-layer type-auto">
+								<div class="ui-search-kewords type-auto">
+									<ul class="ui-search-kewords-list">
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">자동 완성 검색어 최대 2줄 노출 자동 완성 검색어 최대 2줄 노출 자동 완성 검색어 최대 2줄 노출 자동 완성 검색어 최대 2줄 노출</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">하나멤버스 1Q(원큐) <mark>카드</mark> ALL in</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">아모레퍼시픽 <mark>카드</mark></span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">새해에도 해외 교육비 & 해외 시험은 하나<mark>카드</mark>와 함께!</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">하나<mark>카드</mark> 글로벌서비스 Welcome Kit를 챙겨보세요!</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">[개인] 혜택 &gt; <mark>카드</mark>혜택 &gt; Sync<mark>카드</mark> 서비스 &gt; Sync <mark>카드</mark> 이용실적</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">[개인] 혜택 &gt; <mark>카드</mark>혜택 &gt; Sync<mark>카드</mark> 서비스 &gt; Sync <mark>카드</mark> 혜택금액</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">[개인] 금융 &gt; 장기<mark>카드</mark>대출(<mark>카드</mark>론) &gt; 대출계약철회 &gt; 대출계약철회조회/취소</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">[개인] 금융 &gt; 장기<mark>카드</mark>대출(<mark>카드</mark>론) &gt; 이용동의/거절신청 &gt; 이용동의신청</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">[개인] 금융 &gt; 장기<mark>카드</mark>대출(<mark>카드</mark>론) &gt; 이용동의/거절신청 &gt; 이용거절신청</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //자동 완성 검색어 -->
+							<!-- //2022.03.04 : mod : 최근 검색어, 자동 완성 검색어 영역 수정 -->
+						</div>
+
+						<!-- 컨텐츠 -->
+						<div class="ui-search-contents">
+							<!-- 소팅 -->
+							<!-- 2022.03.23 : mod : 주석 내용 추가 -->
+							<!--
+								DD :
+								개발시 카테고리 .sorting-list 영역 태그 구조
+								- 페이지 이동으로 구현되는 경우 [공통 > 카테고리 탭 > 링크형](_category-tab-type-1.html) 이용
+								- ajax 방식으로 구현되는 경우 [공통 > 카테고리 탭 > radio형](_category-tab-type-2.html) 이용
+								- 각 화면 더보기 후 uiJSSorting.initPosition(); 호출 해주세요.
+							-->
+							<div class="sorting-area js-ui-accordion" data-focus-open="false">
+								<div class="sorting-inner js-ui-accordion__item">
+									<button type="button" class="sorting-opener js-ui-accordion__opener">
+										<span class="for-a11y">
+											탭 영역
+											<span class="open-text">펼치기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="sorting-layer js-ui-accordion__layer">
+										<div class="sorting-contents">
+											<div class="sorting-list">
+												<div class="sorting-item">
+													<div class="ui-radio-block type-tab">
+														<input type="radio" name="sorting" class="ui-radio" id="sorting-all" />
+														<label for="sorting-all" class="ui-label">
+															<span class="ui-label-text">전체 <span class="sorting-count">3516</span></span>
+														</label>
+													</div>
+												</div>
+												<div class="sorting-item">
+													<div class="ui-radio-block type-tab">
+														<input type="radio" name="sorting" class="ui-radio" id="sorting-1" />
+														<label for="sorting-1" class="ui-label">
+															<span class="ui-label-text">카드 <span class="sorting-count">33</span></span>
+														</label>
+													</div>
+												</div>
+												<div class="sorting-item">
+													<div class="ui-radio-block type-tab">
+														<input type="radio" name="sorting" class="ui-radio" id="sorting-2" />
+														<label for="sorting-2" class="ui-label">
+															<span class="ui-label-text">메뉴 <span class="sorting-count">15</span></span>
+														</label>
+													</div>
+												</div>
+												<div class="sorting-item">
+													<div class="ui-radio-block type-tab">
+														<input type="radio" name="sorting" class="ui-radio" id="sorting-3" />
+														<label for="sorting-3" class="ui-label">
+															<span class="ui-label-text">이벤트 <span class="sorting-count">56</span></span>
+														</label>
+													</div>
+												</div>
+												<div class="sorting-item">
+													<div class="ui-radio-block type-tab">
+														<input type="radio" name="sorting" class="ui-radio" id="sorting-4" />
+														<label for="sorting-4" class="ui-label">
+															<span class="ui-label-text">뉴스 <span class="sorting-count">654</span></span>
+														</label>
+													</div>
+												</div>
+												<div class="sorting-item">
+													<div class="ui-radio-block type-tab">
+														<input type="radio" name="sorting" class="ui-radio" id="sorting-5" />
+														<label for="sorting-5" class="ui-label">
+															<span class="ui-label-text">FAQ <span class="sorting-count">23</span></span>
+														</label>
+													</div>
+												</div>
+												<div class="sorting-item">
+													<div class="ui-radio-block type-tab">
+														<input type="radio" name="sorting" class="ui-radio" id="sorting-6" checked />
+														<label for="sorting-6" class="ui-label">
+															<span class="ui-label-text">콘텐츠 <span class="sorting-count">85</span></span>
+														</label>
+													</div>
+												</div>
+												<div class="sorting-item">
+													<div class="ui-radio-block type-tab">
+														<input type="radio" name="sorting" class="ui-radio" id="sorting-7" />
+														<label for="sorting-7" class="ui-label">
+															<span class="ui-label-text">상품약관 <span class="sorting-count">16</span></span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //소팅 -->
+
+							<div class="line-section-wrap">
+								<div class="line-section-wrap-inner">
+									<!-- 콘텐츠 -->
+									<section class="page-section type-line">
+										<div class="form-flex type-align-middle">
+											<div class="form-flex-cell type-flexible">
+												<h2 class="check-detail-title margin-bottom-none default-text">
+													콘텐츠<span class="sub">(총 <strong class="color-secondary">20</strong>건)</span>
+												</h2>
+											</div>
+										</div>
+
+										<div class="ui-hr margin-top-15 margin-bottom-25"></div>
+
+										<!-- Case : 검색결과 없을 때 -->
+										<div class="link-item type-none type-flex type-no-line type-no-padding">
+											<p class="item-text">‘카드’에 대한 검색결과가 없습니다.</p>
+										</div>
+										<!-- //Case : 검색결과 없을 때 -->
+
+										<!-- Case : 검색결과 있을 때 -->
+										<div class="contents-cards type-vertical">
+											<div class="contents-cards-inner">
+												<ul class="contents-cards-list">
+													<li class="contents-cards-item">
+														<div class="contents-cards-block">
+															<!-- 2022.03.23 : mod : WCMS 등록 영역 구조 변경 -->
+															<div class="wcms-data">
+																<section class="search-data">
+																	<!-- DD : 이 안에 wcms 데이터 출력 -->
+																	// wcms 데이터 출력
+																</section>
+															</div>
+															<!-- //2022.03.23 : mod : WCMS 등록 영역 구조 변경 -->
+														</div>
+													</li>
+													<li class="contents-cards-item">
+														<div class="contents-cards-block">
+															<!-- DD : 샘플 -->
+															<div class="wcms-data">
+																<section class="search-data">
+																	<h3 class="wcms-title-normal">친구추천<mark class="search-mark">카드</mark></h3>
+																	<p class="wcms-size-small wcms-color-gray wcms-margin-none wcms-flexible">
+																		추천친구가 하나<mark class="search-mark">카드</mark>를 신규로 발급하고 발급 다음달까지 원큐페이로 1회 이상 사용하시면 연회비 100% (5천원~최대1만5천원) 캐시백
+																		해드립니다.
+																	</p>
+																	<div class="wcms-margin-regular">
+																		<a href="" class="wcms-button type-line type-black wcms-margin-small"><span class="wcms-button-text">전용 URL 받기</span></a>
+																		<a href="" class="wcms-button type-line type-black wcms-margin-small"><span class="wcms-button-text">캐쉬백 상세내역</span></a>
+																	</div>
+																</section>
+															</div>
+															<!-- //DD : 샘플 -->
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+										<div class="usage-accordion margin-top-25">
+											<ul class="usage-accordion-list js-ui-accordion" data-once="true">
+												<li class="usage-accordion-item js-ui-accordion__item">
+													<div class="usage-accordion-head">
+														<a href="" class="block-link basic-text multi-ellipsis type-line-2">하나<mark class="search-mark">카드</mark>앱 주요 서비스 안내</a>
+														<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+															<span class="for-a11y">
+																요약내용
+																<span class="open-text">열기</span>
+																<span class="close-text">닫기</span>
+															</span>
+														</button>
+													</div>
+													<div class="faq-layer type-search js-ui-accordion__layer">
+														<div class="faq-contents">
+															<!-- 2022.03.23 : mod : WCMS 등록 영역 구조 변경 -->
+															<div class="wcms-data">
+																<section class="search-data">
+																	<!-- DD : 이 안에 wcms 데이터 출력 -->
+																	// wcms 데이터 출력
+																</section>
+															</div>
+															<!-- //2022.03.23 : mod : WCMS 등록 영역 구조 변경 -->
+														</div>
+													</div>
+												</li>
+												<li class="usage-accordion-item js-ui-accordion__item">
+													<div class="usage-accordion-head">
+														<a href="" class="block-link basic-text multi-ellipsis type-line-2">선불<mark class="search-mark">카드</mark> 안내</a>
+														<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+															<span class="for-a11y">
+																요약내용
+																<span class="open-text">열기</span>
+																<span class="close-text">닫기</span>
+															</span>
+														</button>
+													</div>
+													<div class="faq-layer type-search js-ui-accordion__layer">
+														<div class="faq-contents">
+															<!-- DD : 샘플 -->
+															<div class="wcms-data">
+																<section class="search-data">
+																	<p class="wcms-text wcms-size-small wcms-color-gray">
+																		하나<mark class="search-mark">카드</mark>가 제공하는 다양한 모바일 어플리케이션 서비스로 언제 어디서나 편리하게 이용하세요.
+																	</p>
+																</section>
+															</div>
+															<!-- //DD : 샘플 -->
+														</div>
+													</div>
+												</li>
+												<li class="usage-accordion-item js-ui-accordion__item">
+													<div class="usage-accordion-head">
+														<a href="" class="block-link basic-text multi-ellipsis type-line-2">단기<mark class="search-mark">카드</mark>대출(현금서비스)</a>
+														<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+															<span class="for-a11y">
+																요약내용
+																<span class="open-text">열기</span>
+																<span class="close-text">닫기</span>
+															</span>
+														</button>
+													</div>
+													<div class="faq-layer type-search js-ui-accordion__layer">
+														<div class="faq-contents">
+															<!-- DD : 샘플 -->
+															<div class="wcms-data">
+																<section class="search-data">
+																	<p class="wcms-text wcms-size-small wcms-color-gray">
+																		하나<mark class="search-mark">카드</mark>가 제공하는 다양한 모바일 어플리케이션 서비스로 언제 어디서나 편리하게 이용하세요.
+																	</p>
+																</section>
+															</div>
+															<!-- //DD : 샘플 -->
+														</div>
+													</div>
+												</li>
+												<li class="usage-accordion-item js-ui-accordion__item">
+													<div class="usage-accordion-head">
+														<a href="" class="block-link basic-text multi-ellipsis type-line-2">모바일<mark class="search-mark">카드</mark></a>
+														<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+															<span class="for-a11y">
+																요약내용
+																<span class="open-text">열기</span>
+																<span class="close-text">닫기</span>
+															</span>
+														</button>
+													</div>
+													<div class="faq-layer type-search js-ui-accordion__layer">
+														<div class="faq-contents">
+															<!-- DD : 샘플 -->
+															<div class="wcms-data">
+																<section class="search-data">
+																	<p class="wcms-text wcms-size-small wcms-color-gray">
+																		하나<mark class="search-mark">카드</mark>가 제공하는 다양한 모바일 어플리케이션 서비스로 언제 어디서나 편리하게 이용하세요.
+																	</p>
+																</section>
+															</div>
+															<!-- //DD : 샘플 -->
+														</div>
+													</div>
+												</li>
+												<li class="usage-accordion-item js-ui-accordion__item">
+													<div class="usage-accordion-head">
+														<a href="" class="block-link basic-text multi-ellipsis type-line-2">장기<mark class="search-mark">카드</mark>대출(<mark class="search-mark">카드</mark>론)</a>
+														<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+															<span class="for-a11y">
+																요약내용
+																<span class="open-text">열기</span>
+																<span class="close-text">닫기</span>
+															</span>
+														</button>
+													</div>
+													<div class="faq-layer type-search js-ui-accordion__layer">
+														<div class="faq-contents">
+															<!-- DD : 샘플 -->
+															<div class="wcms-data">
+																<section class="search-data">
+																	<p class="wcms-text wcms-size-small wcms-color-gray">
+																		하나<mark class="search-mark">카드</mark>가 제공하는 다양한 모바일 어플리케이션 서비스로 언제 어디서나 편리하게 이용하세요.
+																	</p>
+																</section>
+															</div>
+															<!-- //DD : 샘플 -->
+														</div>
+													</div>
+												</li>
+											</ul>
+
+											<!-- DD : 더보기로 데이터 뿌려준 후 uiJSCommon(); 함수 호출 해주세요. (아코디언 스크립트 관련) -->
+											<button type="button" class="ui-button ui-button-more">더보기</button>
+										</div>
+										<!-- //Case : 검색결과 있을 때 -->
+									</section>
+									<!-- //콘텐츠 -->
+								</div>
+							</div>
+						</div>
+						<!-- //컨텐츠 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

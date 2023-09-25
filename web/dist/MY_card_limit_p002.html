@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">이용한도 상향 신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+				<div class="contents-wrap">
+					<div class="page-contents type-change-limit">
+						<!-- section -->
+						<div class="page-section-group">
+							<div class="section-title type-block">
+								<h2 class="title">총 한도 변경</h2>
+								<p class="section-title-info">(신청가능기간 : YYYY.MM.DD~YYYY.MM.DD)</p>
+							</div>
+							<div class="section-contents">
+								<div class="form-detail type-box">
+									<dl class="form-detail-list">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">현재 한도</dt>
+											<dd class="form-detail-group">30 만원</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">상향 가능 한도</dt>
+											<dd class="form-detail-group">최대 330 만원</dd>
+										</div>
+									</dl>
+								</div>
+								<div class="form-list">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">변경 한도 입력</strong>
+										</div>
+										<div class="form-group">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="변경 한도 신청금액 입력" placeholder="신청금액 입력" />
+													</div>
+												</div>
+												<div class="form-flex-cell form-unit">만원</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section-group">
+							<div class="section-title">
+								<h2 class="title">단기카드대출(현금서비스) 한도 변경</h2>
+							</div>
+							<div class="section-contents">
+								<div class="form-detail type-box">
+									<dl class="form-detail-list">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">현재 한도</dt>
+											<dd class="form-detail-group">30 만원</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">상향 가능 한도</dt>
+											<dd class="form-detail-group">최대 90 만원</dd>
+										</div>
+									</dl>
+								</div>
+								<div class="form-list">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">변경 한도 입력</strong>
+										</div>
+										<div class="form-group">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="신청금액 입력" placeholder="신청금액 입력" />
+													</div>
+												</div>
+												<div class="form-flex-cell form-unit">만원</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul class="info-list margin-top-35">
+									<li class="info-item type-indent"><span class="indent">※</span>총 한도는 30만원, 단기카드대출(현금서비스) 한도는 0원까지 하향 가능합니다.</li>
+									<li class="info-item type-indent"><span class="indent">※</span>단기카드대출(현금서비스) 한도는 총 한도의 40%이내로 입력하여 주십시오.</li>
+									<li class="info-item type-indent"><span class="indent">※</span>단기카드대출(현금서비스) 한도는 총 한도 30만원 초과일때 부여 가능합니다.</li>
+									<li class="info-item type-indent">
+										<span class="indent">※</span>입력예시 : 현재 총 한도 100만원을 90만원으로 감액하고 싶은 경우 “변경 한도 입력＂란에 90만원 입력(10만원 단위로 입력)
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //section -->
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">단기카드대출한도는 이용한도 내에서 운영됩니다.</li>
+										<li class="info-item">한도 하향 후 상향 요청 시 고객님의 신용도에 따라 한도상향이 제한 될 수 있습니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">신청</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-select-simultaneous-issuance">체크카드 발급시 추가발급카드 선택 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 체크카드 발급시 추가발급카드 선택 팝업 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide is-not-background-close" data-layer="layer-select-simultaneous-issuance">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">트래블로그 체크카드를 함께 이용해보세요.</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner padding-top-none">
+								<div class="select-design">
+									<div class="select-design-thumbs">
+										<ul class="select-design-list">
+											<li class="select-design-item">
+												<div class="select-design-block">
+													<div class="ui-radio-block">
+														<input type="radio" class="ui-radio" name="select-design" id="select-design1" checked />
+														<label for="select-design1" class="ui-label">
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<div class="select-design-title">트레블로그 체크 카드</div>
+														</label>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="card-detail-benefit-box margin-top-20">
+									<ul class="card-detail-benefit-list">
+										<li class="card-detail-benefit-item">
+											<!-- DD : 이미지 없을 때 -->
+											<div class="logo-image type-benefit-icon">
+												<div class="logo-image-inner"></div>
+											</div>
+											<span class="card-detail-benefit-text">해외 가맹점 이용 <span class="color-primary">수수료</span>면제</span>
+										</li>
+										<li class="card-detail-benefit-item">
+											<!-- DD : 이미지 에러 -->
+											<div class="logo-image type-benefit-icon">
+												<div class="logo-image-inner">
+													<img src="/images/_dummy/ic-card-d-s-02 .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<span class="card-detail-benefit-text">해외 ATM 인출 <span class="color-primary">수수료</span>면제</span>
+										</li>
+										<li class="card-detail-benefit-item">
+											<!-- DD : 이미지 있을 때 -->
+											<div class="logo-image type-benefit-icon">
+												<div class="logo-image-inner">
+													<img src="/images/_dummy/ic-card-d-s-02.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<span class="card-detail-benefit-text">국내 가맹점 <span class="color-primary">하나머니</span> 적립</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button">다음에</button>
+									</li>
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button">카드 추가신청</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 체크카드 발급시 추가발급카드 선택 팝업 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-select-simultaneous-issuance');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+
+		<!-- 2022.10.21 : add : 카드디자인 선택 영역 커스텀 가능하도록 추가 -->
+		<!-- Theme CSS -->
+		<style type="text/css">
+			/* DD : 카드신청 정보입력 화면에서만 추가 (MOB02000000) : start */
+			.header,
+			.card-bg {
+				/* 1. 배경 색상 */
+				background-color: #ffef8c;
+			}
+			/* DD : 카드신청 정보입력 화면에서만 추가 (MOB02000000) : end */
+			.ui-checkbox-block.type-box .ui-checkbox:checked + .ui-label,
+			.ui-radio-block.type-box .ui-radio:checked + .ui-label,
+			.ui-checkbox-block.type-box.is-checked .ui-label,
+			.ui-radio-block.type-box.is-checked .ui-label,
+			.ui-radio-block.type-box a.ui-label:active,
+			.ui-form-check-block.type-box .ui-checkbox:checked + .ui-label,
+			.ui-form-radio-block.type-box .ui-radio:checked + .ui-label,
+			.ui-form-check-block.type-box.is-checked .ui-label,
+			.ui-form-radio-block.type-box.is-checked .ui-label,
+			.ui-form-radio-block.type-box a.ui-label:active {
+				/* 2. 버튼 선택 색상 */
+				box-shadow: inset 0 0 0 2px #e7ac12;
+			}
+			.ui-basic-button.type-primary {
+				/* 3. 하단 버튼 색상 */
+				border-color: #fb9d1e;
+				background-color: #fb9d1e;
+			}
+			/* 2022.10.27 : add : 버튼클릭시 색상 추가 */
+			.ui-basic-button.type-primary:not(:disabled):active {
+				/* 3. 하단 버튼 active 색상 */
+				border-color: #cf7f13;
+				background-color: #cf7f13;
+			}
+			/* 2022.11.24 : add : radio,checkbox 색상 추가 */
+			.page-contents.type-multiple .ui-form-check-block.type-large .ui-checkbox:checked + .ui-label .ui-check-object {
+				border: 2px solid #fff;
+				box-sizing: border-box;
+				background-color: #fb9d1e;
+				background-image: url('/images/icon/element-privacy-active-color.svg');
+				background-position: 50% 50%;
+			}
+			/* 2022.11.29 : del : 카드디자인 버튼색상 삭제 */
+		</style>
+
+		<!-- //Theme CSS -->
+		<!-- //2022.10.21 : add : 카드디자인 선택 영역 커스텀 가능하도록 추가 -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- 카드 디자인 선택 -->
+						<!-- 2022.09.06 : mod : 가이드 주석 추가 및 type-vertical 클래스 값 추가 -->
+						<!-- DD : 세로형일 경우 type-vertical 클래스 값 추가 -->
+						<section class="card-design type-vertical">
+							<!-- 2022.10.21 : add : 카드배경 추가 -->
+							<div class="card-bg"></div>
+							<div class="card-design-container">
+								<h2 class="card-design-title"><strong class="font-weight-bold">카드신청</strong>을 시작할게요</h2>
+								<div class="card-design-inner">
+									<div class="card-design-shadow"></div>
+									<div class="card-design-frame"></div>
+									<ul class="card-design-list">
+										<li class="card-design-item">
+											<div class="card-design-block">
+												<div class="card-design-card">
+													<div class="card-design-card-object">
+														<!-- DD : 이미지 없을 때 -->
+														<div class="card-image">
+															<div class="card-image-inner"></div>
+														</div>
+														<!-- //DD : 이미지 없을 때 -->
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="card-design-item">
+											<div class="card-design-block">
+												<div class="card-design-card">
+													<div class="card-design-card-object">
+														<!-- DD : 이미지 에러 -->
+														<div class="card-image">
+															<div class="card-image-inner">
+																<img src="/images/_dummy/" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<!-- //DD : 이미지 에러 -->
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="card-design-item">
+											<div class="card-design-block">
+												<div class="card-design-card">
+													<div class="card-design-card-object">
+														<!-- DD : 이미지 있을 때 -->
+														<div class="card-image">
+															<div class="card-image-inner">
+																<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<!-- //DD : 이미지 있을 때 -->
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="card-design-text">
+										<div class="card-design-text-item">그림비 한정판 (Yellow) Case 이미지 없을 때</div>
+										<div class="card-design-text-item">그림비 한정판 (Yellow) Case 이미지 에러</div>
+										<div class="card-design-text-item">그림비 한정판 (Yellow) Case 이미지 있을 때</div>
+									</div>
+								</div>
+							</div>
+							<!-- 2022.09.06 : del : 그라데이션 제거
+							<div class="card-design-gradation"></div>
+							-->
+							<!-- 2022.09.07 : del : 버튼 삭제
+							<button type="button" class="card-design-down">
+								<span class="for-a11y">다음 단계로 스크롤 내리기</span>
+							</button> -->
+						</section>
+						<!-- //카드 디자인 선택 -->
+
+						<!-- 2022.09.07 : add : 추가 -->
+						<!-- DD : 트래블로그 체크카드의 경우 노출 -->
+						<p class="normal-text color-blur align-center">
+							트래블로그는 교통/비교통 모두<br />
+							컨택리스 이용이 가능합니다.
+						</p>
+						<!-- //2022.09.07 : add : 추가 -->
+
+						<div class="form-list-wrap">
+							<div class="form-item">
+								<div class="ui-form-title">
+									<strong class="title">브랜드</strong>
+									<!-- DD : 체크카드의 경우 도움말 툴팁 비노출, 제거 -->
+									<button type="button" class="ui-button-help"><span class="for-a11y">(도움말)</span></button>
+								</div>
+								<div class="ui-radio-group type-full card-brand-selector">
+									<div class="ui-form-radio-block type-box">
+										<!-- 2022.12.22 : mod : .ui-radio 에 js-card-design-scroll 클래스 값 제거 -->
+										<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" checked />
+										<label for="radioBox1-1" class="ui-label">
+											<span class="card-brand-left">
+												<span class="card-brand-logo">
+													<img src="/mkca20/images/contents/ic-brand-mastercard-off.png" alt="마스터카드" class="img" />
+													<img src="/mkca20/images/contents/ic-brand-mastercard-on.png" alt="마스터카드" class="img selected" />
+												</span>
+												<span class="ui-label-text">mastercard</span>
+											</span>
+											<span class="card-brand-right">
+												<!-- DD : 체크카드의 경우 '연회비없음' -->
+												<span class="ui-label-text">연회비없음</span>
+											</span>
+										</label>
+									</div>
+									<div class="ui-form-radio-block type-box">
+										<!-- 2022.12.22 : mod : .ui-radio 에 js-card-design-scroll 클래스 값 제거 -->
+										<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" />
+										<label for="radioBox1-2" class="ui-label">
+											<span class="card-brand-left">
+												<span class="card-brand-logo">
+													<img src="/mkca20/images/contents/ic-brand-visa-off.png" alt="비자" class="img" />
+													<img src="/mkca20/images/contents/ic-brand-visa-on.png" alt="비자" class="img selected" />
+												</span>
+												<span class="ui-label-text">VISA</span>
+											</span>
+											<span class="card-brand-right">
+												<span class="ui-label-text">15,000원</span>
+											</span>
+										</label>
+									</div>
+									<div class="ui-form-radio-block type-box">
+										<!-- 2022.12.22 : mod : .ui-radio 에 js-card-design-scroll 클래스 값 제거 -->
+										<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-3" />
+										<label for="radioBox1-3" class="ui-label">
+											<span class="card-brand-left">
+												<span class="card-brand-logo">
+													<img src="/mkca20/images/contents/ic-brand-local-off.png" alt="국내전용" class="img" />
+													<img src="/mkca20/images/contents/ic-brand-local-on.png" alt="국내전용" class="img selected" />
+												</span>
+												<span class="ui-label-text">국내전용</span>
+											</span>
+											<span class="card-brand-right">
+												<span class="ui-label-text">5,000원</span>
+											</span>
+										</label>
+									</div>
+									<div class="ui-form-radio-block type-box">
+										<!-- 2022.12.22 : mod : .ui-radio 에 js-card-design-scroll 클래스 값 제거 -->
+										<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-4" />
+										<label for="radioBox1-4" class="ui-label">
+											<span class="card-brand-left">
+												<span class="card-brand-logo">
+													<img src="/mkca20/images/contents/ic-brand-union-off.png" alt="유니온페이" class="img" />
+													<img src="/mkca20/images/contents/ic-brand-union-on.png" alt="유니온페이" class="img selected" />
+												</span>
+												<span class="ui-label-text">UnionPay</span>
+											</span>
+											<span class="card-brand-right">
+												<span class="ui-label-text">15,000원</span>
+											</span>
+										</label>
+									</div>
+									<div class="ui-form-radio-block type-box">
+										<!-- 2022.12.22 : mod : .ui-radio 에 js-card-design-scroll 클래스 값 제거 -->
+										<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-5" />
+										<label for="radioBox1-5" class="ui-label">
+											<span class="card-brand-left">
+												<span class="card-brand-logo">
+													<img src="/mkca20/images/contents/ic-brand-maestro-off.png" alt="마에스트로" class="img" />
+													<img src="/mkca20/images/contents/ic-brand-maestro-on.png" alt="마에스트로" class="img selected" />
+												</span>
+												<span class="ui-label-text">maestro</span>
+											</span>
+											<span class="card-brand-right">
+												<span class="ui-label-text">15,000원</span>
+											</span>
+										</label>
+									</div>
+									<div class="ui-form-radio-block type-box">
+										<!-- 2022.12.22 : mod : .ui-radio 에 js-card-design-scroll 클래스 값 제거 -->
+										<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-6" />
+										<label for="radioBox1-6" class="ui-label">
+											<span class="card-brand-left">
+												<span class="card-brand-logo">
+													<img src="/mkca20/images/contents/ic-brand-amex-off.png" alt="아멕스" class="img" />
+													<img src="/mkca20/images/contents/ic-brand-amex-on.png" alt="아멕스" class="img selected" />
+												</span>
+												<span class="ui-label-text">Amex</span>
+											</span>
+											<span class="card-brand-right">
+												<span class="ui-label-text">15,000원</span>
+											</span>
+										</label>
+									</div>
+									<div class="ui-form-radio-block type-box">
+										<!-- 2022.12.22 : mod : .ui-radio 에 js-card-design-scroll 클래스 값 제거 -->
+										<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-7" />
+										<label for="radioBox1-7" class="ui-label">
+											<span class="card-brand-left">
+												<span class="card-brand-logo">
+													<img src="/mkca20/images/contents/ic-brand-jcb-off.png" alt="JCB" class="img" />
+													<img src="/mkca20/images/contents/ic-brand-jcb-on.png" alt="JCB" class="img selected" />
+												</span>
+												<span class="ui-label-text">JCB</span>
+											</span>
+											<span class="card-brand-right">
+												<span class="ui-label-text">15,000원</span>
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- DD : 후불교통 기능 기본 제공 시 노출, 비교통일 시 영역 숨김 -->
+							<div class="form-item">
+								<div class="ui-form-title">
+									<strong class="title">후불교통 기능</strong>
+								</div>
+								<div class="ui-form-none">
+									<!-- 2022.11.17 : mod : 문구수정 -->
+									<p class="ui-form-none-text">
+										후불교통 기능이<br />
+										기본으로 제공되는 카드입니다.
+									</p>
+								</div>
+							</div>
+							<!-- //DD : 후불교통 기능 기본 제공 시 노출, 비교통일 시 영역 숨김 -->
+							<!-- 2022.11.09 : add : 안내문구 추가 -->
+							<!-- DD : 의약사카드의 경우 노출 -->
+							<div class="form-item">
+								<p class="normal-text align-center color-blur-dark">
+									카드 신청을 위해 <br />
+									국가고시 합격서류를 준비해주세요.
+								</p>
+							</div>
+							<!-- //DD : 의약사카드의 경우 노출 -->
+							<!-- //2022.11.09 : add : 안내문구 추가 -->
+						</div>
+
+						<!-- DD : 하나 CLUB H 아메리칸 익스프레스 리저브 카드의 경우 영역 노출 -->
+						<div class="use-guide-area js-ui-accordion">
+							<div class="use-guide-item js-ui-accordion__item">
+								<button type="button" class="use-guide-opener js-ui-accordion__opener">
+									확인해주세요
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-guide-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">본인회원은 메탈플레이트가 제공되며(플라스틱 소재 플레이트는 미제공) 가족회어ㅜㄴ의 경우 플라스틱 플레이트가 제공됩니다.</li>
+										<li class="info-item">메탈플레이트 특성상 수작업으로 제작되며 수급 상황에 따라 소요기간이 달라질 수 있습니다.</li>
+										<li class="info-item">메탈플레이트는 본인회원에 한해 신규가입 및 5년 후 갱신 시 마다 1회 무료 제공되며, 그 외 사유 발생 시 발급수수료 10만원이 별도 부과됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //DD : 하나 CLUB H 아메리칸 익스프레스 리저브 카드의 경우 영역 노출 -->
+					</div>
+
+					<!-- 2022.09.06 : mod : .page-buttons 에 type-card-design-select 클래스 값 제거 -->
+					<div class="page-buttons type-fixed">
+						<p class="ui-form-notice type-primary font-weight-medium type-fix-button">주민등록증 또는 운전면허증을 미리 준비해주세요.</p>
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<!-- DD : 모든 필수 값 입력 후 disabled 속성 제거 -->
+									<button type="button" class="ui-button ui-basic-button type-primary" disabled>다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- 2022.08.18 : add : 카드 디자인 선택 관련 이벤트 가이드 추가 -->
+		<script>
+			$(document)
+				.on('cardDesignInit', '.card-design', function (e, i) {
+					// 카드 디자인 init 이벤트
+					console.log(i);
+				})
+				.on('cardDesignChange', '.card-design', function (e, i) {
+					// 카드 디자인 변경 이벤트
+					console.log(i);
+				});
+		</script>
+		<!-- //2022.08.18 : add : 카드 디자인 선택 관련 이벤트 가이드 추가 -->
+		<!-- //script -->
+	</body>
+</html>

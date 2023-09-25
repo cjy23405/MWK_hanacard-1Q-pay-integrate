@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">자주 묻는 질문</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-faq-main">
+						<div class="faq-category">
+							<div class="ui-select-block">
+								<button type="button" class="ui-button ui-select" title="카테고리 선택">카드신청/이용</button>
+							</div>
+						</div>
+
+						<div class="faq-list-area">
+							<div class="faq-total">검색결과 <strong class="color-secondary">21</strong>건</div>
+							<div class="faq-list js-ui-accordion" data-once="true">
+								<div class="faq-item js-ui-accordion__item">
+									<button type="button" class="faq-opener js-ui-accordion__opener">카드 비밀번호를 변경하고 싶어요.</button>
+									<div class="js-ui-accordion__layer">
+										<div class="faq-contents">
+											<div class="wcms-data">
+												<section class="board-data">
+													<p>카드 비밀번호 변경을 원하시는 경우, 다음과 같은 방법으로 변경해주시기 바랍니다.</p>
+													<dl class="mg_t10">
+														<dt><strong>[비밀번호 변경]</strong></dt>
+														<dd>
+															<ul class="txt_li">
+																<li>하나카드 홈페이지 접속 &gt; 로그인 &gt; 카드 &gt; 발급조회/사용등록 &gt; 카드비밀번호등록/변경 에서 변경 가능합니다.</li>
+																<li><a href="/MPACIR310M.web" class="btn_xs btn_ty06 dp_ib">카드비밀번호 등록/변경</a></li>
+															</ul>
+														</dd>
+													</dl>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="faq-item js-ui-accordion__item">
+									<button type="button" class="faq-opener js-ui-accordion__opener">카드 교체/추가로 발급했는데 비밀번호가 변경되나요?</button>
+									<div class="js-ui-accordion__layer">
+										<div class="faq-contents">
+											<div class="wcms-data">
+												<section class="board-data">
+													<p>기존에 소지하셨던 카드를 [분실/훼손/종류변경] 등의 사유로 교체 또는 추가 발급을 받으시는 경우<br />『카드 비밀번호』는 다음과 같이 적용됩니다.</p>
+													<dl class="mg_t10">
+														<dt>■ <strong>카드 교체/추가 발급 시 비밀번호 운영기준</strong></dt>
+														<dd>
+															<div class="table_ty ty03 mg_t10">
+																<table summary="카드 교체/추가 발급 시 비밀번호 운영기준 (구분, 내용, 교체발급, 추가발급)에 대한 요약보기 안내입니다.">
+																	<caption>
+																		카드 교체/추가 발급 시 비밀번호 운영기준
+																	</caption>
+																	<colgroup>
+																		<col style="width: 23%" />
+																		<col style="width: 77%" />
+																	</colgroup>
+																	<thead>
+																		<tr>
+																			<th scope="col">구분</th>
+																			<th scope="col">내용</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<th scope="row">교체 발급</th>
+																			<td class="left">
+																				<ul class="txt_li">
+																					<li class="blt7">① 최근 6개월 유실적 카드 중 가장 최근 발급한 카드의 비밀번호</li>
+																					<li class="blt7">
+																						② ①이 없을 경우, 사용등록이 된 카드 중 가장 최근 발급받은 카드의 비밀번호
+																						<ul class="txt_li">
+																							<li class="blt3 font13">단, 가족카드는 비밀번호 승계 우선순서 대상카드(①, ②)에서 제외</li>
+																						</ul>
+																					</li>
+																				</ul>
+																			</td>
+																		</tr>
+																		<tr>
+																			<th scope="row">추가 발급</th>
+																			<td class="left">이용카드가 없을 시 가장 최근에 발급한 카드와 동일한 비밀번호 사용<br />단, 기존 비밀번호가 없을 시, 카드 발급 시 ARS를 통해 비밀번호 등록</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</dd>
+													</dl>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="faq-item js-ui-accordion__item">
+									<button type="button" class="faq-opener js-ui-accordion__opener">카드를 수령했는데 사용이 안됩니다. 어떻게 해야하나요?</button>
+									<div class="js-ui-accordion__layer">
+										<div class="faq-contents">
+											<div class="wcms-data">
+												<section class="board-data">
+													<p>
+														고객님의 안전한 카드 사용을 위해 카드 배송 시 일시적으로 사용이 정지된 상태에서 배송됩니다. 카드수령 후 즉시 사용을 원하실경우 아래와 같은 방법으로
+														<strong>카드 사용등록</strong>을 하신 후 사용하시면 됩니다.
+													</p>
+													<dl class="mg_t10">
+														<dt><strong>[카드 사용등록 방법]</strong></dt>
+														<dd>
+															<ul class="txt_li mt5">
+																<li class="blt2">ARS : 1800-1111 &gt; 9번</li>
+																<li class="blt2">홈페이지 : 카드 &gt; 발급조회/사용등록 &gt; 카드사용등록(신용카드, 선불카드)</li>
+																<li><a href="/MPACIR210M.web" class="btn_xs btn_ty06 dp_ib" title="카드사용등록 바로가기">카드 사용등록</a></li>
+															</ul>
+														</dd>
+													</dl>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="faq-item js-ui-accordion__item">
+									<button type="button" class="faq-opener js-ui-accordion__opener">체크카드 사용이 안돼요. 왜 이런건가요?</button>
+									<div class="js-ui-accordion__layer">
+										<div class="faq-contents">
+											<div class="wcms-data">
+												<section class="board-data">
+													<p>
+														체크카드 사용이 잘 되지 않는다면 <strong>통장에 잔액이 충분한지</strong> 확인하시기 바랍니다.<br />체크카드와 연계된 통장에 잔액이 충분한데도 잘 사용되지 않는다면 아래
+														사항을 체크해 주세요.
+													</p>
+
+													<ul class="txt_li mg_t10">
+														<li class="blt7">
+															① <strong>일일 사용한도를 초과</strong>한 경우
+															<ul>
+																<li class="blt2">1일 500만원 / 월간 2,000만원</li>
+															</ul>
+														</li>
+														<li class="blt7">
+															② 당일에 <strong>타행 자기앞수표를 입금</strong>하신 경우
+															<ul>
+																<li class="blt2">타행 자기앞수표가 자금화 된 이후 이용이 가능합니다.</li>
+																<li class="blt2">
+																	자금화란? 입금하신 수표가 현금화 되는 것으로써 익일(은행 영업일 기준) 오후 2시 20분을 말합니다.
+																	<p class="blt4">자금화 시간은 사정에 따라 연장될 수 있습니다.</p>
+																</li>
+															</ul>
+														</li>
+														<li class="blt7">
+															③ 기타
+															<ul>
+																<li class="blt2"><strong>마그네틱이 손상</strong>되었거나, 일시적인 <strong>전산장애</strong>로 승인이 안될 수 있습니다.</li>
+																<li class="blt2">통장 잔액과 출금가능금액이 같은지 확인해주세요. 해외사용건이 있다면 승인시점 금액이 지급정지 되어 출금가능금액이 더 적을 수 있습니다.</li>
+															</ul>
+														</li>
+													</ul>
+
+													<p class="blt4 mg_t10">체크카드의 결제계좌를 타 은행계좌로 설정하신 경우 해외결제 승인이 불가합니다.</p>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="faq-item js-ui-accordion__item">
+									<button type="button" class="faq-opener js-ui-accordion__opener">신용카드 후불교통카드로 교통기능을 사용할 수 있는 지역은 어디인가요?</button>
+									<div class="js-ui-accordion__layer">
+										<div class="faq-contents">
+											<div class="wcms-data">
+												<section class="board-data">
+													<strong>[지역별/운송수단별 교통카드 사용 가능 현황]</strong>
+													<div class="caption">(2013/10/17 현재)</div>
+													<div class="tbl_list">
+														<table summary="지역별/운송수단별 교통카드 사용 가능 현황 지역, 운송수단, 하나카드, 하나비씨카드 안내입니다.">
+															<caption>
+																지역별/운송수단별 교통카드 사용 가능 현황
+															</caption>
+															<colgroup>
+																<col style="width: 10%" />
+																<col style="width: 22%" />
+																<col style="width: 21%" />
+																<col style="width: 11%" />
+																<col style="width: 18%" />
+																<col style="width: 18%" />
+															</colgroup>
+															<thead>
+																<tr>
+																	<th scope="col" colspan="3">지 역</th>
+																	<th scope="col">운송수단</th>
+																	<th scope="col">하나카드</th>
+																	<th scope="col" class="last">하나비씨카드</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td rowspan="8">수도권</td>
+																	<td colspan="2" rowspan="2">서울 특별시</td>
+																	<td>지하철</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td rowspan="2" colspan="2">인천 광역시</td>
+																	<td>지하철</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td rowspan="2" colspan="2">경기도</td>
+																	<td>지하철</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="3">공항버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="3">의정부 경전철, 용인 경전철</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td rowspan="5">충청권</td>
+																	<td rowspan="2" colspan="2">대전 광역시</td>
+																	<td>지하철</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="2">세종특별자치시</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="2">충청남도</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="2">충청북도</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>강원권</td>
+																	<td colspan="2">강원도<br />(춘천, 강릉, 동해, 태백, 삼척, 속초, 양양, 고성, 정선, 영월, 평창, 원주, 철원, 홍천)</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td rowspan="4">호남권</td>
+																	<td rowspan="2" colspan="2">광주 광역시</td>
+																	<td>지하철</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="2">전라남도<br />(광양, 나주, 목포, 순천, 여수, 고흥, 담양, 무안, 보성, 신안, 영암, 장성, 함평, 해남, 화순, 장흥, 곡성, 영광, 구례, 강진)</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="2">전라북도<br />(전주, 정읍, 남원, 고창, 김제, 부안, 진안, 익산, 장수, 임실, 군산, 무주, 순창, 완주)</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td rowspan="9">영남권</td>
+																	<td rowspan="2" colspan="2">부산 광역시</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>지하철</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="3">부산-김해 경전철</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td rowspan="2" colspan="2">대구 광역시</td>
+																	<td>지하철</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="2">울산 광역시</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="0" rowspan="2">경상남도</td>
+																	<td>창원, 밀양, 사천, 양산, 진주, 함안, 의령, 거제, 통영, 산청, 함양, 거창, 합천, 창녕, 고성, 남해, 하동</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>김해</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>경상북도</td>
+																	<td>경주,구미,김천,포항, 안동, 문경, 상주, 영주, 예천, 의성, 울진, 청도, 성주, 고령, 칠곡</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td>제주권</td>
+																	<td colspan="2">제주특별자치도</td>
+																	<td>버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td rowspan="3">기타</td>
+																	<td colspan="2">경기, 충청북도, 경상도</td>
+																	<td>시외버스</td>
+																	<td>○<span class="hide">해당</span></td>
+																	<td class="last">○<span class="hide">해당</span></td>
+																</tr>
+																<tr>
+																	<td colspan="3">신공항 하이웨이, 천변도시고속화도로, 우면산터널, <br />인천만월산터널, 남산 1,3호 터널, 인천대교, 국우터널, <br />대구동부순환도로</td>
+																	<td rowspan="2">○<span class="hide">해당</span></td>
+																	<td rowspan="2" class="last">○<span class="hide">해당</span></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="note">후불교통카드 이용서비스는 대중교통수단(버스/지하철)內 교통카드 단말기 부착차량에 한함.</div>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="faq-item js-ui-accordion__item">
+									<button type="button" class="faq-opener js-ui-accordion__opener">승인이 취소되었는지 확인하는 방법은?</button>
+									<div class="js-ui-accordion__layer">
+										<div class="faq-contents">
+											<div class="wcms-data">
+												<section class="board-data">
+													<p>
+														당사 홈페이지(<a href="http://m.hanacard.co.kr" target="_blank">m.hanacard.co.kr</a>)및 모바일 APP에서 조회 가능하며 하나카드 고객센터(☎1800-1111)에서도 확인 가능합니다.
+													</p>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="faq-item js-ui-accordion__item">
+									<button type="button" class="faq-opener js-ui-accordion__opener">스카이패스 또는 아시아나클럽 신용카드(BC포함) 이용시 항공 마일리지는 언제 적립되나요?</button>
+									<div class="js-ui-accordion__layer">
+										<div class="faq-contents">
+											<div class="wcms-data">
+												<section class="board-data">
+													<ul class="txt_li">
+														<li class="t_txt">
+															<strong>[항공마일리지 적립]</strong>
+															<ul class="txt_li">
+																<li class="blt1">항공 마일리지 적립은 하나카드, 하나BC카드에 따라 적립일이 달라집니다.</li>
+																<li class="blt1">선결제 이용 시, 적립은 본 청구일 기준으로 적립됩니다.</li>
+																<li>
+																	<div class="table_ty ty03 mg_t10">
+																		<table summary="적립시점 안내 표">
+																			<caption>
+																				적립시점 안내 표 /caption&gt;
+																			</caption>
+																			<colgroup>
+																				<col style="width: 50%" />
+																				<col style="width: 50%" />
+																			</colgroup>
+																			<thead>
+																				<tr>
+																					<th>구분</th>
+																					<th class="last">적립시점</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>하나카드 (구.하나/구.외환)</td>
+																					<td class="last">청구 결제일 +2영업일에 적립</td>
+																				</tr>
+																				<tr>
+																					<td>하나BC카드</td>
+																					<td class="last">청구 결제일 +7영업일 이내에 적립</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</li>
+															</ul>
+														</li>
+
+														<li class="t_txt mg_t20">
+															<strong>[할부 매출 적립]</strong>
+															<ul class="txt_li">
+																<li class="blt1">무이자 할부 매출은 마일리지 적립에서 제외됩니다.</li>
+																<li>
+																	<div class="table_ty ty03 mg_t10">
+																		<table summary="적립시점 안내 표">
+																			<caption>
+																				적립시점 안내 표 /caption&gt;
+																			</caption>
+																			<colgroup>
+																				<col style="width: 50%" />
+																				<col style="width: 50%" />
+																			</colgroup>
+																			<thead>
+																				<tr>
+																					<th>구분</th>
+																					<th class="last">적립시점</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>하나카드 (구.하나/구.외환)</td>
+																					<td class="last">적립 마일리지를 할부 개월수로 나누어<br />결제 회차별 결제일 +2영업일에 적립</td>
+																				</tr>
+																				<tr>
+																					<td>하나BC카드</td>
+																					<td class="last">할부 1회차 청구 시 이용대금 전액에 대해<br />첫 결제일 +7영업일 이내에 적립</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="faq-item js-ui-accordion__item">
+									<button type="button" class="faq-opener js-ui-accordion__opener">주유할인 방식은 어떻게 산출되나요?</button>
+									<div class="js-ui-accordion__layer">
+										<div class="faq-contents">
+											<div class="wcms-data">
+												<section class="board-data">
+													<p>
+														주유소별 리터당 단가가 상이하기 때문에 카드사에서는 이용하신 리터당 금액을 알 수가 없습니다.<br />
+														그래서, 주유소에서 결제하신 승인금액에 한국석유공사에서 공시한 지난주의 공시가격을 적용하여 리터를 환산 후 할인금액을 산출하여 전국의 모든 주유소에서 승인된 주유금액에 대해
+														동일한 할인 혜택을 제공하는 방식으로 적용 됩니다.
+													</p>
+													<br />
+													<p><strong>할인금액 산정방법</strong></p>
+													<p style="boreder-bottom: 1px solid #666">
+														<span style="border-bottom: 1px solid; padding: 4px 20px">주유이용금액</span>
+													</p>
+													<p style="margin: -7px; 0; padding-left: 125px;">× 리터당 할인금액</p>
+													<p><span style="padding-left: 30px">기준유가</span></p>
+													<br />
+													<ul>
+														<li class="blt1">주유이용금액을 기준유가로 나눈 값은 소수점 이하 절사 후 리터당 할인 제공</li>
+														<li class="blt1">기준유가는 한국석유공사 에서 공시한 정유사별 기준으로 적용</li>
+														<li class="blt3">상품별 상세 기준은 상품별 약관을 통해 확인 가능합니다.</li>
+													</ul>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="faq-item js-ui-accordion__item">
+									<button type="button" class="faq-opener js-ui-accordion__opener">해외 이용 시 청구금액은 어떻게 계산되나요?</button>
+									<div class="js-ui-accordion__layer">
+										<div class="faq-contents">
+											<div class="wcms-data">
+												<section class="board-data">
+													<p>
+														해외 이용 시(해외사이트 거래 포함)미화(USD)기준 거래 금액에 접수일의 하나은행 최초고시 전신환 매도율을 적용한 후, 국제브랜드사가 부과하는 국제브랜드수수료와 하나카드가
+														부과하는 해외서비스수수료를 포함하여 청구됩니다.<br />
+														(단, 체크카드의 경우 1회 승인금액 100만원 이상의 거래(단, T&amp;E업종* 제외), 또는 카드사가 정한 특정 브랜드(BC/Maestro/Amex Globalpay 등) 및 상품의 카드이용대금은
+														미화(USD) 기준 거래 금액에 카드승인시점의 하나은행이 고시한 전신환매도율을 적용한 원화금액으로 회원의 계좌잔액에서 즉시 인출됩니다.)
+													</p>
+													<ul class="txt_li mg_t10">
+														<li class="blt6">T&amp;E 업종 : Travel and Entertainment 업종, 여행과 여가 관련 업종(항공, 호텔, 숙박, 렌터카 등)</li>
+													</ul>
+													<div class="white_box mg_t10">
+														<p class="mg_b05"><b>해외 이용시 청구금액 산출방법</b></p>
+														<p>해외 이용 시 청구금액 = (거래미화금액 X 전신환 매도율¹) + 국제브랜드수수료² + 해외서비스수수료³</p>
+														<ol class="txt_li">
+															<li class="blt7">1. 전신환 매도율 : 접수일의 하나은행 최초고시 전신환 매도율</li>
+															<li class="blt7">2. 국제브랜드수수료 = (거래미화금액 X 국제브랜드 이용수수료율(VISA, MASTER, JCB : 1%, Amex : 1.4%, UPI : 0.6%)) X 전신환 매도율</li>
+															<li class="blt7">3. 해외서비스수수료 = (거래미화금액 X 해외서비스 수수료율(신용카드 0.2%, 체크카드 US$0.5)) X 전신환 매도율</li>
+														</ol>
+													</div>
+													<p class="blt1 mg_t20">단기카드대출(현금서비스) 거래에 대해서는 청구금액에 단기카드대출(현금서비스) 수수료가 별도로 포함 됩니다.</p>
+													<ul class="txt_li mg_t05 mg_l10">
+														<li class="blt2">단기카드대출(현금서비스) 수수료 = 청구금액 x 단기카드대출(현금서비스) 수수료율 x 신용공여기간 ÷ 365</li>
+													</ul>
+													<p class="blt1 mg_t10">해외현금인출 거래에 대해서는 $3 수수료가 별도로 포함됩니다.(해외서비스수수료는 부과 안됨)</p>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="ui-button ui-button-more">더보기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

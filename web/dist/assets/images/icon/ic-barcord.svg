@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <style>
+            .cls-2{fill:#111}
+        </style>
+    </defs>
+    <g id="ic_barcord" transform="translate(-93 -589)">
+        <path id="사각형_7105" data-name="사각형 7105" transform="translate(93 589)" style="fill:none" d="M0 0h30v30H0z"/>
+        <path id="사각형_11206" data-name="사각형 11206" class="cls-2" transform="translate(105 598)" d="M0 0h1v12H0z"/>
+        <path id="사각형_11207" data-name="사각형 11207" class="cls-2" transform="translate(110 598)" d="M0 0h1v12H0z"/>
+        <path id="사각형_11208" data-name="사각형 11208" class="cls-2" transform="translate(102 598)" d="M0 0h2v12H0z"/>
+        <path id="사각형_11209" data-name="사각형 11209" class="cls-2" transform="translate(107 598)" d="M0 0h2v12H0z"/>
+        <path id="사각형_11210" data-name="사각형 11210" class="cls-2" transform="translate(112 598)" d="M0 0h2v12H0z"/>
+        <path id="빼기_105" data-name="빼기 105" class="cls-2" d="M-5351 5020h-1v-1.5h.5a3 3 0 0 0 3-3v-.5h1.5v1a4 4 0 0 1-4 4zm-13 0h-1a4 4 0 0 1-4-4v-1h1.5v.5a3 3 0 0 0 3 3h.5v1.5zm17-17h-1.5v-.5a3 3 0 0 0-3-3h-.5v-1.5h1a4 4 0 0 1 4 4v1zm-20.5 0h-1.5v-1a4 4 0 0 1 4-4h1v1.5h-.5a3 3 0 0 0-3 3v.5z" transform="translate(5466 -4405)"/>
+        <g id="합치기_122" data-name="합치기 122" style="fill:#fff">
+            <path d="M-5351.75 5019.5h-.5a.25.25 0 0 1 0-.5h.5a.25.25 0 0 1 0 .5zm-12 0h-.5a.25.25 0 0 1 0-.5h.5a.25.25 0 0 1 0 .5zm16-4a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .5 0v.5a.25.25 0 0 1-.25.25zm-20.5 0a.25.25 0 0 1-.25-.25v-.5a.25.25 0 0 1 .5 0v.5a.25.25 0 0 1-.25.25zm20.5-12a.25.25 0 0 1-.25-.25v-.5a.25.25 0 1 1 .5 0v.5a.25.25 0 0 1-.25.25zm-20.5 0a.25.25 0 0 1-.25-.25v-.5a.25.25 0 1 1 .5 0v.5a.25.25 0 0 1-.25.25zm16.5-4.5h-.5a.25.25 0 0 1 0-.5h.5a.25.25 0 0 1 0 .5zm-12 0h-.5a.25.25 0 0 1 0-.5h.5a.25.25 0 0 1 0 .5z" style="stroke:none" transform="translate(5466 -4405)"/>
+            <path d="M-5351.75 5020h-.5a.752.752 0 0 1 0-1.5h.5a.752.752 0 0 1 0 1.5zm-12 0h-.5a.75.75 0 0 1 0-1.5h.5a.75.75 0 0 1 0 1.5zm16-4a.75.75 0 0 1-.75-.75v-.5a.75.75 0 0 1 1.5 0v.5a.75.75 0 0 1-.75.75zm-20.5 0a.75.75 0 0 1-.75-.75v-.5a.75.75 0 0 1 1.5 0v.5a.75.75 0 0 1-.75.75zm20.5-12a.75.75 0 0 1-.75-.75v-.5a.75.75 0 1 1 1.5 0v.5a.75.75 0 0 1-.75.75zm-20.5 0a.75.75 0 0 1-.75-.75v-.5a.75.75 0 1 1 1.5 0v.5a.75.75 0 0 1-.75.75zm16.5-4.5h-.5a.752.752 0 0 1 0-1.5h.5a.752.752 0 0 1 0 1.5zm-12 0h-.5a.75.75 0 0 1 0-1.5h.5a.75.75 0 0 1 0 1.5z" style="fill:#111;stroke:none" transform="translate(5466 -4405)"/>
+        </g>
+    </g>
+</svg>

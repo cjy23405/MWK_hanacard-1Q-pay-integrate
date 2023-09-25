@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">금융소비자권리</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section">
+							<div class="accordion-list js-ui-accordion" data-once="true">
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">위법계약해지권 안내</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">위법계약해지권이란?</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">
+														[금융소비자보호에 관한 법률 제47조]<br />
+														금융상품판매업자 등이 금융소비자보호법에서 정하고 있는 6대 판매규제원칙 중 적합성원칙, 적정성원칙, 설명의무, 불공정영업행위의 금지, 부당권유행위 금지를 위반하여 체결된
+														금융상품에 대해 계약해지를 요구할 수 있는 권리를 말합니다.
+													</p>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">위법계약 해지 대상 금융상품</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">21.3.25일 이후 계약 체결된 상품으로 지속적 거래가 이루어지고 해지 시 재산상 불이익이 발생하는 금융상품</p>
+													<ul class="info-list type-inherit type-outside margin-top-10">
+														<li class="info-item">대상 상품 : 신용카드[개인/법인], 소액신용서비스가 있는 체크카드, 장기카드대출[카드론], 할부금융, 자동차금융</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">해지신청 가능 기한</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">금융소비자가 계약체결에 대한 위반사항을 안날로부터 1년 이내(단, 해당 기간이 계약 체결일로부터 5년 이내의 범위에 있어야 함)</p>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">신청방법 안내</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">자세한 내용은 하나카드 고객센터(1800-1111)로 문의바랍니다.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">자료열람요구권 안내</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">자료열람요구권이란?</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">
+														[금융소비자보호에 관한 법률 제28조]<br />
+														금융소비자는 분쟁조정 및 소송의 수행 등 소비자의 권리 구제 목적이 명확할 경우 소비자는 금융회사에 자료 등의 열람을 요구할 수 있으며, 회사는 금융소비자보호에 관한 법률
+														제28조 제3항 및 제4항에 따라 정당한 사유가 있는 경우에 금융소비자의 열람 요구를 연기하거나 제한 또는 거절할 수 있습니다.
+													</p>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">열람을 신청할 수 있는 자료의 종류</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">
+														계약체결·이행에 관한 자료, 금융상품등에 관한 광고 자료, 금융소비자의 권리행사에 관한 자료, 업무 위탁에 관한 자료, 내부통제기준의 제정 및 운영등에 관한 자료
+													</p>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">필수기재사항</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">열람 목적 : 법 제36조에 따른 분쟁조정 신청내역 또는 소송제기 내역</li>
+														<li class="info-item">열람 범위 : 열람하고자 하는 자료의 내용 및 열람목적과 자료열람의 연관성 작성</li>
+														<li class="info-item">열람 방법 : 자료사본, 녹취 청취, 본사내방</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">신청방법 안내</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">
+														'자료열람신청서'에 자료의 필수기재사항을 기재하여 접수합니다.<br />
+														<br />
+														자세한 내용은 하나카드 고객센터(1800-1111)로 문의바랍니다.
+													</p>
+													<a href="" class="ui-arrow type-small color-blur margin-top-10" role="button">자료열람신청서</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">청약철회권 안내</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">청약철회권이란?</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">
+														[금융소비자보호에 관한 법률 제46조]<br />
+														당사에서 판매하는 금융상품에 대해 계약 후 14일 이내 계약의 철회를 요구 할 수 있습니다.
+													</p>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">청약철회 대상상품</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">
+														카드론 및 대출상품<br />
+														(ex.신용대출, 오토론)
+													</p>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">청약철회 가능 및 요건</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">
+														대출계약 철회는 금융소비자보호법 제 46조 1항에 의해 철회 기간까지 청약의 철회의사를 표시하고 철회기간(14일)이내에 대출원금과 대출이자 및 부대비용 등을 전액 상환해야 철회의
+														효력이 발생하며, 대출계약 철회의 효력이 발생한 이후에는 철회를 취소할 수 없습니다.
+													</p>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h2 class="title">신청방법 안내</h2>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">자세한 내용은 하나카드 고객센터(1800-1111)로 문의바랍니다.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

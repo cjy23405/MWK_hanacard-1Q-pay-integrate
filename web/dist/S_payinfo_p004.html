@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">결제일</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							본인인증을<br />
+							진행해 주세요.
+						</h2>
+
+						<div class="page-section">
+							<div class="section-contents">
+								<div class="js-ui-tab-panel page-tab-panel type-certificate">
+									<div class="ui-tab">
+										<ul class="ui-tab-list">
+											<li class="ui-tab-item">
+												<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-card">카드</button>
+											</li>
+											<li class="ui-tab-item">
+												<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-auth">공동인증서</button>
+											</li>
+										</ul>
+									</div>
+
+									<!-- tab contents -->
+									<!-- tab: 카드 -->
+									<div class="ui-tab-panel panel-card" data-tab="certificate-card">
+										<div style="line-height: 250px; background-color: var(--gray-30); text-align: center; text-decoration: underline">
+											<a href="_certificate.html" target="_blank">공통 인증 영역 참고</a>
+										</div>
+									</div>
+									<!-- //tab: 카드 -->
+
+									<!-- tab: 공동인증서 -->
+									<div class="ui-tab-panel panel-auth" data-tab="certificate-auth">
+										<div style="line-height: 250px; background-color: var(--gray-30); text-align: center; text-decoration: underline">
+											<a href="_certificate.html" target="_blank">공통 인증 영역 참고</a>
+										</div>
+									</div>
+									<!-- //tab: 공동인증서 -->
+									<!-- //tab contents -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary" data-layer-open="layer-confirm-change-payment-date">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 결제일 변경 확인 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-confirm-change-payment-date">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">결제일을 변경하시겠어요?</h2>
+								<!-- 2021.12.17 버튼 추가 -->
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+								<!-- //2021.12.17 버튼 추가 -->
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									결제일 변경 시, 나머지 청구 단위의<br />
+									결제일도 함께 변경 됩니다.
+								</div>
+								<p class="ui-notice">
+									결제일 변경 후 <span class="color-primary">60일 이내</span>에는 재변경이 불가합니다.<br />
+									(단, 변경 당일 9:00~21:00시에는 가능)
+								</p>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 결제일 변경 확인 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<svg id="ic_cardissuance_10" data-name="ic cardissuance 10" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <rect id="사각형_12182" data-name="사각형 12182" width="50" height="50" transform="translate(0 0)" fill="none"/>
+  <g id="사각형_13459" data-name="사각형 13459">
+    <rect id="사각형_14230" data-name="사각형 14230" width="26" height="21" rx="5" transform="translate(11.998 14.498)" fill="none"/>
+    <path id="패스_12065" data-name="패스 12065" d="M33,34.748H17a4.25,4.25,0,0,1-4.25-4.25v-11A4.25,4.25,0,0,1,17,15.248H33a4.25,4.25,0,0,1,4.25,4.25v7.154" fill="none" stroke="#2d3239" stroke-width="1.5"/>
+  </g>
+  <rect id="사각형_13461" data-name="사각형 13461" width="8.159" height="11.181" transform="translate(31 25)" fill="#fff"/>
+  <rect id="사각형_13462" data-name="사각형 13462" width="4.504" height="4.504" rx="1.5" transform="translate(18.376 23.877)" fill="#7dedf3"/>
+  <g id="사각형_13463" data-name="사각형 13463">
+    <rect id="사각형_14231" data-name="사각형 14231" width="6.005" height="6.005" rx="2" transform="translate(16.5 22)" fill="none"/>
+    <rect id="사각형_14232" data-name="사각형 14232" width="4.505" height="4.505" rx="1.25" transform="translate(17.25 22.75)" fill="none" stroke="#2d3239" stroke-width="1.5"/>
+  </g>
+  <path id="사각형_13465" data-name="사각형 13465" d="M30.749,34h0a.75.75,0,0,1,.75.75h0a.75.75,0,0,1-.75.75h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,30.749,34Z" fill="#2d3239"/>
+  <path id="사각형_13466" data-name="사각형 13466" d="M37.249,24.26h0a.75.75,0,0,1,.75.75h0a.75.75,0,0,1-.75.75h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,37.249,24.26Z" fill="#2d3239"/>
+  <path id="패스_11963" data-name="패스 11963" d="M41.33,31.7l-2.011,1.737L37.864,31.21" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  <g id="타원_1743" data-name="타원 1743">
+    <circle id="타원_1872" data-name="타원 1872" cx="3.902" cy="3.902" r="3.902" transform="translate(32.251 34.821) rotate(-85.008)" fill="none"/>
+    <path id="패스_12066" data-name="패스 12066" d="M36.2,34.414a3.152,3.152,0,1,1,3.414-2.867" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-miterlimit="3.999" stroke-width="1.5" stroke-dasharray="18.996 29.994"/>
+  </g>
+</svg>

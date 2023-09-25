@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <style>
+            .cls-3,.cls-5{stroke:#2d3239}.cls-5{stroke-width:1.5px}.cls-3,.cls-5,.cls-9{fill:none}.cls-7{fill:#2d3239}.cls-8{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_creditloan_03" transform="translate(-6 -568)">
+        <g id="사각형_13455" data-name="사각형 13455" transform="translate(6 574)" style="stroke-width:1.5px;stroke:#2d3239;fill:#fff">
+            <rect class="cls-8" width="30" height="24" rx="5"/>
+            <rect class="cls-9" x=".75" y=".75" width="28.5" height="22.5" rx="4.25"/>
+        </g>
+        <g id="사각형_13452" data-name="사각형 13452" class="cls-3" transform="rotate(90 -276 307.5)">
+            <rect class="cls-8" width="1.5" height="9" rx=".75"/>
+            <rect class="cls-9" x=".5" y=".5" width=".5" height="8" rx=".25"/>
+        </g>
+        <rect id="사각형_13812" data-name="사각형 13812" width="5.5" height="5.5" rx="2.75" transform="translate(15.25 580.25)" style="fill:#7dedf3"/>
+        <g id="사각형_13811" data-name="사각형 13811" class="cls-3" transform="rotate(90 -278.75 308.25)">
+            <rect class="cls-8" width="1.5" height="6" rx=".75"/>
+            <rect class="cls-9" x=".5" y=".5" width=".5" height="5" rx=".25"/>
+        </g>
+        <g id="사각형_13454" data-name="사각형 13454" class="cls-5" transform="translate(12.75 579.25)">
+            <rect class="cls-8" width="6.5" height="6.5" rx="3.25"/>
+            <rect class="cls-9" x=".75" y=".75" width="5" height="5" rx="2.5"/>
+        </g>
+        <g id="사각형_13807" data-name="사각형 13807" class="cls-5">
+            <path class="cls-8" d="M4 0h3a4 4 0 0 1 4 4v3H0V4a4 4 0 0 1 4-4z" transform="translate(10.5 586.5)"/>
+            <path class="cls-9" d="M4 .75h3A3.25 3.25 0 0 1 10.25 4v1.5a.75.75 0 0 1-.75.75h-8a.75.75 0 0 1-.75-.75V4A3.25 3.25 0 0 1 4 .75z" transform="translate(10.5 586.5)"/>
+        </g>
+        <path id="사각형_13808" data-name="사각형 13808" transform="translate(10.5 591)" style="fill:#fff" d="M0 0h11v3H0z"/>
+        <rect id="사각형_13809" data-name="사각형 13809" class="cls-7" width="1.5" height="2" rx=".75" transform="translate(10.5 590)"/>
+        <rect id="사각형_13810" data-name="사각형 13810" class="cls-7" width="1.5" height="2" rx=".75" transform="translate(20 590)"/>
+    </g>
+</svg>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">우수회원 선정 기준</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<p class="page-title">
+							하나카드에 아낌없는<br />
+							사랑을 보내주시는 분들께<br />
+							다양한 우대 서비스를 제공합니다.
+						</p>
+
+						<ul class="info-list type-default margin-top-35">
+							<!-- 2022.03.10 : mod : 텍스트 수정 -->
+							<li class="info-item type-presa">
+								프리미엄 우수회원은 매년 재선정되고, 1년간만 서비스되며, 2021년 프리미엄 우수회원 미선정 또는 등급 변경, 제도 개편에 따라 서비스 비용(연회비, 할부수수료, SMS 서비스 이용료 등)이 발생할
+								수 있습니다.
+							</li>
+						</ul>
+
+						<div class="page-section type-line">
+							<div class="ui-tab type-stretch type-nav margin-top-minus-25">
+								<ul class="ui-tab-list">
+									<li class="ui-tab-item">
+										<a href="" class="ui-tab-link align-center">
+											2022년 프리미엄<br />
+											우수회원 제도
+										</a>
+									</li>
+									<li class="ui-tab-item">
+										<a href="" class="ui-tab-link align-center is-active">
+											2021년 프리미엄<br />
+											우수회원 제도
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+							<h2 class="for-a11y">2021년 프리미엄 우수회원 제도</h2>
+
+							<div>
+								<p class="basic-text font-weight-light">하나카드 프리미엄 우수회원은 카드이용 및 당사 거래관계 등을 반영한 종합점수와 내부 선정기준을 적용하여 최종 선정됩니다.</p>
+
+								<section class="page-section margin-top-35">
+									<div class="section-title">
+										<h2 class="title"><div class="basic-text font-weight-bold">프리미엄 우수회원 선정 기준</div></h2>
+									</div>
+
+									<p class="default-text font-weight-light">종합점수 산정 기준 : 개인(신용+체크)카드+우대점수</p>
+
+									<ul class="info-list type-default margin-top-10">
+										<li class="info-item color-basic">포함 : 가족카드/단기카드대출(현금서비스)/장기카드대출(카드론)</li>
+										<li class="info-item color-basic">제외 : 국세, 지방세/4대보험 납부액/법인/GIFT카드 이용실적</li>
+									</ul>
+
+									<div class="info-table-area">
+										<table class="info-table">
+											<!-- 2022.05.04 : mod : caption 값 변경 -->
+											<caption class="for-a11y">
+												등급, 종합점수(카드이용+우대), 카드이용점수로 구성된 프리미엄 우수회원 선정 기준 표
+											</caption>
+											<colgroup>
+												<col style="width: 21.5%" />
+												<col />
+												<col />
+											</colgroup>
+											<thead>
+												<tr>
+													<th rowspan="2">등급</th>
+													<th rowspan="2">
+														종합 점수<br />
+														(카드이용+우대)
+													</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th class="info-table-top-line info-table-left-line">카드이용점수</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td scope="row"><span class="color-vip">VVIP</span></td>
+													<td colspan="2" rowspan="2">종합점수 5,000점 이상 & 카드이용점수 4,000점 이상 회원 중 신용도 및 당사 내부 기준에 따라 선정</td>
+												</tr>
+												<tr>
+													<td scope="row" class="info-table-vertical-line"><span class="color-vip">퍼스트</span></td>
+												</tr>
+												<tr>
+													<td scope="row"><span class="color-vip">로열</span></td>
+													<td>3,000점 이상</td>
+													<td>2,400점 이상</td>
+												</tr>
+												<tr>
+													<td scope="row"><span class="color-vip">클래식</span></td>
+													<td>1,500점 이상</td>
+													<td>1,200점 이상</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<div class="info-table-area margin-top-none">
+										<table class="info-table margin-top-none">
+											<!-- 2022.05.04 : mod : caption 값 변경 -->
+											<caption class="for-a11y">
+												비고로 구성된 프리미엄 우수회원 선정 기준 표
+											</caption>
+											<thead>
+												<tr>
+													<th>비고</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>프리미엄 카드 상품 보유 시 클래식 등급 부여</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<ul class="info-list type-default margin-top-15">
+										<li class="info-item color-wrong">VVIP 및 퍼스트 등급의 경우, 실적 및 신용도, 기타 당사 내부 기준에 따라 선정됩니다.</li>
+										<li class="info-item color-wrong">
+											프리미엄 우수회원으로 미선정되셨더라도, 프리미엄 카드상품을 발급받으시면 발급완료일 익일부터 클래식 등급이 부여됩니다.
+											<ul class="info-list margin-top-10">
+												<li class="info-item type-hyphen">프리미엄 카드 상품 : 클럽 시그니처, 클럽 프리미어, 클럽 프리머스(구. 프리머스 포함, 일반형 제외)</li>
+												<li class="info-item type-hyphen">프리미엄 카드 상품 보유로 얻은 클래식 등급은 해당 카드 상품 해지 시 취소됩니다.</li>
+											</ul>
+										</li>
+										<li class="info-item color-basic">필수조건 : 선정 월 직전 6개월 중 3개월 이상 카드 이용</li>
+										<li class="info-item color-basic">필수조건 미충족 시, 종합점수 충족 시에도 프리미엄 우수회원 선정에서 제외</li>
+										<li class="info-item color-basic">
+											실적 기준이 충족되어도 선정 시점 당시 이용금액이 카드사로 접수 여부 (승인/매입 시점 차이), 매출 취소, 필수이용기간 조건 등 미충족 시 프리미엄 우수회원 선정에서 제외됩니다.
+										</li>
+									</ul>
+								</section>
+
+								<section class="page-section margin-top-35">
+									<div class="section-title">
+										<h2 class="title"><div class="basic-text font-weight-bold">선정일</div></h2>
+									</div>
+
+									<p class="default-text font-weight-light">2021. 1. 2 (년 1회 선정)</p>
+								</section>
+
+								<section class="page-section margin-top-35">
+									<div class="section-title">
+										<h2 class="title"><div class="basic-text font-weight-bold">프리미엄 우수회원 기간</div></h2>
+									</div>
+
+									<p class="default-text font-weight-light">2021. 1. 2 ~ 12.31 (선정 등급별 혜택은 1년간만 제공됨)</p>
+								</section>
+
+								<section class="page-section margin-top-35">
+									<div class="section-title">
+										<h2 class="title"><div class="basic-text font-weight-bold">프리미엄 우수회원 산정 기간</div></h2>
+									</div>
+
+									<p class="default-text font-weight-light">2020. 1. 1 ~ 12.31 (선정 직전 1년간)</p>
+
+									<ul class="info-list margin-top-10">
+										<li class="info-item type-presa">카드사 매출전표 접수일 기준</li>
+									</ul>
+								</section>
+
+								<section class="page-section margin-top-35">
+									<div class="section-title">
+										<h2 class="title"><div class="basic-text font-weight-bold">※ 점수 환산 기준</div></h2>
+									</div>
+
+									<section>
+										<h3 class="default-text font-weight-light color-vip">[카드 이용점수]</h3>
+
+										<ul class="info-list type-default margin-top-10">
+											<li class="info-item color-basic">국내 이용(일시불) : 1만원당 1점</li>
+											<li class="info-item color-basic">해외 이용 : 1만원당 2점</li>
+											<li class="info-item color-basic">유이자 할부 : 1만원당 2점</li>
+											<li class="info-item color-basic">무이자 할부 : 1만원당 1점</li>
+											<li class="info-item color-basic">체크카드 이용 : 1만원당 1점</li>
+										</ul>
+
+										<ul class="info-list margin-top-10">
+											<li class="info-item type-presa">단, 국세/지방세, 4대 보험료 납부액, 법인카드 이용금액, GIFT 카드 구매 및 이용금액 제외</li>
+										</ul>
+									</section>
+
+									<section class="margin-top-10">
+										<h3 class="default-text font-weight-light color-vip">[우대점수]</h3>
+
+										<ul class="info-list type-default margin-top-10">
+											<li class="info-item color-basic">단기카드대출 : 1만원당 1점</li>
+											<li class="info-item color-basic">장기카드대출 : 1만원당 2점</li>
+											<li class="info-item color-basic">장기고객 우대 : 1년당 200점 (최대 600점)</li>
+											<li class="info-item color-basic">리볼빙 신청 시 : 20점</li>
+											<li class="info-item color-basic">카드론 동의 시 : 20점</li>
+											<li class="info-item color-basic">마케팅 동의 시 : 20점</li>
+											<li class="info-item color-basic">디지털 청구서 수령 시 : 100점</li>
+											<li class="info-item color-basic">자동이체 : 월 1건당 1점 (최대 50점)</li>
+										</ul>
+
+										<ul class="info-list margin-top-10">
+											<li class="info-item type-presa">
+												디지털 청구서 : 실물 청구서를 받지않고, 디지털 청구서만 받으시는 경우에만 점수가 부여됩니다.<br />
+												예) 우편+Email : 점수 미부여 / 하나멤버스+Email : 점수 부여
+											</li>
+											<li class="info-item type-presa">자동이체는 휴대전화, 아파트 관리비에 한함</li>
+										</ul>
+									</section>
+
+									<div class="ui-legend margin-top-35 margin-bottom-15">
+										<ul class="ui-legend-list">
+											<li class="ui-legend-item">
+												<div class="ui-legend-block">
+													<div class="ui-legend-symbol type-vvip"></div>
+													<div class="ui-legend-text">VVIP</div>
+												</div>
+											</li>
+											<li class="ui-legend-item">
+												<div class="ui-legend-block">
+													<div class="ui-legend-symbol type-first"></div>
+													<div class="ui-legend-text">퍼스트</div>
+												</div>
+											</li>
+											<li class="ui-legend-item">
+												<div class="ui-legend-block">
+													<div class="ui-legend-symbol type-royal"></div>
+													<div class="ui-legend-text">로열</div>
+												</div>
+											</li>
+											<li class="ui-legend-item">
+												<div class="ui-legend-block">
+													<div class="ui-legend-symbol type-classic"></div>
+													<div class="ui-legend-text">클래식</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+
+									<div class="info-table-area margin-top-none">
+										<table class="info-table margin-top-none">
+											<!-- 2022.05.04 : mod : caption 값 변경 -->
+											<caption class="for-a11y">
+												프리미엄 우수회원 서비스로 구성된 등급별 해당 프리미엄 우수회원 서비스 표
+											</caption>
+											<colgroup>
+												<col />
+												<col style="width: 110px" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th colspan="2">프리미엄 우수회원 서비스</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="type-no-vertical-line">
+													<td scope="row">VVIP 바우처 제공</td>
+													<td>
+														<div class="symbols align-right">
+															<div class="symbols-list">
+																<div class="symbols-item type-vvip"></div>
+																<div class="symbols-item"></div>
+																<div class="symbols-item"></div>
+																<div class="symbols-item"></div>
+															</div>
+														</div>
+														<div class="for-a11y">VVIP</div>
+													</td>
+												</tr>
+												<tr class="type-no-vertical-line">
+													<td scope="row">연회비 감면 (일부 카드 제외)</td>
+													<td>
+														<div class="symbols align-right">
+															<div class="symbols-list">
+																<div class="symbols-item type-vvip"></div>
+																<div class="symbols-item type-first"></div>
+																<div class="symbols-item"></div>
+																<div class="symbols-item"></div>
+															</div>
+														</div>
+														<div class="for-a11y">VVIP, 퍼스트</div>
+													</td>
+												</tr>
+												<tr class="type-no-vertical-line">
+													<td scope="row">현금서비스 수수료 우대</td>
+													<td>
+														<div class="symbols align-right">
+															<div class="symbols-list">
+																<div class="symbols-item type-vvip"></div>
+																<div class="symbols-item"></div>
+																<div class="symbols-item"></div>
+																<div class="symbols-item"></div>
+															</div>
+														</div>
+														<div class="for-a11y">VVIP</div>
+													</td>
+												</tr>
+												<tr class="type-no-vertical-line">
+													<td scope="row">
+														전 가맹점 2~3개월 무이자 할부<br />
+														<span class="color-vip">(VVIP : 2~4개월)</span>
+													</td>
+													<td>
+														<div class="symbols align-right">
+															<div class="symbols-list">
+																<div class="symbols-item type-vvip"></div>
+																<div class="symbols-item type-first"></div>
+																<div class="symbols-item type-royal"></div>
+																<div class="symbols-item"></div>
+															</div>
+														</div>
+														<div class="for-a11y">VVIP, 퍼스트, 로열</div>
+													</td>
+												</tr>
+												<tr class="type-no-vertical-line">
+													<td scope="row">SMS 서비스 요금 면제</td>
+													<td>
+														<div class="symbols align-right">
+															<div class="symbols-list">
+																<div class="symbols-item type-vvip"></div>
+																<div class="symbols-item type-first"></div>
+																<div class="symbols-item type-royal"></div>
+																<div class="symbols-item"></div>
+															</div>
+														</div>
+														<div class="for-a11y">VVIP, 퍼스트, 로열</div>
+													</td>
+												</tr>
+												<tr class="type-no-vertical-line">
+													<td scope="row">재발급 카드 퀵 딜리버리 서비스</td>
+													<td>
+														<div class="symbols align-right">
+															<div class="symbols-list">
+																<div class="symbols-item type-vvip"></div>
+																<div class="symbols-item type-first"></div>
+																<div class="symbols-item type-royal"></div>
+																<div class="symbols-item"></div>
+															</div>
+														</div>
+														<div class="for-a11y">VVIP, 퍼스트, 로열</div>
+													</td>
+												</tr>
+												<tr class="type-no-vertical-line">
+													<!-- 2022.04.06 : mod : 텍스트 수정 -->
+													<td scope="row">분실&middot;도난 보상처리 수수료 면제</td>
+													<td>
+														<div class="symbols align-right">
+															<div class="symbols-list">
+																<div class="symbols-item type-vvip"></div>
+																<div class="symbols-item type-first"></div>
+																<div class="symbols-item type-royal"></div>
+																<div class="symbols-item type-classic"></div>
+															</div>
+														</div>
+														<div class="for-a11y">VVIP, 퍼스트, 로열, 클래식</div>
+													</td>
+												</tr>
+												<tr class="type-no-vertical-line">
+													<td scope="row">프리미엄 회원 전용 이벤트</td>
+													<td>
+														<div class="symbols align-right">
+															<div class="symbols-list">
+																<div class="symbols-item type-vvip"></div>
+																<div class="symbols-item type-first"></div>
+																<div class="symbols-item type-royal"></div>
+																<div class="symbols-item type-classic"></div>
+															</div>
+														</div>
+														<div class="for-a11y">VVIP, 퍼스트, 로열, 클래식</div>
+													</td>
+												</tr>
+												<tr class="type-no-vertical-line">
+													<td scope="row">
+														프리미엄 제휴 혜택<br />
+														(특급호텔 등 우대/할인)
+													</td>
+													<td>
+														<div class="symbols align-right">
+															<div class="symbols-list">
+																<div class="symbols-item type-vvip"></div>
+																<div class="symbols-item type-first"></div>
+																<div class="symbols-item type-royal"></div>
+																<div class="symbols-item type-classic"></div>
+															</div>
+														</div>
+														<div class="for-a11y">VVIP, 퍼스트, 로열, 클래식</div>
+													</td>
+												</tr>
+												<tr class="type-no-vertical-line">
+													<td scope="row">프리미엄 전용 상담센터</td>
+													<td>
+														<div class="symbols align-right">
+															<div class="symbols-list">
+																<div class="symbols-item type-vvip"></div>
+																<div class="symbols-item type-first"></div>
+																<div class="symbols-item type-royal"></div>
+																<div class="symbols-item type-classic"></div>
+															</div>
+														</div>
+														<div class="for-a11y">VVIP, 퍼스트, 로열, 클래식</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<div class="form-bottom margin-top-none margin-top-15">
+										<div class="ui-buttons">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item">
+													<a href="" class="ui-basic-button type-vip">서비스 상세보기</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+
+								<section class="page-section margin-top-35">
+									<div class="section-title">
+										<h2 class="title"><div class="basic-text font-weight-bold">주요 유의사항</div></h2>
+									</div>
+
+									<p class="default-text font-weight-light">등급별 서비스 상세 유의사항은 서비스 상세보기를 클릭하여 확인하시기 바립니다.</p>
+
+									<ul class="info-list type-default margin-top-10">
+										<li class="info-item color-basic">
+											연회비 감면 서비스
+											<ul class="info-list margin-top-10">
+												<li class="info-item type-hyphen">초년도 연회비 및 일부 카드의 경우 제외</li>
+												<li class="info-item type-presa">발급 다음년도부터 연회비 감면. (단, 등급별 금액 상이)</li>
+											</ul>
+										</li>
+										<li class="info-item color-basic">
+											카드 퀵 딜리버리 서비스(긴급 발급 서비스)
+											<ul class="info-list margin-top-10">
+												<li class="info-item type-hyphen">
+													신청 : 프리미엄 전용 상담센터 (080-222-5500)
+													<div class="color-vip margin-top-10">영업일(주중) 오전(11시 50분까지) 요청 건에 한해 당일 발급 후 익일 배송</div>
+												</li>
+											</ul>
+										</li>
+										<li class="info-item color-basic">
+											무이자할부 이용건
+											<ul class="info-list margin-top-10">
+												<li class="info-item type-hyphen">무이자할부 이용금액에 대해 포인트(하나머니, 제휴사포인트 등) 및 마일리지 등 적립 제외</li>
+											</ul>
+										</li>
+										<li class="info-item type-presa color-wrong">
+											프리미엄 우수회원 제도 및 선정기준, 등급별 서비스, 제휴서비스 등은 프리미엄 우수회원에게 제공하는 연 단위 우대혜택으로, 당사 또는 제휴사 사정에 의해 별도 고지 없이 변경될 수
+											있습니다.
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

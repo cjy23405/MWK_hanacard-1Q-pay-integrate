@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <g id="ic-com-pay-fail" transform="translate(-133 -166)">
+    <circle id="타원_1315" data-name="타원 1315" cx="45" cy="45" r="45" transform="translate(133 166)" fill="#f8f8f8"/>
+    <g id="사각형_11100" data-name="사각형 11100" transform="translate(161 188)" fill="#fff" stroke="#2d3239" stroke-width="2">
+      <rect width="34" height="46" rx="6" stroke="none"/>
+      <rect x="1" y="1" width="32" height="44" rx="5" fill="none"/>
+    </g>
+    <rect id="사각형_11340" data-name="사각형 11340" width="4" height="20" transform="translate(191 208)" fill="#fff"/>
+    <rect id="사각형_18394" data-name="사각형 18394" width="6" height="15" transform="translate(191 208)" fill="#fff"/>
+    <rect id="사각형_18395" data-name="사각형 18395" width="6" height="15" transform="translate(195 208)" fill="#f8f8f8"/>
+    <circle id="타원_2430" data-name="타원 2430" cx="8.5" cy="8.5" r="8.5" transform="translate(185 212)" fill="#fff"/>
+    <path id="교차_51" data-name="교차 51" d="M-2392,8976a10,10,0,0,1,10-10,9.969,9.969,0,0,1,4,.832V8984a6.026,6.026,0,0,1-.124,1.22A9.964,9.964,0,0,1-2382,8986,10,10,0,0,1-2392,8976Z" transform="translate(2573 -8756)" fill="#fff"/>
+    <rect id="사각형_11102" data-name="사각형 11102" width="2" height="4" rx="1" transform="translate(193 206)" fill="#2d3239"/>
+    <g id="사각형_11654" data-name="사각형 11654" transform="translate(174 196)" fill="#fff" stroke="#2d3239" stroke-width="2">
+      <rect width="8" height="8" rx="2" stroke="none"/>
+      <rect x="1" y="1" width="6" height="6" rx="1" fill="none"/>
+    </g>
+    <circle id="타원_1318" data-name="타원 1318" cx="8" cy="8" r="8" transform="translate(183 212)" fill="#ffd1dc"/>
+    <g id="타원_1317" data-name="타원 1317" transform="translate(185 212)" fill="none" stroke="#2d3239" stroke-width="2">
+      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+      <circle cx="8.5" cy="8.5" r="7.5" fill="none"/>
+    </g>
+    <rect id="사각형_11126" data-name="사각형 11126" width="2" height="9" rx="1" transform="translate(195.964 216.6) rotate(45)" fill="#2d3239"/>
+    <rect id="사각형_11127" data-name="사각형 11127" width="1.999" height="8.999" rx="1" transform="translate(197.378 222.963) rotate(135)" fill="#2d3239"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1" height="4" viewBox="0 0 1 4">
+    <defs>
+        <clipPath id="a">
+            <path data-name="사각형 13760" transform="translate(0 0)" style="fill:#fff;stroke:#707070" d="M0 0h1v4H0z"/>
+        </clipPath>
+    </defs>
+    <g style="clip-path:url(#a)">
+        <path data-name="사각형 13765" style="fill:#c4c4c4" d="M0 0h1v2H0z"/>
+    </g>
+</svg>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">MBTI 결과</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="section-title type-large margin-bottom-25">
+							<p class="title type-flexible align-center font-weight-light">딱 맞는 카드를 찾았어요!</p>
+						</div>
+
+						<div class="info-cards-item type-detail">
+							<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+							<!-- DD : 이미지 없을 때
+							<div class="card-image">
+								<div class="card-image-inner"></div>
+							</div>
+							-->
+
+							<!-- DD : 이미지 에러
+							<div class="card-image">
+								<div class="card-image-inner">
+									<img src="./assets/images/_dummy/multi-card-1 .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+								</div>
+							</div>
+							-->
+
+							<!-- DD : 이미지 있을 때 -->
+							<div class="card-image">
+								<div class="card-image-inner">
+									<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/_dummy/multi-card-1.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+								</div>
+							</div>
+							<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+
+							<div class="info-cards-explain">
+								<div class="info-cards-title">VIVA X 체크카드</div>
+								<div class="info-cards-text">해외 가맹점/ATM 수수료 면제</div>
+							</div>
+						</div>
+
+						<!-- 2022.04.05 : mod : .card-detail-benefit-wrap 추가 -->
+						<div class="card-detail-benefit-wrap">
+							<ul class="card-detail-benefit-list">
+								<!-- 2022.03.10 : mod : 아이콘 이미지 구조 변경 -->
+								<li class="card-detail-benefit-item">
+									<!-- DD : 이미지 없을 때 -->
+									<div class="logo-image type-benefit-icon">
+										<div class="logo-image-inner"></div>
+									</div>
+									<span class="card-detail-benefit-text">
+										<span class="font-weight-medium">온라인가맹점 <span class="color-primary">5%</span> 적립</span>
+									</span>
+								</li>
+								<li class="card-detail-benefit-item">
+									<!-- DD : 이미지 에러 -->
+									<div class="logo-image type-benefit-icon">
+										<div class="logo-image-inner">
+											<img src="./assets/images/_dummy/ic-card-d-s-02 .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</div>
+									</div>
+									<span class="card-detail-benefit-text">
+										<span class="font-weight-medium">대형마트 <span class="color-primary">5%</span> 적립</span>
+									</span>
+								</li>
+								<li class="card-detail-benefit-item">
+									<!-- DD : 이미지 있을 때 -->
+									<div class="logo-image type-benefit-icon">
+										<div class="logo-image-inner">
+											<img src="./assets/images/_dummy/ic-card-d-s-03.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</div>
+									</div>
+									<span class="card-detail-benefit-text">
+										<span class="font-weight-medium">저녁식사 <span class="color-primary">5%</span> 적립</span>
+									</span>
+								</li>
+								<li class="card-detail-benefit-item">
+									<div class="logo-image type-benefit-icon">
+										<div class="logo-image-inner">
+											<img src="./assets/images/_dummy/ic-card-d-s-04.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+										</div>
+									</div>
+									<span class="card-detail-benefit-text">
+										<span class="font-weight-medium">병원/동물병원 <span class="color-primary">5%</span> 적립</span>
+									</span>
+								</li>
+								<!-- //2022.03.10 : mod : 아이콘 이미지 구조 변경 -->
+							</ul>
+						</div>
+						<!-- //2022.04.05 : mod : .card-detail-benefit-wrap 추가 -->
+
+						<div class="link-row align-center margin-top-25">
+							<button type="button" class="ui-arrow color-secondary">
+								<span class="default-text">다시 검사</span>
+							</button>
+						</div>
+
+						<section class="page-section margin-top-35 js-ui-tab-panel">
+							<div class="section-title margin-bottom-5">
+								<h2 class="title type-flexible">
+									<div class="basic-text align-center">찾고있는 카드가 없다면?</div>
+								</h2>
+							</div>
+							<div class="welcome-nav type-fill-white type-color-blur">
+								<ul class="welcome-nav-list">
+									<li class="welcome-nav-item">
+										<a href="" class="welcome-nav-link"><div class="default-text font-weight-regular">신용카드</div></a>
+									</li>
+									<li class="welcome-nav-item">
+										<a href="" class="welcome-nav-link"><div class="default-text font-weight-regular">체크카드</div></a>
+									</li>
+									<li class="welcome-nav-item">
+										<a href="" class="welcome-nav-link"><div class="default-text font-weight-regular">제휴카드</div></a>
+									</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-account-verification-pop">출금동의 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 출금동의 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide is-not-background-close" data-layer="layer-account-verification-pop">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">출금동의를 진행해주세요.</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<div class="form-list-wrap">
+										<div class="form-item">
+											<div class="ui-form-title">
+												<span class="title font-weight-regular">인증방법 선택</span>
+											</div>
+											<div class="ui-radio-group type-grid type-col4">
+												<div class="ui-radio-block type-box type-column-box">
+													<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" data-checkbox-tab="radioPanel1-1" checked />
+													<label for="radioBox1-1" class="ui-label">
+														<span class="ui-label-icon type-medium type-ars-m"></span>
+														<span class="ui-label-text">ARS</span>
+													</label>
+												</div>
+												<div class="ui-radio-block type-box type-column-box">
+													<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" data-checkbox-tab="radioPanel1-2" />
+													<label for="radioBox1-2" class="ui-label">
+														<span class="ui-label-icon type-medium type-toss-m"></span>
+														<span class="ui-label-text">토스</span>
+													</label>
+												</div>
+												<!-- Case : 토스 disabled (input 에 disabled 속성 추가) -->
+												<div class="ui-radio-block type-box type-column-box">
+													<input type="radio" class="ui-radio" name="radioBox1" id="radioBoxDisabled1-2" data-checkbox-tab="radioPanel1-2" disabled />
+													<label for="radioBoxDisabled1-2" class="ui-label">
+														<span class="ui-label-icon type-medium type-toss-m"></span>
+														<span class="ui-label-text">토스</span>
+													</label>
+												</div>
+												<!-- //Case : 토스 disabled (input 에 disabled 속성 추가) -->
+												<div class="ui-radio-block type-box type-column-box">
+													<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-3" data-checkbox-tab="radioPanel1-3" />
+													<label for="radioBox1-3" class="ui-label">
+														<span class="ui-label-icon type-medium type-naver-m"></span>
+														<span class="ui-label-text">네이버</span>
+													</label>
+												</div>
+												<!-- Case : 네이버 disabled (input 에 disabled 속성 추가) -->
+												<div class="ui-radio-block type-box type-column-box">
+													<input type="radio" class="ui-radio" name="radioBox1" id="radioBoxDisabled1-3" data-checkbox-tab="radioPanel1-3" disabled />
+													<label for="radioBoxDisabled1-3" class="ui-label">
+														<span class="ui-label-icon type-medium type-naver-m"></span>
+														<span class="ui-label-text">네이버</span>
+													</label>
+												</div>
+												<!-- //Case : 네이버 disabled (input 에 disabled 속성 추가) -->
+												<div class="ui-radio-block type-box type-column-box">
+													<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-4" data-checkbox-tab="radioPanel1-4" />
+													<label for="radioBox1-4" class="ui-label">
+														<span class="ui-label-icon type-medium type-pass-m"></span>
+														<span class="ui-label-text">PASS</span>
+													</label>
+												</div>
+												<!-- Case : PASS disabled (input 에 disabled 속성 추가) -->
+												<div class="ui-radio-block type-box type-column-box">
+													<input type="radio" class="ui-radio" name="radioBox1" id="radioBoxDisabled1-4" data-checkbox-tab="radioPanel1-4" disabled />
+													<label for="radioBoxDisabled1-4" class="ui-label">
+														<span class="ui-label-icon type-medium type-pass-m"></span>
+														<span class="ui-label-text">PASS</span>
+													</label>
+												</div>
+												<!-- //Case : PASS disabled (input 에 disabled 속성 추가) -->
+											</div>
+										</div>
+									</div>
+
+									<div class="margin-top-20">
+										<!-- ARS 인증 약관 -->
+										<div class="ui-multiple-list margin-top-none" data-checkbox-tab-panel="radioPanel1-1">
+											<div class="ui-multiple-item type-all type-medium">
+												<div class="ui-form-check-block type-large">
+													<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-all" data-checkbox-group="selectCheckbox1" />
+													<label for="selectCheckbox1-all" class="ui-label">
+														<span class="ui-check-object"></span>
+														<span class="ui-label-text">약관 전체동의</span>
+													</label>
+												</div>
+											</div>
+											<div class="ui-check-terms type-margin-6">
+												<div class="ui-check-terms-list-group">
+													<div class="ui-check-terms-list">
+														<div class="ui-check-terms-item">
+															<div class="ui-form-check-block">
+																<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" data-checkbox-group-child="selectCheckbox1" />
+																<label for="selectCheckbox1-1" class="ui-label">
+																	<span class="ui-check-object"></span>
+																	<span class="ui-label-text">개인정보 필수적 수집/이용 동의서</span>
+																</label>
+																<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+															</div>
+														</div>
+														<div class="ui-check-terms-item">
+															<div class="ui-form-check-block">
+																<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2" data-checkbox-group-child="selectCheckbox1" />
+																<label for="selectCheckbox1-2" class="ui-label">
+																	<span class="ui-check-object"></span>
+																	<span class="ui-label-text">개인정보 필수적 제공 동의서</span>
+																</label>
+																<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- //ARS 인증 약관 -->
+
+										<!-- pass 인증 약관 -->
+										<div class="ui-multiple-list margin-top-none" data-checkbox-tab-panel="radioPanel1-4">
+											<div class="ui-multiple-item type-all type-medium">
+												<div class="ui-form-check-block type-large">
+													<input type="checkbox" class="ui-checkbox" id="selectCheckbox3-all" data-checkbox-group="selectCheckbox3" />
+													<label for="selectCheckbox3-all" class="ui-label">
+														<span class="ui-check-object"></span>
+														<span class="ui-label-text">약관 전체동의</span>
+													</label>
+												</div>
+											</div>
+											<div class="ui-check-terms type-margin-6">
+												<div class="ui-check-terms-list-group">
+													<div class="ui-check-terms-list">
+														<div class="ui-check-terms-item">
+															<div class="ui-form-check-block">
+																<input type="checkbox" class="ui-checkbox" id="selectCheckbox3-1" data-checkbox-group-child="selectCheckbox3" />
+																<label for="selectCheckbox3-1" class="ui-label">
+																	<span class="ui-check-object"></span>
+																	<span class="ui-label-text">PASS 인증서(제3자 정보제공동의)</span>
+																</label>
+																<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+															</div>
+														</div>
+														<div class="ui-check-terms-item">
+															<div class="ui-form-check-block">
+																<input type="checkbox" class="ui-checkbox" id="selectCheckbox3-2" data-checkbox-group-child="selectCheckbox3" />
+																<label for="selectCheckbox3-2" class="ui-label">
+																	<span class="ui-check-object"></span>
+																	<span class="ui-label-text">PASS 인증서(고유식별정보 처리 약관)</span>
+																</label>
+																<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- //pass 인증 약관 -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">인증 요청</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 출금동의 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-account-verification-pop');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

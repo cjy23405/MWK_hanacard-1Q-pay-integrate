@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1,.cls-3,.cls-4{fill:none}.cls-3,.cls-4{stroke:#2d3239;stroke-width:1.5px}.cls-4{stroke-linecap:round;stroke-linejoin:round}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="card_d_l_ic_04" transform="translate(-24 -858)">
+        <path id="사각형_15576" data-name="사각형 15576" class="cls-1" transform="translate(24 858)" d="M0 0h40v40H0z"/>
+        <g id="그룹_12557" data-name="그룹 12557" transform="translate(12 847)">
+            <path id="사각형_15594" data-name="사각형 15594" class="cls-1" transform="translate(16 15)" d="M0 0h32v32H0z"/>
+            <path id="패스_12166" data-name="패스 12166" d="M14 7a7 7 0 1 1-7-7 7 7 0 0 1 7 7z" transform="translate(23 22)" style="fill:#7dedf3"/>
+            <g id="사각형_14142" data-name="사각형 14142" class="cls-3" transform="rotate(180 24 20)">
+                <rect class="cls-6" width="32" height="24" rx="5"/>
+                <rect class="cls-1" x=".75" y=".75" width="30.5" height="22.5" rx="4.25"/>
+            </g>
+            <g id="사각형_14143" data-name="사각형 14143" class="cls-3" transform="rotate(180 19.75 23.006)">
+                <rect class="cls-6" width="15" height="1.5" rx=".75"/>
+                <rect class="cls-1" x=".75" y=".75" width="13.5"/>
+            </g>
+            <g id="사각형_14144" data-name="사각형 14144" class="cls-3" transform="rotate(90 -3.169 35.919)">
+                <rect class="cls-6" width="5.901" height="1.5" rx=".75"/>
+                <rect class="cls-1" x=".75" y=".75" width="4.401"/>
+            </g>
+            <g id="그룹_12559" data-name="그룹 12559" transform="translate(0 -.5)">
+                <path id="패스_12167" data-name="패스 12167" class="cls-4" d="M14 7a7 7 0 1 1-7-7 7 7 0 0 1 7 7z" transform="rotate(-90 30.195 5.305)"/>
+                <g id="그룹_12558" data-name="그룹 12558" transform="translate(.358 -.017)">
+                    <path id="패스_12170" data-name="패스 12170" class="cls-4" d="m1358.917 173.577 1.828 4.723 1.884-4.723 1.954 4.723 1.674-4.723" transform="translate(-1331.057 -147.282)"/>
+                    <path id="선_315" data-name="선 315" transform="translate(27.362 28.656)" style="stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none" d="M0 0h8.336"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">오토할부</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<p class="page-title">
+							초저금리 조건 비교하고<br />
+							추가 캐쉬백까지
+						</p>
+						<div class="page-info">
+							<p class="page-info-text">내 드림카, 오토할부로!</p>
+						</div>
+
+						<div class="ui-illust type-1"></div>
+
+						<div class="benefit">
+							<ul class="benefit-list">
+								<!-- 2022.05.30 : mod : type-align-top 클래스 값 추가 -->
+								<li class="benefit-item type-align-top">
+									<div class="benefit-info">
+										<h2 class="benefit-title">저렴한 할부금리</h2>
+										<!-- 2022.03.25 : mod : 문구 롤링 적용 -->
+										<p class="benefit-discription">
+											하나카드 초저금리 혜택
+											<span class="text-slide">
+												<!-- 2022.05.30 : add : .text-slide-controller 추가 -->
+												<span class="text-slide-controller"></span>
+												<!-- //2022.05.30 : add : .text-slide-controller 추가 -->
+												<span class="text-slide-list">
+													<span class="text-slide-item"><span class="color-primary">3개월</span> 최저 <span class="color-primary">1.0%</span></span>
+													<span class="text-slide-item"><span class="color-primary">6개월 1.50%</span></span>
+													<span class="text-slide-item"><span class="color-primary">12개월 1.80%</span></span>
+													<span class="text-slide-item"><span class="color-primary">24개월 2.40%</span></span>
+													<span class="text-slide-item"><span class="color-primary">36개월 2.60%</span></span>
+													<span class="text-slide-item"><span class="color-primary">48개월 2.60%</span></span>
+													<span class="text-slide-item"><span class="color-primary">60개월</span> 최대 <span class="color-primary">2.6%</span></span>
+												</span>
+											</span>
+										</p>
+										<!-- //2022.03.25 : mod : 문구 롤링 적용 -->
+									</div>
+									<div class="benefit-icon type-1"></div>
+								</li>
+								<!-- 2022.05.30 : mod : type-align-top 클래스 값 추가 -->
+								<li class="benefit-item type-align-top">
+									<div class="benefit-info">
+										<h2 class="benefit-title">대출금액의 추가 캐쉬백까지</h2>
+										<!-- 2022.03.25 : mod : 문구 롤링 적용 -->
+										<p class="benefit-discription">
+											하나카드 더블 캐쉬백 혜택
+											<span class="text-slide">
+												<!-- 2022.05.30 : add : .text-slide-controller 추가 -->
+												<span class="text-slide-controller"></span>
+												<!-- //2022.05.30 : add : .text-slide-controller 추가 -->
+												<span class="text-slide-list">
+													<span class="text-slide-item"><span class="color-primary">3개월</span> 최저 <span class="color-primary">1.5%</span></span>
+													<span class="text-slide-item"><span class="color-primary">6개월 2.00%</span></span>
+													<span class="text-slide-item"><span class="color-primary">12개월 2.30%</span></span>
+													<span class="text-slide-item"><span class="color-primary">24개월 2.70%</span></span>
+													<span class="text-slide-item"><span class="color-primary">36개월 2.90%</span></span>
+													<span class="text-slide-item"><span class="color-primary">48개월 2.90%</span></span>
+													<span class="text-slide-item"><span class="color-primary">60개월</span> 최대 <span class="color-primary">2.9%</span></span>
+												</span>
+											</span>
+										</p>
+										<!-- //2022.03.25 : mod : 문구 롤링 적용 -->
+									</div>
+									<div class="benefit-icon type-2"></div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="page-section-group">
+							<div class="page-guide">
+								<p class="guide">
+									어떤 차량을<br />
+									구입 예정이신가요?
+								</p>
+								<a href="#" class="ui-basic-button type-tiny type-primary" role="button">월 납입금 확인</a>
+							</div>
+						</div>
+
+						<section class="page-section-group">
+							<!-- 2021.11.29 margin-bottom-25 클래스 수정 -->
+							<div class="section-title margin-bottom-25">
+								<h2 class="title">고객 맞춤별 캐쉬백 혜택</h2>
+							</div>
+
+							<div class="benefit-type">
+								<div class="benefit-type-group">
+									<section class="benefit-type-item type-icon type-icon-1">
+										<h3 class="benefit-type-title">캐쉬백형</h3>
+										<p class="benefit-type-text">할부금액 <span class="color-point">0.5%</span> 추가</p>
+										<p class="benefit-type-discription">카드결제금액 (할부이용금액+선입금 금액) 대상으로 캐쉬백 혜택이 커요!</p>
+									</section>
+									<section class="benefit-type-item type-icon type-icon-2">
+										<h3 class="benefit-type-title">저금리형</h3>
+										<p class="benefit-type-text">선입금금액 <span class="color-point">1.2%</span></p>
+										<p class="benefit-type-discription">할부 외 일시납 금액 대상 캐쉬백이 제공되며, 낮은 금리로 월 납입액 부담이 적어요!</p>
+									</section>
+								</div>
+							</div>
+						</section>
+
+						<section class="page-section-group">
+							<!-- 2021.11.29 margin-bottom-25 클래스 수정 -->
+							<div class="section-title margin-bottom-25">
+								<h2 class="title">빠르고 간편한 내 차 구매 프로세스</h2>
+							</div>
+
+							<div class="process">
+								<ol class="process-list">
+									<li class="process-item">
+										<div class="process-num">1</div>
+										<div class="process-text">차량선택</div>
+									</li>
+									<li class="process-item">
+										<div class="process-num">2</div>
+										<div class="process-text">모바일 한도조회</div>
+									</li>
+									<li class="process-item">
+										<div class="process-num">3</div>
+										<div class="process-text">전문상담원 안내</div>
+									</li>
+									<li class="process-item">
+										<div class="process-num">4</div>
+										<div class="process-text">혜택 받고 결제하기</div>
+									</li>
+									<li class="process-item">
+										<div class="process-num">5</div>
+										<div class="process-text">구매차량 등록</div>
+									</li>
+								</ol>
+							</div>
+						</section>
+
+						<section class="page-section-group">
+							<!-- 2021.11.29 margin-bottom-25 클래스 수정 -->
+							<div class="section-title margin-bottom-25">
+								<h2 class="title">
+									오토할부, 오토론<br />
+									나에게 맞는 금융 서비스는?
+								</h2>
+							</div>
+
+							<div class="info-table-area">
+								<table class="info-table type-thead-line type-tbody-heading">
+									<!-- 2022.05.04 : mod : caption 값 변경 -->
+									<caption class="for-a11y">
+										오토할부, 오토론의 이용대상, 할부금리, 특징으로 구성된 표
+									</caption>
+									<colgroup>
+										<col class="info-table-heading-width" />
+										<col />
+										<col />
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="info-table-vertical-line">구분</th>
+											<th>오토할부</th>
+											<th>오토론</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>이용대상</th>
+											<td>
+												<span class="color-primary">카드결제 가능한</span><br />
+												국산차, 수입차 전 차종 가능
+											</td>
+											<td>
+												<span class="color-primary">카드결제가</span><br />
+												<span class="color-primary">어려워도</span><br />
+												차량 구매 가능
+											</td>
+										</tr>
+										<tr>
+											<th>할부금리</th>
+											<td>
+												저렴한 할부금리<br />
+												<span class="color-primary">연 1.0% ~ 3.5%</span>
+											</td>
+											<td>
+												고정금리<br />
+												<span class="color-primary">연 3.9%</span>
+											</td>
+										</tr>
+										<tr>
+											<th>특징</th>
+											<td>
+												여유자금<br />
+												(선입금)에 따라<br />
+												<span class="color-primary">캐쉬백 지급</span>
+											</td>
+											<td>
+												하나카드<br />
+												<span class="color-primary">회원이 아니어도</span><br />
+												<span class="color-primary">이용 가능</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+
+						<div class="page-section-group">
+							<a href="" class="box-arrow-link">오토할부 안내</a>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									유의사항
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<div class="info-list">
+										<p class="info-item">오토할부 이용 고객의 경우 카드별 기본 서비스로 제공되는 포인트, 캐쉬백, 마일리지, 청구할인 등은 중복 적용되지 않습니다.</p>
+										<p class="info-item">자세한 사항은 자동차금융 상담센터(1800-1221)로 문의 주시기 바랍니다.</p>
+										<p class="info-item">상품 신청 전 상품설명서 및 약관을 반드시 확인하시기 바랍니다.</p>
+										<p class="info-item">대출 시점에 신용도 변경에 따라 한도가 변경될 수 있으며 신청이 제한될 수 있습니다.</p>
+										<p class="info-item">대출기간에 따라 이용가능금액이 변동될 수 있습니다.</p>
+										<p class="info-item">중도상환 시 잔여대출기간에 따라 상환원금의 2%이내로 중도상환수수료가 발생합니다.</p>
+										<p class="info-item">금리인하요구권 및 대출계약 철회권에 대한 자세한 사항은 홈페이지에서 확인하시기 바랍니다.</p>
+										<p class="info-item">대출취급이 부적정한 경우 대출이 제한될 수 있습니다.</p>
+										<p class="info-item">분할상환금(원리금균등)과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환합니다.</p>
+										<p class="info-item">해당 상품은 취급수수료가 없습니다.</p>
+										<p class="info-item">금융소비자는 해당 상품에 대하여 설명을 받을 권리가 있으며, 그 설명을 듣고 내용을 충분히 이해한 후 거래하시기 바랍니다.</p>
+										<p class="info-item color-basic">연체이자율은 [약정이자율 +3%]이며, 법정 최고금리(20%) 이내에서 적용됩니다.</p>
+										<p class="info-item color-basic">상환능력에 비해 대출금이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</p>
+										<p class="info-item color-basic">신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</p>
+										<p class="info-item color-basic">일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</p>
+										<!-- 2022.03.10 문구 수정 -->
+										<p class="info-item type-presa">여신금융협회 심의필 제 2022-C1h-00096호 (2021.12.27 ~ 2022.12.26)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button">전화상담신청</a>
+								</li>
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary">한도조회</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <style>
+            .cls-1,.cls-5,.cls-9{fill:none}.cls-5,.cls-9{stroke:#2d3239;stroke-width:1.5px}.cls-3{fill:#2d3239}.cls-9{stroke-linecap:round}.cls-10{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_phone" transform="translate(-23.33 -750.768)">
+        <path id="사각형_7870" data-name="사각형 7870" class="cls-1" transform="translate(23.33 750.768)" d="M0 0h36v36H0z"/>
+        <g id="사각형_12097" data-name="사각형 12097" transform="translate(29.33 752.768)" style="stroke-width:1.5px;stroke:#2d3239;fill:#fff">
+            <rect class="cls-10" width="20" height="31" rx="5.5"/>
+            <rect class="cls-1" x=".75" y=".75" width="18.5" height="29.5" rx="4.75"/>
+        </g>
+        <path id="사각형_12101" data-name="사각형 12101" class="cls-3" transform="translate(30.58 777.768)" d="M0 0h13.5v1.5H0z"/>
+        <path id="사각형_12139" data-name="사각형 12139" class="cls-3" transform="translate(30.33 757.268)" d="M0 0h18v1.5H0z"/>
+        <g id="사각형_13452" data-name="사각형 13452" transform="rotate(90 -363.344 406.924)" style="stroke:#2d3239;fill:none">
+            <rect class="cls-10" width="1.5" height="8.5" rx=".75"/>
+            <rect class="cls-1" x=".5" y=".5" width=".5" height="7.5" rx=".25"/>
+        </g>
+        <g id="사각형_13454" data-name="사각형 13454" class="cls-5" transform="translate(35.831 762.268)">
+            <rect class="cls-10" width="7" height="7" rx="3.5"/>
+            <rect class="cls-1" x=".75" y=".75" width="5.5" height="5.5" rx="2.75"/>
+        </g>
+        <g id="그룹_12466" data-name="그룹 12466" transform="translate(-7 -16)">
+            <circle id="타원_1896" data-name="타원 1896" cx="8" cy="8" r="8" transform="translate(48.33 786.768)" style="fill:#fff"/>
+            <path id="패스_10995" data-name="패스 10995" d="M7 0a7 7 0 1 1-7 7 7 7 0 0 1 7-7z" transform="translate(51.33 787.768)" style="fill:#7dedf3"/>
+            <g id="타원_1441" data-name="타원 1441" class="cls-5" transform="translate(48.33 786.768)">
+                <circle class="cls-10" cx="8" cy="8" r="8"/>
+                <circle class="cls-1" cx="8" cy="8" r="7.25"/>
+            </g>
+            <g id="그룹_10611" data-name="그룹 10611" transform="translate(52.33 792.844)">
+                <path id="패스_2252" data-name="패스 2252" d="m3649.636 5413.028 1.548 4.424 1.548-4.424 1.548 4.424 1.548-4.424" transform="translate(-3648.751 -5413.028)" style="stroke-linejoin:round;stroke-linecap:round;stroke-width:1.5px;stroke:#2d3239;fill:none"/>
+                <path id="선_11" data-name="선 11" class="cls-9" transform="translate(0 1.769)" d="M0 0h1.327"/>
+                <path id="선_166" data-name="선 166" class="cls-9" transform="translate(6.636 1.769)" d="M0 0h1.327"/>
+            </g>
+        </g>
+    </g>
+</svg>

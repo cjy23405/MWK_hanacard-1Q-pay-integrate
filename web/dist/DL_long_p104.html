@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">장기카드대출 간편신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="total-box">
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">이용가능금액</dt>
+								<dd class="total-box-val">300<span class="total-box-unit">만원</span></dd>
+							</dl>
+							<!-- 상향대상 -->
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">이용가능금액<br /><a href="" class="ui-badge type-point ui-arrow type-white" role="button">상향 대상</a></dt>
+								<dd class="total-box-val">
+									300<span class="total-box-unit">만원</span><br />
+									<span class="ui-arrow-change"><span class="for-a11y">→</span></span
+									><span class="color-primary">400</span><span class="total-box-unit">만원</span>
+								</dd>
+							</dl>
+							<!-- //상향대상 -->
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">이자율(연)</dt>
+								<dd class="total-box-val">10.20<span class="total-box-unit">%</span></dd>
+							</dl>
+							<!-- 할인대상 -->
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">이자율(연)<br /><span class="ui-badge type-point">할인 대상</span></dt>
+								<dd class="total-box-val">
+									14.77<span class="total-box-unit">%</span><br />
+									<span class="ui-arrow-change"><span class="for-a11y">→</span></span
+									><span class="color-primary">6.9</span><span class="total-box-unit">%</span>
+								</dd>
+							</dl>
+							<!-- //할인대상 -->
+						</div>
+
+						<!-- 2021.01.21 : del : 이자율 할인 내역 삭제
+						<div class="accordion-list js-ui-accordion margin-top-25" data-once="true">
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">이자율 할인 내역</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<dl class="form-detail-list type-text-default">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">하나은행 결제계좌 할인율</dt>
+												<dd class="form-detail-group"><span class="color-primary">0.00%</span> p</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">하나원큐페이 결제 할인율</dt>
+												<dd class="form-detail-group"><span class="color-primary">0.00%</span> p</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불+할부 이용 할인율</dt>
+												<dd class="form-detail-group"><span class="color-primary">0.00%</span> p</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">마케팅 할인율</dt>
+												<dd class="form-detail-group"><span class="color-primary">0.00%</span> p</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						-->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="section-title">
+								<h2 class="title">카드선택</h2>
+							</div>
+
+							<div class="form-list margin-top-10">
+								<div class="form-item">
+									<div class="card-list">
+										<div class="ui-radio-group type-full">
+											<!-- DD : 이미지 없을 때 -->
+											<div class="ui-radio-block type-box">
+												<a href="" class="ui-label card-block" role="button">
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="card-image">
+														<span class="card-image-inner"></span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">[본인] 모두의 쇼핑</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</a>
+											</div>
+											<!-- //DD : 이미지 없을 때 -->
+
+											<!-- DD : 이미지 에러 -->
+											<div class="ui-radio-block type-box">
+												<a href="" class="ui-label card-block" role="button">
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">CLUB SK (클럽 SK) 카드</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</a>
+											</div>
+											<!-- //DD : 이미지 에러 -->
+
+											<!-- DD : 이미지 있을 때 -->
+											<div class="ui-radio-block type-box">
+												<a href="" class="ui-label card-block" role="button">
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">CLUB SK (클럽 SK) 카드</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</a>
+											</div>
+											<!-- //DD : 이미지 있을 때 -->
+										</div>
+									</div>
+								</div>
+								<!-- 카드 미보유 -->
+								<div class="type-none margin-bottom-minus-35">
+									<p class="item-text">신청 가능한 카드가 없습니다.</p>
+								</div>
+								<!-- //카드 미보유 -->
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									꼭 확인해 주세요!
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">대출시점의 신용도 변경 및 기타사항에 따라 이용이 제한될 수 있습니다.</li>
+										<li class="info-item">상품 이용 전 상품설명서 및 약관을 반드시 확인하시기 바랍니다.</li>
+										<li class="info-item">장기카드대출 이자율(최고 연 23.0%)은 신용도 및 이용실적에 따라 차등 적용됩니다.</li>
+										<li class="info-item">대출기간에 따라 이용가능금액이 변동될 수 있습니다.</li>
+										<li class="info-item">연체이자율(약정이율+최대 3%)은 회원별·이용상품별로 차등 적용되며, 법정 최고금리(24%)를 초과하지 않습니다.</li>
+										<li class="info-item">여신금융상품 이용시 귀하의 신용등급이 하락할 수 있습니다.</li>
+										<li class="info-item">신용카드 남용은 가계경제에 위협이 됩니다.</li>
+										<li class="info-item type-presa">[여신금융협회 심의필 제2019-L1h-00000호(2019.00.00)]</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

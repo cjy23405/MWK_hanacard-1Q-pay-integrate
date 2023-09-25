@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">이용내역 조회</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="total-amount type-no-line margin-bottom-none">
+								<div class="total-amount-head">
+									<h3 class="total-amount-title">잔여금액</h3>
+								</div>
+								<div class="total-amount-val">총 0 원</div>
+							</div>
+
+							<div class="usage-default-area">
+								<ul class="usage-default-list js-ui-accordion margin-top-10">
+									<!-- 이용내역 없는 경우 -->
+									<li class="type-none type-line">
+										<p class="item-text">이용내역이 없습니다.</p>
+									</li>
+									<!-- //이용내역 없는 경우 -->
+									<li class="usage-default-item">
+										<div class="usage-default-date">2022.06.29</div>
+										<div class="usage-default-group">
+											<div class="usage-default-block">
+												<div class="usage-default-left">
+													<div class="usage-default-title type-multi-ellipsis">가맹점명<br />두줄인 경우</div>
+												</div>
+												<div class="usage-default-right">
+													<div class="usage-default-sum">0 원</div>
+													<div class="usage-default-sum"><span class="basic-text">승인 50,000 원</span></div>
+												</div>
+											</div>
+											<div class="usage-default-block type-flex-column type-align-middle margin-top-none">
+												<div class="usage-default-left">
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item color-primary">지원가능</div>
+														<div class="usage-default-etc-item">신용 1234</div>
+														<div class="usage-default-etc-item">지원금 잔액 0원</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="usage-default-group margin-top-25">
+											<div class="usage-default-block">
+												<div class="usage-default-left">
+													<div class="usage-default-title type-multi-ellipsis">가맹점명</div>
+												</div>
+												<div class="usage-default-right">
+													<div class="usage-default-sum">10,000 원</div>
+													<div class="usage-default-sum"><span class="basic-text">승인 60,000 원</span></div>
+												</div>
+											</div>
+											<div class="usage-default-block type-flex-column type-align-middle margin-top-none">
+												<div class="usage-default-left">
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item color-primary">지원가능</div>
+														<div class="usage-default-etc-item">신용 1234</div>
+														<div class="usage-default-etc-item">지원금 잔액 0원</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="usage-default-group margin-top-25">
+											<div class="usage-default-block">
+												<div class="usage-default-left">
+													<div class="usage-default-title type-multi-ellipsis">가맹점명</div>
+												</div>
+												<div class="usage-default-right">
+													<div class="usage-default-sum">90,000 원</div>
+												</div>
+											</div>
+											<div class="usage-default-block type-flex-column type-align-middle margin-top-none">
+												<div class="usage-default-left">
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item color-primary">지원가능</div>
+														<div class="usage-default-etc-item">신용 1234</div>
+														<div class="usage-default-etc-item">지원금 잔액 0원</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-date">2022.07.01</div>
+										
+										<div class="usage-default-group margin-top-25">
+											<div class="usage-default-block">
+												<div class="usage-default-left">
+													<div class="usage-default-title type-multi-ellipsis">가맹점명</div>
+												</div>
+												<div class="usage-default-right">
+													<div class="usage-default-sum">-10,000 원</div>
+												</div>
+											</div>
+											<div class="usage-default-block margin-top-none">
+												<div class="usage-default-left">
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item color-wrong">지원불가</div>
+														<div class="usage-default-etc-item">신용 1234</div>
+														<div class="usage-default-etc-item">지원금 잔액 90,000원</div>
+													</div>
+												</div>
+												<div class="usage-default-right type-auto">
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item color-wrong">승인취소</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="usage-default-group margin-top-25">
+											<div class="usage-default-block">
+												<div class="usage-default-left">
+													<div class="usage-default-title type-multi-ellipsis">가맹점명</div>
+												</div>
+												<div class="usage-default-right">
+													<div class="usage-default-sum">10,000 원</div>
+												</div>
+											</div>
+											<div class="usage-default-block margin-top-none">
+												<div class="usage-default-left">
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item color-wrong">지원불가</div>
+														<div class="usage-default-etc-item">신용 1234</div>
+														<div class="usage-default-etc-item">지원금 잔액 90,000원</div>
+													</div>
+												</div>
+												<div class="usage-default-right type-auto">
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">
+															<del class="del-text color-blur">600,000 원</del>
+														</div>
+													</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item color-wrong">부분취소</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="usage-default-group margin-top-25">
+											<div class="usage-default-block">
+												<div class="usage-default-left">
+													<div class="usage-default-title type-multi-ellipsis">가맹점명</div>
+												</div>
+												<div class="usage-default-right">
+													<div class="usage-default-sum">10,000 원</div>
+												</div>
+											</div>
+											<div class="usage-default-block margin-top-none">
+												<div class="usage-default-left">
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item color-primary">지원가능</div>
+														<div class="usage-default-etc-item">신용 1234</div>
+														<div class="usage-default-etc-item">지원금 잔액 90,000원</div>
+													</div>
+												</div>
+												<div class="usage-default-right type-auto">
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">
+															<del class="del-text color-blur">600,000 원</del>
+														</div>
+													</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item color-wrong">부분취소</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<button type="button" class="ui-button ui-button-more">더보기</button>
+						</div>
+						<!-- //section -->
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

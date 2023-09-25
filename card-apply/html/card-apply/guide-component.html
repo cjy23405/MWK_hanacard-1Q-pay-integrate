@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>컴포넌트 가이드</title>
+
+		<meta charset="euc-kr" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<style>
+			*:focus {
+				outline: 1px dotted #999;
+			}
+			b {
+				margin-left: 10px;
+			}
+			body {
+				font-size: 1.6rem;
+				background: #fefefe;
+			}
+			h1.test-title {
+				font-size: 30px;
+				margin: 50px 50px;
+			}
+			h2.test-title {
+				margin: 0 0 20px;
+				font-size: 22px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #888;
+			}
+			h3.test-title {
+				margin: 0 0 10px;
+				font-size: 18px;
+			}
+			.test-title-sub {
+				margin-left: 10px;
+				font-size: 12px;
+				color: var(--wrong);
+			}
+			.test-section {
+				border-top: 2px solid #ddd;
+				padding: 50px 24px;
+			}
+			.test-section-sub + .test-section-sub {
+				margin-top: 20px;
+				border-top: 1px dashed #888;
+				padding-top: 20px;
+			}
+			.text-section-undecided {
+				opacity: 0.5;
+			}
+			.test-code {
+				border: 2px solid #ddd;
+				margin: 10px 0;
+				background: #fff;
+				padding: 10px;
+			}
+			.test-code:before {
+				content: 'ex.';
+				display: block;
+				font-size: 12px;
+			}
+			.test-description {
+				margin: 10px 0;
+				padding: 0 12px;
+			}
+			.test-links {
+				margin-left: -20px;
+			}
+			.test-links:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+			.test-links a {
+				display: block;
+				margin: 20px 0 0 20px;
+				float: left;
+				padding: 5px 15px;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 5px;
+				background: #333;
+			}
+			.test-links + h2.test-title {
+				margin-top: 20px;
+			}
+		</style>
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div style="display: table"></div>
+
+			<h1 class="test-title">Component</h1>
+
+			<div class="test-section">
+				<h2 class="test-title">uiJSCardApplyCommon</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">uiJSCardApplyCommon();</h3>
+					<div class="test-description">카드 신청 전용 ui 기능 관련 init 함수</div>
+				</div>
+			</div>
+
+			<!--
+			<div class="test-section">
+				<h2 class="test-title">uiJSCardApplyResize</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">uiJSCardApplyResize();</h3>
+					<div class="test-description">카드 신청 전용 ui 기능 관련 resize 함수</div>
+				</div>
+			</div>
+			-->
+
+			<div class="test-section test-section--form">
+				<style>
+					.test-section--form .test-button-wrap .ui-basic-button {
+						display: -webkit-inline-box;
+						display: -ms-inline-flexbox;
+						display: inline-flex;
+						vertical-align: top;
+						margin: 10px;
+						width: auto;
+					}
+				</style>
+				<h2 class="test-title">Form</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<div class="ui-form">
+						<dl class="ui-form-list">
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="name">항목명</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-input-block">
+												<input type="text" class="in-input" title="title" placeholder="Placeholder" data-focus-input-target="name" id="invalid1" />
+											</div>
+										</div>
+										<p class="guide-text">안내 텍스트 안내 텍스트 안내 텍스트 안내 텍스트</p>
+									</div>
+									<div class="ui-form-side">
+										<a href="" class="display-block basic-link normal-text font-weight-medium color-secondary">버튼 영역</a>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="name">항목명</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-input-block">
+												<input type="text" class="in-input" title="title" placeholder="Placeholder" data-focus-input-target="name" id="invalid2" />
+											</div>
+										</div>
+									</div>
+									<div class="ui-form-fix-side">
+										<a href="" class="display-block basic-link normal-text font-weight-medium color-secondary">버튼 영역</a>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="name">입력 된 인풋 항목명</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-input-block">
+												<input type="text" class="in-input" title="title" placeholder="Placeholder" data-focus-input-target="name" value="value" />
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-disabled">
+								<dt class="ui-form-key" data-focus-input="name">disabled 항목명</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-input-block">
+												<input type="text" class="in-input" title="title" placeholder="Placeholder" data-focus-input-target="name" disabled />
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-disabled">
+								<dt class="ui-form-key" data-focus-input="name">입력 된 disabled 인풋 항목명</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-input-block">
+												<input type="text" class="in-input" title="title" placeholder="Placeholder" data-focus-input-target="name" value="value" disabled />
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-only-select">
+								<dt class="ui-form-key" data-focus-input="name">셀렉트 항목명</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-select-block">
+												<button type="button" class="in-select" title="title" data-placeholder="Placeholder" data-focus-input-target="name" id="invalid3"></button>
+											</div>
+										</div>
+									</div>
+									<div class="ui-form-side">
+										<a href="" class="display-block basic-link normal-text font-weight-medium color-secondary">버튼 영역</a>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-only-select">
+								<dt class="ui-form-key" data-focus-input="name">입력 된 셀렉트 항목명</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-select-block">
+												<button type="button" class="in-select" title="title" data-placeholder="Placeholder" data-focus-input-target="name">option 1</button>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-only-select type-disabled">
+								<dt class="ui-form-key" data-focus-input="name">disabled 셀렉트 항목명</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-select-block">
+												<button type="button" class="in-select" title="title" data-placeholder="Placeholder" data-focus-input-target="name" disabled></button>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-only-select type-disabled">
+								<dt class="ui-form-key" data-focus-input="name">입력 된 disabled 셀렉트 항목명</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-select-block">
+												<button type="button" class="in-select" title="title" data-placeholder="Placeholder" data-focus-input-target="name" disabled>option 1</button>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="tel">휴대폰 번호</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell">
+													<div class="in-select-block input-width-tel-exchange">
+														<button type="button" class="in-select" title="휴대폰 번호 국번 선택" data-placeholder="선택" data-focus-input-target="tel" id="invalid4"></button>
+													</div>
+												</div>
+												<div class="flex-box-cell type-flexible">
+													<div class="in-input-block">
+														<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="‘-’ 제외하고 입력" id="invalid5" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="tel">휴대폰 번호</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell">
+													<div class="in-select-block input-width-tel-exchange">
+														<button type="button" class="in-select" title="휴대폰 번호 국번 선택" data-placeholder="선택" data-focus-input-target="tel">010</button>
+													</div>
+												</div>
+												<div class="flex-box-cell type-flexible">
+													<div class="in-input-block">
+														<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="‘-’ 제외하고 입력" value="12345678" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-disabled">
+								<dt class="ui-form-key" data-focus-input="tel">disabled 휴대폰 번호</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell">
+													<div class="in-select-block input-width-tel-exchange">
+														<button type="button" class="in-select" title="휴대폰 번호 국번 선택" data-placeholder="선택" data-focus-input-target="tel" disabled></button>
+													</div>
+												</div>
+												<div class="flex-box-cell type-flexible">
+													<div class="in-input-block">
+														<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="‘-’ 제외하고 입력" disabled />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-disabled">
+								<dt class="ui-form-key" data-focus-input="tel">disabled 휴대폰 번호</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell">
+													<div class="in-select-block input-width-tel-exchange">
+														<button type="button" class="in-select" title="휴대폰 번호 국번 선택" data-placeholder="선택" data-focus-input-target="tel" disabled>010</button>
+													</div>
+												</div>
+												<div class="flex-box-cell type-flexible">
+													<div class="in-input-block">
+														<input type="number" pattern="\d*" class="in-input" title="휴대폰 번호 입력" placeholder="‘-’ 제외하고 입력" value="12345678" disabled />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="id-card">주민번호</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell type-flexible">
+													<div class="in-input-block">
+														<input type="number" pattern="\d*" class="in-input" title="주민번호 앞자리 입력" placeholder="900101" data-focus-input-target="id-card" id="invalid6" />
+													</div>
+												</div>
+												<div class="flex-box-dash"></div>
+												<div class="flex-box-cell">
+													<div class="in-input-block type-no-delete input-width-one">
+														<input type="number" pattern="\d*" class="in-input" title="주민번호 뒤 첫자리 입력" placeholder="0" id="invalid7" />
+													</div>
+												</div>
+												<div class="flex-box-cell type-regular-margin">
+													<div class="flex-box-dot type-id-card-number"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="id-card">주민번호</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell type-flexible">
+													<div class="in-input-block">
+														<input type="number" pattern="\d*" class="in-input" title="주민번호 앞자리 입력" placeholder="900101" data-focus-input-target="id-card" value="941230" />
+													</div>
+												</div>
+												<div class="flex-box-dash"></div>
+												<div class="flex-box-cell">
+													<div class="in-input-block type-no-delete input-width-one">
+														<input type="number" pattern="\d*" class="in-input" title="주민번호 뒤 첫자리 입력" placeholder="0" value="2" />
+													</div>
+												</div>
+												<div class="flex-box-cell type-regular-margin">
+													<div class="flex-box-dot type-id-card-number"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-disabled">
+								<dt class="ui-form-key" data-focus-input="id-card">disabled 주민번호</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell type-flexible">
+													<div class="in-input-block">
+														<input type="number" pattern="\d*" class="in-input" title="주민번호 앞자리 입력" placeholder="900101" data-focus-input-target="id-card" disabled />
+													</div>
+												</div>
+												<div class="flex-box-dash"></div>
+												<div class="flex-box-cell">
+													<div class="in-input-block type-no-delete input-width-one">
+														<input type="number" pattern="\d*" class="in-input" title="주민번호 뒤 첫자리 입력" placeholder="0" disabled />
+													</div>
+												</div>
+												<div class="flex-box-cell type-regular-margin">
+													<div class="flex-box-dot type-id-card-number"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-disabled">
+								<dt class="ui-form-key" data-focus-input="id-card">disabled 주민번호</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell type-flexible">
+													<div class="in-input-block">
+														<input type="number" pattern="\d*" class="in-input" title="주민번호 앞자리 입력" placeholder="900101" data-focus-input-target="id-card" value="941230" disabled />
+													</div>
+												</div>
+												<div class="flex-box-dash"></div>
+												<div class="flex-box-cell">
+													<div class="in-input-block type-no-delete input-width-one">
+														<input type="number" pattern="\d*" class="in-input" title="주민번호 뒤 첫자리 입력" placeholder="0" value="2" disabled />
+													</div>
+												</div>
+												<div class="flex-box-cell type-regular-margin">
+													<div class="flex-box-dot type-id-card-number"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="mail">이메일</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell">
+													<div class="in-input-block input-width-mail-id">
+														<input type="text" class="in-input" title="이메일 아이디 입력" data-focus-input-target="mail" id="invalid8" />
+													</div>
+												</div>
+												<div class="flex-box-cell type-form-text">@</div>
+												<div class="flex-box-cell type-flexible">
+													<div class="in-select-block">
+														<button type="button" class="in-select" title="이메일 도메인 선택" data-placeholder="선택" id="invalid9"></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="mail">이메일</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell">
+													<div class="in-input-block input-width-mail-id">
+														<input type="text" class="in-input" title="이메일 아이디 입력" data-focus-input-target="mail" value="qwerty" />
+													</div>
+												</div>
+												<div class="flex-box-cell type-form-text">@</div>
+												<div class="flex-box-cell type-flexible">
+													<div class="in-select-block">
+														<button type="button" class="in-select" title="이메일 도메인 선택" data-placeholder="선택">gmail.com</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-disabled">
+								<dt class="ui-form-key" data-focus-input="mail">이메일</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell">
+													<div class="in-input-block input-width-mail-id">
+														<input type="text" class="in-input" title="이메일 아이디 입력" data-focus-input-target="mail" disabled />
+													</div>
+												</div>
+												<div class="flex-box-cell type-form-text">@</div>
+												<div class="flex-box-cell type-flexible">
+													<div class="in-select-block">
+														<button type="button" class="in-select" title="이메일 도메인 선택" data-placeholder="선택" disabled></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-disabled">
+								<dt class="ui-form-key" data-focus-input="mail">이메일</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="flex-box">
+												<div class="flex-box-cell">
+													<div class="in-input-block input-width-mail-id">
+														<input type="text" class="in-input" title="이메일 아이디 입력" data-focus-input-target="mail" value="qwerty" disabled />
+													</div>
+												</div>
+												<div class="flex-box-cell type-form-text">@</div>
+												<div class="flex-box-cell type-flexible">
+													<div class="in-select-block">
+														<button type="button" class="in-select" title="이메일 도메인 선택" data-placeholder="선택" disabled>gmail.com</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="name">통합검색</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-input-block type-center-delete">
+												<input type="search" class="in-input" title="우편번호 검색어 입력" placeholder="통합검색" data-focus-input-target="name" id="invalid1" />
+											</div>
+										</div>
+									</div>
+									<div class="ui-form-side">
+										<button type="button" class="ui-button ui-button-search">
+											<span class="for-a11y">검색</span>
+										</button>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item">
+								<dt class="ui-form-key" data-focus-input="name">통합검색</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-input-block type-center-delete">
+												<input type="search" class="in-input" title="우편번호 검색어 입력" placeholder="통합검색" data-focus-input-target="name" value="value" />
+											</div>
+										</div>
+									</div>
+									<div class="ui-form-side">
+										<button type="button" class="ui-button ui-button-search">
+											<span class="for-a11y">검색</span>
+										</button>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-disabled">
+								<dt class="ui-form-key" data-focus-input="name">통합검색 disabled</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-input-block type-center-delete">
+												<input type="search" class="in-input" title="우편번호 검색어 입력" placeholder="통합검색" data-focus-input-target="name" disabled />
+											</div>
+										</div>
+									</div>
+									<div class="ui-form-side">
+										<button type="button" class="ui-button ui-button-search" disabled>
+											<span class="for-a11y">검색</span>
+										</button>
+									</div>
+								</dd>
+							</div>
+							<div class="ui-form-item type-disabled">
+								<dt class="ui-form-key" data-focus-input="name">입력 된 통합검색 disabled</dt>
+								<dd class="ui-form-val">
+									<div class="ui-form-val-inner">
+										<div class="ui-form-contents">
+											<div class="in-input-block type-center-delete">
+												<input type="search" class="in-input" title="우편번호 검색어 입력" placeholder="통합검색" data-focus-input-target="name" value="검색어" disabled />
+											</div>
+										</div>
+									</div>
+									<div class="ui-form-side">
+										<button type="button" class="ui-button ui-button-search" disabled>
+											<span class="for-a11y">검색</span>
+										</button>
+									</div>
+								</dd>
+							</div>
+						</dl>
+					</div>
+
+					<div class="test-button-wrap">
+						<script>
+							function resetInvalid() {
+								$('#invalid4, #invalid5, #invalid6, #invalid7, #invalid8, #invalid9').uiFormInvalid(false);
+							}
+						</script>
+						<button type="button" class="ui-button ui-basic-button" onclick="$('#invalid1').uiFormInvalid(true, '인풋 1 에러 메세지\n줄바꿈은 \\n 이용');">인풋 1 에러 on</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="$('#invalid1').uiFormInvalid(false);">인풋 1 에러 off</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="$('#invalid2').uiFormInvalid(true, '인풋 2 에러 메세지');">인풋 2 에러 on</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="$('#invalid2').uiFormInvalid(false);">인풋 2 에러 off</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="$('#invalid3').uiFormInvalid(true, '셀렉트 1 에러 메세지');">셀렉트 1 에러 on</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="$('#invalid3').uiFormInvalid(false);">셀렉트 1 에러 off</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid4').uiFormInvalid(true, '휴대폰 번호 셀렉트 에러 메세지');">휴대폰 번호 셀렉트 에러 on</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid4').uiFormInvalid(false);">휴대폰 번호 셀렉트 에러 off</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid5').uiFormInvalid(true, '휴대폰 번호 인풋 에러 메세지');">휴대폰 번호 인풋 에러 on</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid5').uiFormInvalid(false);">휴대폰 번호 인풋 에러 off</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid6').uiFormInvalid(true, '주민번호 앞자리 에러 메세지');">주민번호 앞자리 에러 on</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid6').uiFormInvalid(false);">주민번호 앞자리 에러 off</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid7').uiFormInvalid(true, '주민번호 뒷자리 에러 메세지');">주민번호 뒷자리 에러 on</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid7').uiFormInvalid(false);">주민번호 뒷자리 에러 off</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid8').uiFormInvalid(true, '이메일 아이디 에러 메세지');">이메일 아이디 에러 on</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid8').uiFormInvalid(false);">이메일 아이디 에러 off</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid9').uiFormInvalid(true, '이메일 도메인 에러 메세지');">이메일 도메인 에러 on</button>
+						<button type="button" class="ui-button ui-basic-button" onclick="resetInvalid(); $('#invalid9').uiFormInvalid(false);">이메일 도메인 에러 off</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--flex-box">
+				<h2 class="test-title">Flex box</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="flex-box">
+						<div class="flex-box-cell">
+							<div style="width: 40px; height: 40px; background-color: #ddd"></div>
+						</div>
+						<div class="flex-box-cell">
+							<div style="width: 100px; height: 40px; background-color: #ddd"></div>
+						</div>
+						<div class="flex-box-cell type-flexible">
+							<div style="height: 40px; background-color: #ddd"></div>
+						</div>
+						<div class="flex-box-cell">
+							<div style="width: 100px; height: 40px; background-color: #ddd"></div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">cell margin</h3>
+					<div class="flex-box">
+						<div class="flex-box-cell type-flexible">
+							<div style="height: 40px; background-color: #ddd">Default (5px)</div>
+						</div>
+						<div class="flex-box-cell type-flexible">
+							<div style="height: 40px; background-color: #ddd">Default (5px)</div>
+						</div>
+						<div class="flex-box-cell type-flexible type-no-margin">
+							<div style="height: 40px; background-color: #ddd">type-no-margin (0px)</div>
+						</div>
+						<div class="flex-box-cell type-flexible type-regular-margin">
+							<div style="height: 40px; background-color: #ddd">type-regular-margin (8px)</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--flex-box">
+				<style>
+					.type-grid + .type-grid {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Checkbox</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-form-check-block">
+						<input type="checkbox" class="ui-checkbox" id="checkbox1" />
+						<label for="checkbox1" class="ui-label">
+							<span class="ui-check-object"></span>
+							<span class="ui-label-text">dafault</span>
+						</label>
+					</div>
+					<div class="ui-form-check-block">
+						<input type="checkbox" class="ui-checkbox" id="checkbox2" checked />
+						<label for="checkbox2" class="ui-label">
+							<span class="ui-check-object"></span>
+							<span class="ui-label-text">checked<br />2 line label</span>
+						</label>
+					</div>
+					<!-- 디자인 대기 -->
+					<!-- <div class="ui-form-check-block">
+						<input type="checkbox" class="ui-checkbox" id="checkbox3" disabled />
+						<label for="checkbox3" class="ui-label">
+							<span class="ui-check-object"></span>
+							<span class="ui-label-text">disabled<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-form-check-block">
+						<input type="checkbox" class="ui-checkbox" id="checkbox4" checked disabled />
+						<label for="checkbox4" class="ui-label">
+							<span class="ui-check-object"></span>
+							<span class="ui-label-text">disabled + checked<br />2 line label</span>
+						</label>
+					</div> -->
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">large</h3>
+					<div class="ui-form-check-block type-large">
+						<input type="checkbox" class="ui-checkbox" id="checkbox5" />
+						<label for="checkbox5" class="ui-label">
+							<span class="ui-check-object"></span>
+							<span class="ui-label-text">dafault</span>
+						</label>
+					</div>
+					<div class="ui-form-check-block type-large">
+						<input type="checkbox" class="ui-checkbox" id="checkbox6" checked />
+						<label for="checkbox6" class="ui-label">
+							<span class="ui-check-object"></span>
+							<span class="ui-label-text">checked<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-form-check-block type-large">
+						<input type="checkbox" class="ui-checkbox" id="checkbox7" disabled />
+						<label for="checkbox7" class="ui-label">
+							<span class="ui-check-object"></span>
+							<span class="ui-label-text">disabled<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-form-check-block type-large">
+						<input type="checkbox" class="ui-checkbox" id="checkbox8" checked disabled />
+						<label for="checkbox8" class="ui-label">
+							<span class="ui-check-object"></span>
+							<span class="ui-label-text">disabled + checked<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="test-section-sub">
+					<h3 class="test-title">Grid (radio, checkbox)</h3>
+					<div class="ui-radio-group type-grid type-col2">
+						<div class="ui-form-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-1" checked />
+							<label for="radioGrid1-1" class="ui-label">
+								<span class="ui-label-text">checked</span>
+							</label>
+						</div>
+						<div class="ui-form-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-2" />
+							<label for="radioGrid1-2" class="ui-label">
+								<span class="ui-label-text">dafault</span>
+							</label>
+						</div>
+						<div class="ui-form-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-3" />
+							<label for="radioGrid1-3" class="ui-label">
+								<span class="ui-label-text">dafault</span>
+							</label>
+						</div>
+						<div class="ui-form-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-4" />
+							<label for="radioGrid1-4" class="ui-label">
+								<span class="ui-label-text">dafault<br />2 line label</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="ui-checkbox-group type-grid type-col3">
+						<div class="ui-form-check-block type-box">
+							<input type="checkbox" class="ui-checkbox" id="checkbox9" checked />
+							<label for="checkbox9" class="ui-label">
+								<span class="ui-label-text">checked</span>
+							</label>
+						</div>
+						<div class="ui-form-check-block type-box">
+							<input type="checkbox" class="ui-checkbox" id="checkbox10" />
+							<label for="checkbox10" class="ui-label">
+								<span class="ui-label-text">dafault</span>
+							</label>
+						</div>
+						<div class="ui-form-check-block type-box">
+							<input type="checkbox" class="ui-checkbox" id="checkbox11" />
+							<label for="checkbox11" class="ui-label">
+								<span class="ui-label-text">dafault</span>
+							</label>
+						</div>
+						<div class="ui-form-check-block type-box">
+							<input type="checkbox" class="ui-checkbox" id="checkbox12" />
+							<label for="checkbox12" class="ui-label">
+								<span class="ui-label-text">dafault<br />2 line label</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">Ranking badge</h2>
+				<span class="ranking-badge ranking-01">안심</span>
+				<span class="ranking-badge ranking-02">다소안심</span>
+				<span class="ranking-badge ranking-03">보통</span>
+				<span class="ranking-badge ranking-04">신중</span>
+				<span class="ranking-badge ranking-05">주의</span>
+				<ul class="ranking-badge-list margin-top-10">
+					<li class="ranking-badge-item"><span class="ranking-badge ranking-01">안심</span></li>
+					<li class="ranking-badge-item"><span class="ranking-badge ranking-02">다소안심</span></li>
+					<li class="ranking-badge-item"><span class="ranking-badge ranking-03">보통</span></li>
+					<li class="ranking-badge-item"><span class="ranking-badge ranking-04">신중</span></li>
+					<li class="ranking-badge-item"><span class="ranking-badge ranking-05">주의</span></li>
+				</ul>
+			</div>
+
+			<!--
+			<div class="test-section test-section--abc">
+				<style>
+					/* // */
+				</style>
+				<h2 class="test-title">Title</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Sub Title</h3>
+					
+					< !-- // -- >
+				</div>
+			</div>
+			-->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

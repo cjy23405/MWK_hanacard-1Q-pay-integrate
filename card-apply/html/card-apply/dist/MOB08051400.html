@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-hana-bank-foreign-currency-account">하나은행 외화계좌 입력 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 하나은행 외화계좌 입력 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select is-not-background-close" data-layer="layer-hana-bank-foreign-currency-account">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">하나은행 외화계좌를 입력해주세요</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<div class="page-section">
+										<div class="section-contents">
+											<div class="ui-form">
+												<dl class="ui-form-list">
+													<!-- 2022.11.30 : mod : .ui-form-item 의 .type-inputed 클래스 삭제 -->
+													<div class="ui-form-item">
+														<dt class="ui-form-key" data-focus-input="name">하나 밀리언달러 통장 계좌번호</dt>
+														<dd class="ui-form-val">
+															<div class="ui-form-val-inner">
+																<div class="ui-form-contents">
+																	<div class="in-input-block">
+																		<input type="number" pattern="\d*" class="in-input" title="하나 밀리언달러 통장 계좌번호 입력" placeholder="- 없이 입력" data-focus-input-target="name" />
+																	</div>
+																</div>
+															</div>
+														</dd>
+													</div>
+												</dl>
+
+												<div class="terms-area">
+													<div class="terms-item">
+														<div class="ui-form-check-block type-large type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" />
+															<label for="selectCheckbox1-1" class="ui-label">
+																<span class="ui-check-object"></span>
+																<span class="ui-label-text">달러(USD)결제 서비스 이용 동의</span>
+															</label>
+															<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+													<div class="terms-item margin-top-10">
+														<div class="ui-form-check-block type-large type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2" />
+															<label for="selectCheckbox1-2" class="ui-label">
+																<span class="ui-check-object"></span>
+																<span class="ui-label-text">자동이체 출금 동의</span>
+															</label>
+															<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 하나은행 외화계좌 입력 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-hana-bank-foreign-currency-account');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

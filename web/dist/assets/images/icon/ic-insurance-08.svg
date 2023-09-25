@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-1{fill:#d2d2d2;opacity:0}.cls-2,.cls-4{fill:none}.cls-3,.cls-5{fill:#fff}.cls-3,.cls-4,.cls-5{stroke:#2d3239;stroke-width:1.5px}.cls-3,.cls-4{stroke-linecap:round}.cls-3{stroke-linejoin:round}.cls-10{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_insurance_02" transform="translate(-826 -789)">
+        <path id="사각형_7870-2" data-name="사각형 7870" class="cls-2" transform="translate(830 793)" d="M0 0h36v36H0z"/>
+        <path id="합치기_313" data-name="합치기 313" class="cls-3" d="M1.25 21.679A1.25 1.25 0 0 1 0 20.429V6.389a1.25 1.25 0 0 1 1.25-1.25h5.668V2.507L11.692 0l4.774 2.507v2.632h5.667a1.25 1.25 0 0 1 1.25 1.25v14.04a1.25 1.25 0 0 1-1.25 1.25z" transform="translate(831.866 801.237)"/>
+        <path id="선_574" data-name="선 574" class="cls-4" transform="translate(843.506 794.685)" d="M0 0v5.964"/>
+        <path id="패스_12786" data-name="패스 12786" class="cls-3" d="m874.5 838.234 5.835-1.823-5.835-2.911z" transform="translate(-30.994 -38.815)"/>
+        <g id="타원_2103" data-name="타원 2103" class="cls-5" transform="translate(840.707 805.438)">
+            <circle class="cls-10" cx="2.852" cy="2.852" r="2.852"/>
+            <circle class="cls-2" cx="2.852" cy="2.852" r="2.102"/>
+        </g>
+        <g id="사각형_17028" data-name="사각형 17028" class="cls-5">
+            <path class="cls-10" d="M3.422 0a3.422 3.422 0 0 1 3.422 3.422v6.844H0V3.422A3.422 3.422 0 0 1 3.422 0z" transform="translate(840.136 813.506)"/>
+            <path class="cls-2" d="M3.422.75a2.672 2.672 0 0 1 2.672 2.672v6.094H.75V3.422A2.672 2.672 0 0 1 3.422.75z" transform="translate(840.136 813.506)"/>
+        </g>
+        <path id="선_582" data-name="선 582" class="cls-4" transform="translate(835.5 810.657)" d="M0 0v.969"/>
+        <path id="선_587" data-name="선 587" class="cls-4" transform="translate(835.5 815.793)" d="M0 0v.97"/>
+        <path id="선_583" data-name="선 583" class="cls-4" transform="translate(837.781 810.657)" d="M0 0v.969"/>
+        <path id="선_586" data-name="선 586" class="cls-4" transform="translate(837.781 815.793)" d="M0 0v.97"/>
+        <path id="선_584" data-name="선 584" class="cls-4" transform="translate(849.4 810.657)" d="M0 0v.969"/>
+        <path id="선_585" data-name="선 585" class="cls-4" transform="translate(851.681 810.657)" d="M0 0v.969"/>
+        <g id="그룹_13446" data-name="그룹 13446" transform="translate(807.92 43.232)">
+            <path id="패스_12225" data-name="패스 12225" d="M0 2.2C.328 1.264 6.228-1 7.158-1s6.708 2.551 7.154 3.2-.422 5.6-1.683 8S8.258 15 7.158 15s-4.246-2.583-5.471-4.8S-.32 3.136 0 2.2z" transform="translate(40.4 770.768)" style="fill:#fff"/>
+            <path id="패스_12149" data-name="패스 12149" d="M0 2c.29-.877 5.58-3 6.415-3s6.014 2.392 6.414 3-.379 5.252-1.509 7.5S7.132 14 6.411 14 2.6 11.578 1.506 9.5-.295 2.877 0 2z" transform="translate(43.4 771.268)" style="fill:#7dedf3"/>
+            <path id="패스_12150" data-name="패스 12150" d="m-10170 5361.4 2.063 2.1 3.437-3.5" transform="translate(10215.08 -4584.232)" style="stroke-linejoin:round;stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none"/>
+            <g id="패스_12151" data-name="패스 12151" style="fill:none">
+                <path class="cls-10" d="M0 2.2C.328 1.264 6.228-1 7.158-1s6.708 2.551 7.154 3.2-.422 5.6-1.683 8S8.258 15 7.158 15s-4.246-2.583-5.471-4.8S-.32 3.136 0 2.2z" transform="translate(40.4 770.768)"/>
+                <path d="M7.146.51c-.368.074-1.477.41-2.997 1.033-1.541.633-2.364 1.093-2.72 1.331.001.46.078 1.417.35 2.77C2.1 7.24 2.557 8.671 3 9.474c.44.797 1.284 1.79 2.257 2.655.92.816 1.616 1.225 1.91 1.346.295-.112.983-.497 1.873-1.272.985-.859 1.809-1.843 2.26-2.701.454-.862.923-2.302 1.256-3.852.272-1.268.362-2.158.373-2.621-.467-.278-1.404-.763-2.71-1.34C8.642.99 7.527.598 7.146.51M7.158-1c.93 0 6.709 2.551 7.154 3.2.445.649-.422 5.602-1.683 8-1.261 2.398-4.371 4.8-5.47 4.8-1.1 0-4.247-2.583-5.471-4.8C.463 7.983-.32 3.136.004 2.2.328 1.264 6.228-1 7.158-1z" style="fill:#2d3239;stroke:none" transform="translate(40.4 770.768)"/>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<h1 class="header-title">혜택</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-push" role="button"><span class="for-a11y">알림</span></a>
+							<!-- DD : 신규 알림이 있으면 is-new 클래스 값 추가 -->
+							<a href="" class="header-button type-push is-new" role="button"><span class="for-a11y">알림</span></a>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- 2022.03.25 : mod : type-my-results 클래스 값 추가 -->
+					<div class="page-contents type-my-results">
+						<!-- 2022.01.28 : mod : .ui-tab 에 type-bottom-margin-none 클래스 값 제거 -->
+						<div class="ui-tab type-nav">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">기본 혜택</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">받은 혜택</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">실적</a>
+								</li>
+							</ul>
+						</div>
+
+						<h2 class="for-a11y">실적</h2>
+
+						<!-- 2022.01.28 : mod : .page-section 에 type-line 클래스 값 제거 -->
+						<!-- 2022.03.25 : mod : is-skeleton 클래스 값 추가 -->
+						<section class="page-section is-skeleton">
+							<div class="section-title margin-bottom-25">
+								<h3 class="title">카드실적</h3>
+							</div>
+							<div class="section-contents">
+								<!-- 2022.03.25 : add : 스켈레톤 마크업 추가 -->
+								<div class="skeleton-before">
+									<div class="card-list-area">
+										<div class="card-list">
+											<div class="card-item type-buttons-margin">
+												<div class="card-block ui-arrow-block">
+													<div class="card-image">
+														<div class="card-image-inner"></div>
+													</div>
+													<div class="card-info">
+														<span class="card-name"></span>
+														<div class="card-number"></div>
+													</div>
+												</div>
+												<div class="point-progress type-secondary type-slim">
+													<div class="point-progress-object">
+														<div class="point-progress-object-bar"></div>
+													</div>
+													<div class="point-progress-gradation">
+														<div class="point-progress-gradation-item">
+															<div class="point-progress-gradation-item-text"></div>
+														</div>
+														<div class="point-progress-gradation-item type-custom" style="left: 50%">
+															<div class="point-progress-gradation-item-text"></div>
+														</div>
+														<div class="point-progress-gradation-item">
+															<div class="point-progress-gradation-item-text"></div>
+														</div>
+													</div>
+												</div>
+												<div class="ui-buttons">
+													<div class="ui-buttons-list">
+														<div class="ui-buttons-item">
+															<span class="skeleton-block"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- 2022.03.25 : add : 스켈레톤 마크업 추가 -->
+								<!-- 2022.03.25 : mod : .skeleton-after 추가 -->
+								<div class="skeleton-after">
+									<div class="card-list-area">
+										<ul class="card-list">
+											<li class="card-item type-buttons-margin">
+												<button type="button" class="card-block ui-arrow-block">
+													<span class="for-a11y">카드 상세정보 보기</span>
+													<!-- DD : 이미지 없을 때 -->
+													<div class="card-image">
+														<div class="card-image-inner"></div>
+													</div>
+													<div class="card-info">
+														<span class="card-name">모두의 건강</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</button>
+												<!-- 2022.05.19 : mod : role, aria-label 속성 추가 (aria-label 속성 값 데이터 반영 부탁드립니다.) -->
+												<div class="point-progress type-secondary type-slim" role="img" aria-label="실적 구간 15만원, 30만원. 현재 위치 96,000원">
+													<div class="point-progress-object">
+														<div class="point-progress-object-bar" style="width: 32%"></div>
+													</div>
+													<div class="point-progress-gradation">
+														<div class="point-progress-gradation-item">
+															<div class="point-progress-gradation-item-text">0 원</div>
+														</div>
+														<div class="point-progress-gradation-item type-custom" style="left: 50%">
+															<div class="point-progress-gradation-item-text">15만원</div>
+														</div>
+														<div class="point-progress-gradation-item">
+															<div class="point-progress-gradation-item-text">30만원</div>
+														</div>
+													</div>
+												</div>
+												<div class="ui-buttons">
+													<ul class="ui-buttons-list">
+														<li class="ui-buttons-item">
+															<a href="" class="ui-button ui-basic-button type-secondary type-mini" role="button">1Q Zone 실적확인</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="card-item type-buttons-margin">
+												<button type="button" class="card-block ui-arrow-block">
+													<span class="for-a11y">카드 상세정보 보기</span>
+													<!-- DD : 이미지 에러 -->
+													<div class="card-image">
+														<div class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<div class="card-info">
+														<span class="card-name">아멕스 아시아나클럽 카드</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</button>
+												<!-- 2022.05.19 : mod : role, aria-label 속성 추가 (aria-label 속성 값 데이터 반영 부탁드립니다.) -->
+												<div class="point-progress type-secondary type-slim" role="img" aria-label="실적 구간 30만원, 100만원, 150만원, 200만원. 현재 위치 640,000원">
+													<div class="point-progress-object">
+														<div class="point-progress-object-bar" style="width: 32%"></div>
+													</div>
+													<div class="point-progress-gradation">
+														<div class="point-progress-gradation-item">
+															<div class="point-progress-gradation-item-text">0 원</div>
+														</div>
+														<div class="point-progress-gradation-item type-custom" style="left: 15%">
+															<div class="point-progress-gradation-item-text">30만원</div>
+														</div>
+														<div class="point-progress-gradation-item type-custom" style="left: 50%">
+															<div class="point-progress-gradation-item-text">100만원</div>
+														</div>
+														<div class="point-progress-gradation-item type-custom" style="left: 75%">
+															<div class="point-progress-gradation-item-text">150만원</div>
+														</div>
+														<div class="point-progress-gradation-item">
+															<div class="point-progress-gradation-item-text">200만원</div>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="card-item type-buttons-margin">
+												<button type="button" class="card-block ui-arrow-block">
+													<span class="for-a11y">카드 상세정보 보기</span>
+													<!-- DD : 이미지 있을 때 -->
+													<div class="card-image">
+														<div class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<div class="card-info">
+														<span class="card-name">Multi Living</span>
+														<div class="card-number"><span class="card-number-item">카드실적을 확인해보세요.</span></div>
+													</div>
+												</button>
+												<div class="ui-buttons">
+													<ul class="ui-buttons-list">
+														<li class="ui-buttons-item">
+															<a href="" class="ui-button ui-basic-button type-quaternary type-mini" role="button">실적확인</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+
+									<button type="button" class="ui-button ui-button-more">더보기</button>
+								</div>
+								<!-- //2022.03.25 : mod : .skeleton-after 추가 -->
+							</div>
+						</section>
+
+						<!-- 2022.01.28 : mod : 위치 변경 및 구성 변경 -->
+						<section class="page-section type-line">
+							<a href="" class="section-title margin-bottom-25">
+								<h3 class="title type-flexible">우수회원 실적</h3>
+								<div class="ui-arrow type-medium type-default-align"></div>
+							</a>
+							<!-- 2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+							<div class="rating-card type-outline is-skeleton">
+								<dl class="rating-card-item type-current">
+									<dt class="rating-card-key">현재 등급</dt>
+									<dd class="rating-card-val">
+										<div class="skeleton-before"><span class="skeleton-block"></span></div>
+										<div class="skeleton-after"><span class="color-secondary">Royal</span></div>
+									</dd>
+								</dl>
+								<dl class="rating-card-item type-next">
+									<dt class="rating-card-key">내년 예상</dt>
+									<dd class="rating-card-val">
+										<div class="skeleton-before"><span class="skeleton-block"></span></div>
+										<div class="skeleton-after"><span class="color-primary">Classic</span></div>
+									</dd>
+								</dl>
+							</div>
+							<!-- //2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+						</section>
+
+						<!-- 2022.03.25 : mod : is-skeleton 클래스 값 추가 -->
+						<section class="page-section type-line is-skeleton">
+							<div class="section-title margin-bottom-40">
+								<h3 class="title">김하나님의 종합점수</h3>
+							</div>
+							<div class="section-contents">
+								<!-- 2022.03.25 : add : 스켈레톤 마크업 추가 -->
+								<div class="skeleton-before">
+									<div class="point-progress">
+										<div class="point-progress-object">
+											<div class="point-progress-object-bar"></div>
+										</div>
+										<div class="point-progress-gradation">
+											<div class="point-progress-gradation-item">
+												<div class="point-progress-gradation-item-text"></div>
+											</div>
+											<div class="point-progress-gradation-item type-custom" style="left: 50%">
+												<div class="point-progress-gradation-item-text"></div>
+											</div>
+											<div class="point-progress-gradation-item">
+												<div class="point-progress-gradation-item-text"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //2022.03.25 : add : 스켈레톤 마크업 추가 -->
+								<!-- 2022.03.25 : mod : .skeleton-after 추가 -->
+								<div class="skeleton-after">
+									<!-- 2022.05.19 : mod : role, aria-label 속성 추가 (aria-label 속성 값 데이터 반영 부탁드립니다.) -->
+									<div class="point-progress" role="img" aria-label="1,690점">
+										<div class="point-progress-object">
+											<div class="point-progress-object-bar" style="width: 78%">
+												<div class="chart-bubble">
+													<div class="chart-bubble-text">1,690점</div>
+												</div>
+											</div>
+										</div>
+										<div class="point-progress-gradation">
+											<div class="point-progress-gradation-item">
+												<div class="point-progress-gradation-item-text">0</div>
+											</div>
+											<!-- 2022.03.18 : mod : 위치 지정 방법 변경 -->
+											<div class="point-progress-gradation-item type-custom" style="left: 50%">
+												<div class="point-progress-gradation-item-text">1,500</div>
+											</div>
+											<!-- //2022.03.18 : mod : 위치 지정 방법 변경 -->
+											<div class="point-progress-gradation-item">
+												<div class="point-progress-gradation-item-text">3,000</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="js-ui-accordion">
+								<!-- 2022.03.25 : add : 스켈레톤 마크업 추가 -->
+								<div class="skeleton-before">
+									<div class="page-section type-accordion margin-top-35">
+										<div class="section-title">
+											<div class="title"></div>
+											<div class="ui-button section-title-opener js-ui-accordion__opener"></div>
+										</div>
+									</div>
+								</div>
+								<!-- //2022.03.25 : add : 스켈레톤 마크업 추가 -->
+								<!-- 2022.03.25 : mod : .skeleton-after 추가 -->
+								<div class="skeleton-after">
+									<section class="page-section type-accordion margin-top-35 js-ui-accordion__item">
+										<div class="section-title">
+											<h3 class="title">상세 점수</h3>
+											<button type="button" class="ui-button section-title-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="section-accordion-layer js-ui-accordion__layer">
+											<div class="section-contents">
+												<div class="check-area">
+													<div class="form-detail-block">
+														<dl class="form-detail-list">
+															<div class="form-detail-item">
+																<dt class="form-detail-title">카드 이용 점수</dt>
+																<dd class="form-detail-group">1,050점</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">우대 점수</dt>
+																<dd class="form-detail-group">640점</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">최근 6개월 중 이용한 기간</dt>
+																<dd class="form-detail-group">5개월</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">프리미엄 카드 보유 여부</dt>
+																<dd class="form-detail-group">N</dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+						</section>
+						<!-- //2022.01.28 : mod : 위치 변경 및 구성 변경 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- 2022.03.25 : add : 스켈레톤 테스트 스크립트 추가 -->
+		<script>
+			// DD : 스켈레톤 테스트
+			$(window).on('load', function () {
+				setTimeout(function () {
+					$('.page-section, .rating-card').removeClass('is-skeleton');
+				}, 1000);
+			});
+		</script>
+		<!-- //2022.03.25 : add : 스켈레톤 테스트 스크립트 추가 -->
+		<!-- //script -->
+	</body>
+</html>

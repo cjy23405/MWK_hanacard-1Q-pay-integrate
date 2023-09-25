@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<h1 class="header-title">혜택</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-push" role="button"><span class="for-a11y">알림</span></a>
+							<!-- DD : 신규 알림이 있으면 is-new 클래스 값 추가 -->
+							<a href="" class="header-button type-push is-new" role="button"><span class="for-a11y">알림</span></a>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- 2022.03.25 : mod : type-my-benefit 클래스 값 추가 -->
+					<div class="page-contents type-my-benefit">
+						<div class="ui-tab type-nav">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">기본 혜택</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">받은 혜택</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">실적</a>
+								</li>
+							</ul>
+						</div>
+
+						<h2 class="for-a11y">받은 혜택</h2>
+
+						<div class="ui-radio-group type-toggle">
+							<div class="ui-radio-block">
+								<input type="radio" class="ui-radio" name="radioToggle1" id="radioToggle1-1" data-checkbox-tab="radioToggle1-1" />
+								<label for="radioToggle1-1" class="ui-label">
+									<span class="ui-label-text">이달의 혜택</span>
+								</label>
+							</div>
+							<div class="ui-radio-block">
+								<input type="radio" class="ui-radio" name="radioToggle1" id="radioToggle1-2" data-checkbox-tab="radioToggle1-2" checked />
+								<label for="radioToggle1-2" class="ui-label">
+									<span class="ui-label-text">카드별 혜택</span>
+								</label>
+							</div>
+						</div>
+
+						<!-- 2022.01.28 : mad : 구성 변경 -->
+
+						<!-- Case : 청구 단위 1개 -->
+						<!-- 2022.03.25 : mod : is-skeleton 클래스 값 추가 -->
+						<div class="ui-select-block type-card margin-top-25 is-skeleton">
+							<!-- 2022.03.25 : add : 스켈레톤 마크업 추가 -->
+							<div class="ui-button ui-select skeleton-before">
+								<span class="card-image"><span class="card-image-inner"></span></span><span class="skeleton-block"></span>
+							</div>
+							<!-- //2022.03.25 : add : 스켈레톤 마크업 추가 -->
+							<!-- 2022.03.25 : mod : skeleton-after 클래스 값 추가 -->
+							<button type="button" class="ui-button ui-select skeleton-after" title="카드 선택">
+								<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+								<!-- DD : 이미지 없을 때
+								<span class="card-image"><span class="card-image-inner"></span></span>[본인123] 아멕스 아시아나클럽 카드
+								-->
+
+								<!-- DD : 이미지 에러
+								<span class="card-image"
+									><span class="card-image-inner"><img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" /></span></span
+								>[본인123] 아멕스 아시아나클럽 카드
+								-->
+
+								<!-- DD : 이미지 있을 때 -->
+								<span class="card-image"
+									><span class="card-image-inner">
+										<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+										<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" /></span></span
+								>[본인123] 아멕스 아시아나클럽 카드
+								<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+							</button>
+						</div>
+						<!-- //Case : 청구 단위 1개 -->
+
+						<!-- Case : 청구 단위 2개 -->
+						<!-- 2022.03.25 : mod : is-skeleton 클래스 값 추가 -->
+						<div class="card-select-tab margin-top-25 js-ui-tab-panel is-skeleton">
+							<ul class="card-select-tab-list">
+								<li class="card-select-tab-item">
+									<a href="" class="card-select-tab-link" data-tab-open="tab1">
+										<span class="card-select-tab-text">하나카드</span>
+									</a>
+								</li>
+								<li class="card-select-tab-item">
+									<a href="" class="card-select-tab-link" data-tab-open="tab2">
+										<span class="card-select-tab-text">(구)외환카드</span>
+									</a>
+								</li>
+							</ul>
+							<div class="card-select-tab-panel" data-tab="tab1">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h3 class="for-a11y">하나카드</h3>
+								<div class="ui-select-block type-card">
+									<!-- 2022.03.25 : add : 스켈레톤 마크업 추가 -->
+									<div class="ui-button ui-select skeleton-before">
+										<span class="card-image"><span class="card-image-inner"></span></span><span class="skeleton-block"></span>
+									</div>
+									<!-- //2022.03.25 : add : 스켈레톤 마크업 추가 -->
+									<!-- 2022.03.25 : mod : skeleton-after 클래스 값 추가 -->
+									<button type="button" class="ui-button ui-select skeleton-after" title="카드 선택">
+										<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+										<!-- DD : 이미지 없을 때
+										<span class="card-image"><span class="card-image-inner"></span></span>[본인123] 아멕스 아시아나클럽 카드
+										-->
+
+										<!-- DD : 이미지 에러
+										<span class="card-image"
+											><span class="card-image-inner"><img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" /></span></span
+										>[본인123] 아멕스 아시아나클럽 카드
+										-->
+
+										<!-- DD : 이미지 있을 때 -->
+										<span class="card-image"
+											><span class="card-image-inner">
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" /></span></span
+										>[본인123] 아멕스 아시아나클럽 카드
+										<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+									</button>
+								</div>
+							</div>
+							<div class="card-select-tab-panel" data-tab="tab2">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h3 class="for-a11y">(구)외환카드</h3>
+								<div class="ui-select-block type-card">
+									<!-- 2022.03.25 : add : 스켈레톤 마크업 추가 -->
+									<div class="ui-button ui-select skeleton-before">
+										<span class="card-image"><span class="card-image-inner"></span></span><span class="skeleton-block"></span>
+									</div>
+									<!-- //2022.03.25 : add : 스켈레톤 마크업 추가 -->
+									<!-- 2022.03.25 : mod : skeleton-after 클래스 값 추가 -->
+									<button type="button" class="ui-button ui-select color-blur-more skeleton-after" title="카드 선택">조회 가능한 카드가 없습니다.</button>
+								</div>
+							</div>
+						</div>
+						<!-- //Case : 청구 단위 2개 -->
+
+						<div class="date-head margin-bottom-25">
+							<a href="" class="date-head-button type-prev">
+								<span class="for-a11y">전월</span>
+							</a>
+							<h3 class="date-head-title">2021년 8월</h3>
+							<a href="" class="date-head-button type-next">
+								<span class="for-a11y">후월</span>
+							</a>
+						</div>
+
+						<!-- 2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+						<section class="total-amount type-no-line margin-bottom-25 is-skeleton">
+							<div class="total-amount-head">
+								<h4 class="total-amount-title">혜택 금액</h4>
+							</div>
+							<div class="total-amount-val skeleton-before"><span class="skeleton-block"></span></div>
+							<div class="total-amount-val skeleton-after">총 150,000 원</div>
+						</section>
+						<!-- //2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+
+						<!-- Case : 외환카드 -->
+						<!-- 2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+						<div class="page-section margin-bottom-35 is-skeleton">
+							<div class="form-detail type-box">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">월간한도</dt>
+										<dd class="form-detail-group">
+											<div class="skeleton-before"><span class="skeleton-block"></span></div>
+											<div class="skeleton-after">20,000 원</div>
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">잔여한도</dt>
+										<dd class="form-detail-group">
+											<div class="skeleton-before"><span class="skeleton-block"></span></div>
+											<div class="skeleton-after">7,000 원</div>
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">전월인정실적</dt>
+										<dd class="form-detail-group">
+											<div class="skeleton-before"><span class="skeleton-block"></span></div>
+											<div class="skeleton-after"><span class="color-primary">906,000</span> 원</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+							<p class="ui-notice">전월인정실적이 충족되지 않거나, 월간한도가 없는 카드는 월간한도와 사용누적액, 잔여한도가 0원으로 표시됩니다.</p>
+						</div>
+						<!-- //2022.03.25 : mod : 스켈레톤 기능 추가로 마크업 수정 -->
+						<!-- //Case : 외환카드 -->
+
+						<!-- 2022.03.25 : mod : .my-benefit-list-wrap 추가 -->
+						<div class="my-benefit-list-wrap is-skeleton">
+							<!-- 2022.03.25 : add : 스켈레톤 마크업 추가 -->
+							<div class="skeleton-before">
+								<span class="skeleton-block"></span>
+							</div>
+							<!-- 2022.03.25 : add : 스켈레톤 마크업 추가 -->
+							<!-- 2022.03.25 : mod : .skeleton-after 추가 -->
+							<div class="skeleton-after">
+								<!-- Case : 내역 없을 때 -->
+								<div class="page-section-group type-line margin-top-none">
+									<div class="link-item type-none type-flex type-no-line type-no-padding">
+										<p class="item-text">카드 사용 혜택 내역이 없습니다.</p>
+									</div>
+								</div>
+								<!-- Case : //내역 없을 때 -->
+
+								<!-- Case : 외환카드 내역 없을 때 -->
+								<div class="link-item type-none type-flex type-no-line type-no-padding">
+									<p class="item-text">카드 사용 혜택 내역이 없습니다.</p>
+								</div>
+								<!-- Case : //외환카드 내역 없을 때 -->
+
+								<!-- Case : 외환카드 실적 부족 -->
+								<div class="link-item type-none type-flex type-no-line type-no-padding">
+									<p class="item-text">
+										전월인정실적 부족으로<br />
+										사용 가능한 할인 서비스가 없습니다.
+									</p>
+								</div>
+								<!-- Case : //외환카드 실적 부족 -->
+
+								<!-- Case : 기본/외환카드 -->
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">커피</dt>
+										<dd class="form-detail-group">
+											<a href="" class="ui-arrow">12,000 원</a>
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">제과</dt>
+										<dd class="form-detail-group">
+											<a href="" class="ui-arrow">2,000 원</a>
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">편의점할인</dt>
+										<dd class="form-detail-group">
+											<a href="" class="ui-arrow">1 건</a>
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">할인서비스항목 노출</dt>
+										<dd class="form-detail-group">
+											<a href="" class="ui-arrow">할인금액합계 노출</a>
+										</dd>
+									</div>
+								</dl>
+								<!-- //Case : 기본/외환카드 -->
+
+								<!-- Case : 부스터 서비스 -->
+								<div class="usage-accordion">
+									<ul class="usage-accordion-list">
+										<li class="usage-accordion-item">
+											<div class="usage-accordion-head">
+												<dl class="usage-accordion-data">
+													<dt class="usage-accordion-data-key">모든 서비스 혜택금액</dt>
+													<dd class="usage-accordion-data-val">총 24,000 원</dd>
+												</dl>
+											</div>
+											<div class="usage-accordion-contents">
+												<dl class="form-detail-list">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">커피</dt>
+														<dd class="form-detail-group">
+															<a href="" class="ui-arrow">12,000 원</a>
+														</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">제과</dt>
+														<dd class="form-detail-group">
+															<a href="" class="ui-arrow">2,000 원</a>
+														</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">할인서비스항목 노출</dt>
+														<dd class="form-detail-group">
+															<a href="" class="ui-arrow">10,000 원</a>
+														</dd>
+													</div>
+												</dl>
+											</div>
+										</li>
+										<li class="usage-accordion-item">
+											<div class="usage-accordion-head">
+												<dl class="usage-accordion-data">
+													<dt class="usage-accordion-data-key">부스터 서비스 혜택금액</dt>
+													<dd class="usage-accordion-data-val">총 10,000 원</dd>
+												</dl>
+											</div>
+											<div class="usage-accordion-contents">
+												<dl class="form-detail-list">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">커피</dt>
+														<dd class="form-detail-group">
+															<a href="" class="ui-arrow">2,000 원</a>
+														</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">할인서비스항목 노출</dt>
+														<dd class="form-detail-group">
+															<a href="" class="ui-arrow">8,000 원</a>
+														</dd>
+													</div>
+												</dl>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //Case : 부스터 서비스 -->
+							</div>
+							<!-- //2022.03.25 : mod : .skeleton-after 추가 -->
+						</div>
+						<!-- //2022.03.25 : mod : .my-benefit-list-wrap 추가 -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">
+											할인 및 적립으로 혜택 받은 금액만 조회 가능합니다.<br />
+											(무이자할부, 캐쉬백 등은 조회 불가)
+										</li>
+										<li class="info-item">월(1일~말일)기준으로 혜택 받은 금액을 보여드립니다.</li>
+										<li class="info-item">승인취소, 매출취소 및 조회일자 등에 따라 혜택금액이 상이할 수 있습니다.</li>
+										<li class="info-item">월간사용가능횟수가 표기된 서비스는 서비스별 연간 사용가능횟수 내에서 할인서비스가 제공됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- //2022.01.28 : mad : 구성 변경 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- 2022.03.25 : add : 스켈레톤 테스트 스크립트 추가 -->
+		<script>
+			// DD : 스켈레톤 테스트
+			$(window).on('load', function () {
+				setTimeout(function () {
+					$('.ui-select-block, .card-select-tab, .total-amount, .page-section, .my-benefit-list-wrap').removeClass('is-skeleton');
+				}, 1000);
+			});
+		</script>
+		<!-- //2022.03.25 : add : 스켈레톤 테스트 스크립트 추가 -->
+		<!-- //script -->
+	</body>
+</html>

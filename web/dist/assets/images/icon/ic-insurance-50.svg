@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <path data-name="사각형 16873" style="fill:transparent" d="M0 0h44v44H0z"/>
+    <g data-name="그룹 13876">
+        <g data-name="그룹 13875">
+            <g data-name="합치기 185" style="fill:#fff">
+                <path d="M19.134 30h-5.833a6.221 6.221 0 0 1-4.32-1.733l-.036-.034-.039-.029a2.325 2.325 0 0 1-.265-.228L.987 20.322a2.295 2.295 0 0 1 0-3.24 2.277 2.277 0 0 1 1.62-.672c.612 0 1.188.238 1.621.671l1.543 1.543 1.28 1.28V3.042A2.295 2.295 0 0 1 9.343.75a2.294 2.294 0 0 1 2.291 2.292v7.625h9.823l.316.048a4.248 4.248 0 0 1 3.611 4.202v8.833a6.257 6.257 0 0 1-6.25 6.25z" style="stroke:none" transform="translate(5.552 5.25)"/>
+                <path d="M19.134 29.25c3.033 0 5.5-2.467 5.5-5.5v-8.833a3.497 3.497 0 0 0-2.973-3.46l-.26-.04H10.884V3.042c0-.85-.691-1.542-1.541-1.542S7.8 2.192 7.8 3.042v18.673l-4.103-4.103a1.532 1.532 0 0 0-1.09-.452 1.544 1.544 0 0 0-1.09 2.631l7.653 7.655c.057.056.117.108.18.154l.078.058.07.067a5.474 5.474 0 0 0 3.802 1.525h5.833m0 1.5h-5.833a6.976 6.976 0 0 1-4.84-1.942c-.122-.09-.24-.19-.35-.301L.456 20.852a3.042 3.042 0 0 1 4.302-4.301l1.543 1.543V3.042a3.042 3.042 0 1 1 6.083 0v6.875h9.5v.056a5 5 0 0 1 4.25 4.944v8.833a7 7 0 0 1-7 7z" style="fill:#2d3239;stroke:none" transform="translate(5.552 5.25)"/>
+            </g>
+            <path data-name="선 393" transform="translate(17.2 16.442)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#2d3239;stroke-width:1.5px;fill:none" d="M0 0v4"/>
+            <path data-name="선 394" transform="translate(21.8 16.442)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#2d3239;stroke-width:1.5px;fill:none" d="M0 0v4"/>
+            <path data-name="선 395" transform="translate(26.3 16.442)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#2d3239;stroke-width:1.5px;fill:none" d="M0 0v4"/>
+        </g>
+        <g data-name="그룹 13837" transform="translate(-276.26 -524.004)">
+            <circle data-name="타원 1896" cx="8" cy="8" r="8" transform="translate(298.5 548)" style="fill:#fff"/>
+            <path data-name="패스 10995" d="M7 0a7 7 0 1 1-7 7 7 7 0 0 1 7-7z" transform="translate(301.5 549.5)" style="fill:#7dedf3"/>
+            <g data-name="타원 1441" transform="translate(298.5 548)" style="stroke:#2d3239;stroke-width:1.5px;fill:none">
+                <circle cx="8" cy="8" r="8" style="stroke:none"/>
+                <circle cx="8" cy="8" r="7.25" style="fill:none"/>
+            </g>
+            <path data-name="패스 3490" d="m-10169.5 5362.5 2.122 2 3.878-4" transform="translate(10472.75 -4806.5)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#2d3239;stroke-width:1.5px;fill:none"/>
+        </g>
+    </g>
+</svg>

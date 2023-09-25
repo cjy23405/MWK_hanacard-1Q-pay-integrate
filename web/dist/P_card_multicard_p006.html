@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<div class="form-flex type-align-top">
+							<div class="form-flex-cell type-flexible">
+								<h2 class="page-title">
+									<span class="title-step">STEP 3</span>
+									신청 정보를<br />
+									입력/확인해 주세요.
+								</h2>
+							</div>
+							<div class="form-flex-cell margin-top-38">
+								<a href="" class="default-text text-underline">전체수정</a>
+							</div>
+						</div>
+
+						<div class="page-info">
+							<p class="page-info-text">정보를 확인하고 추가 정보를 입력해주세요.</p>
+						</div>
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 3단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="usage-accordion type-medium-margin">
+							<ul class="usage-accordion-list js-ui-accordion margin-top-minus-20">
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">영문이름</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">KIM HANA</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group">
+														<div class="form-flex">
+															<div class="form-flex-cell type-flexible">
+																<div class="ui-input-block type-use-delete">
+																	<input type="text" class="ui-input" title="영문이름 입력" value="PACK CHANJIN" />
+																	<button type="button" class="ui-button ui-input-delete">
+																		<span class="for-a11y">입력 내용 지우기</span>
+																	</button>
+																</div>
+															</div>
+															<div class="form-flex-cell">
+																<button type="button" class="ui-button ui-basic-button type-small type-gray">자동입력</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">휴대폰번호</div>
+											<div class="usage-accordion-data-val color-primary js-ui-accordion-opened-hide">
+												SKT /<br />
+												010-3542-1291
+											</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-show">
+												<button type="button" class="default-text text-underline">변경</button>
+											</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group">
+														<div class="ui-input-block">
+															<input type="text" class="ui-input" title="휴대폰번호 입력" value="SKT 010-3542-1291" disabled />
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">자택주소</div>
+											<div class="usage-accordion-data-val color-primary js-ui-accordion-opened-hide">
+												(14620)<br />
+												경기 부천시 장말로<br />
+												188번길 32(상동)
+											</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group type-address">
+														<div class="form-flex">
+															<div class="form-flex-cell type-flexible">
+																<div class="ui-input-block">
+																	<input type="number" pattern="\d*" class="ui-input" title="우편번호 입력" placeholder="우편번호" value="14620" disabled />
+																</div>
+															</div>
+															<div class="form-flex-cell">
+																<button type="button" class="ui-button ui-basic-button type-small type-gray">우편번호</button>
+															</div>
+														</div>
+														<div class="ui-input-block type-use-delete type-row">
+															<input type="text" class="ui-input" title="기본주소 입력" placeholder="주소" value="경기 부천시 장말로 188번" disabled />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+														<div class="ui-input-block type-use-delete type-row">
+															<input type="text" class="ui-input" title="상세주소 입력" placeholder="상세주소" value="32(상동)" disabled />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">직업정보</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">급여소득자</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group">
+														<div class="ui-select-block">
+															<button type="button" class="ui-button ui-select" title="직업정보 선택">급여소득자</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">직장명</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">하나카드</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group">
+														<div class="ui-input-block type-use-delete type-row">
+															<input type="text" class="ui-input" title="직장명 입력" placeholder="직장명 입력" value="하나카드" />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">부서명</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">상품기획</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group">
+														<div class="ui-input-block type-use-delete type-row">
+															<input type="text" class="ui-input" title="부서명 입력" placeholder="부서명 입력" value="상품기획" />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">직장전화</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">070-1234-1234</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group type-contact">
+														<div class="form-flex">
+															<div class="form-flex-cell">
+																<div class="ui-select-block">
+																	<button type="button" class="ui-button ui-select" title="지역 번호 선택">070</button>
+																</div>
+															</div>
+															<div class="form-flex-cell">
+																<div class="ui-range-dash">-</div>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<div class="ui-input-block">
+																	<input type="number" pattern="\d*" class="ui-input" title="전화 번호 입력" placeholder="‘-’ 제외하고 입력" value="12345678" />
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">직장주소</div>
+											<div class="usage-accordion-data-val color-primary js-ui-accordion-opened-hide">
+												(04538)<br />
+												서울 중구 을지로 66<br />
+												하나금융그룹명동사옥
+											</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group type-address">
+														<div class="form-flex">
+															<div class="form-flex-cell type-flexible">
+																<div class="ui-input-block">
+																	<input type="number" pattern="\d*" class="ui-input" title="우편번호 입력" placeholder="우편번호" value="16234" disabled />
+																</div>
+															</div>
+															<div class="form-flex-cell">
+																<button type="button" class="ui-button ui-basic-button type-small type-gray">우편번호</button>
+															</div>
+														</div>
+														<div class="ui-input-block type-use-delete type-row">
+															<input type="text" class="ui-input" title="기본주소 입력" placeholder="주소" value="서울 강남구 테헤란로 126" disabled />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+														<div class="ui-input-block type-use-delete type-row">
+															<input type="text" class="ui-input" title="상세주소 입력" placeholder="상세주소" value="7층 (역삼동, 신웅타워)" disabled />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">거래목적</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">물품대금결제</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group">
+														<div class="ui-input-block type-use-delete type-row">
+															<input type="text" class="ui-input" title="거래목적 입력" placeholder="거래목적 입력" value="물품대금결제" />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">자금출처</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">근로 및 연금소득</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group">
+														<div class="ui-input-block type-use-delete type-row">
+															<input type="text" class="ui-input" title="자금출처 입력" placeholder="자금출처 입력" value="근로 및 연금소득" />
+															<button type="button" class="ui-button ui-input-delete">
+																<span class="for-a11y">입력 내용 지우기</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">카드 수령지</div>
+											<div class="usage-accordion-data-val color-primary js-ui-accordion-opened-hide">자택</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="ui-radio-group type-panel">
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" checked />
+													<label for="radioPanel1-1" class="ui-label">
+														<span class="ui-label-text">자택</span>
+													</label>
+												</div>
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" />
+													<label for="radioPanel1-2" class="ui-label">
+														<span class="ui-label-text">직장</span>
+													</label>
+												</div>
+											</div>
+											<ul class="info-list type-default margin-top-15">
+												<li class="info-item type-presa font-weight-regular">신청하신 모바일카드는 별도로 배송되지 않으며, 원큐페이 사용 등록 후 이용 가능합니다.</li>
+											</ul>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">카드 수령지</div>
+											<div class="usage-accordion-data-val color-primary js-ui-accordion-opened-hide">모바일 카드 수령</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="ui-radio-group type-panel">
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-1" checked />
+													<label for="radioPanel2-1" class="ui-label">
+														<span class="ui-label-text">모바일 카드 수령</span>
+													</label>
+												</div>
+											</div>
+											<ul class="info-list type-default margin-top-15">
+												<li class="info-item type-presa font-weight-regular">신청하신 모바일카드는 별도로 배송되지 않으며, 원큐페이 사용 등록 후 이용 가능합니다.</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">결제정보</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">
+												13일 /<br />
+												하나은행<br />
+												1002261146***
+											</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="form-list">
+												<div class="form-item">
+													<div class="form-group">
+														<div class="ui-select-block">
+															<button type="button" class="ui-button ui-select" title="결제일 선택">13일</button>
+														</div>
+														<div class="ui-select-block type-row">
+															<button type="button" class="ui-button ui-select" title="결제은행 선택">우리은행</button>
+														</div>
+														<div class="form-flex type-row">
+															<div class="form-flex-cell type-flexible">
+																<div class="ui-input-block">
+																	<input type="text" class="ui-input" title="결제계좌 입력" value="1002261146***" />
+																</div>
+															</div>
+															<div class="form-flex-cell">
+																<button type="button" class="ui-button ui-basic-button type-small type-gray">계좌확인</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">현금인출 기능</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">사용</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="ui-radio-group type-panel">
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-1" checked />
+													<label for="radioPanel3-1" class="ui-label">
+														<span class="ui-label-text">사용</span>
+													</label>
+												</div>
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-2" />
+													<label for="radioPanel3-2" class="ui-label">
+														<span class="ui-label-text">사용안함</span>
+													</label>
+												</div>
+											</div>
+											<ul class="info-list type-default margin-top-15">
+												<li class="info-item type-presa font-weight-regular">동시 발급으로 선택한 모바일 전용 카드는 현금인출 기능을 사용할 수 없습니다.</li>
+											</ul>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key color-blur">희망한도 / 한도 상향 동의</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">2천만원 / 동의</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="ui-radio-group type-panel">
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel4" id="radioPanel4-1" data-checkbox-tab="radioPanel1-1" checked />
+													<label for="radioPanel4-1" class="ui-label">
+														<span class="ui-label-text">2천만원</span>
+													</label>
+												</div>
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel4" id="radioPanel4-2" data-checkbox-tab="radioPanel1-2" />
+													<label for="radioPanel4-2" class="ui-label">
+														<span class="ui-label-text">1천만원</span>
+													</label>
+												</div>
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel4" id="radioPanel4-3" data-checkbox-tab="radioPanel1-3" />
+													<label for="radioPanel4-3" class="ui-label">
+														<span class="ui-label-text">5백만원<br />최대한도</span>
+													</label>
+												</div>
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel4" id="radioPanel4-4" data-checkbox-tab="radioPanel1-4" />
+													<label for="radioPanel4-4" class="ui-label">
+														<span class="ui-label-text">직접입력</span>
+													</label>
+												</div>
+											</div>
+											<div class="form-group" data-checkbox-tab-panel="radioPanel1-4">
+												<div class="form-flex type-row">
+													<div class="form-flex-cell type-flexible type-has-unit">
+														<div class="ui-input-block is-disabled">
+															<input type="number" pattern="\d*" class="ui-input" title="희망 한도 입력" placeholder="100만원 이상, 숫자만 입력" />
+														</div>
+														<span class="form-unit">만원</span>
+													</div>
+												</div>
+											</div>
+											<div class="terms-area">
+												<div class="terms-item">
+													<div class="ui-checkbox-block type-align-top">
+														<input type="checkbox" class="ui-checkbox" id="termCheckbox-1" />
+														<label for="termCheckbox-1" class="ui-label">
+															<span class="ui-checkbox-object"></span>
+															<span class="ui-label-text">이용한도 상향에 대한 안내를 받는데 동의합니다.</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="usage-accordion-item js-ui-accordion__item">
+									<div class="usage-accordion-head">
+										<div class="usage-accordion-data font-weight-regular">
+											<div class="usage-accordion-data-key type-flex color-blur">
+												결제알림 서비스
+												<button class="ui-button-question js-ui-accordion-opened-show"><span class="for-a11y">카드 유형 안내</span></button>
+											</div>
+											<div class="usage-accordion-data-val js-ui-accordion-opened-hide">스마트폰앱 무료</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line margin-top-minus-10">
+											<div class="ui-radio-group type-panel">
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel5" id="radioPanel5-1" checked />
+													<label for="radioPanel5-1" class="ui-label">
+														<span class="ui-label-text">
+															스마트폰앱<br />
+															무료
+														</span>
+													</label>
+												</div>
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel5" id="radioPanel5-2" />
+													<label for="radioPanel5-2" class="ui-label">
+														<span class="ui-label-text">
+															모든 결제<br />
+															월 300원
+														</span>
+													</label>
+												</div>
+												<div class="ui-radio-block type-box">
+													<input type="radio" class="ui-radio" name="radioPanel5" id="radioPanel5-3" />
+													<label for="radioPanel5-3" class="ui-label">
+														<span class="ui-label-text">
+															건당5만원<br />
+															이상 무료
+														</span>
+													</label>
+												</div>
+											</div>
+											<p class="ui-notice">결제알림 서비스는 보유하고 계신 모든 카드에 적용됩니다.</p>
+											<div class="margin-top-25">
+												<button type="button" class="ui-button ui-basic-button">적용</button>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="page-section-group">
+							<div class="section-title margin-bottom-5">
+								<strong class="title">제휴간편결제 서비스</strong>
+								<button class="ui-button-question"><span class="for-a11y">서비스 안내</span></button>
+							</div>
+							<div class="ui-select-multiple-list">
+								<div class="ui-select-multiple-item">
+									<div class="ui-checkbox-block">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1-1" />
+										<label for="selectCheckbox-1-1" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">카카오페이</span>
+										</label>
+									</div>
+								</div>
+								<div class="ui-select-multiple-item">
+									<div class="ui-checkbox-block">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1-2" />
+										<label for="selectCheckbox-1-2" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">삼성페이</span>
+										</label>
+									</div>
+								</div>
+								<div class="ui-select-multiple-item">
+									<div class="ui-checkbox-block">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1-3" />
+										<label for="selectCheckbox-1-3" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">네이버페이</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section-group">
+							<div class="section-title margin-bottom-5">
+								<strong class="title">기타 서비스</strong>
+							</div>
+							<div class="ui-select-multiple-list">
+								<div class="ui-select-multiple-item">
+									<div class="ui-checkbox-block">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox-2-1" />
+										<label for="selectCheckbox-2-1" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">장기카드대출(카드론) 이용동의</span>
+											<button class="ui-button-question"><span class="for-a11y">서비스 안내</span></button>
+										</label>
+									</div>
+								</div>
+								<div class="ui-select-multiple-item">
+									<div class="ui-checkbox-block">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox-2-2" />
+										<label for="selectCheckbox-2-2" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">일부결제금액이월약정(리볼빙) 신청</span>
+											<button class="ui-button-question"><span class="for-a11y">서비스 안내</span></button>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-list margin-top-25">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">약정 결제비율</strong>
+										<button type="button" class="ui-arrow type-black">약관보기</button>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block type-placeholder">
+											<button type="button" class="ui-button ui-select" title="약정 결제비율 선택">선택</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">약정기간</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block type-placeholder">
+											<button type="button" class="ui-button ui-select" title="약정기간 선택">선택</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section-group">
+							<div class="toggle-info-list">
+								<div class="toggle-info-item">
+									<div class="toggle-info-title type-align-top">
+										<strong class="title">
+											해외원화결제(DCC)<br />
+											차단서비스 신청
+										</strong>
+										<button class="ui-button-question margin-top-5"><span class="for-a11y">서비스 안내</span></button>
+									</div>
+									<div class="ui-toggle-block">
+										<input type="checkbox" class="ui-toggle" id="checkboxToggle1-1" />
+										<label for="checkboxToggle1-1" class="ui-label">
+											<span class="ui-toggle-object"></span>
+											<!-- 2022.07.22 : add : 히든 텍스트 추가 -->
+											<span class="for-a11y">해외원화결제(DCC) 차단서비스 신청</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section-group">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title"
+											>비밀번호<span class="ui-required"><span class="for-a11y">필수항목</span></span></strong
+										>
+										<button class="ui-button-question"><span class="for-a11y">서비스 안내</span></button>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block">
+											<input type="password" pattern="\d*" class="ui-input" title="카드 비밀번호 4자리 입력" placeholder="카드 비밀번호 4자리" />
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title"
+											>비밀번호 확인<span class="ui-required"><span class="for-a11y">필수항목</span></span></strong
+										>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block">
+											<input type="password" pattern="\d*" class="ui-input" title="카드 비밀번호 확인 4자리" placeholder="카드 비밀번호 확인 4자리" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 2022.02.21 추가 -->
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<!-- 2022.02.21 추가 -->
+								<li class="ui-buttons-item type-narrow">
+									<a href="" class="ui-basic-button" role="button">취소</a>
+								</li>
+								<!--// 2022.02.21 추가 -->
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">신청 완료</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

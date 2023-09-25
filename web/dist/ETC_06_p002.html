@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">1Q Zone</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">$11월$ 1Q카드<br />충족여부를 확인하세요.</h2>
+
+						<div class="check-range">
+							<button type="button" class="ui-button-down">(2021.10)&middot;[본인1234]</button>
+						</div>
+
+						<div class="form-detail">
+							<div class="form-detail-head margin-top-minus-5">
+								<h3 class="title">1Q카드 혜택(예정)</h3>
+								<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+							</div>
+							<div class="info-table-area type-scroll-x">
+								<table class="info-table">
+									<!-- 2022.04.27 : mod : 텍스트 수정 -->
+									<caption class="for-a11y">
+										구분, 충족여부, 사용금액, 적립예정금액으로 구성된 1Q카드 혜택(예정) 안내 표입니다.
+									</caption>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">충족여부</th>
+											<th scope="col">사용금액</th>
+											<th scope="col">적립예정금액</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>온라인<br />쇼핑적립</td>
+											<td><a href="" class="ui-arrow color-blur" role="button">부족</a></td>
+											<td class="align-right">0</td>
+											<td class="align-right">0</td>
+										</tr>
+										<tr>
+											<td>등산/교통/<br />자동이체적립</td>
+											<td><a href="" class="ui-arrow color-blur" role="button">부족</a></td>
+											<td class="align-right">0</td>
+											<td class="align-right">0</td>
+										</tr>
+										<tr>
+											<td>해외</td>
+											<td><a href="" class="ui-arrow color-primary" role="button">충족</a></td>
+											<td class="align-right">999,999,999</td>
+											<td class="align-right">15,000</td>
+										</tr>
+										<tr>
+											<td>아파트<br />관리비적립</td>
+											<td><a href="" class="ui-arrow color-primary" role="button">충족</a></td>
+											<td class="align-right">100,000</td>
+											<td class="align-right">100,000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="ui-notice">충족여부 및 혜택 별 미적립 사유를 확인하실 수 있습니다.</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">조회월 기준 당월과 전월내역을 조회 가능합니다.</li>
+										<li class="info-item">
+											1Q카드 서비스별 이용금액 및 적립예상금액을 조회하실 수 있습니다.<br />(단, 하나머니 월적립일 이전까지 매출접수 완료된건에 한하며, 승인 후 매출접수까지는 약 2~3영업일 소요됩니다)
+										</li>
+										<li class="info-item">교통카드 이용금액은 매출 접수 시점에 따라 본 화면에서 조회되지 않을 수 있습니다.</li>
+										<li class="info-item">
+											당월 사용금액이 10만원 이상이어도 전월실적이 충족되지 않으면 적립예정금액이 0원으로 조회될 수 있습니다.<br />
+											(전월실적은 '서비스제공실적조회'메뉴에서 조회 가능합니다)
+										</li>
+										<li class="info-item">월 적립서비스가 아닌 상품 또는 적립서비스는 이용내역(홈페이지) 또는 '포인트/혜택'(모바일)에서 확인 가능합니다.</li>
+										<li class="info-item type-presa color-wrong">당월 조회 시 혜택 예정 금액이 조회되어 실제 적립금액과 차이가 발생할 수 있습니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary">홈으로 이동</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

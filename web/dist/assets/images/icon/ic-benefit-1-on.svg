@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+    <defs>
+        <style>
+            .cls-1,.cls-3,.cls-4{fill:none}.cls-3,.cls-4{stroke:#111;stroke-width:1.5px}.cls-4{stroke-linecap:round;stroke-linejoin:round}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_benefit_1_on" transform="translate(-34 -187)">
+        <path id="사각형_7186" data-name="사각형 7186" class="cls-1" transform="translate(34 187)" d="M0 0h21v21H0z"/>
+        <path id="사각형_14376" data-name="사각형 14376" transform="translate(37 190)" style="fill:transparent" d="M0 0h15v15H0z"/>
+        <g id="사각형_14377" data-name="사각형 14377" class="cls-3">
+            <path class="cls-6" d="M0 0h11v2a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V0z" transform="translate(37 201)"/>
+            <path class="cls-1" d="M1.5.75h8a.75.75 0 0 1 .75.75V2A1.25 1.25 0 0 1 9 3.25H2A1.25 1.25 0 0 1 .75 2v-.5A.75.75 0 0 1 1.5.75z" transform="translate(37 201)"/>
+        </g>
+        <g id="사각형_14378" data-name="사각형 14378" class="cls-3">
+            <path class="cls-6" d="M2 0h7a2 2 0 0 1 2 2v10.5H0V2a2 2 0 0 1 2-2z" transform="translate(37 190)"/>
+            <path class="cls-1" d="M2 .75h7A1.25 1.25 0 0 1 10.25 2v9a.75.75 0 0 1-.75.75h-8A.75.75 0 0 1 .75 11V2A1.25 1.25 0 0 1 2 .75z" transform="translate(37 190)"/>
+        </g>
+        <g id="사각형_14379" data-name="사각형 14379" class="cls-4">
+            <path class="cls-6" d="M0 0h5v4H0z" transform="translate(40 193)"/>
+            <path class="cls-1" d="M.75.75h3.5v2.5H.75z" transform="translate(40 193)"/>
+        </g>
+        <path id="패스_12279" data-name="패스 12279" class="cls-4" d="M-4583.066 482.811h3.3V474.2l-1.58-1.3" transform="translate(4631.066 -281)"/>
+        <g id="패스_12280" data-name="패스 12280" style="fill:none">
+            <path class="cls-6" d="M2.51 0H4v5H2.51a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" transform="translate(48 194)"/>
+            <path d="M2.5 1.5a.5.5 0 0 0-.49.5v1a.5.5 0 0 0 .49.5v-2M2.51 0H4v5H2.51a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" style="fill:#111;stroke:none" transform="translate(48 194)"/>
+        </g>
+    </g>
+</svg>

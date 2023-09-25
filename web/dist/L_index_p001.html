@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">라이프 한눈에</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">매뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-life-main">
+						<div class="slide-top">
+							<div class="slide-banner type-fix-height">
+								<div class="slide-banner-inner">
+									<div class="slide-banner-controller"></div>
+									<ul class="slide-banner-list">
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.04.27 : mod : alt 값 변경 -->
+												<img src="./assets/images/contents/img-life-main-img01.gif" alt="하나카드 쇼핑 초특가 '팍팍딜'을 경험해보세요! 가격비교 이제 GOOD BYE" class="slide-banner-image" />
+											</a>
+										</li>
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.04.27 : mod : alt 값 변경 -->
+												<img
+													src="./assets/images/contents/img-life-main-img02.gif"
+													alt="전문설계사 상담신청 신규보험가입하고 최대 1만 하나머니 적립 이벤트 2021.12.01~2022.03.31 준법심의확인필 제 A-21-1788 (2021.12.01~2022.12.31)"
+													class="slide-banner-image"
+												/>
+											</a>
+										</li>
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.04.27 : mod : alt 값 변경 -->
+												<img
+													src="./assets/images/contents/img-life-main-img03.gif"
+													alt="내차지키미 월 7900원 구독하고 매달 주유할인 1만원 & 연간 156,000원 경정비 할인 혜택 준법검시인 확인필 제A-21-1615(2021.10.14~2022.10.13)"
+													class="slide-banner-image"
+												/>
+											</a>
+										</li>
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.04.27 : mod : alt 값 변경 -->
+												<img src="./assets/images/contents/img-life-main-img04.gif" alt="최대 25만원 하나머니 적립 하나카드 전용 코웨이 렌탈몰" class="slide-banner-image" />
+											</a>
+										</li>
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.04.27 : mod : alt 값 변경 -->
+												<img
+													src="./assets/images/contents/img-life-main-img05.gif"
+													alt="하나 에듀카(다이렉트) 자동차보험 30만원 이상 결제 시 3만원 캐시백! 하나 신용/체크카드 결제고객 (법인/기프트/선불카드제외) 준법감시인 확인필 제 2021-171(2021.05.28)"
+													class="slide-banner-image"
+												/>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section-group">
+							<div class="section-title">
+								<h2 class="title"><a href="" class="ui-arrow" role="button">구독</a></h2>
+							</div>
+							<ul class="life-main-list">
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-01-01.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">
+												스마트<br />
+												신용지킴이
+											</strong>
+											<span class="life-main-text-info">실시간 신용관리</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-01-02.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">내차지키미</strong>
+											<span class="life-main-text-info">주유/경정비 할인</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-01-03.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">휴대폰케어</strong>
+											<span class="life-main-text-info">연간 10만원 보상!</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-01-04.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">택배팩</strong>
+											<span class="life-main-text-info">혹시 당근하세요?</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-01-05.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">컬쳐케어</strong>
+											<span class="life-main-text-info">문화생활 지원</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-01-06.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">
+												스마트<br />
+												쇼핑안심<span>(프리미엄)</span>
+											</strong>
+											<span class="life-main-text-info">쓱닷컴 할인까지!</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="page-section-group">
+							<div class="section-title">
+								<!-- 2022.03.31 : mod : 항목명 수정 -->
+								<h2 class="title"><a href="" class="ui-arrow" role="button">쇼핑/제휴</a></h2>
+							</div>
+							<ul class="life-main-list">
+								<!-- 2022.03.31 : mod : type-wide 클래스 추가 -->
+								<li class="life-main-item type-wide">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-02-01.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">하나카드 쇼핑몰</strong>
+											<span class="life-main-text-info">청구할인 최대 10%</span>
+										</div>
+									</a>
+								</li>
+								<!-- 2022.03.31 : del : 삭제
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-02-02.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">하나카드 렌탈몰</strong>
+											<span class="life-main-text-info">최대 25만 머니</span>
+										</div>
+									</a>
+								</li>
+								-->
+								<!-- 2022.03.31 : mod : type-wide 클래스 추가 -->
+								<li class="life-main-item type-wide">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-02-03.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">알라딘 제휴몰</strong>
+											<span class="life-main-text-info">청구할인 최대 5%</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-02-04.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">G마켓</strong>
+											<span class="life-main-text-info">1% 추가적립</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-02-05.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">옥션</strong>
+											<span class="life-main-text-info">1% 추가적립</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<!-- 2022.04.06 : mod : 이미지 변경 -->
+											<img src="./assets/images/icon/img-main-life-02-06.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">위메프</strong>
+											<span class="life-main-text-info">1% 추가적립</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.04.06 : add : 렌탈 카테고리 추가 -->
+						<div class="page-section-group">
+							<div class="section-title">
+								<h2 class="title"><a href="" class="ui-arrow" role="button">렌탈</a></h2>
+							</div>
+							<ul class="life-main-list">
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-08-01.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">정수기</strong>
+											<span class="life-main-text-info">최대 25만 머니</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-02-02.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">가전제품</strong>
+											<span class="life-main-text-info">최대 25만 머니</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-08-02.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">건강뷰티</strong>
+											<span class="life-main-text-info">최대 25만 머니</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-08-03.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">코웨이 전용몰</strong>
+											<span class="life-main-text-info">최대 25만 머니</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!--// 2022.04.06 : add : 렌탈 카테고리 추가 -->
+
+						<div class="page-section-group">
+							<div class="section-title">
+								<h2 class="title"><a href="" class="ui-arrow" role="button">전문설계사 보험</a></h2>
+							</div>
+							<ul class="life-main-list">
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-03-01.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">암보험</strong>
+											<span class="life-main-text-info">든든하게</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-03-02.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">치아보험</strong>
+											<span class="life-main-text-info">탄탄하게</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-03-03.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">간편보험</strong>
+											<span class="life-main-text-info">유병자도 가능한</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="page-section-group">
+							<div class="section-title">
+								<h2 class="title"><a href="" class="ui-arrow" role="button">다이렉트 보험</a></h2>
+							</div>
+							<ul class="life-main-list">
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-04-01.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">자동차보험</strong>
+											<span class="life-main-text-info">365일 24시간</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-04-02.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">건강보험</strong>
+											<span class="life-main-text-info">걱정없는</span>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-04-03.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">여행/레저보험</strong>
+											<span class="life-main-text-info">1분 간편가입</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.02.17 : add : 버튼 추가 -->
+						<div class="page-section-group">
+							<div class="section-title">
+								<h2 class="title"><a href="" class="ui-arrow" role="button">자동납부</a></h2>
+							</div>
+							<ul class="life-main-list">
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-06-01.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">한번에<br />자동납부</strong>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-06-02.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">대학등록금</strong>
+										</div>
+									</a>
+								</li>
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-06-03.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">정기구독</strong>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //2022.02.17 : add : 버튼 추가 -->
+
+						<div class="page-section-group">
+							<div class="section-title">
+								<h2 class="title"><a href="" class="ui-arrow" role="button">상조</a></h2>
+							</div>
+							<ul class="life-main-list">
+								<!-- 2022.07.13 : add : 클래스 type-full 추가 -->
+								<li class="life-main-item type-full">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-05-01.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">상조서비스</strong>
+											<span class="life-main-text-info">최대 25만 머니</span>
+										</div>
+									</a>
+								</li>
+								<!-- //2022.07.13 : add : 클래스 type-full 추가 -->
+							</ul>
+						</div>
+
+						<!-- 2022.02.17 : add : 버튼 추가 -->
+						<div class="page-section-group">
+							<div class="section-title">
+								<h2 class="title"><a href="" class="ui-arrow" role="button">해외</a></h2>
+							</div>
+							<ul class="life-main-list">
+								<li class="life-main-item">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-07-01.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">G.Lab</strong>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //2022.02.17 : add : 버튼 추가 -->
+
+						<!-- 2022.04.15 : add : 버튼 추가 -->
+						<div class="page-section-group">
+							<div class="section-title">
+								<h2 class="title"><a href="" class="ui-arrow" role="button">여행</a></h2>
+							</div>
+							<ul class="life-main-list">
+								<li class="life-main-item type-full">
+									<a href="" class="life-main-block" role="button">
+										<div class="life-main-icon">
+											<img src="./assets/images/icon/img-main-life-09-01.png" alt="" />
+										</div>
+										<div class="life-main-text">
+											<strong class="life-main-text-title">하나카드 여행서비스</strong>
+											<span class="life-main-text-info">국내외 여행상품 할인 및 상담서비스</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //2022.04.15 : add : 버튼 추가 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

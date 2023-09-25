@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">해외매장결제 이용내역</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="form-flex type-align-top">
+								<div class="form-flex-cell type-flexible">
+									<div class="total-amount type-no-line margin-bottom-none">
+										<div class="total-amount-head">
+											<span class="total-amount-title">이용금액</span>
+										</div>
+										<div class="total-amount-val">총 163,050 원</div>
+										<div class="total-amount-date">(08.05 ~ 08.11 기준)</div>
+									</div>
+								</div>
+								<div class="form-flex-cell">
+									<a href="" class="ui-arrow type-black default-text" role="button">전체이용내역</a>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="check-range margin-bottom-none">
+								<button type="button" class="ui-button-down">(08.05 ~ 08.11) &middot;본인&middot;해외&middot;일시불</button>
+							</div>
+
+							<!-- [DD] 이용내역이 없을 때 - 2021.12.17 추가 -->
+							<div class="type-none type-line">
+								<p class="item-text">이용내역이 없습니다.</p>
+							</div>
+							<!--// [DD] 이용내역이 없을 때 -->
+
+							<div class="usage-default-area">
+								<!-- 2022.03.30 이번납부 삭제 -->
+								<ul class="usage-default-list margin-top-none">
+									<li class="usage-default-item">
+										<div class="usage-default-date">2021.10.23</div>
+										<button type="button" class="usage-default-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 없을 때 -->
+											<div class="logo-image type-store">
+												<div class="logo-image-inner"></div>
+											</div>
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="usage-default-left">
+												<div class="usage-default-title">TRAVEL RESERVATION</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">02:09</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">128,050 USD</div>
+											</div>
+										</button>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-date">2021.10.19</div>
+										<button type="button" class="usage-default-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 에러 -->
+											<div class="logo-image type-store">
+												<div class="logo-image-inner">
+													<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+													<img src="./assets/images/_dummy/brand-icon-3 .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="usage-default-left">
+												<div class="usage-default-title">올리브영</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">02:09</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">30,000 원</div>
+											</div>
+										</button>
+
+										<button type="button" class="usage-default-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 있을 때 -->
+											<div class="logo-image type-store">
+												<div class="logo-image-inner">
+													<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+													<img src="./assets/images/_dummy/brand-icon-3.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="usage-default-left">
+												<div class="usage-default-title">ZARA 가로수길점</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">02:09</div>
+													<div class="usage-default-etc-item">일시불</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">100,000 원</div>
+											</div>
+										</button>
+									</li>
+								</ul>
+							</div>
+
+							<button type="button" class="ui-button ui-button-more">3개월 더보기</button>
+
+							<div class="use-notice-area js-ui-accordion">
+								<div class="use-notice-item js-ui-accordion__item">
+									<button type="button" class="use-notice-opener js-ui-accordion__opener">
+										이용안내
+										<span class="for-a11y">
+											상세 내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="use-notice-contents js-ui-accordion__layer">
+										<div class="info-list">
+											<p class="info-item">최근 1년 이내 최대 3개월 단위로 승인내역을 확인할 수 있습니다.</p>
+											<p class="info-item">국내 이용내역은 카드 승인내역 기준이며, 실제 청구되는 ‘이용대금 명세서’를 이용하시기 바랍니다.</p>
+											<p class="info-item">일부 부분취소 건(항공, 기차, 고속버스, 호텔 등)에 대해서는 승인내역이 다르게 표시될 수 있습니다.</p>
+											<p class="info-item">정상승인합계 금액은 매출취소 및 부분매출취소 금액을 제외한 금액이며, 하이브리드 서비스 승인 합계가 포함됩니다.</p>
+											<p class="info-item">국내외 일시불 이용 후 할부로 변경한 경우에는 할부개월 수가 미표기 됩니다.</p>
+											<p class="info-item">이전 월 이용내역의 매출취소 발생 시 취소접수 월의 카드실적에서 차감됩니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

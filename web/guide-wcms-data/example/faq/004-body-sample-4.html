@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="../../../dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">자주 묻는 질문</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="faq-list js-ui-accordion" data-once="true">
+							<div class="faq-item js-ui-accordion__item" data-initial-open="true">
+								<button type="button" class="faq-opener js-ui-accordion__opener">타이틀</button>
+								<div class="js-ui-accordion__layer">
+									<div class="faq-contents">
+										<div class="wcms-data">
+											<section class="board-data">
+												<p class="wcms-text wcms-size-small wcms-color-gray">
+													해외 이용 시(해외사이트 거래 포함)미화(USD)기준 거래 금액에 접수일의 하나은행 최초고시 전신환 매도율을 적용한 후, 국제브랜드사가 부과하는 국제브랜드수수료와 하나카드가
+													부과하는 해외서비스수수료를 포함하여 청구됩니다.<br />
+													(단, 체크카드의 경우 1회 승인금액 100만원 이상의 거래(단, T&E업종* 제외), 또는 카드사가 정한 특정 브랜드(BC/Maestro/Amex Globalpay 등) 및 상품의 카드이용대금은 미화(USD) 기준
+													거래 금액에 카드승인시점의 하나은행이 고시한 전신환매도율을 적용한 원화금액으로 회원의 계좌잔액에서 즉시 인출됩니다.)
+												</p>
+
+												<ul class="wcms-list wcms-size-small">
+													<li class="wcms-list-item wcms-color-gray" data-symbol="*">
+														<div class="wcms-list-contents">T&E 업종 : Travel and Entertainment 업종, 여행과 여가 관련 업종(항공, 호텔, 숙박, 렌터카 등)</div>
+													</li>
+												</ul>
+
+												<section class="wcms-box-white wcms-margin-regular">
+													<h2 class="wcms-title-small">해외 이용시 청구금액 산출방법</h2>
+													<p class="wcms-text wcms-size-small wcms-color-gray">해외 이용 시 청구금액 = (거래미화금액 X 전신환 매도율¹) + 국제브랜드수수료² + 해외서비스수수료³</p>
+													<ol class="wcms-list wcms-size-small">
+														<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+															<div class="wcms-list-contents">전신환 매도율 : 접수일의 하나은행 최초고시 전신환 매도율</div>
+														</li>
+														<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+															<div class="wcms-list-contents">국제브랜드수수료 = (거래미화금액 X 국제브랜드 이용수수료율(VISA, MASTER, JCB : 1%, Amex : 1.4%, UPI : 0.6%)) X 전신환 매도율</div>
+														</li>
+														<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+															<div class="wcms-list-contents">국제브랜드수수료 = (거래미화금액 X 국제브랜드 이용수수료율(VISA, MASTER, JCB : 1%, Amex : 1.4%, UPI : 0.6%)) X 전신환 매도율</div>
+														</li>
+													</ol>
+												</section>
+
+												<ul class="wcms-list wcms-size-small">
+													<li class="wcms-list-item type-dot wcms-color-gray">
+														<div class="wcms-list-contents">
+															<div class="wcms-margin-small">단기카드대출(현금서비스) 거래에 대해서는 청구금액에 단기카드대출(현금서비스) 수수료가 별도로 포함 됩니다.</div>
+															<ul class="wcms-list">
+																<li class="wcms-list-item" data-symbol="-">
+																	<div class="wcms-list-contents">단기카드대출(현금서비스) 수수료 = 청구금액 x 단기카드대출(현금서비스) 수수료율 x 신용공여기간 ÷ 365</div>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="wcms-list-item type-dot wcms-color-gray">
+														<div class="wcms-list-contents">해외현금인출 거래에 대해서는 $3 수수료가 별도로 포함됩니다.(해외서비스수수료는 부과 안됨)</div>
+													</li>
+												</ul>
+											</section>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="../../../dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

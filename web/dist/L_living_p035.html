@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">상조</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							예다함 상조가<br />
+							어려울 때 힘이 되어드릴게요.
+						</h2>
+
+						<div class="gray-link-list">
+							<div class="gray-link-item">
+								<a href="" class="gray-link-block type-01" role="button">
+									<div class="gray-link-txt">
+										<strong>이벤트</strong><br />
+										<strong> 최대 25만원</strong> 하나머니 제공
+									</div>
+								</a>
+							</div>
+
+							<div class="gray-link-item">
+								<a href="" class="gray-link-block type-02" role="button">
+									<div class="gray-link-txt">
+										<strong>[이벤트]</strong> 제휴카드 결제시<br />
+										<strong> 최대 월 19,000원 할인</strong>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button" role="button">조회</a>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-basic-button type-primary">신청</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="js-ui-tab-panel margin-top-25">
+							<div class="ui-tab">
+								<ul class="ui-tab-list type-wide">
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="tab01">秀396</button>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="tab02">秀530</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="ui-tab-panel margin-top-35" data-tab="tab01">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h3 class="for-a11y">秀396</h3>
+								<div class="page-section-group">
+									<div class="section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h4 class="title"><span class="num color-primary">01 </span>장례 인력 지원</h4>
+									</div>
+									<div class="basic-text font-weight-light">
+										전문 장례 지도사 2명 (장례진행1명,<br />
+										엄습지원 1명), 장례 도우미 5명<br />
+										(상주 3일간, 1일 8시간 지원)
+									</div>
+								</div>
+								<div class="page-section-group">
+									<div class="section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h4 class="title"><span class="num color-primary">02 </span>차량 지원</h4>
+									</div>
+									<div class="basic-text font-weight-light">
+										<div class="indent-block">최고급 대형버스와 리무진 제공</div>
+										<ul class="info-list type-inherit type-outside margin-top-10">
+											<li class="info-item">버스 : 왕복 200Km 초과시, 1,500원 추가요금 발생</li>
+											<li class="info-item">리무진 : 왕복 200Km 초과시, 1,400원 추가요금 발생 *추가 요금은 유류시세에 따라 변동</li>
+										</ul>
+										<div class="indent-block margin-top-10">
+											고인 이송 차량 비용 지원 :<br />
+											비용 발생시 최대 8만원 지급
+										</div>
+									</div>
+								</div>
+								<div class="page-section-group">
+									<div class="section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h4 class="title"><span class="num color-primary">03 </span>용품 지원</h4>
+									</div>
+									<div class="basic-text font-weight-light">
+										<ul class="info-list type-inherit type-outside">
+											<li class="info-item">의전 용품 일체 :<br />입관용품 일체 (향, 초, 위패등 포함)</li>
+											<li class="info-item">현대식 상복(남성양복, 여성개량 한복 각 4벌 대여)과 전통식 상복(필요수량만큼 제공)</li>
+											<li class="info-item">봉안함(화장시-백자운학), 횡대 (매장시-오동나무 1.5)옥스포드관보, 오동나무 1단관, 수의(대마 기계직 수의1호), 일회용품 300인분 등 제공</li>
+										</ul>
+									</div>
+								</div>
+								<div class="page-section-group">
+									<div class="section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h4 class="title"><span class="num color-primary">04 </span>상품 금액 3,960,000원</h4>
+									</div>
+									<div class="form-detail">
+										<div class="form-detail-head margin-top-none">
+											<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+										</div>
+										<div class="info-table-area type-scroll-x">
+											<table class="info-table type-tbody-heading">
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption class="for-a11y">
+													납입횟수, 월납입금으로 구성된 상품금액 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col class="info-table-heading-width" />
+													<col />
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">납입횟수</th>
+														<td>100 회</td>
+														<td>120 회</td>
+														<td>150 회</td>
+														<td>180 회</td>
+													</tr>
+													<tr>
+														<th scope="row">월납입금</th>
+														<td>39,600 원</td>
+														<td>33,000 원</td>
+														<td>26,400 원</td>
+														<td>22,000 원</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="ui-tab-panel margin-top-35" data-tab="tab02">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h3 class="for-a11y">秀530</h3>
+								<div class="page-section-group">
+									<div class="section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h4 class="title"><span class="num color-primary">01 </span>장례 인력 지원</h4>
+									</div>
+									<div class="basic-text font-weight-light">
+										전문 장례 지도사 2명 (장례진행1명,<br />
+										엄습지원 1명), 장례 도우미 7명<br />
+										(상주 3일간, 1일 8시간 지원)
+									</div>
+								</div>
+								<div class="page-section-group">
+									<div class="section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h4 class="title"><span class="num color-primary">02 </span>차량 지원</h4>
+									</div>
+									<div class="basic-text font-weight-light">
+										<div class="indent-block">최고급 대형버스와 리무진 제공</div>
+										<ul class="info-list type-inherit type-outside margin-top-10">
+											<li class="info-item">버스/ 리무진 전국 무료<br />*추가 요금은 유류시세에 따라 변동</li>
+										</ul>
+										<div class="indent-block margin-top-10">고인 이송 차량 비용 지원 :<br />비용 발생시 최대 8만원 지급</div>
+									</div>
+								</div>
+								<div class="page-section-group">
+									<div class="section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h4 class="title"><span class="num color-primary">03 </span>용품 지원</h4>
+									</div>
+									<div class="basic-text font-weight-light">
+										<ul class="info-list type-inherit type-outside">
+											<li class="info-item">의전 용품 일체 :<br />입관용품 일체 (향, 초, 위패등 포함)</li>
+											<li class="info-item">현대식 상복(남성양복, 여성개량 한복 각 5벌 대여)과 전통식 상복(필요수량만큼 제공)</li>
+											<li class="info-item">
+												봉안함(화장시-금전사 송학), 횡대(매장시-오동나무1.5) 옥스포드관보, 오동나무 1단관, 수의(대마 기계직 수의1호), 제단장식2호 또는 30만원 지급, 헌화꽃 50송이, 일회용품 300인분 등
+												제공
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="page-section-group">
+									<div class="section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h4 class="title"><span class="num color-primary">04 </span>상품 금액 5,300,000원</h4>
+									</div>
+									<div class="form-detail">
+										<div class="form-detail-head margin-top-none">
+											<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+										</div>
+										<div class="info-table-area type-scroll-x">
+											<table class="info-table type-tbody-heading">
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption class="for-a11y">
+													납입횟수, 월납입금으로 구성된 상품금액 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col class="info-table-heading-width" />
+													<col />
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">납입횟수</th>
+														<td>100 회</td>
+														<td>125 회</td>
+														<td>152 회</td>
+														<td>200 회</td>
+													</tr>
+													<tr>
+														<th scope="row">월납입금</th>
+														<td>53,000 원</td>
+														<td>42,400 원</td>
+														<td>35,000 원</td>
+														<td>26,500 원</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

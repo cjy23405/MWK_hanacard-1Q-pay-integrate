@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40.119" height="40" viewBox="0 0 40.119 40">
+    <path data-name="사각형 15682" transform="translate(4.119 4)" style="fill:transparent" d="M0 0h32v32H0z"/>
+    <path data-name="사각형 15681" transform="translate(.119)" style="fill:transparent" d="M0 0h40v40H0z"/>
+    <path data-name="패스 13861" d="M7 0a6.982 6.982 0 0 1 7 6.964V13H0V6.964A6.982 6.982 0 0 1 7 0z" transform="translate(6.918 14)" style="fill:#f14a76"/>
+    <g data-name="그룹 14638" transform="translate(-31.881 -82)">
+        <path data-name="선 389" transform="rotate(45 -95.378 86.092)" style="stroke:#2d3239;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none" d="M0 0h2"/>
+        <path data-name="선 390" transform="rotate(135 8.317 57.723)" style="stroke:#2d3239;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none" d="M0 0h2"/>
+        <path data-name="선 391" transform="translate(44 88.9)" style="stroke:#2d3239;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill:none" d="M0 0v2"/>
+        <rect data-name="사각형 17927" width="22" height="3" rx="1.5" transform="translate(33 111.999)" style="fill:#7dedf3"/>
+        <g data-name="합치기 378" style="fill:none">
+            <path d="M2882 8783a2 2 0 0 1-2-2v-1.948a3 3 0 0 1 2.4-2.94v-5.512a9.6 9.6 0 1 1 19.2 0v5.511a3 3 0 0 1 2.4 2.94V8781a2 2 0 0 1-2 2z" style="stroke:none" transform="translate(-2848 -8667)"/>
+            <path d="M2902 8781.499a.5.5 0 0 0 .5-.499v-1.948c0-.711-.504-1.33-1.198-1.47l-1.203-.244v-6.737c0-4.466-3.633-8.1-8.1-8.1-4.466 0-8.099 3.634-8.099 8.1v6.736l-1.201.244c-.695.142-1.2.76-1.2 1.47V8781a.5.5 0 0 0 .5.499H2902m0 1.5H2882c-1.104 0-2-.895-2-1.999v-1.948a3.002 3.002 0 0 1 2.401-2.94v-5.511c0-5.304 4.298-9.6 9.6-9.6 5.303 0 9.6 4.296 9.6 9.6v5.51a3 3 0 0 1 2.4 2.94V8781a1.999 1.999 0 0 1-2 1.999z" style="fill:#2d3239;stroke:none" transform="translate(-2848 -8667)"/>
+        </g>
+        <rect data-name="사각형 17928" width="7" height="1.5" rx=".75" transform="translate(44 110.5)" style="fill:#2d3239"/>
+        <g data-name="그룹 14639">
+            <path data-name="패스 13860" d="M2.5 0A2.5 2.5 0 1 1 0 2.5 2.5 2.5 0 0 1 2.5 0z" transform="translate(41.5 101.5)" style="fill:#fff"/>
+        </g>
+    </g>
+</svg>

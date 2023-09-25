@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">하나OK캐쉬백포인트</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">하나OK캐쉬백포인트</h2>
+						<div class="page-info">
+							<p class="page-info-text">
+								다양한 온/오프라인 OK캐쉬백 가맹점에서 카드 사용시마다 적립됩니다.<br />
+								OK캐쉬백 적립대상 카드를 사용하실 경우에만 적립 가능합니다.
+							</p>
+						</div>
+						<!-- 2022.01.12 수정 -->
+						<div class="ui-page-logo">
+							<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+							<img src="./assets/images/contents/logo-okcashbag.png" alt="" class="img" />
+						</div>
+						<!-- //2022.01.12 수정 -->
+
+						<div class="page-section-group">
+							<div class="accordion-list js-ui-accordion margin-top-35" data-once="true">
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">OK캐쉬백</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">기본적립</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">OK캐쉬백 적립카드 - 이용금액만큼 적립률에 따라 포인트 적립</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">특별적립</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">OK캐쉬백 제휴가맹점 - OK캐쉬백 제휴가맹점 이용</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">기본적립 대상</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<ul class="info-list type-default type-inherit type-outside">
+												<li class="info-item">OK캐쉬백 적립대상 카드 이용하신 고객</li>
+												<li class="info-item type-presa font-weight-regular color-blur">카드상품별로 포인트 적립률과 적립한도 등이 상이하오니, 자세한 내용은 카드 상품안내를 참고하시기 바랍니다.</li>
+												<li class="info-item type-presa font-weight-regular color-blur">
+													포인트는 적립포인트 기준 소수점 이하 절사되어 적립됩니다. 예) 85,000원 물품구매 0.5%(적립률)의 경우 소수점이하 절사한 427P 적립
+												</li>
+											</ul>
+
+											<div class="detail-card-list margin-top-35">
+												<!-- 2022.03.10 : mod : 이미지 경로 수정 및 추가 -->
+												<!-- DD : 이미지 없을 때 -->
+												<!-- <div class="detail-card-item">
+													<div class="card-image">
+														<div class="card-image-inner"></div>
+													</div>
+													<span class="detail-card-name">SK 포인트카드</span>
+												</div> -->
+												<!-- //DD : 이미지 없을 때 -->
+
+												<!-- DD : 이미지 에러 -->
+												<!-- <div class="detail-card-item">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<img src="./assets/images/contents/card-club-sk .png" alt="sk포인트카드" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<span class="detail-card-name">Club SK<br />포인트카드</span>
+												</div> -->
+												<!-- //DD : 이미지 에러 -->
+
+												<!-- DD : 이미지 있을 때 -->
+												<div class="detail-card-item">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/contents/card-sk-point-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<span class="detail-card-name">SK 포인트카드</span>
+												</div>
+												<div class="detail-card-item">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/contents/card-club-sk.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<span class="detail-card-name">Club SK<br />포인트카드</span>
+												</div>
+												<div class="detail-card-item">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/contents/card-touch-t-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													<span class="detail-card-name">Touch T 카드</span>
+												</div>
+												<!-- //DD : 이미지 있을 때 -->
+												<!--// 2022.03.10 : mod : 이미지 경로 수정 및 추가 -->
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">OK캐쉬백 특별적립 대상</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<ul class="info-list type-default type-inherit type-outside">
+												<li class="info-item">OK캐쉬백 제휴가맹점에서 OK캐쉬백 적립카드로 결제 시, OK캐쉬백 포인트가 적립됩니다. 단, OK캐쉬백포인트는 가맹점별로 적립률이 상이합니다.</li>
+												<li class="info-item type-presa font-weight-regular color-blur">
+													Smart포인트카드로 이마트에서 5만원 결제 시, OK캐쉬백 1,000P 적립(5만원 x Smart특별적립 2%= 1,000P)과 OK캐쉬백 50P 적립(5만원 x OK캐쉬백특별가맹점포인트적립 0.01% = 50P)이
+													동시에 됩니다. (당월 Smart 특별적립 업종에 대형마트 대상인 회원일 경우)
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">적립 제외대상</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<ul class="info-list type-default type-inherit type-outside">
+												<li class="info-item">국세, 지방세, 연회비, 무이자할부, 단기카드대출, 장기카드대출, 상품권구매, 대학등록금, 기타 제수수료 등</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">사용방법</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<ul class="info-list type-default type-inherit type-outside">
+												<li class="info-item">OK캐쉬백 홈페이지 (www.okcashbag.com) 또는 OK캐쉬백 콜센터 (1599-0512)에서 확인</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

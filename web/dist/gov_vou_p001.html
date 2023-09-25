@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">정부지원 바우처</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">매뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							정부지원 바우처를<br />
+							사용해보세요
+						</h2>
+
+						<div class="page-info has-com-icon type-icon-voucher">
+							<strong class="page-info-title">정부지원 바우처란?</strong>
+							<p class="page-info-text">
+								국가가 대상자에게 정해진 이용처에서 서비스나<br />
+								물품으로 교환할 수 있는 이용권을 제공하는 사업
+							</p>
+						</div>
+
+						<div class="form-bottom">
+							<div class="ui-buttons type-full">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button">바우처 등록</a>
+									</li>
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-secondary" role="button">바우처 잔액조회</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="banner">
+							<a href="" class="banner-link">
+								<!--2022.05.04 : mod : alt값 변경 -->
+								<img src="./assets/images/contents/img-banner-voucher.png" alt="바우처 이용을 위해서는 국민행복카드 신청이 필요해요!" class="banner-image" />
+							</a>
+						</div>
+
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">출산&middot;육아</h3>
+								</div>
+								<div class="section-contents">
+									<div class="accordion-list js-ui-accordion" data-once="true">
+										<div class="accordion-item js-ui-accordion__item">
+											<button type="button" class="accordion-opener js-ui-accordion__opener">
+												<strong class="accordion-opener-title">임신출산 진료비 바우처</strong>
+												<div class="accordion-opener-text">임신 및 출산에 관련된 의료비를 보조하는<br />보건복지부의 바우처</div>
+											</button>
+											<div class="js-ui-accordion__layer">
+												<div class="accordion-contents">
+													<ul class="info-list type-inherit">
+														<li class="info-item">이용 카드 : 국민행복카드(신용,체크 전용)</li>
+														<li class="info-item">세부내용은 건강보험공단 건강in홈페이지(http://hi.nhis.or.kr)및 건강보험공단 사이버민원센터(http://minwon.nhis.or.kr)참조</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-item js-ui-accordion__item">
+											<button type="button" class="accordion-opener js-ui-accordion__opener">
+												<strong class="accordion-opener-title">기저귀&middot;조제분유 바우처</strong>
+												<div class="accordion-opener-text">대상 가구의 기저귀, 조제분유 구매를 지원하는<br />보건복지부의 바우처</div>
+											</button>
+											<div class="js-ui-accordion__layer">
+												<div class="accordion-contents">
+													<ul class="info-list type-inherit">
+														<li class="info-item">이용 카드 : 국민행복카드(신용,체크 전용)</li>
+														<li class="info-item">세부 내용은 사회서비스바우처 홈페이지(http://www.socialservice.or.kr)참조</li>
+														<li class="info-item">
+															바우처 사용처<br />온라인 : G마켓, 옥션, 우체국쇼핑몰<br />오프라인 : 나들가게 일부(상세점포는 http://nadle.kr(참조), 이마트(트레이더스 포함), 노브랜드, PK마켓, 부츠,
+															홈플러스, 홈플러스 익스프레스)
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-item js-ui-accordion__item">
+											<button type="button" class="accordion-opener js-ui-accordion__opener">
+												<strong class="accordion-opener-title">여성청소년 위생용품 바우처</strong>
+												<div class="accordion-opener-text">저소득층 여성청소년의 위생용품 구입비용을<br />지원하는 바우처</div>
+											</button>
+											<div class="js-ui-accordion__layer">
+												<div class="accordion-contents">
+													<ul class="info-list type-inherit">
+														<li class="info-item">이용 카드 : 국민행복카드(신용,체크 전용)</li>
+														<li class="info-item">세부 내용은 복지로 홈페이지(http://www.bokjiro.go.kr)참조</li>
+														<li class="info-item">바우처 사용처<br />온라인 : G마켓, 옥션<br />오프라인 : 이마트(트레이더스 포함), 노브랜드, PK마켓, 부츠, 하나로마트, 홈플러스, 홈플러스익스프레스</li>
+														<li class="info-item">제주은행 국민행복카드는 여성청소년 위생용품 바우처 이용 불가(추후 오픈 예정)</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-item js-ui-accordion__item">
+											<button type="button" class="accordion-opener js-ui-accordion__opener">
+												<strong class="accordion-opener-title">보육료 유아학비</strong>
+												<div class="accordion-opener-text">만0세부터 만 5세까지 취학 전 전 아동을<br />대상으로 정부에서 제공하는<br />보육료/유아학비 지원 서비스</div>
+											</button>
+											<div class="js-ui-accordion__layer">
+												<div class="accordion-contents">
+													<ul class="info-list type-inherit">
+														<li class="info-item">이용 카드 : 국민행복카드(신용,체크 전용) / 아이행복카드</li>
+														<li class="info-item">세부 내용은 복지로 홈페이지(http://www.bokjiro.go.kr)참조</li>
+														<li class="info-item">국민행복카드 발급시 보육료 결제 동의 진행</li>
+														<li class="info-item">수협 제주은행 우체국의 국민행복카드의 경우 카드발급 이후 * 1588-4651’ “2번 보육료 결제동의” 진행 후 이용 가능</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-item js-ui-accordion__item">
+											<button type="button" class="accordion-opener js-ui-accordion__opener">
+												<strong class="accordion-opener-title">아이돌봄 바우처</strong>
+												<div class="accordion-opener-text">가정에 아이돌봄을 지원하여 아이 및 보호자의<br />복지증진을 위한 바우처</div>
+											</button>
+											<div class="js-ui-accordion__layer">
+												<div class="accordion-contents">
+													<ul class="info-list type-inherit">
+														<li class="info-item">이용 카드 : 국민행복카드(신용,체크 전용)</li>
+														<li class="info-item">
+															<span>서비스 신청 및 안내</span>
+															<ul class="info-list">
+																<li class="info-item type-indent"><span class="indent">-</span> 복지로 홈페이지(http://www.bokjiro.go.kr)</li>
+																<li class="info-item type-indent"><span class="indent">-</span> 아이돌봄 홈페이지(http://www.idolbom.go.kr)</li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">기타</h3>
+								</div>
+								<div class="section-contents">
+									<div class="accordion-list js-ui-accordion" data-once="true">
+										<div class="accordion-item js-ui-accordion__item">
+											<button type="button" class="accordion-opener js-ui-accordion__opener">
+												<strong class="accordion-opener-title">에너지 바우처</strong>
+												<div class="accordion-opener-text">에너지 취약 계층의 동절기 난방비 부담을<br />보조하는 산업통상자원부의 바우처</div>
+											</button>
+											<div class="js-ui-accordion__layer">
+												<div class="accordion-contents">
+													<ul class="info-list type-inherit">
+														<li class="info-item">세부 내용은 에너지바우처 콜센터(1600-3190) 또는 에너지바우처 홈페이지(http://www.energyv.or.kr)참조</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-safe-insurance-product-check">세이프보험 상품 확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 세이프보험 상품 확인 -->
+			<div class="layer-wrap layer-wrap layer-wrap--full" data-layer="layer-safe-insurance-product-check">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">보험 상품 확인</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<section class="page-section-group">
+									<div class="section-title">
+										<h2 class="basic-text">현대해상 파이낸스 세이프보험이란?</h2>
+									</div>
+									<div class="default-text font-weight-light">특정 질병의 진단 또는 사망 시, 카드 채무금액을 면제해 드리는 보험상품입니다.</div>
+								</section>
+
+								<div class="form-detail">
+									<div class="form-detail-head margin-top-10">
+										<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+									</div>
+									<div class="info-table-area type-scroll-x">
+										<table class="info-table type-thead-line">
+											<!-- 2022.05.04 : mod : 텍스트 수정 -->
+											<caption class="for-a11y">
+												순번, 담보, 보장내용, 보장금액으로 구성된 현대해상 파이낸스 세이프보험 상세정보 안내 표입니다.
+											</caption>
+											<thead>
+												<tr>
+													<th scope="col">순번</th>
+													<th scope="col">담보</th>
+													<th scope="col">보장내용</th>
+													<th scope="col">보장금액</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>기본</td>
+													<td>상해사망</td>
+													<td>보험 가입기간 중 상해로 인해 사망한 경우</td>
+													<td rowspan="3" class="info-table-left-line">카드채무액 전액<br />(최대 3,000만원)</td>
+												</tr>
+												<tr>
+													<td rowspan="3">질병보장<br />특별약관</td>
+													<td>질병보장Ⅱ<br />(질병사망)</td>
+													<td>보험 가입기간 중 질병으로 인해 사망한 경우</td>
+												</tr>
+												<tr>
+													<td>질병보장Ⅱ<br />(특정질병진단)</td>
+													<td>
+														보험 가입기간 중 진단이 확정된 질병으로 인해 실명된 경우<br />보험 가입기간 중 특정 질병으로 최초 진단 확정된 경우<br />보험 가입기간 중 관상동맥우회로 수술 또는 주요
+														장기이식수술을 받은 경우
+													</td>
+												</tr>
+												<tr>
+													<td>골절진단<br />위험보장</td>
+													<td>보험 가입기간 중 골절진단을 받은 경우 (치아파절 제외)</td>
+													<td>카드채무액의 10%<br />(최대 300만원)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<ul class="info-list type-outside type-inherit type-text-large margin-top-15">
+									<li class="info-item">특정 질병은 악성암,만성신부전증,급성심근경색증,뇌졸중을 말합니다. (암의 경우 최초 가입일로부터 91일로부터 보장됨)</li>
+									<li class="info-item">본 상품은 현대해상화재보험㈜의 파이낸스세이프보험(보장기간 : 가입일로부터 3년)입니다.</li>
+									<li class="info-item">
+										매월 카드 채무금액의 0.1386%가 보험료로 부과됩니다.<br />본 상품은 하나개인신용카드를 보유한 만 20세~59세 회원에 한해 가입 가능하며, 건강상태 등에 따라 가입이 제한될 수 있습니다.
+									</li>
+									<li class="info-item">상해담보의 경우 암벽등반, 스쿠버다이빙 등 직업, 직무, 동호회 활동으로 발생한 사고의 경우 보상하지 않습니다.</li>
+									<li class="info-item">약관상 특정 질병은 악성암,만성신부전증,급성심근경색증,뇌졸중을 말합니다.</li>
+									<li class="info-item">골절진단보장은 동일한 상해를 직접적인 원인으로 복합골절 발생시에는 1회에 한하여 지급합니다.</li>
+								</ul>
+
+								<ul class="info-list type-outside type-inherit type-text-large margin-top-35">
+									<li class="info-item font-weight-regular">기준: 3년만기, 월 100만원 카드사용액 기준 납입보험료</li>
+								</ul>
+
+								<div class="form-detail">
+									<div class="form-detail-head margin-top-10">
+										<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+									</div>
+									<div class="info-table-area type-scroll-x">
+										<table class="info-table type-thead-line type-tbody-heading">
+											<!-- 2022.05.04 : mod : 텍스트 수정-->
+											<caption class="for-a11y">
+												구분, 상해사망, 질병사망, 특정질병 진단, 골절진단 보정으로 구성된 납입보험료 예시 안내 표입니다.
+											</caption>
+											<thead>
+												<tr>
+													<th scope="col">구분</th>
+													<th scope="col">상해사망</th>
+													<th scope="col">질병사망</th>
+													<th scope="col">특정질병<br />진단</th>
+													<th scope="col">골절진단<br />보장</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">보험료</th>
+													<td class="align-right">190원</td>
+													<td class="align-right">400원</td>
+													<td class="align-right">490원</td>
+													<td class="align-right">306원</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<div class="use-notice-area js-ui-accordion">
+									<div class="use-notice-item js-ui-accordion__item">
+										<button type="button" class="use-notice-opener js-ui-accordion__opener">
+											꼭 확인해 주세요.
+											<span class="for-a11y">
+												상세 내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+										<div class="use-notice-contents js-ui-accordion__layer">
+											<div class="use-notice-section">
+												<div class="use-notice-group">
+													<div class="group-title font-weight-light">보험료 산정 기준금액 및 보상대상 금액</div>
+													<div class="group-contents">
+														보험료 산정 기준금액 및 보상대상 금액 (이하 “카드채무액”이라 한다) :<br />
+														상품 가입자의 개인신용카드로 이용한 일시불·할부·단기카드대출 (현금서비스)·장기카드대출(카드론) 이용금액 및 수수료·이자·연체료 등 상품 가입자가 카드사에 납부해야 할 총
+														채무금액을 말하며, 이는 해당월의 청구금액과 추후 청구될 금액을 합산한 금액(단, 연회비 및 부정매출, 금융분쟁의 사유로 회사가 청구 중지한 금액과 체크카드 이용금액 ,
+														하나BC카드 이용금액, 토스카드 이용금액, 정부 또는 지방자치단체에서 제공한 재난지원금 이용금액 및 법인카드 이용금액은 포함되지 않습니다.)<br />
+														본 상품은 순수 보장형 상품으로 만기환급금 및 해지환급금이 발생하지 않습니다.
+													</div>
+													<div class="group-title font-weight-light">유의사항</div>
+													<div class="group-contents">
+														<ul class="info-list type-outside">
+															<li class="info-item type-indent type-side-no-padding">
+																<div class="indent-block">
+																	보험금 미지급 사유
+																	<ul class="info-list type-outside margin-top-10">
+																		<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>계약자, 피보험자, 보험 수익자의 고의로 인한 손해</li>
+																		<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>피보험자의 임신·출산(제왕절개 포함)·산후기</li>
+																		<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>전쟁, 외국의 무력행사, 혁명, 내란, 사변 폭동</li>
+																		<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>보장 개시일로부터 90일 이내에 최초 진단 확정된 암</li>
+																		<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>AIDS, HIV보균</li>
+																		<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>보장하지 않는 손해에 대한 자세한 내용은 약관을 통해 확인해 주세요.</li>
+																	</ul>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="group-title font-weight-light">보장 개시일 및 보장기간</div>
+													<div class="group-contents">
+														<ul class="info-list type-outside">
+															<li class="info-item type-indent type-side-no-padding">
+																<div class="indent-block">
+																	<ul class="info-list type-outside">
+																		<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>보장 개시일 : 보험 가입 신청 다음 날</li>
+																		<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>보장기간 : 3년</li>
+																		<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>보험가입 연령 : 만 59세까지 가입 가능(만 60세 이상은 가입불가)</li>
+																		<li class="info-item type-indent type-side-no-padding">
+																			<span class="indent">-</span>해지일 : 보험 해지 신청 다음 영업일 (보험료 납입 연체시 일정 기간 동안 보험료의 납입을 최고하고, 그때까지 해당 보험료가 납입되지
+																			않으면 계약이 해지됩니다.)
+																		</li>
+																	</ul>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="group-title font-weight-light">기타</div>
+													<div class="group-contents">
+														<ul class="info-list type-outside">
+															<li class="info-item type-indent type-side-no-padding">
+																<span class="indent">-</span>보험 가입 신청일로부터 30일 이내에 신청을 철회할 수 있으며, 납부한 보험료는 결제 취소됩니다.
+															</li>
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>기타 보장제외사항에 관련하여서는 약관을 반드시 확인해 주시기 바랍니다.</li>
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>본 상품은 현대해상화재보험㈜의 신용보험 입니다.</li>
+														</ul>
+													</div>
+													<div class="group-title margin-top-10"><strong>신청 및 보상 절차</strong></div>
+													<div class="group-title font-weight-light">신청방법</div>
+													<div class="group-contents">
+														<ul class="info-list type-outside">
+															<li class="info-item type-indent type-side-no-padding">'신청하기'를 통해 신청</li>
+															<li class="info-item type-indent type-side-no-padding">
+																<span class="indent">※</span>단, 법인카드, 체크카드, 하나BC카드, 토스카드는 보장이 제외되며, 보상제외 대상 카드만 보유하고 계신 손님은 가입이 불가능합니다.
+															</li>
+														</ul>
+													</div>
+													<div class="group-title font-weight-light">보상절차</div>
+													<div class="group-contents">
+														<ul class="info-list type-outside">
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">1. </span>현대해상 신용보험가입</li>
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">2. </span>보장 사유 발생시 현대해상 전문상담센터 (전화 02-360-2592)로 상담 요청</li>
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">3. </span>상담 후 보상 청구(FAX 또는 우편으로 구비서류 발송)</li>
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">4. </span>보상 여부 결정 시 채무 면제</li>
+															<li class="info-item type-indent type-side-no-padding">본 상품은 현대해상화재보험㈜의 보험상품으로, 보상절차는 현대해상화재보험㈜의 책임하에 진행됩니다.</li>
+															<li class="info-item type-indent type-side-no-padding">문의 : 현대해상 전문상담센터 (전화 02-360-2592)</li>
+														</ul>
+													</div>
+													<div class="group-title margin-top-10"><strong>이용약관</strong></div>
+													<div class="group-title font-weight-light">가입시 알아둘 사항</div>
+													<div class="group-contents">
+														보험계약체결 보험계약 체결 전에 상품설명서 및 약관을 읽어보시기 바랍니다. 보험계약자가 기존에 체결했던 보험계약을 해지하고 다른 보험계약을 체결하면 보험인수가 거절되거나
+														보험료가 인상되거나 보장내용이 달라질 수 있습니다.
+													</div>
+													<div class="group-title font-weight-light">보험금을 지급하지 아니하는 사유</div>
+													<div class="group-contents">
+														<ul class="info-list type-outside">
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>계약자, 피보험자, 보험 수익자의 고의로 인한 손해</li>
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>피보험자의 임신·출산(제왕절개 포함)·산후기</li>
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>전쟁, 외국의 무력행사, 혁명, 내란, 사변 폭동</li>
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>보장 개시일로부터 90일 이내에 최초 진단 확정된 암</li>
+															<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>AIDS, HIV보균</li>
+															<li class="info-item">
+																보험계약상의 알릴 의무 계약 전 알릴 의무 : 계약 청약시에는 건강상태(병력)등의 청약서 질문사항에 사실을 정확히 알리셔야 약정한 내용대로 보상이 가능합니다. 만약 사실대로
+																알리지 않거나 사실과 다르게 알린 경우 보험회사는 약관에 따라 계약을 일방적으로 해지할 수 있고, 보험사고가 발생하였더라도 보험금 지급을 거절하는 등 보장이 제한될 수
+																있습니다.
+															</li>
+															<li class="info-item">청약시에는 보험계약의 기본사항(보험상품명, 보험기간, 보험료, 보험료 납입기간 등)을 반드시 확인하시고 그 구체적인 내용을 설명 받으시기 바랍니다.</li>
+															<li class="info-item">
+																보험계약의 청약서 인쇄된 내용(계약사항, 보상하는 손해와 보상하지 않는 손해, 보험료, 보험기간, 해지(만기)환급금 등)은 보험계약자 본인이 반드시 직접 확인 후 자필서명 또는
+																날인(도장을 찍음)을 하셔야 합니다. 자필서명 또는 날인(도장을 찍음)이 아닌 경우에는 보험금의 지급이 거절되거나 계약이 무효로 처리될 수 있습니다. 다만 전화를 이용한
+																가입이 가능한 상품의 경우에는 일정한 요건이 충족되면 자필서명을 생략할 수 있고 인터넷을 이용한 가입이 가능한 상품의 경우에는 전자서명으로 대체할 수 있습니다.
+															</li>
+															<li class="info-item">
+																보험에 가입하신 후 보험증권과 약관 등을 받으시면 청약서의 내용과 다름이 없는지 또는 누락사항이 없는지를 확인하셔서 이상이 있는 경우 즉시 보험회사로 연락하여 조치를
+																받으셔야 합니다.
+															</li>
+															<li class="info-item">
+																보험료 납입시에는 반드시 보험회사가 발행한 보험료 영수증을 받아서 보관하시기 바랍니다. 보험료가 납입되지 않은 경우 사고발생시 보상을 받을 수 없고 분할납입 보험료의
+																납입을 연체하시는 경우 회사는 일정 기간 동안 보험료의 납입을 최고하고, 그때까지 해당보험료가 납입되지 않으면 계약이 해지됩니다.
+															</li>
+															<li class="info-item">
+																보험계약자는 보험증권을 받은 날부터 15일(계약을 청약한 날부터 30일)이내에 청약을 철회할 수 있으며 이 경우 3영업일 이내에 보험료를 돌려드립니다. 다만, 진단계약,
+																보험기간이 1년 미만인 계약 또는 전문보험계약자가 체결한 경우에는 청약을 철회할 수 없습니다.
+															</li>
+															<li class="info-item">
+																모집종사자가 계약에 관한 중요내용의 설명 등을 잘 이행하는지 확인하십시오, 청약서상에 자필서명, 청약서 부본 및 약관전달과 약관의 주요내용 설명 등을 이행하지 아니한
+																계약에 대하여 계약자는 계약이 성립한 날부터 3개월 이내에 계약을 취소할 수 있으며, 이 경우 회사는 이미 납입한 보험료를 돌려드리며, 보험료를 받은 기간에 대하여 소정의
+																이자를 더하여 지급합니다.
+															</li>
+															<li class="info-item">보험금 청구 소멸시효 : 보험금 청구서류를 사고 발생일로부터 3년 이내에 접수하지 않으면 청구권이 소멸됩니다.(상법 제 662조)</li>
+															<li class="info-item">
+																예금자보호안내 이 보험계약은 예금자보호법에 따라 예금보험공사가 보호하되, 보호한도는 본 보험회사에 있는 귀하의 모든 예금보호대상 금융상품의 해약환급금(또는 만기시
+																보험금이나 사고보험금)에 기타지급금을 합하여 1인당 ‘최고 5천만원'이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다. 다만, 보험계약자 및 납부자가 법인이면
+																보호되지 않습니다. 위 내용은 관련법령의 개정 등에 따라 달라질 수 있음을 알려드리며, 자세한 내용은 예금보험공사(전화 1588-0037, www.kdic.or.kr)로 문의하시기 바랍니다.
+															</li>
+															<li class="info-item">
+																계약자가 납입한 보험료는 불의의 사고를 당한 다른 가입자에게 보험금으로 지급되고 보험회사 운영에 필요한 경비로 사용되므로 중도해지시 지급되는 해지환급금은 납입한
+																보험료보다 적거나 없을 수 있습니다.
+															</li>
+															<li class="info-item">현대해상은 본 상품에 대해 충분히 설명할 의무가 있으며 가입자는 가입에 앞서 이에 대한 충분한 설명을 받을 권리가 있습니다.</li>
+															<li class="info-item">비즈인사이트 인슈플러스는 다수의 보험사와 계약 체결 대리·중개하는 보험대리점입니다.</li>
+															<li class="info-item">비즈인사이트 인슈플러스는 보험사로부터 보험계약체결권을 부여받지 아니한 금융상품 판매 대리·중개업자임을 알려드립니다.</li>
+														</ul>
+													</div>
+													<div class="group-title font-weight-light">상담 및 보험분쟁 조정 안내</div>
+													<div class="group-contents">
+														<ul class="info-list type-outside">
+															<li class="info-item">
+																보험에 대한 문의사항 및 불만사항이 있을 경우, 현대해상화재보험㈜(전화 : 1588-5656, 인터넷 : www,hi.co.kr→전자민원접수) 으로 연락해 주시면 신속하게 처리해 드리겠습니다.
+																또한 분쟁이 발생한 경우에는 금융감독원, 한국소비자원 등의 도움을 요청할 수 있습니다.
+															</li>
+														</ul>
+													</div>
+													<div class="group-title font-weight-light">금융감독원</div>
+													<div class="group-contents">전화 1332(국번 없이), 홈페이지 www.fss.or.kr(e금융센터 : www.fcsc.kr)</div>
+													<div class="group-title font-weight-light">한국소비자원</div>
+													<div class="group-contents">전화 1372(국번 없이), 홈페이지 www.kca.go.kr</div>
+													<div class="group-title font-weight-light">보험 모집 질서 위반</div>
+													<div class="group-contents">보험 계약 청약과 관련하여 특별한 이익을 제공하는 등 보험 모집 질서를 위반하는 행위는 보험업법에 의해 처벌받을 수 있습니다.</div>
+													<div class="group-title margin-top-10"><strong>위반 신고전화</strong></div>
+													<div class="group-title font-weight-light">금융감독원</div>
+													<div class="group-contents">전화 1332(국번 없이), 휴대전화 02-1332, 홈페이지 www.fss.or.kr → 보험모집질서위반신고</div>
+													<div class="group-title font-weight-light">손해보험협회</div>
+													<div class="group-contents">전화 02-3702-8585, FAX 02-3702-8691, 홈페이지 www.knia.or.kr → 모집질서문란신고센터</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 세이프보험 상품 확인 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-safe-insurance-product-check');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

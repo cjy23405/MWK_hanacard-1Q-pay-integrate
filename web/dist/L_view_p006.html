@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">이자율 할인 실적 조회</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section">
+							<div class="section-title type-block">
+								<h2 class="title">조회기간</h2>
+								<p class="section-title-text">실적충족시, 조회월의 다음 월부터 혜택 적용</p>
+							</div>
+							<div class="ui-radio-group type-panel">
+								<div class="ui-radio-block type-box">
+									<input type="radio" class="ui-radio" name="date" id="date1" checked />
+									<label for="date1" class="ui-label">
+										<span class="ui-label-text">2021.09</span>
+									</label>
+								</div>
+								<div class="ui-radio-block type-box">
+									<input type="radio" class="ui-radio" name="date" id="date2" />
+									<label for="date2" class="ui-label">
+										<span class="ui-label-text">2021.10</span>
+									</label>
+								</div>
+								<div class="ui-radio-block type-box">
+									<input type="radio" class="ui-radio" name="date" id="date3" />
+									<label for="date3" class="ui-label">
+										<span class="ui-label-text">2021.11</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-basic-button type-primary">조회</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<!-- 내역 없을 경우 -->
+							<div class="type-none type-no-padding">
+								<p class="item-text">조회된 내역이 없습니다.</p>
+							</div>
+							<!-- //내역 없을 경우 -->
+
+							<!-- 내역 있을 경우 -->
+							<div class="section-title">
+								<h2 class="title">이자율 할인 실적 조회</h2>
+								<div class="section-title-right">
+									<span class="date">2021.10 기준</span>
+								</div>
+							</div>
+							<div class="form-detail type-box margin-top-15">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">장기카드대출(카드론)</dt>
+										<dd class="form-detail-group"><strong class="color-primary">1.0%</strong></dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">단기카드대출(현금서비스)</dt>
+										<dd class="form-detail-group"><strong class="color-primary">1.0%</strong></dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">일부결제금액이월약정(리볼빙)</dt>
+										<dd class="form-detail-group"><strong class="color-primary">1.0%</strong></dd>
+									</div>
+								</dl>
+							</div>
+							<div class="page-section-group">
+								<div class="form-detail">
+									<dl class="form-detail-list">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">결제계좌</dt>
+											<dd class="form-detail-group">하나은행 결제계좌 미연결</dd>
+										</div>
+									</dl>
+									<p class="ui-notice">하나은행 결제계좌 이용 시 <span class="color-wrong">0.5%p</span> 우대</p>
+								</div>
+								<div class="form-detail type-line">
+									<dl class="form-detail-list">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">하나원큐페이</dt>
+											<dd class="form-detail-group">하나원큐페이 미이용</dd>
+										</div>
+									</dl>
+									<p class="ui-notice">하나은행 결제계좌 이용 시 <span class="color-wrong">0.5%p</span> 우대</p>
+								</div>
+								<div class="form-detail type-line">
+									<dl class="form-detail-list">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">할부+일시불</dt>
+											<dd class="form-detail-group type-block"><span class="color-primary">720,000</span> 원</dd>
+										</div>
+									</dl>
+									<p class="ui-notice">하나은행 결제계좌 이용 시 <span class="color-wrong">0.5%p</span> 우대</p>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<!-- CASE 1-1 : 하나은행 결제계좌 여부 (N) & 원큐페이 사용여부 (N) : 100만원 이상 (당월실적금액) -->
+								<div class="status-notice">
+									<div class="status-notice-head">
+										<h3 class="status-notice-title font-weight-bold">금리할인 Tip</h3>
+									</div>
+									<div class="status-notice-contents type-no-line">
+										<p class="status-notice-text color-basic">
+											하나은행 결제계좌변경 & 하나원큐페이로 결제 시, 카드론 <span class="color-wrong">O%p</span>, 현금서비스 <span class="color-wrong">O%p</span>, 리볼빙<span class="color-wrong"
+												>O%p</span
+											>
+											추가 할인 가능합니다.
+										</p>
+									</div>
+								</div>
+								<!-- //CASE 1-1 : 하나은행 결제계좌 여부 (N) & 원큐페이 사용여부 (N) : 100만원 이상 (당월실적금액) -->
+
+								<!-- CASE 1-2 : 하나은행 결제계좌 여부 (N) & 원큐페이 사용여부 (N) : 100만원 미만 (당월실적금액) -->
+								<div class="status-notice">
+									<div class="status-notice-head">
+										<h3 class="status-notice-title font-weight-bold">금리할인 Tip</h3>
+									</div>
+									<div class="status-notice-contents type-no-line">
+										<p class="status-notice-text color-basic">
+											하나은행 결제계좌변경 & 하나원큐페이로 결제, 일시불, 할부(<span class="color-wrong">OOO만원</span>) 이용 시, 카드론 <span class="color-wrong">O%p</span>, 현금서비스
+											<span class="color-wrong">O%p</span>, 리볼빙 <span class="color-wrong">O%p</span> 추가 할인 가능합니다.
+										</p>
+									</div>
+								</div>
+								<!-- //CASE 1-2 : 하나은행 결제계좌 여부 (N) & 원큐페이 사용여부 (N) : 100만원 미만 (당월실적금액) -->
+
+								<!-- CASE 2-1 : 하나은행 결제계좌 여부 (Y) & 원큐페이 사용여부 (N) : 100만원 이상 (당월실적금액) -->
+								<div class="status-notice">
+									<div class="status-notice-head">
+										<h3 class="status-notice-title font-weight-bold">금리할인 Tip</h3>
+									</div>
+									<div class="status-notice-contents type-no-line">
+										<p class="status-notice-text color-basic">
+											하나원큐페이로 결제하시면, 카드론 <span class="color-wrong">O%p</span>, 현금서비스 <span class="color-wrong">O%p</span>, 리볼빙 <span class="color-wrong">O%p</span> 추가 할인
+											가능합니다.
+										</p>
+									</div>
+								</div>
+								<!-- //CASE 2-1 : 하나은행 결제계좌 여부 (Y) & 원큐페이 사용여부 (N) : 100만원 이상 (당월실적금액) -->
+
+								<!-- CASE 2-2 : 하나은행 결제계좌 여부 (Y) & 원큐페이 사용여부 (N) : 100만원 미만 (당월실적금액) -->
+								<div class="status-notice">
+									<div class="status-notice-head">
+										<h3 class="status-notice-title font-weight-bold">금리할인 Tip</h3>
+									</div>
+									<div class="status-notice-contents type-no-line">
+										<p class="status-notice-text color-basic">
+											하나원큐페이로 결제, 일시불, 할부(<span class="color-wrong">OOO만원</span>) 이용 시, 카드론 <span class="color-wrong">O%p</span>, 현금서비스 <span class="color-wrong">O%p</span>,
+											리볼빙 <span class="color-wrong">O%p</span> 추가 할인 가능합니다.
+										</p>
+									</div>
+								</div>
+								<!-- //CASE 2-2 : 하나은행 결제계좌 여부 (Y) & 원큐페이 사용여부 (N) : 100만원 미만 (당월실적금액) -->
+
+								<!-- CASE 3-1 : 하나은행 결제계좌 여부 (N) & 원큐페이 사용여부 (Y) : 100만원 이상 (당월실적금액) -->
+								<div class="status-notice">
+									<div class="status-notice-head">
+										<h3 class="status-notice-title font-weight-bold">금리할인 Tip</h3>
+									</div>
+									<div class="status-notice-contents type-no-line">
+										<p class="status-notice-text color-basic">
+											하나은행 결제계좌 변경 시, 카드론 <span class="color-wrong">O%p</span>, 현금서비스 <span class="color-wrong">O%p</span>, 리볼빙 <span class="color-wrong">O%p</span> 추가 할인
+											가능합니다.
+										</p>
+									</div>
+								</div>
+								<!-- //CASE 3-1 : 하나은행 결제계좌 여부 (N) & 원큐페이 사용여부 (Y) : 100만원 이상 (당월실적금액) -->
+
+								<!-- CASE 3-2 : 하나은행 결제계좌 여부 (N) & 원큐페이 사용여부 (Y) : 100만원 미만 (당월실적금액) -->
+								<div class="status-notice">
+									<div class="status-notice-head">
+										<h3 class="status-notice-title font-weight-bold">금리할인 Tip</h3>
+									</div>
+									<div class="status-notice-contents type-no-line">
+										<p class="status-notice-text color-basic">
+											하나은행 결제계좌 변경 & 일시불, 할부(<span class="color-wrong">OOO만원</span>) 이용 시, 카드론 <span class="color-wrong">O%p</span>, 현금서비스
+											<span class="color-wrong">O%p</span>, 리볼빙 <span class="color-wrong">O%p</span> 추가 할인 가능합니다.
+										</p>
+									</div>
+								</div>
+								<!-- //CASE 3-2 : 하나은행 결제계좌 여부 (N) & 원큐페이 사용여부 (Y) : 100만원 미만 (당월실적금액) -->
+
+								<!-- CASE 4-1 : 하나은행 결제계좌 여부 (Y) & 원큐페이 사용여부 (Y) : 100만원 이상 (당월실적금액) -->
+								<div class="status-notice">
+									<div class="status-notice-head">
+										<h3 class="status-notice-title font-weight-bold">금리할인 Tip</h3>
+									</div>
+									<div class="status-notice-contents type-no-line">
+										<!-- 2022.04.06 문구수정 -->
+										<p class="status-notice-text color-basic">
+											부수거래 최대 할인, 카드론 <span class="color-wrong">O%p</span>, 현금서비스 <span class="color-wrong">O%p</span>, 리볼빙 <span class="color-wrong">O%p</span> 추가 할인
+											가능합니다.
+										</p>
+									</div>
+								</div>
+								<!-- //CASE 4-1 : 하나은행 결제계좌 여부 (Y) & 원큐페이 사용여부 (Y) : 100만원 이상 (당월실적금액) -->
+
+								<!-- CASE 4-2 : 하나은행 결제계좌 여부 (Y) & 원큐페이 사용여부 (Y) : 100만원 미만 (당월실적금액) -->
+								<div class="status-notice">
+									<div class="status-notice-head">
+										<h3 class="status-notice-title font-weight-bold">금리할인 Tip</h3>
+									</div>
+									<div class="status-notice-contents type-no-line">
+										<p class="status-notice-text color-basic">
+											일시불, 할부(<span class="color-wrong">OOO원</span>) 이용 시, 카드론 <span class="color-wrong">O%p</span>, 현금서비스 <span class="color-wrong">O%p</span>, 리볼빙
+											<span class="color-wrong">O%p</span> 추가 할인 가능합니다.
+										</p>
+									</div>
+								</div>
+								<!-- //CASE 4-2 : 하나은행 결제계좌 여부 (Y) & 원큐페이 사용여부 (Y) : 100만원 미만 (당월실적금액) -->
+							</div>
+							<!-- //내역 있을 경우 -->
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									유의사항
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<div class="info-list">
+										<p class="info-item">해당 우대 금리는 ‘적용년월’ 기준이며, 각 상품별 취급시점에 적용됩니다. (리볼빙의 경우 결제일+1영업일 이월시점 적용)</p>
+										<p class="info-item">일시불+할부 이용금액은 전월 승인실적 기준이며 취소금액은 제외 처리 됩니다.</p>
+										<p class="info-item">하나원큐페이 이용은 전월 승인실적 기준이며, 결제계좌는 현재시점 결제계좌로 조회됩니다.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

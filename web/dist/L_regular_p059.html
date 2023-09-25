@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">임대료</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							정기적으로 나가는 임대료<br />
+							하나카드가 잊지 않게 챙겨드려요.
+						</h2>
+
+						<div class="page-section">
+							<div class="usage-total-wrap margin-top-none">
+								<dl class="usage-total">
+									<dt class="usage-total-title">납부자번호</dt>
+									<dd class="usage-total-value"><span class="color-primary">1234567890</span></dd>
+								</dl>
+							</div>
+
+							<div class="form-detail margin-top-25">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">임대사업자</dt>
+										<dd class="form-detail-group">LH공사</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">신청주소</dt>
+										<dd class="form-detail-group">
+											인천 서구 경서동<br />
+											하나금융티아이 (에코로 181)
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">신청일자</dt>
+										<dd class="form-detail-group">2021.06.15</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이체시작일</dt>
+										<dd class="form-detail-group">2021.07.11</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">신청카드번호</dt>
+										<dd class="form-detail-group">1234-****-**12-1234</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item type-narrow">
+											<a href="" class="ui-basic-button" role="button">조회</a>
+										</li>
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">신청</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">서비스 대상</h3>
+								</div>
+								<div class="section-contents">
+									<p class="basic-text color-blur">LH(한국토지주택공사), SH(서울주택도시공사)에서 운영하는 임대주택의 임대료를 납부하는 고객</p>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">대상회원</h3>
+								</div>
+								<div class="section-contents">
+									<p class="basic-text color-blur">
+										개인 (신용/체크) 본인회원<br />
+										[법인/선불/가족/하이패스/크로스마일카드 제외]
+									</p>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">신청방법</h3>
+								</div>
+								<div class="section-contents basic-text">
+									<ul class="info-list color-blur type-inherit type-outside">
+										<li class="info-item">하나카드 홈페이지</li>
+										<li class="info-item">하나카드 고객센터 (1800-1111)</li>
+										<li class="info-item">하나카드 영업점</li>
+									</ul>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">자동납부 승인인정</h3>
+								</div>
+								<div class="section-contents">
+									<div class="section-contents">
+										<div class="info-table-area">
+											<table class="info-table">
+												<!-- 2022.04.27 : mod : caption 수정 -->
+												<caption class="for-a11y">
+													구분,신용카드,체크카드로 구성된 임대표 자동납부 승인인정 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 78px" />
+													<col />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">구분</th>
+														<th scope="col">신용카드</th>
+														<th scope="col">체크카드</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>LH 공사</td>
+														<td>매월<br />마지막 영업일</td>
+														<td>매월 말일<br />(말일이 휴가일인 경우 익월 첫 영업일)</td>
+													</tr>
+													<tr>
+														<td>SH 공사</td>
+														<td colspan="2">매월 말일<br />(말일이 휴일인 경우 익월 첫 영업일)</td>
+													</tr>
+													<tr>
+														<td>JD 공사</td>
+														<td colspan="2">매월 말일 기준 4영업일 전</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">
+											자동납부 신청에 대한 내역을 신청일 다음 영업일에 문자메시지(LMS)를 통하여 알려드리오니, 확인 후 신청내역에 이상이 있을 경우 하나카드 고객센터로 문의하여 주시기 바랍니다.
+										</li>
+										<li class="info-item">임대료 자동납부 결제 금액은 소득공제 대상에 적용됩니다.단, 신용카드 소득공제와 월세 세액공제는 중복 공제 되지 않습니다.</li>
+										<li class="info-item">매월 10일(절대일)까지 신청하시면 신청월말부터카드승인이 발생하며, 11일~말일까지 신청분은 다음달부터 카드승인이 발생하게 됩니다.</li>
+										<li class="info-item">예) 자동납부 신청 5월 15일인 경우, 승인일자는 6월 30일입니다. 만약 30일이 공휴일일 경우 그 다음달 첫 영업일에 카드승인이 발생합니다.</li>
+										<li class="info-item">카드 재발급(분실/갱신)으로 카드번호 변경 시, 변경 된 최종카드로 자동납부 됩니다.</li>
+										<li class="info-item">
+											등록된 카드가 거래정지 및 한도부족, 연체, 분실,기타 사유로 임대료 승인이 거절될 수 있습니다. 이 경우 해당월의 임대료는 LH공사(1600-1004), SH공사(1600-3456)를 통해 별도로
+											납부하여주시기 바랍니다.
+										</li>
+										<li class="info-item">
+											자동납부 신청 당시 다른 금융기관(은행 또는 타카드사 카드)으로 납부중인 고객님께서는 혹시 발생 할 수 있는 이중출금을 방지하기 위하여 타 금융기관 자동이체 해지를 확인 후 신청하여
+											주시기 바랍니다.
+										</li>
+										<li class="info-item">임대료 자동납부 등록 후 최초 납부 개시되는 임대료는 해당월 정상납부 대상금액과 미납금액이 있을 경우 미납금액이 포함되어 결제됩니다.</li>
+										<li class="info-item">
+											<div class="indent-block">임대료 자동납부 해지신청은 신청 당일 또는 다음일에 반영되므로, 다음 사항을 꼭 확인하여 주시기 바랍니다.</div>
+											<ul class="info-list">
+												<li class="info-item type-indent"><span class="indent">1. </span>임대료 납부마감일 기준 2영업일 전에 해지하셔야 해당월에 승인처리 되지 않습니다.</li>
+												<li class="info-item type-indent"><span class="indent">2. </span>임대료 납부마감일은 임대료고지서 및 해당 공사 고객센터를 통해 확인이 가능합니다.</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

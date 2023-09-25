@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">결제계좌</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents has-no-top-padding">
+						<div class="js-ui-tab-panel page-tab-panel">
+							<div class="ui-tab">
+								<ul class="ui-tab-list">
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="credit-card">신용카드</button>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="debit-card">체크카드</button>
+									</li>
+								</ul>
+							</div>
+
+							<!-- tab contents -->
+							<!-- tab: 신용카드 -->
+							<div class="ui-tab-panel" data-tab="credit-card">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">신용카드</h2>
+								<!-- 2022.07.22 : mod : .margin-top-none 클래스 추가 -->
+								<div class="page-section-group margin-top-none">
+									<div class="section-contents">
+										<div class="form-list">
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">청구단위구분</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block">
+														<button type="button" class="ui-button ui-select" title="청구단위구분">하나카드 (통합)</button>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">현재 결제계좌</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-input-block type-use-delete">
+														<!-- 2022.01.07 value 값 수정 -->
+														<input type="text" class="ui-input" title="현재 결제계좌" placeholder="" value="하나은행(하나) 123456******100" disabled />
+														<button type="button" class="ui-button ui-input-delete">
+															<span class="for-a11y">입력 내용 지우기</span>
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<!-- 	2021.12.31 텍스트 수정 -->
+													<strong class="title">결제계좌 변경</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block type-placeholder">
+														<button type="button" class="ui-button ui-select" title="변경 결제계좌">은행 선택</button>
+													</div>
+												</div>
+												<div class="form-group type-code">
+													<div class="form-flex type-row">
+														<div class="form-flex-cell type-flexible">
+															<div class="ui-input-block">
+																<input type="number" pattern="\d*" class="ui-input" title="계좌번호 입력" placeholder="계좌번호 “-”없이 입력" />
+															</div>
+														</div>
+														<div class="form-flex-cell">
+															<button type="button" class="ui-button ui-basic-button type-small type-gray">계좌확인</button>
+														</div>
+													</div>
+												</div>
+												<div class="terms-area">
+													<div class="terms-item">
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox1" />
+															<label for="checkbox1" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">본인의 계좌를 통하여 카드결제금액을 자동이체 출금 처리하는 것에 동의합니다.</span>
+															</label>
+														</div>
+														<button type="button" class="ui-arrow type-text-default color-blur">출금 동의 안내</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="page-section-group">
+									<div class="section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h3 class="title">현금 인출 기능</h3>
+									</div>
+									<div class="section-contents">
+										<div class="form-list">
+											<div class="form-item">
+												<div class="ui-radio-group type-panel">
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-1" checked />
+														<label for="radioPanel2-1" class="ui-label">
+															<span class="ui-label-text">유지</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-2" />
+														<label for="radioPanel2-2" class="ui-label">
+															<span class="ui-label-text">중단</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="use-notice-area js-ui-accordion">
+									<div class="use-notice-item js-ui-accordion__item">
+										<button type="button" class="use-notice-opener js-ui-accordion__opener">
+											이용안내
+											<span class="for-a11y">
+												상세 내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+										<div class="use-notice-contents js-ui-accordion__layer">
+											<div class="use-notice-section">
+												<dl class="use-notice-group">
+													<dt class="group-title">결제계좌 변경 가능시간</dt>
+													<dd class="group-contents">
+														<ul class="info-list">
+															<li class="info-item">09:00 ~ 20:00 (토/일요일, 공휴일 제외)</li>
+														</ul>
+													</dd>
+													<dt class="group-title">은행별 처리시간</dt>
+													<dd class="group-contents">
+														<ul class="info-list">
+															<li class="info-item">
+																하나은행 → 하나은행 변경<br />
+																: 결제일 1영업일 18시 전까지 변경 가능
+															</li>
+															<li class="info-item">
+																하나은행 → 비씨CMS 변경<br />
+																: 결제일 2 영업일 전까지 변경 가능
+															</li>
+															<li class="info-item">
+																비씨/금결원 →하나은행 변경<br />
+																: 결제일 2 영업일 전까지 변경 가능
+															</li>
+															<li class="info-item">
+																금결원CMS →하나은행 변경<br />
+																: 결제일 4영업일 전까지 변경 가능
+															</li>
+														</ul>
+													</dd>
+													<dt class="group-title">CMS기관 안내</dt>
+													<dd class="group-contents">
+														<div class="group-contents-title">비씨CMS</div>
+														<ul class="info-list">
+															<li class="info-item">
+																하나은행, 국민은행,기업은행, 농협 중앙회, 지역 농협단위, 신한은행, 우리은행, SC은행, 한국씨티은행, 경남은행, 광주은행, 대구은행, 부산은행, 산업은행, 새마을금고,
+																수협중앙회, 신용협동조합, 우체국, 전북은행, 제주은행 카카오뱅크, K뱅크
+															</li>
+														</ul>
+														<div class="group-contents-title">금결원CMS</div>
+														<ul class="info-list">
+															<li class="info-item">
+																<div>상호저축은행, 기타 외국계은행,, 산림조합중앙회, 국민은행 가상계좌, 구)축협, 구)시티, 증권사</div>
+																<ul class="info-list">
+																	<li class="info-item type-indent"><span class="indent">-</span>금결원CMS기관은 격일자로 자동이체 의뢰 되오니 참고 바랍니다.</li>
+																	<li class="info-item type-indent"><span class="indent">-</span>금결원CMS기관 계좌 변경 시 2~3영업일 이후 최종 변경 확인 가능합니다.</li>
+																</ul>
+															</li>
+														</ul>
+													</dd>
+													<dt class="group-title">유의사항</dt>
+													<dd class="group-contents">
+														<ul class="info-list">
+															<li class="info-item">계좌번호는 본인 명의의 계좌로만 변경할 수 있습니다.</li>
+															<li class="info-item">타행계좌는 현금인출기능 사용이 불가합니다.</li>
+															<li class="info-item">
+																<div>하나은행”A”계좌->하나은행”B”계좌로 변경할 경우</div>
+																<ul class="info-list">
+																	<li class="info-item type-indent"><span class="indent">-</span>국내 현금 인출은 변경 전 계좌로 이용 가능하나, 해외 현금 인출은 변경후 계좌로 이용 가능합니다.</li>
+																	<li class="info-item type-indent"><span class="indent">-</span>국내현금인출도 변경 후 계좌로 이용을 원하시는 경우 카드를 재발급 받으시기 바랍니다.</li>
+																</ul>
+															</li>
+															<li class="info-item">
+																<div>하나은행에서 계좌에서 타은행 계좌로 변경할 경우</div>
+																<ul class="info-list">
+																	<li class="info-item type-indent">
+																		<span class="indent">-</span>
+																		국내현금인출은 변경 전 계좌로 이용 가능하나 해외 현금 인출은 이용이 불가합니다. 이후 카드를 재발급 하시면 국내/해외 현금인출 모두 이용 불가합니다.
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //tab: 신용카드 -->
+
+							<!-- tab: 체크카드 -->
+							<div class="ui-tab-panel" data-tab="debit-card">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">체크카드</h2>
+								<!-- 2022.07.22 : mod : .margin-top-none 클래스 추가 -->
+								<div class="page-section-group margin-top-none">
+									<div class="section-contents">
+										<div class="form-list">
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">체크카드 구분</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block">
+														<button type="button" class="ui-button ui-select" title="체크카드 구분">모두의 일상 체크카드 (카드번호)</button>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">현재 결제계좌</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-input-block type-use-delete">
+														<!-- 2022.01.07 value 값 수정 -->
+														<input type="text" class="ui-input" title="현재 결제계좌" placeholder="" value="하나은행(하나) 123456******100" disabled />
+														<button type="button" class="ui-button ui-input-delete">
+															<span class="for-a11y">입력 내용 지우기</span>
+														</button>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<!-- 	2021.12.31 텍스트 수정 -->
+													<strong class="title">결제계좌 변경</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block type-placeholder">
+														<button type="button" class="ui-button ui-select" title="변경 결제계좌">은행 선택</button>
+													</div>
+												</div>
+												<div class="form-group type-code">
+													<div class="form-flex type-row">
+														<div class="form-flex-cell type-flexible">
+															<div class="ui-input-block">
+																<input type="number" pattern="\d*" class="ui-input" title="계좌번호 입력" placeholder="계좌번호 “-”없이 입력" />
+															</div>
+														</div>
+														<div class="form-flex-cell">
+															<button type="button" class="ui-button ui-basic-button type-small type-gray">계좌확인</button>
+														</div>
+													</div>
+												</div>
+												<div class="terms-area">
+													<div class="terms-item">
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox2" />
+															<label for="checkbox2" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">본인의 계좌를 통하여 카드결제금액을 자동이체 출금 처리하는 것에 동의합니다.</span>
+															</label>
+														</div>
+														<button type="button" class="ui-arrow type-text-default color-blur">출금 동의 안내</button>
+													</div>
+													<div class="terms-item margin-top-15">
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox3" />
+															<label for="checkbox3" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">본인 결제계좌의 마이너스 통장 등록 여부를 확인하는 것에 동의합니다.</span>
+															</label>
+														</div>
+														<button type="button" class="ui-arrow type-text-default color-blur">등록 여부 확인</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="use-notice-area js-ui-accordion">
+									<div class="use-notice-item js-ui-accordion__item">
+										<button type="button" class="use-notice-opener js-ui-accordion__opener">
+											이용안내
+											<span class="for-a11y">
+												상세 내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+										<div class="use-notice-contents js-ui-accordion__layer">
+											<div class="use-notice-section">
+												<dl class="use-notice-group">
+													<dt class="group-title">결제계좌 변경 가능시간</dt>
+													<dd class="group-contents">
+														<ul class="info-list">
+															<li class="info-item">09:00 ~ 20:00 (토/일요일, 공휴일 제외)</li>
+														</ul>
+													</dd>
+													<dt class="group-title">계좌번호는 본인 명의의 계좌로만 변경할 수 있습니다.</dt>
+													<dd class="group-contents">
+														<ul class="info-list">
+															<li class="info-item">타행계좌는 현금인출기능 사용이 불가합니다.</li>
+															<li class="info-item">
+																하나은행 "A"계좌에서 하나은행"B"계좌로 변경할 경우 국내 현금인출은 변경 전 계좌로 이용 가능하나, 해외 현금인출은 변경 후 계좌로 이용 가능합니다.<br />
+																국내현금인출도 변경후 계좌로 이용을 원하시는 경우 카드를 재발급 받으시길 바랍니다.
+															</li>
+															<li class="info-item">
+																하나은행 계좌에서 타은행 계좌로 변경할 경우 국내 현금인출은 변경 전 계좌로 이용 가능하나, 해외 현금인출은 이용이 불가합니다.<br />
+																이후, 카드를 재발급하시면 국내/해외 현금인출 모두 이용 불가합니다.
+															</li>
+															<li class="info-item">BC CMS로 변경 시 실시간으로 변경사항 확인 가능하며, 금결원 CMS로 변경 시 2영업일 후 확인 가능합니다.</li>
+														</ul>
+													</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //tab: 체크카드 -->
+							<!-- //tab contents -->
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">변경</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="36" viewBox="0 0 35 36">
+    <defs>
+        <style>
+            .cls-2{fill:#a2a2a2}
+        </style>
+    </defs>
+    <g id="btn_add" transform="rotate(-90 18 18)">
+        <path id="사각형_8181" data-name="사각형 8181" style="fill:none" d="M0 0h36v35H0z"/>
+        <rect id="사각형_8364" data-name="사각형 8364" class="cls-2" width="18" height="2" rx="1" transform="translate(9 16)"/>
+        <rect id="사각형_8365" data-name="사각형 8365" class="cls-2" width="2" height="18" rx="1" transform="translate(17 8)"/>
+    </g>
+</svg>

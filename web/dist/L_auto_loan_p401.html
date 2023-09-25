@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">대출결제정보변경</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							결제정보를 변경할<br />
+							대출을 선택해 주세요.
+						</h2>
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">조회구분</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-radio-group type-panel">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" data-checkbox-tab="radioPanel1-1" checked />
+												<label for="radioPanel1-1" class="ui-label">
+													<span class="ui-label-text">결제일</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" data-checkbox-tab="radioPanel1-2" />
+												<label for="radioPanel1-2" class="ui-label">
+													<span class="ui-label-text">결제계좌</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">대출번호</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-radio-group type-full">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" checked />
+												<label for="radioBox1-1" class="ui-label type-block">
+													<div class="ui-label-text">
+														<span class="title">일반대출</span>
+														<div>1520999001530</div>
+													</div>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" />
+												<label for="radioBox1-2" class="ui-label">
+													<div class="ui-label-text">
+														<span class="title">상품명</span>
+														<div>상품번호</div>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<!-- [DD] 대출이용내역이 없는 경우 -->
+									<div class="form-group type-none">
+										<p class="item-text">대출이용내역이 없습니다.</p>
+									</div>
+									<!-- //[DD] 대출이용내역이 없는 경우 -->
+								</div>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">조회</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section - 조회구분 : 결제일-->
+						<div class="page-section type-line" data-checkbox-tab-panel="radioPanel1-1">
+							<div class="form-detail">
+								<div class="form-detail-head">
+									<h3 class="title">대출정보</h3>
+								</div>
+								<div class="form-list">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">현재 결제일</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete">
+												<input type="text" class="ui-input" title="현재 결제일" value="5일" disabled />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">결제일 변경</strong>
+										</div>
+										<div class="form-group">
+											<!-- [DD] placeholder 내용이 들어갈 경우 type-placeholder 클래스 추가 -->
+											<div class="ui-select-block">
+												<!-- 2022.05.04 : mod : title 값 변경 -->
+												<button type="button" class="ui-button ui-select" title="변경 결제일 선택">선택</button>
+											</div>
+											<p class="ui-notice">결제일 변경 전 아래 유의사항을 반드시 확인하여 주시기 바랍니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="use-notice-area js-ui-accordion">
+								<div class="use-notice-item js-ui-accordion__item">
+									<button type="button" class="use-notice-opener js-ui-accordion__opener">
+										이용안내
+										<span class="for-a11y">
+											상세 내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="use-notice-contents js-ui-accordion__layer">
+										<dl class="use-notice-group">
+											<dt class="group-title">결제일 변경 가능시간</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">홈페이지 / 모바일 09:00 ~ 23:00 (토/일요일, 공휴일 포함)</li>
+													<li class="info-item">하나카드 고객센터 09:00 ~ 18:00 (토/일요일, 공휴일 제외)</li>
+												</ul>
+											</dd>
+											<dt class="group-title">유의사항</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">다수의 대출을 보유 중인 경우 대출별로 각각 변경해 주시기 바랍니다.</li>
+													<li class="info-item">결제일이 변경되면 대출만기일도 변경되오니 참고하시기 바랍니다.</li>
+													<li class="info-item">결제일 변경은 1회차 납입 전까지는 언제든지 변경이 가능하지만, 1회차 납입 이후 대출 종료 시까지는 2회에 한하여 변경이 가능합니다.</li>
+													<li class="info-item">결제일 변경 후 60일 이내 결제일 재변경은 불가합니다.</li>
+													<li class="info-item">대출만기일이 2개월 미만으로 남은 대출의 경우 및 대출이 연체중이거나 선납 처리를 한 경우 결제일 변경이 불가합니다.</li>
+													<li class="info-item">특정기간 금리할인 중인 계좌 및 거치기간 중인 계좌는 결제일 변경이 불가합니다.</li>
+													<li class="info-item">
+														<div>기타 문의사항은 하나카드 고객센터로 문의하여 주시기 바랍니다.</div>
+														<ul class="info-list">
+															<li class="info-item type-indent">
+																<span class="indent">-</span>
+																<div>자동차금융(오토할부&middot;오토론)<br />☎ 1599-5955</div>
+															</li>
+															<li class="info-item type-indent">
+																<span class="indent">-</span>
+																<div>신용대출<br />☎ 1800-1207</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-primary" role="button">결제일 변경</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- // section - 조회구분 : 결제일 -->
+
+						<!-- section - 조회구분 : 결제계좌 -->
+						<div class="page-section type-line" data-checkbox-tab-panel="radioPanel1-2">
+							<div class="form-detail">
+								<div class="form-detail-head">
+									<h3 class="title">대출정보</h3>
+								</div>
+								<div class="form-list">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">현재 결제계좌</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete">
+												<input type="text" class="ui-input" title="현재 결제계좌" value="KEB하나은행(하나)123********123" disabled />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">변경 결제계좌</strong>
+										</div>
+										<div class="form-group">
+											<!-- [DD] placeholder 내용이 들어갈 경우 type-placeholder 클래스 추가 -->
+											<div class="ui-select-block">
+												<!-- 2022.05.04 : mod : title 값 변경 -->
+												<button type="button" class="ui-button ui-select" title="변경 결제계좌 은행 선택">우리은행</button>
+											</div>
+										</div>
+										<div class="form-group type-code">
+											<div class="form-flex type-row">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<!-- 2022.05.04 : mod : title 값 변경 -->
+														<input type="number" pattern="\d*" class="ui-input" title="계좌번호 ‘-’ 제외하고 입력" placeholder="‘-’ 제외하고 입력" />
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<button type="button" class="ui-button ui-basic-button type-small type-gray">계좌확인</button>
+												</div>
+											</div>
+											<p class="ui-notice type-no-icon">대출거래 시 대출금이 입금될 계좌입니다.</p>
+										</div>
+
+										<div class="terms-area">
+											<div class="terms-item">
+												<div class="ui-checkbox-block type-align-top">
+													<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" />
+													<label for="selectCheckbox-1" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="ui-label-text"> 본인의 계좌를 통하여 카드결제금액을 자동이체 출금 처리하는 것에 동의합니다. </span>
+													</label>
+												</div>
+												<button type="button" class="ui-arrow color-blur">출금 동의 안내</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="use-notice-area js-ui-accordion">
+								<div class="use-notice-item js-ui-accordion__item">
+									<button type="button" class="use-notice-opener js-ui-accordion__opener">
+										이용안내
+										<span class="for-a11y">
+											상세 내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="use-notice-contents js-ui-accordion__layer">
+										<dl class="use-notice-group">
+											<dt class="group-title">결제계좌 변경 가능시간</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">홈페이지 / 모바일 09:00 ~ 20:00 (토/일요일, 공휴일 제외)</li>
+													<li class="info-item">하나카드 고객센터 09:00 ~ 18:00 (토/일요일, 공휴일 제외)</li>
+												</ul>
+											</dd>
+											<dt class="group-title">CMS기관 안내</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">하나은행</li>
+													<li class="info-item">
+														금융결제원 (하나은행 외) :<br />국민은행, 기업은행, 농협/수협 은행 및 중앙회, 신한은행,<br />
+														우리은행, SC제일은행, 한국씨티은행, 경남은행, 광주은행,<br />
+														대구은행, 부산은행,전북은행, 제주은행, 산업은행, 신협<br />
+														새마을금고, 우체국, 카카오뱅크, 케이뱅크, 상호저축은행,<br />
+														산림조합중앙회, 기타 외국계은행 및 증권사 등
+													</li>
+												</ul>
+											</dd>
+											<dt class="group-title">유의사항</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">계좌번호는 본인 명의의 계좌로만 변경할 수 있습니다.</li>
+													<li class="info-item">자동이체 계좌가 하나은행/하나은행 외 타행인 경우 모두 결제일 기준 전영업일부터 익영업일까지는 결제계좌 변경이 불가합니다.</li>
+													<li class="info-item">
+														<div>기타 문의사항은 하나카드 고객센터로 문의하여 주시기 바랍니다.</div>
+														<ul class="info-list">
+															<li class="info-item type-indent">
+																<span class="indent">-</span>
+																<div>자동차금융(오토할부&middot;오토론)<br />☎ 1800-1221</div>
+															</li>
+															<li class="info-item type-indent">
+																<span class="indent">-</span>
+																<div>신용대출<br />☎ 1800-1207</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">결제계좌 변경</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- // section - 조회구분 : 결제계좌 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">1Q 내맘대로카드 서비스</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title"><span class="title-step">STEP 2</span>서비스를 조회합니다.</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 2단계 중 2단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="page-section">
+							<div class="form-detail">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">신청일자</dt>
+										<dd class="form-detail-group"><strong>미 신청</strong></dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">종료일자</dt>
+										<dd class="form-detail-group"><strong>미 신청</strong></dd>
+									</div>
+								</dl>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="use-notice-area js-ui-accordion">
+								<div class="use-notice-item js-ui-accordion__item">
+									<button type="button" class="use-notice-opener js-ui-accordion__opener">
+										프리미엄 적립 Pack 신청/해지 안내
+										<span class="for-a11y">
+											상세 내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="use-notice-contents js-ui-accordion__layer">
+										<div class="form-detail-wrap">
+											<div class="form-detail">
+												<div class="form-detail-head type-block font-weight-regular">
+													<span class="basic-text">쇼핑</span>
+													<div class="default-text margin-top-4">신세계 사이먼 프리미엄 아울렛, 롯데프리미엄 아울렛, 현대프리미엄 아울렛, 롯데면세점, 신라면세점</div>
+												</div>
+												<div class="margin-top-minus-10">
+													<dl class="form-detail-list type-text-default font-weight-light">
+														<div class="form-detail-item">
+															<dt class="form-detail-title">적립률</dt>
+															<dd class="form-detail-group color-primary"><strong>10%</strong></dd>
+														</div>
+														<div class="form-detail-item-group margin-top-10">
+															<dt class="form-detail-item-title">적립한도</dt>
+															<dd class="form-detail-item margin-top-10">
+																<span class="form-detail-title">- 지난달 실적 60만원 이상<br />100만원 미만</span>
+																<span class="form-detail-group color-basic"><strong>8천 하나머니</strong></span>
+															</dd>
+															<dd class="form-detail-item margin-top-10">
+																<span class="form-detail-title">- 지난달 실적 100만원 이상</span>
+																<span class="form-detail-group color-basic"><strong>1만2천 하나머니</strong></span>
+															</dd>
+														</div>
+													</dl>
+												</div>
+											</div>
+											<div class="form-detail">
+												<div class="form-detail-head type-block font-weight-regular">
+													<span class="basic-text">생활</span>
+													<div class="default-text margin-top-4">아파트관리비, 도시가스, 전기요금, 세스코</div>
+												</div>
+												<div class="margin-top-minus-10">
+													<dl class="form-detail-list type-text-default font-weight-light">
+														<div class="form-detail-item">
+															<dt class="form-detail-title">적립률</dt>
+															<dd class="form-detail-group color-primary"><strong>10%</strong></dd>
+														</div>
+														<div class="form-detail-item-group margin-top-10">
+															<dt class="form-detail-item-title">적립한도</dt>
+															<dd class="form-detail-item margin-top-10">
+																<span class="form-detail-title">- 지난달 실적 60만원 이상<br />100만원 미만</span>
+																<span class="form-detail-group color-basic"><strong>8천 하나머니</strong></span>
+															</dd>
+															<dd class="form-detail-item margin-top-10">
+																<span class="form-detail-title">- 지난달 실적 100만원 이상</span>
+																<span class="form-detail-group color-basic"><strong>1만2천 하나머니</strong></span>
+															</dd>
+														</div>
+													</dl>
+												</div>
+											</div>
+										</div>
+
+										<ul class="info-list margin-top-15">
+											<li class="info-item">프리미엄 아울렛 : 오프라인 이용금액에 한함, 식음료 매장 및 편의시설 이용금액 제외</li>
+											<li class="info-item">아파트관리비 : 하나카드로 자동납부 신청가능한 아파트관리비 자동이체 금액</li>
+											<li class="info-item">도시가스 : 하나카드로 자동납부 신청가능한 도시가스 자동이체 금액</li>
+											<li class="info-item type-presa">
+												아파트별 납부마감일에 따라 자동이체 신청 다음달 또는 다음다음달부터 요금 결제가 될 수 있으니 프리미엄 적립Pack 신청 전 확인하시기 바랍니다. (아파트관리비 납부일은 하나카드
+												홈페이지 및 고객센터에서 가능합니다.)
+											</li>
+											<li class="info-item type-presa">프리미엄 적립 Pack 서비스는 지난달 실적에 따라 통합한도와 상관없이 적립 제공 (개별 한도 제공)</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="use-notice-area js-ui-accordion margin-top-35">
+								<div class="use-notice-item js-ui-accordion__item">
+									<button type="button" class="use-notice-opener js-ui-accordion__opener">
+										이용안내
+										<span class="for-a11y">
+											상세 내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="use-notice-contents js-ui-accordion__layer">
+										<ul class="info-list">
+											<li class="info-item color-primary">제휴연회비 : 2만원 (연회비 별도)</li>
+											<li class="info-item">프리미엄 적립 Pack 서비스는 연 1회 신청 가능하며, 서비스가 해지되는 경우 신청일 기준으로 1년 경과 후 재신청 가능합니다.</li>
+											<li class="info-item">
+												최초 서비스 신청일부터 다음달 말일까지는 지난달 실적 60만원 미만 시에도 지난달 실적 60만원 이상 100만원 미만 기준 서비스 제공합니다. (단, 카드유효기간 내 1 회 제공)
+											</li>
+											<li class="info-item">
+												프리미엄 적립 Pack 제휴연회비는 서비스 신청일 기준으로 1년 단위로 청구되며, 서비스 제공 1년이 도래하기전에 서비스(카드)를 해지하는 경우 회원이 서비스(카드)를 해지한 날부터
+												잔여기간에 대하여 일할 반환해드립니다.
+											</li>
+											<li class="info-item">
+												프리미엄 적립 Pack 서비스는 하나멤버스 1Q카드 내맘대로 회원에 한하여 추가로 이용할 수 있는 부가서비스이므로 카드를 해지하는 경우 프리미엄 적립 Pack 서비스도 자동 해지 됩니다.
+											</li>
+											<li class="info-item">회원의 카드 해지 시점에 연회비와 프리미엄 적립 Pack 서비스의 잔여기간이 상이할 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">신청</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

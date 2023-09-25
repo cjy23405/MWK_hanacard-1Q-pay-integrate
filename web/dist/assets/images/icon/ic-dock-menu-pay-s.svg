@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="26.374" viewBox="0 0 28 26.374">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.192" y1="0.901" x2="0.858" y2="0.138" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00a49d"/>
+      <stop offset="1" stop-color="#00a49d"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.834" y1="0.903" x2="0.179" y2="0.121" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#54c3be" stop-opacity="0.502"/>
+      <stop offset="1" stop-color="#d8f3f2" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="사각형_18172" x="1.5" y="15.624" width="7.5" height="6.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-color="#008882" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_14894" data-name="그룹 14894" transform="translate(-117.5 -131.18)">
+    <rect id="사각형_18171" data-name="사각형 18171" width="22" height="17" rx="4" transform="translate(126.448 131.18) rotate(30)" fill="url(#linear-gradient)"/>
+    <g id="사각형_18170" data-name="사각형 18170" transform="translate(139.5 140.554) rotate(90)" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" fill="url(#linear-gradient-2)">
+      <rect width="17" height="22" rx="4" stroke="none"/>
+      <rect x="0.25" y="0.25" width="16.5" height="21.5" rx="3.75" fill="none"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 117.5, 131.18)" filter="url(#사각형_18172)">
+      <rect id="사각형_18172-2" data-name="사각형 18172" width="3.5" height="4.5" rx="1" transform="translate(7.5 16.12) rotate(90)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

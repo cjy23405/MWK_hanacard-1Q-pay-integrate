@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">쿠폰 상세</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-coupon-detail">
+						<div class="coupon-detail">
+							<div class="coupon-detail-info">
+								<div class="logo-image type-store">
+									<div class="logo-image-inner">
+										<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+									</div>
+								</div>
+								<div class="coupon-detail-brand">포시즌스 호텔 서울</div>
+								<div class="coupon-detail-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+								<div class="coupon-detail-date">2021.05.01 ~ 2021.07.31</div>
+								<div class="coupon-detail-buttons">
+									<a href="" class="coupon-detail-button type-share" role="button"><span class="for-a11y">공유하기</span></a>
+									<!-- data-toggle 속성으로 토글기능 사용 / 활성화시 is-active 클래스 추가 -->
+									<button type="button" class="coupon-detail-button type-heart" data-toggle="true"><span class="for-a11y">찜하기</span></button>
+								</div>
+							</div>
+						</div>
+
+						<div class="wcms-data">
+							<section class="event-data">
+								<section class="wcms-section-group">
+									<div class="wcms-flex wcms-margin-small">
+										<div class="wcms-flex-cell type-flexible">
+											<h2 class="wcms-title-medium wcms-margin-none">사용처</h2>
+										</div>
+										<div class="wcms-flex-cell">
+											<a href="" class="wcms-arrow-button">바로가기</a>
+										</div>
+									</div>
+									<p class="wcms-text wcms-size-normal wcms-color-gray">SM면세점 서울점 (인사동)</p>
+								</section>
+
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">혜택</h2>
+									<p class="wcms-text wcms-size-normal wcms-color-gray">그랜드 볼룸 웨딩 진행 시 디럭스룸 1박 제공</p>
+								</section>
+
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">대상</h2>
+									<p class="wcms-text wcms-size-normal wcms-color-gray">하나 프리미엄 우수회원, 프리미엄카드 보유회원 (플래티늄 등급 이상, 체크 포함), 법인카드 전회원</p>
+								</section>
+
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">문의/예약</h2>
+									<p class="wcms-text wcms-size-normal wcms-color-gray">포시즌스 호텔 02-1234-5012</p>
+								</section>
+
+								<img src="../../../dist/assets/images/_dummy/image.png" alt="이미지 설명" class="wcms-image" />
+
+								<div class="wcms-notice">
+									<div class="wcms-notice-list">
+										<section class="wcms-notice-item">
+											<div class="wcms-notice-head">
+												<h2 class="wcms-notice-title">유의사항</h2>
+											</div>
+											<div class="wcms-notice-contents">
+												<ul class="wcms-list wcms-size-small wcms-weight-light">
+													<li class="wcms-list-item type-dot wcms-color-gray">
+														<div class="wcms-list-contents">해당 혜택은 다른 할인 및 이벤트와 중복 적용되지 않습니다.</div>
+													</li>
+													<li class="wcms-list-item type-dot wcms-color-gray">
+														<div class="wcms-list-contents">해당 혜택은 제휴사의 사정에 따라 사전 예고 없이 내용이 변경되거나 중단될 수 있습니다.</div>
+													</li>
+												</ul>
+											</div>
+										</section>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">쿠폰받기</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

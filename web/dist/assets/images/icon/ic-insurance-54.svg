@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="그룹_13694" data-name="그룹 13694" transform="translate(-273 -46)">
+    <g id="ic-insurance-28" transform="translate(273 46)">
+      <g id="사각형_17198" data-name="사각형 17198" transform="translate(13.5 32)" fill="#fff" stroke="#2d3239" stroke-width="1.5">
+        <path d="M0,0H5A0,0,0,0,1,5,0V2.5A2.5,2.5,0,0,1,2.5,5h0A2.5,2.5,0,0,1,0,2.5V0A0,0,0,0,1,0,0Z" stroke="none"/>
+        <path d="M.75.75h3.5a0,0,0,0,1,0,0V2.5A1.75,1.75,0,0,1,2.5,4.25h0A1.75,1.75,0,0,1,.75,2.5V.75A0,0,0,0,1,.75.75Z" fill="none"/>
+      </g>
+      <g id="사각형_17199" data-name="사각형 17199" transform="translate(23.5 32)" fill="#fff" stroke="#2d3239" stroke-width="1.5">
+        <path d="M0,0H5A0,0,0,0,1,5,0V2.5A2.5,2.5,0,0,1,2.5,5h0A2.5,2.5,0,0,1,0,2.5V0A0,0,0,0,1,0,0Z" stroke="none"/>
+        <path d="M.75.75h3.5a0,0,0,0,1,0,0V2.5A1.75,1.75,0,0,1,2.5,4.25h0A1.75,1.75,0,0,1,.75,2.5V.75A0,0,0,0,1,.75.75Z" fill="none"/>
+      </g>
+      <rect id="사각형_17191" data-name="사각형 17191" width="44" height="44" fill="rgba(223,223,223,0)"/>
+      <rect id="사각형_17192" data-name="사각형 17192" width="36" height="36" transform="translate(4 4)" fill="rgba(212,201,201,0)"/>
+      <g id="사각형_17193" data-name="사각형 17193" transform="translate(15 1.5)" fill="none" stroke="#2d3239" stroke-width="1.5">
+        <path d="M5,0H7a5,5,0,0,1,5,5v5a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V5A5,5,0,0,1,5,0Z" stroke="none"/>
+        <path d="M5,.75H7A4.25,4.25,0,0,1,11.25,5V9.25a0,0,0,0,1,0,0H.75a0,0,0,0,1,0,0V5A4.25,4.25,0,0,1,5,.75Z" fill="none"/>
+      </g>
+      <rect id="사각형_17194" data-name="사각형 17194" width="19.908" height="23" rx="4" transform="translate(10.592 9.5)" fill="#fff"/>
+      <path id="빼기_356" data-name="빼기 356" d="M6723.239-15384.234h-12.907a3.977,3.977,0,0,1-2.8-1.145,3.97,3.97,0,0,1-1.2-2.772,4.008,4.008,0,0,0,2.953,1.3h11.863a4.005,4.005,0,0,0,4-4v-11.862a4.006,4.006,0,0,0-4-4h-11.863a4,4,0,0,0-1.244.2,3.984,3.984,0,0,1,2.292-.72h12.907a4,4,0,0,1,4,4v15A4,4,0,0,1,6723.239-15384.234Z" transform="translate(-6695.738 15417.734)" fill="none"/>
+      <g id="사각형_17197" data-name="사각형 17197" transform="translate(9 9.5)" fill="none" stroke="#2d3239" stroke-width="1.5">
+        <rect width="24" height="24" rx="5" stroke="none"/>
+        <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="4.25" fill="none"/>
+      </g>
+      <rect id="사각형_17200" data-name="사각형 17200" width="1.5" height="12" rx="0.75" transform="translate(25.75 15.5)" fill="#2d3239"/>
+    </g>
+    <g id="그룹_13693" data-name="그룹 13693" transform="translate(-9909 -471.044)">
+      <rect id="사각형_17288" data-name="사각형 17288" width="17.656" height="15.579" rx="3" transform="translate(10204 541.018)" fill="#fff"/>
+      <rect id="사각형_17234" data-name="사각형 17234" width="17.656" height="15.579" rx="3" transform="translate(10204 541.018)" fill="#fff"/>
+      <path id="사각형_17236" data-name="사각형 17236" d="M3,0H13.618a3,3,0,0,1,3,3V4.193a1,1,0,0,1-1,1H1a1,1,0,0,1-1-1V3A3,3,0,0,1,3,0Z" transform="translate(10206.078 542.078)" fill="#7dedf3"/>
+      <line id="선_656" data-name="선 656" x2="14.54" transform="translate(10205.558 546.73)" fill="none" stroke="#2d3239" stroke-width="1.5"/>
+      <line id="선_657" data-name="선 657" y2="3.304" transform="translate(10208.674 540.544)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="선_658" data-name="선 658" y2="3.304" transform="translate(10216.982 540.544)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="선_667" data-name="선 667" x2="1.039" transform="translate(10208.206 549.66)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="선_671" data-name="선 671" x2="1.039" transform="translate(10208.206 552.776)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="선_668" data-name="선 668" x2="1.039" transform="translate(10212.309 549.66)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="선_670" data-name="선 670" x2="1.039" transform="translate(10212.309 552.776)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="선_669" data-name="선 669" x2="1.039" transform="translate(10216.411 549.66)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="선_672" data-name="선 672" x2="1.039" transform="translate(10216.411 552.776)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+      <g id="사각형_17235" data-name="사각형 17235" transform="translate(10204 541.018)" fill="none" stroke="#2d3239" stroke-width="1.5">
+        <rect width="17.656" height="15.579" rx="3" stroke="none"/>
+        <rect x="0.75" y="0.75" width="16.156" height="14.079" rx="2.25" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

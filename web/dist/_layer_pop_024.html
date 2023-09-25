@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-withdraw-account-select">출금계좌 선택</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 출금계좌 선택 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--find" data-layer="layer-withdraw-account-select">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">출금계좌선택</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<div class="ui-select-list type-unset margin-top-none">
+										<div class="ui-select-item">
+											<!-- DD : 먼저 체크 된 옵션이 있으면 is-checked 클래스 값 및 title 속성 추가 -->
+											<button type="button" class="ui-radio-block is-checked" title="선택 됨" data-layer-select-option="optionGroupName">
+												<span class="ui-label type-block">
+													<span class="card-list">
+														<span class="card-item">
+															<span class="card-block">
+																<!-- DD : 이미지 없을 때 -->
+																<span class="logo-image">
+																	<span class="logo-image-inner"></span>
+																</span>
+																<span class="card-info">
+																	<strong class="card-name basic-text type-gray">우리은행 직장인제테크저축통장</strong>
+																	<span class="card-number-block">
+																		<span class="card-number">
+																			<span class="card-number-item font-weight-regular">011020112341311</span>
+																		</span>
+																	</span>
+																	<span class="card-total-amount">
+																		<span class="card-total-amount-val type-text-large">18,880,017 원</span>
+																	</span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</button>
+										</div>
+										<div class="ui-select-item">
+											<button type="button" class="ui-radio-block" data-layer-select-option="optionGroupName">
+												<span class="ui-label type-block">
+													<span class="card-list">
+														<span class="card-item">
+															<span class="card-block">
+																<!-- DD : 이미지 에러 -->
+																<span class="logo-image">
+																	<span class="logo-image-inner">
+																		<img src="./assets/images/_dummy/logo-hana-card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="card-info">
+																	<strong class="card-name basic-text type-gray">IBK기업은행 직장인우대저축통장</strong>
+																	<span class="card-number-block">
+																		<span class="card-number">
+																			<span class="card-number-item font-weight-regular">011020112341311</span>
+																		</span>
+																	</span>
+																	<span class="card-total-amount">
+																		<span class="card-total-amount-val type-text-large">35,000 원</span>
+																	</span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</button>
+										</div>
+										<div class="ui-select-item">
+											<button type="button" class="ui-radio-block" data-layer-select-option="optionGroupName">
+												<span class="ui-label type-block">
+													<span class="card-list">
+														<span class="card-item">
+															<span class="card-block">
+																<!-- DD : 이미지 있을 때 -->
+																<span class="logo-image">
+																	<span class="logo-image-inner">
+																		<img src="./assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="card-info">
+																	<strong class="card-name basic-text type-gray">카카오뱅크 직장인제테크저축통장</strong>
+																	<span class="card-number-block">
+																		<span class="card-number">
+																			<span class="card-number-item font-weight-regular">011020112341311</span>
+																		</span>
+																	</span>
+																	<span class="card-total-amount">
+																		<span class="card-total-amount-val type-text-large">10,017 원</span>
+																	</span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</button>
+										</div>
+										<div class="ui-select-item">
+											<button type="button" class="ui-radio-block" data-layer-select-option="optionGroupName" disabled>
+												<span class="ui-label type-block">
+													<span class="card-list">
+														<!--[DD] 잔액조회오류시 type-cancel 클래스 추가 -->
+														<span class="card-item type-cancel">
+															<span class="card-block">
+																<span class="logo-image">
+																	<span class="logo-image-inner">
+																		<img src="./assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="card-info">
+																	<strong class="card-name basic-text type-gray">SC제일은행 에이스통장</strong>
+																	<span class="card-number-block">
+																		<span class="card-number">
+																			<span class="card-number-item font-weight-regular">011020112341311</span>
+																		</span>
+																	</span>
+																	<span class="card-result-group margin-top-4">
+																		<span class="card-result color-wrong">잔액조회오류</span>
+																	</span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 출금계좌 선택 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-withdraw-account-select');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <path data-name="사각형 16874" d="M3 0a3 3 0 0 1 3 3v3H0V3a3 3 0 0 1 3-3z" transform="translate(13.5 9.75)" style="fill:#fff"/>
+    <path data-name="사각형 16875" d="M2.5 0A2.5 2.5 0 0 1 5 2.5V6H0V2.5A2.5 2.5 0 0 1 2.5 0z" transform="translate(15.5 9.75)" style="fill:#7dedf3"/>
+    <g data-name="사각형 16876" style="stroke:#2d3239;stroke-width:1.5px;fill:none">
+        <path d="M3 0a3 3 0 0 1 3 3v3H0V3a3 3 0 0 1 3-3z" style="stroke:none" transform="translate(13.5 9.75)"/>
+        <path d="M3 .75A2.25 2.25 0 0 1 5.25 3v2.25H.75V3A2.25 2.25 0 0 1 3 .75z" style="fill:none" transform="translate(13.5 9.75)"/>
+    </g>
+    <g data-name="사각형 16887" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+        <path d="M0 0h16a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H0V0z" style="stroke:none" transform="translate(18 14.25)"/>
+        <path d="M.75.75H16A4.25 4.25 0 0 1 20.25 5v10A4.25 4.25 0 0 1 16 19.25H.75V.75z" style="fill:none" transform="translate(18 14.25)"/>
+    </g>
+    <g data-name="합치기 303" style="fill:#fff">
+        <path d="M14.25 19.25H3C1.76 19.25.75 18.24.75 17V12.37a4.264 4.264 0 0 1 2.8-3.997l.316-.115.125-.312c.6-1.5 1.026-2.75 1.369-3.755.46-1.345.791-2.317 1.186-2.85C6.823.966 7.15.75 8 .75h6.25v18.5z" style="stroke:none" transform="translate(4.5 14.25)"/>
+        <path d="M13.5 18.5v-17H8c-.639 0-.733.126-.851.286-.326.44-.658 1.414-1.08 2.647-.345 1.012-.775 2.272-1.381 3.79l-.25.624-.632.23A3.511 3.511 0 0 0 1.5 12.369V17c0 .827.673 1.5 1.5 1.5h10.5M15 20H3a3 3 0 0 1-3-3V12.37a5.002 5.002 0 0 1 3.295-4.702C5.58 1.943 5.299 0 8 0h7v20z" style="fill:#2d3239;stroke:none" transform="translate(4.5 14.25)"/>
+    </g>
+    <g data-name="타원 2055" transform="translate(7.838 30.75)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+        <circle cx="3.5" cy="3.5" r="3.5" style="stroke:none"/>
+        <circle cx="3.5" cy="3.5" r="2.75" style="fill:none"/>
+    </g>
+    <g data-name="타원 2056" transform="translate(29.5 30.75)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+        <circle cx="3.5" cy="3.5" r="3.5" style="stroke:none"/>
+        <circle cx="3.5" cy="3.5" r="2.75" style="fill:none"/>
+    </g>
+    <path data-name="합치기 301" d="M3.7 9a1 1 0 0 1-1-1V6.3H1a1 1 0 0 1-1-1V3.7a1 1 0 0 1 1-1h1.7V1a1 1 0 0 1 1-1h1.6a1 1 0 0 1 1 1v1.7H8a1 1 0 0 1 1 1v1.6a1 1 0 0 1-1 1H6.3V8a1 1 0 0 1-1 1z" transform="translate(25.294 19.301)" style="fill:#7dedf3"/>
+    <path data-name="합치기 302" d="M3.7 9a1 1 0 0 1-1-1V6.3H1a1 1 0 0 1-1-1V3.7a1 1 0 0 1 1-1h1.7V1a1 1 0 0 1 1-1h1.6a1 1 0 0 1 1 1v1.7H8a1 1 0 0 1 1 1v1.6a1 1 0 0 1-1 1H6.3V8a1 1 0 0 1-1 1z" transform="translate(23.7 19.301)" style="stroke:#2d3239;stroke-width:1.5px;fill:none"/>
+    <path data-name="패스 12785" d="M937.289 808.875h4.549v4.225h-6.248" transform="translate(-927 -790.75)" style="stroke-linejoin:round;stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none"/>
+    <path data-name="선 570" transform="translate(5.5 27.75)" style="stroke:#2d3239;stroke-width:1.5px;fill:none" d="M0 0h13"/>
+    <path data-name="선 571" transform="translate(12 7.75)" style="stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none" d="m0 0 1.214 1.764"/>
+    <path data-name="선 572" transform="translate(19.786 7.75)" style="stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none" d="M1.214 0 0 1.764"/>
+    <path data-name="선 573" transform="translate(16.5 6.25)" style="stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none" d="M0 0v2"/>
+</svg>

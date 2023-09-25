@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">대학등록금</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							대학 등록금을 간편하게<br />
+							하나카드로 납부하세요.
+						</h2>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<a href="" class="ui-basic-button" role="button">조회</a>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">신청</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<!-- 2022.05.30 : mod : 롤링 배너로 변경 -->
+							<div class="margin-bottom-35">
+								<div class="slide-banner">
+									<div class="slide-banner-inner">
+										<div class="slide-banner-controller"></div>
+										<ul class="slide-banner-list">
+											<li class="slide-banner-item">
+												<a href="" class="slide-banner-link">
+													<img src="./assets/images/contents/img-banner-college-tuition.png" alt="배너 설명 넣어주세요." class="banner-image" />
+												</a>
+											</li>
+											<!-- DD : 버튼 흰색 버전 이용일 경우 is-white 클래스 값 추가 -->
+											<li class="slide-banner-item is-white">
+												<a href="" class="slide-banner-link">
+													<img src="./assets/images/contents/img-banner-college-tuition.png" alt="배너 설명 넣어주세요." class="slide-banner-image" />
+												</a>
+											</li>
+											<li class="slide-banner-item">
+												<a href="" class="slide-banner-link">
+													<img src="./assets/images/contents/img-banner-college-tuition.png" alt="배너 설명 넣어주세요." class="slide-banner-image" />
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- 2022.05.30 : mod : 롤링 배너로 변경 -->
+
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">대상회원</h3>
+								</div>
+								<div class="section-contents">
+									<p class="basic-text color-blur">하나카드 신용고객(체크/법인/선불카드 제외)</p>
+									<ul class="info-list type-default margin-top-10">
+										<li class="info-item type-presa font-weight-regular">인천대학교는 하나 BC카드 납부 불가</li>
+									</ul>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">납부방법</h3>
+								</div>
+								<div class="section-contents">
+									<div class="section-contents">
+										<div class="info-table-area">
+											<table class="info-table">
+												<!-- 2022.04.27 : mod : caption 수정 -->
+												<caption class="for-a11y">
+													분류, 하나카드로 구성된 대학등록금 하나카드 납부방법 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 80px" />
+													<col />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">분류</th>
+														<th scope="col">하나카드</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th class="align-center font-weight-regular">납부 방법</th>
+														<td>
+															<ul class="info-list type-inherit">
+																<li class="info-item">
+																	<div class="indent-block">하나카드 홈페이지</div>
+																	<ul class="info-list">
+																		<li class="info-item type-indent"><span class="indent">-</span>라이프 > 자동납부 서비스 > 대학등록금 납부서비스</li>
+																	</ul>
+																</li>
+																<li class="info-item">하나카드 고객센터 (1800-1111)</li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<th class="align-center font-weight-regular">납부 가능<br />대학</th>
+														<td>건양대학교, 인천대학교, 동방문화대학원 대학교</td>
+													</tr>
+													<tr>
+														<th class="align-center font-weight-regular">납부 시간</th>
+														<td>
+															<ul class="info-list type-inherit">
+																<li class="info-item">하나카드 홈페이지 - 00:10~23:50</li>
+																<li class="info-item">하나카드 고객센터 - 09:00~18:00</li>
+															</ul>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="info-table-area margin-top-15">
+											<table class="info-table">
+												<!-- 2022.04.27 : mod : caption 수정 -->
+												<caption class="for-a11y">
+													분류, 하나은행으로 구성된 대학등록금 하나은행 납부방법 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 80px" />
+													<col />
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">분류</th>
+														<th scope="col">하나은행</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th class="align-center font-weight-regular">납부 방법</th>
+														<td>
+															<ul class="info-list type-inherit">
+																<li class="info-item">하나은행 전 영업점</li>
+																<li class="info-item">
+																	<div class="indent-block">하나은행 홈페이지<br />(www.hanabank.com)</div>
+																	<ul class="info-list">
+																		<li class="info-item type-indent"><span class="indent">-</span>하나은행 > 공과금 > 대학등록금</li>
+																	</ul>
+																</li>
+															</ul>
+														</td>
+													</tr>
+													<tr>
+														<th class="align-center font-weight-regular">납부 가능<br />대학</th>
+														<td>충남대학교, 부산대학교, 부산대학교 대학원, 공주교육대학교, 공주교육대학교대학원, 한국폴리텍대학, 대전대학교</td>
+													</tr>
+													<tr>
+														<th class="align-center font-weight-regular">납부 시간</th>
+														<td>
+															<ul class="info-list type-inherit">
+																<li class="info-item">하나은행 영업점 업무시간 내</li>
+																<li class="info-item">
+																	<div class="indent-block">하나은행 인터넷뱅킹 - 09:00~16:30</div>
+																	<ul class="info-list">
+																		<li class="info-item type-indent"><span class="indent">*</span>토요일 및 공휴일 납부 불가</li>
+																	</ul>
+																</li>
+															</ul>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">
+											등록금과 학생회비 모두 납부 가능한 학교의 경우 동시결제가 불가하므로 차례대로 하나씩 납부하셔야 합니다.<br />(예시) 먼저 등록금 선택하신 후 납부하고, 미납부 상태인 학생회비 선택
+											후 결제하여야 합니다.
+										</li>
+										<li class="info-item">하나카드 미소지 손님은 하나카드 홈페이지에서 카드신청 후 이용가능합니다. (하나카드 신청하기 버튼 추가)</li>
+										<li class="info-item">납부금에 대해 카드 납부와 계좌납부(현금)를 분할하여 납부 또는 납부금액을 분할하여 납부가 불가능합니다.</li>
+										<li class="info-item">대학교별 납부가능 기간, 휴일&공휴일 납부여부는 해당 학교에서 결정되므로 세부사항은 학교 재무과로 문의 바랍니다.</li>
+										<li class="info-item">등록금 납부 가능시간은 00:10~23:50 입니다.</li>
+										<li class="info-item">등록금 결제 후 취소는 불가합니다.<br />단, 일부학교의 경우 납부당일에 한하여 승인취소가 가능합니다.</li>
+										<li class="info-item type-presa">승인취소는 당사 고객센터 (1800-1111)로 연락하여 주시기 바랍니다.</li>
+										<li class="info-item">카드 이용한도가 납부하려고 하는 등록금보다 적을 경우 납부가 제한될 수 있습니다.</li>
+										<li class="info-item">납부 신청하시는 카드상품에 따라 포인트 및 마일리지 등의 적립이 제한될 수 있습니다.</li>
+										<li class="info-item">등록금 납부금액은 연말정산 시 교육비공제만 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

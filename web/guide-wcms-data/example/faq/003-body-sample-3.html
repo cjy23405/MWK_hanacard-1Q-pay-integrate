@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="../../../dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">자주 묻는 질문</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="faq-list js-ui-accordion" data-once="true">
+							<div class="faq-item js-ui-accordion__item" data-initial-open="true">
+								<button type="button" class="faq-opener js-ui-accordion__opener">타이틀</button>
+								<div class="js-ui-accordion__layer">
+									<div class="faq-contents">
+										<div class="wcms-data">
+											<section class="board-data">
+												<p class="wcms-text wcms-size-small wcms-color-gray">
+													기존에 소지하셨던 카드를 [분실/훼손/종류변경] 등의 사유로 교체 또는 추가 발급을 받으시는 경우 『카드 비밀번호』는 다음과 같이 적용됩니다.
+												</p>
+
+												<section class="wcms-section">
+													<h2 class="wcms-title-small">카드 교체/추가 발급 시 비밀번호 운영기준</h2>
+													<div class="wcms-table type-2">
+														<div class="wcms-table-inner">
+															<table>
+																<caption>
+																	테이블이름
+																</caption>
+																<colgroup>
+																	<col style="width: 30%" />
+																	<col />
+																</colgroup>
+																<thead>
+																	<tr>
+																		<th class="wcms-align-center">구분</th>
+																		<th class="wcms-align-center">내용</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th class="wcms-align-center">교체 발급</th>
+																		<td>
+																			<ol class="wcms-list wcms-size-small">
+																				<li class="wcms-list-item" data-symbol="①">
+																					<div class="wcms-list-contents">최근 6개월 유실적 카드 중 가장 최근 발급한 카드의 비밀번호</div>
+																				</li>
+																				<li class="wcms-list-item" data-symbol="②">
+																					<div class="wcms-list-contents">
+																						<div class="wcms-margin-small">①이 없을 경우, 사용등록이 된 카드 중 가장 최근 발급받은 카드의 비밀번호</div>
+																						<ul class="wcms-list">
+																							<li class="wcms-list-item" data-symbol="※">
+																								<div class="wcms-list-contents">단, 가족카드는 비밀번호 승계 우선순서 대상카드(①, ②)에서 제외</div>
+																							</li>
+																						</ul>
+																					</div>
+																				</li>
+																			</ol>
+																		</td>
+																	</tr>
+																	<tr>
+																		<th class="wcms-align-center">추가 발급</th>
+																		<td>
+																			이용카드가 없을 시 가장 최근에 발급한 카드와 동일한 비밀번호 사용<br />
+																			단, 기존 비밀번호가 없을 시, 카드 발급 시 ARS를 통해 비밀번호 등록
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</section>
+											</section>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="../../../dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

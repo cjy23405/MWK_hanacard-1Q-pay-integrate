@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">내 계좌(오픈뱅킹) 가입</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- 2022.02.17 : mod : .page-contents 에 type-step 클래스 값 추가 -->
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<!-- 2022.02.17 : add : STEP 문구 추가 -->
+							<span class="title-step">STEP 3</span>
+							계좌를<br />
+							추가해 주세요.
+						</h2>
+						<div class="page-info">
+							<p class="page-info-text">
+								이용하실 계좌는 <span class="color-primary">한번에 30개</span>까지 등록 가능합니다.<br />
+								일부 계좌 및 서비스는 제공사 사정으로 등록되지 않을 수 있습니다.
+							</p>
+						</div>
+
+						<!-- 2022.02.17 : add : step progress 추가 -->
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 3단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<!-- //2022.02.17 : add : step progress 추가 -->
+
+						<!-- section -->
+						<div class="page-section-group">
+							<div class="selected-value">
+								<p class="selected-val-text">선택계좌 <strong class="color-primary">0</strong>/30</p>
+							</div>
+							<div class="usage-accordion">
+								<ul class="usage-accordion-list js-ui-accordion">
+									<!-- 2022.02.04 : mod : 기등록 계좌 위치 변경 -->
+									<!-- 기등록 계좌 -->
+									<li class="usage-accordion-item js-ui-accordion__item">
+										<div class="usage-accordion-head">
+											<div class="usage-accordion-data">
+												<div class="usage-accordion-data-key">
+													<div class="usage-accordion-data-key-text">기등록 계좌</div>
+												</div>
+											</div>
+											<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="usage-accordion-contents">
+												<div class="card-list-area">
+													<ul class="card-list js-ui-accordion">
+														<li class="card-item">
+															<div class="card-block type-flex-center">
+																<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																<!-- DD : 이미지 없을 때 -->
+																<span class="logo-image">
+																	<span class="logo-image-inner"></span>
+																</span>
+																<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																<div class="card-info-group type-has-opener">
+																	<div class="card-info">
+																		<span class="card-name">IBK기업은행</span>
+																		<div class="card-number">
+																			<span class="card-number-item">011020112341311</span>
+																			<span class="card-number-item">예적금</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="card-item">
+															<div class="card-block type-flex-center">
+																<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																<!-- DD : 이미지 에러 -->
+																<span class="logo-image">
+																	<span class="logo-image-inner">
+																		<!-- 2022.04.27 : mod : alt값 변경 -->
+																		<img src="./assets/images/_dummy/logo-hana-card .png" alt="카드사명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																<div class="card-info-group type-has-opener">
+																	<div class="card-info">
+																		<span class="card-name">IBK기업은행</span>
+																		<div class="card-number">
+																			<span class="card-number-item">011020112341311</span>
+																			<span class="card-number-item">예적금</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="card-item">
+															<div class="card-block type-flex-center">
+																<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																<!-- DD : 이미지 있을 때 -->
+																<span class="logo-image">
+																	<span class="logo-image-inner">
+																		<!-- 2022.04.27 : mod : alt값 변경 -->
+																		<img src="./assets/images/_dummy/logo-hana-card.png" alt="카드사명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																<div class="card-info-group type-has-opener">
+																	<div class="card-info">
+																		<span class="card-name">IBK기업은행</span>
+																		<div class="card-number">
+																			<span class="card-number-item">011020112341311</span>
+																			<span class="card-number-item">예적금</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<!-- //기등록 계좌 -->
+									<!-- //2022.02.04 : mod : 기등록 계좌 위치 변경 -->
+
+									<!-- 은행 -->
+									<li class="usage-accordion-item js-ui-accordion__item">
+										<div class="usage-accordion-head">
+											<div class="usage-accordion-data">
+												<div class="usage-accordion-data-key">
+													<div class="usage-accordion-data-key-text">은행</div>
+												</div>
+											</div>
+											<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="usage-accordion-contents">
+												<div class="card-list-area">
+													<ul class="card-list type-input type-active-disabled js-ui-accordion">
+														<!-- 은행 - 계좌가 없는 경우 -->
+														<li class="type-none">
+															<div class="item-text">
+																<p>불러올 수 있는 계좌가 없습니다.</p>
+																<span class="default-text font-weight-light">계좌직접 추가를 이용해 보세요.</span>
+															</div>
+														</li>
+														<!-- //은행 - 계좌가 없는 경우 -->
+														<!-- 은행 - 조회가 안 될 경우 -->
+														<li class="type-none">
+															<div class="item-text">
+																<p>정상적으로 조회되지 않았습니다.</p>
+																<button type="button" class="ui-button-reload">재조회</button>
+															</div>
+														</li>
+														<!-- //은행 - 조회가 안 될 경우 -->
+														<!-- 은행 - 활동성 계좌 -->
+														<li class="card-item js-ui-accordion__item">
+															<div class="ui-checkbox-block type-no-padding">
+																<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-1" />
+																<label for="checkboxLarge1-1" class="ui-label">
+																	<span class="card-block type-flex-center">
+																		<span class="ui-checkbox-object"></span>
+																		<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<!-- DD : 이미지 없을 때 -->
+																		<span class="logo-image">
+																			<span class="logo-image-inner"></span>
+																		</span>
+																		<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<div class="card-info">
+																			<span class="card-name">SC제일은행 에이스통장</span>
+																			<div class="card-number-block">
+																				<div class="card-number">
+																					<span class="card-number-item">011020112341311</span>
+																					<span class="card-number-item">예적금</span>
+																					<span class="card-number-item"><span class="color-primary">활동성</span></span>
+																				</div>
+																			</div>
+																		</div>
+																	</span>
+																</label>
+																<div class="card-total-amount">
+																	<span class="card-total-amount-val">1,000,000 원</span>
+																	<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			계좌정보 상세
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+															</div>
+															<div class="card-layer-contents js-ui-accordion__layer">
+																<div class="form-detail type-box">
+																	<dl class="form-detail-list">
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">개설일</dt>
+																			<dd class="form-detail-group">1997.01.20</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">최종입출금일</dt>
+																			<dd class="form-detail-group">2021.02.25</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">만기일</dt>
+																			<dd class="form-detail-group">2027.01.20</dd>
+																		</div>
+																	</dl>
+																</div>
+															</div>
+														</li>
+														<li class="card-item js-ui-accordion__item">
+															<div class="ui-checkbox-block type-no-padding">
+																<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-2" />
+																<label for="checkboxLarge1-2" class="ui-label">
+																	<span class="card-block type-flex-center">
+																		<span class="ui-checkbox-object"></span>
+																		<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<!-- DD : 이미지 에러 -->
+																		<span class="logo-image">
+																			<span class="logo-image-inner">
+																				<!-- 2022.04.27 : mod : alt값 변경 -->
+																				<img src="./assets/images/_dummy/logo-hana-card .png" alt="카드사명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																			</span>
+																		</span>
+																		<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<div class="card-info">
+																			<span class="card-name">SC제일은행 에이스통장</span>
+																			<div class="card-number-block">
+																				<div class="card-number">
+																					<span class="card-number-item">011020112341311</span>
+																					<span class="card-number-item">예적금</span>
+																					<span class="card-number-item"><span class="color-primary">활동성</span></span>
+																				</div>
+																			</div>
+																		</div>
+																	</span>
+																</label>
+																<div class="card-total-amount">
+																	<span class="card-total-amount-val">1,000,000 원</span>
+																	<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			계좌정보 상세
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+															</div>
+															<div class="card-layer-contents js-ui-accordion__layer">
+																<div class="form-detail type-box">
+																	<dl class="form-detail-list">
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">개설일</dt>
+																			<dd class="form-detail-group">1997.01.20</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">최종입출금일</dt>
+																			<dd class="form-detail-group">2021.02.25</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">만기일</dt>
+																			<dd class="form-detail-group">2027.01.20</dd>
+																		</div>
+																	</dl>
+																</div>
+															</div>
+														</li>
+														<!-- //은행 - 활동성 계좌 -->
+														<!-- 은행 - 비활동성 계좌 -->
+														<li class="card-item js-ui-accordion__item">
+															<div class="ui-checkbox-block type-no-padding">
+																<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-3" disabled />
+																<label for="checkboxLarge1-3" class="ui-label">
+																	<span class="card-block type-flex-center">
+																		<span class="ui-checkbox-object"></span>
+																		<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<!-- DD : 이미지 있을 때 -->
+																		<span class="logo-image">
+																			<span class="logo-image-inner">
+																				<!-- 2022.04.27 : mod : alt값 변경 -->
+																				<img src="./assets/images/_dummy/logo-hana-card.png" alt="카드사명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																			</span>
+																		</span>
+																		<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<div class="card-info">
+																			<span class="card-name">우리은행 직장인제테크저축통장</span>
+																			<div class="card-number-block">
+																				<div class="card-number">
+																					<span class="card-number-item">011020112341311</span>
+																					<span class="card-number-item">예적금</span>
+																					<span class="card-number-item"><span class="color-wrong">비활동성</span></span>
+																				</div>
+																			</div>
+																		</div>
+																	</span>
+																</label>
+																<div class="card-total-amount">
+																	<span class="card-total-amount-val">0 원</span>
+																	<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			계좌정보 상세
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+															</div>
+															<div class="card-layer-contents js-ui-accordion__layer">
+																<div class="form-detail type-box">
+																	<dl class="form-detail-list">
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">개설일</dt>
+																			<dd class="form-detail-group">1997.01.20</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">최종입출금일</dt>
+																			<dd class="form-detail-group">2021.02.25</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">만기일</dt>
+																			<dd class="form-detail-group">2027.01.20</dd>
+																		</div>
+																	</dl>
+																</div>
+															</div>
+														</li>
+														<!-- //은행 - 비활동성 계좌 -->
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<!-- //은행 -->
+
+									<!-- 증권사 -->
+									<li class="usage-accordion-item js-ui-accordion__item">
+										<div class="usage-accordion-head">
+											<div class="usage-accordion-data">
+												<div class="usage-accordion-data-key">
+													<div class="usage-accordion-data-key-text">증권사</div>
+												</div>
+											</div>
+											<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="usage-accordion-contents">
+												<div class="card-list-area">
+													<ul class="card-list type-input js-ui-accordion type-active-disabled">
+														<!-- 증권사 - 계좌가 없는 경우 -->
+														<li class="type-none">
+															<div class="item-text">
+																<p>불러올 수 있는 계좌가 없습니다.</p>
+																<span class="default-text font-weight-light">계좌직접 추가를 이용해 보세요.</span>
+															</div>
+														</li>
+														<!-- //증권사 - 계좌가 없는 경우 -->
+														<!-- 증권사 - 조회가 안 될 경우 -->
+														<li class="type-none">
+															<div class="item-text">
+																<p>정상적으로 조회되지 않았습니다.</p>
+																<button type="button" class="ui-button-reload">재조회</button>
+															</div>
+														</li>
+														<!-- //증권사 - 조회가 안 될 경우 -->
+														<!-- 증권사 - 활동성 계좌 -->
+														<li class="card-item js-ui-accordion__item">
+															<div class="ui-checkbox-block type-no-padding">
+																<input type="checkbox" class="ui-checkbox" id="checkboxLarge2-1" />
+																<label for="checkboxLarge2-1" class="ui-label">
+																	<span class="card-block type-flex-center">
+																		<span class="ui-checkbox-object"></span>
+																		<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<!-- DD : 이미지 없을 때 -->
+																		<span class="logo-image">
+																			<span class="logo-image-inner"></span>
+																		</span>
+																		<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<div class="card-info">
+																			<span class="card-name">농협 QV해외주식투자펀드A</span>
+																			<div class="card-number-block">
+																				<div class="card-number">
+																					<span class="card-number-item">011020112341311</span>
+																					<span class="card-number-item">펀드</span>
+																				</div>
+																				<span class="color-primary">활동성</span>
+																			</div>
+																		</div>
+																	</span>
+																</label>
+																<div class="card-total-amount">
+																	<span class="card-total-amount-val">1,000,000 원</span>
+																	<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			계좌정보 상세
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+															</div>
+															<div class="card-layer-contents js-ui-accordion__layer">
+																<div class="form-detail type-box">
+																	<dl class="form-detail-list">
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">개설일</dt>
+																			<dd class="form-detail-group">1997.01.20</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">최종입출금일</dt>
+																			<dd class="form-detail-group">2021.02.25</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">만기일</dt>
+																			<dd class="form-detail-group">2027.01.20</dd>
+																		</div>
+																	</dl>
+																</div>
+															</div>
+														</li>
+														<li class="card-item js-ui-accordion__item">
+															<div class="ui-checkbox-block type-no-padding">
+																<input type="checkbox" class="ui-checkbox" id="checkboxLarge2-2" />
+																<label for="checkboxLarge2-2" class="ui-label">
+																	<span class="card-block type-flex-center">
+																		<span class="ui-checkbox-object"></span>
+																		<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<!-- DD : 이미지 에러 -->
+																		<span class="logo-image">
+																			<span class="logo-image-inner">
+																				<!-- 2022.04.27 : mod : alt값 변경 -->
+																				<img src="./assets/images/_dummy/logo-hana-card .png" alt="카드사명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																			</span>
+																		</span>
+																		<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<div class="card-info">
+																			<span class="card-name">농협 QV해외주식투자펀드A</span>
+																			<div class="card-number-block">
+																				<div class="card-number">
+																					<span class="card-number-item">011020112341311</span>
+																					<span class="card-number-item">펀드</span>
+																				</div>
+																				<span class="color-primary">활동성</span>
+																			</div>
+																		</div>
+																	</span>
+																</label>
+																<div class="card-total-amount">
+																	<span class="card-total-amount-val">1,000,000 원</span>
+																	<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			계좌정보 상세
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+															</div>
+															<div class="card-layer-contents js-ui-accordion__layer">
+																<div class="form-detail type-box">
+																	<dl class="form-detail-list">
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">개설일</dt>
+																			<dd class="form-detail-group">1997.01.20</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">최종입출금일</dt>
+																			<dd class="form-detail-group">2021.02.25</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">만기일</dt>
+																			<dd class="form-detail-group">2027.01.20</dd>
+																		</div>
+																	</dl>
+																</div>
+															</div>
+														</li>
+														<!-- //증권사 - 활동성 계좌 -->
+														<!-- 증권사 - 비활동성 계좌 -->
+														<li class="card-item js-ui-accordion__item">
+															<div class="ui-checkbox-block type-no-padding">
+																<input type="checkbox" class="ui-checkbox" id="checkboxLarge2-3" disabled />
+																<label for="checkboxLarge2-3" class="ui-label">
+																	<span class="card-block type-flex-center">
+																		<span class="ui-checkbox-object"></span>
+																		<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<!-- DD : 이미지 있을 때 -->
+																		<span class="logo-image">
+																			<span class="logo-image-inner">
+																				<!-- 2022.04.27 : mod : alt값 변경 -->
+																				<img src="./assets/images/_dummy/logo-hana-card.png" alt="카드사명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																			</span>
+																		</span>
+																		<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+																		<div class="card-info">
+																			<span class="card-name">농협 QV해외주식투자펀드B</span>
+																			<div class="card-number-block">
+																				<div class="card-number">
+																					<span class="card-number-item">011020112341311</span>
+																					<span class="card-number-item">펀드</span>
+																				</div>
+																				<span class="color-wrong">비활동성</span>
+																			</div>
+																		</div>
+																	</span>
+																</label>
+																<div class="card-total-amount">
+																	<span class="card-total-amount-val">0 원</span>
+																	<button type="button" class="ui-button usage-accordion-opener type-part js-ui-accordion__opener">
+																		<span class="for-a11y">
+																			계좌정보 상세
+																			<span class="open-text">열기</span>
+																			<span class="close-text">닫기</span>
+																		</span>
+																	</button>
+																</div>
+															</div>
+															<div class="card-layer-contents js-ui-accordion__layer">
+																<div class="form-detail type-box">
+																	<dl class="form-detail-list">
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">개설일</dt>
+																			<dd class="form-detail-group">1997.01.20</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">최종입출금일</dt>
+																			<dd class="form-detail-group">2021.02.25</dd>
+																		</div>
+																		<div class="form-detail-item">
+																			<dt class="form-detail-title">만기일</dt>
+																			<dd class="form-detail-group">2027.01.20</dd>
+																		</div>
+																	</dl>
+																</div>
+															</div>
+														</li>
+														<!-- //증권사 - 비활동성 계좌 -->
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<!-- //증권사 -->
+								</ul>
+							</div>
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-secondary">계좌 직접 추가</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">찾으시는 계좌가 보이지 않는 경우 "계좌직접추가"를 이용하세요.</li>
+										<li class="info-item">
+											계좌 등록 완료 시 다른 은행에서 해당계좌에 "자동이체"가 신청되었다는 문자가 발송될 수 있습니다.<br />
+											오픈뱅킹이 잘 등록되었다는 내용이니 안심하세요.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">다음</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

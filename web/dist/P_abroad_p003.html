@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">해외안심결제 관리</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="section-title">
+								<h2 class="title type-flexible">카드정보</h2>
+								<button type="button" class="ui-arrow type-black">등록해제</button>
+							</div>
+							<div class="section-contents">
+								<div class="card-list-area type-default">
+									<ul class="card-list">
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<!-- DD : 이미지 없을 때
+												<span class="card-image">
+													<span class="card-image-inner"></span>
+												</span>
+												-->
+
+												<!-- DD : 이미지 에러
+												<span class="card-image">
+													<span class="card-image-inner">
+														<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												-->
+
+												<!-- DD : 이미지 있을 때 -->
+												<span class="card-image">
+													<span class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+
+												<div class="card-info">
+													<span class="card-name">SYNC 카드 (적립형)</span>
+													<div class="card-number">
+														<span class="card-number-item">4365-12**-****-1234</span>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="form-detail margin-top-15">
+									<div class="form-detail-block">
+										<dl class="form-detail-list type-text-default">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">카드번호</dt>
+												<dd class="form-detail-group"><strong>1234-5678-0912-3456</strong></dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">유효기간(MM/YY)</dt>
+												<dd class="form-detail-group"><strong>08/24</strong></dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">CVV(CVC)</dt>
+												<dd class="form-detail-group"><strong>123</strong></dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="section-title">
+								<h2 class="title type-flexible">이용조건</h2>
+								<button type="button" class="ui-arrow type-black">변경</button>
+							</div>
+
+							<div class="section-contents">
+								<div class="form-detail-list margin-top-25">
+									<div class="form-detail-item-wrap">
+										<div class="form-detail-item">
+											<span class="form-detail-title">이용기간</span>
+											<span class="form-detail-group">2021-06-01~2021-06-30</span>
+										</div>
+										<p class="ui-notice">이용기간은 서비스 등록해제 후 변경이 가능합니다.</p>
+									</div>
+
+									<div class="form-detail-item-wrap">
+										<div class="form-detail-item">
+											<span class="form-detail-title">이용가능금액(한도)</span>
+											<span class="form-detail-group">총 50만원</span>
+										</div>
+										<div class="form-detail margin-top-15">
+											<div class="form-detail-block">
+												<dl class="form-detail-list type-text-default">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">이용</dt>
+														<dd class="form-detail-group"><strong>10만원</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">잔여</dt>
+														<dd class="form-detail-group"><strong class="color-primary">50만원</strong></dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-detail-item-wrap">
+										<div class="form-detail-item">
+											<span class="form-detail-title">이용횟수</span>
+											<span class="form-detail-group">총 5회</span>
+										</div>
+										<div class="form-detail margin-top-15">
+											<div class="form-detail-block">
+												<dl class="form-detail-list type-text-default">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">이용</dt>
+														<dd class="form-detail-group"><strong>1회</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">잔여</dt>
+														<dd class="form-detail-group"><strong class="color-primary">5회</strong></dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="use-notice-area js-ui-accordion">
+									<div class="use-notice-item js-ui-accordion__item">
+										<button type="button" class="use-notice-opener js-ui-accordion__opener">
+											이용안내
+											<span class="for-a11y">
+												상세 내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+										<div class="use-notice-contents js-ui-accordion__layer">
+											<ul class="info-list">
+												<li class="info-item">해외안심결제 서비스는 해외 온라인 결제에만 사용이 가능합니다.</li>
+												<li class="info-item">일부 해외 쇼핑몰의 경우 이용이 제한 될 수 있습니다.</li>
+												<li class="info-item">가상카드번호의 비밀번호는 실물카드와 동일합니다.</li>
+												<li class="info-item">
+													가상카드번호의 CVV(CVC) 입력오류횟수가 5회 이상인 경우 사용이 제한되며, 서비스 등록 해제 후 재등록해야 합니다. 재등록시에는 가상카드번호가 변경됩니다.
+												</li>
+												<li class="info-item">설정한 이용한도와 횟수는 언제든지 변경이 가능하지만 이용기간은 서비스 등록 해제 후 재등록 시에 변경해야 합니다.</li>
+												<li class="info-item">설정하신 이용가능금액보다 잔여한도가 낮은 경우 잔여한도까지만 결제가 가능합니다.</li>
+												<li class="info-item">본 서비스는 플라스틱카드를 수령하신 이후 신청 및 이용이 가능합니다.</li>
+												<li class="info-item">플라스틱카드 이용이 제한되는 경우 가상카드번호도 사용이 제한됩니다.</li>
+												<li class="info-item">본 서비스는 해외 매장결제(오프라인 결제)와는 다른 서비스로, 별개의 가상카드번호를 사용합니다.</li>
+												<li class="info-item">본 서비스는 국내 온/오프라인 거래, 간편결제 서비스, 멀티카드 서비스, 해외 현금서비스, 해외안심클릭결제 서비스에 등록하거나 사용 할 수 없습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">결제일 변경</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">청구단위구분</strong>
+									<button type="button" class="ui-arrow type-black">청구단위별 보유카드</button>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block">
+										<button type="button" class="ui-button ui-select" title="청구단위 선택">하나카드 (통합)</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">현재 결제일</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block type-use-delete">
+										<input type="text" class="ui-input" title="현재 결제일" placeholder="현재 결제일" value="5일" disabled />
+										<button type="button" class="ui-button ui-input-delete">
+											<span class="for-a11y">입력 내용 지우기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">결제일 변경</strong>
+									<button type="button" class="ui-arrow type-black">결제일 안내</button>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block type-placeholder">
+										<button type="button" class="ui-button ui-select" title="변경 결제일 선택">선택</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">결제일 변경은 소유하신 모든 카드에 일괄 적용되며, 카드별로 변경 되지 않습니다.</li>
+										<li class="info-item">
+											결제일은 60일 이내에 다시 변경하실 수 없습니다.<br />
+											(단, 변경 당일 9시~23시에는 변경 가능합니다.)
+										</li>
+										<li class="info-item">결제일 변경 시 당월청구작업이 완료되어 이미 확정된 금액은 기존 결제일로 청구되오니 반드시 변경스케쥴을 확인하시기 바랍니다.</li>
+										<li class="info-item color-wrong">결제일 변경 시 카드 이용일자에 따라 한달에 두 번 변경 전/후 결제일에 각각 청구될 수 있으니 유의하시기 바랍니다.</li>
+										<li class="info-item color-wrong">결제일 변경 전 시뮬레이션을 반드시 확인 해 주시기 바랍니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-join">회원가입 약관동의</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-join-nonmember">회원가입 약관동의 (하나멤버스 회원X)</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 회원가입 약관동의 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select" data-layer="layer-join">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									회원가입을 위한<br />
+									약관에 동의합니다.
+								</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-select-multiple-list">
+									<div class="ui-select-multiple-item type-all">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-all" data-checkbox-group="selectCheckbox1" />
+											<label for="selectCheckbox1-all" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">(필수) 하나카드 회원가입 전체동의</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" data-checkbox-group-child="selectCheckbox1" />
+											<label for="selectCheckbox1-1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">온라인회원 약관</span>
+											</label>
+											<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2" data-checkbox-group-child="selectCheckbox1" />
+											<label for="selectCheckbox1-2" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">개인정보 수집 및 이용</span>
+											</label>
+											<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+										</div>
+									</div>
+								</div>
+
+								<!-- 2021.12.15 수정 -->
+								<div class="use-notice-area">
+									<div class="use-notice-item">
+										<h3 class="use-notice-title">이용안내</h3>
+										<div class="use-notice-contents">
+											<ul class="info-list">
+												<li class="info-item">하나카드 웹회원 가입은 유효한 하나카드를 1개 이상 보유하고 계셔야 합니다.</li>
+												<li class="info-item">웹회원 가입 후 보유하고 계신 카드를 모두 해지하시면 웹회원 자동 탈회됩니다.</li>
+												<li class="info-item">개인형 기업카드를 보유하고 계신 고객님은 <a href="" class="ui-arrow type-black type-underline" role="button">기업 웹회원 가입</a> 을 해주셔야 합니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- //2021.12.15 수정 -->
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 회원가입 약관동의 -->
+
+			<!-- layer: 회원가입 약관동의 (하나멤버스 회원X) -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select" data-layer="layer-join-nonmember">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									회원가입을 위한<br />
+									약관에 동의합니다.
+								</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-select-multiple-list">
+									<div class="ui-select-multiple-item type-all">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-all" data-checkbox-group="selectCheckbox2" />
+											<label for="selectCheckbox2-all" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">약관 전체동의</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-terms">
+										<div class="ui-select-terms-list-group">
+											<!-- 하나카드 회원가입 전체동의 (필수) -->
+											<div class="ui-select-terms-list js-ui-accordion">
+												<div class="ui-select-terms-item js-ui-accordion__item" data-initial-open="true">
+													<div class="ui-checkbox-block type-large">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-1" data-checkbox-group-child="selectCheckbox2" data-checkbox-group="selectCheckbox2-1" />
+														<label for="selectCheckbox2-1" class="ui-label">
+															<span class="ui-checkbox-object"></span>
+															<span class="ui-label-text">하나카드 회원가입 전체동의 (필수)</span>
+														</label>
+														<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+															<span class="for-a11y">
+																상세내용
+																<span class="open-text">열기</span>
+																<span class="close-text">닫기</span>
+															</span>
+														</button>
+													</div>
+													<div class="ui-select-terms-layer js-ui-accordion__layer">
+														<div class="ui-select-terms-contents">
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-1-1" data-checkbox-group-child="selectCheckbox2-1" />
+																	<label for="selectCheckbox2-1-1" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">온라인회원 약관</span>
+																	</label>
+																	<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-1-2" data-checkbox-group-child="selectCheckbox2-1" />
+																	<label for="selectCheckbox2-1-2" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인정보 수집 및 이용</span>
+																	</label>
+																	<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- //하나카드 회원가입 전체동의 (필수) -->
+											<!-- 하나멤버스 회원가입 (선택) -->
+											<div class="ui-select-terms-list js-ui-accordion">
+												<div class="ui-select-terms-item js-ui-accordion__item" data-initial-open="true">
+													<div class="ui-checkbox-block type-large">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-2" data-checkbox-group-child="selectCheckbox2" data-checkbox-group="selectCheckbox2-2" />
+														<label for="selectCheckbox2-2" class="ui-label">
+															<span class="ui-checkbox-object"></span>
+															<span class="ui-label-text">하나멤버스 회원가입 (선택)</span>
+														</label>
+														<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+															<span class="for-a11y">
+																상세내용
+																<span class="open-text">열기</span>
+																<span class="close-text">닫기</span>
+															</span>
+														</button>
+													</div>
+													<div class="ui-select-terms-layer js-ui-accordion__layer">
+														<div class="ui-select-terms-contents">
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-2-1" data-checkbox-group-child="selectCheckbox2-2" />
+																	<label for="selectCheckbox2-2-1" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인(신용)정보 필수적 수집, 이용 동의</span>
+																	</label>
+																	<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-2-2" data-checkbox-group-child="selectCheckbox2-2" />
+																	<label for="selectCheckbox2-2-2" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인(신용)정보 필수적 제공 동의</span>
+																	</label>
+																	<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-2-3" data-checkbox-group-child="selectCheckbox2-2" />
+																	<label for="selectCheckbox2-2-3" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인(신용)정보 선택적 수집, 이용동의</span>
+																	</label>
+																	<div class="ui-checkbox-block-right">
+																		<span class="ranking-tag ranking-02">다소안심</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-2-4" data-checkbox-group-child="selectCheckbox2-2" />
+																	<label for="selectCheckbox2-2-4" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">개인(신용)정보 선택적 제공 동의</span>
+																	</label>
+																	<div class="ui-checkbox-block-right">
+																		<span class="ranking-tag ranking-02">다소안심</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+															</div>
+															<div class="ui-select-terms-item">
+																<div class="ui-checkbox-block">
+																	<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-2-5" data-checkbox-group-child="selectCheckbox2-2" data-checkbox-group="selectCheckbox2-2-5" />
+																	<label for="selectCheckbox2-2-5" class="ui-label">
+																		<span class="ui-checkbox-object"></span>
+																		<span class="ui-label-text">이용권유동의(전체)</span>
+																	</label>
+																</div>
+																<div class="ui-select-terms-item-group type-col3">
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-2-5-1" data-checkbox-group-child="selectCheckbox2-2-5" />
+																			<label for="selectCheckbox2-2-5-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">전화</span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-2-5-2" data-checkbox-group-child="selectCheckbox2-2-5" />
+																			<label for="selectCheckbox2-2-5-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">SMS</span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-2-5-3" data-checkbox-group-child="selectCheckbox2-2-5" />
+																			<label for="selectCheckbox2-2-5-3" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">이메일</span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- //하나멤버스 회원가입 (선택) -->
+										</div>
+									</div>
+								</div>
+
+								<div class="use-notice-area">
+									<div class="use-notice-item">
+										<h3 class="use-notice-title">이용안내</h3>
+										<div class="use-notice-contents">
+											<ul class="info-list">
+												<li class="info-item">하나카드 웹회원 가입은 유효한 하나카드를 1개 이상 보유하고 계셔야 합니다.</li>
+												<li class="info-item">웹회원 가입 후 보유하고 계신 카드를 모두 해지하시면 웹회원 자동 탈회됩니다.</li>
+												<li class="info-item">개인형 기업카드를 보유하고 계신 고객님은 <a href="" class="ui-arrow type-black type-underline" role="button">기업 웹회원 가입</a> 을 해주셔야 합니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 회원가입 약관동의 (하나멤버스 회원X) -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

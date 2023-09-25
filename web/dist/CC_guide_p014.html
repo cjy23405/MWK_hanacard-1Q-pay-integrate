@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">인천공항 알찬 이용 팁</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">인천공항 알찬 이용 팁</h2>
+						<ul class="info-list type-text-large">
+							<li class="info-item">기간 : 2021.01.01 ~ 2021.12.31</li>
+							<li class="info-item">대상 : 하나 신용/체크/선불카드 고객</li>
+						</ul>
+						<ul class="info-list margin-top-15">
+							<li class="info-item type-presa">단, 호텔, 공항철도 서비스는 선불카드 제외</li>
+						</ul>
+						<div class="ui-buttons type-full margin-top-35">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button" data-layer-open="layer-1depth-terminal">제 1터미널 상세보기(매장위치)</a>
+								</li>
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button" data-layer-open="layer-2depth-terminal">제 2터미널 상세보기(매장위치)</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- layer: 제 1터미널 상세보기(매장위치) -->
+						<div class="layer-wrap layer-wrap--slide" data-layer="layer-1depth-terminal">
+							<div class="layer-container">
+								<section class="ui-layer">
+									<div class="ui-layer__head">
+										<div class="header">
+											<h2 class="header__title">제1터미널 상세보기(매장위치)</h2>
+											<div class="header__right">
+												<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+													<span class="for-a11y">레이어 닫기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="ui-layer__body">
+										<div class="ui-layer__body-inner">
+											<!-- 2022.04.27 : mod : alt값 변경 -->
+											<img src="./assets/images/contents/guide-1depth-terminal.jpg" alt="제 1여객터미널 공항서비스 제휴매장 안내" class="image-only" />
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+						<!-- //layer: 제 1터미널 상세보기(매장위치) -->
+
+						<!-- layer: 제 2터미널 상세보기(매장위치) -->
+						<div class="layer-wrap layer-wrap--slide" data-layer="layer-2depth-terminal">
+							<div class="layer-container">
+								<section class="ui-layer">
+									<div class="ui-layer__head">
+										<div class="header">
+											<h2 class="header__title">제2터미널 상세보기(매장위치)</h2>
+											<div class="header__right">
+												<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+													<span class="for-a11y">레이어 닫기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="ui-layer__body">
+										<div class="ui-layer__body-inner">
+											<!-- 2022.04.27 : mod : alt값 변경 -->
+											<img src="./assets/images/contents/guide-2depth-terminal.jpg" alt="제 2여객터미널 공항서비스 제휴매장 안내" class="image-only" />
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+						<!-- //layer: 제 2터미널 상세보기(매장위치) -->
+
+						<h3 class="basic-text margin-top-35">면세점</h3>
+						<div class="info-table-area">
+							<table class="info-table type-tbody-heading">
+								<!-- 2022.04.27 : mod : 텍스트 수정 -->
+								<caption class="for-a11y">
+									제 1터미널, 제 2터미널 면세점 종류와 혜택을 나타내는 안내 표입니다.
+								</caption>
+								<colgroup>
+									<col style="width: 88px" />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">제 1터미널</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">현대백화점면세점</li>
+												<li class="info-item type-medium color-basic font-weight-regular">경복궁면세점</li>
+												<li class="info-item type-medium color-basic font-weight-regular">그랜드면세점</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">제 2터미널</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">경복궁면세점</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">혜택</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">안내 데스크에서 하나카드 제시 시 10% 할인쿠폰 제공</li>
+												<li class="info-item type-medium color-basic font-weight-regular">전자, 담배, 명품, 프로모션 상품 등 일부 품목 제외</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h3 class="basic-text margin-top-25">F&amp;B</h3>
+						<div class="info-table-area">
+							<table class="info-table type-tbody-heading">
+								<!-- 2022.04.27 : mod : 텍스트 수정 -->
+								<caption class="for-a11y">
+									제 1터미널, 제 2터미널 F&amp;B 종류와 혜택을 나타내는 안내 표입니다.
+								</caption>
+								<colgroup>
+									<col style="width: 88px" />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">제 1터미널</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">명가의 뜰</li>
+												<li class="info-item type-medium color-basic font-weight-regular">메이하오짬뽕</li>
+												<li class="info-item type-medium color-basic font-weight-regular">플레이보 6</li>
+												<li class="info-item type-medium color-basic font-weight-regular">CJ푸드월드</li>
+												<li class="info-item type-medium color-basic font-weight-regular">크리스피크림도넛</li>
+												<li class="info-item type-medium color-basic font-weight-regular">SKY31 푸드에비뉴</li>
+												<li class="info-item type-medium color-basic font-weight-regular">아우어베이커리</li>
+												<li class="info-item type-medium color-basic font-weight-regular">엔제리너스</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">제 2터미널</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">엔제리너스</li>
+												<li class="info-item type-medium color-basic font-weight-regular">크리스피크림도넛</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">혜택</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">대상 매장에서 당일 안내 항공권 제시 및 하나카드 결제 시 10% 할인</li>
+												<li class="info-item type-presa font-weight-regular">OEM메뉴, 프로모션 메뉴 등 일부 품목 제외</li>
+												<li class="info-item type-presa color-wrong font-weight-regular">제1터미널 플레이보 6, 엔제리너스(3층 면세지역 49번 게이트 부근) 서비스 임시 이용 중단</li>
+												<!-- 2022.03.31 : mod : 문구 수정 -->
+												<li class="info-item type-presa color-wrong font-weight-regular">
+													제2터미널 엔제리너스(4층 면세지역 231번 게이트 부근), 크리스피크림도넛(3층 면세지역 243번 게이트 부근) 서비스 이용 임시 중단
+												</li>
+												<!-- //2022.03.31 : mod : 문구 수정 -->
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h3 class="basic-text margin-top-25">호텔</h3>
+						<div class="info-table-area">
+							<table class="info-table type-tbody-heading">
+								<!-- 2022.04.27 : mod : 텍스트 수정 -->
+								<caption class="for-a11y">
+									제 1터미널, 제 2터미널, 인근 호텔 종류와 혜택을 나타내는 안내 표입니다.
+								</caption>
+								<colgroup>
+									<col style="width: 88px" />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">제 1터미널</th>
+										<td rowspan="2">
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">캡슐 호텔 다락휴</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">제 2터미널</th>
+									</tr>
+									<tr>
+										<th scope="row">인근 호텔</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">그랜드 하얏트 인천 호텔</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">혜택</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">
+													캡슐 호텔 다락휴
+													<ul class="info-list margin-top-10">
+														<li class="info-item type-hyphen color-basic font-weight-regular">하나카드로 현장 결제 시 객실 10% 할인</li>
+														<li class="info-item type-hyphen color-basic font-weight-regular">예약 시 하나카드 회원 사전고지 필수</li>
+														<li class="info-item type-hyphen color-basic font-weight-regular">주간(08시~20시) 요금에 한하여 할인</li>
+													</ul>
+												</li>
+												<li class="info-item type-medium color-basic font-weight-regular">
+													그랜드 하얏트 인천 호텔
+													<ul class="info-list margin-top-10">
+														<li class="info-item type-hyphen color-basic font-weight-regular">객실 10% 할인 + 7일 무료 주차 가능</li>
+														<li class="info-item type-hyphen color-basic font-weight-regular">호텔 공식 홈페이지 게시 요금 기준으로 할인 적용</li>
+														<li class="info-item type-hyphen color-basic font-weight-regular">사전 유선 예약 후 전체 이용금액을 하나카드로 현장 결제 시 혜택 적용</li>
+													</ul>
+												</li>
+												<li class="info-item type-presa color-wrong font-weight-regular">제2터미널 다락휴 서비스 이용 임시 중단 중단</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h3 class="basic-text margin-top-25">라운지</h3>
+						<div class="info-table-area">
+							<table class="info-table type-tbody-heading">
+								<!-- 2022.04.27 : mod : 텍스트 수정 -->
+								<caption class="for-a11y">
+									제 1터미널, 제 2터미널 라운지 종류와 혜택을 나타내는 안내 표입니다.
+								</caption>
+								<colgroup>
+									<col style="width: 88px" />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">제 1터미널</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">마티나라운지</li>
+												<li class="info-item type-medium color-basic font-weight-regular">스카이허브라운지</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">제 2터미널</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">마티나라운지</li>
+												<li class="info-item type-medium color-basic font-weight-regular">라운지L</li>
+												<li class="info-item type-medium color-basic font-weight-regular">SPC라운지</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">혜택</th>
+										<td>
+											<ul class="info-list">
+												<li class="info-item type-medium color-basic font-weight-regular">
+													스카이허브라운지(택1)
+													<ul class="info-list margin-top-10">
+														<li class="info-item type-hyphen color-basic font-weight-regular">하나카드 결제 시 30% 할인 (본인 정상요금 $40 결제 시)</li>
+														<li class="info-item type-hyphen color-basic font-weight-regular">하나카드 결제 시 1+1 (본인 정상요금 $40 결제 시 동반인 무료)</li>
+													</ul>
+												</li>
+												<li class="info-item type-medium color-basic font-weight-regular">
+													마티나라운지(택1)
+													<ul class="info-list margin-top-10">
+														<li class="info-item type-hyphen color-basic font-weight-regular">하나카드 결제 시 30% 할인 (본인 정상요금 $40 결제 시)</li>
+														<li class="info-item type-hyphen color-basic font-weight-regular">하나카드 결제 시 1+1 (본인 정상요금 $40 결제 시 동반인 무료)</li>
+													</ul>
+												</li>
+												<li class="info-item type-medium color-basic font-weight-regular">
+													라운지L / SPC라운지
+													<ul class="info-list margin-top-10">
+														<li class="info-item type-hyphen color-basic font-weight-regular">하나카드 결제 시 30% 할인 (본인 정상요금 $40 결제 시)</li>
+														<!-- 2022.03.31 : del : 삭제
+														<li class="info-item type-hyphen color-basic font-weight-regular">하나카드 결제 시 1+1 (본인 정상요금 $40 결제 시 동반인 무료)</li>
+														-->
+														<li class="info-item type-presa color-wrong font-weight-regular">제1터미널 스카이허브라운지 (동편.탑승동), 마티나라운지 (동편/서편) 서비스 임시 이용 중단</li>
+														<li class="info-item type-presa color-wrong font-weight-regular">제2터미널 SPC라운지, 라운지L 서비스 이용 임시 중단</li>
+													</ul>
+												</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h3 class="basic-text margin-top-25">교통</h3>
+						<div class="info-table-area">
+							<table class="info-table type-tbody-heading">
+								<!-- 2022.04.27 : mod : 텍스트 수정 -->
+								<caption class="for-a11y">
+									제 1터미널, 제 2터미널 교통 종류와 혜택을 나타내는 안내 표입니다.
+								</caption>
+								<colgroup>
+									<col style="width: 88px" />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">제 1터미널</th>
+										<td rowspan="2">
+											공항철도 직통열차<br />
+											(인천공항역, 서울역 출발 직통열차에 한함)
+											<ul class="info-list margin-top-10">
+												<li class="info-item type-presa font-weight-regular">
+													매표소에서 할인 쿠폰 제시 시<br />
+													1,000원 현장 할인<br />
+													(1인1매 한정되며, 무인발권기 혜택 제공 불가)
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">제 2터미널</th>
+									</tr>
+									<tr>
+										<th scope="row" class="font-weight-light">혜택</th>
+										<td>
+											할인쿠폰 제시 시 1,000원 현장 할인<br />
+											(중복할인불가)
+											<div class="link-row margin-top-10">
+												<a href="" class="ui-basic-button type-tiny type-inline" data-layer-open="layer-guide-coupon">쿠폰받기</a>
+											</div>
+											<ul class="info-list margin-top-10">
+												<li class="info-item type-presa color-wrong font-weight-regular">서비스 이용 임시 중단</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h3 class="basic-text margin-top-25">로밍</h3>
+						<div class="info-table-area">
+							<table class="info-table type-tbody-heading">
+								<!-- 2022.04.27 : mod : 텍스트 수정 -->
+								<caption class="for-a11y">
+									제 1터미널, 제 2터미널 로밍 종류와 혜택을 나타내는 안내 표입니다.
+								</caption>
+								<colgroup>
+									<col style="width: 88px" />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">제 1터미널</th>
+										<td>와이파이도시락</td>
+									</tr>
+									<tr>
+										<th scope="row">제 2터미널</th>
+										<td>와이파이도시락</td>
+									</tr>
+									<tr>
+										<th scope="row">혜택</th>
+										<td>
+											하나카드 결제 시 와이파이도시락<br />
+											15% 할인
+											<div class="link-row margin-top-10">
+												<a href="https://ap.wifidosirak.com/ApIntro.aspx?hanacard_one" target="_blank" class="ui-basic-button type-tiny type-inline">할인받기</a>
+											</div>
+											<div class="margin-top-10 display-block">(상단에 하나카드 전용링크를 통해 결제시에만 할인 적용됩니다.)</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item color-wrong">COVID-19로 인해 일부 서비스 이용 임시 중단되었으니 양해 바랍니다.</li>
+										<li class="info-item">하나카드로 결제 시 혜택이 제공됩니다.</li>
+										<li class="info-item">다른 프로모션 또는 쿠폰과 중복 사용하실 수 없습니다.</li>
+										<li class="info-item">하나카드 및 제휴사의 사정에 따라 사전 예고 없이 변경되거나 중단 될 수 있습니다.</li>
+										<li class="info-item">계약체결 전 상품설명서 및 상품약관을 반드시 확인하시기 바랍니다.</li>
+										<li class="info-item">신용카드 발급이 부적정한 경우(개인신용평점 낮음 등) 카드발급이 제한 될 수 있습니다.</li>
+										<li class="info-item">카드이용대금과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환하여야 합니다.</li>
+										<li class="info-item">금융소비자는 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있습니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<p class="basic-text font-weight-light margin-top-35">
+							상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.<br />
+							신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.<br />
+							일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.
+						</p>
+
+						<ul class="info-list margin-top-10">
+							<li class="info-item">준법심의 A-21-2117 (2021.12.30)</li>
+						</ul>
+
+						<!-- layer: 공항철도 직통열차 할인쿠폰 -->
+						<div class="layer-wrap layer-wrap--slide" data-layer="layer-guide-coupon">
+							<div class="layer-container">
+								<section class="ui-layer">
+									<div class="ui-layer__head">
+										<div class="header">
+											<h2 class="header__title">공항철도 직통열차 할인쿠폰</h2>
+											<div class="header__right">
+												<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+													<span class="for-a11y">레이어 닫기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="ui-layer__body">
+										<div class="ui-layer__body-inner">
+											<!-- 2022.04.27 : mod : alt값 변경 -->
+											<img
+												src="./assets/images/contents/guide-airport-railroad-coupon.png"
+												alt="KEB Hana Card 공항철도 직통열차 할인쿠폰 편도운임(1인) 8,500원 쿠폰코드 : 92001 본 페이지를 공항철도 매표소에 제시하시면, 운임할인이 적용됩니다. A'REX ※ 할인기간 : 2022년 12월 31일까지"
+												class="image-only"
+											/>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+						<!-- //layer: 공항철도 직통열차 할인쿠폰 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

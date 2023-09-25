@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- 2022.04.06 : mod : 헤더 공통 수정 -->
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">대출신청</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+				<!--// 2022.04.06 : mod : 헤더 공통 수정 -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							신청내역을<br />
+							확인해 주세요.
+						</h2>
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="total-box">
+								<dl class="total-box-item">
+									<dt class="total-box-key">신청금액</dt>
+									<dd class="total-box-val">
+										<span class="large-text color-primary">30,000,000</span><span class="unit">원</span></span>
+									</dd>
+								</dl>
+								<dl class="total-box-item">
+									<dt class="total-box-key">대출금리</dt>
+									<dd class="total-box-val"><span class="large-text color-primary">연 7.9</span><span class="unit">%</span></dd>
+								</dl>
+							</div>
+
+							<div class="form-detail margin-top-35">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">차량명</dt>
+										<dd class="form-detail-group">
+											현대 쏘나타
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">상품명</dt>
+										<dd class="form-detail-group">
+											신차 오토론
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용기간</dt>
+										<dd class="form-detail-group">
+											12개월
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">월 납입금</dt>
+										<dd class="form-detail-group">
+											169,983 원
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">최초 결제일</dt>
+										<dd class="form-detail-group">
+											2021.01.01
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">결제계좌</dt>
+										<dd class="form-detail-group">
+											하나은행 3349932****5009
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">청구지</dt>
+										<dd class="form-detail-group">
+											이메일수령 abcdef@naver.com
+										</dd>
+									</div>
+									<!-- 2022.01.28 : del : 항목 삭제
+									<div class="form-detail-item">
+										<dt class="form-detail-title">차량설정금액</dt>
+										<dd class="form-detail-group">
+											20,000,000 원
+										</dd>
+									</div>
+									-->
+								</dl>
+							</div>
+
+							<div class="form-bottom margin-top-25">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-gray type-small">월별상환내용보기</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="usage-default">
+								<ul class="usage-default-list">
+									<li class="usage-default-item">
+										<div class="usage-default-block type-align-middle">
+											<div class="usage-default-left">
+												<div class="usage-default-title">중도상환 수수료안내</div>
+											</div>
+											<div class="usage-default-right type-width-auto">
+												<a href="" class="ui-button ui-basic-button type-gray type-small" role="button">필수보기</a>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block type-align-middle">
+											<div class="usage-default-left">
+												<div class="usage-default-title">연체이자율 안내</div>
+											</div>
+											<div class="usage-default-right type-width-auto">
+												<a href="" class="ui-button ui-basic-button type-gray type-small" role="button">필수보기</a>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item">
+										<div class="usage-default-block type-align-middle">
+											<div class="usage-default-left">
+												<div class="usage-default-title">대출인지세 안내</div>
+											</div>
+											<div class="usage-default-right type-width-auto">
+												<a href="" class="ui-button ui-basic-button type-gray type-small" role="button">필수보기</a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<p class=" ui-notice type-no-padding margin-top-25">위의 조건을 확인하시고 다음 버튼을 선택해 주세요.</p>
+						</div>
+						<!-- //section -->
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,15 @@
+/* import */
+@import './wcms-data-common.css';
+@import './wcms-data-ui.css';
+@import './wcms-data-clause-legacy.css';
+@import './wcms-data-clause.css';
+@import './wcms-data-event-legacy.css';
+@import './wcms-data-event.css';
+@import './wcms-data-vip-event-legacy.css';
+@import './wcms-data-vip-event.css';
+@import './wcms-data-board-legacy.css';
+@import './wcms-data-board.css';
+@import './wcms-data-card-detail-legacy.css';
+@import './wcms-data-card-detail.css';
+/* AICC */
+@import './chat-floating-style.css';

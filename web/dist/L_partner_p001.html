@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">금융 한눈에 보기</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-tab type-nav">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link">카드금융</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link">자동차금융</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active">제휴사 대출</a>
+								</li>
+							</ul>
+						</div>
+
+						<h2 class="for-a11y">제휴사 대출</h2>
+
+						<div class="page-info">
+							<strong class="page-info-title">
+								하나카드 제휴 금융기관에서<br />
+								더 많은 대출 상품을 볼 수 있어요.
+							</strong>
+						</div>
+
+						<div class="terms-area margin-top-17">
+							<div class="terms-item">
+								<div class="ui-checkbox-block type-inside">
+									<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" data-checkbox-tab="tab01" checked />
+									<label for="selectCheckbox1-1" class="ui-label">
+										<span class="ui-checkbox-object"></span>
+										<span class="ui-label-text">제휴 금융기관의 대출 안내를 받아보겠습니다.</span>
+									</label>
+								</div>
+							</div>
+							<p class="ui-notice type-small margin-top-25">상품안내 동의는 신용도에는 아무런 영향이 없습니다.</p>
+						</div>
+
+						<div class="page-section type-line" data-checkbox-tab-panel="tab01">
+							<!-- 2022.04.27 : mod : type-narrow, margin-top-minus-15 클래스 추가 -->
+							<div class="form-detail type-narrow margin-top-minus-15">
+								<div class="form-detail-head">
+									<a href="" class="ui-arrow-block" role="button">
+										<img src="./assets/images/contents/logo-hanasavings.png" alt="하나저축은행" class="insurance-logo-img-s" />
+										<h3 class="medium-text margin-top-5">원큐드림론/원큐슈퍼드림론</h3>
+									</a>
+								</div>
+
+								<div class="summary-group">
+									<dl class="summary-item">
+										<dt class="summary-item-key">금리(연)</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<strong class="font-weight-bold color-primary">5.9</strong><span class="summary-item-unit">%</span><span class="summary-item-unit type-wave">~</span
+												><strong class="font-weight-bold color-primary">19.49</strong><span class="summary-item-unit">%</span>
+											</div>
+										</dd>
+									</dl>
+									<dl class="summary-item">
+										<dt class="summary-item-key">최대한도</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<span class="summary-item-unit">최대</span> <strong class="font-weight-bold color-primary">1</strong><span class="summary-item-unit">억원</span>
+											</div>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="bottom-info">
+									<p class="small-text color-blur font-weight-light align-right">준법감시인 심의필 2021-00603호 (2021.05.12)</p>
+								</div>
+							</div>
+
+							<!-- 2022.04.27 : mod : type-narrow 클래스 추가 -->
+							<div class="form-detail type-line type-narrow">
+								<div class="form-detail-head">
+									<a href="" class="ui-arrow-block" role="button">
+										<img src="./assets/images/contents/logo-finnq.png" alt="Finnq" class="insurance-logo-img-s" />
+										<h3 class="medium-text margin-top-5">(광고) 대출금리비교서비스</h3>
+									</a>
+								</div>
+
+								<div class="summary-group type-block">
+									<div class="summary-item-val type-medium-text">
+										<strong class="color-primary">35개 금융기관에서</strong>
+										제일 좋은 금리와 한도를 찾아드릴게요.
+									</div>
+								</div>
+
+								<div class="bottom-info">
+									<p class="small-text color-blur font-weight-light align-right">핀크에서 제공하는 서비스이며 하나카드는 대출중개에 관여하지 않습니다.</p>
+								</div>
+							</div>
+
+							<!-- 2022.04.27 : mod : type-narrow 클래스 추가 -->
+							<div class="form-detail type-line type-narrow">
+								<div class="form-detail-head">
+									<a href="" class="ui-arrow-block" role="button">
+										<img src="./assets/images/contents/logo-bnk.png" alt="BNK" class="insurance-logo-img-s" />
+										<h3 class="medium-text margin-top-5">BNK 신용대출</h3>
+									</a>
+								</div>
+
+								<div class="summary-group">
+									<dl class="summary-item">
+										<dt class="summary-item-key">금리(연)</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<strong class="font-weight-bold color-primary">4.8</strong><span class="summary-item-unit">%</span><span class="summary-item-unit type-wave">~</span
+												><strong class="font-weight-bold color-primary">19.9</strong><span class="summary-item-unit">%</span>
+											</div>
+										</dd>
+									</dl>
+									<dl class="summary-item">
+										<dt class="summary-item-key">최대한도</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<span class="summary-item-unit">최대</span> <strong class="font-weight-bold color-primary">1</strong><span class="summary-item-unit">억원</span>
+											</div>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="bottom-info">
+									<p class="small-text color-blur font-weight-light align-right">준법감시인심의필 2021-0433</p>
+								</div>
+							</div>
+
+							<!-- 2022.04.27 : mod : type-narrow 클래스 추가 -->
+							<div class="form-detail type-line type-narrow">
+								<div class="form-detail-head">
+									<a href="" class="ui-arrow-block" role="button">
+										<img src="./assets/images/contents/logo-welcomesave.png" alt="웰컴저축은행" class="insurance-logo-img-s" />
+										<h3 class="medium-text margin-top-5">웰컴중금리대출</h3>
+									</a>
+								</div>
+
+								<div class="summary-group">
+									<dl class="summary-item">
+										<dt class="summary-item-key">금리(연)</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<strong class="font-weight-bold color-primary">5.9</strong><span class="summary-item-unit">%</span><span class="summary-item-unit type-wave">~</span
+												><strong class="font-weight-bold color-primary">16.0</strong><span class="summary-item-unit">%</span>
+											</div>
+										</dd>
+									</dl>
+									<dl class="summary-item">
+										<dt class="summary-item-key">최대한도</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<span class="summary-item-unit">최대</span> <strong class="font-weight-bold color-primary">1</strong><span class="summary-item-unit">억원</span>
+											</div>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="bottom-info">
+									<p class="small-text color-blur font-weight-light align-right">웰컴저축은행 준법감시인심의필 2278호<br />(2021.12.23~2022.12.22)</p>
+								</div>
+							</div>
+
+							<!-- 2022.04.27 : mod : type-narrow 클래스 추가 -->
+							<div class="form-detail type-line type-narrow">
+								<div class="form-detail-head">
+									<a href="" class="ui-arrow-block" role="button">
+										<img src="./assets/images/contents/logo-oksave.png" alt="OK저축은행" class="insurance-logo-img-s" />
+										<h3 class="medium-text margin-top-5">OK한도우대론</h3>
+									</a>
+								</div>
+
+								<div class="summary-group">
+									<dl class="summary-item">
+										<dt class="summary-item-key">금리(연)</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<strong class="font-weight-bold color-primary">5.9</strong><span class="summary-item-unit">%</span><span class="summary-item-unit type-wave">~</span
+												><strong class="font-weight-bold color-primary">15.7</strong><span class="summary-item-unit">%</span>
+											</div>
+										</dd>
+									</dl>
+									<dl class="summary-item">
+										<dt class="summary-item-key">최대한도</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<span class="summary-item-unit">최대</span> <strong class="font-weight-bold color-primary">1</strong><span class="summary-item-unit">억원</span>
+											</div>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="bottom-info">
+									<p class="small-text color-blur font-weight-light align-right">저축은행중앙회 심의필 제 2021-00522호<br />(2021.12.29 ~ 2022.12.28)</p>
+								</div>
+							</div>
+
+							<!-- 2022.04.27 : mod : type-narrow 클래스 추가 -->
+							<div class="form-detail type-line type-narrow">
+								<div class="form-detail-head">
+									<a href="" class="ui-arrow-block" role="button">
+										<img src="./assets/images/contents/logo-daolsave.png" alt="다올저축은행" class="insurance-logo-img-s" />
+										<h3 class="medium-text margin-top-5">신용대출(멤버십금리할인)</h3>
+									</a>
+								</div>
+
+								<div class="summary-group">
+									<dl class="summary-item">
+										<dt class="summary-item-key">금리(연)</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<strong class="font-weight-bold color-primary">5.9</strong><span class="summary-item-unit">%</span><span class="summary-item-unit type-wave">~</span
+												><strong class="font-weight-bold color-primary">19.9</strong><span class="summary-item-unit">%</span>
+											</div>
+										</dd>
+									</dl>
+									<dl class="summary-item">
+										<dt class="summary-item-key">최대한도</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<span class="summary-item-unit">최대</span> <strong class="font-weight-bold color-primary">1</strong><span class="summary-item-unit">억원</span>
+											</div>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="bottom-info">
+									<p class="small-text color-blur font-weight-light align-right">다올저축은행 준법감시인 심의필 제 22-2호<br />(2022.03.21 ~ 2023.03.20)</p>
+								</div>
+							</div>
+
+							<!-- 2022.04.27 : mod : type-narrow 클래스 추가 -->
+							<div class="form-detail type-line type-narrow">
+								<div class="form-detail-head">
+									<a href="" class="ui-arrow-block" role="button">
+										<img src="./assets/images/contents/logo-pepers.png" alt="페퍼스" class="insurance-logo-img-s" />
+										<h3 class="medium-text margin-top-5">페퍼스 신용대출</h3>
+									</a>
+								</div>
+
+								<div class="summary-group">
+									<dl class="summary-item">
+										<dt class="summary-item-key">금리(연)</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<strong class="font-weight-bold color-primary">6.9</strong><span class="summary-item-unit">%</span><span class="summary-item-unit type-wave">~</span
+												><strong class="font-weight-bold color-primary">19.9</strong><span class="summary-item-unit">%</span>
+											</div>
+										</dd>
+									</dl>
+									<dl class="summary-item">
+										<dt class="summary-item-key">최대한도</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<span class="summary-item-unit">최대</span> <strong class="font-weight-bold color-primary">1</strong><span class="summary-item-unit">억원</span>
+											</div>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="bottom-info">
+									<p class="small-text color-blur font-weight-light align-right">중앙회심의필 2022-00166</p>
+								</div>
+							</div>
+
+							<!-- 2022.04.27 : mod : type-narrow 클래스 추가 -->
+							<div class="form-detail type-line type-narrow">
+								<div class="form-detail-head">
+									<a href="" class="ui-arrow-block" role="button">
+										<img src="./assets/images/contents/logo-hanasavings.png" alt="하나저축은행" class="insurance-logo-img-s" />
+										<h3 class="medium-text margin-top-5">햇살론</h3>
+									</a>
+								</div>
+
+								<div class="summary-group">
+									<dl class="summary-item">
+										<dt class="summary-item-key">금리(연)</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<strong class="font-weight-bold color-primary">8.27</strong><span class="summary-item-unit">%</span><span class="summary-item-unit type-wave">~</span
+												><strong class="font-weight-bold color-primary">8.67</strong><span class="summary-item-unit">%</span>
+											</div>
+										</dd>
+									</dl>
+									<dl class="summary-item">
+										<dt class="summary-item-key">최대한도</dt>
+										<dd class="summary-item-val type-medium-text">
+											<div class="summary-item-val-inner">
+												<span class="summary-item-unit">최대</span> <strong class="font-weight-bold color-primary">1,500</strong><span class="summary-item-unit">만원</span>
+											</div>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="bottom-info">
+									<p class="small-text color-blur font-weight-light align-right">중앙회심의필 2021-00603호 (2021.05.12)</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<dl class="use-notice-group">
+										<dt class="group-title">금융상품 중개업자의 고지의무 안내사항</dt>
+										<dd class="group-contents">
+											<ul class="info-list type-outside">
+												<li class="info-item">
+													하나카드는 금융상품직접판매업자인 하나저축은행, 유진저축은행, 웰컴저축은행, 페퍼저축은행, BNK캐피탈, 하나캐피탈, 오케이캐피탈, 오케이저축은행(이하 제휴사)의 금융상품(대출성
+													상품)판매를 중개합니다.
+												</li>
+												<li class="info-item">하나카드는 금융관계법률에 따라 제휴사와의 위수탁계약을 체결한 금융상품판매중개업자입니다.</li>
+												<li class="info-item">하나카드에서 중개되는 금융상품의 경우 각 제휴사와 금융상품 계약을 직접 체결하는 것이며, 금융상품 판매중개업자인 하나카드와 계약을 체결하지 않습니다.</li>
+												<li class="info-item">
+													각 제휴사 및 하나카드가 금융소비자보호법을 위반하여 금융소비자에게 손해를 발생시킨 경우에는 그 손해를 배상할 책임이 있습니다. 각 제휴사는 하나카드의 중개업무행위에 대하여도
+													책임을 집니다.
+												</li>
+												<li class="info-item">하나카드는 제휴사와의 금융상품 계약 체결에 있어 손님으로부터 어떠한 명목으로도 금전을 직접 받지 않습니다.</li>
+												<li class="info-item">하나카드는 제휴사로부터 정해진 수수료 외의 재산상의 이익을 요구하거나 받지 않습니다.</li>
+												<li class="info-item">각 제휴사와의 계약을 위하여 손님이 제공한 정보는 하나카드가 아닌 각 제휴사가 직접 보유·관리합니다.</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

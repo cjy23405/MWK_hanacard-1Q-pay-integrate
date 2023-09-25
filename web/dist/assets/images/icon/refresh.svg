@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14.299" height="12" viewBox="0 0 14.299 12">
+    <g data-name="그룹 6368" transform="translate(-127.851 -1699)">
+        <g data-name="타원 957" transform="translate(129 1699)" style="stroke:#fff;fill:none">
+            <circle cx="6" cy="6" r="6" style="stroke:none"/>
+            <circle cx="6" cy="6" r="5.5" style="fill:none"/>
+        </g>
+        <path data-name="사각형 8511" transform="rotate(74.99 -1038.378 942.87)" style="fill:#cdd1d8" d="M0 0h3v14H0z"/>
+        <g data-name="그룹 5887" transform="translate(17.75 -2)">
+            <rect data-name="사각형 8516" width="3" height="1" rx=".5" transform="translate(120 1704)" style="fill:#fff"/>
+            <rect data-name="사각형 8517" width="3" height="1" rx=".5" transform="rotate(90 -789.5 912.5)" style="fill:#fff"/>
+        </g>
+        <g data-name="그룹 5888" transform="translate(129.25 1707)">
+            <rect data-name="사각형 8516" width="3" height="1" rx=".5" style="fill:#fff"/>
+            <rect data-name="사각형 8517" width="3" height="1" rx=".5" transform="rotate(-90 1.5 1.5)" style="fill:#fff"/>
+        </g>
+        <circle data-name="타원 958" cx=".5" cy=".5" r=".5" transform="translate(129 1704.4)" style="fill:#fff"/>
+        <circle data-name="타원 959" cx=".5" cy=".5" r=".5" transform="translate(140 1704.6)" style="fill:#fff"/>
+    </g>
+</svg>

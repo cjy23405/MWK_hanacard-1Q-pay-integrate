@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <g transform="translate(-235 -878)">
+        <path data-name="빼기 336" d="M15.449 20.97H2.3a2.976 2.976 0 0 1-2.161-.919c.088 0 .184.008.286.008h9.148a5.006 5.006 0 0 0 5-5V0h.875a3 3 0 0 1 3 3v14.97a3 3 0 0 1-2.999 3z" transform="translate(245.353 888.52)" style="fill:#7dedf3"/>
+        <g data-name="사각형 12097" transform="translate(244.199 884)" style="stroke-width:1.5px;stroke:#2d3239;fill:#fff">
+            <rect width="19" height="31" rx="5" style="stroke:none"/>
+            <rect x=".75" y=".75" width="17.5" height="29.5" rx="4.25" style="fill:none"/>
+        </g>
+        <rect data-name="사각형 12139" width="18.235" height="1.368" rx=".684" transform="translate(244.199 888.558)" style="fill:#2d3239"/>
+        <rect data-name="사각형 14461" width="18.235" height="1.368" rx=".684" transform="translate(244.199 908.123)" style="fill:#2d3239"/>
+        <rect data-name="사각형 14462" width="3.647" height="1.368" rx=".684" transform="translate(251.949 910.858)" style="fill:#2d3239"/>
+        <g data-name="그룹 12810" transform="translate(2)">
+            <rect data-name="사각형 15925" width="18" height="12" rx="2" transform="translate(250 893)" style="fill:#fff"/>
+            <rect data-name="사각형 15924" width="17" height="11" rx="2" transform="translate(252.3 895.3)" style="fill:#7dedf3"/>
+            <g data-name="사각형 15912" transform="translate(250 893)" style="fill:none;stroke-width:1.5px;stroke:#2d3239">
+                <rect width="18" height="12" rx="2" style="stroke:none"/>
+                <rect x=".75" y=".75" width="16.5" height="10.5" rx="1.25" style="fill:none"/>
+            </g>
+            <text transform="translate(252.5 901.5)" style="stroke-width:.5px;font-size:7px;font-family:NanumSquareRoundOTFEB,NanumSquareRoundOTF;fill:#2d3239;stroke:#2d3239"><tspan x="0" y="0">PAY</tspan></text>
+        </g>
+        <rect data-name="사각형 15913" width="3.821" height="1.368" rx=".684" transform="translate(270.775 896.5)" style="fill:#2d3239"/>
+        <rect data-name="사각형 15914" width="2.821" height="1.368" rx=".684" transform="translate(270.775 900.005)" style="fill:#2d3239"/>
+    </g>
+</svg>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">전기요금</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							정기적으로 나가는 전기 요금<br />
+							하나카드가 잊지 않게 챙겨드려요.
+						</h2>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button">신청</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<section class="page-section-group">
+								<div class="section-title">
+									<h2 class="title">서비스 대상</h2>
+								</div>
+								<p class="basic-text color-blur">주택용전력 고객, 주거용 심야전력 고객, 계약전력 20KW이하 전 고객</p>
+							</section>
+							<section class="page-section-group">
+								<div class="section-title">
+									<h2 class="title">대상회원</h2>
+								</div>
+								<p class="basic-text color-blur">
+									하나 신용/체크카드 회원<br />
+									(하나BC, 법인, 기프트, 선불카드 제외)
+								</p>
+							</section>
+							<section class="page-section-group">
+								<div class="section-title">
+									<h2 class="title">신청방법</h2>
+								</div>
+								<ul class="info-list">
+									<li class="info-item type-large font-weight-regular">하나카드 홈페이지</li>
+									<li class="info-item type-large font-weight-regular">하나카드 고객센터 (1800-1111)</li>
+								</ul>
+							</section>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">카드 자동납부 신규 신청 직전 3개월 이상 미수요금이 있는 경우에는 가입신청이 보류됩니다.</li>
+										<li class="info-item">타 금융기관 자동납부 고객은 먼저 한전에서 자동납부 취소를 하신 후 신청을 하셔야 합니다.</li>
+										<li class="info-item">거주자와 카드 명의자가 일치하지 않아도 전기 요금 자동이체 신청 접수 가능합니다.</li>
+										<li class="info-item">하나의 카드로 2개 이상의 전기요금 납부 신청이 가능합니다.</li>
+										<li class="info-item">전기요금 자동납부 서비스는 하나카드가 한국전력을 대행하여 제공해 드리는 서비스입니다.</li>
+										<li class="info-item">전기요금 결제 금액은 하나크도 포인트, 마일리지, 캐시백 적립 대상에서 제외됩니다.</li>
+										<li class="info-item">자동납부 해지는 한국전력공사(123) 및 하나카드 고객센터(1800-1111)를 통해 가능합니다.</li>
+										<li class="info-item">한도초과, 카드거래정지, 연체, 탈회 등 요금청구가 불가능 할 경우 자동납부 업체(가맹점)의 정책에 따라 해당요금 연체에 따른 가산금이 부과될 수 있습니다.</li>
+										<li class="info-item">
+											자동납부중인 카드의 갱신, 도난/분실, 췌손 등의 재발급 사유로 카드번호가 변경된 경우 자동납부의 연체방지를 위해 이용 가능한 보유중이신 신용카드 중 한가지로 자동이체 승계처리르 될
+											수 있습니다. 자동이체를 다른 카드로 변경하거나 해지를 원하는 경우 해당 가맹점 앞으로 연락하여 주시기 바랍니다.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

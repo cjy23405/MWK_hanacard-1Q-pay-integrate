@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-3{stroke:#111;stroke-width:1.5px}.cls-6,.cls-7{stroke:none}.cls-7{fill:#111}
+        </style>
+    </defs>
+    <g id="ic_benefit_9_on" transform="translate(-247 -1221)">
+        <path id="사각형_7186" data-name="사각형 7186" class="cls-1" transform="translate(247 1221)" d="M0 0h21v21H0z"/>
+        <path id="사각형_14482" data-name="사각형 14482" transform="translate(250 1224)" style="fill:transparent" d="M0 0h15v15H0z"/>
+        <g id="사각형_14483" data-name="사각형 14483" class="cls-3">
+            <path class="cls-6" d="M2 0h3a2 2 0 0 1 2 2v2H0V2a2 2 0 0 1 2-2z" transform="translate(253.936 1224)"/>
+            <path class="cls-1" d="M2 .75h3A1.25 1.25 0 0 1 6.25 2v.5a.75.75 0 0 1-.75.75h-4a.75.75 0 0 1-.75-.75V2A1.25 1.25 0 0 1 2 .75z" transform="translate(253.936 1224)"/>
+        </g>
+        <g id="패스_12332" data-name="패스 12332" style="fill:none">
+            <path class="cls-6" d="M-1 0h9.13L7.3 7.895A1.923 1.923 0 0 1 5.64 10H1.49A1.923 1.923 0 0 1-.17 7.895z" transform="translate(253.936 1229)"/>
+            <path class="cls-7" d="m.666 1.5.664 6.316v.079c0 .338.138.547.205.605h4.06c.067-.058.205-.267.205-.605v-.079L6.464 1.5H.666M-1 0h9.13L7.3 7.895C7.3 9.057 6.556 10 5.64 10H1.49C.573 10-.17 9.057-.17 7.895L-1 0z" transform="translate(253.936 1229)"/>
+        </g>
+        <g id="사각형_14484" data-name="사각형 14484" class="cls-3" transform="translate(251.936 1226.5)">
+            <rect class="cls-6" width="11.13" height="4" rx="2"/>
+            <rect class="cls-1" x=".75" y=".75" width="9.63" height="2.5" rx="1.25"/>
+        </g>
+        <g id="패스_12333" data-name="패스 12333" style="fill:#f5f6f8">
+            <path class="cls-6" d="M7.937 4.75H1.192c-.028-.02-.092-.105-.092-.25v-.037l-.004-.038L.751.971C.758.843.816.77.842.75h7.445c.027.019.084.093.092.221l-.346 3.454-.004.038V4.5c0 .145-.063.23-.092.25z" transform="translate(252.936 1231.18)"/>
+            <path class="cls-7" d="m1.558 1.5.25 2.5h5.514l.25-2.5H1.558M.83 0H8.3c.458 0 .83.448.83 1l-.35 3.5c0 .552-.372 1-.83 1H1.18c-.458 0-.83-.448-.83-1L0 1c0-.552.372-1 .83-1z" transform="translate(252.936 1231.18)"/>
+        </g>
+    </g>
+</svg>

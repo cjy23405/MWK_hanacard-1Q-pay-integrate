@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- progress bar -->
+					<div class="fixed-step">
+						<div class="step-box" role="img" aria-label="총 14단계 중 1단계">
+							<span class="step-bar" style="width: 20%"></span>
+						</div>
+					</div>
+					<!-- //progress bar -->
+
+					<!-- 2022.11.11 : mod : 전반적인 구조 변경(촬영 전/후 동일페이지에서 노출) -->
+					<div class="page-contents">
+						<!-- 촬영 전 -->
+						<div>
+							<!-- 2022.11.01 : mod : 문구수정 -->
+							<h2 class="page-contents-title">
+								신분증을 촬영하시면<br />
+								카드 발급이 완료됩니다.
+							</h2>
+
+							<div class="img-area type-312">
+								<img src="/mkca20/images/contents/img-id-guide.png" alt="주민등록증 촬영 예시 이미지" class="img" />
+							</div>
+
+							<!-- 2022.11.01 : del : 삭제
+							<div class="guide-list margin-top-30">
+								<div class="guide-item has-icon type-1">신분증이 잘리거나, <span class="color-primary">빛이 반사</span>되지 않도록해주세요.</div>
+								<div class="guide-item has-icon type-2"><span class="color-primary">어두운 바닥</span>에서 촬영해주세요.</div>
+							</div> -->
+
+							<!-- 2022.08.18 : mod : margin-top-25 클래스 추가 -->
+							<div class="terms-area margin-top-25">
+								<div class="terms-item">
+									<div class="ui-form-check-block type-large type-align-top">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" data-checkbox-group-child="selectCheckbox" data-checkbox-group="selectCheckbox1-1" />
+										<label for="selectCheckbox1-1" class="ui-label">
+											<span class="ui-check-object"></span>
+											<span class="ui-label-text">개인(신용)정보 필수적 동의서</span>
+										</label>
+										<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //촬영 전 -->
+
+						<!-- 촬영 후 -->
+						<div style="display: none">
+							<h2 class="page-contents-title">인식된 신분증정보가 맞나요?</h2>
+
+							<div class="img-area type-312">
+								<img src="/mkca20/images/contents/img-id-guide.png" alt="주민등록증 촬영 예시 이미지" class="img" />
+							</div>
+
+							<div class="use-guide-area js-ui-accordion">
+								<div class="use-guide-item js-ui-accordion__item">
+									<button type="button" class="use-guide-opener js-ui-accordion__opener">
+										확인해주세요
+										<span class="for-a11y">
+											상세 내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="use-guide-contents js-ui-accordion__layer">
+										<ul class="info-list">
+											<li class="info-item">신분증정보가 다를 경우 다시 촬영하거나 직접 입력할 수 있습니다.</li>
+											<li class="info-item">실제 정보와 다른 경우 카드가 발급되지 않을 수 있습니다.</li>
+											<li class="info-item">
+												신분증 진위확인이 안 될 경우 아래 방법으로도 확인할 수 있습니다.<br />
+												- 주민등록증 음석확인서비스 (국번 없이 1382)에서 진위확인<br />
+												- 정부24 홈페이지(gov.kr) [서비스 > 사실/진위확인 > 주민등록증 진위확인/잠김해제]에서 진위확인
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //촬영 후 -->
+					</div>
+					<!-- 2022.08.31 : mod : .page-buttons에 .type-fixed.type-no-line 클래스 추가 -->
+					<div class="page-buttons type-fixed type-no-line">
+						<!-- 촬영 전 노출 버튼 -->
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">촬영하기</button>
+								</li>
+							</ul>
+						</div>
+						<!-- //촬영 전 노출 버튼 -->
+						<!-- 촬영 후 노출 버튼 -->
+						<div class="ui-buttons" style="display: none">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">다음</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //촬영 후 노출 버튼 -->
+					</div>
+					<!-- //2022.11.11 : mod : 전반적인 구조 변경(촬영 전/후 동일페이지에서 노출) -->
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-detail-interest-installment">유이자할부 내역 (상세내역)</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 유이자할부 내역 (상세내역)-->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-detail-interest-installment">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">상세내역</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<div class="total-amount type-no-line margin-bottom-none">
+										<div class="total-amount-head">
+											<span class="total-amount-title">스타벅스 청라점</span>
+										</div>
+										<div class="total-amount-val color-basic">128,050 원</div>
+									</div>
+
+									<ul class="card-list margin-top-25">
+										<li class="card-item type-line type-narrow">
+											<a href="" class="card-block ui-arrow-block" role="button">
+												<span class="for-a11y">상세내역 보기</span>
+
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<!-- DD : 이미지 없을 때
+												<span class="card-image">
+													<span class="card-image-inner"></span>
+												</span>
+												-->
+
+												<!-- DD : 이미지 에러
+												<span class="card-image">
+													<span class="card-image-inner">
+														<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												-->
+
+												<!-- DD : 이미지 있을 때 -->
+												<span class="card-image">
+													<span class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+
+												<div class="card-info">
+													<span class="card-name">[본인] 모두의 쇼핑</span>
+													<div class="card-number">
+														<span class="card-number-item">VISA</span>
+														<span class="card-number-item">4365-12**-****-1234</span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="page-section type-line">
+									<div class="form-detail">
+										<dl class="form-detail-list">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">이용일</dt>
+												<dd class="form-detail-group">10개월</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">할부이용금액</dt>
+												<dd class="form-detail-group">120,000 원</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">총 할부수수료</dt>
+												<dd class="form-detail-group">8,050 원</dd>
+											</div>
+										</dl>
+									</div>
+
+									<div class="form-bottom">
+										<div class="ui-buttons">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item">
+													<a href="" class="ui-basic-button type-secondary type-small" role="button"><span class="ui-arrow type-black">카드이용내역</span></a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 유이자할부 내역 (상세내역)-->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-detail-interest-installment');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

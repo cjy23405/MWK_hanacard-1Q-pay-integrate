@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">여행·유학·레저보험</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section">
+							<div class="page-section-group">
+								<img src="./assets/images/contents/logo-hana-insurance.png" alt="하나손해보험" class="insurance-logo-img" />
+								<h2 class="page-title margin-top-10">해외여행보험</h2>
+								<div class="page-info">
+									<p class="info-text">
+										다이렉트로 빠르게! 담보로 알차게!!<br />
+										직접 설계로 저렴하게!!!
+									</p>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<ul class="guide-info-list type-wide">
+									<li class="guide-info-item">
+										<div class="guide-info-block">
+											<strong class="guide-info-title margin-bottom-none">여행 중 발생한 상해, 도난 등 보상</strong>
+										</div>
+										<span class="guide-info-icon type-icon-52"></span>
+									</li>
+									<li class="guide-info-item">
+										<div class="guide-info-block">
+											<strong class="guide-info-title margin-bottom-none">원하는 보장만 알차게 선택 가능</strong>
+										</div>
+										<span class="guide-info-icon type-icon-53"></span>
+									</li>
+									<li class="guide-info-item">
+										<div class="guide-info-block">
+											<strong class="guide-info-title margin-bottom-none">가족 여행 시 한번에 보장!</strong>
+										</div>
+										<span class="guide-info-icon type-icon-54"></span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="page-section-group">
+								<!-- 2022.03.30 : mod : h3에 ui-notice, color-basic 클래스 추가 -->
+								<h3 class="ui-notice color-basic basic-text">꼭 확인해 주세요.</h3>
+								<div class="use-notice-group margin-top-10">
+									<div class="group-title">
+										<div>[상품안내]</div>
+										<div class="margin-top-10">가입대상</div>
+									</div>
+									<div class="group-contents font-weight-light">가입대상자가 모두 대한민국 국적이어야 하며 가족의 범위는 본인의 미성년자 자녀만 가능</div>
+
+									<div class="group-title">가입연령</div>
+									<div class="group-contents font-weight-light">만 0세 ~ 80세, 단 만 19세 미만은 가족형의 가족으로 가입 가능</div>
+
+									<div class="group-title">가입가능</div>
+									<div class="group-contents font-weight-light">여행기간은 최대 3개월까지 가능(보험시기포함 87일까지)</div>
+
+									<div class="group-title">[보장내용]</div>
+									<div class="form-detail">
+										<div class="form-detail-head margin-top-10">
+											<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+										</div>
+										<div class="info-table-area type-scroll-x">
+											<table class="info-table type-thead-line type-tbody-heading">
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption class="for-a11y">
+													보장내용, 실속, 표준, 고급으로 구성된 해외여행보험 보장 안내 표입니다.
+												</caption>
+												<thead>
+													<tr>
+														<th scope="col" class="info-table-vertical-line">보장내용</th>
+														<th scope="col">실속</th>
+														<th scope="col">표준</th>
+														<th scope="col">고급</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row">해외여행중 상해사망</th>
+														<td class="align-right">1억</td>
+														<td class="align-right">2억</td>
+														<td class="align-right">3억</td>
+													</tr>
+													<tr>
+														<th scope="row">해외여행중<br />상해후유장해</th>
+														<td class="align-right">1억</td>
+														<td class="align-right">2억</td>
+														<td class="align-right">3억</td>
+													</tr>
+													<tr>
+														<th scope="row">해외여행중 질병사망<br />및 80%이상 후유장해</th>
+														<td class="align-right">1천</td>
+														<td class="align-right">2천</td>
+														<td class="align-right">3천</td>
+													</tr>
+													<tr>
+														<th scope="row">해외상해 해외실손<br />의료비</th>
+														<td class="align-right">1천</td>
+														<td class="align-right">2천</td>
+														<td class="align-right">3천</td>
+													</tr>
+													<tr>
+														<th scope="row">해외질병 해외실손<br />의료비</th>
+														<td class="align-right">1천</td>
+														<td class="align-right">2천</td>
+														<td class="align-right">3천</td>
+													</tr>
+													<tr>
+														<th scope="row">상해 급여</th>
+														<td class="align-right">1천<br />(통원 회당 10만원)</td>
+														<td class="align-right">3천<br />(통원 회당 15만원)</td>
+														<td class="align-right">5천<br />(통원 회당 20만원)</td>
+													</tr>
+													<tr>
+														<th scope="row">상해 비급여</th>
+														<td class="align-right">1천<br />(통원 회당 10만원)</td>
+														<td class="align-right">3천<br />(통원 회당 15만원)</td>
+														<td class="align-right">5천<br />(통원 회당 20만원)</td>
+													</tr>
+													<tr>
+														<th scope="row">질병 급여</th>
+														<td class="align-right">1천<br />(통원 회당 10만원)</td>
+														<td class="align-right">3천<br />(통원 회당 15만원)</td>
+														<td class="align-right">5천<br />(통원 회당 20만원)</td>
+													</tr>
+													<tr>
+														<th scope="row">3대 비급여<br />(도수치료·체외충격파치료·<br />증식치료/주사료<br />/MRI.MRA)</th>
+														<td class="align-right">350만/<br />250만/<br />300만</td>
+														<td class="align-right">350만/<br />250만/<br />300만</td>
+														<td class="align-right">350만/<br />250만/<br />300만</td>
+													</tr>
+													<tr>
+														<th scope="row">해외여행중 휴대폰손해<br />(분실제외)</th>
+														<td class="align-right">-</td>
+														<td class="align-right">10만</td>
+														<td class="align-right">20만</td>
+													</tr>
+													<tr>
+														<th scope="row">여행중 배상책임</th>
+														<td class="align-right">5백</td>
+														<td class="align-right">1천</td>
+														<td class="align-right">2천</td>
+													</tr>
+													<tr>
+														<th scope="row">항공기 및 수하물지연<br />비용</th>
+														<td class="align-right">-</td>
+														<td class="align-right">10만</td>
+														<td class="align-right">20만</td>
+													</tr>
+													<tr>
+														<th scope="row">여행중 중단사고발생<br />추가비용</th>
+														<td class="align-right">-</td>
+														<td class="align-right">10만</td>
+														<td class="align-right">20만</td>
+													</tr>
+													<tr>
+														<th scope="row">해외여행중 중대사고<br />구조송환비용</th>
+														<td class="align-right">3천</td>
+														<td class="align-right">3천</td>
+														<td class="align-right">3천</td>
+													</tr>
+													<tr>
+														<th scope="row">항공기납치</th>
+														<td class="align-right">140만</td>
+														<td class="align-right">140만</td>
+														<td class="align-right">140만</td>
+													</tr>
+													<tr>
+														<th scope="row">해외여행중 여권분실후<br />재발급비용</th>
+														<td class="align-right">6만7천</td>
+														<td class="align-right">6만7천</td>
+														<td class="align-right">6만7천</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+									<div class="group-title">
+										<div>[가입예시]</div>
+										<div class="margin-top-10">예시기준</div>
+									</div>
+									<div class="group-contents font-weight-light">보험기간 7일, 남자 40세</div>
+
+									<div class="group-title">실속형</div>
+									<div class="info-table-area">
+										<table class="info-table type-thead-line type-tbody-heading">
+											<!-- 2022.05.04 : mod : 텍스트 수정 -->
+											<caption class="for-a11y">
+												납입방식, 실속형, 표준형, 고급형으로 구성된 해외여행보험 보험료 예시 안내 표입니다.
+											</caption>
+											<thead>
+												<tr>
+													<th scope="col" class="info-table-vertical-line">납입방식</th>
+													<th scope="col">실속형</th>
+													<th scope="col">표준형</th>
+													<th scope="col">고급형</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">보험료</th>
+													<td class="align-right">2,900</td>
+													<td class="align-right">6,830</td>
+													<td class="align-right">10,480</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="group-contents font-weight-light">
+										<ul class="info-list type-default type-inherit type-outside margin-top-10">
+											<li class="info-item">만 80세까지 가입가능</li>
+											<li class="info-item">가족형의 경우 본인 외 가족의 사망보장은 제외됩니다.</li>
+											<li class="info-item">나이, 성별, 기타 가입조건에 따라 보험료가 달라질 수 있습니다.</li>
+										</ul>
+									</div>
+
+									<div class="group-title">
+										<div>[알아두실 사항]</div>
+										<div class="margin-top-10">보험계약 체결 전 유의사항</div>
+									</div>
+									<div class="group-contents font-weight-light">
+										보험계약 체결 전에 상품설명서와 약관을 반드시 읽어보시기 바랍니다.<br />
+										보험계약자는 가입하고자 하는 보험상품에 대하여 필요한 정보를 안내, 설명 받을 권리가 있습니다.
+									</div>
+
+									<div class="group-title">계약전 알릴의무</div>
+									<div class="group-contents font-weight-light">
+										계약자 또는 피보험자는 청약할 때(진단계약의 경우에는 건강진단할 때를 말합니다) 청약서에서 질문한 사항에 대하여 알고 있는 사실을 반드시 사실대로 알려야(이하 ‘계약 전 알릴의무' 라
+										하며, 상법상 ‘고지의무'와 같습니다) 합니다. 다만, 진단계약의 경우 의료법 제3조(의료기관)의 규정에 따른 종합병원과 병원에서 직장 또는 개인이 실시한 건강진단서 사본 등 건강상태를
+										판단할 수 있는 자료로 건강진단을 대신할 수 있습니다.
+									</div>
+
+									<div class="group-title">보험금을 지급하지 않는 사유</div>
+									<div class="group-contents font-weight-light">
+										<ul class="info-list type-default type-inherit type-outside">
+											<li class="info-item">피보험자가 고의로 자신을 해친 경우. 다만, 피보험자가 심신상실 등으로 자유로운 의사결정을 할 수 없는 상태에서 자신을 해친 경우에는 보험금을 지급합니다.</li>
+											<li class="info-item">보험수익자가 고의로 피보험자를 해친 경우. 다만, 그 보험수익자 가 보험금의 일부 보험수익자인 경우에는 다른 보험수익자에 대한 보험금은 지급합니다.</li>
+											<li class="info-item">
+												계약자가 고의로 피보험자를 해친 경우. 피보험자의 임신, 출산(제왕절개 포함), 산후기. 그러나 회사가 보장하는 보험금 지급사유로 인한 경우에는 보험금을 지급합니다.
+											</li>
+											<li class="info-item">전쟁, 외국의 무력행사, 혁명, 내란, 사변, 폭동</li>
+											<li class="info-item">
+												피보험자가 정당한 이유없이 입원기간 중 의사의 지시를 따르지 않거나 의사가 통원치료가 가능하다고 인정함에도 피보험자 본인이 자의적으로 입원하여 발생한 입원의료비
+											</li>
+											<li class="info-item">피보험자가 정당한 이유없이 통원기간 중 의사의 지시를 따르지 않아 발생한 통원의료비</li>
+											<li class="info-item">
+												전문등반(전문적인 등산용구를 사용하여 암벽 또는 빙벽을 오르내리거나 특수한 기술, 경험, 사전훈련을 필요로 하는 등반을 말합니다), 글라이더 조종, 스카이다이빙, 스쿠버다이빙,
+												행글라이딩, 수상보트, 패러글라이딩
+											</li>
+											<li class="info-item">
+												모터보트, 자동차 또는 오토바이에 의한 경기, 시범, 흥행(이를 위한 연습을 포함합니다) 또는 시운전(다만, 공용도로상에서 시운전을 하는 동안 보험금 지급사유가 발생한 경우에는
+												보장합니다)
+											</li>
+											<li class="info-item">선박승무원, 어부, 사공, 그밖에 선박에 탑승하는 것을 직무로 하는 사람이 직무상 선박에 탑승하고 있는 동안</li>
+										</ul>
+									</div>
+
+									<div class="group-title">품질보증 및 청약철회제도</div>
+									<div class="group-contents font-weight-light">
+										<ul class="info-list type-default type-inherit type-outside">
+											<li class="info-item">
+												품질보증제도 : 보험가입시 약관 및 청약서 부본을 계약자에게 전달하지 않았거나, 약관의 중요 내용을 설명하지 않았을 때, 청약서에 계약자가 자필서명 또는 날인(도장찍음)을 하지
+												아니한 때 계약성립일로부터 3개월 이내에 회사에 보험계약의 취소를 요구할 수 있습니다. 이 경우 납입한 보험료와 함께 보험 계약대출이율을 연단위 복리로 계산한 금액을 더하여
+												지급합니다.
+											</li>
+											<li class="info-item">
+												청약철회 청구제도 : 계약자는 보험증권을 받은 날로부터 15일 이내에 그 청약을 철회할 수 있습니다. 다만, 회사가 건강상태 진단을 지원하는 계약, 보험기간이 90일 이내인 계약,
+												전문금융소비자가 체결한 계약은 청약을 철회할 수 없습니다. 계약자가 청약을 철회한 때에는 회사는 청약의 철회를 접수한 날로부터 3영업일 이내에 납입한 보험료를 돌려드리며, 보험료
+												반환이 늦어진 기간에 대하여는 이 계약의 보험계약대출이율을 연단위 복리로 계산한 금액을 더하여 지급합니다. 다만, 계약자가 제1회 보험료를 신용카드로 납입한 계약의 청약을 철회하는
+												경우에는 회사는 청약의 철회를 접수한 날로부터 3영업일 이내에 해당 신용카드회사로 하여금 대금청구를 하지 않도록 해야 하며, 이 경우 회사는 보험료를 반환한 것으로 봅니다.
+											</li>
+										</ul>
+									</div>
+
+									<div class="group-title">위법계약 해지권</div>
+									<div class="group-contents font-weight-light">
+										계약자는 보험사가 설명의무 등을 위반하여 계약을 체결한 경우 계약체결일로부터 5년을 초과하지 않는 범위 내에서 계약체결에 대한 회사의 위반사항을 안 날로부터 1년 이내에
+										계약해지요구서에 위반사실을 입증하는 서류를 첨부하여 서명 등으로 해당 계약의 해지를 요구할 수 있습니다.
+									</div>
+
+									<div class="group-title">예금자보호 및 상담/분쟁/신고 안내</div>
+									<div class="group-contents font-weight-light">
+										<ul class="info-list type-default type-inherit type-outside">
+											<li class="info-item">
+												예금자보호안내 : 이 보험계약은 예금자보험법에 따라 예금보험공사가 보호하되, 보호 한도는 본 보험회사에 있는 귀하의 모든 예금보호 대상 금융상품의 해약환급금(또는 만기시
+												보험금이나 사고보험금)에 기타지급금을 합하여 1인당 "최고 5천만원"이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다. 다만, 보험계약자 및 보험료 납부자가 법인인 보험계약은
+												예금자보호법에 따라 예금보험공사가 보호하지 않습니다.
+											</li>
+											<li class="info-item">보험에 관한 불만상담 및 분쟁이 있을 때에는 먼저 당사로 연락하시고, 처리결과에 이의가 있으시면 민원 또는 분쟁조정 등을 신청하실 수 있습니다.</li>
+											<li class="info-item">
+												하나손해보험 : 1566-3000, www.educar.co.kr<br />
+												금융감독원 민원상담전화 : (국번없이) 1332, www.fss.or.kr
+											</li>
+											<li class="info-item">
+												보험계약과 관련한 보험모집질서 위반행위 및 보험범죄는 보험업법에 의해 처벌받을 수 있습니다.<br />
+												금융감독원 민원상담전화 : (국번없이) 1332, www.fss.or.kr
+											</li>
+											<li class="info-item type-indent">
+												준법감시인확인필 제2021-508<br />
+												(2021.11.24~2022.11.23)
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">보험 가입</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

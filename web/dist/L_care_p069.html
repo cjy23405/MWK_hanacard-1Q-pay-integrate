@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">스마트신용지킴이</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section">
+							<h2 class="page-title">
+								$2021년 12월 12일$<br />
+								신용평점 정보를 확인해보세요.
+							</h2>
+
+							<!-- 2022.02.11 : mod : 차트 추가 -->
+							<div class="ui-chart-area" id="chart"></div>
+							<!-- //2022.02.11 : mod : 차트 추가 -->
+
+							<div class="usage-total-wrap margin-top-35">
+								<dl class="usage-total type-align-top">
+									<dt class="usage-total-title">신용상태</dt>
+									<dd class="usage-total-value">보통<span class="usage-total-value-etc">실시간 기준</span></dd>
+								</dl>
+								<dl class="usage-total type-align-top">
+									<dt class="usage-total-title">
+										신용랭킹
+										<button class="ui-button-question"><span class="for-a11y">신용랭킹 안내</span></button>
+									</dt>
+									<dd class="usage-total-value">
+										<span class="color-primary">737</span>위
+										<span class="usage-total-value-etc">/ 1,000 명</span>
+									</dd>
+								</dl>
+								<dl class="usage-total">
+									<dt class="usage-total-title">
+										또래 평균
+										<button class="ui-button-question"><span class="for-a11y">또래 평균 안내</span></button>
+									</dt>
+									<dd class="usage-total-value">843 점</dd>
+								</dl>
+								<dl class="usage-total type-align-top">
+									<dt class="usage-total-title">전국민 신용평점</dt>
+									<dd class="usage-total-value">
+										<span class="color-primary">815 </span>점
+										<span class="usage-total-value-etc">11월 05일 기준</span>
+									</dd>
+								</dl>
+							</div>
+							<p class="ui-notice">금융회사에서 조회하는 NICE평가정보의 신용정보를 바탕으로 제공하는 정보입니다.</p>
+						</div>
+
+						<div class="page-section type-line">
+							<h2 class="page-title">
+								최근 $김하나$님의<br />
+								신용변동 및 조회정보를<br />
+								확인해보세요.
+							</h2>
+							<!-- 2022.02.25 : mod : 디자인 구성 변경되어 구조 변경 -->
+							<dl class="form-detail-list">
+								<div class="form-detail-item">
+									<dt class="form-detail-title">최근 한달간 신용변동 발생 여부</dt>
+									<dd class="form-detail-group"><strong>신용변동 있음</strong></dd>
+								</div>
+								<div class="form-detail-item">
+									<dt class="form-detail-title">최근 신용조회 사유</dt>
+									<dd class="form-detail-group"><strong class="color-primary">융자/대출</strong></dd>
+								</div>
+							</dl>
+							<div class="page-section-group type-line">
+								<!-- [DD] 대출 증감액 감소시 type-increase 클래스 추가 -->
+								<div class="chart-area type-flex type-no-padding-top type-increase">
+									<!-- 2022.05.10 : mod : id 속성 추가 -->
+									<div class="chart-info" id="chart-discription-1">
+										<span class="chart-info-text">최근 대출 증감액</span>
+										<div class="chart-info-value">
+											<span class="point">600 </span> 천원
+											<span class="for-a11y">증가</span>
+										</div>
+									</div>
+									<!-- 2022.05.10 : mod : role, aria-labelledby 속성 추가 -->
+									<div class="chart" role="img" aria-labelledby="chart-discription-1">
+										<div class="chart-box">
+											<div class="bar-list">
+												<div class="bar-item" style="height: 50%">
+													<span class="chart-date">전월</span>
+													<!-- 2022.05.10 : del : 제거
+													<span class="for-a11y">0,000,000원</span>
+													-->
+												</div>
+												<!-- [DD] 활성화시 is-active 클래스 추가 -->
+												<div class="bar-item is-active" style="height: 80%">
+													<span class="chart-date">12월</span>
+													<!-- 2022.05.10 : del : 제거
+													<span class="for-a11y">0,000,000원</span>
+													-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- [DD] 대출 증감액 감소시 type-decrease 클래스 추가 -->
+								<div class="chart-area type-flex type-no-padding-top type-decrease">
+									<!-- 2022.05.10 : mod : id 속성 추가 -->
+									<div class="chart-info" id="chart-discription-2">
+										<span class="chart-info-text">최근 대출 증감액</span>
+										<div class="chart-info-value">
+											<span class="point">600 </span> 천원
+											<span class="for-a11y">감소</span>
+										</div>
+									</div>
+									<!-- 2022.05.10 : mod : role, aria-labelledby 속성 추가 -->
+									<div class="chart" role="img" aria-labelledby="chart-discription-2">
+										<div class="chart-box">
+											<div class="bar-list">
+												<div class="bar-item" style="height: 80%">
+													<span class="chart-date">전월</span>
+													<!-- 2022.05.10 : del : 제거
+													<span class="for-a11y">0,000,000원</span>
+													-->
+												</div>
+												<div class="bar-item is-active" style="height: 40%">
+													<span class="chart-date">12월</span>
+													<!-- 2022.05.10 : del : 제거
+													<span class="for-a11y">0,000,000원</span>
+													-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- [DD] 최근 대출 증감액 변동 없을 시 -->
+								<div class="chart-area type-flex type-no-padding-top">
+									<!-- 2022.05.10 : mod : id 속성 추가 -->
+									<div class="chart-info" id="chart-discription-3">
+										<span class="chart-info-text">최근 대출 증감액</span>
+										<div class="chart-info-value">변동없음</div>
+									</div>
+									<!-- 2022.05.10 : mod : role, aria-labelledby 속성 추가 -->
+									<div class="chart" role="img" aria-labelledby="chart-discription-3">
+										<div class="chart-box">
+											<div class="bar-list">
+												<div class="bar-item" style="height: 80%">
+													<span class="chart-date">전월</span>
+													<!-- 2022.05.10 : del : 제거
+													<span class="for-a11y">0,000,000원</span>
+													-->
+												</div>
+												<div class="bar-item" style="height: 80%">
+													<span class="chart-date">12월</span>
+													<!-- 2022.05.10 : del : 제거
+													<span class="for-a11y">0,000,000원</span>
+													-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-detail-block margin-top-25">
+									<dl class="form-detail-list type-text-default">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">최근 대출 금액</dt>
+											<dd class="form-detail-group">
+												<strong><span class="color-primary">0 </span>원</strong>
+											</dd>
+										</div>
+									</dl>
+								</div>
+							</div>
+							<!-- //2022.02.25 : mod : 디자인 구성 변경되어 구조 변경 -->
+						</div>
+
+						<div class="page-section type-line">
+							<!-- 2022.04.06 : mod : 문구 수정 -->
+							<h2 class="page-title">
+								$김하나$님만을 위한<br />
+								분석 리포트를 받아보세요!
+							</h2>
+							<!--// 2022.04.06 : mod : 문구 수정 -->
+							<div class="blur-empty type-contents">
+								<div class="blur-empty-image type-3"></div>
+								<div class="for-a11y">스마트신용지킴이 신청 시 개인화된 상세 분석 리포트 열람이 가능합니다.</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">신청하기</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- 2022.02.11 : add : 차트 추가 -->
+		<script type="text/javascript">
+			Highcharts.setOptions({
+				lang: {
+					thousandsSep: ',',
+				},
+			});
+			Highcharts.chart('chart', {
+				chart: {
+					plotBackgroundColor: null,
+					plotBorderWidth: null,
+					plotShadow: false,
+					type: 'pie',
+					style: {
+						fontFamily: 'inherit',
+					},
+					margin: [25, 0, 25, 0],
+					height: 250,
+				},
+				title: {
+					useHTML: true,
+					text: '<div class="align-center"><div class="small-text">내 신용평점</div><div class="margin-top-2 medium-text font-weight-bold"><span style="color:#118ab2;">935</span> 점</div></div>',
+					align: 'center',
+					verticalAlign: 'middle',
+				},
+				tooltip: {
+					enabled: false,
+				},
+				plotOptions: {
+					pie: {
+						size: 200,
+						colors: ['#118ab2', '#e5e5e5'],
+						borderWidth: 0,
+						dataLabels: {
+							enabled: false,
+						},
+						animation: {
+							duration: 0,
+						},
+					},
+					series: {
+						states: {
+							hover: {
+								enabled: false,
+							},
+							inactive: {
+								enabled: false,
+							},
+						},
+					},
+				},
+				series: [
+					{
+						innerSize: '60%',
+						data: [935, 65],
+					},
+				],
+			});
+		</script>
+		<!-- //2022.02.11 : add : 차트 추가 -->
+		<!-- //script -->
+	</body>
+</html>

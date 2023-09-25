@@ -1,0 +1,10 @@
+<svg id="ic_menu" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-2{fill:#111}
+        </style>
+    </defs>
+    <path id="사각형_11756" data-name="사각형 11756" style="fill:none" d="M0 0h20v20H0z"/>
+    <rect id="사각형_9292" data-name="사각형 9292" class="cls-2" width="19" height="2" rx="1" transform="translate(.5 4)"/>
+    <rect id="사각형_9294" data-name="사각형 9294" class="cls-2" width="19" height="2" rx="1" transform="translate(.5 14)"/>
+</svg>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="push-notice-01">스마트폰 PUSH알림<br>(이벤트-마케팅 알림 수신시)</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="push-notice-02">스마트폰 PUSH알림 모든쿠폰<br>(이벤트-마케팅 알림 수신동의 체크)</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="push-notice-03">진행중인 이벤트_찜</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="push-notice-04">핫한 이벤트 소식 알림</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="push-notice-05">종료 이벤트 알림</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: PUSH알림(이벤트-마케팅 알림 수신시) -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="push-notice-01">
+				<div class="layer-container">
+					<section class="ui-layer">
+					    <div class="push-event-wrap">
+							<div class="present_box"></div>
+						</div>
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									길동님을 위한 혜택 알림을<br />
+									보내드릴까요?
+								</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-info">
+									<p class="page-info-text">
+										<span class="color-basic">혜택 안내를 위한 최소한의 정보만 수집해요<br />알림 수신은 언제든 취소할 수 있어요</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button">아니오</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">네</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: //PUSH알림(이벤트-마케팅 알림 수신시) -->
+
+			<!-- layer: PUSH알림 모든쿠폰(이벤트-마케팅 알림 수신동의 체크) -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="push-notice-02">
+				<div class="layer-container">
+					<section class="ui-layer">
+					    <div class="push-event-wrap">
+							<div class="coupon_box"></div>
+						</div>
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									새로운 쿠폰이 생기면<br />
+									알려드릴까요?
+								</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-checkbox-block type-large margin-bottom-20">
+									<input type="checkbox" class="ui-checkbox" id="selectCheckbox-all" data-checkbox-group="selectCheckbox" data-area-disabled="nextButton" />
+									<label for="selectCheckbox-all" class="ui-label">
+										<span class="ui-checkbox-object"></span>
+										<span class="ui-label-text">이벤트/마케팅알림 수신 동의</span>
+									</label>
+								</div>
+								<div class="page-info">
+									<p class="page-info-text">
+										<span class="color-basic">혜택 안내를 위한 필수 정보만 수집하며,<br />언제든 거부할 수 있습니다.</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button">아니오</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">네</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: //PUSH알림 모든쿠폰(이벤트-마케팅 알림 수신동의 체크) -->
+
+			<!-- layer: 진행중인 이벤트 찜 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="push-notice-03">
+				<div class="layer-container">
+					<section class="ui-layer">
+					    <div class="push-event-wrap">
+							<div class="heart_box"></div>
+						</div>
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									방금 찜한 이벤트<br />
+									잊지 않게 알려드려요
+								</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-info">
+									<p class="page-info-text">
+										<span class="color-basic">혜택 안내를 위한 최소한의 정보만 수집해요<br />알림 수신은 언제든 취소할 수 있어요</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button">괜찮아요</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">네, 알려주세요</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: //진행중인 이벤트 찜 -->
+
+			<!-- layer: 핫한이벤트 소식 알림 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="push-notice-04">
+				<div class="layer-container">
+					<section class="ui-layer">
+					    <div class="push-event-wrap">
+							<div class="present_box"></div>
+						</div>
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									핫한 이벤트 소식,<br />
+									놓치지 않게 알려드릴까요?
+								</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-checkbox-block type-large margin-bottom-20">
+									<input type="checkbox" class="ui-checkbox" id="selectCheckbox-all2" data-checkbox-group="selectCheckbox" data-area-disabled="nextButton" />
+									<label for="selectCheckbox-all2" class="ui-label">
+										<span class="ui-checkbox-object"></span>
+										<span class="ui-label-text">이벤트/마케팅알림 수신 동의</span>
+									</label>
+								</div>
+								<div class="page-info">
+									<p class="page-info-text">
+										<span class="color-basic">혜택 안내를 위한 필수 정보만 수집하며,<br />언제든 거부할 수 있습니다.</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button">괜찮아요</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">네, 일단 받아볼께요</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: //핫한이벤트 소식 알림 -->
+
+			<!-- layer: 종료이벤트 알림 -->
+			<div class="layer-wrap layer-wrap--slide low-height" data-layer="push-notice-05">
+				<div class="layer-container">
+					<section class="ui-layer">
+					    <div class="push-event-wrap">
+							<div class="present_box"></div>
+						</div>
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									곧 종료될 이벤트에요.<br />
+									새로운 혜택은 절대 놓치지 마세요!
+								</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-checkbox-block type-large margin-bottom-20">
+									<input type="checkbox" class="ui-checkbox" id="selectCheckbox-all3" data-checkbox-group="selectCheckbox" data-area-disabled="nextButton" />
+									<label for="selectCheckbox-all3" class="ui-label">
+										<span class="ui-checkbox-object"></span>
+										<span class="ui-label-text">이벤트/마케팅알림 수신 동의</span>
+									</label>
+								</div>
+								<div class="page-info">
+									<p class="page-info-text">
+										<span class="color-basic">하나카드에서 준비한 이벤트, 쿠폰들<br />놓치지 말고 모두 받아가세요!</span>
+									</p>
+								</div>
+								<div class="page-info">
+									<p class="page-info-text">
+										<span class="color-basic">혜택 안내를 위한 필수 정보만 수집하며,<br />언제든 거부할 수 있습니다.</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button">아니오</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">네, 알려주세요</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: //종료이벤트 알림 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-application-completed');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

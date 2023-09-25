@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="53" viewBox="0 0 80 53">
+    <defs>
+        <style>
+            .cls-2{fill:#ced3d8}
+        </style>
+    </defs>
+    <g id="ic_card_default" transform="translate(0 .857)">
+        <rect id="사각형_11098" data-name="사각형 11098" width="80" height="53" rx="2" transform="translate(0 -.857)" style="fill:#e4e8ec"/>
+        <rect id="사각형_11099" data-name="사각형 11099" class="cls-2" width="12.027" height="11.025" rx="1.5" transform="translate(10.02 20.57)"/>
+        <rect id="사각형_11100" data-name="사각형 11100" class="cls-2" width="20.045" height="5.011" rx="1" transform="translate(50.112 10.047)"/>
+    </g>
+</svg>

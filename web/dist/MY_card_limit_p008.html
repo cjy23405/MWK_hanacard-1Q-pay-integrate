@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">일시한도 신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-change-limit">
+						<!-- section -->
+						<div class="page-section-group">
+							<div class="section-title type-block">
+								<h2 class="title">일시한도 변경</h2>
+							</div>
+							<div class="section-contents">
+								<div class="form-detail type-box">
+									<dl class="form-detail-list">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">현재 한도</dt>
+											<dd class="form-detail-group">500 만원</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">부여 가능 한도</dt>
+											<dd class="form-detail-group">최대 1,000 만원</dd>
+										</div>
+									</dl>
+								</div>
+								<div class="form-list">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">변경 한도 입력</strong>
+										</div>
+										<div class="form-group">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="변경 한도 신청금액 입력" placeholder="신청금액 입력" />
+													</div>
+												</div>
+												<div class="form-flex-cell form-unit">만원</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section-group">
+							<div class="section-title type-block">
+								<h2 class="title">이용기간</h2>
+								<p class="section-title-info color-primary margin-top-15">(부여가능기간 : YYYY.MM.DD~YYYY.MM.DD)</p>
+							</div>
+							<div class="section-contents">
+								<div class="form-list margin-top-none">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">일시한도 기간 설정</strong>
+										</div>
+										<div class="form-group type-date-range">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<!-- 2022.06.23 : mod : date picker 라이브러리 적용 -->
+													<div class="ui-date-picker">
+														<duet-date-picker identifier="date" title="일시한도 기간 시작일" value="2021-06-01"></duet-date-picker>
+													</div>
+													<!-- //2022.06.23 : mod : date picker 라이브러리 적용 -->
+												</div>
+												<div class="form-flex-cell">
+													<div class="ui-range-dash">-</div>
+												</div>
+												<div class="form-flex-cell type-flexible">
+													<!-- 2022.06.23 : mod : date picker 라이브러리 적용 -->
+													<div class="ui-date-picker">
+														<duet-date-picker identifier="date" title="일시한도 기간 종료일" value="2021-07-01"></duet-date-picker>
+													</div>
+													<!-- //2022.06.23 : mod : date picker 라이브러리 적용 -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">카드한도를 일정기간 동안 증액해서 사용하는 제도로, 국내/외 일시불, 할부에 한해서만 이용 가능합니다. (단기카드대출 이용불가)</li>
+										<li class="info-item">본인회원과 가족회원에서 동일하게 적용됩니다. (가족한도 제한한 가족회원 제외)</li>
+										<li class="info-item">일시한도 이용기간 중 카드대금 결제(선결제포함)시 결제금액만큼 한도가 복원됩니다.</li>
+										<li class="info-item">일시한도 사용여부 및 잔액과 상관없이 이용기간 경과 시 자동 소멸되어 정기한도로 복원되며, 한도 초과상태로 카드사용이 불가능할 수 있습니다.</li>
+										<li class="info-item">일시한도 이용중 연체 발생시 일시한도가 자동 소멸 될 수 있습니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">신청</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

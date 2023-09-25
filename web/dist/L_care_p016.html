@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">쇼핑케어</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section">
+							<h2 class="page-title">
+								월 <span class="color-primary">7,900 </span>원으로<br />
+								쇼핑관련 토탈 멤버십 서비스 이용
+							</h2>
+							<ul class="guide-info-list">
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">대형마트(오프라인)<br />5천원 할인</strong>
+									</div>
+									<!-- 2022.03.18 아이콘 이미지 적용 -->
+									<span class="guide-info-icon type-icon-82"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">온라인 마트<br />1만원 할인</strong>
+									</div>
+									<!-- 2022.03.18 아이콘 이미지 적용 -->
+									<span class="guide-info-icon type-icon-83"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">편의점<br />3천원 할인</strong>
+									</div>
+									<!-- 2022.03.18 아이콘 이미지 적용 -->
+									<span class="guide-info-icon type-icon-84"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">휴대폰 수리비용<br />연 10만원 보상</strong>
+									</div>
+									<!-- 2022.03.18 아이콘 이미지 적용 -->
+									<span class="guide-info-icon type-icon-85"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">구매물품<br />연 1천만원 보상</strong>
+									</div>
+									<!-- 2022.03.18 아이콘 이미지 적용 -->
+									<span class="guide-info-icon type-icon-73"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">10여종<br />e매거진 제공</strong>
+									</div>
+									<!-- 2022.03.18 아이콘 이미지 적용 -->
+									<span class="guide-info-icon type-icon-86"></span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-secondary">조회/해지</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="accordion-list js-ui-accordion margin-top-35" data-once="true">
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">대형마트(오프라인) 5천원 할인권</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">이마트, 홈플러스, 롯데마트 중 택 1</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">온라인 마트 1만원 할인쿠폰</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">홈플러스 온라인 마트 5천원 할인권 1매</li>
+														<li class="info-item">이마트 온라인 마트 5천원 할인권 1매</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">편의점 3천원 할인쿠폰</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">CU or GS25 중 택 1</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">휴대폰 수리비용 보상 연 10만원</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">연간 본인부담금 3만원 제외 최대 7만원까지</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">구매물품 손실보상 연 1천만원</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">사고당 최대 2백만원</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">특화 서비스 (e매거진, 외식할인쿠폰 등)</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">포샵 e매거진-10여종의 잡지를 e-book으로 제공</li>
+														<li class="info-item">외식 할인쿠폰 제공</li>
+														<li class="info-item">주말 대형마트 결제 시 이용료 1천원 할인</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

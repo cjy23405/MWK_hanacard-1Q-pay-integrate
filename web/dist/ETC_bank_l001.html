@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-cdd">납부예정금액 안내&middot;유의사항</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 납부예정금액 안내 유의사항 -->
+			<div class="layer-wrap layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-info-cdd">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">안내&middot;유의사항</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="info-area">
+									<ul class="info-list type-text-large">
+										<li class="info-item">조회하는 시점에 선결제나 취소(환금) 및 결제당일 일부 출금된 내용 등이 반영되지 않은 경우 실제 결제하실 금액과 다를 수 있습니다.</li>
+										<li class="info-item">
+											KEB하나은행 외 타행 납부계좌를 이용하시는 경우 납부대금이 정상적으로 출금되었다면 납부일 다음날에 연체수수료 없이 정상 처리되며, 출금결과 반영완료 전 납부예정금액 조회 시
+											일시적으로 연체 항목에서 납부대금이 확인될 수 있습니다.
+										</li>
+										<li class="info-item">납부예정금액조회는 매일 06시~24시까지 가능하오니 이용에 참고하시기 바랍니다.</li>
+										<li class="info-item">선결제 시 연체료 등 수수료가 포함된 경우는 납부예정금액과 실제 결제금액이 다를 수 있습니다.</li>
+										<li class="info-item">카드번호별 납부예정금액 조회는 단순 조회성이며 실제 청구는 명세구분 기준으로 청구됩니다.</li>
+										<li class="info-item">해당 메뉴는 해당월 납부예정금액이 있는 매출만 조회되므로 체크카드의 납부예정금액 조회 시 0원으로 조회될 수 있습니다.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="ui-layer__foot">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-basic-button type-primary" data-role="layerClose">확인</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 납부예정금액 안내 유의사항 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-info-cdd');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

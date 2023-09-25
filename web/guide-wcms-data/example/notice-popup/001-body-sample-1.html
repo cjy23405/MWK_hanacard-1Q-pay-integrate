@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="../../../dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-notice">공지사항</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 공지사항 -->
+			<div class="layer-wrap layer-wrap--slide layer-notice" data-layer="layer-notice">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<h2 class="for-a11y">공지사항</h2>
+						<div class="ui-layer__outtop">
+							<div class="ui-layer__outtop-left">
+								<div class="ui-checkbox-block">
+									<input type="checkbox" class="ui-checkbox" id="layerNoticeNoShow" />
+									<label for="layerNoticeNoShow" class="ui-label">
+										<span class="ui-checkbox-object"></span>
+										<span class="ui-label-text">3일동안 보지 않기</span>
+									</label>
+								</div>
+							</div>
+							<div class="ui-layer__outtop-right">
+								<button type="button" class="ui-button ui-layer__outtop-close" data-role="layerClose">
+									<span class="for-a11y">레이어 닫기</span>
+								</button>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="slide-banner type-notice">
+								<div class="slide-banner-inner">
+									<div class="slide-banner-controller"></div>
+									<ul class="slide-banner-list">
+										<li class="slide-banner-item">
+											<div class="notice-popup">
+												<div class="notice-popup-body">
+													<div class="notice-popup-body-area"></div>
+													<div class="notice-popup-contents">
+														<div class="ui-layer__body">
+															<div class="ui-layer__body-inner">
+																<div class="wcms-data">
+																	<section class="notice-pop-data">
+																		<h3 class="wcms-title-large">러시아 사태 관련 <strong class="wcms-color-green">카드이용 제한 안내</strong></h3>
+
+																		<p class="wcms-text wcms-size-small wcms-color-gray wcms-weight-light">러시아 및 관련국가 내 가맹점과 ATM에서 VISA,Mastercard,AMEX,JCB카드 이용이 중단됩니다.</p>
+
+																		<section class="wcms-section">
+																			<h4 class="wcms-title-normal">중단 일시 및 대상 국가</h4>
+																			<ul class="wcms-list wcms-size-small wcms-weight-light">
+																				<li class="wcms-list-item type-dot wcms-color-gray">
+																					<div class="wcms-list-contents">Mastercard, VISA : 러시아</div>
+																				</li>
+																				<li class="wcms-list-item type-dot wcms-color-gray">
+																					<div class="wcms-list-contents">AMEX : 러시아, 벨라루스</div>
+																				</li>
+																				<li class="wcms-list-item type-dot wcms-color-gray">
+																					<div class="wcms-list-contents">JCB : 러시아, 벨라루스</div>
+																				</li>
+																			</ul>
+																		</section>
+
+																		<section class="wcms-section">
+																			<h4 class="wcms-title-normal">중단 내용</h4>
+																			<p class="wcms-text wcms-size-small wcms-color-gray wcms-weight-light">
+																				해외(한국 포함)에서 발급된 VISA, Mastercard, AMEX, JCB 신용카드와 체크카드는 러시아 등 중단 대상국의 가맹점과 ATM에서 이용 불가
+																			</p>
+																		</section>
+
+																		<a href="" class="wcms-button type-light-green wcms-margin-large"><span class="wcms-button-text">자세히 보기</span></a>
+																	</section>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 공지사항 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="../../../dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-notice');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

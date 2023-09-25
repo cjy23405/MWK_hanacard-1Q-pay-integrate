@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">대학등록금</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title"><span class="title-step">STEP 3</span>결제 카드 정보를<br />입력해 주세요.</h2>
+
+						<div class="page-progress" role="img" aria-label="총 3단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+							</div>
+						</div>
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">카드번호</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block">
+										<!-- 2022.05.04 : mod : title 값 변경 -->
+										<input type="number" pattern="\d*" class="ui-input" title="카드번호 ‘-’ 제외하고 입력" placeholder="‘-’ 제외하고 입력" />
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<!-- 2021.10.26 수정 -->
+								<div class="form-title">
+									<strong class="title">유효기간 (MM/YY)</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block">
+										<input type="number" pattern="\d*" class="ui-input" title="유효기간 입력" placeholder="MM/YY" />
+									</div>
+								</div>
+								<!-- //2021.10.26 수정 -->
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">CVV번호</strong>
+								</div>
+								<div class="form-group type-cvv">
+									<div class="form-flex">
+										<div class="form-flex-cell type-flexible">
+											<div class="ui-input-block">
+												<!-- 2021.10.26 input 수정 -->
+												<!-- 2022.05.04 : mod : title 값 변경 -->
+												<input type="password" class="ui-input" title="뒷면의 CVV번호 3자리 숫자 입력" placeholder="뒷면 3자리 숫자 입력" />
+											</div>
+										</div>
+										<div class="form-flex-cell">
+											<button type="button" class="ui-button ui-basic-button type-small type-secondary" data-layer-open="layer-info-cvv">CVV안내</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">카드 비밀번호</strong>
+								</div>
+								<div class="form-group type-card-pw">
+									<div class="ui-input-block type-masking digit-2">
+										<input type="password" pattern="\d*" class="ui-input" title="카드 비밀번호 앞 2자리 입력" placeholder="앞 2자리" />
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">할부개월수</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block">
+										<button type="button" class="ui-button ui-select" title="할부개월수 선택">선택</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

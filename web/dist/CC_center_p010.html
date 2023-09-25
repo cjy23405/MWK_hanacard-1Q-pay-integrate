@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">민원건수&middot;실태평가 결과</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents has-no-top-padding type-complaint-result">
+						<div class="js-ui-tab-panel page-tab-panel">
+							<div class="ui-tab">
+								<ul class="ui-tab-list">
+									<li class="ui-tab-item">
+										<a href="" class="ui-button ui-tab-link" role="button">민원건수</a>
+									</li>
+									<li class="ui-tab-item">
+										<a href="" class="ui-button ui-tab-link" role="button">실태평가 결과</a>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="init">실태평가 평가항목</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="ui-tab-panel" data-tab="init">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">실태평가 평가항</h2>
+								<div class="page-section">
+									<div class="page-section-group">
+										<div class="section-title">
+											<h4 class="title">계량 평가 부문</h4>
+										</div>
+										<div class="section-contents">
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														평가부문, 세부평가기준으로 구성된 계량 평가 부문 안내 표입니다.
+													</caption>
+													<colgroup>
+														<col style="width: 120px" />
+														<col />
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">평가부문</th>
+															<th scope="col">세부평가기준</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>민원발생건수</td>
+															<td>금융감독원에 접수된 민원건수 및 증감률<br />(중·반복 및 악성민원 등은 제외)</td>
+														</tr>
+														<tr>
+															<td>민원처리노력</td>
+															<td>금융감독원에서 처리된 민원의 평균처리기간 및 자율조정성립 민원건수 비율</td>
+														</tr>
+														<tr>
+															<td>소송관련</td>
+															<td>소송건중 패소율 및 분쟁조정 중 금융회사의 소송제기 건수</td>
+														</tr>
+														<tr>
+															<td>영업 지속가능성</td>
+															<td>금융회사의 재무건전성 지표</td>
+														</tr>
+														<tr>
+															<td>금융사고</td>
+															<td>금융감독원에 보고된 금융사고 건수와 금액</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="page-section-group">
+										<div class="section-title">
+											<h4 class="title">비계량 평가 부문</h4>
+										</div>
+										<div class="section-contents">
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														평가부문, 세부평가기준으로 구성된 비계량 평가 부문 안내 표입니다.
+													</caption>
+													<colgroup>
+														<col style="width: 120px" />
+														<col />
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">평가부문</th>
+															<th scope="col">세부평가기준</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>소비자보호 지배구조</td>
+															<td>
+																<ul class="info-list type-inherit">
+																	<li class="info-item">소비자보호 총괄책임자 및 총괄부서의 직무와 권한의 적정성</li>
+																	<li class="info-item">금융소비자보호협의회 운영의 적정성</li>
+																	<li class="info-item">금융소비자보호 업무전담자 인력구성 및 평가·보상의 적정성</li>
+																	<li class="info-item">기타 부서의 소비자보호 노력에 대한 성과평가</li>
+																</ul>
+															</td>
+														</tr>
+														<tr>
+															<td>상품개발과정의 소비자보호 체계 구축 및 운영</td>
+															<td>
+																<ul class="info-list type-inherit">
+																	<li class="info-item">상품개발 관련 사전협의 프로세스 운영의 적정성</li>
+																	<li class="info-item">상품개발 관련 내부준칙 운영의 적정성</li>
+																	<li class="info-item">상품개발 과정에서 소비자 의견 반영 절차 제도화 여부</li>
+																	<li class="info-item">신상품에 대한 소비자 만족도 조사 제도화 및 상품개발시 결과 반영 여부</li>
+																</ul>
+															</td>
+														</tr>
+														<tr>
+															<td>상품판매과정의 소비자보호 체계 구축 및 운영</td>
+															<td>
+																<ul class="info-list type-inherit">
+																	<li class="info-item">판매프로세스 점검절차와 교육 및 성과평가 등 사후조치를 유기적으로 연계하여 체계적인 운영 여부</li>
+																	<li class="info-item">판매조직의 평가·보상시스템에 대해 소비자보호 조직의 관여 정도</li>
+																	<li class="info-item">고객정보 보호관리 시스템 구축 여부</li>
+																</ul>
+															</td>
+														</tr>
+														<tr>
+															<td>소비자보호 정책 참여 및 민원시스템 운영</td>
+															<td>
+																<ul class="info-list type-inherit">
+																	<li class="info-item">금융당국의 소비자보호 정책 등에 대한 참여 및 이행</li>
+																	<li class="info-item">소비자보호 자체적인 제도개선을 통한 소비자보호 연구·노력 활성화</li>
+																	<li class="info-item">장애인 관련 소비자보호 강화</li>
+																	<li class="info-item">효율적인 민원시스템 운영</li>
+																	<li class="info-item">민원발생 원인에 대한 상시적인 분석과 사전예방 등</li>
+																</ul>
+															</td>
+														</tr>
+														<tr>
+															<td>소비자정보 공시 등</td>
+															<td>
+																<ul class="info-list type-inherit">
+																	<li class="info-item">홈페이지 소비자정보 및 ARS 이용 편의성</li>
+																	<li class="info-item">홈페이지 소비자정보 종류 및 내용, 체계적인 관리 여부</li>
+																	<li class="info-item">금융소비자 및 임직원 대상 주기적인 금융교육 실시 여부</li>
+																</ul>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

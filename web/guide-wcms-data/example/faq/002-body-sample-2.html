@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="../../../dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="../../../dist/assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">자주 묻는 질문</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="faq-list js-ui-accordion" data-once="true">
+							<div class="faq-item js-ui-accordion__item" data-initial-open="true">
+								<button type="button" class="faq-opener js-ui-accordion__opener">타이틀</button>
+								<div class="js-ui-accordion__layer">
+									<div class="faq-contents">
+										<div class="wcms-data">
+											<section class="board-data">
+												<p class="wcms-text wcms-size-small wcms-color-gray">
+													체크카드 사용이 잘 되지 않는다면 <strong class="wcms-weight-medium">통장에 잔액이 충분한지</strong> 확인하시기 바랍니다.<br />
+													체크카드와 연계된 통장에 잔액이 충분한데도 잘 사용되지 않는다면 아래 사항을 체크해 주세요.
+												</p>
+
+												<ol class="wcms-list wcms-size-small">
+													<li class="wcms-list-item wcms-color-gray" data-symbol="①">
+														<div class="wcms-list-contents">
+															<div class="wcms-margin-small"><strong class="wcms-weight-medium">일일 사용한도를 초과</strong>한 경우</div>
+															<ul class="wcms-list">
+																<li class="wcms-list-item" data-symbol="-">
+																	<div class="wcms-list-contents">1일 500만원 / 월간 2,000만원</div>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="wcms-list-item wcms-color-gray" data-symbol="②">
+														<div class="wcms-list-contents">
+															<div class="wcms-margin-small">당일에 <strong class="wcms-weight-medium">타행 자기앞수표를 입금</strong>하신 경우</div>
+															<ul class="wcms-list">
+																<li class="wcms-list-item" data-symbol="-">
+																	<div class="wcms-list-contents">타행 자기앞수표가 자금화 된 이후 이용이 가능합니다.</div>
+																</li>
+																<li class="wcms-list-item" data-symbol="-">
+																	<div class="wcms-list-contents">자금화란? 입금하신 수표가 현금화 되는 것으로써 익일(은행 영업일 기준) 오후 2시 20분을 말합니다.</div>
+																</li>
+																<li class="wcms-list-item" data-symbol="※">
+																	<div class="wcms-list-contents">자금화 시간은 사정에 따라 연장될 수 있습니다.</div>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="wcms-list-item wcms-color-gray" data-symbol="③">
+														<div class="wcms-list-contents">
+															<div class="wcms-margin-small">기타</div>
+															<ul class="wcms-list">
+																<li class="wcms-list-item" data-symbol="-">
+																	<div class="wcms-list-contents">
+																		<strong class="wcms-weight-medium">마그네틱이 손상</strong>되었거나, 일시적인 <strong class="wcms-weight-medium">전산장애</strong>로 승인이 안될 수 있습니다.
+																	</div>
+																</li>
+																<li class="wcms-list-item" data-symbol="-">
+																	<div class="wcms-list-contents">
+																		통장 잔액과 출금가능금액이 같은지 확인해주세요. 해외사용건이 있다면 승인시점 금액이 지급정지 되어 출금가능금액이 더 적을 수 있습니다.
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="wcms-list-item wcms-color-gray" data-symbol="※">
+														<div class="wcms-list-contents">체크카드의 결제계좌를 타 은행계좌로 설정하신 경우 해외결제 승인이 불가합니다.</div>
+													</li>
+												</ol>
+											</section>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="../../../dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="../../../dist/assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

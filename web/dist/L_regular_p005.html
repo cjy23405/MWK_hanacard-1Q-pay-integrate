@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">아파트관리비</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							정기적으로 나가는 아파트 관리비<br />
+							하나카드가 잊지 않게 챙겨드려요.
+						</h2>
+
+						<div class="page-section">
+							<div class="usage-total-wrap margin-top-none">
+								<dl class="usage-total">
+									<dt class="usage-total-title">납부중인 아파트</dt>
+									<dd class="usage-total-value"><span class="color-primary">현대아이파크</span></dd>
+								</dl>
+							</div>
+
+							<div class="form-detail margin-top-25">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">신청주소</dt>
+										<dd class="form-detail-group">
+											서울시 강서구 영창동<br />
+											282-19 현대아이파크
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">동/호</dt>
+										<dd class="form-detail-group">101동 101호</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이체시작일</dt>
+										<dd class="form-detail-group">2021.06.08</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">신청카드번호</dt>
+										<dd class="form-detail-group">1234-****-**12-1234</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">납부마감일</dt>
+										<dd class="form-detail-group">매월 10일</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item type-narrow">
+											<a href="" class="ui-basic-button" role="button">조회</a>
+										</li>
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">신청</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">서비스 대상</h3>
+								</div>
+								<div class="section-contents">
+									<p class="basic-text color-blur">
+										카드 자동납부가 가능한 전국 모든 아파트 관리비<br />
+										(당사 조회 가능한 아파트에 한함)
+									</p>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">대상회원</h3>
+								</div>
+								<div class="section-contents">
+									<p class="basic-text color-blur">
+										하나 신용카드 회원<br />
+										(법인/체크/선불/기프트/가족/크로스마일 카드 제외)
+									</p>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">자동납부 수수료</h3>
+								</div>
+								<div class="section-contents">
+									<p class="basic-text color-blur">세대당 월 700월 (단, 별도 안내 시까지 면제)</p>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">신청방법</h3>
+								</div>
+								<div class="section-contents basic-text">
+									<ul class="info-list color-blur type-inherit type-outside">
+										<li class="info-item">하나카드 홈페이지</li>
+										<li class="info-item">하나카드 고객센터 (1800-1111)</li>
+										<li class="info-item">하나카드 영업점</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<div class="info-list">
+										<p class="info-item">화면에 표기된 최초 납부일에 해당하는 월의 아파트관리비부터 하나카드로 자동 납부됩니다.</p>
+										<p class="info-item">
+											자동납부 연결한 신용카드를 동일상품으로 갱신/재발급 받으신 경우 변경된 카드번호로 요금이 자동 승계되어 자동납부 처리됩니다. 카드해지 또는 카드상품을 교체할 경우 아파트관리비가
+											해지되오니 재신청 해주시길 바랍니다.<br />
+											(단, 특정상품에 대해서는 자동납부 연결카드가 이용이 불가능한 경우 본인이 보유한 다른 정상 카드를 통해 요금이 자동납부 승계되어 처리됩니다. 자동승계를 원치 않으실 경우 당사
+											자동납부 전용 고객센터(1800-2183)으로 전화 주시기 바랍니다.)
+										</p>
+										<p class="info-item">
+											카드승인일은 납부마감일 기준 4영업일 전 등록된 카드로 승인됩니다. 예) 관리비 납부마감일이 2018년 6월 30일(토)인 경우 4영업일 전인 2018년 6월 26일(화)에 카드 승인
+										</p>
+										<p class="info-item">
+											자동납부 신청에 대한 내역을 신청일 다음 영업일에 문자메시지(LMS)를 통하여 안내 드리오니, 확인 후 신청내역에 이상이 있을 경우 고객센터(1800-1111)로 문의하여 주시기 바랍니다.
+										</p>
+										<p class="info-item">하나카드와 제휴한 아파트만 자동납부 신청이 가능합니다. 아파트 조회 시 ‘불가’,‘해지’로 안내되는 아파트는 신규 신청이 불가합니다.</p>
+										<p class="info-item">아파트관리비 자동납부 결제 금액은 연말정산 소득공제 대상에 제외됩니다.</p>
+										<p class="info-item">미납금액이 있을 경우 해당월 정상납부 대상금액과 미납금액이 포함되어(관리사무소에서 납부 요청한 금액) 결제될 수 있습니다.</p>
+										<p class="info-item">
+											한도초과, 카드거래정지, 연체, 탈회 등의 사유로 승인이 되지 않아 요금이 결제되지 않을 경우 연체에 따른 ‘가산금’이 부과될 수 있습니다.<br />가산금의 기준은 신청 아파트관리사무소
+											기준에 따릅니다. 해당 관리비는 아파트 관리소를 통해 별도 납부방법을 확인하신 후 납부하시기 바랍니다.
+										</p>
+										<p class="info-item">현재 타금융사(카드사 또는 은행) 자동납부를 이용중인 회원이 하나카드 자동납부 서비스 신청 시, 타사 자동납부는 직접 해지하셔야 합니다.</p>
+										<p class="info-item">아파트관리비 자동납부 신청 시 아파트 동/호수를 잘못 신청하실 경우, 다른 아파트의 관리비가 청구될 수 있으며 당사에서 별도의 책임을 지지 않습니다.</p>
+										<p class="info-item">아파트 관리비 자동납부 매출은 카드상품에 따라 전월 실적 산정 및 하나머니 적립 대상에서 제외될 수 있습니다.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

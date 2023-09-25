@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">이용알림서비스</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-completion">
+						<h2 class="page-title">
+							보다 더 안전하게<br />
+							카드를 이용하세요.
+						</h2>
+
+						<div class="page-info has-com-icon type-icon-email">
+							<p class="page-info-text">
+								실시간 승인내역과 부가정보를 문자로<br />
+								바로 확인할 수 있어 카드 분실 및 도난으로<br />
+								인한 사고를 방지할 수 있습니다.
+							</p>
+						</div>
+
+						<div class="form-bottom">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button">조회 및 변경</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">신청</button>
+								</li>
+							</ul>
+						</div>
+
+						<div class="accordion-list js-ui-accordion margin-top-35" data-once="true">
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">이용알림서비스 제공 안내</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<ul class="info-list type-inherit type-outside">
+											<li class="info-item">본인회원 : 본인카드 사용분, 가족카드 사용분</li>
+											<li class="info-item">가족회원 : 가족카드 사용분</li>
+											<li class="info-item type-indent color-blur font-weight-regular">
+												<span class="indent">※</span>본인회원이 가족카드 사용내역 수신을 위해서는 본인이 직접 하나카드 고객센터 (1800-1111)로 신청하셔야 하며, 가족 손님의 동의 후 해당서비스가
+												제공됩니다.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">누적이용금액 안내</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<ul class="info-list type-inherit type-outside">
+											<li class="info-item">누적이용금액은 결제하지 않은 국내외 일시불/할부 및 단기카드대출(현금서비스)의 총 이용금액(가족카드 이용액 포함)입니다.</li>
+											<li class="info-item">
+												승인거래 발생 시점을 기준으로 미결제된 일시불, 할부, 단기카드대출(현금서비스), 해외사용내역을 합산한 신용카드 총 이용액입니다.<br />(단, 장기카드대출(카드론) 및 체크카드
+												이용금액, 연회비, 단기카드대출(현금서비스)이자, 할부수수료 등은 포함되지 않습니다.)
+											</li>
+											<li class="info-item">해당월 결제일의 결제예정금액과는 다를 수 있으니 실제 결제할 금액은 이용대금 명세서, 홈페이지 등을 참고하여 주시기 바랍니다.</li>
+											<li class="info-item">해외승인, 가족카드, 아이사랑 복지 지원금 승인건에 대한 SMS발송시에는 누적 이용금액이 표기되지 않고 발송되나, 누적이용금액에는 자동 합산됩니다.</li>
+											<li class="info-item">
+												자동납부 거래(통신요금, 도시가스 등) 및 후불교통카드 요금 등 무승인 거래에 대하여 매입시점에 SMS가 발송되며(누적금액 미표시), 누적이용금액에 자동합산됩니다.<br /><span
+													class="color-wrong"
+													>단, 체크카드(후불교통 요금, 무승인 거래)는 누적이용금액에 포합되지 않습니다.</span
+												>
+											</li>
+											<li class="info-item">가족회원이 있는 경우 가족회원의 사용금액도 본인 회원의 누적이용금액에 포함됩니다.</li>
+											<li class="info-item">즉시할인 적용 시 누적이용금액 별도로 발송(거래승인 SMS+누적이용금액 SMS) / 포인트 사용 시 누적이용금액 발송되지 않습니다.(거래승인 SMS)</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">이용알림서비스 신청안내</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<dl class="use-notice-group type-bold">
+											<dt class="group-title">서비스 신청대상</dt>
+											<dd class="group-contents">
+												<ul class="info-list type-inherit type-outside">
+													<li class="info-item">기존 이용 서비스 가입 해지 후 추가적으로 서비스 신청 가능합니다.</li>
+													<li class="info-item">법인, 가족카드의 이용알림서비스 신청은 고객센터(1800-1111)를 이용해주세요.</li>
+												</ul>
+											</dd>
+											<dt class="group-title margin-top-20">서비스 요금</dt>
+											<dd class="group-contents">
+												<ul class="info-list type-inherit type-outside">
+													<li class="info-item">이용알림서비스 : <span class="color-primary">월 300원</span><br />(월 1회 이상의 전송내역이 있는 경우에 한해 서비스 요금이 청구됩니다.)</li>
+												</ul>
+											</dd>
+											<dt class="group-title margin-top-20">요금납부</dt>
+											<dd class="group-contents">
+												<ul class="info-list type-inherit type-outside">
+													<li class="info-item">포인트 우선 납부제도 시행으로 고객의 포인트에서 우선 처리됩니다.</li>
+													<li class="info-item">납부순서 : BC TOP포인트(1포인트 이상) → OK CASHBAG포인트(300포인트 이상) → 하나머니(1머니 이상)</li>
+												</ul>
+											</dd>
+											<dt class="group-title margin-top-20">요금청구</dt>
+											<dd class="group-contents">
+												<ul class="info-list type-inherit type-outside">
+													<li class="info-item">
+														<div class="indent-block">매월 첫 이용되는 카드로 청구작업이 되어 해당 카드 결제계좌에서 출금 처리됩니다.</div>
+														<ul class="info-list type-inherit type-outside">
+															<li class="info-item type-indent"><span class="indent">1.</span>신용카드만 보유 : 신용카드 청구(결제계좌)</li>
+															<li class="info-item type-indent"><span class="indent">2.</span>체크카드만 보유 : 체크카드 결제계좌</li>
+															<li class="info-item type-indent">
+																<div class="indent-block">
+																	<span class="indent">3.</span>신용카드+체크카드 보유
+																	<ul class="info-list type-inherit type-outside">
+																		<li class="info-item type-indent"><span class="indent">-</span>매월 첫 사용이 신용카드이면 신용카드 청구 (결제계좌)</li>
+																		<li class="info-item type-indent"><span class="indent">-</span>매월 첫 사용이 체크카드이면 체크카드 결제계좌</li>
+																	</ul>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">이용안내</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<ul class="info-list type-inherit type-outside">
+											<li class="info-item">당사 또는 이용통신사의 통신사정에 의해 전송이 다소 지연되거나 누락될 수 있습니다.</li>
+											<li class="info-item">휴대폰번호 변경 시에는 하나카드로 즉시 정보변경을 하시기 바랍니다.</li>
+											<li class="info-item">매출취소 안내 서비스는 취소전표 접수 다음날 전송됩니다.</li>
+											<li class="info-item">월 정기승인(통신요금 자동납부 등)은 매입 후 다음 영업일에 발송되며, 대행승인 내역은 발송되지 않습니다.</li>
+											<li class="info-item">결제대금 안내 서비스는 해당 결제일 약 3~5 영업일 전에 전송됩니다.</li>
+											<li class="info-item">이용알림서비스 이용하는 휴대폰번호 변경은 개인정보관리에서 변경해주시면 바로 적용됩니다.</li>
+											<li class="info-item">하나카드 홈페이지에서 본인카드회원 이용알림서비스 신청/해지 시 등록된 전 가족카드회원 일괄 신청/해지됩니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+    <g transform="translate(-74 -166)">
+        <rect data-name="사각형 7186" width="27" height="27" rx="8" transform="translate(74 166)" style="fill:#f5f6f8"/>
+        <path data-name="사각형 18066" transform="translate(80 172)" style="fill:transparent" d="M0 0h15v15H0z"/>
+        <ellipse data-name="타원 1778" cx="6.25" cy="2.5" rx="6.25" ry="2.5" transform="translate(81.25 181.25)" style="fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round"/>
+        <path data-name="선 288" transform="translate(87.5 176.25)" style="fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round" d="M0 7V0"/>
+        <path data-name="패스 12115" d="m11.722 4-6-3.25v6.5z" transform="translate(81.778 172)" style="fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round"/>
+    </g>
+</svg>

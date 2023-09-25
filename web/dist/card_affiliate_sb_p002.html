@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">안내 및 프로모션</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-notify">
+
+						<div class="usage-default">
+							<ul class="usage-default-list">
+								<li class="usage-default-item">
+									<div class="usage-default">
+										<ul class="usage-default-list">
+											<li class="usage-default-item">												
+												<a href="javascript:void(0);" class="usage-default-left" data-layer-open="layer-promo01">
+													<div class="form-flex type-narrow">
+														<div class="form-flex-cell">
+															<span class="status-tag type-small type-secondary">프로모션</span>
+														</div>
+													</div>													
+													<div class="usage-default-title margin-top-10">내가 슈퍼스타</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">
+															<ul class="info-list color-blur">
+																<li class="info-item margin-top-5">대상 : 임직원</li>
+																<li class="info-item margin-top-5">기간 : ‘22. 8/16 ~ 11/30</li>
+																<li class="info-item margin-top-5">상품 : 순위별 차등 지급(명품백 ~ 상품권 10만원)</li>
+																<li class="info-item margin-top-5">조건 : 기간內 신규 발급 실적 상위 20명 포상<br />
+																	<span style="margin-left: 33px;">* 재유치, 추가 발급, 탈회건 제외</span><br />
+																	<span style="margin-left: 33px;">* 그룹별 최소 발급좌수 설명</span><br />
+																	<span style="margin-left: 41px;">(그룹1 = 20좌, 그룹2 = 20좌)</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="usage-default-item">												
+												<a href="javascript:void(0);" class="usage-default-left" data-layer-open="layer-promo02">
+													<div class="form-flex type-narrow">
+														<div class="form-flex-cell">
+															<span class="status-tag type-small type-secondary">프로모션</span>
+														</div>
+													</div>													
+													<div class="usage-default-title margin-top-10">부스터</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">
+															<ul class="info-list color-blur">
+																<li class="info-item margin-top-5">대상 : 임직원</li>
+																<li class="info-item margin-top-5">기간 : ’22. 8/16 ~ 10/31</li>
+																<li class="info-item margin-top-5">상품 : 기본 수당(발급) + 구간별 부스터<br /><span style="margin-left: 33px;">(부스터당 구간별 추가 수수료 지급)</span></li>
+																<li class="info-item margin-top-5">조건 : 2좌부터 2의 배수 구간때 발급좌<br /><span style="margin-left: 33px;">* 2만원 추가 지급</span></li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="usage-default-item">
+												<a href="javascript:void(0);" class="usage-default-left" data-layer-open="layer-promo03">
+													<div class="form-flex type-narrow">
+														<div class="form-flex-cell">
+															<span class="status-tag type-small type-secondary">프로모션</span>
+														</div>
+													</div>													
+													<div class="usage-default-title margin-top-10">모바일브랜치를 아니?</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">
+															<ul class="info-list color-blur">
+																<li class="info-item margin-top-5">대상 : 임직원(선착순 500명)</li>
+																<li class="info-item margin-top-5">기간 : ‘22. 8/16 ~ 10/31</li>
+																<li class="info-item margin-top-5">상품 : 푸라닭 1마리</li>
+																<li class="info-item margin-top-5">조건 : ① 본인카드 발급<br />
+																	<span style="margin-left: 33px;">② 모바일브랜치 접속 응모</span>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="usage-default-item">
+												<a href="javascript:void(0);" class="usage-default-left" data-layer-open="layer-promo04">
+													<div class="form-flex type-narrow">
+														<div class="form-flex-cell">
+															<span class="status-tag type-small type-secondary">프로모션</span>
+														</div>
+													</div>													
+													<div class="usage-default-title margin-top-10">웰컴 기프트</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">
+															<ul class="info-list color-blur">
+																<li class="info-item margin-top-5">대상 : 고객(손님)</li>
+																<li class="info-item margin-top-5">기간 : ‘22. 8/16 ~ 12/31</li>
+																<li class="info-item margin-top-5">상품 : 카드 이용 할인권, 하나머니 및 무이자 할부 이벤트 제공</li>
+																<li class="info-item margin-top-5">조건 : 신규 고객이면 누구나!!!</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="usage-default-item">
+												<a href="javascript:void(0);" class="usage-default-left" data-layer-open="layer-promo05">
+													<div class="form-flex type-narrow">
+														<div class="form-flex-cell">
+															<span class="status-tag type-small type-secondary">프로모션</span>
+														</div>
+													</div>													
+													<div class="usage-default-title margin-top-10">뭉치면 탄다</div>
+													<div class="usage-default-etc">
+														<div class="usage-default-etc-item">
+															<ul class="info-list color-blur">
+																<li class="info-item margin-top-5">대상 : 부서/지점(선착순 30개점)</li>
+																<li class="info-item margin-top-5">기간 : ‘22. 8/16 ~ 10/31</li>
+																<li class="info-item margin-top-5">상품 : 운영·간식비 100만원 지급</li>
+																<li class="info-item margin-top-5">조건 : 기간내 부서(지점) 소속 직원별 신규 발급 2좌이상 달성한 30개점</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<!-- layer: 내가 슈퍼스타 -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-promo01">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title"></h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<img src="/images/contents/img-sb-ev01.png" alt="내가 슈퍼스타" class="image-only">
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 내가 슈퍼스타 -->
+
+			<!-- layer: 부스터 -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-promo02">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title"></h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<img src="/images/contents/img-sb-ev02.png" alt="부스터" class="image-only">
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 부스터 -->
+
+			<!-- layer: 모바일브랜치를 아니? -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-promo03">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title"></h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<img src="/images/contents/img-sb-ev03.png" alt="모바일브랜치를 아니?" class="image-only">
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 모바일브랜치를 아니? -->
+
+			<!-- layer: 웰컴 기프트 -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-promo04">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title"></h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<img src="/images/contents/img-sb-ev04.png" alt="웰컴 기프트" class="image-only">
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 웰컴 기프트 -->
+
+			<!-- layer: 뭉치면 탄다 -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-promo05">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title"></h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<img src="/images/contents/img-sb-ev05.png" alt="뭉치면 탄다" class="image-only">
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 뭉치면 탄다 -->
+
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

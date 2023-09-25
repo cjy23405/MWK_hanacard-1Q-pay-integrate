@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">타사카드 일괄 분실신고 신청 결과</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="check-area">
+							<div class="check-range">
+								<button type="button" class="ui-button-down">2021.01.01 ~ 2021.02.01</button>
+							</div>
+
+							<div class="check-detail-list">
+								<!-- 타사카드 신고 내역 없는 경우 -->
+								<div class="type-none">
+									<p class="item-text">
+										타사카드(일괄)분실신고<br />
+										접수된 카드가 없습니다.
+									</p>
+								</div>
+								<!-- //타사카드 신고 내역 없는 경우 -->
+
+								<h2 class="check-detail-title">
+									신청내역<span class="sub">(<strong class="color-secondary">2</strong>건 조회)</span>
+								</h2>
+								<div class="form-detail">
+									<div class="form-detail-block">
+										<div class="form-detail-block-head">
+											<h3 class="title">신한카드</h3>
+										</div>
+										<dl class="form-detail-list">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">접수일시</dt>
+												<dd class="form-detail-group">2021.01.01 12:22:34</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">연락처</dt>
+												<dd class="form-detail-group">010-1234-****</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">결과</dt>
+												<dd class="form-detail-group color-wrong">실패</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">실패 상세내용</dt>
+												<dd class="form-detail-group">유료회원아님</dd>
+											</div>
+										</dl>
+									</div>
+									<div class="form-detail-block">
+										<div class="form-detail-block-head">
+											<h3 class="title">신한카드</h3>
+										</div>
+										<dl class="form-detail-list">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">접수일시</dt>
+												<dd class="form-detail-group">2021.01.01 12:22:34</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">연락처</dt>
+												<dd class="form-detail-group">010-1234-****</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">결과</dt>
+												<dd class="form-detail-group color-primary">정상</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button type="button" class="ui-button ui-button-more">더보기</button>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">
+											타사카드 분실신고 정보는 여신협회를 경유하여 해당 카드사에 전송되고 결과를 받는 방식으로 한 카드사 당 최장 40초가 소요되며, 정상등록에 실패한 경우 해당 카드사에 직접 신고하셔야
+											합니다.
+										</li>
+										<li class="info-item">
+											<span class="color-basic">실패상세내용 안내</span>
+											<ul class="info-list">
+												<li class="info-item type-indent"><span class="indent">-</span>정상등록 : 정상적으로 분실거래정지 등록 됨(해당 카드사에서 발송한 분실 거래정지 안내 SNS 문자 수신)</li>
+												<li class="info-item type-indent"><span class="indent">-</span>유효회원 아님 : 해당 카드사 회원이 아니거나 탈퇴하여 일괄등록 대상카드 없음</li>
+												<li class="info-item type-indent"><span class="indent">-</span>시스템장애 : 전산적 오류, 타임아웃, 기타 사유로 일괄등록 불가 (해당 카드사에 직접 신고하셔야 합니다.)</li>
+											</ul>
+										</li>
+										<li class="info-item">
+											<span class="color-basic">타사카드(일괄)분실신고시 거래정지되는 카드</span>
+											<ul class="info-list">
+												<li class="info-item type-indent">
+													<span class="indent">-</span>본인의 주민등록번호로 발급된 개인 신용카드, 체크카드, 가족카드가 모두 거래정지 됩니다. (가족카드 : 주민등록번호 기준으로 분실등록 되므로
+													주민등록번호가 다른 가족은 분실등록되지 않습니다.)
+												</li>
+												<li class="info-item type-indent">
+													<span class="indent">-</span>공과금 자동납부 또는 해외 등에서 본인명의 카드를 자녀 등이 사용하고 있을 경우에도 거래정지 등록되므로 유의하여야 합니다. (해당카드사로 직접
+													연락하여 카드 별로 분실등록 하여야 합니다.)
+												</li>
+												<li class="info-item type-indent"><span class="indent">-</span>법인카드(공용카드, 개인명의카드 모두포함), 주민등록번호가 다른 가족은 거래정지 제외</li>
+											</ul>
+										</li>
+										<li class="info-item">
+											<span class="color-basic">해당 카드사로 직접 확인해야 하는 사항</span><br />
+											카드사용내역확인, 재발급신청, 부정사용건에 대한 보상신청, 분실등록 해지 등
+										</li>
+									</ul>
+
+									<!-- 2021.12.15 수정 -->
+									<div class="tel-info">
+										<button type="button" class="ui-tel-link">타사분실신고 전화번호</button>
+									</div>
+									<!-- //2021.12.15 수정 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

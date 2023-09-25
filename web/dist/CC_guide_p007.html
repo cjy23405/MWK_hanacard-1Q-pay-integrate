@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">PC/모바일결제</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-my-coupon">
+						<div class="ui-tab type-nav">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">PC 결제</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">모바일 결제</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">모바일 결제</h2>
+
+						<!-- 이용방법 -->
+						<!-- 2022.04.06 전반적인 이미지 적용작업 -->
+						<div class="page-section">
+							<div class="page-section-group margin-top-15">
+								<div class="process-question">
+									<div class="process-num">1</div>
+									<div class="process-text">
+										모바일 쇼핑몰 결제화면의 결제수단에서<br />
+										'원큐페이(앱카드)'를 선택 후,<br />
+										[결제하기] 버튼을 선택해 주세요.
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-mobile-01.png" alt="" class="image-only" />
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">2</div>
+									<div class="process-text">
+										원큐페이 앱이 실행되고,<br />
+										모바일 결제 화면으로 이동합니다.
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">3</div>
+									<div class="process-text">
+										'원큐페이'앱의 모바일 결제 화면에서<br />
+										결제할 카드를 선택해 주세요.
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-mobile-02.png" alt="" class="image-only" />
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">4</div>
+									<div class="process-text">
+										생체인증 또는 결제비밀번호를 입력하여<br />
+										결제 인증을 진행해 주세요.
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-mobile-03.png" alt="" class="image-only" />
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">5</div>
+									<div class="process-text">
+										ARS 인증 설정이 되어 있다면,<br />
+										결제금엑이 50만원 이상일 경우, 전화 착신 후<br />
+										ARS 인증번호를 입력하면 인증됩니다.
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-mobile-04.png" alt="" class="image-only" />
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">6</div>
+									<div class="process-text">
+										인증이 완료되면, 결제요청 완료화면에서<br />
+										결제요청 정보를 확인하고<br />
+										[결제확인] 버튼을 선택 후 모바일 쇼핑몰 화면<br />
+										에서 결제완료를 확인해 주세요.
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-mobile-05.png" alt="" class="image-only" />
+								</div>
+							</div>
+						</div>
+						<!-- //2022.04.06 전반적인 이미지 적용작업 -->
+						<!-- //이용방법 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

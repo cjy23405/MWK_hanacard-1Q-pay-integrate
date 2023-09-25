@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<!-- 2022.02.17 타이틀 수정 -->
+							<h1 class="header-title">송금</h1>
+						</div>
+						<div class="header-right">
+							<!-- 2022.02.21 : mod : .type-home에서 type-close로 클래스 변경 및 텍스트 수정 -->
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							<!-- 2022.02.17 텍스트 수정 -->
+							<!-- 2022.03.18 텍스트 수정 -->
+							<span class="color-primary font-weight-medium">최초 송금시</span>에만,<br />
+							안전한 금융거래 및 고객보호를 위해<br />
+							<span class="color-primary font-weight-medium">1원 계좌인증</span>을 진행합니다.
+							<!-- //2022.03.18 텍스트 수정 -->
+						</h2>
+
+						<div class="page-section-group">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">계좌</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block">
+											<button type="button" class="ui-button ui-select" title="은행 선택">은행 선택</button>
+										</div>
+									</div>
+									<div class="form-group type-code">
+										<div class="form-flex type-row">
+											<div class="form-flex-cell type-flexible">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="계좌번호 입력" placeholder="계좌번호 ‘-’ 제외하고 입력" />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-button ui-basic-button type-small type-gray">인증요청</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="account-verify">
+								<div class="account-verify-notice">
+									<p class="account-verify-notice-text"><span class="color-primary">1</span>원을 보냈습니다.</p>
+								</div>
+								<div class="account-verify-step">
+									<div class="account-verify-step-item">
+										<h3 class="account-verify-step-title"><span class="num">01</span>결제계좌에 입금된 1원의 입금자명을 확인하세요.</h3>
+										<div class="account-verify-confirm">
+											<span class="ui-badge">예시</span>
+											<dl class="account-verify-info">
+												<dt class="account-verify-info-title">입금자명</dt>
+												<dd class="account-verify-info-contents">
+													<div class="account-verify-info-name">
+														<span class="account-verify-info-name-digit"><span class="for-a11y">*</span></span>
+														<span class="account-verify-info-name-digit"><span class="for-a11y">*</span></span>
+														<span class="account-verify-info-name-digit"><span class="for-a11y">*</span></span>
+														<span class="account-verify-info-name-digit"><span class="for-a11y">*</span></span>
+													</div>
+												</dd>
+											</dl>
+											<dl class="account-verify-info">
+												<dt class="account-verify-info-title">입금</dt>
+												<dd class="account-verify-info-contents"><strong class="color-secondary">1원</strong></dd>
+											</dl>
+										</div>
+									</div>
+									<div class="account-verify-step-item">
+										<h3 class="account-verify-step-title margin-bottom-15"><span class="num">02</span>확인된 입금자명을 입력해주세요.</h3>
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete">
+												<input type="text" class="ui-input" title="입금자명 4글자 입력 (5분이내 입력)" placeholder="입금자명 4글자 입력 (5분이내 입력)" />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">인증 확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

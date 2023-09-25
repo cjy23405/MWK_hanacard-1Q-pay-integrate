@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>레이어 팝업 가이드</title>
+
+		<meta charset="euc-kr" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./dist/assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./dist/assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./dist/assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./dist/assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./dist/assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./dist/assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./dist/assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./dist/assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./dist/assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./dist/assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/wcms-data.css" />
+		<style>
+			*:focus {
+				outline: 1px dotted #999;
+			}
+			b {
+				margin-left: 10px;
+			}
+			body {
+				font-size: 1.6rem;
+				background: #f3f3f3;
+			}
+			h1.test-title {
+				font-size: 30px;
+				margin: 50px 50px;
+			}
+			h2.test-title {
+				margin: 0;
+				font-size: 22px;
+			}
+			.test-section {
+				border-top: 2px solid #ddd;
+				padding: 50px 24px;
+			}
+			.test-code {
+				border: 2px solid #ddd;
+				margin: 10px 0;
+				background: #fff;
+				padding: 10px;
+			}
+			.test-code:before {
+				content: 'ex.';
+				display: block;
+				font-size: 12px;
+			}
+			.test-description {
+				margin: 10px 0;
+				padding: 0 12px;
+			}
+			.test-links {
+				margin-left: -20px;
+			}
+			.test-links:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+			.test-links a {
+				display: block;
+				margin: 20px 0 0 20px;
+				float: left;
+				padding: 5px 15px;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 5px;
+				background: #333;
+			}
+			.test-links + h2 {
+				margin-top: 20px;
+			}
+			.layer-info .info-list:not(:first-child) {
+				margin-top: 15px;
+			}
+			.ui-buttons + .ui-buttons {
+				margin-top: -30px;
+			}
+		</style>
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div style="display: table"></div>
+
+			<h1 class="test-title">레이어 팝업</h1>
+			<div class="test-section">
+				<h2 class="test-title">레이어 타입</h2>
+				<div class="test-links">
+					<a href="" data-layer-open="test-init">최소한의 구조</a>
+					<a href="" data-layer-open="test-basic">기본형(Full)</a>
+					<a href="" data-layer-open="test-alert">얼럿형</a>
+					<a href="" data-layer-open="test-alert-confirm">얼럿형(확인)</a>
+					<a href="" data-layer-open="test-alert-no-title">얼럿형(타이틀 없음)</a>
+					<a href="" data-layer-open="test-slide">슬라이드형</a>
+					<a href="" data-layer-open="test-slide-no-dim">슬라이드형(딤처리X)</a>
+				</div>
+			</div>
+			<div class="test-section">
+				<h2 class="test-title">공통 정의 레이어</h2>
+				<div class="test-links">
+					<a href="" data-layer-open="test-basic-tab">기본형(Tab)</a>
+					<a href="" data-layer-open="test-basic-confirm">기본형(Confirm, Term)</a>
+					<a href="" data-layer-open="test-slide-multiple-select">슬라이드형(다중 선택)</a>
+					<a href="" data-layer-open="test-slide-notice">슬라이드형(안내)</a>
+				</div>
+			</div>
+
+			<!-- layer: 최소한의 구조 -->
+			<div class="layer-wrap" data-layer="test-init">
+				<div class="layer-container">
+					// contents
+					<button type="button" data-role="layerClose">close</button>
+				</div>
+			</div>
+			<!-- //layer: 최소한의 구조 -->
+
+			<!-- layer: 기본형 -->
+			<div class="layer-wrap layer-wrap--full" data-layer="test-basic">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">레이어 타이틀</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								// contents<br /><br />
+								<div class="layer-contents">
+									<p class="paragraph">기본 폰트 사이즈 태그</p>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button" data-role="layerClose">취소</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 기본형 -->
+
+			<!-- layer: 얼럿형 -->
+			<div class="layer-wrap layer-alert" data-layer="test-alert">
+				<div class="layer-container">
+					<section class="ui-alert">
+						<!-- 2021.10.26 버튼 삭제 -->
+						<!--button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+							<span class="for-a11y">레이어 닫기</span>
+						</button-->
+						<div class="ui-alert__head">
+							<div class="ui-alert-header">
+								<h2 class="ui-alert-header__title">얼럿형 타이틀</h2>
+							</div>
+						</div>
+						<div class="ui-alert__body">
+							<div class="ui-alert__body-inner">
+								<p class="ui-alert-message">
+									여기에 내용이 표시될 예정입니다.<br />
+									두 줄일 경우는 이렇게<br />
+									세 줄일 경우는 이렇게 표시됩니다.
+								</p>
+							</div>
+						</div>
+						<div class="ui-alert__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-regular-button" data-role="layerClose">취소</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-regular-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 얼럿형 -->
+
+			<!-- layer: 얼럿형(확인) -->
+			<div class="layer-wrap layer-alert" data-layer="test-alert-confirm">
+				<div class="layer-container">
+					<section class="ui-alert">
+						<div class="ui-alert__head">
+							<div class="ui-alert-header">
+								<h2 class="ui-alert-header__title">얼럿형 타이틀</h2>
+							</div>
+						</div>
+						<div class="ui-alert__body">
+							<div class="ui-alert__body-inner">
+								<p class="ui-alert-message">
+									여기에 내용이 표시될 예정입니다.<br />
+									두 줄일 경우는 이렇게<br />
+									세 줄일 경우는 이렇게 표시됩니다.
+								</p>
+							</div>
+						</div>
+						<div class="ui-alert__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-regular-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 얼럿형(확인) -->
+
+			<!-- layer: 얼럿형(타이틀 없음) -->
+			<div class="layer-wrap layer-alert" data-layer="test-alert-no-title">
+				<div class="layer-container">
+					<section class="ui-alert">
+						<div class="ui-alert__body">
+							<div class="ui-alert__body-inner">
+								<p class="ui-alert-message">
+									여기에 내용이 표시될 예정입니다.<br />
+									두 줄일 경우는 이렇게<br />
+									세 줄일 경우는 이렇게 표시됩니다.
+								</p>
+							</div>
+						</div>
+						<div class="ui-alert__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-regular-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 얼럿형(타이틀 없음) -->
+
+			<!-- layer: 슬라이드형 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="test-slide">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">레이어 타이틀</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--reset">
+										<span class="for-a11y">초기화</span>
+									</button>
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<!--li class="ui-buttons-item">
+                    <button type="button" class="ui-button ui-basic-button" data-role="layerClose">취소</button>
+                  </li-->
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 슬라이드형 -->
+
+			<!-- layer: 슬라이드형(딤처리X) -->
+			<div class="layer-wrap layer-wrap--slide type-no-dim" data-layer="test-slide-no-dim">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">레이어 타이틀</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+								// contents <br />
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<!--li class="ui-buttons-item">
+                    <button type="button" class="ui-button ui-basic-button" data-role="layerClose">취소</button>
+                  </li-->
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 슬라이드형(딤처리X) -->
+
+			<!-- layer: 기본형(Tab) -->
+			<div class="layer-wrap layer-wrap--full" data-layer="test-basic-tab">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">레이어 타이틀</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="js-ui-tab-panel">
+								<div class="ui-tab">
+									<ul class="ui-tab-list">
+										<li class="ui-tab-item">
+											<button type="button" class="ui-button ui-tab-link" data-tab-open="layer-tab-A">탭 1</button>
+										</li>
+										<li class="ui-tab-item">
+											<button type="button" class="ui-button ui-tab-link" data-tab-open="layer-tab-B">탭 2</button>
+										</li>
+									</ul>
+								</div>
+								<div class="ui-tab-panel" data-tab="layer-tab-A">
+									피어나기 갑 천지는 그들에게 능히 것이다. 목숨을 구할 인생에 꽃이 끓는 희망의 창공에 길지 봄바람이다. 창공에 풀이 새 불어 있다.<br /><br />
+
+									수 피가 황금시대를 청춘이 광야에서 것이다. 거선의 가장 품고 이상 할지라도 꾸며 쓸쓸하랴? 무엇을 구하지 위하여서, 천자만홍이 든 그들에게 얼마나 가는 보이는 운다. 대한 뭇 끝까지
+									것이다.<br /><br />
+
+									들어 광야에서 위하여서, 청춘의 목숨을 있으며, 품으며, 심장은 못하다 위하여서. 얼마나 산야에 것은 길을 끓는다. 있으며, 미묘한 시들어 실로 평화스러운 청춘 인생에 풍부하게 운다. 피가
+									물방아 옷을 귀는 얼음과 곳이 사라지지 가지에 아름다우냐?
+								</div>
+								<div class="ui-tab-panel" data-tab="layer-tab-B">
+									별 언덕 가을로 너무나 이름과, 듯합니다. 언덕 이런 가슴속에 소녀들의 별이 쉬이 북간도에 버리었습니다. 다 아름다운 이름을 새워 말 아침이 나는 듯합니다.<br /><br />
+
+									쉬이 사람들의 위에도 무성할 어머니 헤는 계절이 있습니다. 봄이 시와 옥 패, 시인의 하나에 계집애들의 못 별 있습니다.<br /><br />
+
+									이름자 시인의 비둘기, 별이 계십니다. 가난한 많은 나는 써 별에도 밤이 까닭입니다.
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 기본형(Tab) -->
+
+			<!-- layer: 기본형(Confirm) -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="test-basic-confirm">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="header">
+								<h2 class="header__title">
+									타이틀이 길어지게 되면<br />
+									이렇게 표시됩니다.
+								</h2>
+								<p class="header__text">
+									코리아크레딧뷰로<br />
+									코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의
+								</p>
+							</div>
+							<div class="ui-layer__body-inner">
+								<div class="layer-info">
+									<p class="layer-info-text">
+										<strong class="color-primary">굵게</strong><br />
+										<span class="color-primary">포인트 컬러1</span><br />
+										<span class="color-secondary">포인트 컬러2</span><br />
+										안내문구 안내문구 안내문구
+									</p>
+
+									<ul class="info-list">
+										<li class="info-item">font-size:12px</li>
+										<li class="info-item">font-size:12px</li>
+									</ul>
+
+									<ul class="info-list type-outside">
+										<li class="info-item">font-size:12px</li>
+										<li class="info-item">font-size:12px</li>
+									</ul>
+
+									<ul class="info-list type-inherit">
+										<li class="info-item">font-size:15px</li>
+										<li class="info-item">font-size:15px</li>
+									</ul>
+
+									<ul class="info-list type-inherit type-outside">
+										<li class="info-item">font-size:15px</li>
+										<li class="info-item">font-size:15px</li>
+									</ul>
+								</div>
+
+								<br />
+
+								<!-- 약관 상세 -->
+								<div class="layer-terms">
+									<p class="paragraph">
+										약관상세 내용이 표시됩니다.<br />
+										약관상세 내용이 표시됩니다.
+									</p>
+
+									<div class="layer-terms-section">
+										<h3 class="layer-terms-title">약관 상세 항목</h3>
+										<p class="paragraph">
+											약관상세 내용이 표시됩니다.<br />
+											약관상세 내용이 표시됩니다.
+										</p>
+									</div>
+
+									<div class="layer-terms-section">
+										<h3 class="layer-terms-title">약관 상세 항목</h3>
+										<p class="paragraph">
+											약관상세 내용이 표시됩니다.<br />
+											약관상세 내용이 표시됩니다.
+										</p>
+									</div>
+								</div>
+								<!-- //약관 상세 -->
+
+								<br />
+								<br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...<br /><br />
+								코리아크레딧뷰로<br />
+								코리아크래딧뷰로㈜의 개인정보 이용 및 제공동의<br /><br /><br />
+
+								㈜코리아크레딧뷰로(이하 ＂회사”라고 한다)가 제공하는 “본인학인서비스”의 휴대폰 본인확인과 관련하여 본인으로부터 취득한 개인정보는 ＂정보통신망이용촉진 및 정보...
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<button type="button" class="ui-button ui-button-aside">다음에 변경</button>
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 기본형(Confirm) -->
+
+			<!-- layer: 슬라이드형(다중 선택) -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select" data-layer="test-slide-multiple-select">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">레이어 타이틀</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-select-multiple-list">
+									<div class="ui-select-multiple-item type-all">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox-all" data-checkbox-group="selectCheckbox" />
+											<label for="selectCheckbox-all" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">전체선택</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" data-checkbox-group-child="selectCheckbox" />
+											<label for="selectCheckbox-1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">선택메뉴 1</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox-2" data-checkbox-group-child="selectCheckbox" />
+											<label for="selectCheckbox-2" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">선택메뉴 2</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox-3" data-checkbox-group-child="selectCheckbox" />
+											<label for="selectCheckbox-3" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">선택메뉴 3</span>
+											</label>
+											<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<!--li class="ui-buttons-item">
+                    <button type="button" class="ui-button ui-basic-button" data-role="layerClose">취소</button>
+                  </li-->
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 슬라이드형(다중 선택) -->
+
+			<!-- layer: 슬라이드형(안내) -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="test-slide-notice">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									고객님은 이미 웹회원으로<br />
+									가입하셨습니다.
+								</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-info">
+									<p class="layer-info-text">
+										<strong class="color-primary">굵게</strong><br />
+										<span class="color-primary">포인트 컬러1</span><br />
+										<span class="color-secondary">포인트 컬러2</span><br />
+										안내문구 안내문구 안내문구
+									</p>
+
+									<ul class="info-list">
+										<li class="info-item">font-size:12px</li>
+										<li class="info-item">font-size:12px</li>
+									</ul>
+
+									<ul class="info-list type-outside">
+										<li class="info-item">font-size:12px</li>
+										<li class="info-item">font-size:12px</li>
+									</ul>
+
+									<ul class="info-list type-inherit">
+										<li class="info-item">font-size:15px</li>
+										<li class="info-item">font-size:15px</li>
+									</ul>
+
+									<ul class="info-list type-inherit type-outside">
+										<li class="info-item">font-size:15px</li>
+										<li class="info-item">font-size:15px</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<!-- 버튼 1개 -->
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button" data-role="layerClose">링크</a>
+										<!--button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">버튼</button-->
+									</li>
+								</ul>
+							</div>
+							<!-- //버튼 1개 -->
+							<!-- 버튼 + 아이콘 (type-icon-tel) -->
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="tel:1800-1000" class="ui-basic-button type-primary type-icon-tel" role="button">1800-1000</a>
+									</li>
+								</ul>
+							</div>
+							<!-- //버튼 + 아이콘 (type-icon-tel) -->
+							<!-- 버튼 2개 -->
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<!--a href="" class="ui-basic-button" role="button" data-role="layerClose">링크</a-->
+										<button type="button" class="ui-button ui-basic-button" data-role="layerClose">버튼1</button>
+									</li>
+									<li class="ui-buttons-item">
+										<!--a href="" class="ui-basic-button type-primary" role="button" data-role="layerClose">링크</a-->
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">버튼2</button>
+									</li>
+								</ul>
+							</div>
+							<!-- //버튼 2개 -->
+							<!-- 버튼 2개 (type-narrow) -->
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<!--a href="" class="ui-basic-button" role="button" data-role="layerClose">링크</a-->
+										<button type="button" class="ui-button ui-basic-button" data-role="layerClose">버튼1</button>
+									</li>
+									<li class="ui-buttons-item">
+										<!--a href="" class="ui-basic-button type-primary" role="button" data-role="layerClose">링크</a-->
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">버튼2</button>
+									</li>
+								</ul>
+							</div>
+							<!-- //버튼 2개 (type-narrow) -->
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 슬라이드형(안내) -->
+
+			<div class="test-section">
+				<h2 class="test-title">layer</h2>
+				<div class="test-code">
+					&lt;div class="layer-wrap"
+					<mark>data-layer="layer-name"</mark>&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="layer-container"&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+					&lt;/div&gt;
+				</div>
+				<div class="test-description">data-layer="layer-name" 속성으로 해당 객체를 레이어 팝업으로 지정</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">auto close timer</h2>
+				<div class="test-code">
+					&lt;div class="layer-wrap" data-layer="layer-name"
+					<mark>data-layer-timer-close="3000"</mark>&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="layer-container"&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+					&lt;/div&gt;
+				</div>
+				<div class="test-description">data-layer-timer-close="3000" 속성으로 레이어가 자동으로 닫히는 시간을 지정 1000 = 1초</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">focus to layer - disabled</h2>
+				<div class="test-code">
+					&lt;div class="layer-wrap" data-layer="layer-name"
+					<mark>data-focus="false"</mark>&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="layer-container"&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+					&lt;/div&gt;
+				</div>
+				<div class="test-description">data-focus="false" 속성으로 레이어가 열릴 때 포커스 가게 하는 기능 비활성화</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">scroll block - disabled</h2>
+				<div class="test-code">
+					&lt;div class="layer-wrap" data-layer="layer-name"
+					<mark>data-scroll-block="false"</mark>&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="layer-container"&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+					&lt;/div&gt;
+				</div>
+				<div class="test-description">data-scroll-block="false" 속성으로 레이어가 열릴 때 페이지 스크롤이 막히는 기능을 비활성화</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">opener</h2>
+				<div class="test-code">&lt;a href="" <mark>data-layer-open="layer-name"</mark>&gt;레이어 열기&lt;/a&gt;</div>
+				<div class="test-description">data-layer-open="layer-name" 속성으로 대상 레이어 지정</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">closer</h2>
+				<div class="test-code">&lt;button type="button" <mark>data-role="layerClose"</mark>&gt;레이어 닫기&lt;/button&gt;</div>
+				<div class="test-description">data-role="layerClose" 속성을 대상 레이어 안에 객체 중 아무거나에 넣어두면 그 객체가 닫기 버튼 기능을 함.</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">function</h2>
+				<div class="test-code">uiJSLayer.open('layer-name' [, opener] [, speed]);</div>
+				<div class="test-description">
+					스크립트로 별도로 레이어를 열 때 사용<br />
+					opener : string | HTMLElement | jQuery Selector : 해당 레이어를 닫을 때 포커스가 돌아 갈 객체를 지정 (기본 값 : null)<br />
+					speed : number : 레이어가 닫히는 애니메이션 속도 지정 (기본 값 : 350)
+				</div>
+				<div class="test-code">uiJSLayer.close('layer-name' [, speed]);</div>
+				<div class="test-description">
+					스크립트로 별도로 레이어를 닫을 때 사용<br />
+					speed : number : 레이어가 닫히는 애니메이션 속도 지정 (기본 값 : 350)
+				</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">event</h2>
+				<div class="test-code">$('[data-layer="layer-name"]').on('layerBeforeOpened', function(){...});</div>
+				<div class="test-description">레이어가 열리기 직전에 발생</div>
+				<div class="test-code">$('[data-layer="layer-name"]').on('layerOpened', function(){...});</div>
+				<div class="test-description">레이어가 열릴 때 발생</div>
+				<div class="test-code">$('[data-layer="layer-name"]').on('layerAfterOpened', function(){...});</div>
+				<div class="test-description">레이어가 열리는 애니메이션이 끝난 후 발생</div>
+				<div class="test-code">$('[data-layer="layer-name"]').on('layerBeforeClosed', function(){...});</div>
+				<div class="test-description">레이어가 닫히기 직전에 발생</div>
+				<div class="test-code">$('[data-layer="layer-name"]').on('layerClosed', function(){...});</div>
+				<div class="test-description">레이어가 닫힐 때 발생</div>
+				<div class="test-code">$('[data-layer="layer-name"]').on('layerAfterClosed', function(){...});</div>
+				<div class="test-description">레이어가 닫히는 애니메이션이 끝난 후 발생</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				//uiJSLayer.open('test-slide-condition');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

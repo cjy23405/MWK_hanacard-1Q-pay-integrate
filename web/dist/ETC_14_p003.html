@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">이용한도조회</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							이용가능금액을<br />
+							확인해 주세요.
+						</h2>
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="form-detail">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">회원명</dt>
+										<dd class="form-detail-group font-weight-medium">김하나</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">기준일자</dt>
+										<dd class="form-detail-group font-weight-medium">2018.04.01</dd>
+									</div>
+								</dl>
+							</div>
+
+							<!-- 한도상향 안내 거절 상태일 때 노출 -->
+							<div class="page-section-group">
+								<div class="status-notice">
+									<div class="status-notice-head">
+										<h3 class="status-notice-title">한도상향안내 <strong class="color-wrong">거절</strong> 상태입니다.</h3>
+									</div>
+									<div class="status-notice-contents">
+										<p class="status-notice-text">이용한도 상향이 가능한 시점에 안내해 드리겠습니다.</p>
+										<button type="button" class="ui-button ui-basic-button type-tiny margin-top-10">동의합니다.</button>
+									</div>
+								</div>
+							</div>
+							<!-- //한도상향 안내 거절 상태일 때 노출 -->
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="form-detail">
+								<div class="form-detail-head">
+									<h3 class="title">단기카드대출(현금서비스)</h3>
+									<button type="button" class="ui-arrow type-black">신청</button>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용가능금액</dt>
+										<dd class="form-detail-group type-block">40 만원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">
+											<del class="del-text">연 17.15%</del><span class="ui-arrow-change type-center"><span class="for-a11y">→</span></span
+											><span class="color-primary">연 12.00%</span>
+										</dd>
+									</div>
+								</dl>
+								<div class="margin-top-25">
+									<button type="button" class="ui-arrow color-blur">※ 상항 가능 한도정보 확인</button>
+								</div>
+							</div>
+
+							<!--단기카드대출(현금서비스) - 기본안내 -->
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">단기카드대출(현금서비스)</h3>
+									<button type="button" class="ui-arrow type-black">신청</button>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용가능금액</dt>
+										<dd class="form-detail-group type-block">00 만원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">연 00.00%</dd>
+									</div>
+								</dl>
+							</div>
+							<!-- //단기카드대출(현금서비스) - 기본안내 -->
+
+							<!-- 단기카드대출(현금서비스) - 이자율 할인 대상인 경우 -->
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">단기카드대출(현금서비스)</h3>
+									<button type="button" class="ui-arrow type-black">신청</button>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용가능금액</dt>
+										<dd class="form-detail-group type-block">00 만원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">
+											<del class="del-text">연 17.15%</del><span class="ui-arrow-change type-center"><span class="for-a11y">→</span></span
+											><span class="color-primary">연 12.00%</span>
+										</dd>
+									</div>
+								</dl>
+							</div>
+							<!-- //단기카드대출(현금서비스) - 이자율 할인 대상인 경우 -->
+
+							<!-- 단기카드대출(현금서비스) - 한도상향 대상인 경우 -->
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">단기카드대출(현금서비스)</h3>
+									<button type="button" class="ui-arrow type-black">신청</button>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용가능금액</dt>
+										<dd class="form-detail-group type-block">40 만원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">
+											<del class="del-text">연 17.15%</del><span class="ui-arrow-change type-center"><span class="for-a11y">→</span></span
+											><span class="color-primary">연 12.00%</span>
+										</dd>
+									</div>
+								</dl>
+								<div class="page-guide margin-top-25">
+									<p class="guide">한도 상향 대상자입니다.</p>
+									<a href="#" class="ui-basic-button type-tiny type-primary" role="button">한도상향신청</a>
+								</div>
+							</div>
+							<p class="ui-notice">
+								단기카드대출 120만원 이상 이용 시 이자율 6.9% 적용<br />
+								행사기간 : 0000.00.00 ~ 0000.00.00
+							</p>
+							<!-- //단기카드대출(현금서비스) - 한도상향 대상인 경우 -->
+
+							<!-- 단기카드대출(현금서비스) - 조회 불가 -->
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">단기카드대출(현금서비스)</h3>
+									<button type="button" class="ui-arrow type-black">고객센터</button>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용가능금액</dt>
+										<dd class="form-detail-group type-block">00 만원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">
+											<span class="color-wrong">조회 불가</span>
+										</dd>
+									</div>
+								</dl>
+							</div>
+							<!-- //단기카드대출(현금서비스) - 조회 불가 -->
+
+							<!-- 장기카드대출(카드론) - 기본안내 -->
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">장기카드대출(카드론)</h3>
+									<button type="button" class="ui-arrow type-black">신청</button>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용가능금액</dt>
+										<dd class="form-detail-group type-block">1,500 만원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">연 14.83%</dd>
+									</div>
+								</dl>
+								<div class="margin-top-25">
+									<ul class="info-list type-inherit color-blur">
+										<li class="info-item type-indent"><span class="indent">※</span>상품 및 대출기간에 따라 변동될 수 있습니다.</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //장기카드대출(카드론) - 기본안내 -->
+
+							<!-- 장기카드대출(카드론) - 이자율 할인 대상인 경우 -->
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">장기카드대출(카드론)</h3>
+									<button type="button" class="ui-arrow type-black">신청</button>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용가능금액</dt>
+										<dd class="form-detail-group type-block">00 만원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">
+											<del class="del-text">연 00.00%</del><span class="ui-arrow-change type-center"><span class="for-a11y">→</span></span
+											><span class="color-primary">연 00.00%</span>
+										</dd>
+									</div>
+								</dl>
+								<div class="margin-top-25">
+									<ul class="info-list type-inherit color-blur">
+										<li class="info-item type-indent"><span class="indent">※</span>상품 및 대출기간에 따라 변동될 수 있습니다.</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //장기카드대출(카드론) - 이자율 할인 대상인 경우 -->
+
+							<!-- 장기카드대출(카드론) - 한도상향 대상인 경우 -->
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">장기카드대출(카드론)</h3>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용가능금액</dt>
+										<dd class="form-detail-group type-block">이용 미동의</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">
+											<span class="color-primary">연 00.00%</span>
+										</dd>
+									</div>
+								</dl>
+								<div class="page-guide margin-top-25">
+									<p class="guide">
+										한도확인을 위해<br />
+										이용동의 신청이 필요합니다.
+									</p>
+									<a href="#" class="ui-basic-button type-tiny type-primary" role="button">이용 동의 신청</a>
+								</div>
+							</div>
+							<!-- //장기카드대출(카드론) - 한도상향 대상인 경우 -->
+
+							<!-- 장기카드대출(카드론) - 조회 불가 -->
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">장기카드대출(카드론)</h3>
+									<button type="button" class="ui-arrow type-black">고객센터</button>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이용가능금액</dt>
+										<dd class="form-detail-group type-block">00 만원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">
+											<span class="color-wrong">조회 불가</span>
+										</dd>
+									</div>
+								</dl>
+							</div>
+							<!-- //장기카드대출(카드론) - 조회 불가 -->
+
+							<!-- 일시불/할부 - 기본안내 -->
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">일시불/할부</h3>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">일시불</dt>
+										<dd class="form-detail-group type-block">00 만원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">00 만원</dd>
+									</div>
+								</dl>
+							</div>
+							<!-- //일시불/할부 - 기본안내 -->
+
+							<!-- 일시불/할부 - 한도상향 대상인 경우 -->
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">일시불/할부</h3>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">일시불</dt>
+										<dd class="form-detail-group type-block">302 만원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이자율</dt>
+										<dd class="form-detail-group type-block">302 만원</dd>
+									</div>
+								</dl>
+								<div class="page-guide margin-top-25">
+									<p class="guide">한도 상향 대상자입니다.</p>
+									<a href="#" class="ui-basic-button type-tiny type-primary" role="button">한도상향신청</a>
+								</div>
+							</div>
+							<!-- //일시불/할부 - 한도상향 대상인 경우 -->
+						</div>
+						<!-- //section -->
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">홈으로 이동</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

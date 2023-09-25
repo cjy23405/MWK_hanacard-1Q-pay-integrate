@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<!-- [DD] step페이지 type-step 클래스 적용 -->
+					<div class="page-contents type-step">
+						<h1 class="page-title"><span class="title-step">STEP 1</span> 본인인증을 진행합니다.</h1>
+						<!-- [DD] header 있을 경우 h2 태그 사용 -->
+						<!--h2 class="page-title">본인인증을 진행합니다.</h2-->
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="js-ui-tab-panel page-tab-panel type-certificate">
+							<div class="ui-tab">
+								<ul class="ui-tab-list">
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-layer">팝업</button>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-idpw">아이디/비밀번호</button>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-phone">휴대폰</button>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-card">카드</button>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-card-id">카드본인확인</button>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-auth">공동인증서</button>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-2fa">휴대폰 + 카드</button>
+									</li>
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-1qpay">원큐페이 인증</button>
+									</li>
+								</ul>
+							</div>
+
+							<!-- tab contents -->
+							<!-- tab: 팝업 -->
+							<div class="ui-tab-panel" data-tab="certificate-layer">
+								<div class="ui-buttons type-full">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-secondary" data-layer-open="layer-mobile-carrier">통신사 선택</button>
+										</li>
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-secondary" data-layer-open="layer-info-cvv">CVV안내</button>
+										</li>
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-secondary" data-layer-open="layer-ars-auth-terms">ARS 인증 (약관동의)</button>
+										</li>
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-secondary" data-layer-open="layer-ars-auth">ARS 인증 (인증)</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //tab: 팝업 -->
+
+							<!-- tab: 아이디/비밀번호 - 2022.01.12 추가 -->
+							<div class="ui-tab-panel panel-idpw" data-tab="certificate-idpw">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">아이디/비밀번호</h2>
+								<!-- 2022.07.22 : mod : .margin-top-none 클래스 추가 -->
+								<div class="form-list margin-top-none">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">아이디</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete">
+												<!-- 2022.05.04 : mod : title값 변경 -->
+												<input type="text" class="ui-input" title="아이디 6~12자리 입력" placeholder="아이디 6~12자리 입력" />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">비밀번호</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block">
+												<!-- 2022.05.04 : mod : title값 변경 -->
+												<input type="password" class="ui-input" title="비밀번호 8~15자리 입력" placeholder="비밀번호 8~15자리 입력" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //tab: 아이디/비밀번호 -->
+
+							<!-- tab: 휴대폰 -->
+							<div class="ui-tab-panel panel-phone" data-tab="certificate-phone">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">휴대폰</h2>
+								<div class="ui-select-multiple-list">
+									<div class="ui-select-multiple-item type-all">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox-all" data-checkbox-group="termsCheckbox" />
+											<label for="termsCheckbox-all" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">통신사 약관 전체 동의</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox-1" data-checkbox-group-child="termsCheckbox" />
+											<label for="termsCheckbox-1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">개인정보 제공 및 이용</span>
+											</label>
+											<!-- 2021.10.26 ui-arrow-button 클래스 변경 -->
+											<button type="button" class="ui-arrow-button">
+												<span class="for-a11y">약관 상세 보기</span>
+											</button>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox-2" data-checkbox-group-child="termsCheckbox" />
+											<label for="termsCheckbox-2" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">고유식별 정보처리</span>
+											</label>
+											<!-- 2021.10.26 ui-arrow-button 클래스 변경 -->
+											<button type="button" class="ui-arrow-button">
+												<span class="for-a11y">약관 상세 보기</span>
+											</button>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox-3" data-checkbox-group-child="termsCheckbox" />
+											<label for="termsCheckbox-3" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">통신사 이용약관</span>
+											</label>
+											<!-- 2021.10.26 ui-arrow-button 클래스 변경 -->
+											<button type="button" class="ui-arrow-button">
+												<span class="for-a11y">약관 상세 보기</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-list">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">이름</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete">
+												<input type="text" class="ui-input" title="이름 입력" placeholder="이름 입력" required />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">주민등록번호</strong>
+										</div>
+										<div class="form-group type-id">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="주민등록번호 앞 6자리 입력" placeholder="앞 6자리 입력" />
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<div class="ui-range-dash">-</div>
+												</div>
+												<div class="form-flex-cell type-flexible">
+													<!-- 2021.10.15 type-masking digit-6 클래스 수정 -->
+													<div class="ui-input-block type-masking digit-6">
+														<!-- 2022.04.27 : mod : title 값 변경 -->
+														<input type="number" pattern="\d*" class="ui-input" title="주민등록번호 뒷자리 중 첫번째 자리 입력" placeholder="" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">통신사 선택</strong>
+										</div>
+										<div class="form-group">
+											<!-- [DD] placeholder 내용이 들어갈 경우 type-placeholder 클래스 추가 -->
+											<div class="ui-select-block type-placeholder">
+												<button type="button" class="ui-button ui-select" title="통신사 선택" data-layer-open="layer-mobile-carrier">통신사 선택</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">휴대폰 번호</strong>
+										</div>
+										<div class="form-group type-phone">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<!-- 2022.05.04 : mod : title 값 변경 -->
+														<input type="number" pattern="\d*" class="ui-input" title="휴대폰 번호 ‘-’ 제외하고 입력" placeholder="‘-’ 제외하고 입력" />
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<button type="button" class="ui-button ui-basic-button type-small type-gray">인증번호 발송</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">인증번호</strong>
+										</div>
+										<div class="form-group type-code">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="인증번호 6자리 입력" placeholder="인증번호 6자리 입력" />
+														<span class="ui-timer">1분 30초</span>
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<button type="button" class="ui-button ui-basic-button type-small type-gray">시간연장</button>
+												</div>
+											</div>
+											<p class="ui-notice">본인 명의의 휴대전화로만 인증이 가능합니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //tab: 휴대폰 -->
+
+							<!-- tab: 카드 -->
+							<div class="ui-tab-panel panel-card" data-tab="certificate-card">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">카드</h2>
+								<!-- 2022.07.22 : mod : .margin-top-none 클래스 추가 -->
+								<div class="form-list margin-top-none">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">카드번호</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block">
+												<!-- 2022.05.04 : mod : title 값 변경 -->
+												<input type="number" pattern="\d*" class="ui-input" title="카드번호 ‘-’ 제외하고 입력" placeholder="‘-’ 제외하고 입력" />
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">카드 선택</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-select-block type-placeholder">
+												<button type="button" class="ui-button ui-select" title="카드 선택" data-layer-open="layer-select-card">카드 선택</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<!-- 2021.10.26 수정 -->
+										<div class="form-title">
+											<strong class="title">유효기간 (MM/YY)</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block">
+												<input type="number" pattern="\d*" class="ui-input" title="유효기간 입력" placeholder="MM/YY" />
+											</div>
+										</div>
+										<!-- //2021.10.26 수정 -->
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">CVV번호</strong>
+										</div>
+										<div class="form-group type-cvv">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<!-- 2021.10.26 input 수정 -->
+														<!-- 2022.05.04 : mod : title 값 변경 -->
+														<input type="password" class="ui-input" title="뒷면의 CVV번호 3자리 숫자 입력" placeholder="뒷면 3자리 숫자 입력" />
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<button type="button" class="ui-button ui-basic-button type-small type-secondary" data-layer-open="layer-info-cvv">CVV안내</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">카드 비밀번호</strong>
+										</div>
+										<div class="form-group type-card-pw">
+											<div class="ui-input-block type-masking digit-2">
+												<input type="password" pattern="\d*" class="ui-input" title="카드 비밀번호 앞 2자리 입력" placeholder="앞 2자리" />
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">카드 비밀번호</strong>
+										</div>
+										<div class="form-group type-card-pw">
+											<div class="ui-input-block">
+												<input type="password" pattern="\d*" class="ui-input" title="카드 비밀번호 4자리 입력" placeholder="4자리 숫자" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //tab: 카드 -->
+
+							<!-- tab: 카드본인확인 -->
+							<div class="ui-tab-panel panel-card-id" data-tab="certificate-card-id">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">카드본인확인</h2>
+								<!-- 2022.07.22 : mod : .margin-top-55 클래스 추가 -->
+								<p class="certificate-notice margin-top-55">
+									<!-- 2021.11.08 텍스트 수정 -->
+									원큐페이(앱카드 간편인증) 또는<br />
+									카드정보(+ARS인증)를 이용하여<br />
+									인증하실 수 있습니다.
+								</p>
+								<div class="info-area">
+									<ul class="info-list">
+										<li class="info-item">본인 명의의 개인 신용카드 또는 체크카드로 본인 확인이 가능합니다.</li>
+										<li class="info-item">법인카드, 가족카드, 선불카드는 본인 확인이 불가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //tab: 카드본인확인 -->
+
+							<!-- tab: 공동인증서 -->
+							<div class="ui-tab-panel panel-auth" data-tab="certificate-auth">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">공동인증서</h2>
+								<!-- 2022.07.22 : mod : .margin-top-none 클래스 추가 -->
+								<div class="form-list margin-top-none">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">이름</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block type-use-delete">
+												<input type="text" class="ui-input" title="이름 입력" placeholder="이름 입력" required />
+												<button type="button" class="ui-button ui-input-delete">
+													<span class="for-a11y">입력 내용 지우기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">휴대폰 번호</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block">
+												<!-- 2022.05.04 : mod : title 값 변경 -->
+												<input type="number" pattern="\d*" class="ui-input" title="휴대폰 번호 ‘-’ 제외하고 입력" placeholder="‘-’ 제외하고 입력" />
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">주민등록번호</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block">
+												<!-- 2022.05.04 : mod : title 값 변경 -->
+												<input type="number" pattern="\d*" class="ui-input" title="주민등록번호 ‘-’ 제외하고 입력" placeholder="‘-’ 제외하고 입력" />
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<p class="certificate-notice">
+									공동인증서 인증은 원큐페이 앱을<br />
+									통해 이용하실 수 있습니다.
+								</p>
+							</div>
+							<!-- //tab: 공동인증서 -->
+
+							<!-- tab: 휴대폰 + 카드(하단 스크립트 참고) -->
+							<div class="ui-tab-panel panel-2fa js-ui-accordion" data-tab="certificate-2fa" data-once="true">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">휴대폰 + 카드</h2>
+								<!-- [DD] 진행중 : type-ing / 완료 : type-completion -->
+								<!-- step 1 -->
+								<div class="page-step-section type-ing js-ui-accordion__item" data-initial-open="true">
+									<div class="step-section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h3 class="title has-numbering"><span class="ui-numbering">1</span>휴대폰 인증을 진행해 주세요.</h3>
+										<div class="progress"><span class="for-a11y">인증 완료</span></div>
+									</div>
+									<div class="step-section-contents js-ui-accordion__layer">
+										<div class="ui-select-multiple-list">
+											<div class="ui-select-multiple-item type-all">
+												<div class="ui-checkbox-block type-large">
+													<input type="checkbox" class="ui-checkbox" id="termsCheckbox-2fa-all" data-checkbox-group="termsCheckbox-2fa" />
+													<label for="termsCheckbox-2fa-all" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="ui-label-text">통신사 약관 전체 동의</span>
+													</label>
+												</div>
+											</div>
+											<div class="ui-select-multiple-item">
+												<div class="ui-checkbox-block">
+													<input type="checkbox" class="ui-checkbox" id="termsCheckbox-2fa-1" data-checkbox-group-child="termsCheckbox-2fa" />
+													<label for="termsCheckbox-2fa-1" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="ui-label-text">개인정보 제공 및 이용</span>
+													</label>
+													<button type="button" class="ui-arrow-button">
+														<span class="for-a11y">약관 상세 보기</span>
+													</button>
+												</div>
+											</div>
+											<div class="ui-select-multiple-item">
+												<div class="ui-checkbox-block">
+													<input type="checkbox" class="ui-checkbox" id="termsCheckbox-2fa-2" data-checkbox-group-child="termsCheckbox-2fa" />
+													<label for="termsCheckbox-2fa-2" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="ui-label-text">고유식별 정보처리</span>
+													</label>
+													<button type="button" class="ui-arrow-button">
+														<span class="for-a11y">약관 상세 보기</span>
+													</button>
+												</div>
+											</div>
+											<div class="ui-select-multiple-item">
+												<div class="ui-checkbox-block">
+													<input type="checkbox" class="ui-checkbox" id="termsCheckbox-2fa-3" data-checkbox-group-child="termsCheckbox-2fa" />
+													<label for="termsCheckbox-2fa-3" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="ui-label-text">통신사 이용약관</span>
+													</label>
+													<button type="button" class="ui-arrow-button">
+														<span class="for-a11y">약관 상세 보기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-list">
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">통신사 선택</strong>
+												</div>
+												<div class="form-group">
+													<!-- [DD] placeholder 내용이 들어갈 경우 type-placeholder 클래스 추가 -->
+													<div class="ui-select-block type-placeholder">
+														<button type="button" class="ui-button ui-select" title="통신사 선택" data-layer-open="layer-mobile-carrier">통신사 선택</button>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">휴대폰 번호</strong>
+												</div>
+												<div class="form-group type-phone">
+													<div class="form-flex">
+														<div class="form-flex-cell type-flexible">
+															<div class="ui-input-block">
+																<!-- 2022.05.04 : mod : title 값 변경 -->
+																<input type="number" pattern="\d*" class="ui-input" title="휴대폰 번호 ‘-’ 제외하고 입력" placeholder="‘-’ 제외하고 입력" />
+															</div>
+														</div>
+														<div class="form-flex-cell">
+															<button type="button" class="ui-button ui-basic-button type-small type-gray">인증번호 발송</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">인증번호</strong>
+												</div>
+												<div class="form-group type-code">
+													<div class="form-flex">
+														<div class="form-flex-cell type-flexible">
+															<div class="ui-input-block">
+																<input type="number" pattern="\d*" class="ui-input" title="인증번호 6자리 입력" placeholder="인증번호 6자리 입력" />
+																<span class="ui-timer">1분 30초</span>
+															</div>
+														</div>
+														<div class="form-flex-cell">
+															<button type="button" class="ui-button ui-basic-button type-small type-gray">시간연장</button>
+														</div>
+													</div>
+													<p class="ui-notice">본인 명의의 휴대전화로만 인증이 가능합니다.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //step 1 -->
+								<!-- step 2 -->
+								<div class="page-step-section js-ui-accordion__item">
+									<div class="step-section-title">
+										<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+										<h3 class="title has-numbering"><span class="ui-numbering">2</span>카드 인증을 진행해 주세요.</h3>
+										<div class="progress"><span class="for-a11y">인증 완료</span></div>
+									</div>
+									<div class="step-section-contents js-ui-accordion__layer">
+										<div class="form-list">
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">카드번호</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-input-block">
+														<!-- 2022.05.04 : mod : title 값 변경 -->
+														<input type="number" pattern="\d*" class="ui-input" title="카드번호 ‘-’ 제외하고 입력" placeholder="‘-’ 제외하고 입력" />
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">유효기간 (MM/YY)</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="유효기간 입력" placeholder="MM/YY" />
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">CVV번호</strong>
+												</div>
+												<div class="form-group type-cvv">
+													<div class="form-flex">
+														<div class="form-flex-cell type-flexible">
+															<div class="ui-input-block">
+																<!-- 2022.05.04 : mod : title 값 변경 -->
+																<input type="password" class="ui-input" title="뒷면의 CVV번호 3자리 숫자 입력" placeholder="뒷면 3자리 숫자 입력" />
+															</div>
+														</div>
+														<div class="form-flex-cell">
+															<button type="button" class="ui-button ui-basic-button type-small type-secondary" data-layer-open="layer-info-cvv">CVV안내</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">카드 비밀번호</strong>
+												</div>
+												<div class="form-group type-card-pw">
+													<div class="ui-input-block type-masking digit-2">
+														<input type="password" pattern="\d*" class="ui-input" title="카드 비밀번호 앞 2자리 입력" placeholder="앞 2자리" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //step 2 -->
+							</div>
+							<!-- //tab: 휴대폰 + 카드(하단 스크립트 참고) -->
+
+							<!-- tab: 원큐페이 인증 -->
+							<div class="ui-tab-panel panel-1qpay" data-tab="certificate-1qpay">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">원큐페이 인증</h2>
+								<!-- web -->
+								<!-- 2022.07.22 : mod : .margin-top-55 클래스 추가 -->
+								<p class="certificate-notice margin-top-55">
+									원큐페이 인증은<br />
+									원큐페이앱을 통해 이용하실 수 있습니다.
+								</p>
+								<!-- //web -->
+								<!-- app -->
+								<!-- 2022.07.22 : mod : .margin-top-55 클래스 추가 -->
+								<p class="certificate-notice margin-top-55">
+									원큐페이 인증으로<br />
+									본인인증을 진행합니다.
+								</p>
+								<!-- //app -->
+							</div>
+							<!--// tab: 원큐페이 인증 -->
+							<!-- //tab contents -->
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<!-- 2021.10.26 버튼 삭제 -->
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 통신사 선택 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select" data-layer="layer-mobile-carrier">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">통신사 선택</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-select-list">
+									<div class="ui-select-item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier1" />
+											<label for="selectMobileCarrier1" class="ui-label" data-role="layerClose">
+												<span class="ui-label-text">SKT</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier2" />
+											<label for="selectMobileCarrier2" class="ui-label" data-role="layerClose">
+												<span class="ui-label-text">KT</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier3" />
+											<label for="selectMobileCarrier3" class="ui-label" data-role="layerClose">
+												<span class="ui-label-text">LGU+</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier4" />
+											<label for="selectMobileCarrier4" class="ui-label" data-role="layerClose">
+												<span class="ui-label-text">SKT 알뜰폰</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier5" />
+											<label for="selectMobileCarrier5" class="ui-label" data-role="layerClose">
+												<span class="ui-label-text">KT 알뜰폰</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier6" />
+											<label for="selectMobileCarrier6" class="ui-label" data-role="layerClose">
+												<span class="ui-label-text">LGU+ 알뜰폰</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 통신사 선택 -->
+
+			<!-- layer: CVV 안내 / 211206 type-no-dim 클래스 추가 -->
+			<div class="layer-wrap layer-wrap--slide type-no-dim" data-layer="layer-info-cvv">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">CVV 번호란?</h2>
+								<!-- 2021.10.26 삭제 -->
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="info-area type-cvv">
+									<ul class="info-list">
+										<li class="info-item">카드 뒷면 서명란 끝 3자리 숫자</li>
+										<li class="info-item">CVV번호를 연속 5회 잘못 입력할 경우 해당 카드로 온라인 서비스 이용이 중단됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: CVV 안내 -->
+
+			<!-- layer: ARS 인증 (약관동의) -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select" data-layer="layer-ars-auth-terms">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2021.11.08 title 수정 -->
+								<h2 class="header__title">
+									인증번호 전송을 위해<br />
+									약관에 동의해 주세요.
+								</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-select-multiple-list">
+									<div class="ui-select-multiple-item type-all">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox-all" data-checkbox-group="selectCheckbox" />
+											<label for="selectCheckbox-all" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">약관 전체동의</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" data-checkbox-group-child="selectCheckbox" />
+											<label for="selectCheckbox-1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">개인정보 필수적 수집/이용 동의서</span>
+											</label>
+											<!-- 2021.10.26 ui-arrow-button 클래스 변경 -->
+											<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox-2" data-checkbox-group-child="selectCheckbox" />
+											<label for="selectCheckbox-2" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">개인정보 필수적 제공 동의서</span>
+											</label>
+											<!-- 2021.10.26 ui-arrow-button 클래스 변경 -->
+											<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<!-- 2021.10.26 삭제 -->
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: ARS 인증 (약관동의) -->
+
+			<!-- layer: ARS 인증 (인증) -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-ars-auth">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2021.11.08 title 수정 -->
+								<h2 class="header__title">ARS 인증</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ars-auth-group">
+									<p class="ars-auth-notice">
+										인증 전화를 받은 후<br />
+										안내음성에 따라 아래 숫자를 입력하세요.
+									</p>
+									<div class="ars-auth-number">56</div>
+									<div class="ars-auth-timer" role="timer" aria-live="off">01:59</div>
+									<div class="info-area">
+										<div class="info-list">
+											<div class="info-item">수신차단 앱이나 착신전환 기능을 사용하시면 인증이 불가능합니다.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<!-- 2021.11.08 버튼 삭제 -->
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">인증 전화 요청</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: ARS 인증 (인증) -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				// 휴대폰 + 카드
+				$('.page-buttons .type-primary').on('click', function () {
+					var $panel2fa = $('.panel-2fa');
+					// 탭 활성화일 경우
+					if ($panel2fa.hasClass('js-tabpanel-opened')) {
+						var $section2fa = $panel2fa.find('.page-step-section');
+						var opened2faIndex = $section2fa.filter('.js-accordion-opened').index();
+						opened2faIndex++;
+						$section2fa.each(function () {
+							var $this = $(this);
+							// 마지막 step 아닐 경우
+							if ($section2fa.length != opened2faIndex) {
+								if ($this.index() == opened2faIndex) {
+									// 다음 step open
+									$this.addClass('type-ing');
+									$panel2fa.uiAccordion('open', $this);
+									$this.attr('tabindex', '0').focus();
+								} else if ($this.index() < opened2faIndex) {
+									// 이전 step close
+									$this.removeClass('type-ing').addClass('type-completion').removeAttr('tabindex');
+								}
+							}
+						});
+					}
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

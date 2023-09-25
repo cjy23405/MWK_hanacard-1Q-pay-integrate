@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드 119 Center</h1>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="banner margin-top-none">
+							<img src="/images/banner/direct_contact_center_banner02.png" alt="불편사항 QUICK 상담 예약 빠르게 연락드리겠습니다. 상담시간:평일9:00~18:00" class="banner-image">
+						</div>
+						<div class="form-list">
+							<div class="form-item">
+                                <div class="form-title">
+                                    <strong class="title">상담분류</strong>
+                                </div>
+                                <div class="form-group">
+                                    <!-- [DD] placeholder 내용이 들어갈 경우 type-placeholder 클래스 추가 -->
+                                    <div class="ui-select-block type-placeholder">
+                                        <button type="button" class="ui-button ui-select color-basic" title="상담분류 선택" data-layer-open="layer-service1">선택하세요</button>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">사번</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block">
+										<input type="number" pattern="\d*" class="ui-input" title="사번 입력" placeholder="숫자만 입력 해주세요." />
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">회신전화번호</strong>
+								</div>
+                                <div class="form-group">
+                                    <!-- [DD] placeholder 내용이 들어갈 경우 type-placeholder 클래스 추가 -->
+                                    <div class="ui-select-block type-placeholder">
+                                        <button type="button" class="ui-button ui-select color-basic" title="회신전화번호 선택" data-layer-open="layer-service2">선택하세요</button>
+                                    </div>
+                                </div>
+								<div class="form-group">
+									<div class="ui-input-block">
+										<input type="number" pattern="\d*" class="ui-input" title="회신전화번호 입력" placeholder="숫자만 입력 해주세요." />
+									</div>
+								</div>
+                                <div class="ui-notice">해당 번호로 연락 드립니다.</div>
+							</div>
+                            <div class="form-item">
+								<div class="form-title">
+									<strong class="title">비밀번호</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block">
+										<input type="number" pattern="\d*" class="ui-input" title="비밀번호 입력" placeholder="숫자 4자리 입력해주세요." />
+									</div>
+								</div>
+                                <div class="ui-notice">비밀번호는 예약내역 조회 시 사용됩니다.</div>
+							</div>
+							<div class="form-item">
+								<div class="terms-area">
+								   <div class="terms-item">
+									  <div class="ui-checkbox-block type-align-top">
+										 <input type="checkbox" class="ui-checkbox" id="termCheckbox-1" checked> 
+										 <label for="termCheckbox-1" class="ui-label">
+										 <span class="ui-checkbox-object"></span>
+										 <span class="ui-label-text">개인(신용)정보 수집 및 이용동의 (필수)</span>
+										 </label>
+										 <button type="button" class="ui-arrow-button" data-layer-open="layer-clause-detail"><span class="for-a11y">약관 상세 보기</span></button>
+									  </div>
+								   </div>
+								</div>
+							</div>
+						</div>
+                        <div class="form-bottom">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-tertiary" role="button">Quick 상담예약 신청하기</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+<!-- layer: 상담분류 선택 -->
+<div class="layer-wrap layer-wrap--slide layer-wrap--select" data-layer="layer-service1">
+    <div class="layer-container">
+        <section class="ui-layer">
+            <div class="ui-layer__head">
+                <div class="header">
+                    <h2 class="header__title">상담분류 선택</h2>
+                    <div class="header__right">
+                        <button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+                            <span class="for-a11y">레이어 닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-layer__body">
+                <div class="ui-layer__body-inner">
+                    <div class="ui-select-list">
+                        <div class="ui-select-item">
+                            <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier1" />
+                                <label for="selectMobileCarrier1" class="ui-label" data-role="layerClose">
+                                    <span class="ui-label-text">기업 회원 심사</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ui-select-item">
+                            <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier2" />
+                                <label for="selectMobileCarrier2" class="ui-label" data-role="layerClose">
+                                    <span class="ui-label-text">개인 회원 심사</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ui-select-item">
+                            <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier3" />
+                                <label for="selectMobileCarrier3" class="ui-label" data-role="layerClose">
+                                    <span class="ui-label-text">기업 회원 업무 공통</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ui-select-item">
+                            <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier4" />
+                                <label for="selectMobileCarrier4" class="ui-label" data-role="layerClose">
+                                    <span class="ui-label-text">개인 회원 업무 공통</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ui-select-item">
+                            <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier6" />
+                                <label for="selectMobileCarrier6" class="ui-label" data-role="layerClose">
+                                    <span class="ui-label-text">기타(업무 전반)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- //layer: 상담분류 선택 -->
+
+<!-- layer: 회신전화번호 선택 -->
+<div class="layer-wrap layer-wrap--slide layer-wrap--select" data-layer="layer-service2">
+    <div class="layer-container">
+        <section class="ui-layer">
+            <div class="ui-layer__head">
+                <div class="header">
+                    <h2 class="header__title">회신전화번호 선택</h2>
+                    <div class="header__right">
+                        <button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+                            <span class="for-a11y">레이어 닫기</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-layer__body">
+                <div class="ui-layer__body-inner">
+                    <div class="ui-select-list">
+                        <div class="ui-select-item">
+                            <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier1" />
+                                <label for="selectMobileCarrier1" class="ui-label" data-role="layerClose">
+                                    <span class="ui-label-text">휴대폰번호</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ui-select-item">
+                            <div class="ui-radio-block">
+                                <input type="radio" class="ui-radio" name="selectMobileCarrier" id="selectMobileCarrier2" />
+                                <label for="selectMobileCarrier2" class="ui-label" data-role="layerClose">
+                                    <span class="ui-label-text">직장직통번호</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- //layer: 회신전화번호 선택 -->
+
+		<!-- script -->
+        <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

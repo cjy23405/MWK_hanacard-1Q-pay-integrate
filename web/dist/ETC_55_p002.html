@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">하나카드</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- [DD] 발급된 카드 내역이 없을 때 -->
+						<h2 class="page-title">최근 발급된 카드가 없습니다.</h2>
+						<div class="page-info has-com-icon type-icon-fail">
+							<p class="page-info-text">
+								최근 <span class="color-primary">14일 이내</span> 발급카드의<br />
+								신청서만 조회 가능합니다.
+							</p>
+						</div>
+						<!--// [DD] 발급된 카드 내역이 없을 때 -->
+
+						<h2 class="page-title">
+							카드신청서 목록을<br />
+							확인해 주세요.
+						</h2>
+						<!-- section -->
+						<div class="page-section">
+							<ul class="card-list type-has-btn margin-top-25">
+								<!--[DD] 카드 이미지 없을 때 -->
+								<li class="card-item">
+									<div class="card-block">
+										<span class="card-image">
+											<span class="card-image-inner"></span>
+										</span>
+										<span class="card-info">
+											<span class="card-name">[모바일] 하나머니 1Q(원큐) 카드 ALL IN</span>
+											<span class="card-number">
+												<span class="card-number-item">2021.10.05 발급</span>
+											</span>
+										</span>
+										<div class="card-item-btn">
+											<a href="" class="ui-button ui-basic-button type-auto type-gray type-small">PDF</a>
+										</div>
+									</div>
+								</li>
+								<!--[DD] 카드 이미지 에러 시 -->
+								<li class="card-item">
+									<div class="card-block">
+										<span class="card-image">
+											<span class="card-image-inner is-error">
+												<!-- 2022.04.27 : mod : alt값 변경 -->
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</span>
+										</span>
+										<span class="card-info">
+											<span class="card-name">[모바일] Multi Any 카드</span>
+											<span class="card-number">
+												<span class="card-number-item">2021.02.28 발급</span>
+											</span>
+										</span>
+										<div class="card-item-btn">
+											<a href="" class="ui-button ui-basic-button type-auto type-gray type-small">PDF</a>
+										</div>
+									</div>
+								</li>
+								<!--[DD] 카드 이미지 있을 때 -->
+								<li class="card-item">
+									<div class="card-block">
+										<span class="card-image">
+											<span class="card-image-inner">
+												<!-- 2022.04.27 : mod : alt값 변경 -->
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</span>
+										</span>
+										<span class="card-info">
+											<span class="card-name">[모바일] Multi Any 카드</span>
+											<span class="card-number">
+												<span class="card-number-item">2021.10.04 발급</span>
+											</span>
+										</span>
+										<div class="card-item-btn">
+											<a href="" class="ui-button ui-basic-button type-auto type-gray type-small">PDF</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<ul class="info-list type-default margin-top-35">
+								<li class="info-item type-presa font-weight-regular">신청서는 PDF파일로 제공되며, 암호는 <span class="color-primary">생년월일 6자리</span> 입니다.</li>
+							</ul>
+
+							<div class="form-bottom">
+								<div class="ui-buttons type-tooltip">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<div class="ui-button-tooltip">
+												<!-- 2022.04.27 : mod : 히든텍스트 추가 -->
+												<span class="ui-button-tooltip-text"><span class="for-a11y">확인 버튼을 누르면 </span>홈 화면으로 이동합니다.</span>
+											</div>
+											<a href="" class="ui-basic-button type-primary" role="button">확인</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="use-notice-area js-ui-accordion">
+								<div class="use-notice-item js-ui-accordion__item" data-initial-open="true">
+									<button type="button" class="use-notice-opener js-ui-accordion__opener">
+										이용안내
+										<span class="for-a11y">
+											상세 내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="use-notice-contents js-ui-accordion__layer">
+										<ul class="info-list">
+											<li class="info-item">최근 14일 이내의 하이브리드 신청내역이 조회됩니다.</li>
+											<li class="info-item">하이브리드 신청내역이 조회 되지 않으실 경우 고객센터(1800-1111)로 문의해 주시기 바랍니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 2</span>
+							약관동의와 본인인증을<br />
+							진행해 주세요.
+						</h2>
+						<div class="page-info">
+							<p class="page-info-text">금융소비자 보호법에따라 적합성을 확인해 주세요.</p>
+						</div>
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 2단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="page-section">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">연간소득</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block type-placeholder">
+											<button type="button" class="ui-button ui-select" title="선택">선택</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">신용점수</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-radio-group type-panel">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" data-checkbox-tab="radioPanel1-1" checked />
+												<label for="radioPanel1-1" class="ui-label">
+													<span class="ui-label-text">474점 초과</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" data-checkbox-tab="radioPanel1-2" />
+												<label for="radioPanel1-2" class="ui-label">
+													<span class="ui-label-text">474점 이하</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="ui-notice">
+										<p data-checkbox-tab-panel="radioPanel1-1">사전신용조회 결과, 신용점수 474점 초과입니다.</p>
+										<p data-checkbox-tab-panel="radioPanel1-2">사전신용조회 결과, 신용점수 474점 이하입니다.</p>
+									</div>
+								</div>
+								<!-- 전환신규,신용추가인 경우 -->
+								<div class="form-item">
+									<div class="form-title type-wrap">
+										<strong class="title">카드이용금액 상환계획</strong>
+										<button class="ui-button-question"><span class="for-a11y">카드이용금액 상환계획 상세보기</span></button>
+										<p class="sub-ui-notice color-blur-secondary">카드이용금액 상환가능일자를 선택하세요.</p>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block type-placeholder">
+											<button type="button" class="ui-button ui-select" title="카드이용금액 상환가능일자 선택">선택</button>
+										</div>
+									</div>
+								</div>
+								<!-- //전환신규,신용추가인 경우 -->
+								<!-- 신용신규인 경우 -->
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">결제일</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block type-placeholder">
+											<button type="button" class="ui-button ui-select" title="결제일 선택">선택</button>
+										</div>
+									</div>
+								</div>
+								<!-- //신용신규인 경우 -->
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="section-title type-block">
+								<h3 class="title">본인확인</h3>
+								<p class="page-section-sub-title">입력하신 소득정보, 신용정보, 걸제일 정보로 카드 신청 적합성을 확인합니다.</p>
+							</div>
+							<div class="section-contents">
+								<div class="form-list">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">본인확인번호</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-input-block">
+												<input type="number" pattern="\d*" class="ui-input" title="본인확인번호 6자리 입력" placeholder="본인확인번호 6자리 입력" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="section-title">
+								<h3 class="title">본인인증</h3>
+							</div>
+							<div class="section-contents">
+								<div class="js-ui-tab-panel page-tab-panel type-certificate">
+									<div class="ui-tab">
+										<ul class="ui-tab-list">
+											<li class="ui-tab-item">
+												<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-phone">휴대폰</button>
+											</li>
+											<li class="ui-tab-item">
+												<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-card">카드</button>
+											</li>
+										</ul>
+									</div>
+
+									<!-- tab contents -->
+									<!-- tab: 휴대폰 -->
+									<div class="ui-tab-panel panel-phone" data-tab="certificate-phone">
+										<div style="line-height: 250px; background-color: var(--gray-30); text-align: center; text-decoration: underline">
+											<a href="_certificate.html" target="_blank">공통 인증 영역 참고</a>
+										</div>
+									</div>
+									<!-- //tab: 휴대폰 -->
+
+									<!-- tab: 카드 -->
+									<div class="ui-tab-panel panel-card" data-tab="certificate-card">
+										<div style="line-height: 250px; background-color: var(--gray-30); text-align: center; text-decoration: underline">
+											<a href="_certificate.html" target="_blank">공통 인증 영역 참고</a>
+										</div>
+									</div>
+									<!-- //tab: 카드 -->
+									<!-- //tab contents -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<!-- 본인인증 전 -->
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+								<!-- //본인인증 전 -->
+								<!-- 본인인증 후 -->
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+								<!-- //본인인증 후 -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

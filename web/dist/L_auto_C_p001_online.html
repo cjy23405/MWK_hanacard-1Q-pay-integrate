@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">다나와자동차 오토캐쉬백</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-completion">
+						<h2 class="page-title">
+							하나카드로 자동차 일시불 결제하고<br />
+							1.0% ~ 1.5% 캐쉬백 받으세요
+						</h2>
+
+						<div class="ui-illust type-3 margin-bottom-none"></div>
+
+						<div class="page-section-group">
+							<div class="benefit">
+								<ul class="benefit-list">
+									<li class="benefit-item">
+										<div class="benefit-info">
+											<h2 class="benefit-title">기간</h2>
+											<p class="benefit-discription color-primary">2022.05.30 ~ 2022.08.31</p>
+										</div>
+										<!-- 2022.04.21 : mod : type 클래스 수정 -->
+									</li>
+									<li class="benefit-item">
+										<div class="benefit-info">
+											<h2 class="benefit-title">혜택</h2>
+											<p class="benefit-discription">자동차 일시불 결제 시 1.0% ~ 1.5% 캐쉬백(최대 500만원)</span></p>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.04.27 : mod : 문구수정 -->
+													<caption class="for-a11y">
+														구분,신용공여기간,결제대상금액으로 구성된 본인의 도래하는 첫번째 결제일 표입니다.
+													</caption>
+													<!-- 2022.04.27 : mod : scope 속성 추가 -->
+													<thead>
+														<tr>
+															<th scope="col">결제방식</th>
+															<th scope="col">캐쉬백률</th>
+															<th scope="col">캐쉬백 지급일</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																신용카드 방식<br>
+																(선입금)
+															</td>
+															<td>
+																300~3,000만원 미만 1.4%<br>
+																3,000만원 이상 1.5%
+															</td>
+															<td>자동차 결제일 + 13<br>영업일 이내</td>
+														</tr>
+														<tr>
+															<td>체크카드 방식</td>
+															<td>
+																300만원 이상 1.0%
+															</td>
+															<td>자동차 결제일<br>다음달 11일경</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-list type-default margin-top-10">
+												<p class="info-item type-presa font-weight-regular">단, 결제 건 별 300만원 이상 결제 시 적용</p>
+												<p class="info-item type-presa font-weight-regular">하나카드 결제계좌로 지급</p>
+											</div>
+											<div class="form-bottom">
+												<ul class="ui-buttons-list">
+													<li class="ui-buttons-item">
+														<a href="http://m.hanacard.co.kr/MPAMACB200M.web?FROM=DANAWA" class="ui-basic-button type-primary" role="button">오토캐쉬백 신청하기</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="benefit-item">
+										<div class="benefit-info">
+											<h2 class="benefit-title">대상</h2>
+											<p class="benefit-discription">하나 신용/체크카드 회원<br>(법인/선불/가족카드 제외)</p>
+										</div>
+									</li>
+									<li class="benefit-item">
+										<div class="benefit-info">
+											<h2 class="benefit-title">대상차종</h2>
+											<p class="benefit-discription">국산.수입신차 전 차종</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item" data-initial-open="true">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									유의사항
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">오토캐쉬백이용고객의경우카드별기본서비스로제공되는포인트, 캐쉬백, 마일리지,청구할인등은중복적용되지않습니다.</li>
+										<li class="info-item">선입금방식의경우, 특별한도는입금후15일간유지됩니다.</li>
+										<li class="info-item">차량특별한도이용시한도범위내에자동결제가가능하며본인이용한도와합산하여사용불가합니다.</li>
+										<li class="info-item">모바일카드결제시자동차판매점에서key-in 결제방식으로처리됩니다.(단수입차판매점일부제외)</li>
+										<li class="info-item">매출취소시캐쉬백대상에서제외되며기지급된캐쉬백은환급금지급전회수합니다.</li>
+										<li class="info-item">카드탈회및카드해지시캐쉬백대상에서제외됩니다.</li>
+										<li class="info-item">상기서비스는하나카드의영업정책이나제휴업체의사정으로변경또는중단될수있습니다.</li>
+										<li class="info-item">캐쉬백에대한자세한상담은오토서비스고객센터(1599-5955)로문의해주시기바랍니다.</li>
+										<li class="info-item">매출취소시오토서비스고객센터(1599-5955) 앞으로환급요청을하셔야환급이가능하며, 매출취소후재결제시에도오토서비스고객센터(1599-5955) 앞으로문의후진행하셔야캐쉬백지급이가능합니다.</li>
+										<li class="info-item">캐쉬백은최대500만원까지입니다.</li>
+										<li class="info-item">캐쉬백은자동차결제정상매입기준으로지급됩니다.</li>
+										<li class="info-item">계약체결전상품설명서및상품약관을반드시확인하시기바랍니다.</li>
+										<li class="info-item">신용카드발급이부적정한경우(개인신용평점낮음등)카드발급이제한될수있습니다.</li>
+										<li class="info-item">카드이용대금과이에수반되는모든수수료를지정된대금결제일에상환하여야합니다.</li>
+										<li class="info-item">금융소비자는해당상품또는서비스에대하여설명을받을권리가있습니다.</li>
+										<li class="info-item color-wrong font-weight-bold">상환능력에비해신용카드사용액이과도할경우, 귀하의신용등급또는개인신용평점이하락할수있습니다.</li>
+										<li class="info-item color-wrong font-weight-bold">신용등급또는개인신용평점하락시금융거래와관련된불이익이발생할수있습니다.</li>
+										<li class="info-item color-wrong font-weight-bold">일정기간원리금을연체할경우, 모든원리금을변제할의무가발생할수있습니다.</li>
+									</ul>
+								</div>
+								<div class="defalt-text color-blur margin-top-30">[준법심의 A-22-0574]</div>
+							</div>
+						</div>
+
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

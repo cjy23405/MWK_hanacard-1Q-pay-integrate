@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-fees">중도상환수수료율 확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 중도상환수수료율 확인 -->
+			<div class="layer-wrap layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-info-fees">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="header">
+								<h2 class="header__title type-light">
+									고객님의 중도상환 수수료율은<br />
+									<strong class="color-primary">2.0%</strong> 입니다.
+								</h2>
+								<p class="header__text margin-top-14">
+									할부 이용 중에 일부금액이나 전액을 상환하시면 고객님의 <span class="color-primary">대출금리</span>와 <span class="color-primary">대출이용 기간</span>에 따라 중도상환 수수료가
+									발생합니다.
+								</p>
+							</div>
+							<div class="ui-layer__body-inner">
+								<div class="page-section type-line margin-top-none">
+									<h2 class="page-section-title">중도상환 수수료</h2>
+									<div class="info-list-area margin-top-25">
+										<ul class="info-list type-inherit type-outside">
+											<li class="info-item">
+												<div class="indent-block"><strong>만기1년 미만</strong></div>
+												<div class="indent-block font-weight-light">대출 30일 후부터는 남은 기간에 따라 수수료 금액이 낮아집니다.</div>
+											</li>
+											<li class="info-item">
+												<div class="indent-block"><strong>만기1년 이상</strong></div>
+												<div class="indent-block font-weight-light">대출 30일 후 부터는 남은 기간에 따라 1% 초과 부분에 대한 수수료 금액이 낮아집니다.</div>
+											</li>
+											<li class="info-item">
+												<div class="indent-block"><strong>만기1년 이상일 경우</strong></div>
+												<div class="indent-block font-weight-light">중도상환 원금X1%(부대비용)+중도상환 원금X (<span class="color-primary">중도상환수수료율</span>-1%)X잔존기간/(대출기간-30)</div>
+											</li>
+											<li class="info-item">
+												<div class="indent-block"><strong>만기1년 미만일 경우</strong></div>
+												<div class="indent-block font-weight-light">
+													중도상환 원금X(<span class="color-primary">중도상환수수료율</span>)%X잔존기간/(대출기간-30)
+													<ul class="info-list type-outside color-blur">
+														<li class="info-item type-indent"><span class="indent">-</span>30일 미만 상환시 대출사용기간을 30일로 간주</li>
+														<li class="info-item type-indent"><span class="indent">-</span>거치형, 자유형, 수시형 상품의 경우 중도 상환수수료 면제</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">네, 확인하였습니다.</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 중도상환수수료율 확인 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-info-fees');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

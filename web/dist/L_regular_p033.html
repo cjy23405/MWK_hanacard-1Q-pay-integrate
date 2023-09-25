@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">4대 보험료</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title"><span class="title-step">STEP 1</span>납부정보를<br />입력해 주세요.</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title margin-bottom-10">
+									<strong class="title">카드선택</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block type-card">
+										<button type="button" class="ui-button ui-select" title="카드 선택">
+											<!-- DD : 이미지 없을 때
+											<span class="card-image"><span class="card-image-inner"></span></span>[본인123] 아멕스 아시아나클럽 카드
+											-->
+
+											<!-- 2022.04.27 : mod : 카드 이미지 alt값 변경 -->
+											<!-- DD : 이미지 에러
+											<span class="card-image"
+												><span class="card-image-inner"><img src="./assets/images/_dummy/card .png" alt="카드이름 넣어주세요." onerror="this.parentNode.className += ' is-error';" /></span></span
+											>[본인123] 아멕스 아시아나클럽 카드
+											-->
+
+											<!-- 2022.04.27 : mod : 카드 이미지 alt값 변경 -->
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<!-- DD : 이미지 있을 때 -->
+											<span class="card-image"
+												><span class="card-image-inner"><img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" /></span></span
+											>[본인123] 아멕스 아시아나클럽 카드
+										</button>
+									</div>
+								</div>
+							</div>
+							<!-- [DD] 대상카드 없을 때 -->
+							<div class="form-item">
+								<div class="form-title margin-bottom-10">
+									<strong class="title">카드선택</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block type-card">
+										<button type="button" class="ui-button ui-select color-blur-more" title="카드 선택">서비스 대상 카드가 없습니다.</button>
+									</div>
+								</div>
+							</div>
+							<!--// [DD] 대상카드 없을 때 -->
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">가입자 구분</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" data-checkbox-tab="local" checked />
+											<label for="radioPanel1-1" class="ui-label">
+												<span class="ui-label-text">지역가입자</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" data-checkbox-tab="company" />
+											<label for="radioPanel1-2" class="ui-label">
+												<span class="ui-label-text">직장가입자</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-item" data-checkbox-tab-panel="local">
+								<div class="form-title">
+									<strong class="title">가입자 정보</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1-1" id="radioPanel1-1-1" data-checkbox-tab="radioPanel1-1-1" checked />
+											<label for="radioPanel1-1-1" class="ui-label">
+												<span class="ui-label-text">주민등록번호</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1-1" id="radioPanel1-1-2" data-checkbox-tab="radioPanel1-1-2" />
+											<label for="radioPanel1-1-2" class="ui-label">
+												<span class="ui-label-text">납부자번호(11자리)</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-item" data-checkbox-tab-panel="radioPanel1-1-1">
+									<div class="form-title">
+										<strong class="title">주민등록번호</strong>
+									</div>
+									<div class="form-group">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible type-has-unit">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="주민등록번호 입력" placeholder="‘-’ 제외하고 입력" />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-button ui-basic-button type-small type-gray">조회</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-item" data-checkbox-tab-panel="radioPanel1-1-2">
+									<div class="form-title">
+										<strong class="title">납부자번호(11자리)</strong>
+									</div>
+									<div class="form-group">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible type-has-unit">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="납부자번호(11자리)" placeholder="‘-’ 제외하고 입력" />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-button ui-basic-button type-small type-gray">조회</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-item" data-checkbox-tab-panel="company">
+								<div class="form-title">
+									<strong class="title">가입자 정보</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1-2" id="radioPanel1-2-1" data-checkbox-tab="radioPanel1-2-1" checked />
+											<label for="radioPanel1-2-1" class="ui-label">
+												<span class="ui-label-text">사업자번호</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1-2" id="radioPanel1-2-2" data-checkbox-tab="radioPanel1-2-2" />
+											<label for="radioPanel1-2-2" class="ui-label">
+												<span class="ui-label-text">납부자번호(11자리)</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-item" data-checkbox-tab-panel="radioPanel1-2-1">
+									<div class="form-title">
+										<strong class="title">사업자번호</strong>
+									</div>
+									<div class="form-group">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible type-has-unit">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="사업자번호 입력" placeholder="‘-’ 제외하고 입력" />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-button ui-basic-button type-small type-gray">조회</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-item" data-checkbox-tab-panel="radioPanel1-2-2">
+									<div class="form-title">
+										<strong class="title">납부자번호(11자리)</strong>
+									</div>
+									<div class="form-group">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible type-has-unit">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="납부자번호(11자리)" placeholder="‘-’ 제외하고 입력" />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-button ui-basic-button type-small type-gray">조회</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 조회 결과 -->
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">납부보험 선택 <span class="sub">(하나만 선택 가능)</span></strong>
+								</div>
+								<div class="form-group">
+									<div class="detail-history-area margin-top-10">
+										<ul class="detail-history-list js-ui-accordion type-active-disabled">
+											<li class="detail-history-item js-ui-accordion__item">
+												<div class="ui-radio-block type-circle type-medium">
+													<input type="radio" class="ui-radio" name="radio1" id="radio1-1" />
+													<label for="radio1-1" class="ui-label">
+														<span class="detail-history-block">
+															<span class="ui-radio-object"></span>
+															<div class="detail-history-info">건강보험</div>
+															<div class="detail-history-total">57000007270</div>
+														</span>
+													</label>
+													<button type="button" class="detail-history-opener js-ui-accordion__opener">
+														<span class="for-a11y">
+															상세보기
+															<span class="open-text">열기</span>
+															<span class="close-text">닫기</span>
+														</span>
+													</button>
+												</div>
+												<div class="detail-history-layer-contents js-ui-accordion__layer">
+													<div class="form-detail-block">
+														<dl class="form-detail-list type-text-default">
+															<div class="form-detail-item">
+																<dt class="form-detail-title">합산여부</dt>
+																<dd class="form-detail-group"><strong>개별</strong></dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">납부자명</dt>
+																<dd class="form-detail-group"><strong>********텐</strong></dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">납부자번호</dt>
+																<dd class="form-detail-group"><strong>57000007270</strong></dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">생년월일/사업자번호</dt>
+																<dd class="form-detail-group"><strong>1138889997</strong></dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">기납부방식</dt>
+																<dd class="form-detail-group"><strong>계좌자동납부</strong></dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">최초 승인예정일</dt>
+																<dd class="form-detail-group"><strong>2021.11.01 / 2021.11.10</strong></dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</li>
+											<li class="detail-history-item js-ui-accordion__item">
+												<div class="ui-radio-block type-circle type-medium">
+													<input type="radio" class="ui-radio" name="radio1" id="radio1-2" />
+													<label for="radio1-2" class="ui-label">
+														<span class="detail-history-block">
+															<span class="ui-radio-object"></span>
+															<div class="detail-history-info">국민연금</div>
+															<div class="detail-history-total">57000007270</div>
+														</span>
+													</label>
+													<button type="button" class="detail-history-opener js-ui-accordion__opener">
+														<span class="for-a11y">
+															상세보기
+															<span class="open-text">열기</span>
+															<span class="close-text">닫기</span>
+														</span>
+													</button>
+												</div>
+												<div class="detail-history-layer-contents js-ui-accordion__layer">
+													<div class="form-detail-block">
+														<dl class="form-detail-list type-text-default">
+															<div class="form-detail-item">
+																<dt class="form-detail-title">합산여부</dt>
+																<dd class="form-detail-group"><strong>개별</strong></dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</li>
+											<li class="detail-history-item js-ui-accordion__item">
+												<div class="ui-radio-block type-circle type-medium">
+													<input type="radio" class="ui-radio" name="radio1" id="radio1-3" disabled />
+													<label for="radio1-3" class="ui-label">
+														<span class="detail-history-block">
+															<span class="ui-radio-object"></span>
+															<div class="detail-history-info">고용보험</div>
+															<div class="detail-history-total">57000007270</div>
+														</span>
+													</label>
+													<button type="button" class="detail-history-opener js-ui-accordion__opener">
+														<span class="for-a11y">
+															상세보기
+															<span class="open-text">열기</span>
+															<span class="close-text">닫기</span>
+														</span>
+													</button>
+												</div>
+												<div class="detail-history-layer-contents js-ui-accordion__layer">
+													<div class="form-detail-block">
+														<dl class="form-detail-list type-text-default">
+															<div class="form-detail-item">
+																<dt class="form-detail-title">합산여부</dt>
+																<dd class="form-detail-group"><strong>개별</strong></dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</li>
+											<li class="detail-history-item js-ui-accordion__item">
+												<div class="ui-radio-block type-circle type-medium">
+													<input type="radio" class="ui-radio" name="radio1" id="radio1-4" disabled />
+													<label for="radio1-4" class="ui-label">
+														<span class="detail-history-block">
+															<span class="ui-radio-object"></span>
+															<div class="detail-history-info">산재보험</div>
+															<div class="detail-history-total">57000007270</div>
+														</span>
+													</label>
+													<button type="button" class="detail-history-opener js-ui-accordion__opener">
+														<span class="for-a11y">
+															상세보기
+															<span class="open-text">열기</span>
+															<span class="close-text">닫기</span>
+														</span>
+													</button>
+												</div>
+												<div class="detail-history-layer-contents js-ui-accordion__layer">
+													<div class="form-detail-block">
+														<dl class="form-detail-list type-text-default">
+															<div class="form-detail-item">
+																<dt class="form-detail-title">합산여부</dt>
+																<dd class="form-detail-group"><strong>개별</strong></dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">납부자와의 관계</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block">
+										<button type="button" class="ui-button ui-select" title="납부자와의 관계 선택">본인</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">이체희망일</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-1" checked />
+											<label for="radioPanel3-1" class="ui-label">
+												<span class="ui-label-text">월말일 (선납)</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel3" id="radioPanel3-2" />
+											<label for="radioPanel3-2" class="ui-label">
+												<span class="ui-label-text">매월 10일 (정기청구)</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--// 조회 결과 -->
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-7{fill:none}.cls-3{stroke:#2d3239;fill:#fff}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_mbti_10_s" transform="translate(-38 -312)">
+        <path id="선_262" data-name="선 262" transform="translate(42 327.5)" style="stroke-linecap:round;stroke-width:1.5px;stroke:#2d3239;fill:none" d="M0 0h12"/>
+        <g id="타원_1785" data-name="타원 1785" class="cls-3" transform="translate(40.5 315.5)">
+            <circle class="cls-6" cx="1" cy="1" r="1"/>
+            <circle class="cls-7" cx="1" cy="1" r=".5"/>
+        </g>
+        <g id="타원_1786" data-name="타원 1786" class="cls-3" transform="translate(53.5 315.5)">
+            <circle class="cls-6" cx="1" cy="1" r="1"/>
+            <circle class="cls-7" cx="1" cy="1" r=".5"/>
+        </g>
+        <path id="패스_12521" data-name="패스 12521" d="M12.742 2.37 9.614 4.4 6.746.762 3.878 4.4.75 2.37v3.965a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2z" transform="translate(40 316.75)" style="fill:#7dedf3"/>
+        <path id="패스_12277" data-name="패스 12277" d="M12.742 2.37 9.614 4.4 6.746.762v0L3.878 4.4.75 2.37v3.965a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2z" transform="translate(41.252 316.5)" style="stroke-linejoin:round;stroke-linecap:round;stroke-width:1.5px;stroke:#2d3239;fill:none"/>
+    </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <style>
+            .cls-1,.cls-4{fill:none}.cls-2{fill:#fff}.cls-2,.cls-4{stroke:#2d3239;stroke-width:1.5px}.cls-5{fill:#2d3239}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_travel_card" data-name="ic_travel card" transform="translate(-22.33 -750.768)">
+        <path id="사각형_15567" data-name="사각형 15567" class="cls-1" transform="translate(22.33 750.768)" d="M0 0h36v36H0z"/>
+        <g id="그룹_9062" data-name="그룹 9062" transform="translate(27.178 754.669)">
+            <g id="사각형_11123" data-name="사각형 11123" class="cls-2" transform="rotate(-17 10.507 -2.883)">
+                <rect class="cls-6" width="20" height="10.174" rx="4"/>
+                <rect class="cls-1" x=".75" y=".75" width="18.5" height="8.674" rx="3.25"/>
+            </g>
+            <g id="사각형_11100" data-name="사각형 11100" class="cls-2" transform="translate(2.152 2.499)">
+                <rect class="cls-6" width="23" height="28" rx="4"/>
+                <rect class="cls-1" x=".75" y=".75" width="21.5" height="26.5" rx="3.25"/>
+            </g>
+            <g id="그룹_9061" data-name="그룹 9061" transform="translate(7.091 7.697)">
+                <g id="타원_1318" data-name="타원 1318" transform="translate(-.939 .302)" style="fill:#7dedf3;stroke:#fff;stroke-width:1.5px">
+                    <circle class="cls-6" cx="6" cy="6" r="6"/>
+                    <circle class="cls-1" cx="6" cy="6" r="6.75"/>
+                </g>
+                <g id="그룹_9060" data-name="그룹 9060" transform="translate(1)">
+                    <g id="타원_1417" data-name="타원 1417" class="cls-4" transform="translate(2.561 .302)">
+                        <ellipse class="cls-6" cx="3" cy="6.5" rx="3" ry="6.5"/>
+                        <ellipse class="cls-1" cx="3" cy="6.5" rx="2.25" ry="5.75"/>
+                    </g>
+                    <g id="그룹_9059" data-name="그룹 9059" transform="translate(-1)">
+                        <g id="타원_1317" data-name="타원 1317" class="cls-4" transform="translate(.061 .302)">
+                            <circle class="cls-6" cx="6.5" cy="6.5" r="6.5"/>
+                            <circle class="cls-1" cx="6.5" cy="6.5" r="5.75"/>
+                        </g>
+                        <path id="사각형_11694" data-name="사각형 11694" class="cls-5" transform="translate(.561 6.052)" d="M0 0h12v1.5H0z"/>
+                    </g>
+                </g>
+            </g>
+            <rect id="사각형_14440" data-name="사각형 14440" class="cls-5" width="10" height="1.5" rx=".75" transform="translate(8.652 23)"/>
+        </g>
+    </g>
+</svg>

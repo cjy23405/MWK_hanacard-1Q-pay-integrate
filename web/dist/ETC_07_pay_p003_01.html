@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">분할납부 서비스</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 2</span>
+							신청하신 정보를 확인해 주세요.
+						</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 2단계 중 2단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<!-- section -->
+						<div class="page-section">
+							<ul class="usage-default-list">
+								<li class="usage-default-item">
+									<div class="usage-default-block type-flex-column">
+										<div class="usage-default-left">
+											<div class="usage-default-title type-multi-ellipsis">양평주유소</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">국내일시불<span class="icon type-right"></span><span class="color-primary">국내분할납부 12개월</span></div>
+											</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">본인7271</div>
+											</div>
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">97,020 원</div>
+										</div>
+									</div>
+									<div class="form-detail margin-top-10">
+										<div class="form-detail-block">
+											<dl class="form-detail-list type-text-default">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">이용일</dt>
+													<dd class="form-detail-group"><strong>2021.09.18</strong></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">결제일</dt>
+													<dd class="form-detail-group">
+														<strong>2021.10.27</strong>
+													</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">할부수수료 합계</dt>
+													<dd class="form-detail-group">
+														<button type=" button" class="ui-arrow type-black font-weight-medium">10,139 원</button>
+													</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">합계</dt>
+													<dd class="form-detail-group">
+														<strong><span class="color-primary">107,159 원</span></strong>
+													</dd>
+												</div>
+											</dl>
+										</div>
+									</div>
+								</li>
+								<li class="usage-default-item">
+									<div class="usage-default-block type-flex-column">
+										<div class="usage-default-left">
+											<div class="usage-default-title type-multi-ellipsis">양평주유소</div>
+											<!-- 2022.01.14 순서 변경 -->
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">국내일시불<span class="icon type-right"></span><span class="color-primary">국내분할납부 12개월</span></div>
+											</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">본인7271</div>
+											</div>
+											<!--// 2022.01.14 순서 변경 -->
+										</div>
+										<div class="usage-default-right">
+											<div class="usage-default-sum">97,020 원</div>
+										</div>
+									</div>
+									<div class="form-detail margin-top-10">
+										<div class="form-detail-block">
+											<dl class="form-detail-list type-text-default">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">이용일</dt>
+													<dd class="form-detail-group"><strong>2021.09.18</strong></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">결제일</dt>
+													<dd class="form-detail-group">
+														<strong>2021.10.27</strong>
+													</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">할부수수료 합계</dt>
+													<dd class="form-detail-group">
+														<button type=" button" class="ui-arrow type-black font-weight-medium">2,871 원</button>
+													</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">합계</dt>
+													<dd class="form-detail-group">
+														<strong><span class="color-primary">81,871 원</span></strong>
+													</dd>
+												</div>
+											</dl>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-primary" role="button">신청</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">분할납부 서비스 신청 : 08:00~22:00</li>
+										<li class="info-item">
+											국내외 5만원 이상 사용하신 일시불 또는 할부(분할납부) 이용에 대하여 일시불 → 할부(분할납부), 할부(분할납부) → 일시불 또는 할부(분할납부) 개월수를 변경할 수 있습니다.
+										</li>
+										<li class="info-item">
+											결제일 1영업일 전까지 신청가능하며 첫 번째 결제일이 지난 할부건은 제외됩니다. 단, 아래의 금융결제원 은행을 결제계좌로 이용하시는 경우 결제일 2영업일 전까지만 신청 가능합니다.<br />
+											(상호저축은행, 산림조합중앙회, HSBC, 도이치은행, 구)씨티, 구)축협, 증권사계좌, 국민은행 가상계좌, 케이뱅크, 카카오뱅크)
+										</li>
+										<li class="info-item">분할납부 서비스는 매출 건 별 전액만 신청 가능합니다.</li>
+										<li class="info-item">분할납부 서비스는 무이자 할부 서비스와 무관하게 할부수수료가 부과됩니다. (할부 개월수 변경 포함)</li>
+										<li class="info-item">
+											이용 구분/가맹점 업종별로 최대 할부 개월수가 상이하여 원하시는 할부개월수로 변경이 불가할 수 있습니다.(일시불 매출은 최대 12개월까지만 분할납부 가능합니다)
+										</li>
+										<li class="info-item">
+											청구 작업일 이전의 변경 등록 건은 변경된 청구내역으로 청구되며, 청구 작업일 이후의 변경 등록 건은 청구서에 반영되지 않아, 청구서 발송내역과 실제 청구 내역이 다르므로 이점 양해해
+											주시기 바랍니다.
+										</li>
+										<li class="info-item">일시불 매출을 분할납부 서비스로 전환하실 경우 할부 철회권이나 항변권의 대상이 되지 않습니다.</li>
+										<li class="info-item">분할납부 서비스는 승인전표가 당사에 접수된 이후부터 이용 가능합니다.</li>
+										<li class="info-item">
+											본 화면에서 조회되는 이용건에 한해 분할납부 서비스 신청 가능하나, 미화결제서비스 이용건 등 일부 대상건은 고객센터(1800-1111)를 통해서만 분할납부 서비스 신청이 가능합니다.
+										</li>
+										<li class="info-item">할부거래 불가한 가맹점(상품권 등) 및 후불교통 이용건은 신청하실 수 없으며, 일부 금액이 취소/결제된 이용건 등은 변경 대상에서 제외됩니다.</li>
+										<li class="info-item color-wrong">일부결제금액이월약정(리볼빙) 일시불을 분할납부 시, 취소되지 않습니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">수화 상담안내</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-signing-main">
+						<h2 class="page-title">
+							청각&middot;언어 장애 손님을 위한<br />
+							수화 상담 서비스입니다.
+						</h2>
+						<!-- type-icon-signing 클래스 추가 -->
+						<div class="page-info has-com-icon type-icon-signing">
+							<p class="page-info-text">일반 전화로 상담이 어려운 고객님을 위해, 전문 수화 상담 직원이 영상통화를 통해 도움을 드립니다.</p>
+						</div>
+
+						<div class="info-detail type-line">
+							<dl class="info-detail-list">
+								<div class="info-detail-item">
+									<dt class="info-detail-title">상담시간</dt>
+									<dd class="info-detail-group">
+										평일 09:00 ~ 18:00<br />
+										(점심시간 12:00 ~ 13:00 제외)
+									</dd>
+								</div>
+								<div class="info-detail-item">
+									<dt class="info-detail-title">상담분류</dt>
+									<dd class="info-detail-group">씨토크 영상 통화기를 통해 <span class="color-secondary">070-7451-9777~8</span> 연결하여 영상통화 상담</dd>
+								</div>
+							</dl>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item" data-initial-open="true">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<!-- 2021.11.08 텍스트 수정 -->
+										<li class="info-item">청각&middot;언어 장애 손님을 위한 수화상담 전용 번호로 비장애손님은 상담이 제한됩니다.</li>
+										<li class="info-item">연체 119센터 TEL : 02-6243-0119 혹은 02-6245-0119 (개인워크아웃업무, 신용회복추진업무, 기타 관리점과의 연체 관리 불만 상담)</li>
+										<li class="info-item">비장애손님은 하나카드 고객센터(1800-1111)를 이용하여 주시기 바랍니다.</li>
+										<li class="info-item">수화 상담 내용은 녹화됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

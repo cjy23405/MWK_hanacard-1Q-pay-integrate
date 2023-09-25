@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">현지 상황별 이용방법</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">상황 별 해외 카드 이용 안내</h2>
+						<div class="accordion-list margin-top-35 js-ui-accordion" data-once="true">
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">IC칩카드 ‘칩 비밀번호(PIN)’ 확인</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<section class="accordion-section">
+											<p class="default-text">
+												“IC칩 카드로 해외 이용 관련 출국 전 유의사항입니다. 2015년 8월 이전 발급받으신 하나카드, 2019년 2월 이전 발급받으신 하나BC카드로 해외에서 이용 예정인 경우에는 하나카드
+												콜센터(1800-1111)을 통해 재발급 후 이용하시기 바랍니다.”
+											</p>
+											<div class="accordion-section-contents margin-top-15">
+												<div class="info-table-area">
+													<table class="info-table type-tbody-heading">
+														<caption class="for-a11y">
+															IC칩 카드로 해외 이용 관련 출국 전 유의사항
+														</caption>
+														<colgroup>
+															<col class="info-table-heading-width" />
+															<col />
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row">구 외환카드</th>
+																<td>2012년 5월 이전 발급한 개인카드</td>
+															</tr>
+															<tr>
+																<th scope="row">구 하나SK카드</th>
+																<td>2015년 8월 이전 발급한 개인카드, 법인 사용자카드</td>
+															</tr>
+															<tr>
+																<th scope="row">하나BC카드</th>
+																<td>2019년 2월 이전 발급한 개인카드</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<p class="ui-notice margin-top-15">하나은행 자동화기기 이용수수료 대출 건당 700원 부과 (지하철, 편의점 등 VAN사 CD기 제외)</p>
+												<ul class="info-list type-default margin-top-35 color-basic">
+													<li class="info-item">IC카드 비밀번호 3회 연속 오류 시 IC카드 거래 이용 불가</li>
+													<li class="info-item">국내에서만 거래하는 경우, IC카드 전용 비밀번호 없이 사용 가능 (서명 확인)</li>
+													<li class="info-item">IC카드 전용 비밀번호를 등록하신 이후에 고객센터나 홈페이지를 통해 카드비밀번호를 바꿔도 IC카드 전용 비밀번호는 변경되지 않음</li>
+													<li class="info-item">
+														IC카드 전용 비밀번호 변경은 하나은행 영업점에 방문하셔야만 재변경 가능<br />
+														(그 외 채널에서는 IC카드 전용 비밀번호 변경 불가)
+													</li>
+												</ul>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">해외 호텔 이용 시</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">호텔 예약</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<ul class="info-list type-default margin-top-10">
+													<li class="info-item color-basic">
+														호텔예약사이트를 통해서 예약 시, 환불 불가 상품인지 확인 후 결제하시기 바랍니다.
+														<ul class="info-list type-default margin-top-10 color-basic">
+															<li class="info-item type-hyphen">특가, 행사 상품 등은 카드 결제 후 바로 취소 시에도 환불 불가한 경우가 많습니다.</li>
+															<li class="info-item type-hyphen">취소 가능 상품이어도 기간별 취소수수료가 부과 될 수 있습니다.</li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+										</section>
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">호텔 투숙</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<ul class="info-list type-default margin-top-10 color-basic">
+													<li class="info-item">호텔 체크인 시 일반적으로 호텔은 신용카드로 일정금액의 승인을 받고 매출전표를 미리 만들어 놓는 선 보증(Deposit)을 하게 됩니다.</li>
+													<li class="info-item">예약비용과 실제 투숙비용이 상이 할 수 있으며 체크아웃 시 실제 이용금액을 확인하시기 바랍니다.</li>
+													<li class="info-item">예약 시 약정한 절차에 의거하여 취소하지 않았을 경우 실제 투숙하시지 않았다 하더라도 호텔 등에서 노쇼 패널티(NO SHOW CHARGE)를 부과할 수 있습니다.</li>
+													<li class="info-item">
+														해외에서 호텔 숙박 예약 시 카드를 이용하고 카드가 아닌 현금이나 다른 카드로 비용을 지불하실 경우 호텔 프론트에 변경사항을 반드시 통보하셔야 합니다.<br />
+														간혹 호텔에서 손님이 예약 시와 다른 결제수단으로 숙박료를 지불하셨음에도 불구하고 부당하게 청구되는 경우가 발생할 수 있습니다.<br />
+														또한 위와 같은 문제가 발생 시 타 결제수단으로 결제한 영수증을 소지하셔야만 부당청구 건에 대해 대응할 수 있습니다.
+													</li>
+												</ul>
+											</div>
+										</section>
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">호텔 이용 후</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<ul class="info-list type-default margin-top-10 color-basic">
+													<li class="info-item">
+														체크아웃 시 미청구된 금액(예: MiniBar 사용, Room service, 물품파손, 세탁, 흡연 등)이 있다면 호텔은 이후 고객 사전동의 없이 예약 시 등록된 신용카드로 추가요금을 청구할 수
+														있습니다.
+													</li>
+												</ul>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">해외 렌터카 이용 시</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">렌터카 예약</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<ul class="info-list type-default margin-top-10 color-basic">
+													<li class="info-item">
+														렌터카 예약사이트에서 예약 후, 현지 렌터카 회사에서 차량 인도 시 차량 업그레이드, 각종 옵션, 보험 추가에 따른 실제 이용요금이 추가 청구될 수 있습니다.
+													</li>
+												</ul>
+											</div>
+										</section>
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">렌터카 이용</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<ul class="info-list type-default margin-top-10 color-basic">
+													<li class="info-item">귀국 후, 차량 렌트 기간 중 발생한 범칙금(교통법규 위반), 사고발생 시 차량 파손비용, 톨(Toll)비 등이 고객 사전동의 없이 추가로 청구될 수 있습니다.</li>
+													<li class="info-item">반납 예정일에 미 반납하거나 반납장소를 달리하여 반납하는 경우에는 추가요금이 청구될 수 있습니다.</li>
+													<li class="info-item">렌터카의 요금은 렌트비, 보험, 재급유(Fuel Charge), 차량파손금액(Damage Cost) 등을 포함하므로 복잡한 경우가 많습니다.</li>
+													<li class="info-item">
+														의문사항이 있으면 요금 정산 시 확실하게 매듭지어야 합니다.
+														<ul class="info-list type-default margin-top-10 color-basic">
+															<li class="info-item type-hyphen">
+																사전에 해당 요금을 부과하지 않기로 구두상 협의하신 경우에도 증빙이 될 수 있는 서류를 받으셔야 차후 발생할 수 있는 분쟁에 대항하실 수 있습니다.
+															</li>
+														</ul>
+													</li>
+													<li class="info-item">이용 계약서와 영수증은 사후 분쟁 발생 시 해결을 위한 필수 증빙 자료로 활용되므로 보관하시어 불이익을 방지하시기 바랍니다.</li>
+												</ul>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">해외 현금서비스 (단기카드대출)</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<section class="accordion-section">
+											<ul class="info-list type-default color-basic">
+												<li class="info-item">VISA/Plus, mastercard/Cirrus, JCB, Ame, UPI 로고가 부착되어 있는 현금자동지급기에서 현금서비스(단기카드대출) 이용 가능합니다.</li>
+											</ul>
+										</section>
+										<div class="accordion-section-contents margin-top-15">
+											<div class="info-table-area">
+												<table class="info-table type-tbody-heading">
+													<caption class="for-a11y">
+														장기카드대출 상환안내
+													</caption>
+													<colgroup>
+														<col style="width: 94px" />
+														<col />
+													</colgroup>
+													<tbody>
+														<tr>
+															<th scope="row">VISA</th>
+															<td>
+																<div class="form-flex type-large">
+																	<div class="form-flex-cell">
+																		<div class="global-card-brand type-medium">
+																			<img src="./assets/images/contents/global-card-brand/visa.png" alt="visa" />
+																		</div>
+																	</div>
+																	<div class="form-flex-cell">
+																		<div class="global-card-brand type-medium">
+																			<img src="./assets/images/contents/global-card-brand/plus.png" alt="plus" />
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">mastercard</th>
+															<td>
+																<div class="form-flex type-large">
+																	<div class="form-flex-cell">
+																		<div class="global-card-brand type-medium">
+																			<img src="./assets/images/contents/global-card-brand/mastercard.png" alt="mastercard" />
+																		</div>
+																	</div>
+																	<div class="form-flex-cell">
+																		<div class="global-card-brand type-medium">
+																			<img src="./assets/images/contents/global-card-brand/cirrus.png" alt="cirrus" />
+																		</div>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">JCB</th>
+															<td>
+																<div class="global-card-brand type-medium">
+																	<img src="./assets/images/contents/global-card-brand/jcb.png" alt="jcb" />
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">Amex</th>
+															<td>
+																<div class="global-card-brand type-medium">
+																	<img src="./assets/images/contents/global-card-brand/amex.png" alt="amex" />
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th scope="row">UPI</th>
+															<td>
+																<div class="global-card-brand type-medium">
+																	<img src="./assets/images/contents/global-card-brand/unionpay.png" alt="unionpay" />
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<section class="accordion-section margin-top-35">
+											<ul class="info-list type-default color-basic">
+												<li class="info-item">현금서비스(단기카드대출) 이용 시 Cash Advance/Credit Card를 선택해야 합니다.</li>
+												<li class="info-item">
+													ATM을 통해 현금서비스(단기카드대출) 이용 시 현금이 출금되지 않았을 경우 에러메시지가 출력된 전표를 반드시 보관해야 합니다. <br />
+													추후 잘못 청구될 경우 카드사에 이의제기 시 필수 증빙자료로 사용이 가능합니다.
+												</li>
+												<li class="info-item">
+													해외 ATM 외 브랜드사별 취급 은행창구에서도 현금서비스(단기카드대출) 이용 가능합니다.
+													<ul class="info-list type-default margin-top-10 color-basic">
+														<li class="info-item type-hyphen">단, 신용카드/여권 지참하셔야 합니다.</li>
+														<li class="info-item type-hyphen">고객용 영수증은 반드시 보관하시기 바랍니다.</li>
+													</ul>
+												</li>
+												<li class="info-item">
+													해외 현금서비스(단기카드대출) 이용 시 현금서비스(단기카드대출) 수수료 부과됩니다. <br />
+													(국내 수수료율과 동일)
+													<ul class="info-list type-default margin-top-10 color-basic">
+														<li class="info-item type-hyphen">
+															해외 현금서비스 청구 금액 <br />
+															현금서비스(단기카드대출) 거래원금 + 해외서비스 수수료 + 현금서비스(단기카드대출) 수수료
+														</li>
+														<li class="info-item type-hyphen">해외 현금서비스(단기카드대출) 이용 시 ATM에 따라 별도의 현지수수료(Surcharge)가 부과될 수 있습니다.</li>
+													</ul>
+												</li>
+											</ul>
+										</section>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<!-- 2022.03.31 : mod : 문구 수정 -->
+									<strong class="accordion-opener-title">해외 현금인출(예금인출)</strong>
+									<!-- //2022.03.31 : mod : 문구 수정 -->
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<section class="accordion-section">
+											<ul class="info-list type-default color-basic">
+												<!-- 2022.03.31 : mod : 문구 수정 -->
+												<li class="info-item">신용/체크카드 모두 해외 ATM 현금인출이 가능합니다.</li>
+												<li class="info-item">
+													단, 구.하나 신용카드의 경우 2015.7.20일 이후에 발급 받으신 신용카드는 카드 발급 시 회원님께서 현금인출(예금인출)기능을 선택하신 경우에 해외 현금인출(예금인출)을 사용할 수
+													있고, 2015.7.19일 이전에 발급받으신 신용카드는 재발급을 통해 현금인출(예금인출)을 선택하셔야 해외 현금인출(예금인출)을 사용할 수 있습니다.
+												</li>
+												<li class="info-item">결제계좌가 하나은행이 아닌 타 은행일 경우 현금인출(예금인출)이 불가능합니다.</li>
+												<!-- //2022.03.31 : mod : 문구 수정 -->
+												<li class="info-item">일부 하나BC 신용카드의 경우 현금인출(예금인출)이 불가능합니다.</li>
+												<li class="info-item">VISA 및 mastercard 및 UPI 브랜드로 발급된 상품에 한하여, Amex 브랜드는 글로벌페이 아멕스 체크카드만 해외 현금인출(예금인출)이 가능합니다.</li>
+												<li class="info-item">해외 ATM에서 현금인출(예금인출)을 할 때에는 카드비밀번호를 사용하셔야 합니다.</li>
+												<li class="info-item">현금인출(예금인출) 이용 시 Cash Withdrawal/Saving Account/Checking Account를 선택하여야 합니다.</li>
+												<li class="info-item">일부 국가의 ATM에서는 신용카드 현금서비스(단기카드대출)와 현금인출(예금인출) 기능을 분리하지 않고 있습니다.</li>
+												<li class="info-item">
+													해당 ATM 이용 시 회원님의 의사와 무관하게 현금서비스(단키카드대출)로 이용될 수 있으니 반드시 현금서비스(단기카드대출)와 현금인출(예금인출) 기능을 확인하고 이용하시기
+													바랍니다.
+												</li>
+												<li class="info-item">일부 해외 ATM 기기에서 현지통화 대신 달러(USD) 결제를 유도하는 경우가 있으니 주의하시기 바랍니다.</li>
+												<li class="info-item">이 경우 DCC수수료(5~10%) 등이 추가로 부과되므로 현지통화로 출금하는 것이 유리합니다.</li>
+												<li class="info-item">해외에서 현금인출(예금인출) 시 ATM에 따라 별도의 현지 수수료가 부과될 수 있습니다.</li>
+												<li class="info-item">
+													ATM을 통해 현금인출(예금인출) 이용 시 현금이 출금되지 않았을 경우 에러메시지가 출력된 전표를 반드시 보관해야 합니다. <br />
+													추후 잘못 청구될 경우 카드사에 이의제기 시 필수 증빙자료로 사용 가능합니다.
+												</li>
+											</ul>
+										</section>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">해외 이용대금 청구</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<section class="accordion-section">
+											<ul class="info-list type-default color-basic">
+												<li class="info-item">
+													모든 해외이용금액은 미화로 환산된 후 원화금액으로 청구됩니다. <br />
+													(단, Dallar Pay 카드, 글로벌 페이 아멕스 체크카드 제외)
+												</li>
+												<li class="info-item">
+													해외이용 시, 국제브랜드사가 부과하는 수수료가 포함되어 청구됩니다. (VISA 1.0 ~1.1%(상품별 상이), mastercard / JCB(One Way) 1%, Amex 1.4%, UPI 0.0~0.8%(상품별 상이))
+												</li>
+												<li class="info-item">
+													해외이용금액은 국제브랜드사 수수료가 포함된 미화환산 금액 기준으로 접수일자의 하나은행 1회차 최초고시 전신환 매도율을 적용한 원화금액에 별도의 해외서비스수수료가 함께
+													청구됩니다.
+													<ul class="info-list type-default margin-top-10 color-basic">
+														<li class="info-item type-hyphen">
+															해외서비스 수수료: 회원의 해외이용에 따른 해외승인 및 정산처리 비용, 해외이용안내, 분쟁해결 등의 회원 서비스를 제공함에 따라 징수하는 수수료
+														</li>
+														<li class="info-item type-hyphen">전신환 매도율: 외국환 은행 간의 전신을 이용한 송금이체에 적용되는 환율</li>
+													</ul>
+												</li>
+												<li class="info-item">현금서비스(단기카드대출) 이용 시, 이용일수에 따른 현금서비스(단기카드대출) 수수료가 추가됩니다.</li>
+												<li class="info-item">
+													해외이용금액의 원화청구금액 계산법 <br />
+													원화청구금액 = ① 원화금액 + ② 해외서비스수수료 <br />
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item type-indent type-side-no-padding">
+															<span class="indent">①</span>
+															{미화환산금액(국제브랜드사수수료 포함) x 접수일자의 전신환 매도율}
+														</li>
+														<li class="info-item type-indent type-side-no-padding">
+															<span class="indent">②</span>
+															{미화환산금액(국제브랜드사수수료 포함) x 접수일자의 전신환 매도율 x 0.2%}
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</section>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">물품구매 후 반송/환불/거래취소</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<section class="accordion-section">
+											<ul class="info-list type-default color-basic">
+												<li class="info-item">
+													카드사는 매출 취소 권한이 없습니다. 따라서 매출을 취소하는 경우에는 반드시 취소전표 또는 증빙이 될 수 있는 서류를 받으셔야 향후 분쟁발생 시 유리합니다.
+												</li>
+												<li class="info-item">인터넷 사이트의 경우에도 해당 화면을 프린트, 캡쳐하는 등 필요한 증빙을 반드시 보관하시기 바랍니다.</li>
+												<li class="info-item">
+													해외에서 물품구매 후 제품 품질에 대한 불만이나 가격상이 등으로 거래 취소를 요청 시, 가맹점에서 반송/환불에 대한 동의가 없다면 환급 받을 수 없습니다. 특히, 여행사와 제휴된
+													현지 해외 가맹점에서 구입한 물건에 대한 반송 및 환불 처리는 해당 여행사에 문의하여 주시기 바랍니다.
+												</li>
+												<li class="info-item">물건 배달 지연 등 거래내용에 문제가 있을 경우 먼저 상대 가맹점과 E-mail을 통해 협의하신 후 그 내역을 잘 보관하시면 향후 분쟁 발생 시 유리합니다.</li>
+												<li class="info-item">
+													동남아 등지에서 보석류 및 약재류를 구입하신 후 국내에서 가짜임을 확인하고 카드사로 이의 제기하는 경우가 종종 있습니다. 이러한 경우는 카드사에서 처리 불가하니 구입시 철저하게
+													확인하시기 바랍니다.
+												</li>
+											</ul>
+										</section>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">해외 부가가치세 환금 (Tax Refund)</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<section class="accordion-section">
+											<ul class="info-list type-default color-basic">
+												<li class="info-item">
+													유럽 및 일부 국가의 세금 환급 가맹점에서는 부가세 과세 가격으로 판매하는 곳과 면세된 가격으로 판매하는 곳이 있습니다. <br />
+													회원님이 이용하신 가맹점의 과세/면세 여부를 확인하시기 바랍니다.
+												</li>
+											</ul>
+											<h3 class="info-item default-text margin-top-10 font-weight-regular">과세 가격으로 구입한 경우</h3>
+											<ul class="info-list type-default margin-top-10 color-basic">
+												<li class="info-item type-hyphen type-presa">
+													해당 국가 출국 시 공항/항구 등에서 세금환급(Tax Refund) 신고를 하시면, 신고 후 2~3개월 뒤에 서류에 기재하신 신용카드 번호로 (-) 금액이 접수되어 환급됩니다.
+												</li>
+												<li class="info-item type-hyphen type-presa">
+													부가가치세 환급은 당사에서 하는 것이 아니라 각 나라 세금 환급 사무소(Customs VAT Reclaim Office)에서 손님께서 신고하신 서류를 취합하여 처리하는 것이므로 당사에서 처리할 수
+													없음을 이해하여 주시기 바랍니다.
+												</li>
+											</ul>
+											<h3 class="info-item default-text margin-top-10 font-weight-regular">면세 가격으로 구입한 경우</h3>
+											<ul class="info-list type-default margin-top-10 color-basic">
+												<li class="info-item type-hyphen type-presa">면세된 가격으로 구입하고 출국 시 서류를 작성하여 부가가치세 신고를 완료하시면, 추후 세금이 다시 부과되지 않습니다.</li>
+												<li class="info-item type-hyphen type-presa">
+													단, 서류를 제대로 제출하지 않거나 신고를 누락한 경우에는 추후 손님께서 제시하신 카드로 면세되었던 금액이 청구될 수 있으므로 신고한 서류는 반드시 6개월 이상 보관하여 주시기
+													바랍니다.
+												</li>
+											</ul>
+										</section>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item js-ui-accordion__item">
+								<button type="button" class="accordion-opener js-ui-accordion__opener">
+									<strong class="accordion-opener-title">기타</strong>
+								</button>
+								<div class="js-ui-accordion__layer">
+									<div class="accordion-contents">
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">해외 인터넷 거래 시 유의사항</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<ul class="info-list type-default margin-top-10 color-basic">
+													<li class="info-item">신뢰할 수 있는 가맹점과 거래하시고 성인용 사이트나 도박, 복권 등의 불건전사이트는 가급적 사용을 자제하여 주십시오.</li>
+													<li class="info-item">유료사이트 가입 시 해당 사이트 회원약관에 의거하여 탈회 신청을 하기 전까지 매월 또는 매년 주기적으로 대금이 청구될 수 있습니다.</li>
+													<li class="info-item">해외 인터넷거래는 카드번호와 유효기간 만으로 거래가 발생할 수 있으므로 신뢰할 수 없는 사이트에서는 절대로 카드번호와 유효기간을 입력하지 마십시오.</li>
+													<li class="info-item">
+														비자 또는 마스터카드로 안심클릭 패스워드를 등록하신 후 해외 쇼핑몰에서 결제 시 안심클릭 패스워드를 입력하여 구매를 완료하신 경우, 또는 VISA/mastercard/Amex/JCB/UPI카드
+														뒷면의 3자리의 숫자(CVC/CVV/CSC/CVN)를 입력하여 구매를 완료하신 경우 차후 해당 매출에 대한 미사용 주장은 불가하므로 카드이용 시 유의하시기 바랍니다.
+													</li>
+													<li class="info-item type-presa color-blur font-weight-regular">물품 미수령, 제품파손, 물품 상이 등의 다른 사유로는 분쟁 진행 가능</li>
+												</ul>
+											</div>
+										</section>
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">해외여행 중 카드사용 시 각별히 주의해야 할 사항</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<ul class="info-list type-default margin-top-10 color-basic">
+													<li class="info-item type-indent">
+														<span class="indent">가.</span>
+														<div class="indent-block">낯선 사람의 과도한 친철에 주의함</div>
+													</li>
+													<li class="info-item type-indent">
+														<span class="indent">나.</span>
+														<div class="indent-block">신용카드 비밀번호 유출에 주의함</div>
+													</li>
+													<li class="info-item type-indent">
+														<span class="indent">다.</span>
+														<div class="indent-block">카드 결제 시, 회원 본인 시야 안에서 결제하도록 함</div>
+													</li>
+													<li class="info-item type-indent">
+														<span class="indent">라.</span>
+														<div class="indent-block">ATM 기기는 유명 금융회사의 기기를 이용함</div>
+													</li>
+													<li class="info-item type-indent">
+														<span class="indent"> 마.</span>
+														<div class="indent-block">
+															카드 분실도난 인지 시 즉시 신고함
+															<ul class="info-list margin-top-10">
+																<li class="info-item type-presa font-weight-regular">
+																	카드 분실도난 사고 주요사례
+																	<ul class="info-list margin-top-10">
+																		<li class="info-item type-hyphen font-weight-regular">신용카드 결제 시 비밀번호를 엿봐두었다가, 카드를 훔쳐서 사용하는 경우</li>
+																		<li class="info-item type-hyphen font-weight-regular">경찰관 사칭하여 검뭄(마약단속 등)의 이유로 신분증, 신용카드 및 비밀번호를 알려주어 부정사용된 경우</li>
+																		<li class="info-item type-hyphen font-weight-regular">유흥주점 등을 방문하였다가 강압적으로 카드를 빼앗겨서 강제로 결제한 경우</li>
+																	</ul>
+																</li>
+															</ul>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</section>
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">복수전표 발행</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<ul class="info-list type-default margin-top-10 color-basic">
+													<li class="info-item">
+														해외가맹점(레스토랑/유흥업소 등)에서 계산시 종업원이 카드를 가져가서 계산하는 경우 복수 전표를 만들어 청구하는 경우가 있으므로 반드시 직접 카운터에서 사용대금을 확인하시고
+														결제하시기 바랍니다.
+													</li>
+												</ul>
+											</div>
+										</section>
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">TIP 추가청구</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<ul class="info-list type-default margin-top-10 color-basic">
+													<li class="info-item">
+														해외 레스토랑의 경우 사용금액의 20% 범위 내에서 팁 비용을 추가 청구할 수 있습니다. <br />
+														결제 시 팁 포함 여부를 확인하시고 팁을 포함하여 결제하셨다면 영수증 팁 란에 X표를 하시기 바랍니다.
+													</li>
+												</ul>
+											</div>
+										</section>
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">해외 원화결제 서비스(DCC거래)</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<ul class="info-list type-default margin-top-10 color-basic">
+													<li class="info-item">DCC(dynamic Currency Conversion)란 해외에서 카드 거래 시 거래금액을 고객의 자국 통화로 표시해 결제하는 서비스 입니다.</li>
+													<li class="info-item">AMEX 브랜드의 경우 온라인상에서 DCC와 유사한 멀티 커런시 서비스(MCCY) 가능합니다. (오프라인 불가)</li>
+													<li class="info-item">
+														해외 일부 가맹점(해외 쇼핑 사이트 포함)에서 현지 통화가 아닌 원화(KRW)로 결제하도록 권유하는 경우가 있습니다. <br />
+														해외에서 원화로 결제하면, 현지통화를 원화로 전환하는 과정이 추가되어 청구금액이 증가하게 됩니다.
+													</li>
+													<li class="info-item">
+														해외 원화결제 서비스 이용 시, 청구금액이 증가되는 바 가급적이면 원화가 아닌 현지통화로 거래하시고, 전표에 서명하시기 전 반드시 거래금액을 확인하시기 바랍니다.
+													</li>
+												</ul>
+											</div>
+										</section>
+										<section class="accordion-section">
+											<div class="accordion-section-head">
+												<h3 class="title">해외현지수수료(Surcharge)</h3>
+											</div>
+											<div class="accordion-section-contents">
+												<p class="default-text margin-top-10">
+													해외에서 물품구매(인터넷거래 포함) 및 ATM(현금서비스(단기카드대출) 혹은 현금인출(예금인출)) 이용 시 일부 국가의 가맹점 및 ATM에 따라 별도의 현지 수수료가 부과될 수 있습니다.
+												</p>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-open-banking">오픈뱅킹 활용 안내</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 오픈뱅킹 활용 안내 -->
+			<div class="layer-wrap layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-info-open-banking">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">오픈뱅킹 활용 안내</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section-group">
+									<div class="guide-info-list margin-top-none">
+										<div class="guide-info-item">
+											<div class="guide-info-block align-center">
+												<p class="guide-info-text color-basic">
+													2021년 6월 30일부터 금융결제원의<br />
+													오픈뱅킹을 활용하여 출금됩니다.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="page-section-group">
+									<div class="basic-text">
+										<strong>기존 출금이체에 동의하신 본인명의의 자동이체 계좌에서 출금시 <span class="color-primary">오픈뱅킹 또는 BC CMS</span> 로 출금이 됩니다.</strong>
+									</div>
+									<div class="basic-text margin-top-10"><strong>오픈뱅킹 등록 시 해당 금융기관에서 자동 이체 등록 확인 문자를 발송할 수 있습니다.</strong></div>
+									<div class="info-area margin-top-10">
+										<ul class="info-list type-default type-outside">
+											<li class="info-item color-basic">즉시결제 출금 이외의 용도로 절대 사용되지 않습니다.</li>
+											<li class="info-item color-basic">회원님의 요청없이 절대 출금되지 않습니다.</li>
+											<li class="info-item color-basic"><span class="color-primary">오픈뱅킹과 BC CMS</span>는 결제를 진행하는 출금회선의 차이로, 회원님의 출금요청에 영향을 미치지 않습니다.</li>
+											<li class="info-item color-basic">
+												이체계좌가 다른사람의 계좌, 사업자 계좌 등 본인명의가 아니거나 오픈뱅킹 1일 이체한도(1000만원)을 초과할 경우 오픈뱅킹 이용이 제한될 수 있습니다.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 오픈뱅킹 활용 안내 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-info-open-banking');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

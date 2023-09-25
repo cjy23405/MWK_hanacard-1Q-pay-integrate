@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">1Q 내맘대로카드 서비스</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap" id="groupAll">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 2</span>
+							변경할 서비스를<br />
+							선택해 주세요.
+						</h2>
+						<div class="page-info">
+							<p class="page-info-text">최대 3개 영역에서 1개씩 선택 가능합니다.</p>
+						</div>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 2단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="sorting-area js-ui-accordion js-on-scroll-fixed" data-focus-open="false">
+							<div class="sorting-inner js-ui-accordion__item js-on-scroll-fixed__target">
+								<button type="button" class="sorting-opener js-ui-accordion__opener">
+									<span class="for-a11y">
+										탭 영역
+										<span class="open-text">펼치기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="sorting-layer js-ui-accordion__layer">
+									<div class="sorting-contents">
+										<div class="sorting-list">
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<a href="#groupAll" class="ui-label js-hash-scroll-link is-active">
+														<span class="ui-label-text">전체</span>
+													</a>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<a href="#group1" class="ui-label js-hash-scroll-link">
+														<span class="ui-label-text">외식</span>
+													</a>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<a href="#group2" class="ui-label js-hash-scroll-link">
+														<span class="ui-label-text">레저/문화</span>
+													</a>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<a href="#group3" class="ui-label js-hash-scroll-link">
+														<span class="ui-label-text">쇼핑</span>
+													</a>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<a href="#group4" class="ui-label js-hash-scroll-link">
+														<span class="ui-label-text">트렌드 쇼핑</span>
+													</a>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<a href="#group5" class="ui-label js-hash-scroll-link">
+														<span class="ui-label-text">교통</span>
+													</a>
+												</div>
+											</div>
+											<div class="sorting-item">
+												<div class="ui-radio-block type-tab">
+													<a href="#group6" class="ui-label js-hash-scroll-link">
+														<span class="ui-label-text">생활비</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section">
+							<div class="page-section-group type-margin-reset" id="group1">
+								<div class="section-title">
+									<h3 class="title">외식</h3>
+								</div>
+								<div class="info-list margin-top-15">
+									<div class="info-item type-indent default-text"><span class="indent">-</span>지난달 실적 30만원 이상 시 하나머니 적립 제공</div>
+								</div>
+								<div class="ui-checkbox-group type-full type-size-basic margin-top-10">
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox1-1" />
+										<label for="checkbox1-1" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="box-checkbox-tag">이용중</span>
+												<span class="title basic-text">커피1 30% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">스타벅스, 커피빈</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox1-2" />
+										<label for="checkbox1-2" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">커피2 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">커피 가맹점</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox1-3" />
+										<label for="checkbox1-3" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">점심값 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible">
+														<span class="default-text">
+															국내일반음식점 : <br />
+															한식/양식/중식/일식 등<br />
+															적립 제공 시간 : 11시 ~ 14시
+														</span>
+													</div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox1-4" />
+										<label for="checkbox1-4" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">베이커리 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">파리바게트, 파리크라상</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox1-5" />
+										<label for="checkbox1-5" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">배달앱 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">배달의 민족</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+								</div>
+								<ul class="info-list margin-top-10">
+									<li class="info-item">커피1/커피2/점심값/베이커리 : 오프라인 이용금액에 한함, 백화점/할인점/아울렛/쇼핑몰/공항/호텔/리조트/역사 입점 점포 제외</li>
+								</ul>
+							</div>
+
+							<div class="page-section-group type-line" id="group2">
+								<div class="section-title">
+									<h3 class="title">레저/문화</h3>
+								</div>
+								<div class="info-list margin-top-15">
+									<div class="info-item type-indent default-text"><span class="indent">-</span>지난달 실적 30만원 이상 시 하나머니 적립 제공</div>
+								</div>
+								<div class="ui-checkbox-group type-full type-size-basic margin-top-10">
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox2-1" />
+										<label for="checkbox2-1" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="box-checkbox-tag">이용중</span>
+												<span class="title basic-text">골프 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">골프, 스크린골프</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox2-2" />
+										<label for="checkbox2-2" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">스포츠센터 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">헬스, 수영장</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox2-3" />
+										<label for="checkbox2-3" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">공연 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">인터파크티켓, 티켓링크</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox2-4" />
+										<label for="checkbox2-4" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">동물병원 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible">
+														<span class="default-text">동물병원 가맹점</span>
+													</div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox2-5" />
+										<label for="checkbox2-5" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">서점 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">교보문고, Yes24, 알라딘</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+								</div>
+								<ul class="info-list margin-top-10">
+									<li class="info-item">골프 : 오프라인 이용금액에 한함, 백화점/할인점/아울렛/쇼핑몰/공항/호텔/리조트/역사 입점 점포 제외</li>
+								</ul>
+							</div>
+
+							<div class="page-section-group type-line" id="group3">
+								<div class="section-title">
+									<h3 class="title">쇼핑</h3>
+								</div>
+								<div class="info-list margin-top-15">
+									<div class="info-item type-indent default-text"><span class="indent">-</span>지난달 실적 30만원 이상 시 하나머니 적립 제공</div>
+								</div>
+								<div class="ui-checkbox-group type-full type-size-basic margin-top-10">
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox3-1" />
+										<label for="checkbox3-1" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="box-checkbox-tag">이용중</span>
+												<span class="title basic-text">마트 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">이마트, 롯데마트, 홈플러스</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox3-2" />
+										<label for="checkbox3-2" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">백화점 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">롯데백화점, 신세계백화점, 현대백화점</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox3-3" />
+										<label for="checkbox3-3" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">슈퍼마켓 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible">
+														<span class="default-text">
+															이마트 에브리데이, 롯데슈퍼,<br />
+															GS슈퍼, 홈플러스 익스프레스
+														</span>
+													</div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox3-4" />
+										<label for="checkbox3-4" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">소셜커머스 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">쿠팡, 위메프, 티켓몬스터</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox3-5" />
+										<label for="checkbox3-5" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">홈쇼핑 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible">
+														<span class="default-text">
+															GS홈쇼핑, 롯데홈쇼핑, 현대홈쇼핑,<br />
+															CJ오쇼핑, NS홈쇼핑, 홈앤쇼핑
+														</span>
+													</div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox3-6" />
+										<label for="checkbox3-6" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">편의점 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">GS, CU, 세븐일레븐</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+								</div>
+								<ul class="info-list margin-top-10">
+									<li class="info-item">마트/백화점/슈퍼마켓 : 오프라인 이용금액에 한함, 임대매장 이용금액 제외</li>
+									<li class="info-item">소셜커머스 : 공식 홈페이지 및 모바일 App, 이용시</li>
+									<li class="info-item">편의점 : 오프라인 이용금액에 한함, 백화점/할인점/아울렛/쇼핑몰/공항/호텔/리조트/역사 입점 점포 제외</li>
+								</ul>
+							</div>
+
+							<div class="page-section-group type-line" id="group4">
+								<div class="section-title">
+									<h3 class="title">트렌드 쇼핑</h3>
+								</div>
+								<div class="info-list margin-top-15">
+									<div class="info-item type-indent default-text"><span class="indent">-</span>지난달 실적 30만원 이상 시 하나머니 적립 제공</div>
+								</div>
+								<div class="ui-checkbox-group type-full type-size-basic margin-top-10">
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox4-1" />
+										<label for="checkbox4-1" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="box-checkbox-tag">이용중</span>
+												<span class="title basic-text">SPA브랜드 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">유니클로, 자라</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox4-2" />
+										<label for="checkbox4-2" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">드럭스토어 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">올리브영</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox4-3" />
+										<label for="checkbox4-3" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">가구 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">이케아</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox4-4" />
+										<label for="checkbox4-4" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">해외 7% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">해외 가맹점</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">5천 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+								</div>
+								<ul class="info-list margin-top-10">
+									<li class="info-item">SPA브랜드/드럭스토어 : 오프라인 이용금액에 한함, 백화점/할인점/아울렛/쇼핑몰/공항/호텔/리조트/역사 입점 점포 제외</li>
+									<li class="info-item">가구 : 오프라인 이용금액 한함, 식음료 매장 및 편의점 이용금액 제외</li>
+								</ul>
+							</div>
+
+							<div class="page-section-group type-line" id="group5">
+								<div class="section-title">
+									<h3 class="title">교통</h3>
+								</div>
+								<div class="info-list margin-top-15">
+									<div class="info-item type-indent default-text"><span class="indent">-</span>지난달 실적 30만원 이상 시 하나머니 적립 제공</div>
+								</div>
+								<div class="ui-checkbox-group type-full type-size-basic margin-top-10">
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox5-1" />
+										<label for="checkbox5-1" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="box-checkbox-tag">이용중</span>
+												<span class="title basic-text">주유1 100 하나머니/L 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">SK에너지</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox5-2" />
+										<label for="checkbox5-2" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">주유2 100 하나머니/L 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">GS칼텍스</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox5-3" />
+										<label for="checkbox5-3" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">주유3 100 하나머니/L 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">S-Oil</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox5-4" />
+										<label for="checkbox5-4" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">주유4 100 하나머니/L 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">현대오일뱅크</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox5-5" />
+										<label for="checkbox5-5" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">주유5 100 하나머니/L 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">알뜰주유소</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox5-6" />
+										<label for="checkbox5-6" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">택시 10% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">택시 가맹점</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox5-7" />
+										<label for="checkbox5-7" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">고속철도 10% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">KTX,SRT</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox5-8" />
+										<label for="checkbox5-8" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">항공권 10% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">인터파크 항공, 인터파크 투어</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+								</div>
+								<ul class="info-list margin-top-10">
+									<li class="info-item">주유 1/2/3/4/5 : 휘발유, 등유, 경유, LPG는 정유사 고시 휘발유가 기준으로 주유량(리터)을 산정하여 하나머니 적립 제공</li>
+									<li class="info-item">택시 : 오프라인 이용금액에 한함</li>
+									<li class="info-item">항공권 : 아시아나, 대한항공, 에어부산, 제주항공, 진에어, 티웨이항공권 구매에 한함 (공시 홈페이지 및 모바일웹, App 이용 시)</li>
+								</ul>
+							</div>
+
+							<div class="page-section-group type-line" id="group6">
+								<div class="section-title">
+									<h3 class="title">생활비</h3>
+								</div>
+								<div class="info-list margin-top-15">
+									<div class="info-item type-indent default-text"><span class="indent">-</span>지난달 실적 30만원 이상 시 하나머니 적립 제공</div>
+								</div>
+								<div class="ui-checkbox-group type-full type-size-basic margin-top-10">
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox6-1" />
+										<label for="checkbox6-1" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="box-checkbox-tag">이용중</span>
+												<span class="title basic-text">학원 5% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">학원 가맹점 (온라인 이용금액 제외)</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox6-2" />
+										<label for="checkbox6-2" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">병원 5% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">병원 가맹점</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" id="checkbox6-3" />
+										<label for="checkbox6-3" class="ui-label type-block">
+											<span class="ui-label-text">
+												<span class="title basic-text">약국 5% 적립</span>
+												<div class="form-flex type-align-bottom margin-top-5">
+													<div class="form-flex-cell type-flexible"><span class="default-text">약국 가맹점</span></div>
+													<div class="form-flex-cell align-right"><span class="small-text">1만 하나머니</span></div>
+												</div>
+											</span>
+										</label>
+									</div>
+								</div>
+								<ul class="info-list margin-top-10">
+									<li class="info-item">학원 : 외국어, 예체능, 기술/직업훈련, 자동차운전, 무술도장, 입시/보습학원에 한함 (오프라인 이용금액에 한함)</li>
+									<li class="info-item">병원 : 종합병원,일반병원,한의원에 한함</li>
+									<li class="info-item">약국 : 백화점/할인점/아울렛/쇼핑몰/공항/호텔/리조트/역사 입점 점포 제외</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="section-title margin-bottom-25">
+								<h3 class="title">선택확인</h3>
+							</div>
+							<div class="form-detail">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">적용월</dt>
+										<dd class="form-detail-group">2021.04</dd>
+									</div>
+									<div class="form-detail-item type-block">
+										<dt class="form-detail-title">다음달 적용 서비스</dt>
+										<dd class="form-detail-group">
+											<div class="form-detail-group-item margin-top-10">선택1. 외식 : 커피1</div>
+											<div class="form-detail-group-item margin-top-10">선택3. 쇼핑 : 마트</div>
+											<div class="form-detail-group-item margin-top-10">선택6. 생활비 : 병원</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">3개 영역에서 1개 서비스씩 선택 가능하며, 선택한 적립대상 가맹점 일시불/할부 이용금액에 따라 하나머니가 적립됩니다.</li>
+										<li class="info-item">
+											내맘대로 서비스는 매월 1회 변경 가능하며, 변경 신청 다음달 1일부터 적용됩니다.<br />
+											* 단, 카드 사용등록 전 변경된 서비스는 신청하신 다음날부터 적용됩니다.
+										</li>
+										<li class="info-item">가족카드는 본인카드 기준으로 서비스 적용되며 서비스변경 신청은 본인회원만 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">선택 완료</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

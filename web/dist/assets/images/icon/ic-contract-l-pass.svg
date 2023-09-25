@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-2{fill:#fff;stroke:#2d3239;stroke-width:1.5px}.cls-9{fill:none}.cls-8{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_contract_l" transform="translate(-24 -652)">
+        <g id="그룹_9458" data-name="그룹 9458" transform="translate(33.75 662.523)">
+            <g id="사각형_11970" data-name="사각형 11970" class="cls-2" transform="translate(.25 -1.523)">
+                <rect class="cls-8" width="23" height="28" rx="4"/>
+                <rect class="cls-9" x=".75" y=".75" width="21.5" height="26.5" rx="3.25"/>
+            </g>
+        </g>
+        <circle id="타원_1876" data-name="타원 1876" cx="6.5" cy="6.5" r="6.5" transform="translate(48 675.5)" style="fill:#fff"/>
+        <circle id="타원_1811" data-name="타원 1811" cx="5.75" cy="5.75" r="5.75" transform="translate(50.5 677.5)" style="fill:#7dedf3"/>
+        <g id="타원_1810" data-name="타원 1810" transform="translate(48 675.5)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+            <circle class="cls-8" cx="6.5" cy="6.5" r="6.5"/>
+            <circle class="cls-9" cx="6.5" cy="6.5" r="5.75"/>
+        </g>
+        <path id="패스_3490" data-name="패스 3490" d="m-10170.5 5360.766 1.658 1.8 2.532-2.894" transform="translate(10222.904 -4679.114)" style="stroke-linejoin:round;stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+        <g id="그룹_11920" data-name="그룹 11920" transform="translate(1 .5)">
+            <g id="패스_12073" data-name="패스 12073" style="stroke-linecap:round;fill:#fff">
+                <path class="cls-8" d="m4.75 4.323-1.7-.792-.32-.148-.317.15-1.663.784V-.25h4v4.573z" transform="translate(41.75 672.5)"/>
+                <path d="M1.5.5v2.634l1.229-.58L4 3.146V.5H1.5M0-1h5.5v6.5L2.733 4.21 0 5.5V-1z" style="fill:#2d3239;stroke:none" transform="translate(41.75 672.5)"/>
+            </g>
+            <g id="사각형_11489" data-name="사각형 11489" class="cls-2" transform="translate(40.5 665.5)">
+                <rect class="cls-8" width="8" height="8" rx="4"/>
+                <rect class="cls-9" x=".75" y=".75" width="6.5" height="6.5" rx="3.25"/>
+            </g>
+        </g>
+    </g>
+</svg>

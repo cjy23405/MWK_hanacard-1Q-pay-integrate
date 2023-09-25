@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="usage-icon-19" transform="translate(-46 -695)">
+    <rect id="사각형_7868" data-name="사각형 7868" width="36" height="36" transform="translate(46 695)" fill="none"/>
+    <g id="사각형_8420" data-name="사각형 8420" transform="translate(49 698.499)" fill="#fff" stroke="#2d3239" stroke-width="1.5">
+      <rect width="23" height="29.5" rx="5" stroke="none"/>
+      <rect x="0.75" y="0.75" width="21.5" height="28" rx="4.25" fill="none"/>
+    </g>
+    <rect id="사각형_5634" data-name="사각형 5634" width="13.919" height="4.761" rx="2.38" transform="translate(61.04 723.239)" fill="#a2a2a2"/>
+    <rect id="사각형_5635" data-name="사각형 5635" width="13.602" height="4.761" rx="2.38" transform="translate(59 719.62)" fill="#a2a2a2"/>
+    <rect id="사각형_5636" data-name="사각형 5636" width="13.602" height="4.761" rx="2.38" transform="translate(63.397 716)" fill="#a2a2a2"/>
+    <g id="사각형_5637" data-name="사각형 5637" transform="translate(61.999 723)" fill="none" stroke="#2d3239" stroke-width="1.5">
+      <rect width="15" height="5" rx="2.5" stroke="none"/>
+      <rect x="0.75" y="0.75" width="13.5" height="3.5" rx="1.75" fill="none"/>
+    </g>
+    <g id="사각형_5638" data-name="사각형 5638" transform="translate(60 719.5)" fill="none" stroke="#2d3239" stroke-width="1.5">
+      <rect width="15" height="5" rx="2.5" stroke="none"/>
+      <rect x="0.75" y="0.75" width="13.5" height="3.5" rx="1.75" fill="none"/>
+    </g>
+    <g id="사각형_5639" data-name="사각형 5639" transform="translate(64 716)" fill="none" stroke="#2d3239" stroke-width="1.5">
+      <rect width="15" height="5" rx="2.5" stroke="none"/>
+      <rect x="0.75" y="0.75" width="13.5" height="3.5" rx="1.75" fill="none"/>
+    </g>
+    <g id="그룹_5867" data-name="그룹 5867" transform="translate(54.51 705.972)">
+      <path id="패스_2252" data-name="패스 2252" d="M3649.636,5413.028l2,6,2.5-6,2.5,6,2-6" transform="translate(-3648.147 -5412)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="선_11" data-name="선 11" x2="2" transform="translate(-0.01 3.528)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+      <line id="선_166" data-name="선 166" x2="2" transform="translate(9.99 3.528)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

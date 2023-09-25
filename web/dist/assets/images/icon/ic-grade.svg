@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{stroke:#2d3239;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="ic_grade" transform="translate(-26.33 -750.768)">
+        <path id="사각형_7870" data-name="사각형 7870" class="cls-1" transform="translate(26.33 750.768)" d="M0 0h36v36H0z"/>
+        <g id="사각형_9205" data-name="사각형 9205" class="cls-2" transform="translate(29.33 756.768)">
+            <rect width="30" height="24" rx="4" style="stroke:none"/>
+            <rect class="cls-1" x=".75" y=".75" width="28.5" height="22.5" rx="3.25"/>
+        </g>
+        <path id="다각형_63" data-name="다각형 63" d="M6.547.972a.5.5 0 0 1 .906 0l1.53 3.282a.5.5 0 0 0 .39.285l3.577.453a.5.5 0 0 1 .281.859L10.6 8.341a.5.5 0 0 0-.148.457l.678 3.571a.5.5 0 0 1-.734.531l-3.153-1.749a.5.5 0 0 0-.485 0L3.607 12.9a.5.5 0 0 1-.734-.531L3.551 8.8a.5.5 0 0 0-.151-.459L.769 5.851a.5.5 0 0 1 .281-.859l3.577-.453a.5.5 0 0 0 .39-.285z" transform="translate(38.83 762.768)" style="fill:#7dedf3"/>
+        <path id="다각형_64" data-name="다각형 64" class="cls-2" d="M6.547.972a.5.5 0 0 1 .906 0l1.53 3.282a.5.5 0 0 0 .39.285l3.577.453a.5.5 0 0 1 .281.859L10.6 8.341a.5.5 0 0 0-.148.457l.678 3.571a.5.5 0 0 1-.734.531l-3.153-1.749a.5.5 0 0 0-.485 0L3.607 12.9a.5.5 0 0 1-.734-.531L3.551 8.8a.5.5 0 0 0-.151-.459L.769 5.851a.5.5 0 0 1 .281-.859l3.577-.453a.5.5 0 0 0 .39-.285z" transform="translate(37.331 761.768)"/>
+    </g>
+</svg>

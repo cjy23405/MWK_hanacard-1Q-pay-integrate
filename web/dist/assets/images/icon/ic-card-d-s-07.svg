@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+    <defs>
+        <style>
+            .cls-3,.cls-4,.cls-8{fill:none}.cls-3,.cls-4{stroke:#111;stroke-width:1.5px}.cls-4{stroke-linecap:round;stroke-linejoin:round}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="card_d_s_ic_07" transform="translate(6208 -2052)">
+        <g id="그룹_12281" data-name="그룹 12281" transform="translate(-6452 834)">
+            <rect id="사각형_7186" data-name="사각형 7186" width="27" height="27" rx="8" transform="translate(244 1218)" style="fill:#f5f6f8"/>
+        </g>
+        <path id="사각형_14445" data-name="사각형 14445" transform="translate(-6202 2058)" style="fill:transparent" d="M0 0h15v15H0z"/>
+        <g id="사각형_14446" data-name="사각형 14446" class="cls-3">
+            <path class="cls-7" d="M0 0h11v2a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V0z" transform="translate(-6202 2069)"/>
+            <path class="cls-8" d="M.75.75h9.5V2A1.25 1.25 0 0 1 9 3.25H2A1.25 1.25 0 0 1 .75 2V.75z" transform="translate(-6202 2069)"/>
+        </g>
+        <g id="사각형_14447" data-name="사각형 14447" class="cls-3">
+            <path class="cls-7" d="M2 0h7a2 2 0 0 1 2 2v10.5H0V2a2 2 0 0 1 2-2z" transform="translate(-6202 2058)"/>
+            <path class="cls-8" d="M2 .75h7A1.25 1.25 0 0 1 10.25 2v9.75H.75V2A1.25 1.25 0 0 1 2 .75z" transform="translate(-6202 2058)"/>
+        </g>
+        <g id="사각형_14448" data-name="사각형 14448" class="cls-4">
+            <path class="cls-7" d="M0 0h5v4H0z" transform="translate(-6199 2061)"/>
+            <path class="cls-8" d="M.75.75h3.5v2.5H.75z" transform="translate(-6199 2061)"/>
+        </g>
+        <path id="패스_12316" data-name="패스 12316" class="cls-4" d="M-4583.066 482.811h3.3V473.2l-1.58-1.3" transform="translate(-1607.934 1587)"/>
+        <g id="패스_12317" data-name="패스 12317" style="fill:none">
+            <path class="cls-7" d="M2.51 0H4v5H2.51a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" transform="translate(-6191 2060.25)"/>
+            <path d="M2.5 1.5a.5.5 0 0 0-.49.5v1a.5.5 0 0 0 .49.5v-2M2.51 0H4v5H2.51a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" style="fill:#111;stroke:none" transform="translate(-6191 2060.25)"/>
+        </g>
+        <path id="패스_12318" data-name="패스 12318" d="M.75 4.354v3.9a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-4.9a2 2 0 0 0-2-2h-3z" transform="translate(-6196.452 2062)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#111;stroke-width:1.5px;fill:#f5f6f8"/>
+        <path id="선_504" data-name="선 504" class="cls-3" transform="translate(-6193.5 2067)" d="M0 0h3.5"/>
+        <path id="선_505" data-name="선 505" class="cls-3" transform="translate(-6193.5 2069.5)" d="M0 0h3.5"/>
+    </g>
+</svg>

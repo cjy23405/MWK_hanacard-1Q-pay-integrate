@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">쿠폰 상세</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-coupon-detail">
+						<div class="coupon-detail">
+							<div class="coupon-detail-info">
+								<!-- 2022.03.04 : mod : 로고 이미지 구조 변경 -->
+								<!-- DD : 이미지 없을 때
+								<div class="logo-image type-store">
+									<div class="logo-image-inner"></div>
+								</div>
+								-->
+
+								<!-- DD : 이미지 에러
+								<div class="logo-image type-store">
+									<div class="logo-image-inner">
+										<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+									</div>
+								</div>
+								-->
+
+								<!-- DD : 이미지 있을 때 -->
+								<div class="logo-image type-store">
+									<div class="logo-image-inner">
+										<!-- 2022.04.27 : mod : alt 값 변경 -->
+										<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+									</div>
+								</div>
+								<!-- //2022.03.04 : mod : 로고 이미지 구조 변경 -->
+								<div class="coupon-detail-brand">포시즌스 호텔 서울</div>
+								<div class="coupon-detail-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+								<div class="coupon-detail-date">2021.05.01 ~ 2021.07.31 <span class="color-wrong">(7일 남음) (기간만료) (사용완료)</span></div>
+								<div class="coupon-detail-buttons">
+									<a href="" class="coupon-detail-button type-share" role="button"><span class="for-a11y">공유하기</span></a>
+									<!-- data-toggle 속성으로 토글기능 사용 / 활성화시 is-active 클래스 추가 -->
+									<button type="button" class="coupon-detail-button type-heart is-active" data-toggle="true"><span class="for-a11y">찜하기</span></button>
+								</div>
+							</div>
+
+							<!-- Case : 기본 -->
+							<div class="coupon-code type-barcode">
+								<div class="coupon-code-barcode">
+									<div class="coupon-code-barcode-inner">
+										<img src="./assets/images/_dummy/barcode.jpg" alt="바코드 이미지" class="coupon-code-barcode-image" />
+									</div>
+								</div>
+								<div class="coupon-code-barcode-num">580000020769</div>
+							</div>
+							<!-- //Case : 기본 -->
+
+							<!-- Case : 기간만료 -->
+							<div class="coupon-code type-barcode type-expire">
+								<div class="coupon-code-barcode">
+									<div class="coupon-code-barcode-inner">
+										<!-- 2022.04.27 : mod : alt 값 변경 -->
+										<img src="./assets/images/_dummy/barcode.jpg" alt="바코드 이미지 기간만료" class="coupon-code-barcode-image" />
+									</div>
+								</div>
+								<div class="coupon-code-barcode-num">580000020769</div>
+								<div class="stamp type-large">
+									<div class="stamp-text">
+										기간<br />
+										만료
+									</div>
+								</div>
+							</div>
+							<!-- //Case : 기간만료 -->
+
+							<!-- Case : 사용완료 -->
+							<div class="coupon-code type-barcode type-expire">
+								<div class="coupon-code-barcode">
+									<div class="coupon-code-barcode-inner">
+										<!-- 2022.04.27 : mod : alt 값 변경 -->
+										<img src="./assets/images/_dummy/barcode.jpg" alt="바코드 이미지 사용완료" class="coupon-code-barcode-image" />
+									</div>
+								</div>
+								<div class="coupon-code-barcode-num">580000020769</div>
+								<div class="stamp type-large">
+									<div class="stamp-text">
+										사용<br />
+										완료
+									</div>
+								</div>
+							</div>
+							<!-- //Case : 사용완료 -->
+
+							<p class="ui-notice">하나카드로 결제 시 혜택이 제공됩니다.</p>
+							<p class="ui-notice">기간 동안 <span class="color-wrong">제한 없이</span> 사용 가능합니다.</p>
+						</div>
+
+						<!-- 2022.02.24 : mod : 상세 영역 구조 변경 -->
+						<div class="wcms-data">
+							<section class="event-data">
+								<!-- DD : 이 안에 wcms 상세 데이터 출력 -->
+								// wcms 상세 데이터 출력
+							</section>
+						</div>
+						<!-- //2022.02.24 : mod : 상세 영역 구조 변경 -->
+					</div>
+
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">사용하기</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

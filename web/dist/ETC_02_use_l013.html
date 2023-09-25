@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-precautions">안내&middot;유의사항</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 안내 유의사항 -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-precautions">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">안내&middot;유의사항</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<div class="accordion-info-list js-ui-accordion" data-once="true">
+										<div class="accordion-info-item js-ui-accordion__item" data-initial-open="true">
+											<button class="accordion-info-opener js-ui-accordion__opener">
+												<span class="accordion-info-title">카드이용 유의사항</span>
+												<span class="for-a11y">
+													내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+											<div class="accordion-info-detail js-ui-accordion__layer">
+												<div class="accordion-info-detail-inner">
+													<ul class="info-list">
+														<li class="info-item">
+															카드사는 회원의 카드사/타금융권에 대한 채무연체, 세금체납, 파산신청, 개인회생 신청 및 이에 준하는 사유가 발생한 경우 회원의 카드 이용을 정지할 수 있습니다.
+														</li>
+														<li class="info-item">단기카드대출(현금서비스) 과다 이용시 신용등급에 부정적 영향을 미칠 수 있습니다.</li>
+														<li class="info-item">포인트의 유효기간은 5년(60개월) 이며, 유효기간이 만료된 포인트는 월단위로 소멸됩니다.</li>
+														<li class="info-item">
+															통신,전기,전화요금 등 월납요금 신용카드 자동납부 시 신용카드 연체, 분실, 탈회, 거래정지, 한도부족, 기타사유로 자동납부가 거절될 수 있으며 월납요금 연체에 따른 가산금이
+															부과될 수 있으므로 유의하여 주시기 바랍니다.
+														</li>
+														<li class="info-item">유료 자동납부가 거절될 수 있으며 월납요금 연체에 따른 가산금이 부과될 수 있으므로 유의하여 주시기 바랍니다.</li>
+														<li class="info-item">
+															월납요금 자동이체(전기,통신,전화,보험요금 등) 카드의 재발급시 해당요금이 미납되어 계약 실효 등의 불이익이 발생할 수 있으므로 반드시 보험사, 통신사 등 수납대행 기관에
+															카드변경 신청을 하여 주시기 바랍니다.
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-info-item js-ui-accordion__item">
+											<button class="accordion-info-opener js-ui-accordion__opener">
+												<span class="accordion-info-title">자동이체안내</span>
+												<span class="for-a11y">
+													내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+											<div class="accordion-info-detail js-ui-accordion__layer">
+												<div class="accordion-info-detail-inner">
+													<ul class="info-list">
+														<li class="info-item">
+															납부계좌 개설기관의 영업 마감시간(16시)이후 납부계좌에 입금된 금액에 대해서는 납부계좌 개설 기관의 사정에 따라 당일 출금되지 못하여 연체로 처리 될 수 있으므로 유의하시기
+															바랍니다.
+														</li>
+														<li class="info-item">신용카드와 체크카드의 납부대금은 각 카드의 납부계좌에서 자동이체 출금 됩니다.</li>
+														<li class="info-item">KEB하나은행 계좌 외 타행 납부계좌를 이용하시는 경우 결제 다음 영업일에 입금 확인 및 한도가 복원됩니다.</li>
+														<li class="info-item">
+															타행 납부계좌 중 금융결제원 은행을 이용하시는 경우 2~3영업일 간격으로 출금 되며, 연체 발생 시 출금일 까지의 연체료 고객님이 부담하셔야 합니다. 금융결제원 은행의 경우
+															즉시출금 불가하니 이용에 유의하시기 바랍니다. (금융결제원 은행 : 상호저축은행, 산림조합중앙회, HSBC, 도이치은행, 구)씨티, 구)축협, 증권사 계좌, 국민은행 가상계좌,
+															케이뱅크, 카카오뱅크)
+														</li>
+														<li class="info-item">
+															<div class="indent-block">자동납부 업무 마감시간 이후 즉시출금 또는 가상계좌 입금을 원하시는 경우 하나카드 고객센터 및 홈페이지, 모바일 앱을 이용하시기 바랍니다.</div>
+															<ul class="info-list">
+																<li class="info-item type-indent"><span class="indent">-</span>고객센터 : 09시~18시(토,일/공휴일 제외)</li>
+																<li class="info-item type-indent">
+																	<span class="indent">-</span>홈페이지 및 모바일 앱 : KEB하나은행 납부계좌 - 08시~23시30분(365일 가능), KEB하나은행 외 타행 납부계좌 - 08시~22시 (토,일/공휴일 제외)
+																</li>
+																<li class="info-item type-indent"><span class="indent">-</span>가상계좌 : KEB하나은행/국민은행/농협은행 - 06시~23시 30분(365일 가능)</li>
+															</ul>
+														</li>
+														<li class="info-item">
+															납부일 또는 연체 중 즉시출금,가상계좌 등의 방법으로 입금하실 경우 이중출금이 발생 될 수 있으며, 이중출금이 발생 된 경우 다음 영업일 오전 10시 30분 이후에 납부계좌로 입금
+															됩니다.
+														</li>
+														<li class="info-item">납부일에 실제 출금되는 금액은 매출취소,선결제 등에 따라 이용대금명세서에 안내 된 금액과 상이할 수 있습니다.</li>
+														<li class="info-item">
+															납부일 당일 고객님께 입금해드릴 금액(매출취소,포인트캐쉬백,할인비용 등)이 있는 경우 납부대금에서 대체결제 해드립니다. 납부대금에서 대체결제를 원하지 않으시는 경우 납부일
+															전 영업일까지 고객센터로 계좌 입금 요청 하시기 바랍니다.
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-info-item js-ui-accordion__item">
+											<button class="accordion-info-opener js-ui-accordion__opener">
+												<span class="accordion-info-title">해외이용안내</span>
+												<span class="for-a11y">
+													내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+											<div class="accordion-info-detail js-ui-accordion__layer">
+												<div class="accordion-info-detail-inner">
+													<ul class="info-list">
+														<li class="info-item">
+															미화로 환산한 해외이용금액(해외사이트 거래 포함)에 접수일의 KEB하나은행 최초고시 전산환 매도율(송금보낼 때 적용되는 환율)을 적용하여 원화로 환산한 후, 국제브랜드사가
+															부과하는 수수료 (VISA/mastercard 1.0%, One Way(JCB) 1.0%, Amex 1.4%, UPI 0.6%)와 하나카드가 부과하는 해외서비스 수수료(신용카드 0.2%, 체크카드 US$0.5)를 추가한 금액이
+															청구됩니다.
+														</li>
+														<li class="info-item">
+															해외 이용 시 자국통화결제서비스(Dynamic Currency Conversion)를 이용하실 경우 실제 이용금액의 약 5~10% 수준의 DCC 수수료가 부과되어 결제될 수 있으니 이용에 유의하시기
+															바랍니다.
+														</li>
+														<li class="info-item">해외현금인출 시 해당 국가의 현지통화로 거래하시기 바랍니다.(달러결제 시 DCC 수수료 부과됨)</li>
+														<li class="info-item">
+															체크카드 물품구매 시 매입시점에 계좌에서 인출됩니다. 계좌잔액 부족 등으로 출금되지 않을 경우 납부일까지 매영업일 출금시도를 하며 최종 미출금 시에는 납부일에 신용청구
+															됩니다.
+														</li>
+														<li class="info-item">해외결제차단 서비스를 이용하시면 해외부정사용을 예방하실 수 있습니다.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="accordion-info-item js-ui-accordion__item">
+											<button class="accordion-info-opener js-ui-accordion__opener">
+												<span class="accordion-info-title">안내사항</span>
+												<span class="for-a11y">
+													내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+											<div class="accordion-info-detail js-ui-accordion__layer">
+												<div class="accordion-info-detail-inner">
+													<ul class="info-list">
+														<li class="info-item">최근 1년간 명세서를 확인할 수 있습니다.</li>
+														<li class="info-item">명세서 작성일 이전의 청구금액은 ‘납부예정금액’에서 확인 가능합니다.</li>
+														<li class="info-item">이용대금명세서 작성일 이후의 매출취소 및 선결제금액은 명세서에 반영되지 않습니다.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 안내 유의사항 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-precautions');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

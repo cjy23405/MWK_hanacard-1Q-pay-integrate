@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <linearGradient id="2xnib4r51a" x1=".041" y1=".078" x2=".939" y2=".997" gradientUnits="objectBoundingBox">
+            <stop offset=".239" stop-color="#009d9d"/>
+            <stop offset=".308" stop-color="#0b979c"/>
+            <stop offset=".43" stop-color="#298a9c"/>
+            <stop offset=".592" stop-color="#59739b"/>
+            <stop offset=".783" stop-color="#9c549a"/>
+            <stop offset=".909" stop-color="#cc3f9a"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(-31 -458)">
+        <rect data-name="사각형 13986" width="36" height="36" rx="12" transform="translate(31 458)" style="fill:#fff"/>
+        <path data-name="사각형 17177" style="fill:none" d="M0 0h20v20H0z" transform="translate(39 466)"/>
+        <g data-name="그룹 14556">
+            <path data-name="사각형 14076" style="fill:none" d="M0 0h20v20H0z" transform="translate(39 466)"/>
+            <path data-name="패스 13712" d="m110.245 153.551-1.738-14.012a1.646 1.646 0 0 0-1.633-1.443h-.224c-.048 0-.095 0-.142.007h-.047a1.646 1.646 0 0 0-1.329.945l-4.226 9.117-4.226-9.117a1.646 1.646 0 0 0-1.45-.953h-.324a1.646 1.646 0 0 0-1.633 1.443l-1.738 14.012a1.646 1.646 0 0 0 1.635 1.85h.555a1.646 1.646 0 0 0 1.638-1.482l.805-8.02 3.219 6.821a1.7 1.7 0 0 0 3.039 0l3.193-6.765.8 7.964a1.646 1.646 0 0 0 1.638 1.482h.554a1.646 1.646 0 0 0 1.634-1.849z" transform="translate(-51.891 329.171)" style="fill:url(#2xnib4r51a)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-revolving">일부결제금액 이월약정(리볼빙)</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 일부결제금액 이월약정(리볼빙) -->
+			<div class="layer-wrap layer-wrap--full layer-clause-detail" data-layer="layer-revolving">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2022.08.18 : mod : 문구 수정 -->
+								<h2 class="header__title">일부결제금액이월약정(리볼빙) 안내</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<!-- 2022.08.18 : mod : 문구 수정 -->
+								<p class="ui-layer-text">
+									이번달 카드 결제금액이 걱정된다면,<br />
+									리볼빙으로 결제금액을 조정해보세요.
+								</p>
+								<div class="form-list-wrap">
+									<div class="form-item">
+										<div class="ui-form-title">
+											<strong class="title">결제비율</strong>
+										</div>
+										<div class="ui-rangeslider margin-top-45" data-rangeslider-watch="#repaymentPeriod1">
+											<!-- 2022.08.31 : mod : max값 수정 -->
+											<input type="range" min="10" max="100" step="5" value="70" title="결제비율(%)" />
+											<div class="chart-bubble" aria-hidden="true" inert>
+												<div class="chart-bubble-text"><span id="repaymentPeriod1"></span>%</div>
+											</div>
+											<div class="ui-rangeslider-gradation" aria-hidden="true" inert>
+												<div class="ui-rangeslider-gradation-item">
+													<div class="ui-rangeslider-gradation-item-text">10%</div>
+												</div>
+												<!-- 2022.08.31 : mod : 포지션값 수정 -->
+												<div class="ui-rangeslider-gradation-item type-custom" style="left: 44.907051%">
+													<div class="ui-rangeslider-gradation-item-text">50%</div>
+												</div>
+												<div class="ui-rangeslider-gradation-item">
+													<!-- 2022.08.31 : mod : 문구수정 -->
+													<div class="ui-rangeslider-gradation-item-text">100%</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="ui-form-title">
+											<strong class="title">약정기간</strong>
+										</div>
+										<div class="ui-rangeslider margin-top-45" data-rangeslider-watch="#repaymentPeriod2">
+											<input type="range" min="1" max="5" step="1" value="2" title="약정기간(연)" />
+											<div class="chart-bubble" aria-hidden="true" inert>
+												<div class="chart-bubble-text"><span id="repaymentPeriod2"></span>년</div>
+											</div>
+											<div class="ui-rangeslider-gradation" aria-hidden="true" inert>
+												<div class="ui-rangeslider-gradation-item">
+													<div class="ui-rangeslider-gradation-item-text">1년</div>
+												</div>
+												<div class="ui-rangeslider-gradation-item">
+													<div class="ui-rangeslider-gradation-item-text">5년</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<!-- 2022.10.14 : del : 약관동의 영역 삭제 -->
+										<!-- 2022.12.23 : mod : 문구변경 -->
+										<div class="ui-form-title">
+											<strong class="title">서비스 설명서</strong>
+										</div>
+										<ul class="ui-form-button-list">
+											<li class="ui-form-button-item">
+												<button type="button" class="ui-form-button ui-button-manual type-arrow">필수내용 확인하기</button>
+											</li>
+											<!-- case : 확인완료된 경우 is-confirm 클래스 추가 -->
+											<li class="ui-form-button-item">
+												<button type="button" class="ui-form-button ui-button-manual type-arrow is-confirm">필수내용 확인 완료</button>
+											</li>
+											<!-- //case : 확인완료된 경우 is-confirm 클래스 추가 -->
+										</ul>
+										<!-- //2022.12.23 : mod : 문구변경 -->
+
+										<div class="info-list margin-top-20">
+											<p class="info-item">신용상태가 개선되어 요건이 충족될 경우 금리인하를 요구할 수 있습니다.</p>
+											<!-- 2022.08.18 : mod : 문구 수정 -->
+											<p class="info-item">보유 중인 모든 카드에 적용됩니다.(가족카드 포함)</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="use-guide-area js-ui-accordion">
+									<div class="use-guide-item js-ui-accordion__item">
+										<button type="button" class="use-guide-opener js-ui-accordion__opener">
+											확인해주세요
+											<span class="for-a11y">
+												상세 내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+										<div class="use-guide-contents js-ui-accordion__layer">
+											<ul class="info-list">
+												<li class="info-item">하나카드가 정한 기준(개인신용평점 등)에 따라 일부결제금액이월약정(리볼빙) 신청이 제한될 수 있습니다.</li>
+												<li class="info-item">카드이용대금과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환하여야 합니다.</li>
+												<li class="info-item">상품 이용 전 상품설명서 및 약관을 반드시 확인하시기 바랍니다.</li>
+												<li class="info-item">일부결제금액이월약정(리볼빙) 이자율(연6.9%~19.95%)은 개인신용평점 등을 고려하여 산출된 당사 리스크등급에 따라 자동 적용됩니다.</li>
+												<li class="info-item">연체이자율(약정이율+최대 3%)은 회원별·이용상품별로 차등 적용되며, 법정 최고금리(20%)를 초과하지 않습니다.</li>
+												<li class="info-item">금융소비자는 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있으며, 그 설명을 듣고 내용을 충분히 이해한 후 거래하시기 바랍니다.</li>
+												<li class="info-item">상환능력에 비해 대출금이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</li>
+												<li class="info-item">신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</li>
+												<li class="info-item">일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</li>
+												<li class="info-item">준법심의 A-21-1064 (2021.06.28)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<!-- 2022.12.23 : mod : 버튼 문구변경, 비활성 속성 추가 및 가이드 주석 추가 -->
+							<!-- DD : 서비스 설명서 확인 완료 후 disabled 속성 삭제 -->
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose" disabled>다음</button>
+									</li>
+								</ul>
+							</div>
+							<!-- //DD : 서비스 설명서 확인 완료 후 disabled 속성 삭제 -->
+							<!-- //2022.12.23 : mod : 버튼 문구변경, 비활성 속성 추가 및 가이드 주석 추가 -->
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 일부결제금액 이월약정(리볼빙) -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-revolving');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

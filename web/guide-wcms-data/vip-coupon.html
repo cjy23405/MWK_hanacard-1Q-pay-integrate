@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합 - WCMS 컨텐츠 가이드</title>
+
+		<meta charset="euc-kr" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- favicon -->
+		<link rel="icon" href="../dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="../dist/assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="../dist/assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="../dist/assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="../dist/assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="../dist/assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="../dist/assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="../dist/assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="../dist/assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../dist/assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="../dist/assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/highlightjs/vs2015.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/codemirror/lib/codemirror.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/codemirror/theme/vscode-dark.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<header class="header">
+					<h1 class="header__title">
+						<a href="./" class="header__title__link">
+							<span class="header__title__top-text">하나카드 원큐페이 통합</span>
+							<span class="header__title__text"> WCMS 컨텐츠 가이드</span>
+						</a>
+					</h1>
+					<nav class="gnb">
+						<ul class="gnb__list"></ul>
+					</nav>
+				</header>
+
+				<div class="lnb">
+					<div class="lnb__head">
+						<h2 class="lnb__title"></h2>
+					</div>
+					<nav class="lnb__nav">
+						<ul class="lnb__list"></ul>
+					</nav>
+				</div>
+
+				<div class="contents">
+					<section class="section">
+						<div class="section__head">
+							<h3 class="section__title">본문 샘플</h3>
+						</div>
+						<section class="sub-section">
+							<div class="sub-section__head">
+								<h4 class="sub-section__title">Type 1</h4>
+							</div>
+							<div class="example">
+								<section class="example__section example__section--viewer">
+									<div class="example__section-head">
+										<h5 class="example__section-title">미리보기</h5>
+									</div>
+									<div class="viewer">
+										<iframe src="./example/vip-coupon/001-body-sample-1.html" frameborder="0"></iframe>
+									</div>
+								</section>
+								<section class="example__section example__section--code">
+									<div class="example__section-head">
+										<h5 class="example__section-title">HTML</h5>
+									</div>
+									<div class="code-viewer">
+										<pre><code class="language-html">
+<section class="wcms-section-group">
+	<div class="wcms-flex wcms-margin-small">
+		<div class="wcms-flex-cell type-flexible">
+			<h2 class="wcms-title-medium wcms-margin-none">사용처</h2>
+		</div>
+		<div class="wcms-flex-cell">
+			<a href="" class="wcms-arrow-button">바로가기</a>
+		</div>
+	</div>
+	<p class="wcms-text wcms-size-normal wcms-color-gray">SM면세점 서울점 (인사동)</p>
+</section>
+
+<section class="wcms-section-group">
+	<h2 class="wcms-title-medium">기간</h2>
+	<p class="wcms-text wcms-size-normal wcms-color-gray">2022. 1. 1 ~ 12. 31</p>
+</section>
+
+<section class="wcms-section-group">
+	<h2 class="wcms-title-medium">대상</h2>
+	<p class="wcms-text wcms-size-normal wcms-color-gray">하나카드 프리미엄 우수회원</p>
+</section>
+
+<section class="wcms-section-group">
+	<h2 class="wcms-title-medium">이용방법</h2>
+	<ol class="wcms-list wcms-size-normal">
+		<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+			<div class="wcms-list-contents">사전 전화 예약 시 하나카드 우수회원 제휴 서비스 할인 요청</div>
+		</li>
+		<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+			<div class="wcms-list-contents">결제 시 본 쿠폰 제시 및 하나카드로 결제</div>
+		</li>
+	</ol>
+</section>
+
+<section class="wcms-section-group">
+	<h2 class="wcms-title-medium">혜택</h2>
+	<p class="wcms-text wcms-size-normal wcms-color-gray"><span class="wcms-weight-medium wcms-color-red">해당 매장 식음 10% 할인</span></p>
+	<ul class="wcms-list wcms-size-small wcms-weight-light">
+		<li class="wcms-list-item wcms-color-gray" data-symbol="※">
+			<div class="wcms-list-contents">프로모션 메뉴, 룸서비스, 연회 할인 제외</div>
+		</li>
+	</ul>
+</section>
+
+<section class="wcms-section-group">
+	<h2 class="wcms-title-medium">해당매장</h2>
+	<p class="wcms-text wcms-size-normal wcms-color-gray">델비노, 모에기, Re:Bar, 온달, 금룡, 명월관, 더 뷔페, 피자힐, 파빌리온, 르파사쥬</p>
+</section>
+
+<section class="wcms-section-group">
+	<h2 class="wcms-title-medium">문의 및 예약</h2>
+	<p class="wcms-text wcms-size-normal wcms-color-gray">워커힐 호텔앤리조트 1670-0005</p>
+</section>
+
+<img src="../../../dist/assets/images/_dummy/image.png" alt="이미지 설명" class="wcms-image" />
+
+<div class="wcms-notice">
+	<div class="wcms-notice-list">
+		<section class="wcms-notice-item">
+			<div class="wcms-notice-head">
+				<h2 class="wcms-notice-title">유의사항</h2>
+			</div>
+			<div class="wcms-notice-contents">
+				<ul class="wcms-list wcms-size-small wcms-weight-light">
+					<li class="wcms-list-item type-dot wcms-color-gray">
+						<div class="wcms-list-contents">해당 혜택은 다른 혜택 및 이벤트와 중복 적용되지 않습니다.</div>
+					</li>
+					<li class="wcms-list-item type-dot wcms-color-gray">
+						<div class="wcms-list-contents">해당 혜택은 제휴사의 사정으로 사전 예고 없이 내용이 변경되거나 중단될 수 있습니다.</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+</div>
+										</code></pre>
+									</div>
+								</section>
+							</div>
+						</section>
+					</section>
+
+					<section class="section">
+						<div class="section__head">
+							<h3 class="section__title">제휴사 본문 샘플</h3>
+						</div>
+						<section class="sub-section">
+							<div class="sub-section__head">
+								<h4 class="sub-section__title">Type 1</h4>
+							</div>
+							<div class="example">
+								<section class="example__section example__section--viewer">
+									<div class="example__section-head">
+										<h5 class="example__section-title">미리보기</h5>
+									</div>
+									<div class="viewer">
+										<iframe src="./example/vip-coupon/002-affiliate-body-sample-1.html" frameborder="0"></iframe>
+									</div>
+								</section>
+								<section class="example__section example__section--code">
+									<div class="example__section-head">
+										<h5 class="example__section-title">HTML</h5>
+									</div>
+									<div class="code-viewer">
+										<pre><code class="language-html">
+<img src="../../../dist/assets/images/vip-event/main_detail_hd_211220.png" alt="이미지 설명" class="wcms-image" />
+
+<section class="wcms-section-group">
+	<h2 class="wcms-title-medium wcms-color-gold">내 여행 최고의 목적지 현대백화점 DUTY FREE</h2>
+	<p class="wcms-text wcms-size-normal wcms-color-gray">
+		<strong class="wcms-weight-medium">현대백화점 DUTY FREE는 유통전문 ‘현대백화점 그룹’에서 탄생한 면세점 브랜드입니다.</strong>
+	</p>
+	<p class="wcms-text wcms-size-normal wcms-color-gray">
+		쇼핑부터 여행까지, 즐거움의 차원이 다른곳!<br />
+		면세점 최초 뷰티 체험공간에서부터 품격을 더해줄 퍼그널 쇼퍼 서비스와 유명 브랜드와의 콜라보래이션 스토어, 새로운 랜드마크인 디지털 사이니지까지 쇼핑의 즐거움이 여행의 즐거움으로
+		바뀌는 특별한 경험을 선사합니다.
+	</p>
+</section>
+
+<section class="wcms-section-group">
+	<div class="wcms-flex wcms-margin-small">
+		<div class="wcms-flex-cell type-flexible">
+			<h2 class="wcms-title-medium wcms-margin-none">이용처</h2>
+		</div>
+		<div class="wcms-flex-cell">
+			<a href="tel:1811-6688" class="wcms-tel-button">1811-6688</a>
+		</div>
+	</div>
+	<p class="wcms-text wcms-size-normal wcms-color-gray">현대백화점 DUTY FREE 시내면세점 (무역센터점, 동대문점)</p>
+</section>
+
+<section class="wcms-section-group">
+	<h2 class="wcms-title-medium">주소</h2>
+	<ul class="wcms-list wcms-size-normal">
+		<li class="wcms-list-item type-dot wcms-color-gray">
+			<div class="wcms-list-contents">무역센터점 : 서울시 강남구 테헤란로 517</div>
+		</li>
+		<li class="wcms-list-item type-dot wcms-color-gray">
+			<div class="wcms-list-contents">동대문점 : 서울시 중구 장충단로 275</div>
+		</li>
+	</ul>
+</section>
+
+<a href="" class="wcms-button type-gold wcms-margin-large"><span class="wcms-button-text">자세히 보기</span></a>
+										</code></pre>
+									</div>
+								</section>
+							</div>
+						</section>
+						<section class="sub-section">
+							<div class="sub-section__head">
+								<h4 class="sub-section__title">Type 2</h4>
+							</div>
+							<div class="example">
+								<section class="example__section example__section--viewer">
+									<div class="example__section-head">
+										<h5 class="example__section-title">미리보기</h5>
+									</div>
+									<div class="viewer">
+										<iframe src="./example/vip-coupon/003-affiliate-body-sample-2.html" frameborder="0"></iframe>
+									</div>
+								</section>
+								<section class="example__section example__section--code">
+									<div class="example__section-head">
+										<h5 class="example__section-title">HTML</h5>
+									</div>
+									<div class="code-viewer">
+										<pre><code class="language-html">
+<section class="wcms-box-white">
+	<h2 class="wcms-title-medium wcms-color-gold">하나카드 우수회원 상시 혜택</h2>
+	<ul class="wcms-list wcms-size-normal">
+		<li class="wcms-list-item type-dot wcms-color-gray">
+			<div class="wcms-list-contents">제공기간 : 2022. 1. 1 ~ 12. 31</div>
+		</li>
+		<li class="wcms-list-item type-dot wcms-color-gray">
+			<div class="wcms-list-contents">이용처 : 무역센터점, 동대문점</div>
+		</li>
+		<li class="wcms-list-item type-dot wcms-color-gray">
+			<div class="wcms-list-contents">
+				<div class="wcms-flex type-align-top">
+					<div class="wcms-flex-cell">문의 :</div>
+					<div class="wcms-flex-cell type-flexible" style="margin-left: 5px">
+						고객센터 1811-6688<br />
+						홈페이지 https://hddfs.com/store
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="wcms-list-item wcms-color-gray" data-symbol="※">
+			<div class="wcms-list-contents">자세한 사항은 상단 쿠폰 확인 바랍니다.</div>
+		</li>
+	</ul>
+	<div class="wcms-table wcms-margin-regular">
+		<div class="wcms-table-inner">
+			<table>
+				<caption>
+					혜택 안내
+				</caption>
+				<colgroup>
+					<col style="width: 105px" />
+					<col />
+				</colgroup>
+				<thead>
+					<tr>
+						<th class="wcms-align-center">제공 등급</th>
+						<th class="wcms-align-center">혜택</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="wcms-align-center">하나카드 VVIP</th>
+						<td>
+							<div class="wcms-margin-small">멤버십 BLACK 등급 부여</div>
+							<ul class="wcms-list">
+								<li class="wcms-list-item type-dot">
+									<div class="wcms-list-contents">
+										<div class="wcms-margin-small">
+											멤버십 BLACK이란?<br />
+											최대 20% 상시 할인 제공, 인도장 First Pass Service 제공
+										</div>
+										<ul class="wcms-list wcms-weight-light">
+											<li class="wcms-list-item" data-symbol="※">
+												<div class="wcms-list-contents">바우처 미제공</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th class="wcms-align-center">하나카드 퍼스트, 로열, 클래식</th>
+						<td>
+							<div class="wcms-margin-small">멤버십 GOLD 등급 부여</div>
+							<ul class="wcms-list">
+								<li class="wcms-list-item type-dot">
+									<div class="wcms-list-contents">
+										멤버십 GOLD란?<br />
+										최대 15% 상시 할인 제공
+									</div>
+								</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<th class="wcms-align-center">전 등급</th>
+						<td>
+							<div class="wcms-margin-small">시내점 H선불카드 3만원 증정 (당일 $200 이상 구매 시)</div>
+							<ul class="wcms-list">
+								<li class="wcms-list-item type-dot">
+									<div class="wcms-list-contents">
+										H선불카드란?<br />
+										본인 여권에 적립되는 선불카드로서, 여권만 있어도 언제든지 사용 가능
+									</div>
+								</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>
+
+<ul class="wcms-list wcms-size-normal wcms-weight-light wcms-margin-regular">
+	<li class="wcms-list-item type-dot">
+		<div class="wcms-list-contents">계약 체결전 상품설명서 및 상품약관을 반드시 확인하시기 바랍니다.</div>
+	</li>
+	<li class="wcms-list-item type-dot">
+		<div class="wcms-list-contents">신용카드 발급이 부적정한 경우(개인신용평점 낮음 등) 카드발급이 제한될 수 있습니다.</div>
+	</li>
+	<li class="wcms-list-item type-dot">
+		<div class="wcms-list-contents">카드이용대금과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환하여야 합니다.</div>
+	</li>
+	<li class="wcms-list-item type-dot">
+		<div class="wcms-list-contents">금융소비자는 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있습니다.</div>
+	</li>
+	<li class="wcms-list-item type-dot wcms-weight-medium">
+		<div class="wcms-list-contents">상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</div>
+	</li>
+	<li class="wcms-list-item type-dot wcms-weight-medium">
+		<div class="wcms-list-contents">신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</div>
+	</li>
+	<li class="wcms-list-item type-dot wcms-weight-medium">
+		<div class="wcms-list-contents">일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</div>
+	</li>
+</ul>
+
+<p class="wcms-text wcms-size-small wcms-color-gray wcms-margin-regular">준법심의 A-21-2141(2021.12.31~9999.12.31)</p>
+										</code></pre>
+									</div>
+								</section>
+							</div>
+						</section>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="../dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/highlightjs/highlight.min.js"></script>
+		<script type="text/javascript" src="./assets/highlightjs/highlightjs-line-numbers.min.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/lib/codemirror.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/xml/xml.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/css/css.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/javascript/javascript.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+		<script type="text/javascript" src="./assets/script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

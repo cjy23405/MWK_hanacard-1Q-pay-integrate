@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">멀티서비스</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">멀티카드 선택</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radio1" id="radio1-1" data-checkbox-tab="multi1" checked />
+											<label for="radio1-1" class="ui-label">
+												<span class="ui-label-text">유효카드</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radio1" id="radio1-2" data-checkbox-tab="multi2" />
+											<label for="radio1-2" class="ui-label">
+												<span class="ui-label-text">해지카드</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-block margin-top-15">
+										<select class="ui-select" title="멀티카드">
+											<option value="">[5429] 멀티카드A</option>
+											<option value="">option 2</option>
+											<option value="">option 3</option>
+											<option value="">option 4</option>
+											<option value="">option 5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-item" data-checkbox-tab-panel="multi1">
+								<div class="form-title">
+									<strong class="title">승인카드 선택</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block">
+										<select class="ui-select" title="승인카드">
+											<option value="">전체</option>
+											<option value="">option 2</option>
+											<option value="">option 3</option>
+											<option value="">option 4</option>
+											<option value="">option 5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">이용구분</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block">
+										<select class="ui-select" title="이용구분 1">
+											<option value="">전체</option>
+											<option value="">option 2</option>
+											<option value="">option 3</option>
+											<option value="">option 4</option>
+											<option value="">option 5</option>
+										</select>
+									</div>
+									<div class="ui-select-block margin-top-15">
+										<select class="ui-select" title="이용구분 2">
+											<option value="">전체</option>
+											<option value="">option 2</option>
+											<option value="">option 3</option>
+											<option value="">option 4</option>
+											<option value="">option 5</option>
+										</select>
+									</div>
+									<div class="ui-select-block margin-top-15">
+										<select class="ui-select" title="이용구분 3">
+											<option value="">전체</option>
+											<option value="">option 2</option>
+											<option value="">option 3</option>
+											<option value="">option 4</option>
+											<option value="">option 5</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">조회기간</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<!-- 2022.07.01 : mod : data-area-disabled값 수정 -->
+											<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-1" data-area-disabled="rangePanel1-1" checked />
+											<label for="rangePanel1-1" class="ui-label">
+												<span class="ui-label-text">오늘</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<!-- 2022.07.01 : mod : data-area-disabled값 수정 -->
+											<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-2" data-area-disabled="rangePanel1-2" />
+											<label for="rangePanel1-2" class="ui-label">
+												<span class="ui-label-text">2주</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<!-- 2022.07.01 : mod : data-area-disabled값 수정 -->
+											<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-3" data-area-disabled="rangePanel1-3" />
+											<label for="rangePanel1-3" class="ui-label">
+												<span class="ui-label-text">1개월</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<!-- 2022.07.01 : mod : data-area-disabled값 수정 -->
+											<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-4" data-area-disabled="rangePanel1-4" />
+											<label for="rangePanel1-4" class="ui-label">
+												<span class="ui-label-text">3개월</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-5" data-area-disabled="rangePanel1-5" />
+											<label for="rangePanel1-5" class="ui-label">
+												<span class="ui-label-text">직접입력</span>
+											</label>
+										</div>
+									</div>
+									<div class="date-range" data-area-disabled-target="rangePanel1-5">
+										<div class="form-flex type-row">
+											<div class="form-flex-cell type-flexible">
+												<!-- 2022.06.23 : mod : date picker 라이브러리 적용 -->
+												<div class="ui-date-picker">
+													<duet-date-picker identifier="date" title="예약기간 시작일" value="2021-01-01" disabled></duet-date-picker>
+												</div>
+												<!-- //2022.06.23 : mod : date picker 라이브러리 적용 -->
+											</div>
+											<div class="form-flex-cell">
+												<div class="ui-range-dash">-</div>
+											</div>
+											<div class="form-flex-cell type-flexible">
+												<!-- 2022.06.23 : mod : date picker 라이브러리 적용 -->
+												<div class="ui-date-picker">
+													<duet-date-picker identifier="date" title="예약기간 종료일" value="2021-04-01" disabled></duet-date-picker>
+												</div>
+												<!-- //2022.06.23 : mod : date picker 라이브러리 적용 -->
+											</div>
+										</div>
+									</div>
+									<p class="ui-notice">최근 18개월, 최대 3개월까지 조회 가능</p>
+								</div>
+							</div>
+						</div>
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">조회</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Case : 카드 없을 때 -->
+						<div class="page-section type-line">
+							<div class="link-item type-none type-flex type-no-line type-no-padding">
+								<p class="item-text">조회 가능 카드가 없습니다.</p>
+							</div>
+						</div>
+						<!-- Case : //카드 없을 때 -->
+
+						<!-- Case : 이용내역 없을 때 -->
+						<div class="page-section type-line">
+							<div class="link-item type-none type-flex type-no-line type-no-padding">
+								<p class="item-text">카드이용내역이 없습니다.</p>
+							</div>
+						</div>
+						<!-- Case : //이용내역 없을 때 -->
+
+						<!-- Case : 이용내역 있을 때 -->
+						<section class="page-section type-line">
+							<div class="form-flex type-align-middle">
+								<div class="form-flex-cell type-flexible">
+									<h2 class="check-detail-title margin-bottom-none default-text">
+										정상 카드 이용내역<span class="sub">(<strong class="color-secondary">19</strong>건)</span>
+									</h2>
+								</div>
+								<div class="form-flex-cell">
+									<div class="medium-text font-weight-medium"><span class="color-secondary">999,999,000</span> 원</div>
+								</div>
+							</div>
+
+							<div class="ui-hr margin-top-15 margin-bottom-none"></div>
+
+							<div class="usage-default margin-top-25">
+								<ul class="usage-default-list js-ui-accordion" data-once="true">
+									<li class="usage-default-item js-ui-accordion__item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-block">
+													<div class="usage-default-left">
+														<div class="usage-default-title type-multi-ellipsis">APPLE.COM/BILL0803334000IE</div>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-sum">999,999,999 원</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">2020.10.23 10:00:23</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">국내</div>
+															<div class="usage-default-etc-item">할부6</div>
+															<div class="usage-default-etc-item">승인번호 4885</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<button type="button" class="usage-default-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="form-detail-block margin-top-15">
+												<dl class="form-detail-list type-text-default">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">멀티카드</dt>
+														<dd class="form-detail-group type-block"><strong>[5429] 멀티카드 A</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">승인카드</dt>
+														<dd class="form-detail-group type-block"><strong>[688] 싱가폴의 기쁨</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">우선결제업종</dt>
+														<dd class="form-detail-group type-block"><strong>-</strong></dd>
+													</div>
+												</dl>
+												<dl class="form-detail-list type-text-default type-line">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">매입금액</dt>
+														<dd class="form-detail-group type-block"><strong>600,000 원</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">매입할인금액</dt>
+														<dd class="form-detail-group type-block"><strong>0 원</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">포인트 사용</dt>
+														<dd class="form-detail-group type-block"><strong>0 P</strong></dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item js-ui-accordion__item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-block">
+													<div class="usage-default-left">
+														<a href="" class="ui-arrow type-black">
+															<div class="usage-default-title type-multi-ellipsis">대표일반_KCP</div>
+														</a>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-sum">999,999,999 원</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">2020.10.23 10:00:23</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">국내</div>
+															<div class="usage-default-etc-item">할부6</div>
+															<div class="usage-default-etc-item">승인번호 4885</div>
+														</div>
+														<div class="ui-buttons type-left margin-top-10">
+															<ul class="ui-buttons-list">
+																<li class="ui-buttons-item">
+																	<a href="" class="ui-basic-button type-tiny" role="button">영수증(승인전표)</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+											<button type="button" class="usage-default-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="form-detail-block margin-top-15">
+												<dl class="form-detail-list type-text-default">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">멀티카드</dt>
+														<dd class="form-detail-group type-block"><strong>[5429] 멀티카드 A</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">승인카드</dt>
+														<dd class="form-detail-group type-block"><strong>[688] 싱가폴의 기쁨</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">우선결제업종</dt>
+														<dd class="form-detail-group type-block"><strong>-</strong></dd>
+													</div>
+												</dl>
+												<dl class="form-detail-list type-text-default type-line">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">매입금액</dt>
+														<dd class="form-detail-group type-block"><strong>600,000 원</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">매입할인금액</dt>
+														<dd class="form-detail-group type-block"><strong>0 원</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">포인트 사용</dt>
+														<dd class="form-detail-group type-block"><strong>0 P</strong></dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item js-ui-accordion__item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-block">
+													<div class="usage-default-left">
+														<a href="" class="ui-arrow type-black">
+															<div class="usage-default-title type-multi-ellipsis">CJmall</div>
+														</a>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-sum">-999,999,999 원</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">2020.10.23 10:00:23</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">국내</div>
+															<div class="usage-default-etc-item">할부6</div>
+															<div class="usage-default-etc-item">승인번호 4885</div>
+														</div>
+														<div class="ui-buttons type-left margin-top-10">
+															<ul class="ui-buttons-list">
+																<li class="ui-buttons-item">
+																	<a href="" class="ui-basic-button type-tiny" role="button">영수증(승인전표)</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item color-wrong">승인취소</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<button type="button" class="usage-default-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="form-detail-block margin-top-15">
+												<dl class="form-detail-list type-text-default">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">멀티카드</dt>
+														<dd class="form-detail-group type-block"><strong>[5429] 멀티카드 A</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">승인카드</dt>
+														<dd class="form-detail-group type-block"><strong>[688] 싱가폴의 기쁨</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">우선결제업종</dt>
+														<dd class="form-detail-group type-block"><strong>-</strong></dd>
+													</div>
+												</dl>
+												<dl class="form-detail-list type-text-default type-line">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">매입금액</dt>
+														<dd class="form-detail-group type-block"><strong>600,000 원</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">매입할인금액</dt>
+														<dd class="form-detail-group type-block"><strong>0 원</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">매입취소금액</dt>
+														<dd class="form-detail-group type-block"><strong>600,000 원</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">포인트 사용</dt>
+														<dd class="form-detail-group type-block"><strong>0 P</strong></dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item js-ui-accordion__item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-block">
+													<div class="usage-default-left">
+														<a href="" class="ui-arrow type-black">
+															<div class="usage-default-title type-multi-ellipsis">APPLE.COM/BILL0803334000IEBILL0803334000IE</div>
+														</a>
+													</div>
+													<div class="usage-default-right">
+														<div class="usage-default-sum">500,000 원</div>
+													</div>
+												</div>
+												<div class="usage-default-block margin-top-none">
+													<div class="usage-default-left">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">2020.10.23 10:00:23</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">국내</div>
+															<div class="usage-default-etc-item">할부6</div>
+															<div class="usage-default-etc-item">승인번호 4885</div>
+														</div>
+														<div class="ui-buttons type-left margin-top-10">
+															<ul class="ui-buttons-list">
+																<li class="ui-buttons-item">
+																	<a href="" class="ui-basic-button type-tiny" role="button">영수증(승인전표)</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="usage-default-right type-auto">
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item">
+																<del class="del-text color-blur">600,000 원</del>
+															</div>
+														</div>
+														<div class="usage-default-etc">
+															<div class="usage-default-etc-item color-wrong">부분취소</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<button type="button" class="usage-default-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="form-detail-block margin-top-15">
+												<dl class="form-detail-list type-text-default">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">멀티카드</dt>
+														<dd class="form-detail-group type-block"><strong>[5429] 멀티카드 A</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">승인카드</dt>
+														<dd class="form-detail-group type-block"><strong>[688] 싱가폴의 기쁨</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">우선결제업종</dt>
+														<dd class="form-detail-group type-block"><strong>-</strong></dd>
+													</div>
+												</dl>
+												<dl class="form-detail-list type-text-default type-line">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">매입금액</dt>
+														<dd class="form-detail-group type-block"><strong>600,000 원</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">매입취소금액</dt>
+														<dd class="form-detail-group type-block"><strong>600,000 원</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">포인트 사용</dt>
+														<dd class="form-detail-group type-block"><strong>0 P</strong></dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+								<!-- DD : 더보기로 데이터 뿌려준 후 uiJSCommon(); 함수 호출 해주세요. (아코디언 스크립트 관련) -->
+								<button type="button" class="ui-button ui-button-more">더보기</button>
+							</div>
+						</section>
+						<!-- //Case : 이용내역 있을 때 -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">최근 1년 이내 최대 3개월 단위로 카드 이용내역을 확인할 수 있습니다.</li>
+										<li class="info-item">국내 이용내역은 카드이용내역 기준이며, 실제 청구되는 '이용대금 명세서'를 이용하세요.</li>
+										<li class="info-item">일부 부분취소건 (항공, 기차, 고속버스, 호텔 등)에 대해서는 카드이용내역이 다르게 표시될 수 있습니다.</li>
+										<li class="info-item">이용일자는 당사의 시스템에 반영된 일자로 실제 사용일과 차이가 있을 수 있습니다.</li>
+										<li class="info-item">정상승인합계 금액은 매출취소 및 부분매출취소금액을 제외한 금액입니다.</li>
+										<li class="info-item">국내외 일시불 이용 후 할부로 변경한 경우에는 할부 개월 수가 미표기됩니다.</li>
+										<li class="info-item">이전 월 이용내역의 매출취소 발생 시, 취소 접수월의 카드실적에서 차감됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

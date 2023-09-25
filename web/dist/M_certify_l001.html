@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-franchisee-select">가맹점 선택 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 가맹점 선택 팝업 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--condition" data-layer="layer-franchisee-select">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">가맹점을 선택해 주세요.</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="form-detail type-bg">
+									<div class="form-detail-block">
+										<span class="form-detail-list type-text-medium">
+											<span class="form-detail-item">
+												<span class="form-detail-title type-ellipsis color-basic"><strong>사업자번호</strong></span>
+												<!-- 2022.05.19 : mod : 번호 형식 변경 -->
+												<span class="form-detail-group color-blur">1234567890</span>
+												<!-- //2022.05.19 : mod : 번호 형식 변경 -->
+											</span>
+										</span>
+									</div>
+								</div>
+
+								<div class="ui-select-multiple-list margin-top-25">
+									<!-- 2022.05.19 : mod : checkbox -> radio 로 type 변경 -->
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block type-large">
+											<input type="radio" class="ui-checkbox" name="store" id="store1" data-area-disabled="nextButton" />
+											<label for="store1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="form-detail-list type-full">
+													<span class="form-detail-item">
+														<span class="form-detail-title type-ellipsis color-basic">가맹점명가맹점명가맹점명가맹점명가맹점명가맹점명</span>
+														<span class="form-detail-group color-blur color-blur">00-123456789</span>
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item margin-top-5">
+										<div class="ui-checkbox-block type-large">
+											<input type="radio" class="ui-checkbox" name="store" id="store2" data-area-disabled="nextButton" />
+											<label for="store2" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="form-detail-list type-full">
+													<span class="form-detail-item">
+														<span class="form-detail-title type-ellipsis color-basic">가맹점명</span>
+														<span class="form-detail-group color-blur color-blur">00-123456789</span>
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item margin-top-5">
+										<div class="ui-checkbox-block type-large">
+											<input type="radio" class="ui-checkbox" name="store" id="store3" data-area-disabled="nextButton" />
+											<label for="store3" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="form-detail-list type-full">
+													<span class="form-detail-item">
+														<span class="form-detail-title type-ellipsis color-basic">가맹점명</span>
+														<span class="form-detail-group color-blur color-blur">00-123456789</span>
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item margin-top-5">
+										<div class="ui-checkbox-block type-large">
+											<input type="radio" class="ui-checkbox" name="store" id="store4" data-area-disabled="nextButton" />
+											<label for="store4" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="form-detail-list type-full">
+													<span class="form-detail-item">
+														<span class="form-detail-title type-ellipsis color-basic">가맹점명</span>
+														<span class="form-detail-group color-blur color-blur">00-123456789</span>
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item margin-top-5">
+										<div class="ui-checkbox-block type-large">
+											<input type="radio" class="ui-checkbox" name="store" id="store5" data-area-disabled="nextButton" />
+											<label for="store5" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="form-detail-list type-full">
+													<span class="form-detail-item">
+														<span class="form-detail-title type-ellipsis color-basic">가맹점명</span>
+														<span class="form-detail-group color-blur color-blur">00-123456789</span>
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item margin-top-5">
+										<div class="ui-checkbox-block type-large">
+											<input type="radio" class="ui-checkbox" name="store" id="store6" data-area-disabled="nextButton" />
+											<label for="store6" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="form-detail-list type-full">
+													<span class="form-detail-item">
+														<span class="form-detail-title type-ellipsis color-basic">가맹점명</span>
+														<span class="form-detail-group color-blur color-blur">00-123456789</span>
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<!-- //2022.05.19 : mod : checkbox -> radio 로 type 변경 -->
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-basic-button type-primary" data-area-disabled-target="nextButton" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 가맹점 선택 팝업 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-franchisee-select');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

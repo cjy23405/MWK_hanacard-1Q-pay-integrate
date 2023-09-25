@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- progress bar -->
+					<div class="fixed-step">
+						<div class="step-box" role="img" aria-label="총 14단계 중 1단계">
+							<span class="step-bar" style="width: 20%"></span>
+						</div>
+					</div>
+					<!-- //progress bar -->
+
+					<div class="page-contents">
+						<!-- 2022.08.18 : mod : 띄어쓰기 제거 -->
+						<h2 class="page-contents-title">결제정보를 입력해주세요.</h2>
+
+						<div class="ui-form margin-bottom-40">
+							<dl class="ui-form-list">
+								<div class="ui-form-item type-only-select">
+									<dt class="ui-form-key" data-focus-input="name">결제일</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="in-select-block">
+													<button type="button" class="in-select" title="결제일 선택" data-placeholder="결제일 선택" data-focus-input-target="name"></button>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- DD : 입력된 정보 없을 시 -->
+								<div class="ui-form-item">
+									<dt class="ui-form-key">결제계좌</dt>
+									<dd class="ui-form-val">
+										<button type="button" class="ui-form-hidden-button"></button>
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="form-inputed-text"></div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- //DD : 입력된 정보 없을 시 -->
+								<!-- DD : 입력 완료 시 .type-inputed 클래스 추가 -->
+								<div class="ui-form-item type-inputed">
+									<dt class="ui-form-key">결제계좌</dt>
+									<dd class="ui-form-val">
+										<button type="button" class="ui-form-hidden-button"></button>
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="form-inputed-text">하나은행 12345678901234</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- 2022.11.01 : add : 추가 -->
+								<!-- case : 밀리언달러 하나카드의 경우 노출 -->
+								<!-- DD : 입력된 정보 없을 시 -->
+								<div class="ui-form-item">
+									<dt class="ui-form-key">하나 밀리언달러 통장 계좌번호</dt>
+									<dd class="ui-form-val">
+										<button type="button" class="ui-form-hidden-button"></button>
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="form-inputed-text"></div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- //DD : 입력된 정보 없을 시 -->
+								<!-- DD : 입력 완료 시 .type-inputed 클래스 추가 -->
+								<div class="ui-form-item type-inputed">
+									<dt class="ui-form-key">하나 밀리언달러 통장 계좌번호</dt>
+									<dd class="ui-form-val">
+										<button type="button" class="ui-form-hidden-button"></button>
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="form-inputed-text">12345678901234</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- //case : 밀리언달러 하나카드의 경우 노출 -->
+								<!-- //2022.11.01 : add : 추가 -->
+							</dl>
+
+							<!-- 2022.11.23 : add : 하나은행 간편계좌 개설 배너 추가 -->
+							<div class="banner-area">
+								<div class="banner padding-none">
+									<a href="" class="banner-link">
+										<img
+											src="/mkca20/images/contents/form-banner.png"
+											class="banner-image"
+											alt="하나은행 간편계좌 계설(수수료면제) 클릭 3번으로 하나은행 계좌를 개설하시고, 바로 하나카드 결제계좌로 이용하세요! 신청 후 SMS로 전송된 실명확인을 하시면, 바로 이용하실 수 있습니다!"
+										/>
+									</a>
+								</div>
+							</div>
+							<!-- //2022.11.23 : add : 하나은행 간편계좌 개설 배너 추가 -->
+
+							<!-- 2022.12.12 : add : 추가 -->
+							<!-- DD : 신규일 경우 노출 -->
+							<div class="terms-area">
+								<div class="terms-item">
+									<div class="ui-form-check-block type-large type-align-top">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" />
+										<label for="selectCheckbox1-1" class="ui-label">
+											<span class="ui-check-object"></span>
+											<span class="ui-label-text">SK텔레콤 통신요금 자동납부 등록용 신용카드 결제계좌 정보 제공 동의(선택)</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<!-- DD : //신규일 경우 노출 -->
+							<!-- //2022.12.12 : add : 추가 -->
+
+							<!-- 2022.11.01 : mod : 희망한도 UI 변경 -->
+							<div class="form-list-wrap margin-top-20 margin-bottom-20">
+								<div class="form-item">
+									<div class="ui-form-title">
+										<strong class="title">희망한도</strong>
+									</div>
+									<div class="ui-radio-group type-grid type-col2">
+										<div class="ui-form-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-1" data-checkbox-tab="radioTab01" checked />
+											<label for="radioGrid1-1" class="ui-label">
+												<span class="ui-label-text">3천만원</span>
+											</label>
+										</div>
+										<div class="ui-form-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-2" data-checkbox-tab="radioTab02" />
+											<label for="radioGrid1-2" class="ui-label">
+												<span class="ui-label-text">2천만원</span>
+											</label>
+										</div>
+										<div class="ui-form-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-3" data-checkbox-tab="radioTab03" />
+											<label for="radioGrid1-3" class="ui-label">
+												<span class="ui-label-text">1천만원</span>
+											</label>
+										</div>
+										<div class="ui-form-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-4" data-checkbox-tab="radioTab04" />
+											<label for="radioGrid1-4" class="ui-label">
+												<span class="ui-label-text">직접입력</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-form margin-top-10" data-checkbox-tab-panel="radioTab04">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">희망한도</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="flex-box">
+																<div class="flex-box-cell type-flexible">
+																	<div class="in-input-block">
+																		<input type="number" pattern="\d*" class="in-input" title="희망한도 100만원 이상 입력" placeholder="100만원 이상" data-focus-input-target="name" />
+																	</div>
+																</div>
+																<div class="flex-box-cell type-unit">
+																	<div class="flex-box-unit">만원</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+							<!-- //2022.11.01 : mod : 희망한도 UI 변경 -->
+
+							<dl class="ui-form-list">
+								<div class="ui-form-item type-only-select">
+									<!-- 2022.08.18 : mod : 띄어쓰기 제거 -->
+									<dt class="ui-form-key" data-focus-input="name">결제알림서비스</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="in-select-block">
+													<button type="button" class="in-select" title="결제알림서비스 선택" data-placeholder="결제알림서비스 선택" data-focus-input-target="name"></button>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- 2022.10.27 : add : 추가 -->
+								<div class="ui-form-item type-only-select">
+									<dt class="ui-form-key" data-focus-input="name">이용대금명세서 받는 방법</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="in-select-block">
+													<button type="button" class="in-select" title="이용대금명세서 받는 방법 선택" data-placeholder="이용대금명세서 받는 방법 선택" data-focus-input-target="name">이메일</button>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<div class="ui-form-item">
+									<dt class="ui-form-key" data-focus-input="mail">이메일</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="flex-box">
+													<!-- 2022.12.12 : mod : .type-flexible클래스 추가 -->
+													<div class="flex-box-cell type-flexible">
+														<!-- 2022.12.12 : mod : .input-width-mail-id 클래스 삭제 .type-no-delete 클래스 추가 -->
+														<!-- DD : input 클리어 버튼 사용 시에는 .type-no-delete 클래스 삭제 -->
+														<div class="in-input-block type-no-delete">
+															<input type="text" class="in-input" title="이메일 아이디 입력" data-focus-input-target="mail" />
+														</div>
+													</div>
+													<div class="flex-box-cell type-form-text">@</div>
+													<!-- 2022.12.12 : mod : .type-flexible 클래스 삭제 -->
+													<div class="flex-box-cell">
+														<!-- 2022.12.12 : mod : .select-width-mail 클래스 추가 .in-select에 .ellipsis 클래스 추가 -->
+														<div class="in-select-block select-width-mail">
+															<button type="button" class="in-select ellipsis" title="이메일 도메인 선택" data-placeholder="선택"></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- 2022.10.27 : add : 추가 -->
+							</dl>
+							<!-- 2022.10.27 : add : 안내문구 추가 -->
+							<!-- DD : "Smart Any 쇼핑 카드”의 경우 안내문구 노출 -->
+							<p class="ui-form-notice">Smart Any 쇼핑 카드는 이메일로만 받을 수 있습니다.</p>
+							<!-- //DD : "Smart Any 쇼핑 카드”의 경우 안내문구 노출 -->
+							<p class="ui-form-notice">스카이패스 제휴카드는 이메일 주소 입력이 필수입니다.</p>
+							<!-- //2022.10.27 : add : 안내문구 추가 -->
+						</div>
+
+						<div class="use-guide-area js-ui-accordion">
+							<div class="use-guide-item js-ui-accordion__item">
+								<button type="button" class="use-guide-opener js-ui-accordion__opener">
+									확인해주세요
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-guide-contents js-ui-accordion__layer">
+									<div class="info-area-section">
+										<h3 class="info-list-title">결제일 안내</h3>
+										<ul class="info-list">
+											<li class="info-item">카드 이용기간은 토/일/공휴일 및 업무사정에 따라 변경될 수 있습니다.</li>
+											<li class="info-item">결제일이 토/일/공휴일인 경우, 다음 영업일에 카드대금이 결제됩니다.</li>
+											<li class="info-item">후불 교통카드 이용기간은 카드 이용기간과 동일하게 적용됩니다.</li>
+											<li class="info-item">단, BC카드의 경우 후불 교통카드 이용기간 말일이 토/일/공휴일인 경우 신용카드 이용기간과 1~2일 정도 차이가 발생할 수 있습니다.</li>
+										</ul>
+									</div>
+									<div class="info-area-section">
+										<h3 class="info-list-title">결제알림서비스 안내</h3>
+										<ul class="info-list">
+											<li class="info-item">‘유료 문자 알림’ 신청 시, 이용료는 보유 포인트에서 우선 차감되며, 포인트 부족 시 나머지 금액은 카드로 결제됩니다.</li>
+											<li class="info-item">
+												이용료 납부 시 우선순위는 다음과 같습니다.<br />
+												-1순위 : BC TOP 포인트 (1포인트 이상 보유 시)<br />
+												-2순위 : OK캐쉬백 포인트 (300포인트 이상 보유 시)<br />
+												-3순위 : 하나머니 (1머니 이상 보유 시)<br />
+												-4순위 : 카드 결제
+											</li>
+											<li class="info-item">포인트 납부를 원치 않을 경우, 하나카드 홈페이지(PC/모바일) 또는 하나카드 앱 [이용알림 서비스]에서 ‘카드 결제＇를 신청해주세요.</li>
+											<li class="info-item">회원등급과 카드상품 등에 따라 결제알림서비스 이용료가 면제될 수 있습니다.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- DD : 모든 필수값 입력됐을 경우 활성화 disabled 속성 삭제 -->
+					<!-- 2022.08.31 : mod : .page-buttons에 .type-fixed.type-no-line 클래스 추가 -->
+					<div class="page-buttons type-fixed type-no-line">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary" disabled>다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //DD : 모든 필수값 입력됐을 경우 활성화 disabled 속성 삭제 -->
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

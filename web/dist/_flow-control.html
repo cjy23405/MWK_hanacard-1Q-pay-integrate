@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<!-- layer: 유량제어 -->
+			<div class="layer-wrap layer-flow-control" id="NetFunnel_Skin_Top" style="display: block">
+				<div class="layer-container">
+					<section class="flow-control">
+						<div class="flow-control-logo"></div>
+						<h2 class="flow-control-title"><strong>접속대기 중</strong>입니다.</h2>
+						<p class="flow-control-text">
+							예상시간 : <strong class="color-primary"><span id="NetFunnel_Loading_Popup_TimeLeft" class="%M분 %02S초^ ^false">1분 20초</span></strong>
+						</p>
+						<div class="flow-control-progress">
+							<div style="margin: 10px auto 0px; background-color: #ededed; overflow: hidden; width: 228px">
+								<div style="box-sizing: initial; width: 228px" id="NetFunnel_Loading_Popup_Progressbar"></div>
+							</div>
+						</div>
+						<div class="flow-control-info">
+							<p class="flow-control-info-title">
+								앞에 <span class="color-primary"><span id="NetFunnel_Loading_Popup_Count">12</span></span> 명, 뒤에
+								<span class="color-primary"><span id="NetFunnel_Loading_Popup_NextCnt">12</span></span> 명의 대기자가 있습니다.
+							</p>
+							<p class="flow-control-info-text">
+								현재 접속자가 많아 대기 중이며<br />
+								잠시만 기다리시면<br />
+								서비스로 자동 접속 됩니다.
+							</p>
+							<div class="link-row">
+								<!-- 2022.03.16 : mod : 문구 수정 -->
+								<button type="button" class="ui-button ui-basic-button type-tiny type-inline" id="NetFunnel_Countdown_Stop">다음에 접속하기</button>
+								<!-- //2022.03.16 : mod : 문구 수정 -->
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 유량제어 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

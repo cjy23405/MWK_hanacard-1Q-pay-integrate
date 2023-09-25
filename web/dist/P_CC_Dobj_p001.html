@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">국내이의 신청&middot;철회&middot;항변 접수</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							국내 이용내역에 대한<br />
+							이의제기를 신청합니다.
+						</h2>
+
+						<div class="card-list-area">
+							<ul class="card-list">
+								<li class="card-item">
+									<a href="" class="card-block ui-arrow-block">
+										<!-- DD : 이미지 없을 때
+										<span class="card-image">
+											<span class="card-image-inner"></span>
+										</span>
+										-->
+
+										<!-- 2022.05.04 : mod : 이미지 alt값 변경 -->
+										<!-- DD : 이미지 에러
+										<span class="card-image">
+											<span class="card-image-inner">
+												<img src="./assets/images/_dummy/card .png" alt="카드 이름 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+											</span>
+										</span>
+										-->
+
+										<!-- DD : 이미지 있을 때 -->
+										<span class="card-image">
+											<span class="card-image-inner">
+												<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+												<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+											</span>
+										</span>
+										<!--// 2022.05.04 : mod : 이미지 alt값 변경 -->
+
+										<div class="card-info">
+											<span class="card-name">[본인] 아멕스 아시아나클럽 카드</span>
+											<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+										</div>
+									</a>
+									<a href="" class="ui-button ui-basic-button type-primary" role="button">신청</a>
+								</li>
+								<li class="card-item type-none">
+									<p class="item-text">신청 가능한 카드가 없습니다.</p>
+								</li>
+							</ul>
+						</div>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-secondary" role="button">국내이의제기 신청 내역</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<!-- 2021.11.29 수정 (type-child 클래스 추가) -->
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<dl class="use-notice-group">
+										<dt class="group-title">국내이의신청 접수/조회 안내</dt>
+										<dd class="group-contents">
+											<ul class="info-list">
+												<li class="info-item">
+													국내이의신청은 국내카드 사용과 관련하여 가맹점과 회원 간의 분쟁이 발생하는 경우 해당 거래에 대해 이의신청을 하는 것입니다.<br />(해외 가맹점 사용 관련 건은 해외이의제기로
+													접수 바랍니다.) <br />카드 사용 관련 미사용,물품미수령,거래금액 상이 등의 경우가 국내이의신청에 해당합니다.<br />
+													사실에 입각한 정확한 증빙자료가 있어야 회원님에게 유리합니다.
+												</li>
+												<li class="info-item">
+													<span>이의신청 유형</span>
+													<ul class="info-list">
+														<li class="info-item type-indent"><span class="indent">1. </span>청구금액상이</li>
+														<li class="info-item type-indent"><span class="indent">2. </span>이중청구</li>
+														<li class="info-item type-indent"><span class="indent">3. </span>거래 취소 또는 환급 불이행</li>
+														<li class="info-item type-indent"><span class="indent">4. </span>물품 미수령 또는 서비스 미이행</li>
+														<li class="info-item type-indent"><span class="indent">5. </span>카드사용부인(분실도난,위변조,명의도용 등 제3자 사용에 의한 카드사고는 제외)</li>
+													</ul>
+												</li>
+												<li class="info-item">
+													<span>이의신청접수 제외대상</span>
+													<ul class="info-list type-child">
+														<li class="info-item type-indent"><span class="indent">-</span>단기카드대출,장기카드대출,보이스피싱,주대분쟁 등</li>
+														<li class="info-item type-indent"><span class="indent">-</span>분실,도난,위변조,명의도용과 같은 제 3자에 의한 부정사용은 고객센터(1800-1111)앞 사고 접수</li>
+													</ul>
+												</li>
+												<li class="info-item">
+													<span>진행단계안내</span>
+													<ul class="info-list type-child">
+														<li class="info-item type-indent"><span class="indent">-</span>접수 : 국내이의신청 정상 접수상태 ,접수 익영업일에 담당자 배정후 SMS발송</li>
+														<li class="info-item type-indent"><span class="indent">-</span>진행 : 담당자가 고객과 가맹점에 사실 확인후 처리 검토 단계</li>
+														<li class="info-item type-indent"><span class="indent">-</span>종료 : 최종 종결된상태</li>
+														<li class="info-item type-presa">상세한 진행상황은 고객센터(1800-1111) 또는 담당자를 통해 문의해 주시기 바랍니다.</li>
+													</ul>
+												</li>
+											</ul>
+										</dd>
+										<dt class="group-title">철회·항변 접수/조회 안내</dt>
+										<dd class="group-contents">
+											<ul class="info-list">
+												<li class="info-item">철회권은 20만원이상 할부 3개월 이상 거래에 대한 물품 또는 서비스 등을 공급받은 날로부터 7일 이내에 계약을 철회할 수 있는 소비자의 권리입니다.</li>
+												<li class="info-item">
+													<div class="indent-block">
+														항변권은 20만원이상 할부 3개월 이상 거래에 할부 계약의 해지 또는 재화,서비스 등이 계약내용대로 이행되지않는 경우 잔여 할부금 납부를 거절할 수 있는 소비자의 권리입니다.
+													</div>
+													<ul class="info-list type-child">
+														<li class="info-item type-indent">
+															<span class="indent">-</span>
+															<div class="indent-block">
+																철회/항변의 의사표시가 적힌 내용증명을 가맹점과 하나카드 이의신청 담당자에게 보내주셔야 합니다.
+																<button type="button" class="ui-arrow">내용증명 발송방법</button>
+															</div>
+														</li>
+														<li class="info-item type-indent">
+															<span class="indent">-</span>할부 거래에 관한 법률상 철회,항변권을 행사할 수 없는 경우 다단계, 투자, 광고 등 최종 소비 목적이 아닌 이윤 목적의 상행위, 제조업에 의해
+															생산되지 않는 재화(농,수,축,임,광산물), 의약품(약사법 제 2조2항), 보험(보험업법), 부동산거래 등, 완납된 할부
+														</li>
+													</ul>
+												</li>
+												<li class="info-item">
+													<span>진행단계안내</span>
+													<ul class="info-list type-child">
+														<li class="info-item type-indent"><span class="indent">-</span>접수 : 철회·항변 정상 접수 상태 ,접수 익영업일에 담당자 배정후 SMS발송</li>
+														<li class="info-item type-indent"><span class="indent">-</span>진행 : 내용증명 수신 후 할부거래에 관한 법률에 의거 검토 단계</li>
+														<li class="info-item type-indent"><span class="indent">-</span>종료 : 최종 종결된상태</li>
+														<li class="info-item type-presa">상세한 진행상황은 고객센터(1800-1111) 또는 담당자를 통해 문의해 주시기 바랍니다.</li>
+													</ul>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+								<!-- //2021.11.29 수정 (type-child 클래스 추가) -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

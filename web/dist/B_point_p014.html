@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">포인트 기부 신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 1</span>
+							신청 정보를 입력해 주세요.
+						</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 2단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">기부 방법</h3>
+								</div>
+
+								<div class="js-ui-tab-panel">
+									<div class="ui-tab">
+										<ul class="ui-tab-list type-wide">
+											<li class="ui-tab-item">
+												<button type="button" class="ui-button ui-tab-link" data-tab-open="tab01">즉시기부</button>
+											</li>
+											<li class="ui-tab-item">
+												<button type="button" class="ui-button ui-tab-link" data-tab-open="tab02">정기기부</button>
+											</li>
+											<li class="ui-tab-item">
+												<button type="button" class="ui-button ui-tab-link" data-tab-open="tab03">소멸포인트 자동기부</button>
+											</li>
+										</ul>
+									</div>
+
+									<div class="ui-tab-panel margin-top-35">
+										<div class="form-list">
+											<div class="form-item" data-tab="tab01">
+												<div class="form-title">
+													<strong class="title">보유 하나머니</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="보유 하나머니 입력" value="1500" disabled />
+													</div>
+												</div>
+											</div>
+											<div class="form-item" data-tab="tab02">
+												<div class="form-title">
+													<strong class="title">기부기간</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-radio-group type-panel">
+														<div class="ui-radio-block type-box">
+															<!-- 2022.07.01 : mod : data-area-disabled 값 id 값과 통일-->
+															<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-1" data-area-disabled="rangePanel1-1" checked />
+															<label for="rangePanel1-1" class="ui-label">
+																<span class="ui-label-text">3개월</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<!-- 2022.07.01 : mod : data-area-disabled 값 id 값과 통일-->
+															<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-2" data-area-disabled="rangePanel1-2" />
+															<label for="rangePanel1-2" class="ui-label">
+																<span class="ui-label-text">6개월</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<!-- 2022.07.01 : mod : data-area-disabled 값 id 값과 통일-->
+															<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-3" data-area-disabled="rangePanel1-3" />
+															<label for="rangePanel1-3" class="ui-label">
+																<span class="ui-label-text">1년</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="rangePanel1" id="rangePanel1-5" data-area-disabled="rangePanel1-5" />
+															<label for="rangePanel1-5" class="ui-label">
+																<span class="ui-label-text">직접입력</span>
+															</label>
+														</div>
+													</div>
+													<div class="date-range" data-area-disabled-target="rangePanel1-5">
+														<div class="form-flex type-row">
+															<div class="form-flex-cell type-flexible">
+																<!-- 2022.06.23 : mod : date picker 라이브러리 적용 -->
+																<div class="ui-date-picker">
+																	<duet-date-picker identifier="date" title="조회기간 시작일" value="2021-01-01" disabled></duet-date-picker>
+																</div>
+																<!-- //2022.06.23 : mod : date picker 라이브러리 적용 -->
+															</div>
+															<div class="form-flex-cell">
+																<div class="ui-range-dash">-</div>
+															</div>
+															<div class="form-flex-cell type-flexible">
+																<!-- 2022.06.23 : mod : date picker 라이브러리 적용 -->
+																<div class="ui-date-picker">
+																	<duet-date-picker identifier="date" title="조회기간 종료일" value="2021-04-01" disabled></duet-date-picker>
+																</div>
+																<!-- //2022.06.23 : mod : date picker 라이브러리 적용 -->
+															</div>
+														</div>
+													</div>
+												</div>
+												<p class="ui-notice">최대 1년까지 조회 가능합니다.</p>
+											</div>
+											<div class="form-item" data-tab="tab02">
+												<div class="form-title">
+													<strong class="title">정기기부일 (월 1회 출금)</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-select-block type-placeholder">
+														<button type="button" class="ui-button ui-select" title="정기기부일 (월 1회 출금) 선택">정기기부일 선택</button>
+													</div>
+												</div>
+											</div>
+											<div class="form-item" data-tab="tab01">
+												<div class="form-title">
+													<strong class="title">기부 포인트</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="기부 포인트 입력" placeholder="1포인트 단위로 기부 가능" />
+													</div>
+												</div>
+											</div>
+											<div class="form-item" data-tab="tab02">
+												<div class="form-title">
+													<strong class="title">기부 포인트</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="기부 포인트 입력" placeholder="1포인트 단위로 기부 가능" />
+													</div>
+												</div>
+											</div>
+											<div class="form-item" data-tab="tab03">
+												<div class="form-title">
+													<strong class="title">포인트 종류</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-input-block type-use-delete">
+														<input type="text" class="ui-input" title="포인트 종류" value="하나머니" disabled />
+														<button type="button" class="ui-button ui-input-delete">
+															<span class="for-a11y">입력 내용 지우기</span>
+														</button>
+													</div>
+												</div>
+												<p class="ui-notice">하나카드를 통해 적립하신 하나머니 중, 유효기간이 만료되어 매월 소멸 예정인 포인트를 자동 기부하실 수 있습니다.</p>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">기부처</strong>
+												</div>
+												<div class="form-group">
+													<div class="form-flex">
+														<div class="form-flex-cell type-flexible">
+															<div class="ui-select-block type-placeholder">
+																<button type="button" class="ui-button ui-select" title="기부처 선택">기부처 선택</button>
+															</div>
+														</div>
+														<div class="form-flex-cell">
+															<button type="button" class="ui-button ui-basic-button type-small type-gray" disabled>자세히보기</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="form-title">
+													<strong class="title">정보제공 동의</strong>
+												</div>
+												<div class="form-group">
+													<div class="ui-checkbox-block type-row type-has-arrow">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" />
+														<label for="selectCheckbox-1" class="ui-label">
+															<span class="ui-checkbox-object"></span>
+															<span class="ui-label-text">정보제공에 동의하십니까?</span>
+														</label>
+														<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-bottom">
+									<div class="ui-buttons">
+										<ul class="ui-buttons-list">
+											<li class="ui-buttons-item">
+												<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="use-notice-area js-ui-accordion">
+								<div class="use-notice-item js-ui-accordion__item">
+									<button type="button" class="use-notice-opener js-ui-accordion__opener">
+										이용안내
+										<span class="for-a11y">
+											상세 내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<!-- 2022.03.10 : mod : 텍스트 수정 -->
+									<div class="use-notice-contents js-ui-accordion__layer">
+										<ul class="info-list">
+											<li class="info-item">하나머니 회원인 경우 사용가능포인트는 현금화 가능 하나머니만 조회됩니다.</li>
+											<li class="info-item">하나머니 정기기부는 정기기부일이 영업일이 아닌 경우 익영업일에 처리되며 포인트 잔액이 부족하거나 카드번호 변경, 거래정지 등인 경우 기부가 불가능합니다.</li>
+											<li class="info-item">하나머니 기부 신청은 하나카드 홈페이지, 고객센터(1800-1111)를 통해 가능합니다.</li>
+											<li class="info-item">
+												기부금 영수증 발행은 연간(회계연도 기준) 해당 기부처별 기부금 영수증을 발행해 드립니다. 영수증 발행 연락처는 각 기부처별 홈페이지를 참조하시기 바랍니다.
+											</li>
+											<li class="info-item">소득공제 영수증은 기부처별 발급 기준(예:1만원 이상)에 따라 발급 여부가 달라질 수 있습니다.</li>
+										</ul>
+									</div>
+									<!--// 2022.03.10 : mod : 텍스트 수정 -->
+								</div>
+							</div>
+
+							<div class="menu-link-area">
+								<ul class="menu-link-list">
+									<li class="menu-link-item"><a href="" class="ui-arrow-block menu-link-button" role="button">즉시기부 신청내역</a></li>
+									<li class="menu-link-item"><a href="" class="ui-arrow-block menu-link-button" role="button">정기기부 신청내역 조회/해지</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <g data-name="그룹 14216">
+        <g data-name="그룹 13885">
+            <g data-name="사각형 17583" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+                <path d="M3 0h13a3 3 0 0 1 3 3v23H0V3a3 3 0 0 1 3-3z" style="stroke:none" transform="translate(13.023 7)"/>
+                <path d="M3 .75h13A2.25 2.25 0 0 1 18.25 3v22.25H.75V3A2.25 2.25 0 0 1 3 .75z" style="fill:none" transform="translate(13.023 7)"/>
+            </g>
+            <g data-name="사각형 17584" transform="translate(15.759 10.946)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+                <rect width="13.527" height="9.054" rx="2" style="stroke:none"/>
+                <rect x=".75" y=".75" width="12.027" height="7.554" rx="1.25" style="fill:none"/>
+            </g>
+            <g data-name="사각형 17585" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+                <path d="M0 0h3.527a2 2 0 0 1 2 2v3.054a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V0z" style="stroke:none" transform="translate(35.259 10.946)"/>
+                <path d="M.75.75h2.777A1.25 1.25 0 0 1 4.777 2v3.054A1.25 1.25 0 0 1 3.527 6.3H2A1.25 1.25 0 0 1 .75 5.054V.75z" style="fill:none" transform="translate(35.259 10.946)"/>
+            </g>
+            <g data-name="사각형 17586" transform="translate(10.259 31.5)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+                <rect width="24.527" height="5.054" rx="2" style="stroke:none"/>
+                <rect x=".75" y=".75" width="23.027" height="3.554" rx="1.25" style="fill:none"/>
+            </g>
+            <path data-name="선 740" transform="translate(34.023 11.7)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px" d="M0 0h4"/>
+            <path data-name="패스 13151" d="M681 377a2 2 0 0 1 2 2v2.188" transform="translate(-648.977 -361)" style="stroke-miterlimit:10;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+            <path data-name="패스 13152" d="M683 380.884V390a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-9.116" transform="translate(-644.977 -363)" style="stroke-miterlimit:10;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+        </g>
+        <g data-name="그룹 13212">
+            <path data-name="패스 12239" d="M10 0H2a1.929 1.929 0 0 0-2 1.849v11.186a1.794 1.794 0 0 0 .669 1.381l4 3.294a2.126 2.126 0 0 0 2.663 0l4-3.294A1.794 1.794 0 0 0 12 13.035V1.849A1.929 1.929 0 0 0 10 0z" transform="rotate(-135 12.499 14.664)" style="fill:#f8f8f8"/>
+            <path data-name="패스 12574" d="M10 0H2a1.929 1.929 0 0 0-2 1.849v11.186a1.794 1.794 0 0 0 .669 1.381l4 3.294a2.126 2.126 0 0 0 2.663 0l4-3.294A1.794 1.794 0 0 0 12 13.035V1.849A1.929 1.929 0 0 0 10 0z" transform="rotate(-135 12.499 14.664)" style="fill:#fff"/>
+            <path data-name="패스 12238" d="M10 0H2a1.929 1.929 0 0 0-2 1.849v11.186a1.794 1.794 0 0 0 .669 1.381l4 3.294a2.126 2.126 0 0 0 2.663 0l4-3.294A1.794 1.794 0 0 0 12 13.035V1.849A1.929 1.929 0 0 0 10 0z" transform="rotate(-135 13.56 15.326)" style="fill:#7dedf3"/>
+            <path data-name="패스 12236" d="M10 0H2a1.929 1.929 0 0 0-2 1.849v11.186a1.794 1.794 0 0 0 .669 1.381l4 3.294a2.126 2.126 0 0 0 2.663 0l4-3.294A1.794 1.794 0 0 0 12 13.035V1.849A1.929 1.929 0 0 0 10 0z" transform="rotate(-135 12.499 14.664)" style="stroke-miterlimit:10;stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+            <g data-name="그룹 12511">
+                <path data-name="선 345" transform="rotate(-135 11.704 11.083)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px" d="M4.613 5.535 0 0"/>
+                <g data-name="타원 1884" transform="rotate(-135 13.5 10.007)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+                    <circle cx="1.75" cy="1.75" r="1.75" style="stroke:none"/>
+                    <circle cx="1.75" cy="1.75" r="1" style="fill:none"/>
+                </g>
+                <g data-name="타원 1885" transform="rotate(-135 9.763 11.09)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+                    <circle cx="1.75" cy="1.75" r="1.75" style="stroke:none"/>
+                    <circle cx="1.75" cy="1.75" r="1" style="fill:none"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

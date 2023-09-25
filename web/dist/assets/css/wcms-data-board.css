@@ -1,0 +1,13 @@
+/* 2022 TO-BE */
+
+.board-data p,
+.board-data dl,
+.board-data dd {
+	margin: 0;
+}
+.board-data ul,
+.board-data ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-search-branch">추천 영업점 검색</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 추천 영업점 검색 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 활성시 is-not-background-close 클래스 값 삭제 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select is-not-background-close" data-layer="layer-search-branch">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">추천 영업점을 선택해주세요.</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-form">
+									<dl class="ui-form-list">
+										<!-- 2022.11.30 : mod : .ui-form-item 의 .type-inputed 클래스 삭제 -->
+										<div class="ui-form-item">
+											<dt class="ui-form-key" data-focus-input="name">추천 영업점</dt>
+											<dd class="ui-form-val">
+												<div class="ui-form-val-inner">
+													<div class="ui-form-contents">
+														<!-- 2022.11.28 : mod : type-center-delete 클래스 추가 -->
+														<div class="in-input-block type-center-delete">
+															<input type="search" class="in-input" title="추천 영업점 입력" placeholder="추천 영업점 검색" data-focus-input-target="name" />
+														</div>
+													</div>
+												</div>
+												<div class="ui-form-side">
+													<button type="button" class="ui-button ui-button-search">
+														<span class="for-a11y">검색</span>
+													</button>
+												</div>
+											</dd>
+										</div>
+									</dl>
+								</div>
+
+								<!-- 검색결과 없을 경우 -->
+								<div class="type-none">
+									<p class="item-text">검색한 영업점이 없습니다.</p>
+								</div>
+								<!-- //검색결과 없을 경우 -->
+
+								<div class="ui-select-list">
+									<div class="ui-select-item">
+										<div class="ui-radio-block" role="button">
+											<input type="radio" class="ui-radio" name="radio1" id="radio1-1" checked />
+											<label for="radio1-1" class="ui-label type-block">
+												<span class="ui-label-text">압구정PB센터지점</span>
+												<span class="ui-label-text-sub">0109</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-item">
+										<div class="ui-radio-block" role="button">
+											<input type="radio" class="ui-radio" name="radio1" id="radio1-2" />
+											<label for="radio1-2" class="ui-label type-block">
+												<span class="ui-label-text">압구정PB센터지점</span>
+												<span class="ui-label-text-sub">0109</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-item">
+										<div class="ui-radio-block" role="button">
+											<input type="radio" class="ui-radio" name="radio1" id="radio1-3" />
+											<label for="radio1-3" class="ui-label type-block">
+												<span class="ui-label-text">압구정PB센터지점</span>
+												<span class="ui-label-text-sub">0109</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 추천 영업점 검색 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-search-branch');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

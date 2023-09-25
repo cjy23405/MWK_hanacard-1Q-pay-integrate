@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <g data-name="그룹 13552">
+        <g data-name="사각형 16868" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff" transform="translate(14 6)">
+            <rect width="23" height="38" rx="5.5" style="stroke:none"/>
+            <rect x=".75" y=".75" width="21.5" height="36.5" rx="4.75" style="fill:none"/>
+        </g>
+        <path data-name="사각형 16869" transform="translate(14.001 37)" style="fill:#2d3239" d="M0 0h22v1.5H0z"/>
+        <path data-name="사각형 16870" transform="translate(14.001 11.212)" style="fill:#2d3239" d="M0 0h22v1.5H0z"/>
+    </g>
+    <g data-name="사각형 17841" transform="translate(3 17)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+        <rect width="23" height="17" rx="5" style="stroke:none"/>
+        <rect x=".75" y=".75" width="21.5" height="15.5" rx="4.25" style="fill:none"/>
+    </g>
+    <rect data-name="사각형 17844" width="3.536" height="3.536" rx="1.5" transform="translate(8.004 24.361)" style="fill:#7dedf3"/>
+    <g data-name="사각형 17843" transform="translate(6.531 22.888)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+        <rect width="4.714" height="4.714" rx="2" style="stroke:none"/>
+        <rect x=".75" y=".75" width="3.214" height="3.214" rx="1.25" style="fill:none"/>
+    </g>
+    <g data-name="그룹 13182" transform="translate(-19.832 -755.768)">
+        <circle data-name="타원 1896" cx="8" cy="8" r="8" transform="translate(48.33 786.768)" style="fill:#fff"/>
+        <path data-name="패스 10995" d="M7 0a7 7 0 1 1-7 7 7 7 0 0 1 7-7z" transform="translate(51.33 788.268)" style="fill:#7dedf3"/>
+        <g data-name="타원 1441" transform="translate(48.33 786.768)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+            <circle cx="8" cy="8" r="8" style="stroke:none"/>
+            <circle cx="8" cy="8" r="7.25" style="fill:none"/>
+        </g>
+        <g data-name="그룹 10611">
+            <path data-name="패스 2252" d="m3649.637 5413.028 1.622 4.635 1.623-4.635 1.622 4.635 1.623-4.635" transform="translate(-3596.551 -4620.396)" style="stroke-linejoin:round;stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+            <path data-name="선 11" transform="translate(52.158 794.486)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px" d="M0 0h1.391"/>
+            <path data-name="선 166" transform="translate(59.111 794.486)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px" d="M0 0h1.391"/>
+        </g>
+    </g>
+</svg>

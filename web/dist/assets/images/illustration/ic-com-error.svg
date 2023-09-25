@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+    <defs>
+        <style>
+            .cls-1{fill:#f8f8f8}.cls-3{fill:#fff}.cls-4{fill:#2d3239}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_error" transform="translate(-133 -166)">
+        <circle id="타원_1315" data-name="타원 1315" class="cls-1" cx="45" cy="45" r="45" transform="translate(133 166)"/>
+        <g id="사각형_11100" data-name="사각형 11100" transform="translate(158 194)" style="stroke:#2d3239;stroke-width:2px;fill:#fff">
+            <rect class="cls-7" width="40" height="32" rx="6"/>
+            <rect x="1" y="1" width="38" height="30" rx="5" style="fill:none"/>
+        </g>
+        <path id="사각형_11340" data-name="사각형 11340" class="cls-3" transform="translate(194 204)" d="M0 0h4v6H0z"/>
+        <rect id="사각형_6085" data-name="사각형 6085" class="cls-4" width="14" height="2" rx="1" transform="translate(167 210)"/>
+        <rect id="사각형_11664" data-name="사각형 11664" class="cls-4" width="22" height="2" rx="1" transform="translate(167 215)"/>
+        <rect id="사각형_11656" data-name="사각형 11656" class="cls-4" width="22" height="2" rx="1" transform="translate(167 230)"/>
+        <rect id="사각형_11102" data-name="사각형 11102" class="cls-4" width="2" height="4" rx="1" transform="translate(196 209)"/>
+        <path id="사각형_11128" data-name="사각형 11128" class="cls-1" transform="translate(182 186)" d="M0 0h22v7H0z"/>
+        <path id="사각형_11662" data-name="사각형 11662" class="cls-3" transform="translate(183 194)" d="M0 0h11v6H0z"/>
+        <path id="사각형_11654" data-name="사각형 11654" class="cls-4" transform="translate(174 224)" d="M0 0h2v6H0z"/>
+        <path id="사각형_11655" data-name="사각형 11655" class="cls-4" transform="translate(180 224)" d="M0 0h2v6H0z"/>
+        <path id="다각형_55" data-name="다각형 55" d="M8.836 3.737a2.5 2.5 0 0 1 4.327 0l6.664 11.51A2.5 2.5 0 0 1 17.664 19H4.336a2.5 2.5 0 0 1-2.164-3.753z" transform="translate(182 184.5)" style="fill:#ffd1dc"/>
+        <g id="다각형_54" data-name="다각형 54" style="fill:none">
+            <path class="cls-7" d="M8.9 4.523a3 3 0 0 1 5.2 0L20.415 15.5a3 3 0 0 1-2.6 4.5H5.186a3 3 0 0 1-2.6-4.5z" transform="translate(184 185)"/>
+            <path d="M11.5 5.018a.982.982 0 0 0-.867.502L4.32 16.502a.983.983 0 0 0 .001.999c.087.15.345.499.866.499h12.628c.521 0 .78-.35.866-.5a.983.983 0 0 0 .001-.998L12.367 5.52a.982.982 0 0 0-.867-.502m0-2c1.012 0 2.024.502 2.6 1.505l6.315 10.982c1.15 2-.294 4.495-2.6 4.495H5.184c-2.306 0-3.75-2.495-2.6-4.495L8.899 4.523A2.972 2.972 0 0 1 11.5 3.018z" style="fill:#2d3239;stroke:none" transform="translate(184 185)"/>
+        </g>
+        <rect id="사각형_11660" data-name="사각형 11660" class="cls-4" width="2" height="5" rx="1" transform="translate(195 194)"/>
+        <rect id="사각형_11661" data-name="사각형 11661" class="cls-4" width="2" height="2" rx="1" transform="translate(195 200)"/>
+        <rect id="사각형_11663" data-name="사각형 11663" class="cls-4" width="4" height="2" rx="1" transform="translate(181 194)"/>
+    </g>
+</svg>

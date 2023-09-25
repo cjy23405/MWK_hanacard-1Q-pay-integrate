@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">스마트쇼핑안심(프리미엄)</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							현재 <span class="color-primary">김하나</span> 회원님의<br />
+							본인인증 상태는 <span class="color-primary">[차단]</span> 입니다.
+						</h2>
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">변경하실 설정상태 선택</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-full">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" data-area-disabled="radioBox1-1" checked />
+											<label for="radioBox1-1" class="ui-label">
+												<span class="ui-label-text">차단</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" data-area-disabled="radioBox1-2" />
+											<label for="radioBox1-2" class="ui-label">
+												<span class="ui-label-text">알림</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-3" data-area-disabled="radioBox1-3" />
+											<label for="radioBox1-3" class="ui-label">
+												<span class="ui-label-text">해제</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-4" data-area-disabled="radioBox1-4" />
+											<label for="radioBox1-4" class="ui-label">
+												<span class="ui-label-text">일시해제</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-notice-area">
+							<div class="use-notice-item">
+								<div class="use-notice-opener">꼭 알아두세요.</div>
+								<div class="use-notice-contents">
+									<ul class="info-list">
+										<li class="info-item"><span class="color-primary">차단</span> : 본인인증을 항상 차단하며, SMS와 E-Mail 알람으로 차단내역을 안내해드립니다.</li>
+										<li class="info-item"><span class="color-primary">알림</span> : 본인인증 차단되지는 않지만, SMS와 E-Mail 알람으로 실명확인 발생 내역을 안내해드립니다.</li>
+										<li class="info-item"><span class="color-primary">해제</span> : 본인인증 가능하도록 허용하며, E-Mail 알람으로 발생내역을 안내해드립니다.</li>
+										<li class="info-item"><span class="color-primary">일시해제</span> : 5분 동안 본인인증이 가능하도록 허용하고, 5분 후 차단 상태로 자동 변경됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">확인</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

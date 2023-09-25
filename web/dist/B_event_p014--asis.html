@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">간편응모</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							이벤트 응모를 위해<br />
+							회원정보를 입력해 주세요.
+						</h2>
+
+						<div class="wcms-data">
+							<section class="event-data">
+								<!-- DD : 이 안에 wcms 폼 데이터 출력 -->
+								<article class="cont">
+									<h4 class="blind">간편응모</h4>
+
+									<!-- form_list -->
+									<ul class="form_list">
+										<li>
+											<h4 class="s_tit">성명</h4>
+											<div class="input_wrap">
+												<div class="cell">
+													<input type="text" value="" title="성명 입력" class="input_ty" />
+												</div>
+											</div>
+										</li>
+										<li>
+											<h4 class="s_tit">주민등록번호</h4>
+											<div class="input_wrap">
+												<div class="cell wd_40">
+													<input type="text" value="" maxlength="6" title="주민등록번호 앞자리 입력" class="input_ty" />
+												</div>
+												<div class="cell at">-</div>
+												<div class="cell wd_50px">
+													<input type="text" value="" maxlength="1" title="주민등록번호 뒷자리 입력" class="input_ty" />
+												</div>
+												<div class="cell"><span class="b_br">******</span></div>
+											</div>
+										</li>
+										<li>
+											<h4 class="s_tit">휴대폰번호</h4>
+											<div class="input_wrap">
+												<div class="cell wd_80px">
+													<select class="select_ty" title="휴대폰번호 첫번째 자리 선택">
+														<option value="">010</option>
+													</select>
+												</div>
+												<div class="cell">
+													<input type="number" value="" title="휴대폰번호 나머지 번호 입력" placeholder="‘-’ 제외하고 입력" class="input_ty" />
+												</div>
+											</div>
+											<p class="blt4">하나카드에 등록된 휴대폰번호와 이벤트에 응모하는 휴대폰번호가 동일해야 행사 대상이 됩니다.</p>
+										</li>
+										<li>
+											<h4 class="blind">개인정보 수집 및 이용 동의</h4>
+											<div class="terms_ty mg_t20">
+												<ul class="terms_area">
+													<li class="list" id="acc_terms1">
+														<div class="info">
+															<input type="checkbox" id="chk_terms1" />
+															<label for="chk_terms1">개인정보 수집 및 이용 동의</label>
+														</div>
+														<div class="view">
+															<div class="term_scroll" tabindex="0">
+																<div class="term_cont">
+																	<!-- 약관 -->
+																	<div class="terms">
+																		<h5 class="s_tit">개인정보 수집 및 이용</h5>
+																		<ul class="txt_li">
+																			<li class="blt7">1. 수집 이용 정보 : 이름, 생년월일, 휴대폰번호</li>
+																			<li class="blt7">2. 수집 이용 목적 : 이벤트 실시 관리, 이벤트 안내 상담, 민원처리, 이벤트 경품 배송</li>
+																			<li class="blt7">3. 개인정보의 보유 이용 기간 : 이벤트 종료 후 3개월 까지 (관련 법령의 별도 규정이 명시되어 있는 경우 그 기간에 따름)</li>
+																		</ul>
+																		<ul class="txt_li mg_t10">
+																			<li class="blt3">위 사항에 대해 동의를 거부할 수 있으나, 동의하지 않으시는 경우에는 본 행사 참여가 불가능함을 알려 드립니다.</li>
+																		</ul>
+																	</div>
+																	<!-- //약관 -->
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="list" id="acc_terms2">
+														<div class="info">
+															<input type="checkbox" id="chk_terms2" />
+															<label for="chk_terms2">개인정보 제3자 정보 제공 동의</label>
+														</div>
+														<div class="view">
+															<div class="term_scroll" tabindex="0">
+																<div class="term_cont">
+																	<!-- 약관 -->
+																	<div class="terms">
+																		<h5 class="s_tit">개인정보 수집 및 이용</h5>
+																		<ul class="txt_li">
+																			<li class="blt7">① 개인(신용)정보를 제공 받는자 : GS엠비즈주식회사</li>
+																			<li class="blt7">② 개인(신용)정보 제공 목적 : 기프티콘 발송</li>
+																			<li class="blt7">③ 제공 대상 개인(신용)정보 : 휴대전화번호</li>
+																			<li class="blt7">④ 제공받는 자의 개인(신용)정보 보유 및 이용기간 : 이벤트 종료일로부터 6개월</li>
+																		</ul>
+																	</div>
+																	<!-- //약관 -->
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+									<!-- //form_list -->
+
+									<ul class="btn_area">
+										<li>
+											<a href="#none" class="btn_b btn_ty02">응모하기</a>
+										</li>
+									</ul>
+
+									<dl class="info_box on">
+										<dt>
+											<a href="#none">유의사항<em class="blind">상세내용보기</em></a>
+										</dt>
+										<dd>
+											<ul>
+												<li class="blt1">입력하신 정보는 본 이벤트와 다른 용도로 사용되지 않습니다.</li>
+												<li class="blt1">제공하신 정보는 혜택 제공 완료 후 폐기됩니다.</li>
+												<li class="blt1">위 사항에 동의하지 않으실 수 있으나 동의하지 않으실 경우 이벤트 참여가 불가능함을 알려드립니다.</li>
+												<li class="blt1">기타 문의사항은 하나카드 고객센터(1800-1111)로 연락 바랍니다.</li>
+											</ul>
+										</dd>
+									</dl>
+								</article>
+							</section>
+						</div>
+
+						<p class="basic-text margin-top-35">
+							상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.<br />
+							신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.<br />
+							일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				// WCMS 컨텐츠 용 input validator 함수
+				$('.event-data input').eq(0).uiWcmsInvalid(false, '오류 메세지');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

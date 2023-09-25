@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <g data-name="사각형 11970" style="stroke-width:1.5px;stroke:#2d3239;fill:#fff">
+        <path d="M5 0h18a5 5 0 0 1 5 5v23H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" style="stroke:none" transform="translate(5 9)"/>
+        <path d="M5 .75h18A4.25 4.25 0 0 1 27.25 5v22.25H5A4.25 4.25 0 0 1 .75 23V5A4.25 4.25 0 0 1 5 .75z" style="fill:none" transform="translate(5 9)"/>
+    </g>
+    <g data-name="사각형 12121" transform="rotate(90 10 17)" style="fill:none;stroke:#2d3239">
+        <rect width="6" height="1.5" rx=".75" style="stroke:none"/>
+        <rect x=".5" y=".5" width="5" height=".5" rx=".25" style="fill:none"/>
+    </g>
+    <rect data-name="사각형 11973" width="1.5" height="27" rx=".75" transform="rotate(90 8.891 23.892)" style="fill:#2d3239"/>
+    <path data-name="패스 13813" d="M5.194-10.08a.906.906 0 0 1 .525.14.521.521 0 0 1 .2.462v8.9a.5.5 0 0 1-.21.448.863.863 0 0 1-.49.14.863.863 0 0 1-.49-.14.5.5 0 0 1-.21-.448v-7.85L2.422-7.14a.549.549 0 0 1-.5.056.774.774 0 0 1-.382-.336.779.779 0 0 1-.077-.469.516.516 0 0 1 .287-.385l2.506-1.5A3.281 3.281 0 0 1 4.76-10a1.332 1.332 0 0 1 .434-.08zm7.616-.084a3.083 3.083 0 0 1 2.737 1.232 6.255 6.255 0 0 1 .847 3.556v.686a6.255 6.255 0 0 1-.847 3.556A3.083 3.083 0 0 1 12.81.1a3.083 3.083 0 0 1-2.737-1.232 6.255 6.255 0 0 1-.847-3.558v-.686a6.255 6.255 0 0 1 .847-3.556 3.083 3.083 0 0 1 2.737-1.232zm0 1.316a2.3 2.3 0 0 0-1.036.21 1.582 1.582 0 0 0-.672.651 3.253 3.253 0 0 0-.357 1.113 10.608 10.608 0 0 0-.1 1.61v.464a10.608 10.608 0 0 0 .1 1.61 3.253 3.253 0 0 0 .355 1.111 1.582 1.582 0 0 0 .672.651 2.3 2.3 0 0 0 1.036.21 2.3 2.3 0 0 0 1.036-.21 1.582 1.582 0 0 0 .672-.651 3.253 3.253 0 0 0 .357-1.113 10.608 10.608 0 0 0 .1-1.61v-.462a10.608 10.608 0 0 0-.1-1.61 3.253 3.253 0 0 0-.357-1.113 1.582 1.582 0 0 0-.672-.651 2.3 2.3 0 0 0-1.034-.21z" transform="translate(10.045 30.414)" style="stroke-width:.5px;fill:#2d3239;stroke:#2d3239"/>
+    <circle data-name="타원 2206" cx="8" cy="8" r="8" transform="translate(24 21)" style="fill:#fff"/>
+    <g data-name="사각형 12361" transform="rotate(90 2.75 9.75)" style="fill:none;stroke:#2d3239">
+        <rect width="6" height="1.5" rx=".75" style="stroke:none"/>
+        <rect x=".5" y=".5" width="5" height=".5" rx=".25" style="fill:none"/>
+    </g>
+    <path data-name="패스 10995" d="M7 0a7 7 0 1 1-7 7 7 7 0 0 1 7-7z" transform="translate(27 22)" style="fill:#7dedf3"/>
+    <g data-name="타원 1441" transform="translate(24 21)" style="fill:none;stroke-width:1.5px;stroke:#2d3239">
+        <circle cx="8" cy="8" r="8" style="stroke:none"/>
+        <circle cx="8" cy="8" r="7.25" style="fill:none"/>
+    </g>
+    <g data-name="그룹 13903">
+        <path data-name="선 763" transform="translate(32.072 26)" style="stroke-linecap:round;fill:none;stroke-width:1.5px;stroke:#2d3239" d="M0 0v6.146"/>
+        <path data-name="선 764" transform="rotate(90 3.037 32.11)" style="stroke-linecap:round;fill:none;stroke-width:1.5px;stroke:#2d3239" d="M0 0v6.146"/>
+    </g>
+</svg>

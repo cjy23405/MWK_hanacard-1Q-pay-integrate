@@ -1,0 +1,3155 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>컴포넌트 가이드</title>
+
+		<meta charset="euc-kr" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./dist/assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./dist/assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./dist/assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./dist/assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./dist/assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./dist/assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./dist/assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./dist/assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./dist/assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./dist/assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/wcms-data.css" />
+		<style>
+			*:focus {
+				outline: 1px dotted #999;
+			}
+			b {
+				margin-left: 10px;
+			}
+			body {
+				font-size: 1.6rem;
+				background: #fefefe;
+			}
+			h1.test-title {
+				font-size: 30px;
+				margin: 50px 50px;
+			}
+			h2.test-title {
+				margin: 0 0 20px;
+				font-size: 22px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #888;
+			}
+			h3.test-title {
+				margin: 0 0 10px;
+				font-size: 18px;
+			}
+			.test-title-sub {
+				margin-left: 10px;
+				font-size: 12px;
+				color: var(--wrong);
+			}
+			.test-section {
+				border-top: 2px solid #ddd;
+				padding: 50px 24px;
+			}
+			.test-section-sub + .test-section-sub {
+				margin-top: 20px;
+				border-top: 1px dashed #888;
+				padding-top: 20px;
+			}
+			.text-section-undecided {
+				opacity: 0.5;
+			}
+			.test-code {
+				border: 2px solid #ddd;
+				margin: 10px 0;
+				background: #fff;
+				padding: 10px;
+			}
+			.test-code:before {
+				content: 'ex.';
+				display: block;
+				font-size: 12px;
+			}
+			.test-description {
+				margin: 10px 0;
+				padding: 0 12px;
+			}
+			.test-links {
+				margin-left: -20px;
+			}
+			.test-links:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+			.test-links a {
+				display: block;
+				margin: 20px 0 0 20px;
+				float: left;
+				padding: 5px 15px;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 5px;
+				background: #333;
+			}
+			.test-links + h2.test-title {
+				margin-top: 20px;
+			}
+		</style>
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div style="display: table"></div>
+
+			<h1 class="test-title">Component</h1>
+
+			<div class="test-section test-section--button">
+				<style>
+					.test-section--button .ui-basic-buttons {
+						overflow: hidden;
+						font-size: 0;
+						line-height: 0;
+					}
+					.test-section--button .ui-basic-button {
+						margin: 10px;
+						width: auto;
+						display: -webkit-inline-box;
+						display: -ms-inline-flexbox;
+						display: inline-flex;
+						vertical-align: top;
+					}
+					.test-section-sub--etc .ui-basic-buttons > * {
+						display: block;
+						margin: 10px;
+					}
+				</style>
+				<h2 class="test-title">Basic Button</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">button tag</h3>
+					<div class="ui-basic-buttons">
+						<button type="button" class="ui-button ui-basic-button">button</button>
+						<button type="button" class="ui-button ui-basic-button" disabled>button</button>
+						<button type="button" class="ui-button ui-basic-button type-gray">button</button>
+						<button type="button" class="ui-button ui-basic-button type-gray" disabled>button</button>
+						<button type="button" class="ui-button ui-basic-button type-black">button</button>
+						<button type="button" class="ui-button ui-basic-button type-black" disabled>button</button>
+						<button type="button" class="ui-button ui-basic-button type-vip">button</button>
+						<button type="button" class="ui-button ui-basic-button type-vip" disabled>button</button>
+						<button type="button" class="ui-button ui-basic-button type-primary">button</button>
+						<button type="button" class="ui-button ui-basic-button type-primary" disabled>button</button>
+						<button type="button" class="ui-button ui-basic-button type-secondary">button</button>
+						<button type="button" class="ui-button ui-basic-button type-secondary" disabled>button</button>
+						<button type="button" class="ui-button ui-basic-button type-tertiary">button</button>
+						<button type="button" class="ui-button ui-basic-button type-tertiary" disabled>button</button>
+						<button type="button" class="ui-button ui-basic-button type-quaternary">button</button>
+						<button type="button" class="ui-button ui-basic-button type-quaternary" disabled>button</button>
+						<button type="button" class="ui-button ui-basic-button type-quinary">button</button>
+						<button type="button" class="ui-button ui-basic-button type-quinary" disabled>button</button>
+						<button type="button" class="ui-button ui-basic-button type-senary">button</button>
+						<button type="button" class="ui-button ui-basic-button type-senary" disabled>button</button>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">a tag</h3>
+					<div class="ui-basic-buttons">
+						<a href="" class="ui-basic-button" role="button">button</a>
+						<a href="" class="ui-basic-button type-disabled" role="button">button</a>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">medium size</h3>
+					<div class="ui-basic-buttons">
+						<button type="button" class="ui-button ui-basic-button type-medium">button</button>
+						<button type="button" class="ui-button ui-basic-button type-medium" disabled>button</button>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">small size</h3>
+					<div class="ui-basic-buttons">
+						<button type="button" class="ui-button ui-basic-button type-small">button</button>
+						<button type="button" class="ui-button ui-basic-button type-small" disabled>button</button>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">mini size</h3>
+					<div class="ui-basic-buttons">
+						<button type="button" class="ui-button ui-basic-button type-mini">button</button>
+						<button type="button" class="ui-button ui-basic-button type-mini" disabled>button</button>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">tiny size</h3>
+					<div class="ui-basic-buttons">
+						<button type="button" class="ui-button ui-basic-button type-tiny">button</button>
+						<button type="button" class="ui-button ui-basic-button type-tiny" disabled>button</button>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">icon</h3>
+					<div class="ui-basic-buttons">
+						<a href="tel:1800-1111" class="ui-basic-button type-small type-icon-tel" role="button">1800-1111</a>
+						<a href="tel:1800-1111" class="ui-basic-button type-primary type-small type-icon-tel" role="button">1800-1111</a>
+						<a href="tel:1800-1111" class="ui-basic-button type-vip type-small type-icon-tel" role="button">1800-1111</a>
+						<a href="tel:1800-1111" class="ui-basic-button type-gray type-small type-icon-tel" role="button">1800-1111</a>
+						<a href="tel:1800-1111" class="ui-basic-button type-secondary type-small type-icon-tel" role="button">1800-1111</a>
+						<a href="tel:1234-5678" class="ui-basic-button" role="button">전화신청<span class="ui-icon-tel type-center"></span>1234-5678</a>
+						<a href="tel:1234-5678" class="ui-basic-button type-gray" role="button">전화신청<span class="ui-icon-tel type-center"></span>1234-5678</a>
+						<button type="button" class="ui-button ui-basic-button type-icon-lock">가려진 정보확인</button>
+						<button type="button" class="ui-button ui-basic-button type-primary type-icon-lock">가려진 정보확인</button>
+						<button type="button" class="ui-button ui-basic-button type-primary type-icon type-icon-pick">신청</button>
+						<button type="button" class="ui-button ui-basic-button type-primary type-icon type-icon-pick" disabled>신청</button>
+						<button type="button" class="ui-button ui-basic-button type-icon type-icon-pick-2 type-small" role="button">
+							<span class="color-blur">신청</span>
+						</button>
+						<button type="button" class="ui-button ui-basic-button type-icon type-icon-pick-2 type-small" role="button" disabled>
+							<span class="color-blur">신청완료</span>
+						</button>
+						<button type="button" class="ui-button ui-basic-button type-tiny type-gray type-icon type-icon-delete check-detail-title-button">삭제하기</button>
+						<button type="button" class="ui-button ui-basic-button type-tiny type-gray type-icon type-icon-delete check-detail-title-button" disabled>삭제하기</button>
+						<button type="button" class="ui-button ui-basic-button type-secondary type-tiny type-icon type-icon-graph">내 소비 분석</button>
+						<button type="button" class="ui-button ui-basic-button type-secondary type-tiny type-icon type-icon-graph" disabled>내 소비 분석</button>
+						<a href="" class="ui-basic-button type-tiny type-kakao type-icon type-icon-kakao-map" role="button">길찾기</a>
+					</div>
+				</div>
+				<div class="test-section-sub test-section-sub--etc">
+					<h3 class="test-title">icon - etc</h3>
+					<div class="ui-basic-buttons">
+						<button type="button" class="ui-button-reload">재조회</button>
+						<span class="ui-icon-download"><span class="for-a11y">다운로드</span></span>
+						<button type="button" class="ui-icon-refresh"><span class="for-a11y">시간연장</span></button>
+						<span class="ui-icon-lock"><span class="for-a11y">가려진 정보</span></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--button">
+				<style>
+					.test-section--button .ui-regular-button {
+						display: inline-block;
+						vertical-align: top;
+						margin: 10px;
+						width: auto;
+					}
+					.ui-buttons.type-tooltip {
+						margin-top: 40px;
+					}
+					.ui-buttons.type-tooltip.type-2lines {
+						margin-top: 50px;
+					}
+				</style>
+				<h2 class="test-title">Regular Button</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">button tag</h3>
+					<button type="button" class="ui-button ui-regular-button">button</button>
+					<button type="button" class="ui-button ui-regular-button type-primary" disabled>button</button>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">a tag</h3>
+					<a href="" class="ui-regular-button" role="button">button</a>
+					<a href="" class="ui-regular-button type-primary type-disabled" role="button">button</a>
+				</div>
+			</div>
+
+			<div class="test-section test-section--button-list">
+				<h2 class="test-title">Button List</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-buttons">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button" role="button">button</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-primary" role="button">button</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default + Full</h3>
+					<div class="ui-buttons">
+						<ul class="ui-buttons-list type-wrap">
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button" role="button">button</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-primary" role="button">button</a>
+							</li>
+							<li class="ui-buttons-item type-full">
+								<a href="" class="ui-basic-button type-gray" role="button">button</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Tooltip Left (2line)</h3>
+					<div class="ui-buttons type-tooltip type-2lines">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item">
+								<div class="ui-button-tooltip">
+									<span class="ui-button-tooltip-text">
+										단기카드대출 메인화면으로 <br />
+										이동합니다.
+									</span>
+								</div>
+								<a href="" class="ui-basic-button" role="button">button</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-primary" role="button">button</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Tooltip Right</h3>
+					<div class="ui-buttons type-tooltip">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button" role="button">button</a>
+							</li>
+							<li class="ui-buttons-item">
+								<div class="ui-button-tooltip"><span class="ui-button-tooltip-text">단기카드대출 메인화면으로 이동합니다.</span></div>
+								<a href="" class="ui-basic-button type-primary" role="button">button</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Align Left</h3>
+					<div class="ui-buttons type-left">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button" role="button">button</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-primary" role="button">button</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Align Right</h3>
+					<div class="ui-buttons type-right">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button" role="button">button</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-primary" role="button">button</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Align Center</h3>
+					<div class="ui-buttons type-center">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button" role="button">button</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-primary" role="button">button</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Full width</h3>
+					<div class="ui-buttons type-full">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-primary" role="button">button</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button" role="button">button</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Confirm</h3>
+					<div class="ui-buttons">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item type-narrow">
+								<button type="button" class="ui-button ui-basic-button">취소</button>
+							</li>
+							<li class="ui-buttons-item">
+								<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Scroll</h3>
+					<div class="ui-buttons type-scroll">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-tiny type-gray" role="button">button1</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-tiny type-gray" role="button">button2</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-tiny type-gray" role="button">button3</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-tiny type-gray" role="button">button4</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-tiny type-gray" role="button">button5</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-tiny type-gray" role="button">button6</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-tiny type-gray" role="button">button7</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-tiny type-gray" role="button">button8</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-tiny type-gray" role="button">button9</a>
+							</li>
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-tiny type-gray" role="button">button10</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--input">
+				<style>
+					.test-section--input .ui-input-block + .ui-input-block {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Input</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-input-block">
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" />
+					</div>
+					<div class="ui-input-block">
+						<input type="text" class="ui-input" title="title" placeholder="readonly placeholder" readonly />
+					</div>
+					<div class="ui-input-block">
+						<input type="text" class="ui-input" title="title" placeholder="readonly placeholder" value="readonly value" readonly />
+					</div>
+					<div class="ui-input-block">
+						<input type="text" class="ui-input" title="title" placeholder="disabled placeholder" disabled />
+					</div>
+					<div class="ui-input-block">
+						<input type="text" class="ui-input" title="title" placeholder="disabled placeholder" value="disabled value" disabled />
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Use Delete<span class="test-title-sub">※ 삭제(X) 버튼은 텍스트 Type에만 적용 (패스워드, 숫자 Type에는 미적용)</span></h3>
+					<div class="ui-input-block type-use-delete">
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" required />
+						<button type="button" class="ui-button ui-input-delete">
+							<span class="for-a11y">입력 내용 지우기</span>
+						</button>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Date</h3>
+					<div class="ui-date-picker">
+						<duet-date-picker identifier="date" title="title"></duet-date-picker>
+					</div>
+					<div class="ui-date-picker">
+						<duet-date-picker identifier="date" title="title" disabled></duet-date-picker>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Search</h3>
+					<div class="ui-input-block type-use-delete type-form-search">
+						<input type="text" class="ui-input" title="검색어 입력" placeholder="검색어를 입력해 주세요." />
+						<button type="button" class="ui-button ui-input-delete">
+							<span class="for-a11y">입력 내용 지우기</span>
+						</button>
+					</div>
+					<div class="ui-input-block type-use-delete type-search">
+						<input type="text" class="ui-input" title="검색어 입력" placeholder="검색어를 입력해 주세요." />
+						<button type="button" class="ui-button ui-input-delete">
+							<span class="for-a11y">입력 내용 지우기</span>
+						</button>
+						<button type="button" class="ui-button ui-input-search">
+							<span class="for-a11y">검색</span>
+						</button>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Invalid</h3>
+					<div class="ui-input-block type-use-delete is-invalid">
+						<input type="text" class="ui-input" title="title" placeholder="value : text(true)" id="validationInput" required />
+						<button type="button" class="ui-button ui-input-delete">
+							<span class="for-a11y">입력 내용 지우기</span>
+						</button>
+						<span class="ui-invalid"><a href="guide-script.html">스크립트 가이드 참고</a></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--textarea">
+				<style>
+					.test-section--textarea .ui-input-block + .ui-input-block,
+					.test-section--textarea .form-group + .ui-input-block,
+					.test-section--textarea .ui-input-block + .form-group {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Textarea</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-input-block type-textarea">
+						<textarea class="ui-input" title="title" placeholder="placeholder" rows="1"></textarea>
+					</div>
+					<div class="form-group">
+						<div class="ui-input-block type-textarea type-has-counting">
+							<textarea class="ui-input" title="title" placeholder="placeholder" rows="3"></textarea>
+							<span class="ui-counting">(0/2000byte)</span>
+						</div>
+					</div>
+					<div class="ui-input-block type-textarea">
+						<textarea class="ui-input" title="title" placeholder="readonly placeholder" rows="1" readonly></textarea>
+					</div>
+					<div class="ui-input-block type-textarea">
+						<textarea class="ui-input" title="title" placeholder="readonly placeholder" rows="1" readonly>readonly value</textarea>
+					</div>
+					<div class="ui-input-block type-textarea">
+						<textarea class="ui-input" title="title" placeholder="disabled placeholder" rows="1" disabled></textarea>
+					</div>
+					<div class="ui-input-block type-textarea">
+						<textarea class="ui-input" title="title" placeholder="disabled placeholder" rows="1" disabled>disabled value</textarea>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--select">
+				<style>
+					.test-section--select .ui-select-block + .ui-select-block {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Select</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="form-group">
+						<div class="ui-select-block">
+							<select class="ui-select" title="title">
+								<option value="-1" disabled selected>placeholder</option>
+								<option value="">option 1</option>
+								<option value="">option 2</option>
+								<option value="">option 3</option>
+								<option value="">option 4</option>
+								<option value="">option 5</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="ui-select-block">
+							<select class="ui-select" title="title" disabled>
+								<option value="-1" disabled>disabled placeholder</option>
+								<option value="" selected>disabled option 1</option>
+								<option value="">disabled option 2</option>
+								<option value="">disabled option 3</option>
+								<option value="">disabled option 4</option>
+								<option value="">disabled option 5</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Button</h3>
+					<div class="form-group">
+						<div class="ui-select-block">
+							<button type="button" class="ui-button ui-select" title="">select</button>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="ui-select-block type-placeholder">
+							<button type="button" class="ui-button ui-select" title="">placeholder</button>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="ui-select-block">
+							<button type="button" class="ui-button ui-select" title="" disabled>disabled</button>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Card</h3>
+					<div class="form-group">
+						<div class="ui-select-block type-card">
+							<button type="button" class="ui-button ui-select" title="카드 선택">카드를 선택해 주세요.</button>
+						</div>
+						<div class="ui-select-block type-card">
+							<button type="button" class="ui-button ui-select" title="카드 선택" disabled>서비스 대상 카드가 없습니다.</button>
+						</div>
+						<!-- DD : 이미지 없을 때 -->
+						<div class="ui-select-block type-card">
+							<button type="button" class="ui-button ui-select" title="카드 선택">
+								<span class="card-image"><span class="card-image-inner"></span></span>[본인123] 아멕스 아시아나클럽 카드
+							</button>
+						</div>
+						<!-- //DD : 이미지 없을 때 -->
+
+						<!-- DD : 이미지 에러 -->
+						<div class="ui-select-block type-card">
+							<button type="button" class="ui-button ui-select" title="카드 선택">
+								<span class="card-image"
+									><span class="card-image-inner"><img src="./dist/assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" /></span></span
+								>[본인123] 아멕스 아시아나클럽 카드
+							</button>
+						</div>
+						<!-- //DD : 이미지 에러 -->
+
+						<!-- DD : 이미지 있을 때 -->
+						<div class="ui-select-block type-card">
+							<button type="button" class="ui-button ui-select" title="카드 선택">
+								<span class="card-image"
+									><span class="card-image-inner"><img src="./dist/assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" /></span></span
+								>[본인123] 아멕스 아시아나클럽 카드
+							</button>
+						</div>
+						<!-- //DD : 이미지 있을 때 -->
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--checkbox">
+				<style>
+					.test-section--checkbox .ui-checkbox-block:not(.type-box) {
+						display: inline-block;
+						vertical-align: top;
+						margin: 10px;
+					}
+					.type-grid + .type-grid {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Checkbox</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Regular</h3>
+					<div class="ui-checkbox-block">
+						<input type="checkbox" class="ui-checkbox" id="checkbox1" />
+						<label for="checkbox1" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">dafault</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block">
+						<input type="checkbox" class="ui-checkbox" id="checkbox2" checked />
+						<label for="checkbox2" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">checked<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block">
+						<input type="checkbox" class="ui-checkbox" id="checkbox3" disabled />
+						<label for="checkbox3" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">disabled<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block">
+						<input type="checkbox" class="ui-checkbox" id="checkbox4" checked disabled />
+						<label for="checkbox4" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">disabled + checked<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Regular secondary</h3>
+					<div class="ui-checkbox-block type-secondary">
+						<input type="checkbox" class="ui-checkbox" id="checkbox1" />
+						<label for="checkbox1" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">dafault</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block type-secondary">
+						<input type="checkbox" class="ui-checkbox" id="checkbox2" checked />
+						<label for="checkbox2" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">checked<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block type-secondary">
+						<input type="checkbox" class="ui-checkbox" id="checkbox3" disabled />
+						<label for="checkbox3" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">disabled<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block type-secondary">
+						<input type="checkbox" class="ui-checkbox" id="checkbox4" checked disabled />
+						<label for="checkbox4" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">disabled + checked<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Large</h3>
+					<div class="ui-checkbox-block type-large">
+						<input type="checkbox" class="ui-checkbox" id="checkboxLarge1" />
+						<label for="checkboxLarge1" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">dafault</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block type-large">
+						<input type="checkbox" class="ui-checkbox" id="checkboxLarge2" checked />
+						<label for="checkboxLarge2" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">checked<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block type-large">
+						<input type="checkbox" class="ui-checkbox" id="checkboxLarge3" disabled />
+						<label for="checkboxLarge3" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">disabled<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block type-large">
+						<input type="checkbox" class="ui-checkbox" id="checkboxLarge4" checked disabled />
+						<label for="checkboxLarge4" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">disabled + checked<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Large secondary</h3>
+					<div class="ui-checkbox-block type-large type-large-secondary">
+						<input type="checkbox" class="ui-checkbox" id="checkboxLarge1" />
+						<label for="checkboxLarge1" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">dafault</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block type-large type-large-secondary">
+						<input type="checkbox" class="ui-checkbox" id="checkboxLarge2" checked />
+						<label for="checkboxLarge2" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">checked<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block type-large type-large-secondary">
+						<input type="checkbox" class="ui-checkbox" id="checkboxLarge3" disabled />
+						<label for="checkboxLarge3" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">disabled<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block type-large type-large-secondary">
+						<input type="checkbox" class="ui-checkbox" id="checkboxLarge4" checked disabled />
+						<label for="checkboxLarge4" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">disabled + checked<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Align top</h3>
+					<div class="ui-checkbox-block type-align-top">
+						<input type="checkbox" class="ui-checkbox" id="checkboxAlign1" />
+						<label for="checkboxAlign1" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">Regular<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-checkbox-block type-large type-align-top">
+						<input type="checkbox" class="ui-checkbox" id="checkboxAlign2" />
+						<label for="checkboxAlign2" class="ui-label">
+							<span class="ui-checkbox-object"></span>
+							<span class="ui-label-text">Large<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Grid (radio, checkbox)</h3>
+					<div class="ui-checkbox-group type-grid">
+						<div class="ui-checkbox-block type-box">
+							<input type="checkbox" class="ui-checkbox" name="checkboxGrid1" id="checkboxGrid1-1" checked />
+							<label for="checkboxGrid1-1" class="ui-label">
+								<span class="ui-label-text">checked</span>
+							</label>
+						</div>
+						<div class="ui-checkbox-block type-box">
+							<input type="checkbox" class="ui-checkbox" name="checkboxGrid1" id="checkboxGrid1-2" />
+							<label for="checkboxGrid1-2" class="ui-label">
+								<span class="ui-label-text">dafault</span>
+							</label>
+						</div>
+						<div class="ui-checkbox-block type-box">
+							<input type="checkbox" class="ui-checkbox" name="checkboxGrid1" id="checkboxGrid1-3" />
+							<label for="checkboxGrid1-3" class="ui-label">
+								<span class="ui-label-text">dafault</span>
+							</label>
+						</div>
+						<div class="ui-checkbox-block type-box">
+							<input type="checkbox" class="ui-checkbox" name="checkboxGrid1" id="checkboxGrid1-4" />
+							<label for="checkboxGrid1-4" class="ui-label">
+								<span class="ui-label-text">dafault<br />2 line label</span>
+							</label>
+						</div>
+					</div>
+					<div class="ui-radio-group type-grid type-col2">
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioGrid2" id="radioGrid2-1" checked />
+							<label for="radioGrid2-1" class="ui-label">
+								<span class="ui-label-text">checked</span>
+							</label>
+						</div>
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioGrid2" id="radioGrid2-2" />
+							<label for="radioGrid2-2" class="ui-label">
+								<span class="ui-label-text">dafault</span>
+							</label>
+						</div>
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioGrid2" id="radioGrid2-3" />
+							<label for="radioGrid2-3" class="ui-label">
+								<span class="ui-label-text">dafault</span>
+							</label>
+						</div>
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioGrid2" id="radioGrid2-4" />
+							<label for="radioGrid2-4" class="ui-label">
+								<span class="ui-label-text">dafault<br />2 line label</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--radio">
+				<style>
+					.test-section--radio .test-section-sub > .ui-radio-block {
+						display: inline-block;
+						vertical-align: top;
+						margin: 10px;
+					}
+					.test-section--radio .ui-radio-group + .ui-radio-group {
+						margin-top: 10px;
+					}
+				</style>
+				<h2 class="test-title">Radio</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-radio-block">
+						<input type="radio" class="ui-radio" id="radio1-1" />
+						<label for="radio1-1" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">default</span>
+						</label>
+					</div>
+					<div class="ui-radio-block">
+						<input type="radio" class="ui-radio" id="radio1-2" checked />
+						<label for="radio1-2" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">checked<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block">
+						<input type="radio" class="ui-radio" id="radio1-3" disabled />
+						<label for="radio1-3" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">disabled<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block">
+						<input type="radio" class="ui-radio" id="radio1-4" checked disabled />
+						<label for="radio1-4" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">disabled + checked<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Circle</h3>
+					<div class="ui-radio-block type-circle">
+						<input type="radio" class="ui-radio" id="radio2-1" />
+						<label for="radio2-1" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">default</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle">
+						<input type="radio" class="ui-radio" id="radio2-2" checked />
+						<label for="radio2-2" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">checked<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle">
+						<input type="radio" class="ui-radio" id="radio2-3" disabled />
+						<label for="radio2-3" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">disabled<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle">
+						<input type="radio" class="ui-radio" id="radio2-4" checked disabled />
+						<label for="radio2-4" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">disabled + checked<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Circle - medium</h3>
+					<div class="ui-radio-block type-circle type-medium">
+						<input type="radio" class="ui-radio" id="radio5-1" />
+						<label for="radio5-1" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">default</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle type-medium">
+						<input type="radio" class="ui-radio" id="radio5-2" checked />
+						<label for="radio5-2" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">checked<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle type-medium">
+						<input type="radio" class="ui-radio" id="radio5-3" disabled />
+						<label for="radio5-3" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">disabled<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle type-medium">
+						<input type="radio" class="ui-radio" id="radio5-4" checked disabled />
+						<label for="radio5-4" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">disabled + checked<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Circle - small</h3>
+					<div class="ui-radio-block type-circle type-small">
+						<input type="radio" class="ui-radio" id="radio4-1" />
+						<label for="radio4-1" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">default</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle type-small">
+						<input type="radio" class="ui-radio" id="radio4-2" checked />
+						<label for="radio4-2" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">checked<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle type-small">
+						<input type="radio" class="ui-radio" id="radio4-3" disabled />
+						<label for="radio4-3" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">disabled<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle type-small">
+						<input type="radio" class="ui-radio" id="radio4-4" checked disabled />
+						<label for="radio4-4" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">disabled + checked<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Align top</h3>
+					<div class="ui-radio-block type-align-top">
+						<input type="radio" class="ui-radio" name="radio3" id="radio3-1" />
+						<label for="radio3-1" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">default<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle type-align-top">
+						<input type="radio" class="ui-radio" name="radio3" id="radio3-2" />
+						<label for="radio3-2" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">circle<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle type-medium type-align-top">
+						<input type="radio" class="ui-radio" id="radio3-3" />
+						<label for="radio3-3" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">circle medium<br />2 line label</span>
+						</label>
+					</div>
+					<div class="ui-radio-block type-circle type-small type-align-top">
+						<input type="radio" class="ui-radio" id="radio3-4" />
+						<label for="radio3-4" class="ui-label">
+							<span class="ui-radio-object"></span>
+							<span class="ui-label-text">circle small<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Box</h3>
+					<div class="ui-radio-group type-wrap">
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" />
+							<label for="radioBox1-1" class="ui-label">
+								<span class="ui-label-text">default</span>
+							</label>
+						</div>
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" checked />
+							<label for="radioBox1-2" class="ui-label">
+								<span class="ui-label-text">selected<br />2 line label</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Box Full</h3>
+					<div class="ui-radio-group type-full">
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-1" />
+							<label for="radioBox2-1" class="ui-label">
+								<span class="ui-label-text"><span class="box-checkbox-tag">tag</span>default</span>
+							</label>
+						</div>
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-2" checked />
+							<label for="radioBox2-2" class="ui-label">
+								<span class="ui-label-text"><span class="box-checkbox-tag">tag</span>selected<br />2 line label</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Box Full - detail</h3>
+					<div class="ui-radio-group type-full type-form-detail">
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioBox3" id="radioBox3-1" />
+							<label for="radioBox3-1" class="ui-label type-block">
+								<div class="ui-label-text">
+									<div class="title form-flex type-total">
+										<span class="form-flex-cell">대출금액</span>
+										<span class="form-flex-cell type-flexible align-right">999,999,999 원</span>
+									</div>
+									<div class="form-detail-list">
+										<div class="form-detail-item">
+											<span class="form-detail-title">대출금액</span>
+											<span class="form-detail-group">999,999,999 원</span>
+										</div>
+										<div class="form-detail-item">
+											<span class="form-detail-title">대출잔액</span>
+											<span class="form-detail-group">999,999,999 원</span>
+										</div>
+									</div>
+								</div>
+							</label>
+						</div>
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioBox3" id="radioBox3-2" />
+							<label for="radioBox3-2" class="ui-label type-block">
+								<div class="ui-label-text">
+									<div class="title form-flex type-total">
+										<span class="form-flex-cell">대출금액</span>
+										<span class="form-flex-cell type-flexible align-right">999,999,999 원</span>
+									</div>
+									<div class="form-detail-list">
+										<div class="form-detail-item">
+											<span class="form-detail-title">대출금액</span>
+											<span class="form-detail-group">999,999,999 원</span>
+										</div>
+										<div class="form-detail-item">
+											<span class="form-detail-title">대출잔액</span>
+											<span class="form-detail-group">999,999,999 원</span>
+										</div>
+									</div>
+								</div>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Panel</h3>
+					<div class="ui-radio-group type-panel">
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" />
+							<label for="radioPanel1-1" class="ui-label">
+								<span class="ui-label-text">default</span>
+							</label>
+						</div>
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" checked />
+							<label for="radioPanel1-2" class="ui-label">
+								<span class="ui-label-text">default</span>
+							</label>
+						</div>
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-3" checked />
+							<label for="radioPanel1-3" class="ui-label">
+								<span class="ui-label-text">selected</span>
+							</label>
+						</div>
+					</div>
+					<div class="ui-radio-group type-panel">
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-1" />
+							<label for="radioPanel2-1" class="ui-label">
+								<span class="ui-label-text">default<br />2 line label</span>
+							</label>
+						</div>
+						<div class="ui-radio-block type-box">
+							<input type="radio" class="ui-radio" name="radioPanel2" id="radioPanel2-2" checked />
+							<label for="radioPanel2-2" class="ui-label">
+								<span class="ui-label-text">selected<br />2 line label</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Toggle</h3>
+					<div class="ui-radio-group type-toggle">
+						<div class="ui-radio-block">
+							<input type="radio" class="ui-radio" name="radioToggle1" id="radioToggle1-1" data-checkbox-tab="radioToggle1-1" checked />
+							<label for="radioToggle1-1" class="ui-label">
+								<span class="ui-label-text">selected</span>
+							</label>
+						</div>
+						<div class="ui-radio-block">
+							<input type="radio" class="ui-radio" name="radioToggle1" id="radioToggle1-2" data-checkbox-tab="radioToggle1-2" />
+							<label for="radioToggle1-2" class="ui-label">
+								<span class="ui-label-text">default</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--toggle">
+				<style>
+					.test-section--toggle .ui-checkbox-block {
+						display: inline-block;
+						vertical-align: top;
+						margin: 10px;
+					}
+				</style>
+				<h2 class="test-title">Toggle</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="ui-checkbox-block">
+						<div class="ui-toggle-block">
+							<input type="checkbox" class="ui-toggle" id="checkboxToggle1-1" />
+							<label for="checkboxToggle1-1" class="ui-label">
+								<span class="ui-toggle-object"></span>
+							</label>
+						</div>
+					</div>
+					<div class="ui-checkbox-block">
+						<div class="ui-toggle-block">
+							<input type="checkbox" class="ui-toggle" id="checkboxToggle1-2" checked />
+							<label for="checkboxToggle1-2" class="ui-label">
+								<span class="ui-toggle-object"></span>
+							</label>
+						</div>
+					</div>
+					<div class="ui-checkbox-block">
+						<div class="ui-toggle-block">
+							<input type="checkbox" class="ui-toggle" id="checkboxToggle1-3" disabled />
+							<label for="checkboxToggle1-3" class="ui-label">
+								<span class="ui-toggle-object"></span>
+							</label>
+						</div>
+					</div>
+					<div class="ui-checkbox-block">
+						<div class="ui-toggle-block">
+							<input type="checkbox" class="ui-toggle" id="checkboxToggle1-4" checked disabled />
+							<label for="checkboxToggle1-4" class="ui-label">
+								<span class="ui-toggle-object"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Text</h3>
+					<div class="ui-toggle-block">
+						<input type="checkbox" class="ui-toggle" id="checkboxToggle2" />
+						<label for="checkboxToggle2" class="ui-label">
+							<span class="ui-toggle-object"></span>
+							<span class="ui-label-text">label<br />2 line label</span>
+						</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--sorting">
+				<h2 class="test-title">Sorting</h2>
+				<div class="text-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="sorting-area">
+						<div class="sorting-contents">
+							<div class="sorting-list">
+								<div class="sorting-item">
+									<div class="ui-radio-block type-tab">
+										<input type="radio" name="sorting" class="ui-radio" id="sorting-all" checked />
+										<label for="sorting-all" class="ui-label">
+											<span class="ui-label-text">Tab1</span>
+										</label>
+									</div>
+								</div>
+								<div class="sorting-item">
+									<div class="ui-radio-block type-tab">
+										<input type="radio" name="sorting" class="ui-radio" id="sorting-1" />
+										<label for="sorting-1" class="ui-label">
+											<span class="ui-label-text">Tab2</span>
+										</label>
+									</div>
+								</div>
+								<div class="sorting-item">
+									<div class="ui-radio-block type-tab">
+										<input type="radio" name="sorting" class="ui-radio" id="sorting-2" />
+										<label for="sorting-2" class="ui-label">
+											<span class="ui-label-text">Tab3</span>
+										</label>
+									</div>
+								</div>
+								<div class="sorting-item">
+									<div class="ui-radio-block type-tab">
+										<input type="radio" name="sorting" class="ui-radio" id="sorting-3" />
+										<label for="sorting-3" class="ui-label">
+											<span class="ui-label-text">Tab4</span>
+										</label>
+									</div>
+								</div>
+								<div class="sorting-item">
+									<div class="ui-radio-block type-tab">
+										<input type="radio" name="sorting" class="ui-radio" id="sorting-4" />
+										<label for="sorting-4" class="ui-label">
+											<span class="ui-label-text">Tab5</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Accordion</h3>
+					<div class="sorting-area js-ui-accordion" data-focus-open="false">
+						<div class="sorting-inner js-ui-accordion__item">
+							<button type="button" class="sorting-opener js-ui-accordion__opener">
+								<span class="for-a11y">
+									탭 영역
+									<span class="open-text">펼치기</span>
+									<span class="close-text">닫기</span>
+								</span>
+							</button>
+							<div class="sorting-layer js-ui-accordion__layer">
+								<div class="sorting-contents">
+									<div class="sorting-list">
+										<div class="sorting-item">
+											<div class="ui-radio-block type-tab">
+												<input type="radio" name="sorting1" class="ui-radio" id="sorting1-1" checked />
+												<label for="sorting1-1" class="ui-label">
+													<span class="ui-label-text">Tab1</span>
+												</label>
+											</div>
+										</div>
+										<div class="sorting-item">
+											<div class="ui-radio-block type-tab">
+												<input type="radio" name="sorting1" class="ui-radio" id="sorting1-2" />
+												<label for="sorting1-2" class="ui-label">
+													<span class="ui-label-text">Tab2</span>
+												</label>
+											</div>
+										</div>
+										<div class="sorting-item">
+											<div class="ui-radio-block type-tab">
+												<input type="radio" name="sorting1" class="ui-radio" id="sorting1-3" />
+												<label for="sorting1-3" class="ui-label">
+													<span class="ui-label-text">Tab3</span>
+												</label>
+											</div>
+										</div>
+										<div class="sorting-item">
+											<div class="ui-radio-block type-tab">
+												<input type="radio" name="sorting1" class="ui-radio" id="sorting1-4" />
+												<label for="sorting1-4" class="ui-label">
+													<span class="ui-label-text">Tab4</span>
+												</label>
+											</div>
+										</div>
+										<div class="sorting-item">
+											<div class="ui-radio-block type-tab">
+												<input type="radio" name="sorting1" class="ui-radio" id="sorting1-5" />
+												<label for="sorting1-5" class="ui-label">
+													<span class="ui-label-text">Tab5</span>
+												</label>
+											</div>
+										</div>
+										<div class="sorting-item">
+											<div class="ui-radio-block type-tab">
+												<input type="radio" name="sorting1" class="ui-radio" id="sorting1-6" />
+												<label for="sorting1-6" class="ui-label">
+													<span class="ui-label-text">Tab6</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<div class="test-title">
+						<h3 class="test-title">Tab</h3>
+					</div>
+					<div class="js-ui-tab-panel">
+						<div class="sorting-area">
+							<div class="sorting-contents">
+								<div class="sorting-list">
+									<div class="sorting-item">
+										<div class="ui-radio-block type-tab">
+											<button type="button" class="ui-label" data-tab-open="sorting-tab1">
+												<span class="ui-label-text">Tab1</span>
+											</button>
+										</div>
+									</div>
+									<div class="sorting-item">
+										<div class="ui-radio-block type-tab">
+											<button type="button" class="ui-label" data-tab-open="sorting-tab2">
+												<span class="ui-label-text">Tab2</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div data-tab="sorting-tab1">Tab1 내용</div>
+						<div data-tab="sorting-tab2">Tab2 내용</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Tab - toggle</h3>
+					<div class="sorting-area type-none-accordion">
+						<div class="sorting-inner">
+							<div class="sorting-right">
+								<a href="" class="ui-arrow type-small type-black type-more">더보기</a>
+							</div>
+							<div class="sorting-layer">
+								<div class="sorting-contents">
+									<div class="sorting-list">
+										<div class="sorting-item">
+											<div class="ui-checkbox-block type-tab">
+												<input type="checkbox" name="sorting2" class="ui-checkbox" id="sorting2-1" />
+												<label for="sorting2-1" class="ui-label">
+													<span class="ui-label-text">Tab1 <span class="sorting-count">22</span></span>
+												</label>
+											</div>
+										</div>
+										<div class="sorting-item">
+											<div class="ui-checkbox-block type-tab">
+												<input type="checkbox" name="sorting" class="ui-checkbox" id="sorting2-2" />
+												<label for="sorting2-2" class="ui-label">
+													<span class="ui-label-text">Tab2 <span class="sorting-count">4</span></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--form">
+				<h2 class="test-title">Form List</h2>
+				<div class="test-section-sub">
+					<div class="form-list">
+						<div class="form-item">
+							<div class="form-title">
+								<strong class="title">아이디</strong>
+							</div>
+							<div class="form-group">
+								<div class="ui-input-block type-use-delete">
+									<input type="text" class="ui-input" title="아이디 입력" placeholder="아이디를 입력하세요." required />
+									<button type="button" class="ui-button ui-input-delete">
+										<span class="for-a11y">입력 내용 지우기</span>
+									</button>
+								</div>
+							</div>
+							<p class="ui-notice">안내 문구는 form-group 태그 바깥으로 넣어주세요.</p>
+						</div>
+						<div class="form-item">
+							<div class="form-title">
+								<strong class="title">비밀번호</strong>
+							</div>
+							<div class="form-group">
+								<div class="ui-input-block">
+									<input type="password" class="ui-input" title="비밀번호 입력" placeholder="비밀번호를 입력하세요." required />
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-title type-disapply">
+								<strong class="title">
+									입력필드 readonly style 미적용<br />
+									(type-disapply 클래스 추가)
+								</strong>
+							</div>
+							<div class="form-group">
+								<div class="ui-input-block">
+									<input type="password" class="ui-input" title="비밀번호 입력" placeholder="비밀번호를 입력하세요." readonly />
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-title">
+								<strong class="title">입력필드 readonly</strong>
+							</div>
+							<div class="form-group">
+								<div class="ui-input-block">
+									<input type="password" class="ui-input" title="비밀번호 입력" placeholder="비밀번호를 입력하세요." readonly />
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-title">
+								<strong class="title">입력필드 disabled</strong>
+							</div>
+							<div class="form-group">
+								<div class="ui-input-block">
+									<input type="password" class="ui-input" title="비밀번호 입력" placeholder="비밀번호를 입력하세요." disabled />
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-title">
+								<strong class="title">입력필드 no disabled</strong>
+								<button type="button" class="ui-arrow type-small type-black">버튼(default)</button>
+							</div>
+							<div class="form-group">
+								<div class="ui-input-block">
+									<input type="text" class="ui-input" title="입력" placeholder="입력" disabled />
+								</div>
+							</div>
+						</div>
+						<div class="form-item">
+							<div class="form-title">
+								<strong class="title">입력필드 disalbed</strong>
+								<button type="button" class="ui-arrow type-small type-black disabled-no-count">버튼(disabled-no-count)</button>
+							</div>
+							<div class="form-group">
+								<div class="ui-input-block">
+									<input type="text" class="ui-input" title="입력" placeholder="입력" disabled />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-bottom">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="submit" class="ui-button ui-basic-button type-primary">로그인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--form-flex">
+				<h2 class="test-title">Form flex</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Sample</h3>
+					<div class="form-group">
+						<div class="form-flex">
+							<div class="form-flex-cell">
+								<div class="ui-select-block">
+									<select class="ui-select" title="title">
+										<option value="-1" disabled selected>placeholder</option>
+										<option value="">option 1</option>
+										<option value="">option 2</option>
+										<option value="">option 3</option>
+										<option value="">option 4</option>
+										<option value="">option 5</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-input-block">
+									<input type="text" class="ui-input" title="title" placeholder="placeholder" />
+								</div>
+							</div>
+							<div class="form-flex-cell type-align-center">
+								<div class="ui-checkbox-block">
+									<input type="checkbox" class="ui-checkbox" id="formFlexCheckbox" />
+									<label for="formFlexCheckbox" class="ui-label">
+										<span class="ui-checkbox-object"></span>
+										<span class="ui-label-text">label</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Date</h3>
+					<div class="form-group">
+						<div class="ui-date-picker">
+							<duet-date-picker identifier="date" title="title"></duet-date-picker>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Date range</h3>
+					<div class="form-group type-date-range">
+						<div class="form-flex">
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-date-picker">
+									<duet-date-picker identifier="date" title="title"></duet-date-picker>
+								</div>
+							</div>
+							<div class="form-flex-cell">
+								<div class="ui-range-dash">-</div>
+							</div>
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-date-picker">
+									<duet-date-picker identifier="date" title="title"></duet-date-picker>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Select range</h3>
+					<div class="form-group type-select-range">
+						<div class="form-flex">
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-select-block type-placeholder">
+									<button type="button" class="ui-button ui-select" title="선택">선택</button>
+								</div>
+							</div>
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-select-block type-placeholder">
+									<button type="button" class="ui-button ui-select" title="선택">선택</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Input range</h3>
+					<div class="form-group type-input-range">
+						<div class="form-flex">
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-input-block type-use-delete">
+									<input type="text" class="ui-input" title="아이디 입력" />
+									<button type="button" class="ui-button ui-input-delete">
+										<span class="for-a11y">입력 내용 지우기</span>
+									</button>
+								</div>
+							</div>
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-input-block type-use-delete">
+									<input type="text" class="ui-input" title="아이디 입력" />
+									<button type="button" class="ui-button ui-input-delete">
+										<span class="for-a11y">입력 내용 지우기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">ID card number</h3>
+					<div class="form-group type-id">
+						<div class="form-flex">
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-input-block">
+									<input type="number" class="ui-input" title="주민등록번호 앞 6자리 입력" placeholder="앞 6자리 입력" />
+								</div>
+							</div>
+							<div class="form-flex-cell">
+								<div class="ui-range-dash">-</div>
+							</div>
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-input-block type-masking digit-6">
+									<input type="text" class="ui-input" title="주민등록번호 뒤 1자리 입력" placeholder="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Expiration date</h3>
+					<div class="form-group">
+						<div class="ui-input-block">
+							<input type="number" pattern="\d*" class="ui-input" title="유효기간 입력" placeholder="MM/YY" />
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Email</h3>
+					<div class="form-group type-email">
+						<div class="ui-input-block type-use-delete">
+							<input type="text" class="ui-input" title="이메일 주소 입력" placeholder="이메일 주소 입력" />
+							<button type="button" class="ui-button ui-input-delete">
+								<span class="for-a11y">입력 내용 지우기</span>
+							</button>
+							<!-- 도메인 자동완성(하단 스크립트 참고) -->
+							<div class="domain-auto">
+								<ul class="domain-auto-list">
+									<li class="domain-auto-item">
+										<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@naver.com</span></button>
+									</li>
+									<li class="domain-auto-item">
+										<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@daum.net</span></button>
+									</li>
+									<li class="domain-auto-item">
+										<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@hanmail.net</span></button>
+									</li>
+									<li class="domain-auto-item">
+										<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@gmail.com</span></button>
+									</li>
+									<li class="domain-auto-item">
+										<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@kakao.com</span></button>
+									</li>
+									<li class="domain-auto-item">
+										<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@icloud.com</span></button>
+									</li>
+									<li class="domain-auto-item">
+										<button type="button" class="domain-auto-button"><span class="mail"></span><span class="domain">@nate.com</span></button>
+									</li>
+								</ul>
+							</div>
+							<!-- //도메인 자동완성(하단 스크립트 참고) -->
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">CVV</h3>
+					<div class="form-group type-cvv">
+						<div class="form-flex">
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-input-block">
+									<input type="number" pattern="\d*" class="ui-input" title="CVV번호 3자리 입력" placeholder="뒷면 3자리 숫자 입력" />
+								</div>
+							</div>
+							<div class="form-flex-cell">
+								<button type="button" class="ui-button ui-basic-button type-small type-secondary">CVV안내</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Card password</h3>
+					<div class="form-group type-card-pw">
+						<div class="ui-input-block type-masking digit-2">
+							<input type="password" pattern="\d*" class="ui-input" title="카드 비밀번호 앞 2자리 입력" placeholder="앞 2자리" />
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">연락처</h3>
+					<div class="form-group type-contact">
+						<div class="form-flex">
+							<div class="form-flex-cell">
+								<div class="ui-select-block">
+									<button type="button" class="ui-button ui-select" title="통신사 선택">010</button>
+								</div>
+							</div>
+							<div class="form-flex-cell">
+								<div class="ui-range-dash">-</div>
+							</div>
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-input-block">
+									<input type="number" pattern="\d*" class="ui-input" title="휴대폰 번호 입력" placeholder="‘-’ 제외하고 입력" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">전화 번호</h3>
+					<div class="form-group type-contact">
+						<div class="form-flex">
+							<div class="form-flex-cell">
+								<div class="ui-select-block">
+									<button type="button" class="ui-button ui-select" title="지역 번호 선택">02</button>
+								</div>
+							</div>
+							<div class="form-flex-cell">
+								<div class="ui-range-dash">-</div>
+							</div>
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-input-block">
+									<input type="number" pattern="\d*" class="ui-input" title="전화 번호 입력" placeholder="‘-’ 제외하고 입력" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">주소</h3>
+					<div class="form-group type-address">
+						<div class="form-flex">
+							<div class="form-flex-cell type-flexible">
+								<div class="ui-input-block">
+									<input type="number" pattern="\d*" class="ui-input" title="우편번호 입력" placeholder="우편번호" disabled />
+								</div>
+							</div>
+							<div class="form-flex-cell">
+								<button type="button" class="ui-button ui-basic-button type-small type-gray">우편번호</button>
+							</div>
+						</div>
+						<div class="ui-input-block type-use-delete type-row">
+							<input type="text" class="ui-input" title="기본주소 입력" placeholder="주소" />
+							<button type="button" class="ui-button ui-input-delete">
+								<span class="for-a11y">입력 내용 지우기</span>
+							</button>
+						</div>
+						<div class="ui-input-block type-use-delete type-row">
+							<input type="text" class="ui-input" title="상세주소 입력" placeholder="상세주소" />
+							<button type="button" class="ui-button ui-input-delete">
+								<span class="for-a11y">입력 내용 지우기</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">입력 단위</h3>
+					<div class="form-group">
+						<div class="form-flex">
+							<div class="form-flex-cell type-flexible type-has-unit">
+								<div class="ui-input-block is-disabled">
+									<input type="number" pattern="\d*" class="ui-input" title="금액 입력" placeholder="금액 입력" />
+								</div>
+								<span class="form-unit">만원</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">운전면허증</h3>
+					<div class="form-group type-license">
+						<div class="form-flex">
+							<div class="form-flex-cell type-narrow">
+								<div class="form-title">
+									<strong class="title">발행기관</strong>
+								</div>
+								<div class="ui-select-block">
+									<button type="button" class="ui-button ui-select" title="발행기관 선택">11(서울)</button>
+								</div>
+							</div>
+							<div class="form-flex-cell">
+								<div class="ui-range-dash">-</div>
+							</div>
+							<div class="form-flex-cell type-flexible">
+								<div class="form-title">
+									<strong class="title">면허번호</strong>
+								</div>
+								<div class="ui-input-block">
+									<input type="number" pattern="\d*" class="ui-input" title="면허번호 입력" placeholder="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--rangeslider">
+				<style>
+					.test-section--rangeslider {
+						overflow: hidden;
+					}
+					.test-section--rangeslider .ui-rangeslider.type-vertical {
+						margin-top: 30px;
+						margin-left: 100px;
+					}
+				</style>
+				<h2 class="test-title">Rangeslider</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default - horizontal</h3>
+					<div class="ui-rangeslider margin-top-50" data-rangeslider-watch="#rangesliderBubbleText1" data-rangeslider-watch-comma="true">
+						<input type="range" min="0" max="3000" value="1500" title="title" />
+						<div class="chart-bubble" aria-hidden="true" inert>
+							<div class="chart-bubble-text"><span id="rangesliderBubbleText1"></span>점</div>
+						</div>
+						<div class="ui-rangeslider-gradation" aria-hidden="true" inert>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">0</div>
+							</div>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">1,500</div>
+							</div>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">3,000</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-rangeslider margin-top-50" data-rangeslider-watch="#rangesliderBubbleText2" data-rangeslider-watch-comma="true">
+						<input type="range" min="0" max="3000" value="1500" title="title" disabled />
+						<div class="chart-bubble" aria-hidden="true" inert>
+							<div class="chart-bubble-text"><span id="rangesliderBubbleText2"></span>점</div>
+						</div>
+						<div class="ui-rangeslider-gradation" aria-hidden="true" inert>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">0</div>
+							</div>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">1,500</div>
+							</div>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">3,000</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default - vertical</h3>
+					<div class="ui-rangeslider type-vertical" data-rangeslider-watch="#rangesliderBubbleText3" data-rangeslider-watch-comma="true">
+						<input type="range" min="0" max="3000" value="1500" data-orientation="vertical" title="title" />
+						<div class="chart-bubble" aria-hidden="true" inert>
+							<div class="chart-bubble-text"><span id="rangesliderBubbleText3"></span>점</div>
+						</div>
+						<div class="ui-rangeslider-gradation" aria-hidden="true" inert>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">0</div>
+							</div>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">1,500</div>
+							</div>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">3,000</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-rangeslider type-vertical" data-rangeslider-watch="#rangesliderBubbleText4" data-rangeslider-watch-comma="true">
+						<input type="range" min="0" max="3000" value="1500" data-orientation="vertical" title="title" disabled />
+						<div class="chart-bubble" aria-hidden="true" inert>
+							<div class="chart-bubble-text"><span id="rangesliderBubbleText4"></span>점</div>
+						</div>
+						<div class="ui-rangeslider-gradation" aria-hidden="true" inert>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">0</div>
+							</div>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">1,500</div>
+							</div>
+							<div class="ui-rangeslider-gradation-item">
+								<div class="ui-rangeslider-gradation-item-text">3,000</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--icon">
+				<style>
+					.test-section--icon .has-com-icon {
+						display: -webkit-box;
+						display: -ms-flexbox;
+						display: flex;
+						-webkit-box-pack: justify;
+						-ms-flex-pack: justify;
+						justify-content: space-between;
+						-webkit-box-align: center;
+						-ms-flex-align: center;
+						align-items: center;
+					}
+					.test-section--icon .has-com-icon::after {
+						width: 90px;
+						margin-top: 0;
+					}
+				</style>
+				<h2 class="test-title">ICON</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">class</h3>
+					<p class="has-com-icon type-icon-auth">type-icon-auth</p>
+					<p class="has-com-icon type-icon-member-fail">type-icon-member-fail</p>
+					<p class="has-com-icon type-icon-error">type-icon-error</p>
+					<p class="has-com-icon type-icon-error-access">type-icon-error-access</p>
+					<p class="has-com-icon type-icon-fail">type-icon-fail</p>
+					<p class="has-com-icon type-icon-email">type-icon-email</p>
+					<p class="has-com-icon type-icon-signing">type-icon-signing</p>
+					<p class="has-com-icon type-icon-suggest">type-icon-suggest</p>
+					<p class="has-com-icon type-icon-card-service">type-icon-card-service</p>
+					<p class="has-com-icon type-icon-id">type-icon-id</p>
+					<p class="has-com-icon type-icon-id-fail">type-icon-id-fail</p>
+					<p class="has-com-icon type-icon-voucher">type-icon-voucher</p>
+					<p class="has-com-icon type-icon-voucher-register">type-icon-voucher-register</p>
+					<p class="has-com-icon type-icon-pay">type-icon-pay</p>
+					<p class="has-com-icon type-icon-pay-fail">type-icon-pay-fail</p>
+					<p class="has-com-icon type-icon-abroad">type-icon-abroad</p>
+					<p class="has-com-icon type-icon-abroad-02">type-icon-abroad-02</p>
+					<p class="has-com-icon type-icon-alarm">type-icon-alarm</p>
+					<p class="has-com-icon type-icon-alarm-fail">type-icon-alarm-fail</p>
+					<p class="has-com-icon type-icon-talk">type-icon-talk</p>
+					<p class="has-com-icon type-icon-pay-making">type-icon-pay-making</p>
+					<p class="has-com-icon type-icon-deposit">type-icon-deposit</p>
+					<p class="has-com-icon type-icon-deposit-cancel">type-icon-deposit-cancel</p>
+					<p class="has-com-icon type-icon-send-money">type-icon-send-money</p>
+					<p class="has-com-icon type-icon-congratulation">type-icon-congratulation</p>
+				</div>
+			</div>
+
+			<div class="test-section test-section--term">
+				<style>
+					.test-section--term {
+						font-size: 1.3rem;
+					}
+				</style>
+				<h2 class="test-title">약관</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+					<div class="terms-area">
+						<div class="terms-item">
+							<div class="ui-checkbox-block type-align-top">
+								<input type="checkbox" class="ui-checkbox" id="termCheckbox-1" />
+								<label for="termCheckbox-1" class="ui-label">
+									<span class="ui-checkbox-object"></span>
+									<span class="ui-label-text">[필수] 교직원정보 수집 및 이용 동의서</span>
+								</label>
+								<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+							</div>
+							<button type="button" class="ui-arrow color-blur">출금 동의 안내</button>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Accordion</h3>
+					<div class="terms-area js-ui-accordion">
+						<div class="terms-item js-ui-accordion__item">
+							<div class="ui-checkbox-block type-align-top">
+								<input type="checkbox" class="ui-checkbox" id="termCheckbox-2-1" />
+								<label for="termCheckbox-2-1" class="ui-label">
+									<span class="ui-checkbox-object"></span>
+									<span class="ui-label-text">개인(신용)정보 수집, 이용에 대한 동의</span>
+								</label>
+							</div>
+							<button type="button" class="terms-opener js-ui-accordion__opener">
+								<span class="for-a11y">
+									상세 내용
+									<span class="open-text">열기</span>
+									<span class="close-text">닫기</span>
+								</span>
+							</button>
+							<div class="terms-detail js-ui-accordion__layer">
+								<div class="terms-detail-inner">
+									하나카드(주)귀중 편리한 카드신청을 위해 상담원이 고객님께 전화를 드리기 위하여, [정보통신망 이용촉진 및 정보보호 등에 관한 법률]의 관련규정에 따라 고객님의 성명, 주민등록번호,
+									휴대전화 번호를수집, 이용 및 제3자에게 제공하는 것에 동의합니다. - 생 략 -
+								</div>
+							</div>
+						</div>
+						<div class="terms-item js-ui-accordion__item">
+							<div class="ui-checkbox-block type-align-top">
+								<input type="checkbox" class="ui-checkbox" id="termCheckbox-2-2" />
+								<label for="termCheckbox-2-2" class="ui-label">
+									<span class="ui-checkbox-object"></span>
+									<span class="ui-label-text">개인(신용)정보 수집, 이용에 대한 동의</span>
+								</label>
+							</div>
+							<button type="button" class="terms-opener js-ui-accordion__opener">
+								<span class="for-a11y">
+									상세 내용
+									<span class="open-text">열기</span>
+									<span class="close-text">닫기</span>
+								</span>
+							</button>
+							<div class="terms-detail js-ui-accordion__layer">
+								<div class="terms-detail-inner">
+									하나카드(주)귀중 편리한 카드신청을 위해 상담원이 고객님께 전화를 드리기 위하여, [정보통신망 이용촉진 및 정보보호 등에 관한 법률]의 관련규정에 따라 고객님의 성명, 주민등록번호,
+									휴대전화 번호를수집, 이용 및 제3자에게 제공하는 것에 동의합니다. - 생 략 -
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section test-section--list">
+				<h2 class="test-title">List</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">icon</h3>
+					<ul class="guide-info-list">
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-1</p>
+							</div>
+							<span class="guide-info-icon type-icon-1"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-2</p>
+							</div>
+							<span class="guide-info-icon type-icon-2"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-3</p>
+							</div>
+							<span class="guide-info-icon type-icon-3"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-4</p>
+							</div>
+							<span class="guide-info-icon type-icon-4"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-5</p>
+							</div>
+							<span class="guide-info-icon type-icon-5"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-6</p>
+							</div>
+							<span class="guide-info-icon type-icon-6"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-7</p>
+							</div>
+							<span class="guide-info-icon type-icon-7"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-8</p>
+							</div>
+							<span class="guide-info-icon type-icon-8"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-9</p>
+							</div>
+							<span class="guide-info-icon type-icon-9"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-10</p>
+							</div>
+							<span class="guide-info-icon type-icon-10"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-11</p>
+							</div>
+							<span class="guide-info-icon type-icon-11"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-12</p>
+							</div>
+							<span class="guide-info-icon type-icon-12"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-13</p>
+							</div>
+							<span class="guide-info-icon type-icon-13"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-14</p>
+							</div>
+							<span class="guide-info-icon type-icon-14"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-15</p>
+							</div>
+							<span class="guide-info-icon type-icon-15"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-16</p>
+							</div>
+							<span class="guide-info-icon type-icon-16"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-17</p>
+							</div>
+							<span class="guide-info-icon type-icon-17"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-18</p>
+							</div>
+							<span class="guide-info-icon type-icon-18"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-19</p>
+							</div>
+							<span class="guide-info-icon type-icon-19"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-20</p>
+							</div>
+							<span class="guide-info-icon type-icon-20"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-21</p>
+							</div>
+							<span class="guide-info-icon type-icon-21"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-22</p>
+							</div>
+							<span class="guide-info-icon type-icon-22"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-23</p>
+							</div>
+							<span class="guide-info-icon type-icon-23"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-24</p>
+							</div>
+							<span class="guide-info-icon type-icon-24"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-25</p>
+							</div>
+							<span class="guide-info-icon type-icon-25"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-26</p>
+							</div>
+							<span class="guide-info-icon type-icon-26"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-27</p>
+							</div>
+							<span class="guide-info-icon type-icon-27"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-28</p>
+							</div>
+							<span class="guide-info-icon type-icon-28"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-29</p>
+							</div>
+							<span class="guide-info-icon type-icon-29"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-30</p>
+							</div>
+							<span class="guide-info-icon type-icon-30"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-31</p>
+							</div>
+							<span class="guide-info-icon type-icon-31"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-32</p>
+							</div>
+							<span class="guide-info-icon type-icon-32"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-33</p>
+							</div>
+							<span class="guide-info-icon type-icon-33"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-34</p>
+							</div>
+							<span class="guide-info-icon type-icon-34"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-35</p>
+							</div>
+							<span class="guide-info-icon type-icon-35"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-36</p>
+							</div>
+							<span class="guide-info-icon type-icon-36"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-37</p>
+							</div>
+							<span class="guide-info-icon type-icon-37"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-38</p>
+							</div>
+							<span class="guide-info-icon type-icon-38"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-39</p>
+							</div>
+							<span class="guide-info-icon type-icon-39"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-40</p>
+							</div>
+							<span class="guide-info-icon type-icon-40"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-41</p>
+							</div>
+							<span class="guide-info-icon type-icon-41"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-42</p>
+							</div>
+							<span class="guide-info-icon type-icon-42"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-43</p>
+							</div>
+							<span class="guide-info-icon type-icon-43"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-44</p>
+							</div>
+							<span class="guide-info-icon type-icon-44"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-45</p>
+							</div>
+							<span class="guide-info-icon type-icon-45"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-46</p>
+							</div>
+							<span class="guide-info-icon type-icon-46"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-47</p>
+							</div>
+							<span class="guide-info-icon type-icon-47"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-48</p>
+							</div>
+							<span class="guide-info-icon type-icon-48"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-49</p>
+							</div>
+							<span class="guide-info-icon type-icon-49"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-50</p>
+							</div>
+							<span class="guide-info-icon type-icon-50"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-51</p>
+							</div>
+							<span class="guide-info-icon type-icon-51"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-52</p>
+							</div>
+							<span class="guide-info-icon type-icon-52"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-53</p>
+							</div>
+							<span class="guide-info-icon type-icon-53"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-54</p>
+							</div>
+							<span class="guide-info-icon type-icon-54"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-55</p>
+							</div>
+							<span class="guide-info-icon type-icon-55"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-56</p>
+							</div>
+							<span class="guide-info-icon type-icon-56"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-57</p>
+							</div>
+							<span class="guide-info-icon type-icon-57"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-58</p>
+							</div>
+							<span class="guide-info-icon type-icon-58"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-59</p>
+							</div>
+							<span class="guide-info-icon type-icon-59"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-60</p>
+							</div>
+							<span class="guide-info-icon type-icon-60"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-61</p>
+							</div>
+							<span class="guide-info-icon type-icon-61"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-62</p>
+							</div>
+							<span class="guide-info-icon type-icon-62"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-63</p>
+							</div>
+							<span class="guide-info-icon type-icon-63"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-64</p>
+							</div>
+							<span class="guide-info-icon type-icon-64"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-65</p>
+							</div>
+							<span class="guide-info-icon type-icon-65"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-66</p>
+							</div>
+							<span class="guide-info-icon type-icon-66"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-67</p>
+							</div>
+							<span class="guide-info-icon type-icon-67"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-68</p>
+							</div>
+							<span class="guide-info-icon type-icon-68"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-69</p>
+							</div>
+							<span class="guide-info-icon type-icon-69"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-70</p>
+							</div>
+							<span class="guide-info-icon type-icon-70"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-71</p>
+							</div>
+							<span class="guide-info-icon type-icon-71"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-72</p>
+							</div>
+							<span class="guide-info-icon type-icon-72"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-73</p>
+							</div>
+							<span class="guide-info-icon type-icon-73"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-74</p>
+							</div>
+							<span class="guide-info-icon type-icon-74"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-75</p>
+							</div>
+							<span class="guide-info-icon type-icon-75"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-76</p>
+							</div>
+							<span class="guide-info-icon type-icon-76"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-77</p>
+							</div>
+							<span class="guide-info-icon type-icon-77"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-78</p>
+							</div>
+							<span class="guide-info-icon type-icon-78"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-79</p>
+							</div>
+							<span class="guide-info-icon type-icon-79"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-80</p>
+							</div>
+							<span class="guide-info-icon type-icon-80"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-81</p>
+							</div>
+							<span class="guide-info-icon type-icon-81"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-82</p>
+							</div>
+							<span class="guide-info-icon type-icon-82"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-83</p>
+							</div>
+							<span class="guide-info-icon type-icon-83"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-84</p>
+							</div>
+							<span class="guide-info-icon type-icon-84"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-85</p>
+							</div>
+							<span class="guide-info-icon type-icon-85"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-86</p>
+							</div>
+							<span class="guide-info-icon type-icon-86"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-87</p>
+							</div>
+							<span class="guide-info-icon type-icon-87"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-88</p>
+							</div>
+							<span class="guide-info-icon type-icon-88"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-89</p>
+							</div>
+							<span class="guide-info-icon type-icon-89"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-90</p>
+							</div>
+							<span class="guide-info-icon type-icon-90"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-91</p>
+							</div>
+							<span class="guide-info-icon type-icon-91"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-92</p>
+							</div>
+							<span class="guide-info-icon type-icon-92"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-93</p>
+							</div>
+							<span class="guide-info-icon type-icon-93"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-94</p>
+							</div>
+							<span class="guide-info-icon type-icon-94"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-95</p>
+							</div>
+							<span class="guide-info-icon type-icon-95"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-96</p>
+							</div>
+							<span class="guide-info-icon type-icon-96"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-97</p>
+							</div>
+							<span class="guide-info-icon type-icon-97"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-98</p>
+							</div>
+							<span class="guide-info-icon type-icon-98"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-99</p>
+							</div>
+							<span class="guide-info-icon type-icon-99"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-100</p>
+							</div>
+							<span class="guide-info-icon type-icon-100"></span>
+						</li>
+						<li class="guide-info-item">
+							<div class="guide-info-block">
+								<strong class="guide-info-title">타이틀</strong>
+								<p class="guide-info-text">type-icon-101</p>
+							</div>
+							<span class="guide-info-icon type-icon-101"></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="test-section test-section--image-data">
+				<style>
+					.test-section--image-data .card-image + .card-image,
+					.test-section--image-data .logo-image + .logo-image {
+						margin-top: 10px;
+					}
+					.test-section--image-data .card-image {
+						max-width: 300px;
+					}
+				</style>
+				<h2 class="test-title">Image Data</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Card</h3>
+					<!-- DD : 이미지 없을 때 -->
+					<div class="card-image">
+						<div class="card-image-inner"></div>
+					</div>
+					<!-- //DD : 이미지 없을 때 -->
+
+					<!-- DD : 이미지 에러 -->
+					<div class="card-image">
+						<div class="card-image-inner">
+							<img src="./dist/assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 에러 -->
+
+					<!-- DD : 이미지 있을 때 -->
+					<div class="card-image">
+						<div class="card-image-inner">
+							<img src="./dist/assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 있을 때 -->
+
+					<!-- DD : 세로형 type-vertical 클래스 값 추가 -->
+					<div class="card-image type-vertical">
+						<div class="card-image-inner">
+							<img src="./dist/assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 세로형 type-vertical 클래스 값 추가 -->
+
+					<!-- DD : 하나머니 -->
+					<div class="card-image type-hanamoney margin-bottom-14">
+						<div class="card-image-inner">
+							<div class="card-image-head">
+								<div class="card-image-title">하나멤버스</div>
+								<div class="card-image-text">HANA MONEY</div>
+							</div>
+							<div class="card-image-amount">
+								<div class="card-image-amount-value">0 P</div>
+								<button type="button" class="ui-button card-image-amount-reload">
+									<span class="for-a11y">재조회</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- //DD : 하나머니 -->
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Logo</h3>
+					<!-- DD : 이미지 없을 때 -->
+					<div class="logo-image">
+						<div class="logo-image-inner"></div>
+					</div>
+					<!-- //DD : 이미지 없을 때 -->
+
+					<!-- DD : 이미지 에러 -->
+					<div class="logo-image">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/logo-hana-card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 에러 -->
+
+					<!-- DD : 이미지 있을 때 -->
+					<div class="logo-image">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 있을 때 -->
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Store Logo</h3>
+					<!-- DD : 이미지 없을 때 -->
+					<div class="logo-image type-store">
+						<div class="logo-image-inner"></div>
+					</div>
+					<!-- //DD : 이미지 없을 때 -->
+
+					<!-- DD : 이미지 에러 -->
+					<div class="logo-image type-store">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/brand-icon-3 .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 에러 -->
+
+					<!-- DD : 이미지 있을 때 -->
+					<div class="logo-image type-store">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/brand-icon-3.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 있을 때 -->
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Circle Logo</h3>
+					<!-- DD : 이미지 없을 때 -->
+					<div class="logo-image type-circle">
+						<div class="logo-image-inner"></div>
+					</div>
+					<!-- //DD : 이미지 없을 때 -->
+
+					<!-- DD : 이미지 에러 -->
+					<div class="logo-image type-circle">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/logo-hana-card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 에러 -->
+
+					<!-- DD : 이미지 있을 때 -->
+					<div class="logo-image type-circle">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 있을 때 -->
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Logo Size</h3>
+					<div class="logo-image type-small">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<div class="logo-image type-small-regular">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<div class="logo-image">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<div class="logo-image type-medium">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<div class="logo-image type-medium-regular">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<div class="logo-image type-medium-large">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Global Brand Logo</h3>
+					<div class="logo-image type-global-brand type-global-brand-mastercard type-medium-large">
+						<div class="logo-image-inner"></div>
+					</div>
+					<div class="logo-image type-global-brand type-global-brand-visa type-medium-large">
+						<div class="logo-image-inner"></div>
+					</div>
+					<div class="logo-image type-global-brand type-global-brand-unionpay type-medium-large">
+						<div class="logo-image-inner"></div>
+					</div>
+					<div class="logo-image type-global-brand type-global-brand-amex type-medium-large">
+						<div class="logo-image-inner"></div>
+					</div>
+					<div class="logo-image type-global-brand type-global-brand-jcb type-medium-large">
+						<div class="logo-image-inner"></div>
+					</div>
+					<div class="logo-image type-global-brand type-global-brand-local type-medium-large">
+						<div class="logo-image-inner"></div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Benefit icon</h3>
+					<!-- DD : 이미지 없을 때 -->
+					<div class="logo-image type-benefit-icon">
+						<div class="logo-image-inner"></div>
+					</div>
+					<!-- //DD : 이미지 없을 때 -->
+
+					<!-- DD : 이미지 에러 -->
+					<div class="logo-image type-benefit-icon">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/ic-card-d-s-02 .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 에러 -->
+
+					<!-- DD : 이미지 있을 때 -->
+					<div class="logo-image type-benefit-icon">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/ic-card-d-s-02.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 있을 때 -->
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">VIP Thumb</h3>
+					<!-- DD : 이미지 없을 때 -->
+					<div class="logo-image type-vip-thumb">
+						<div class="logo-image-inner"></div>
+					</div>
+					<!-- //DD : 이미지 없을 때 -->
+
+					<!-- DD : 이미지 에러 -->
+					<div class="logo-image type-vip-thumb">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/event-3 .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 에러 -->
+
+					<!-- DD : 이미지 있을 때 -->
+					<div class="logo-image type-vip-thumb">
+						<div class="logo-image-inner">
+							<img src="./dist/assets/images/_dummy/event-3.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+						</div>
+					</div>
+					<!-- //DD : 이미지 있을 때 -->
+				</div>
+			</div>
+
+			<div class="test-section test-section--etc">
+				<style>
+					.test-section--etc .support-notice-area {
+						margin-top: 0;
+					}
+				</style>
+				<h2 class="test-title">ETC</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">arrow</h3>
+					<button type="button" class="ui-arrow">text</button>
+					<a href="" class="ui-arrow-block" role="button">text</a>
+					<button type="button" class="ui-arrow type-primary">text</button>
+					<button type="button" class="ui-arrow color-primary">text</button>
+					<button type="button" class="ui-arrow type-black">text</button>
+					<button type="button" class="ui-arrow color-secondary">text</button>
+					<a href="" class="ui-arrow-block type-black" role="button">text</a>
+					<button type="button" class="ui-arrow type-small">text</button>
+					<button type="button" class="ui-arrow type-tiny">text</button>
+					<button type="button" class="ui-arrow type-tiny type-black">text</button>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Text</h3>
+					<div class="form-flex">
+						<div class="form-flex-cell"><strong class="color-primary">Primary</strong></div>
+						<div class="form-flex-cell"><strong class="color-secondary">Secondary</strong></div>
+						<div class="form-flex-cell"><strong class="color-wrong">Wrong</strong></div>
+						<div class="form-flex-cell"><strong class="color-blur">Blur(gray)</strong></div>
+						<div class="form-flex-cell"><strong class="color-vip">Vip</strong></div>
+					</div>
+					<div class="form-flex margin-top-5">
+						<div class="form-flex-cell"><strong class="text-underline">밑줄</strong></div>
+						<div class="form-flex-cell"><strong class="del-text color-cancel">취소된 금액 or 문자</strong></div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Progress</h3>
+					<div class="page-progress" role="img" aria-label="총 4단계 중 2단계">
+						<div class="progress-tracker">
+							<div class="progress-step"></div>
+							<div class="progress-step is-active"></div>
+							<div class="progress-step"></div>
+							<div class="progress-step"></div>
+						</div>
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Tag</h3>
+					<span class="ui-tag">default(vip)</span>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Badge</h3>
+					<span class="ui-badge">default</span>
+					<span class="ui-badge color-primary">primary</span>
+					<span class="ui-badge color-primary-dark">primary dark</span>
+					<span class="ui-badge color-secondary">secondary</span>
+					<span class="ui-badge color-wrong">wrong</span>
+					<span class="ui-badge type-point">point</span>
+					<span class="ui-badge type-vvip">VVIP</span>
+					<span class="ui-badge type-basic">basic</span>
+					<a href="#" class="ui-badge ui-arrow" role="button">링크</a>
+					<a href="#" class="ui-badge color-primary-fill ui-arrow" role="button">링크</a>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Ranking label</h3>
+					<span class="ranking-tag ranking-01">안심</span>
+					<span class="ranking-tag ranking-02">다소안심</span>
+					<span class="ranking-tag ranking-03">보통</span>
+					<span class="ranking-tag ranking-04">신중</span>
+					<span class="ranking-tag ranking-05">주의</span>
+					<ul class="ranking-tag-list">
+						<li class="ranking-tag-item"><span class="ranking-tag ranking-01">안심</span></li>
+						<li class="ranking-tag-item"><span class="ranking-tag ranking-02">다소안심</span></li>
+						<li class="ranking-tag-item"><span class="ranking-tag ranking-03">보통</span></li>
+						<li class="ranking-tag-item"><span class="ranking-tag ranking-04">신중</span></li>
+						<li class="ranking-tag-item"><span class="ranking-tag ranking-05">주의</span></li>
+					</ul>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">연관메뉴</h3>
+					<div class="support-notice-area">
+						<p class="support-notice-title">다른 정보가 필요하신가요?</p>
+						<div class="support-notice-contents">
+							<ul class="info-list">
+								<li class="info-item"><a href="" class="text-underline">링크</a></li>
+								<li class="info-item"><a href="" class="text-underline">링크</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 이메일 선택 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select" data-layer="layer-select-email">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">이메일 선택</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-select-list">
+									<div class="ui-select-item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="selectEmail" id="selectEmail1" />
+											<label for="selectEmail1" class="ui-label" data-role="layerClose">
+												<span class="ui-label-text">naver.com</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="selectEmail" id="selectEmail2" />
+											<label for="selectEmail2" class="ui-label" data-role="layerClose">
+												<span class="ui-label-text">daum.net</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="selectEmail" id="selectEmail3" checked />
+											<label for="selectEmail3" class="ui-label" data-role="layerClose">
+												<span class="ui-label-text">gmail.com</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-item">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="selectEmail" id="selectEmail4" data-checkbox-tab="checkDirectInputTab" />
+											<label for="selectEmail4" class="ui-label" data-role="layerClose">
+												<span class="ui-label-text">직접입력</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 이메일 선택 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/wcms-data.js"></script>
+		<script>
+			// 유효성 체크 샘플 코드
+			var message = 'Validation message';
+			var $input = $('.ui-select, .ui-input');
+			$input.on('keyup blur focus', function () {
+				if (!$(this).closest('.type-e-date').length) {
+					if ($(this).val().length) {
+						$(this).invalid(true);
+					} else {
+						$(this).invalid(false, message);
+					}
+				}
+			});
+			$('.ui-date-picker duet-date-picker').on('duetBlur duetFocus duetChange', function () {
+				if ($(this).val().length) {
+					$(this).invalid(true);
+				} else {
+					$(this).invalid(false, message);
+				}
+			});
+
+			// 도메인 자동완성
+			var $emailGroup = $('.type-email');
+			var $emailInput = $emailGroup.find('.ui-input');
+			var $emailDomain = $emailGroup.find('.domain-auto');
+			var $emailButton = $emailGroup.find('.domain-auto-button');
+			var emailGroupEntered;
+			$emailInput.on('keyup focus', function () {
+				var val = $(this).val().split('@')[0];
+				if (val.length) {
+					$emailDomain.show();
+				} else {
+					$emailDomain.hide();
+				}
+				$emailGroup.find('.mail').text(val);
+			});
+			$emailGroup
+				.focusin(function () {
+					clearTimeout(emailGroupEntered);
+					$emailDomain.show();
+				})
+				.focusout(function () {
+					emailGroupEntered = setTimeout(function () {
+						$emailDomain.hide();
+					}, 0);
+				});
+			$(document).on('click', '.domain-auto-button', function () {
+				var email = $(this).text();
+				var $input = $(this).closest($emailGroup).find('.ui-input');
+				$input.val(email);
+				$emailDomain.hide();
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- 2022.04.06 : mod : 헤더 공통 수정 -->
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">대출신청</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+				<!--// 2022.04.06 : mod : 헤더 공통 수정 -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-title-section form-flex type-align-top">
+							<div class="form-flex-cell type-flexible">
+								<h2 class="page-title">
+									주소 및 청구서<br />
+									수령방법을 입력해 주세요.
+								</h2>
+							</div>
+							<div class="form-flex-cell">
+								<button type="button" class="ui-button ui-basic-button type-secondary type-tiny type-icon-tel" role="button">전화상담</button>
+							</div>
+						</div>
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">자택 주소</strong>
+									</div>
+									<div class="form-group type-address">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="우편번호 입력" placeholder="우편번호" value="08008" required disabled />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-button ui-basic-button type-small type-gray">우편번호</button>
+											</div>
+										</div>
+										<div class="ui-input-block type-use-delete type-row">
+											<input type="text" class="ui-input" title="기본주소 입력" placeholder="주소" value="서울 양천구 목동로12길 80" required disabled />
+											<button type="button" class="ui-button ui-input-delete">
+												<span class="for-a11y">입력 내용 지우기</span>
+											</button>
+										</div>
+										<div class="ui-input-block type-use-delete type-row">
+											<input type="text" class="ui-input" title="상세주소 입력" placeholder="상세주소" value="106동 1810호" required disabled />
+											<button type="button" class="ui-button ui-input-delete">
+												<span class="for-a11y">입력 내용 지우기</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- 2022.01.28 : del : 항목 삭제
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">자택 전화번호</strong>
+									</div>
+									<div class="terms-area">
+										<div class="terms-item">
+											<div class="ui-checkbox-block type-align-top">
+												<input type="checkbox" class="ui-checkbox" id="checkbox1" />
+												<label for="checkbox1" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">자택전화 없음</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group type-contact">
+										<div class="form-flex margin-top-25">
+											<div class="form-flex-cell">
+												<div class="ui-select-block">
+													<button type="button" class="ui-button ui-select" title="지역 번호 선택">02</button>
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<div class="ui-range-dash">-</div>
+											</div>
+											<div class="form-flex-cell type-flexible">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="전화 번호 입력" placeholder="‘-’ 제외하고 입력" value="12345678" required />
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								-->
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">이메일 주소</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block type-use-delete">
+											<input type="text" class="ui-input" title="이메일 주소 입력" placeholder="이메일 주소 입력" value="abcdef@naver.com" />
+											<button type="button" class="ui-button ui-input-delete">
+												<span class="for-a11y">입력 내용 지우기</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">직장 주소 (선택)</strong>
+									</div>
+									<div class="form-group type-address">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="우편번호 입력" placeholder="우편번호" value="08008" disabled />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-button ui-basic-button type-small type-gray">우편번호</button>
+											</div>
+										</div>
+										<div class="ui-input-block type-use-delete type-row">
+											<input type="text" class="ui-input" title="기본주소 입력" placeholder="주소" value="서울 양천구 목동로12길 80" disabled />
+											<button type="button" class="ui-button ui-input-delete">
+												<span class="for-a11y">입력 내용 지우기</span>
+											</button>
+										</div>
+										<div class="ui-input-block type-use-delete type-row">
+											<input type="text" class="ui-input" title="상세주소 입력" placeholder="상세주소" value="106동 1810호" disabled />
+											<button type="button" class="ui-button ui-input-delete">
+												<span class="for-a11y">입력 내용 지우기</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">청구서 수령방법</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-radio-group type-panel">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" checked />
+												<label for="radioPanel1-1" class="ui-label">
+													<span class="ui-label-text">이메일</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" />
+												<label for="radioPanel1-2" class="ui-label">
+													<span class="ui-label-text">휴대폰메시지<br />(LMS)</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-3" />
+												<label for="radioPanel1-3" class="ui-label">
+													<span class="ui-label-text">미수령</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<p class="ui-notice type-no-icon">약정내용 및 약관은 대출 실행 시 휴대폰메시지(LMS)로 발송 됩니다.</p>
+								</div>
+							</div>
+						</div>
+						<!-- // section -->
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

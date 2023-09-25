@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-apart-management">아파트관리비 이용안내</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 아파트관리비 이용안내 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-info-apart-management">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">아파트관리비 이용안내</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="info-area">
+									<ul class="info-list type-text-large type-outside">
+										<li class="info-item">자동납부 신청 시 안내되는 최초 납부일자부터 하나카드로 자동납부됩니다.</li>
+										<li class="info-item margin-top-10">
+											카드승인일은 납부마감일 기준 4영업일 전 등록된 카드로 승인됩니다.<br />
+											예) 관리비 납부마감일이 6월 30일(토)인 경우 4영업일 전인 6월 26일(화)에 카드승인
+										</li>
+										<li class="info-item margin-top-10">아파트 조회 시 ‘불가‘, ‘해지’로 안내되는 아파트는 신규 신청이 불가합니다.</li>
+										<li class="info-item margin-top-10">자동납부 수수료(700원)은 면제되며, 향후 이용 수수료 발생 시 별도 안내 드립니다.</li>
+										<li class="info-item margin-top-10">아파트 동/호수를 잘못 신청하실 경우, 다른 아파트의 관리비가 청구될 수 있으며 당사에서 별도의 책임을 지지 않습니다.</li>
+										<li class="info-item margin-top-10">미납금액이 있을 경우 해당월 정상납부 대상금액과 미납금액이 포함되어(관리사무소에서 납부요청한 금액) 결제 될 수 있습니다.</li>
+										<li class="info-item margin-top-10">
+											한도초과, 카드거래정지, 연체, 탈회 등의 사유로 승인이 되지 않아 요금이 결제되지 않을 경우 연체에 따른 ‘가산금’이 부과될 수 있습니다.<br />가산금의 기준은 신청 아파트 관리사무소
+											기준에 따릅니다.<br />해당 관리비는 아파트 관리소를 통해 별도 납부방법을 확인하신 후 납부하시기 바랍니다.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 아파트관리비 이용안내 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-info-apart-management');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

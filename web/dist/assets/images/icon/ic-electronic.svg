@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="ic_electronic" transform="translate(-206 -750)">
+    <rect id="Rectangle_11493" data-name="Rectangle 11493" width="36" height="36" transform="translate(206 750)" fill="#fff" opacity="0"/>
+    <path id="Subtraction_334" data-name="Subtraction 334" d="M6281-13575h-4a8.984,8.984,0,0,1-6.905-3.228,8.018,8.018,0,0,0,1.906.229h6a8.009,8.009,0,0,0,8-8v-9h4v11A9.01,9.01,0,0,1,6281-13575Z" transform="translate(-6054.546 14353)" fill="#7dedf3"/>
+    <g id="Rectangle_14327" data-name="Rectangle 14327" transform="translate(213 758)" fill="none" stroke="#2d3239" stroke-width="1.5">
+      <path d="M0,0H22a0,0,0,0,1,0,0V11a9,9,0,0,1-9,9H9a9,9,0,0,1-9-9V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1.5.75h19a.75.75,0,0,1,.75.75V11A8.25,8.25,0,0,1,13,19.25H9A8.25,8.25,0,0,1,.75,11V1.5A.75.75,0,0,1,1.5.75Z" fill="none"/>
+    </g>
+    <path id="Path_12522" data-name="Path 12522" d="M.75,0h24.5a.75.75,0,0,1,0,1.5H.75A.75.75,0,0,1,.75,0Z" transform="translate(211 758)" fill="#2d3239"/>
+    <rect id="Rectangle_14329" data-name="Rectangle 14329" width="1.5" height="7" rx="0.75" transform="translate(217.5 752)" fill="#2d3239"/>
+    <rect id="Rectangle_14456" data-name="Rectangle 14456" width="1.5" height="7" rx="0.75" transform="translate(228.5 752)" fill="#2d3239"/>
+    <rect id="Rectangle_14457" data-name="Rectangle 14457" width="1.5" height="7" rx="0.75" transform="translate(223.25 777)" fill="#2d3239"/>
+    <path id="Path_12077" data-name="Path 12077" d="M-4889.353,11157.949l-3.665,3.776,4,1.5-3.408,3.723" transform="translate(5115.017 -10394.449)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

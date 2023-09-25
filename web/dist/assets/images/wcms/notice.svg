@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <g data-name="ic_info_!_t">
+        <path data-name="사각형 11200" style="fill:none" d="M0 0h18v18H0z"/>
+        <g data-name="타원 1338" transform="translate(1 1)" style="stroke:#111;stroke-width:1.5px;fill:none">
+            <circle cx="8" cy="8" r="8" style="stroke:none"/>
+            <circle cx="8" cy="8" r="7.25" style="fill:none"/>
+        </g>
+        <g data-name="합치기 128" style="fill:none">
+            <path d="M-8199.001 16976.5a.501.501 0 1 1 0-1.002.501.501 0 0 1 0 1.002zm0-2.998a.502.502 0 0 1-.501-.502v-4c0-.28.22-.498.501-.498s.501.219.501.498v4a.502.502 0 0 1-.501.502z" style="stroke:none" transform="translate(8208 -16963.5)"/>
+            <path d="m-8199.001 16973.002.001-.002-.002-3.998v4h.001m0 3.998a1 1 0 1 1 1.001-1 1 1 0 0 1-1.001 1zm0-2.998a1 1 0 0 1-1.001-1.002v-4a.997.997 0 0 1 1.001-.998.997.997 0 0 1 1.001.998v4a1 1 0 0 1-1.001 1.002z" style="fill:#111;stroke:none" transform="translate(8208 -16963.5)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-2{fill:#111}
+        </style>
+    </defs>
+    <g id="ic_link" transform="translate(-93 -589)">
+        <path id="사각형_7105" data-name="사각형 7105" class="cls-1" transform="translate(93 589)" d="M0 0h30v30H0z"/>
+        <g id="그룹_8093" data-name="그룹 8093" transform="rotate(45 100.5 597.357)">
+            <g id="그룹_8090" data-name="그룹 8090" transform="translate(-174 -141)">
+                <path id="빼기_104" data-name="빼기 104" class="cls-2" d="M-5175.046 4978a4.505 4.505 0 0 1-4.5-4.5v-5a4.5 4.5 0 0 1 4.5-4.5h.2v1.5c-.068 0-.134-.006-.2-.006a3 3 0 0 0-3 3v5a3 3 0 0 0 3 3 3 3 0 0 0 3-3V4971h1.5v2.5a4.506 4.506 0 0 1-4.5 4.5z" transform="translate(5459.547 -4229)"/>
+                <rect id="사각형_11217" data-name="사각형 11217" class="cls-2" width="1.5" height="2" rx=".75" transform="translate(287.501 741)"/>
+                <rect id="사각형_11218" data-name="사각형 11218" class="cls-2" width="2" height="1.5" rx=".75" transform="translate(283.501 735.001)"/>
+            </g>
+            <g id="그룹_8092" data-name="그룹 8092" transform="translate(-174 -149.5)">
+                <path id="빼기_104-2" data-name="빼기 104" class="cls-2" d="M-5175.046 4978h-.2v-1.5c.065 0 .129.006.2.006a3 3 0 0 0 3-3v-5a3 3 0 0 0-3-3 3 3 0 0 0-3 3v2.5h-1.5v-2.5a4.5 4.5 0 0 1 4.5-4.5 4.5 4.5 0 0 1 4.5 4.5v5a4.506 4.506 0 0 1-4.5 4.494z" transform="translate(5459.547 -4229)"/>
+                <rect id="사각형_11217-2" data-name="사각형 11217" class="cls-2" width="1.5" height="2" rx=".75" transform="translate(280 741)"/>
+                <rect id="사각형_11218-2" data-name="사각형 11218" class="cls-2" width="2" height="1.5" rx=".75" transform="translate(283 747.501)"/>
+            </g>
+        </g>
+        <path id="사각형_11219" data-name="사각형 11219" class="cls-1" transform="translate(98 594)" d="M0 0h20v20H0z"/>
+    </g>
+</svg>

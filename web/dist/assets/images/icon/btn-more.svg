@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.303" height="10.61" viewBox="0 0 10.303 10.61">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#a2a2a2;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="btn_more" transform="translate(-310 -512.689)">
+        <g id="그룹_8198" data-name="그룹 8198" transform="translate(-15.242 -216.008)">
+            <path id="선_192" data-name="선 192" class="cls-2" transform="rotate(-45 1046.017 -33.758)" d="M0 0v6"/>
+            <path id="선_193" data-name="선 193" class="cls-2" transform="rotate(-45 1056.263 -29.514)" d="M0 0h6"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-3{stroke:#2d3239;stroke-width:1.5px}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_tax" transform="translate(-23.33 -750.768)">
+        <path id="사각형_7870" data-name="사각형 7870" class="cls-1" transform="translate(23.33 750.768)" d="M0 0h36v36H0z"/>
+        <g id="사각형_13455" data-name="사각형 13455" transform="translate(29.83 753.768)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+            <rect class="cls-5" width="23" height="30" rx="5"/>
+            <rect class="cls-1" x=".75" y=".75" width="21.5" height="28.5" rx="4.25"/>
+        </g>
+        <g id="사각형_14466" data-name="사각형 14466" class="cls-3" transform="rotate(90 -365.219 403.549)">
+            <rect class="cls-5" width="4.5" height="4.5" rx="2.25"/>
+            <rect class="cls-1" x=".75" y=".75" width="3" height="3" rx="1.5"/>
+        </g>
+        <g id="사각형_14468" data-name="사각형 14468" class="cls-3" transform="rotate(90 -362.594 406.174)">
+            <rect class="cls-5" width="4.5" height="4.5" rx="2.25"/>
+            <rect class="cls-1" x=".75" y=".75" width="3" height="3" rx="1.5"/>
+        </g>
+        <g id="사각형_14470" data-name="사각형 14470" class="cls-3" transform="rotate(90 -359.969 408.799)">
+            <rect class="cls-5" width="4.5" height="4.5" rx="2.25"/>
+            <rect class="cls-1" x=".75" y=".75" width="3" height="3" rx="1.5"/>
+        </g>
+        <g id="사각형_14467" data-name="사각형 14467" class="cls-3" transform="rotate(90 -368.219 406.549)">
+            <rect class="cls-5" width="4.5" height="4.5" rx="2.25"/>
+            <rect class="cls-1" x=".75" y=".75" width="3" height="3" rx="1.5"/>
+        </g>
+        <g id="사각형_14469" data-name="사각형 14469" class="cls-3" transform="rotate(90 -365.594 409.174)">
+            <rect class="cls-5" width="4.5" height="4.5" rx="2.25"/>
+            <rect class="cls-1" x=".75" y=".75" width="3" height="3" rx="1.5"/>
+        </g>
+        <g id="사각형_15636" data-name="사각형 15636" class="cls-3" transform="rotate(90 -362.969 411.799)">
+            <rect class="cls-5" width="4.5" height="4.5" rx="2.25"/>
+            <rect class="cls-1" x=".75" y=".75" width="3" height="3" rx="1.5"/>
+        </g>
+        <rect id="사각형_15637" data-name="사각형 15637" width="14" height="5.5" rx="1.8" transform="translate(35.83 760.768)" style="fill:#7dedf3"/>
+        <g id="사각형_14465" data-name="사각형 14465" class="cls-3" transform="translate(33.83 758.768)">
+            <rect class="cls-5" width="15" height="7" rx="2"/>
+            <rect class="cls-1" x=".75" y=".75" width="13.5" height="5.5" rx="1.25"/>
+        </g>
+    </g>
+</svg>

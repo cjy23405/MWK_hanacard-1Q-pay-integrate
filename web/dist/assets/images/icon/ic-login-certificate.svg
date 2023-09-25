@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+    <defs>
+        <style>
+            .cls-2{fill:none}.cls-3{fill:#2d3239}.cls-8{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_login_certificate" transform="translate(-106 -513)">
+        <g id="사각형_11100" data-name="사각형 11100" transform="translate(107 514)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+            <rect class="cls-8" width="14" height="17" rx="3"/>
+            <rect class="cls-2" x=".75" y=".75" width="12.5" height="15.5" rx="2.25"/>
+        </g>
+        <path id="사각형_7870" data-name="사각형 7870" class="cls-2" transform="translate(106 513)" d="M0 0h20v20H0z"/>
+        <rect id="사각형_6085" data-name="사각형 6085" class="cls-3" width="7" height="1.5" rx=".75" transform="translate(110.5 518)"/>
+        <rect id="사각형_6086" data-name="사각형 6086" class="cls-3" width="5" height="1.5" rx=".75" transform="translate(110.5 521)"/>
+        <path id="사각형_11101" data-name="사각형 11101" transform="translate(119 520)" style="fill:#fff" d="M0 0h2v6H0z"/>
+        <rect id="사각형_11102" data-name="사각형 11102" class="cls-3" width="1.5" height="2" rx=".75" transform="translate(119.5 519)"/>
+        <path id="패스_5049" data-name="패스 5049" d="M-.091.8A16.717 16.717 0 0 1 4.3-1 16.836 16.836 0 0 1 8.69.8c.371.338-.259 3.151-1.033 4.5A6.808 6.808 0 0 1 4.3 8 7.347 7.347 0 0 1 .942 5.3C.191 4.053-.469 1.144-.091.8z" transform="translate(114.701 524)" style="fill:#7dedf3"/>
+        <g id="패스_3481" data-name="패스 3481" style="stroke-linecap:round;stroke-linejoin:round;fill:none">
+            <path class="cls-8" d="M-.073 1.2A19.019 19.019 0 0 1 5.05-1a19.155 19.155 0 0 1 5.122 2.2c.432.413-.3 3.851-1.205 5.5S5.678 10 5.05 10 2.009 8.224 1.133 6.7-.514 1.621-.073 1.2z" transform="translate(115.501 523)"/>
+            <path d="M5.05.51C4.388.652 2.29 1.57 1.311 2.096c.09.93.56 2.881 1.121 3.856.54.939 1.96 2.075 2.632 2.462.678-.37 2.05-1.454 2.586-2.434.591-1.08 1.045-2.974 1.135-3.883C7.804 1.57 5.706.652 5.049.51m0-1.51c.849 0 4.69 1.787 5.123 2.2.432.413-.303 3.851-1.206 5.5C8.064 8.349 5.678 10 5.05 10c-.629 0-3.04-1.776-3.917-3.3C.256 5.176-.514 1.62-.073 1.2.367.78 4.202-1 5.05-1z" style="fill:#2d3239;stroke:none" transform="translate(115.501 523)"/>
+        </g>
+        <path id="패스_3490" data-name="패스 3490" d="m-10169.5 5361.6 1.062 1.1 1.938-2.2" transform="translate(10288.703 -4834.5)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+    </g>
+</svg>

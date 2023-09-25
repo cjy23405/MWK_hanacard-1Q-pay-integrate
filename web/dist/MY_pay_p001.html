@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">이용금액결제</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-completion">
+						<h2 class="page-title">
+							결제일 이전에 미리 카드대금을<br />
+							납입하는 서비스입니다.
+						</h2>
+						<div class="ui-illust type-5"></div>
+
+						<div class="form-bottom">
+							<ul class="ui-buttons-list">
+								<!-- 2022.06.20 : 문구추가 문구추가 및 padding-top-bottom-7 클래수 추가 -->
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary padding-top-bottom-7" role="button" style="flex-direction: column;">즉시결제<br /><span class="small-text">(선결제)</span></a>
+								</li>
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary padding-top-bottom-7" role="button" style="flex-direction: column;">건별즉시결제<br /><span class="small-text">(건별선결제)</span></a>
+								</li>
+								<!-- //2022.06.20 : 문구추가 문구추가 및 padding-top-bottom-7 클래수 추가 -->
+							</ul>
+						</div>
+
+						<!-- section -->
+						<div class="page-section-group">
+							<h2 class="page-section-title font-weight-bold">즉시결제 출금 가능시간</h2>
+							<ul class="guide-info-list margin-top-15">
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">하나은행 결제계좌</strong>
+										<p class="guide-info-text">365일 06:00~23:30</p>
+									</div>
+									<span class="guide-info-icon type-icon-23"></span>
+								</li>
+								<li class="guide-info-item type-default">
+									<div class="guide-info-item-inner">
+										<div class="guide-info-block">
+											<strong class="guide-info-title">하나은행 외 타행 결제계좌</strong>
+											<p class="guide-info-text">평일 08:00~22:00</p>
+										</div>
+										<span class="guide-info-icon type-icon-5"></span>
+									</div>
+									<div class="info-list margin-top-20">
+										<div class="info-item type-presa">즉시출금 결제계좌가 타행인 경우 오픈뱅킹 또는 BC CMS를 통하여 출금됩니다.</div>
+										<div class="info-item type-presa">
+											상호저축은행, 산림조합중앙회, 증권사 계좌는 오픈뱅킹 이체한도*내에서만 즉시출금이 가능합니다.<br />(*오픈뱅킹 이체한도 : 전 금융기관 합산 1일 1천만원)
+										</div>
+										<div class="info-item type-presa">국민은행 가상계좌, HSBC, 도이치은행 등의 계좌는 즉시출금이 불가합니다.</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--// section -->
+
+						<!-- section -->
+						<div class="page-section-group">
+							<div class="accordion-list js-ui-accordion" data-once="true">
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">즉시결제 이용 시 유의사항</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<ul class="info-list type-inherit type-outside">
+												<li class="info-item">
+													결제일 당일(전일) 또는 연체기간 중 즉시결제(가상계좌 예약 포함)시 이중출금 가능성이 있으니, 결제계좌 잔고를 비워두시기 바랍니다. (이중출금 발생 시, 다음 영업일 오전
+													결제계좌로 환불)
+												</li>
+												<li class="info-item text-underline">
+													약정할부(라이트 할부) 이용 조건으로 서비스가 제공되는 상품의 경우 즉시결제 또는 완납 시, 서비스가 제공되지 않으니 상품 안내장을 확인하시기 바랍니다.
+												</li>
+												<li class="info-item">
+													당원청구금액 확정 전 회차성 상품(할부, 장기카드대출)의 부분 선결제 거래 시 월불입금이 재조정되어 당원에 청구될 수 있으며, 리볼빙 상품은 최소결제비율 금액에 반영되지 않을 수
+													있으니 거래에 유의 하시기 바랍니다.
+												</li>
+												<div class="info-item">
+													이용건별 즉시결제에서 이월된 일부결제금액이월약정(리볼빙) 이용 건의 결제를 원하시는 경우, 이용일자가 과거 결제일인 건을 선택하셔서 거래하시기 바랍니다.
+												</div>
+												<div class="info-item">
+													즉시결제 후 입금취소를 원하시는 경우 고객센터(1800-1111)로 문의하시기 바라며, 결제일 변경 후 즉시별게 시 입금취소가 불가하니 거래 전 반드시 유의하시기 바랍니다.
+												</div>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">즉시결제 수수료 안내</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<dl class="use-notice-group type-bold">
+												<dt class="group-title">일시불</dt>
+												<dd class="group-contents">수수료 없이 즉시결제 가능</dd>
+												<dt class="group-title margin-top-20">할부</dt>
+												<dd class="group-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">1회차 결제일 이전 전액 즉시결제 시, 할부 수수료없이 즉시 결제 가능</li>
+														<li class="info-item">1회차 결제일 이후 전액 즉시결제 시, 전월 결제일(마지막으로 입금하신 날)로부터 즉시결제일까지 일할계산 청구</li>
+													</ul>
+												</dd>
+												<dt class="group-title margin-top-20">장기카드대출(카드론)</dt>
+												<dd class="group-contents">
+													이용일로부터 즉시결제일까지 일할계산 청구<br />
+													(이용당일 즉시결제 시 오늘차 수수료 부과)
+												</dd>
+												<dt class="group-title margin-top-20">단기카드대출(현금서비스)</dt>
+												<dd class="group-contents">결제일 이전 즉시결제 시, 이용일로부터 즉시결제일까지 일할 계산 청구</dd>
+												<dt class="group-title margin-top-20">일부결제금액이월약정(리볼빙)</dt>
+												<dd class="group-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															1회차 결제일 이전 전액 즉시결제 시, 일부결제금액이월약정(리볼빙) 수수료 없이 즉시결제 가능(단, 단기카드대출 일부결제금액이월약정(리볼빙 현금서비스)는 1회차 결제일 이전에
+															즉시결제하셔도 단기카드대출(현금서비스) 수수료율이 부과됩니다.)
+														</li>
+														<li class="info-item">1회차 결제일 이후 전액 즉시결제 시, 전월 결제일(마지막으로 입금하신 날)로부터 즉시결제일까지 일할계산 청구</li>
+													</ul>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">명세서 미표기 안내</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<ul class="info-list type-inherit type-outside">
+												<li class="info-item">명세서 미표기는 이용건별로 선택하실 수 있으며, 건별 즉시 결제에서 신청이 가능합니다.</li>
+												<li class="info-item">이용대금명세서 작성일 이전 전액 즉시결제하시는 경우에만 명세서 미표기 신청이 가능합니다.</li>
+												<li class="info-item">가상계좌 예약을 통한 즉시결제의 경우 가상계좌 입금 후 정상결제 완료된 경우 명세서 미표기 처리 됩니다.</li>
+												<li class="info-item">가상계좌 예약 후 입금금액 불일치등으로 정상결제가 완료되지 않은 경우 명세서 미표기도 미처리되오니 가상계좌 입금결과를 반드시 확인하시기 바랍니다.</li>
+												<li class="info-item">이용대금명세서 작성일 이후 또는 부분 즉시결제하시는 경우에는 명세서 미표기 신청이 불가능합니다.</li>
+												<li class="info-item">연회비/수수료는 명세서 미표기 신청이 불가능합니다.</li>
+												<li class="info-item">명세서 미표기 신청 후 즉시결제를 취소하거나 가상계좌 예약을 취소하는 경우 미표기 신청도 취소됩니다.</li>
+												<li class="info-item">즉시결제 시 명세서 미표기 신청하신 경우만 미표기 처리되며, 신청하지 않은 경우 명세서에 완납으로 표기됩니다.</li>
+												<li class="info-item">
+													당월 이용대금명세서 작성 완료 후 당월 이용대금 미표기 신청 및 명세서 재발행이 필요하신 경우 하나카드 고객센터(1800-1111)로 문의해주시기 바랍니다.<br />단, 당월 이용대금명세서
+													작성 완료 후 명세서 미표기 신청시에는 정규발행 명세서에는 반영할 수 없으며, 재발행 명세서에만 반영이 가능합니다.
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// section -->
+
+						<div class="support-notice-area">
+							<p class="support-notice-title">다른 정보가 필요하신가요?</p>
+							<div class="support-notice-contents">
+								<ul class="info-list">
+									<li class="info-item"><a href="" class="text-underline" role="button">컴포넌트 가이드 참조</a></li>
+									<li class="info-item"><a href="" class="text-underline" role="button">컴포넌트 가이드 참조</a></li>
+									<li class="info-item"><a href="" class="text-underline" role="button">컴포넌트 가이드 참조</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap NaverPay">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title"></h1>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+					    <div class="title-box">
+							<h2 class="page-title">
+								카드 신청을 위해<br />
+								약관에 동의 해주세요
+							</h2>
+							<div class="page-title-img">
+								<div class="card-image">
+									<!-- 2022.04.27 : mod : alt 값 변경 -->
+									<img src="/images/naverpay/img_card_naver_blue.svg" alt="" onerror="this.parentNode.className += ' is-error';" class="img" />
+								</div>
+							</div>
+					    </div>
+						
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-contents">
+									<div class="ui-select-multiple-list">
+										<div class="ui-select-multiple-item type-all type-under">
+											<div class="ui-checkbox-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox-all" data-checkbox-group="selectCheckbox" data-area-disabled="nextButton" />
+												<label for="selectCheckbox-all" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">모두 동의합니다.</span>
+												</label>
+											</div>
+										</div>
+										<div class="ui-select-multiple-item type-big">
+											<div class="ui-checkbox-block">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" data-checkbox-group-child="selectCheckbox" />
+												<label for="selectCheckbox-1" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">(필수) 약관 및 주요 안내 사항 동의</span>
+												</label>
+												<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+											</div>
+										</div>
+										<div class="ui-select-multiple-item type-big">
+											<div class="ui-checkbox-block">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox-2" data-checkbox-group-child="selectCheckbox" />
+												<label for="selectCheckbox-2" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">(필수) 개인(신용)정보 동의</span>
+												</label>
+												<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+											</div>
+										</div>
+										<div class="ui-select-multiple-item type-big">
+											<div class="ui-checkbox-block">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox-3" data-checkbox-group-child="selectCheckbox" />
+												<label for="selectCheckbox-3" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">(필수) 개인(신용)정보 동의 (제휴카드)</span>
+												</label>
+												<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+											</div>
+										</div>
+										<div class="ui-select-multiple-item type-big">
+											<div class="ui-checkbox-block">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox-4" data-checkbox-group-child="selectCheckbox" />
+												<label for="selectCheckbox-4" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">(선택) 개인(신용)정보 제공 동의</span>
+												</label>
+												<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+											</div>
+										</div>
+										<div class="ui-select-multiple-item type-big">
+											<div class="ui-checkbox-block">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox-5" data-checkbox-group-child="selectCheckbox" />
+												<label for="selectCheckbox-5" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">(선택) 제휴서비스 주요 안내사항 및 약관 동의</span>
+												</label>
+												<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+											</div>
+										</div>
+										<div class="ui-select-multiple-item type-big">
+											<div class="ui-checkbox-block">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox-6" data-checkbox-group-child="selectCheckbox" />
+												<label for="selectCheckbox-6" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">(선택) 모바일 약관 교부 동의</span>
+												</label>
+												<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+
+					<div class="page-buttons type-naver-button">
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-area-disabled-target="nextButton">다음</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">신용정보 활용체제</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<form id="frm" method="post">
+						<div class="page-contents">
+							<div class="wcms-data">
+								<section class="clause-data">
+									<!-- 약관 내용 -->
+									<h1 class="wcms-title-large">
+										신용정보 활용체제
+									</h1>
+									<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+										「하나카드㈜(이하 "하나카드"라 함)는 고객님의 신용정보를 안전하게 관리하고자 최선을 다하고 있으며,「신용정보의 이용 및 보호에 관한 법률」제 31조에 의거한 당사의 신용정보활용체제는 다음과 같습니다.
+									</p>
+					
+					
+									<!-- 개인신용정보 보호 및 관리에 관한 기본계획 -->
+									<section class="wcms-section">
+										<h2 class="wcms-title-small">개인신용정보 보호 및 관리에 관한 기본계획</h2>
+										<ol class="wcms-list wcms-size-small wcms-weight-light">
+											<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+												<div class="wcms-list-contents">
+													<div class="wcms-margin-small">
+														관리적 대책 
+													</div>
+													<ul class="wcms-list">
+														<li class="wcms-list-item" data-symbol="가.">
+															<div class="wcms-list-contents">
+																회사는 개인신용정보의 안전한 처리 및 관리를 위해 내규를 수립·시행하고 있습니다.
+															</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="나.">
+															<div class="wcms-list-contents">회사는 개인신용정보의 안전한 보호 및 관리를 위해 신용정보관리·보호인을 지정하여 운영하고 있습니다.</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="다.">
+															<div class="wcms-list-contents">회사는 입사 시 전 직원의 보안서약서를 징구하고 있으며,사람에 의한 정보유출을 사전에 방지하고 있습니다.</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="라.">
+															<div class="wcms-list-contents">회사는 개인신용정보보호를 위해 임직원 대상으로 새로운 보안기술 습득 및 개인정보 보호의무 등에 관해 정기적인 사내 교육 및 외부 위탁교육을 실시하고 있습니다.</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="마.">
+															<div class="wcms-list-contents">회사는 개인신용정보 접근권한을 최소한의 인원으로 제한하고 있으며, 직원의 조회가 적정한지 여부를 주기적으로 점검하고 있습니다.</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="바.">
+															<div class="wcms-list-contents">회사는 개인신용정보 오·남용에 대한 자체 제재기준을 마련하여 운영하고 있습니다.</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="사.">
+															<div class="wcms-list-contents">회사는 개인정보시스템 개발 시에 개인신용정보를 변환하여 사용하고 있습니다.</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+												<div class="wcms-list-contents">
+													<div class="wcms-margin-small">
+														기술적 대책 
+													</div>
+													<ul class="wcms-list">
+														<li class="wcms-list-item" data-symbol="가.">
+															<div class="wcms-list-contents">
+																개인신용정보를 처리하는 개인정보처리시스템에 대한 접근권한의 부여·변경·말소를 통하여 개인정보에 대한 접근통제를 위한 필요한 조치를 하고 있으며 침입 차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있습니다.
+															</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="나.">
+															<div class="wcms-list-contents">개인정보취급자가 개인정보처리시스템에 접속한 기록을 2년이상 보관·관리하며, 개인정보취급자의 접속기록이 위·변조 및 도난, 분실되지 않도록 접속기록을 안전하게 보관하고 있습니다.</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="다.">
+															<div class="wcms-list-contents">해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을 하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다.</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="라.">
+															<div class="wcms-list-contents">회사는 개인정보시스템의 개발업무에 사용되는 업무장소,전산설비를 내부 업무용과 분리하여 설치·운영하고 있습니다.</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="마.">
+															<div class="wcms-list-contents">회사는 전산실 및 자료 보관실 등을 특별 보호구역으로 설정하여 출입을 통제하고 있으며, 출입 통제 절차를 수립·운영하고 있습니다.</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="바.">
+															<div class="wcms-list-contents">개인정보가 포함된 서류 또는 보조저장매체 등을 잠금장치가 있는 안전한 장소에 보관 및 관리하고 있습니다.</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ol>
+									</section>
+					
+									<!-- 신용정보의 종류 및 이용목적 -->
+									<section class="wcms-section">
+										<h2 class="wcms-title-small">신용정보의 종류 및 이용목적</h2>
+										<div class="wcms-table">
+											<div class="wcms-table-inner">
+												<table>
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption>
+														신용정보의 종류 및 이용목적 안내 표입니다.
+													</caption>
+													<colgroup>
+														<col style="width: 35%" />
+														<col />
+													</colgroup>
+													<tbody>
+														<tr>
+															<th>
+																신용정보의<br />
+																종류
+															</th>
+															<td>
+																<ul class="wcms-list">
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">성명, 주민등록번호, 주소, 전화번호, 직업, e-메일 등 개인식별정보<br>(본인이 거래하는 비씨카드 회원사간 식별정보의 교환포함)</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">신용거래정보(본 동의 이전 이후의 대출 현황, 담보 및 채무보증현황, 신용카드 발급 및 해지, 신용카드 한도 및 이용정보등과 이에 따른 실적을 포함한 거래내용)</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">연체, 대위변제, 대지급, 부도, 관련인 발생사실 등 채무불이행 정보</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">직업, 재산채무소득의 총액, 납세실적 등 신용 능력 정보</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">공공기관보유 정보(개인회생 파산면책 채무불이행자 등재 등 법원의 재판결정 정보, 각종 체납정보, 출생 사망 이민 부재 주민등록번호 및 성명의 변경 등 주민등록관련정보, 공공보험요금 관련 정보 등</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">다른 기관의 신용정보 조회 기록</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">기타 본인의 신용을 판단할 수 있는 신용정보</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">기타계약과 관련하여 본인이 제공한 정보</div>
+																	</li>
+																</ul>
+															</td>
+														</tr>
+														<tr>
+															<th>
+																이용목적
+															</th>
+															<td>
+																<ul class="wcms-list">
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">금융거래의 설정·유지 또는 사후관리, 신용관련 통계모형 개발 및 분석, 기타 금융거래 관련 업무</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">신용을 판단하기 위한 자료로 활용하거나 금융사고 조사, 법령상 의무이행, 이 계약(이 계약이전 발생 계약 포함)등 금융거래의 유지 또는 사후관리 등</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">거래관계의 설정 또는 유지 여부 판단, 금융사고 조사, 법령상 의무이행, 업무의 일부 또는 전부를 외부업체에게 위탁하여 당해 위탁업무 수행에 필요한 범위 내에서 외부업체에 신용정보를 제공하는 경우, 신용카드 거래와 관련한 업무목적(매출표 접수, 반송업무, 회원과 가맹점 간의 분쟁해결, 가맹점대금 정산업무)의 필요한 범위내에서 가맹점에 신용정보 제공하는 경우</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">기타 개인의 동의한 목적 및 관계법령의 규정에서 정한 경우</div>
+																	</li>
+																</ul>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</section>
+				
+									<!-- 신용정보를 제 3자에게 제공하는 경우 제공하는 신용정보의 종류, 제공 대상, 제공받는 자의 이용목적 -->
+									<section class="wcms-section">
+										<h2 class="wcms-title-small">신용정보를 제 3자에게 제공하는 경우 제공하는 신용정보의 종류, 제공 대상, 제공받는 자의 이용목적</h2>
+										<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+											고객님의 개인신용정보는 해당 제휴사(제휴카드의 경우) 또는 업무/서비스 제공자(부가 서비스를 제공하는 경우)에 목적 범위 내에서 업무수행에 필요한 경우에 한하여 최소한의 정보만을 제공하고 있습니다.
+										</p>
+										<a href="javascript:goLinkWeb('/MKPROV1050M.web');" class="wcms-button type-inline type-line type-light-gray"><span class="wcms-button-text">제 3자정보제공 현황</span></a>
+										<!-- href="CC_policy_p005" -->
+									</section>
+				
+									<!-- 신용정보의 보유기간 및 이용기간, 신용정보 파기 절차 및 방법 -->
+									<section class="wcms-section">
+										<h2 class="wcms-title-small">신용정보의 보유기간 및 이용기간, 신용정보 파기 절차 및 방법</h2>
+										<ol class="wcms-list wcms-size-small wcms-weight-light">
+											<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+												<div class="wcms-list-contents">
+													<div class="wcms-margin-small">신용정보의 보유기간 및 이용기간</div>
+													<ul class="wcms-list">
+														<li class="wcms-list-item" data-symbol="-">
+															<div class="wcms-list-contents">
+																하나카드는 신용정보의 수집/이용/조회/제공(위탁 포함)에 관하여 동의를 받은 날로부터 그 목적을 달성할 때까지 신용정보를 보유/이용합니다.<br>다만, 「신용정보의 이용 및 보호에 관한 법률」,「상법」등 관련법규에 의하여 보존할 필요성이 있는 경우에는 신용정보를 일정기간 동안 보유합니다. 
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+												<div class="wcms-list-contents">
+													<div class="wcms-margin-small">신용정보 파기 절차 및 방법</div>
+													<ul class="wcms-list">
+														<li class="wcms-list-item" data-symbol="-">
+															<div class="wcms-list-contents">전자적 파일 형태인 경우 복원이 불가능한 방법으로 영구 삭제하며, 그 이외의 기록물, 인쇄물, 서면, 기타 기록 매체인 경우에는 파쇄, 소각, 용해 등의 방법으로 파기 합니다.</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ol>
+									</section>
+				
+									<!-- 개인정보 자동 수집 장치의 설치/운영 및 거부에 관한 사항 -->
+									<section class="wcms-section">
+										<h2 class="wcms-title-small">개인정보 자동 수집 장치의 설치/운영 및 거부에 관한 사항</h2>
+										<ol class="wcms-list wcms-size-small wcms-weight-light">
+											<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+												<div class="wcms-list-contents">
+													<div class="wcms-margin-small">
+														회사는 고객님의 정보를 수시로 저장하고 찾아내는 '쿠키(cookie)'등을 운영합니다. 쿠키란 웹사이트를 운영하는데 이용되는 서버가 고객님의 브라우저에 보내는 아주 작은 텍스트 파일로서 고객님의 컴퓨터 하드디스크에 저장 됩니다. 회사는 다음과 같은 목적을 위해 쿠키를 사용 합니다.
+													</div>
+													<ul class="wcms-list">
+														<li class="wcms-list-item" data-symbol="가.">
+															<div class="wcms-list-contents">
+																<div class="wcms-margin-small">쿠키의 사용 목적</div>
+																<ul class="wcms-list">
+																	<li class="wcms-list-item" data-symbol="-">
+																		<div class="wcms-list-contents">
+																			회원과 비회원의 접속 빈도나 방문 시간 등을 분석, 이용자의 취향과 관심분야를 파악 및 자취 추적, 각종 이벤트 참여 정도 및 방문 횟수 파악 등을 통한 타겟 마케팅 및 개인 맞춤 서비스 제공
+																		</div>
+																	</li>
+																	<li class="wcms-list-item" data-symbol="-">
+																		<div class="wcms-list-contents">
+																			고객님은 쿠키 설치에 대한 선택권을 가지고 있습니다. 따라서 고객님의 웹 브라우저에서 옵션 설정만으로 모든 쿠키의 저장을 거부할 수도 있습니다.
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="나.">
+															<div class="wcms-list-contents">
+																<div class="wcms-margin-small">쿠키 설정 거부 방법</div>
+																<ul class="wcms-list">
+																	<li class="wcms-list-item" data-symbol="-">
+																		<div class="wcms-list-contents">
+																			쿠키 설정을 거부하는 방법으로는 고객님이 사용하시는 웹브라우저의 옵션을 선택하셔서 모든 쿠키를 허용하거나, 쿠키를 저장할 때마다 확인을 거치거나, 모든 쿠키의 저장을 거부할 수 있습니다.  
+																		</div>
+																	</li>
+																	<li class="wcms-list-item" data-symbol="-">
+																		<div class="wcms-list-contents">
+																			설정방법(예: 인터넷 익스플로어의 경우) : 웹 브라우저 상단의 도구 &gt; 인터넷 옵션 &gt; 개인정보
+																			<br>다만, 고객님께서 쿠키 설치를 거부하였을 경우 서비스 제공에 어려움이 있을 수 있습니다.
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+												<div class="wcms-list-contents">
+													<div class="wcms-margin-small">
+														회사는 보다 더 나은 서비스를 위하여 구글(Google) 에서 제공하는 웹로그 분석 도구인 구글 애널리틱스을 이용하고 있습니다. 구글 애널리틱스를 통하여 당사 웹사이트 이용자의 형태정보를 수집하게 되며, 이경우 이용자 개인을 식별할 수 없는 비식별정보만이 수집됩니다. 그럼에도 이용자는 부가기능 설치 또는 웹브라우저의 쿠키 설정 거부를 통해 구글 애널리틱스 쿠키 이용을 거부할 수 있습니다.
+													</div>
+													<ul class="wcms-list">
+														<li class="wcms-list-item" data-symbol="-">
+															<div class="wcms-list-contents">
+																구글 애널리틱스 차단 브라우저 부가기능의 설치<br />
+																[<a href="javascript:void(0);" onclick="goNewWin('https://tools.google.com/dlpage/gaoptout');" class="wcms-color-gray">https://tools.google.com/dlpage/gaoptout</a>]
+															</div>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ol>
+									</section>
+				
+									<!-- 신용정보처리를 위탁하는 경우 그 업무의 내용 및 수탁자 -->
+									<section class="wcms-section">
+										<h2 class="wcms-title-small">신용정보처리를 위탁하는 경우 그 업무의 내용 및 수탁자</h2>
+										<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+											하나카드는 효율적인 업무수행을 위하여 관계법령 허용범위 내 업무를 위탁하여 수행하게 하고 있으며, 해당 업무위탁 내용 및 수탁사는 다음과 같습니다.
+										</p>
+										<a href="javascript:goLinkWeb('/MKPROV1060M.web');" class="wcms-button type-inline type-line type-light-gray"><span class="wcms-button-text">업무위탁 현황</span></a>
+										<!-- href="CC_policy_p006" -->
+									</section>
+				
+									<!-- 가명정보의 처리 -->
+									<section class="wcms-section">
+										<h2 class="wcms-title-small">가명정보의 처리</h2>
+										<ol class="wcms-list wcms-size-small wcms-weight-light">
+											<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+												<div class="wcms-list-contents">
+													가명정보는 개인정보의 일부를 삭제하거나 일부 또는 전부를 대체하는 등의 방법으로 추가 정보가 없이는 특정 개인을 알아볼 수 없도록 처리한 정보를 말합니다.
+												</div>
+											</li>
+											<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+												<div class="wcms-list-contents">하나카드는 가명정보를 통계작성, 과학적 연구 등의 목적으로 처리합니다.</div>
+											</li>
+											<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+												<div class="wcms-list-contents">하나카드는 가명정보를 이용할 때 처리 및 보유 기간을 정하고 있으며, 해당 기간 경과 시 더 이상 이용하지 않으며 해당 정보를 파기하고 있습니다.</div>
+											</li>
+											<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+												<div class="wcms-list-contents">
+													하나카드는 가명정보를 제3자에게 제공하는 경우, 업무 처리 모걱에 필요한 최소한의 가명정보를 제공합니다. 이 경우 가명정보 재식별 금지, 가명정보 및 추가정보의 분리 보관, 임직원 교육 등 안정성 확보를 위한 준수사항이 반영된 계약서를 사용하여 계약을 체결하고 있습니다.<br />
+													<a href="javascript:goLinkWeb('/MKPROV1050M.web');" class="wcms-button type-inline type-line type-light-gray wcms-margin-small"><span class="wcms-button-text">제 3자정보제공 현황</span></a>
+													<!-- href="CC_policy_p005" -->
+												</div>
+											</li>
+											<li class="wcms-list-item wcms-color-gray" data-symbol="5.">
+												<div class="wcms-list-contents">
+													하나카드는 가명정보 처리 업무를 위탁하는 경우, 고객님이 쉽게 확인할 수 있도록 홈페이지에 공개합니다. 위탁하는 업무의 내용이나 수탁자가 변경된 경우에는 홈페이지를 통하여 고객에게 알려드립니다. 위탁계약 시 위탁 목적 외 가명처리 금지,재식별 금지 등 안전한 관리를 위해 필요한 준수사항이 반영된 계약을 체결하고 있으며, 수탁자가 안전하게 가명정보를 처리하고 있는지에 대해 관리·감독 및 교육을 실시하고 있습니다.<br />
+													<a href="javascript:goLinkWeb('/MKPROV1060M.web');" class="wcms-button type-inline type-line type-light-gray wcms-margin-small"><span class="wcms-button-text">업무위탁 현황</span></a>
+													<!-- href="CC_policy_p006" -->
+												</div>
+											</li>
+											<li class="wcms-list-item wcms-color-gray" data-symbol="6.">
+												<div class="wcms-list-contents">하나카드는 가명정보 처리 시마다 『신용정보의 종류 및 이용목적』의 개인정보 중에서 이용 목적에 필요한 최소한의 항목을 가명처리하고 있습니다.</div>
+											</li>
+											<li class="wcms-list-item wcms-color-gray" data-symbol="7.">
+												<div class="wcms-list-contents">
+													<div class="wcms-margin-small"> 하나카드는 가명정보의 안정한 이용 및 보호를 위해 다음의 사항을 준수하고 있습니다.</div>
+													<ul class="wcms-list">
+														<li class="wcms-list-item" data-symbol="가.">
+															<div class="wcms-list-contents">가명정보, 추가정보의 안전한 관리을 위한 내부관리 계획 수립·운영</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="나.">
+															<div class="wcms-list-contents">가명정보와 추가정보는 별도 분리 보관</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="다.">
+															<div class="wcms-list-contents">
+																가명정보 및 추가정보에 접근할 수 있는 권한자 지정 및 최소화, 인사이동 발생 시 지체없이 권한 변경/말소, 필요한 접근 통제 조치 적용, 접근권한 부여/변경 등 기록을 최소 3년간 보관
+															</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="라.">
+															<div class="wcms-list-contents">가명정보처리자에 대해 연 1회 이상 교육 실시</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="마.">
+															<div class="wcms-list-contents">가명정보 처리 기록 작성 및 그 기록을 최소 3년간 보관</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="바.">
+															<div class="wcms-list-contents">
+																가명정보의 재식별 금지하고 있으며, 가명정보 처리 과정에 재식별을 하게 된 경우 즉시 개인정보 보호책임자 및 관리부서에 통지하고 해당 정보를 즉시 삭제
+															</div>
+														</li>
+														<li class="wcms-list-item" data-symbol="사.">
+															<div class="wcms-list-contents">기타 법규 상 필요한 안전성 확보 조치 </div>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ol>
+									</section>
+				
+									<!-- 신용정보주체의 권리와 그 행사방법 -->
+									<section class="wcms-section">
+										<h2 class="wcms-title-small">신용정보주체의 권리와 그 행사방법</h2>
+										<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+											고객은 신용정보의 제공 및 이용 동의를 철회할 수 있으며, 신용정보 제공사실의 통보, 신용정보의 열람 및 정정청구, 금융거래 거절근거 신용정보의 고지 등의 권리를 요구할 수 있습니다.
+										</p>
+										<a href="javascript:goLinkWeb('/MKPROV1060M.web');" class="wcms-button type-inline type-line type-light-gray"><span class="wcms-button-text">고객권리 안내문</span></a>
+										<!-- href="CC_policy_p006" -->
+									</section>
+				
+									<!-- 신용정보 관리·보호인 및 고충 처리부서 -->
+									<section class="wcms-section">
+										<h2 class="wcms-title-small">신용정보 관리·보호인 및 고충 처리부서</h2>
+										<div class="wcms-table">
+											<div class="wcms-table-inner">
+												<table>
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption>
+														신용정보 관리·보호인 및 고충 처리부서 안내 표입니다.
+													</caption>
+													<colgroup>
+														<col style="width: 35%" />
+														<col />
+														<col />
+													</colgroup>
+													<tbody>
+														<tr>
+															<th>
+																신용정보관리·보호인
+															</th>
+															<th>
+																신용정보관리·보호 담당자
+															</th>
+															<th>
+																신용정보보호<br />고충처리<br />(민원처리센터)
+															</th>
+														</tr>
+														<tr>
+															<td>
+																<ul class="wcms-list">
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">소속 : CISO</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">성명 : 김영수 상무</div>
+																	</li>
+																</ul>
+															</td>
+															<td>
+																<ul class="wcms-list">
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">소속 : 개인정보보호섹션</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">성명 : 안지형 차장</div>
+																	</li>
+																	<li class="wcms-list-item type-dot">
+																		<div class="wcms-list-contents">전화 : <a href="02-6399-4742" class="wcms-color-black">02-6399-4742</a></div>
+																	</li>
+																</ul>
+															</td>
+															<td>
+																하나카드 고객센터<br>전화번호 : <a href="1800-1111" class="wcms-color-black">1800-1111</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</section>
+								</section>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">장기카드대출</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">장기카드대출<span class="page-title-info">카드론</span></h2>
+
+						<div class="page-info">
+							<p class="page-info-text">목돈이 필요할 때 간편하게 신청해보세요.</p>
+						</div>
+
+						<!-- Case : 미로그인, 로그인(신청 불가 고객) -->
+						<div class="total-box margin-top-35">
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">이용시간</dt>
+								<dd class="total-box-val">
+									<span class="color-primary">365</span><span class="total-box-unit type-center">일</span><span class="color-primary">24</span><span class="total-box-unit">시간</span>
+								</dd>
+							</dl>
+							<dl class="total-box-item">
+								<dt class="total-box-key">수수료</dt>
+								<dd class="total-box-val">취급/중도수수료 없음</dd>
+							</dl>
+						</div>
+
+						<div class="form-bottom margin-top-25">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary">카드대금결제 신청</a>
+									</li>
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary">계좌 입금 신청</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //Case : 미로그인, 로그인(신청 불가 고객) -->
+
+						<!-- Case : 로그인(동의) -->
+						<div class="total-box margin-top-35">
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">이용가능금액</dt>
+								<dd class="total-box-val"><span class="color-primary">2,500</span><span class="total-box-unit">만원</span></dd>
+							</dl>
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">이자율</dt>
+								<dd class="total-box-val">6.9<span class="total-box-unit">%</span></dd>
+							</dl>
+						</div>
+
+						<ul class="info-list margin-top-15">
+							<li class="info-item">이자율은 대출기간에 따라 변동될 수 있습니다.</li>
+						</ul>
+
+						<div class="form-bottom margin-top-25">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary">카드대금결제 신청</a>
+									</li>
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary">계좌 입금 신청</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //Case : 로그인(동의) -->
+
+						<!-- Case : 로그인(동의) - 할인 대상자 -->
+						<div class="total-box margin-top-35">
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">이용가능금액</dt>
+								<dd class="total-box-val"><span class="color-primary">2,500</span><span class="total-box-unit">만원</span></dd>
+							</dl>
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">
+									이자율<br />
+									<span class="ui-badge type-point">할인대상</span>
+								</dt>
+								<dd class="total-box-val">
+									<!-- 22.07.11 취소선 추가 -->
+									<del class="del-text color-blur-more">14.77<span class="total-box-unit">%</span></del><br />
+									<span class="ui-arrow-change"><span class="for-a11y">→</span></span
+									><span class="color-primary">6.9</span><span class="total-box-unit">%</span>
+								</dd>
+							</dl>
+						</div>
+
+						<ul class="info-list margin-top-15">
+							<li class="info-item">이자율은 대출기간에 따라 변동될 수 있습니다.</li>
+						</ul>
+
+						<div class="form-bottom margin-top-25">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary">카드대금결제 신청</a>
+									</li>
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary">계좌 입금 신청</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //Case : 로그인(동의) - 할인 대상자 -->
+
+						<!-- Case : 로그인(동의) - 카드론 한도 30미만 -->
+						<div class="form-bottom margin-top-35">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-secondary">제휴대출상품안내</a>
+									</li>
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary">계좌 입금 신청</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //Case : 로그인(동의) - 카드론 한도 30미만 -->
+
+						<!-- Case : 로그인(미동의) -->
+						<div class="total-box margin-top-35">
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">최대 금액</dt>
+								<dd class="total-box-val"><span class="color-primary">30,000</span><span class="total-box-unit">만원</span></dd>
+							</dl>
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">최저 이자율</dt>
+								<dd class="total-box-val"><span class="color-primary">6.9</span><span class="total-box-unit">%</span></dd>
+							</dl>
+						</div>
+
+						<div class="link-item type-none type-flex type-no-line type-height-auto margin-top-35">
+							<p class="item-text">이용동의 후 정보 확인이 가능합니다.</p>
+							<div class="empty-buttons">
+								<div class="empty-buttons-list">
+									<div class="empty-buttons-item">
+										<a href="" class="ui-badge color-basic empty-button">이용동의 신청</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //Case : 로그인(미동의) -->
+
+						<div class="page-section-group">
+							<div class="menu-banner-area">
+								<ul class="menu-banner-list">
+									<li class="menu-banner-item">
+										<a href="" class="menu-banner-link" role="button">
+											<span class="menu-banner-icon type-01"></span>
+											대출<br />미리보기
+										</a>
+									</li>
+									<li class="menu-banner-item">
+										<a href="" class="menu-banner-link" role="button">
+											<span class="menu-banner-icon type-32"></span>
+											카드대금결제<br />신청
+										</a>
+									</li>
+									<li class="menu-banner-item">
+										<a href="" class="menu-banner-link" role="button">
+											<span class="menu-banner-icon type-02"></span>
+											이용내역
+										</a>
+									</li>
+									<li class="menu-banner-item">
+										<a href="" class="menu-banner-link" role="button">
+											<span class="menu-banner-icon type-03"></span>
+											이용안내
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									꼭 확인해 주세요!
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">상품 이용 전 상품설명서 및 약관을 반드시 확인하시기 바랍니다.</li>
+										<li class="info-item">대출시점의 개인신용평점 변경동의 사유로 신청이 제한되거나 대출이 제한될 수 있습니다.</li>
+										<li class="info-item">장기카드대출(카드론) 신청 후에는 상환방식을 변경할 수 없으며, 최초 이용 시 300만원 이상 신청하실 경우 2시간 후 지연 입금됩니다.</li>
+										<li class="info-item">
+											카드이용대금(분할상환금등) 과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환해야하며, 매월 이자 납입일에 이자를 납부해야 합니다.(분할상환방법 : 원리금균등상환,
+											원금균등상환, 거치상환, 만기일시상환)
+										</li>
+										<li class="info-item">카드대금결제신청은 청구작업 완료 후 신청가능하며 결제대금으로 즉시 처리됩니다.</li>
+										<li class="info-item">대출기간에 따라 이용가능금액이 변동될 수 있습니다.</li>
+										<li class="info-item">금리인하요구권 및 대출계약 철회권에 대한 자세한 사항은 홈페이지에서 확인하시기 바랍니다.</li>
+										<li class="info-item">대출 만기시점에 만기연장을 원할 시 고객님의 신용상태, 대출금리 산정기준 등에 따라 만기연장이 불가능하거나 대출금리가 인상될 수 있습니다.</li>
+										<li class="info-item">금융소비자는 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있으며, 그 설명을 듣고 내용을 충분히 이해한 후 거래하시기 바랍니다.</li>
+										<li class="info-item">장기카드대출(카드론) 이자율 : 연 6.9%~19.95% (당사 내부 리스크등급에 따라 차등 적용)</li>
+										<li class="info-item color-basic">연체이자율(약정이율+최대 3%)은 회원별·이용상품별로 차등 적용되며, 법정 최고금리(20%)를 초과하지 않습니다.</li>
+										<li class="info-item color-wrong">상환능력에 비해 대출금이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</li>
+										<li class="info-item color-wrong">신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</li>
+										<li class="info-item color-wrong">일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</li>
+										<!-- 2022.01.21 문구 수정 -->
+										<li class="info-item type-presa">[여신금융협회 심의필 제 2021-L1h-05945호 (2021.07.07)]</li>
+										<!--// 2022.01.21 문구 수정 -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

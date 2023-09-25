@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-5{stroke:#2d3239;stroke-width:1.5px}.cls-10,.cls-5{fill:none}.cls-9{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_cardinfo" transform="translate(-252 -1081)">
+        <g id="사각형_13455" data-name="사각형 13455" style="stroke-width:1.5px;stroke:#2d3239;fill:#fff">
+            <path class="cls-9" d="M5 0h11a8 8 0 0 1 8 8v17a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" transform="translate(262 1087.5)"/>
+            <path class="cls-10" d="M5 .75h11A7.25 7.25 0 0 1 23.25 8v17A4.25 4.25 0 0 1 19 29.25H5A4.25 4.25 0 0 1 .75 25V5A4.25 4.25 0 0 1 5 .75z" transform="translate(262 1087.5)"/>
+        </g>
+        <g id="교차_10" data-name="교차 10" style="fill:none">
+            <path class="cls-9" d="M4.52 7.21a4 4 0 0 1-4-4v-4a8 8 0 0 1 8 8z" transform="translate(277.48 1088.291)"/>
+            <path d="M6.845 5.71A6.522 6.522 0 0 0 2.019.884V3.21c0 1.38 1.122 2.5 2.5 2.5h2.326m1.674 1.5h-4a4 4 0 0 1-4-4l.001-4a8 8 0 0 1 8 8z" style="fill:#2d3239;stroke:none" transform="translate(277.48 1088.291)"/>
+        </g>
+        <g id="사각형_13452" data-name="사각형 13452" transform="rotate(90 -413.5 687.5)" style="fill:none;stroke:#2d3239">
+            <rect class="cls-9" width="1.5" height="8" rx=".75"/>
+            <rect class="cls-10" x=".5" y=".5" width=".5" height="7" rx=".25"/>
+        </g>
+        <g id="사각형_13454" data-name="사각형 13454" class="cls-5" transform="translate(266.5 1092.5)">
+            <rect class="cls-9" width="7" height="7" rx="3.5"/>
+            <rect class="cls-10" x=".75" y=".75" width="5.5" height="5.5" rx="2.75"/>
+        </g>
+        <circle id="타원_1815" data-name="타원 1815" cx="4.75" cy="4.75" r="4.75" transform="translate(281.027 1104.807)" style="fill:#fff"/>
+        <circle id="타원_1814" data-name="타원 1814" cx="5.25" cy="5.25" r="5.25" transform="translate(281.499 1104.807)" style="fill:#7dedf3"/>
+        <g id="타원_1813" data-name="타원 1813" class="cls-5" transform="translate(278.527 1103.557)">
+            <circle class="cls-9" cx="6" cy="6" r="6"/>
+            <circle class="cls-10" cx="6" cy="6" r="5.25"/>
+        </g>
+        <g id="사각형_13785" data-name="사각형 13785" transform="rotate(-45 1488.114 210.692)" style="stroke:#2d3239;fill:#fff">
+            <rect class="cls-9" width="1.5" height="5" rx=".75"/>
+            <rect class="cls-10" x=".5" y=".5" width=".5" height="4" rx=".25"/>
+        </g>
+    </g>
+</svg>

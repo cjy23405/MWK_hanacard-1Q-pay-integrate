@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <rect data-name="사각형 17890" width="6" height="1.5" rx=".75" transform="translate(8.934 16.32)" style="fill:#2d3239"/>
+    <rect data-name="사각형 17891" width="10" height="1.5" rx=".75" transform="translate(6.967 22.32)" style="fill:#2d3239"/>
+    <rect data-name="사각형 17895" width="12" height="1.5" rx=".75" transform="translate(3 28.32)" style="fill:#2d3239"/>
+    <rect data-name="사각형 17924" width="10" height="1.5" rx=".75" transform="translate(6.066 34.32)" style="fill:#2d3239"/>
+    <g data-name="사각형 17898" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+        <path d="M5 0h14a8 8 0 0 1 8 8v21a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" style="stroke:none" transform="translate(17.998 9)"/>
+        <path d="M5 .75h14A7.25 7.25 0 0 1 26.25 8v21A4.25 4.25 0 0 1 22 33.25H5A4.25 4.25 0 0 1 .75 29V5A4.25 4.25 0 0 1 5 .75z" style="fill:none" transform="translate(17.998 9)"/>
+    </g>
+    <g data-name="교차 40" style="fill:none">
+        <path d="M4 9a4 4 0 0 1-4-4V0h1a8 8 0 0 1 8 8v1z" style="stroke:none" transform="translate(35.998 9)"/>
+        <path d="M7.483 7.5A6.51 6.51 0 0 0 1.5 1.519V5C1.5 6.38 2.622 7.5 4 7.5h3.482M9.002 9H4a4 4 0 0 1-4-4V0h1a8 8 0 0 1 8 8v1z" style="fill:#2d3239;stroke:none" transform="translate(35.998 9)"/>
+    </g>
+    <rect data-name="사각형 17923" width="11" height="1.5" rx=".75" transform="translate(23.832 32)" style="fill:#2d3239"/>
+    <rect data-name="사각형 17894" width="11" height="1.5" rx=".75" transform="translate(23.867 36)" style="fill:#2d3239"/>
+    <g data-name="그룹 14338">
+        <path data-name="패스 12908" d="M5.3 0A5.3 5.3 0 1 1 0 5.3 5.3 5.3 0 0 1 5.3 0z" transform="translate(25.5 17.6)" style="fill:#7dedf3"/>
+        <g data-name="타원 2136" transform="translate(23 16.57)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+            <circle cx="6.057" cy="6.057" r="6.057" style="stroke:none"/>
+            <circle cx="6.057" cy="6.057" r="5.307" style="fill:none"/>
+        </g>
+        <path data-name="패스 12909" d="m-10169.5 5362.015 1.606 1.514 2.936-3.029" transform="translate(10196.221 -5339.387)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+    </g>
+</svg>

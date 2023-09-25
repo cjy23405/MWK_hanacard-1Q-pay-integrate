@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-card-register-agreement">약관 상세</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 카드등록 약관동의 -->
+			<div class="layer-wrap layer-wrap--full layer-clause-detail" data-layer="layer-card-register-agreement">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="for-a11y">약관 상세</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="wcms-data">
+									<section class="clause-data">
+										<h1 class="wcms-title-large">
+											해외매장결제 이용안내에<br />
+											동의해 주세요.
+										</h1>
+										<ul class="wcms-list wcms-size-small wcms-weight-light wcms-margin-large">
+											<li class="wcms-list-item type-dot wcms-color-gray">
+												<div class="wcms-list-contents">
+													원큐페이 해외매장결제 이용에 동의하시면, 해외에서 브랜드사 NFC결제 지원 가맹점에서 비접촉결제 가능합니다. (브랜드사 인증 공식단말기에 한함)
+												</div>
+											</li>
+											<li class="wcms-list-item type-dot wcms-color-gray">
+												<div class="wcms-list-contents">휴대폰 설정 중 ‘NFC설정’을 사용으로 설정하시고, ‘모바일결제’ 메뉴에서 ‘원큐페이 앱’을 선택하셔야 결제 이용 가능합니다.</div>
+											</li>
+											<li class="wcms-list-item type-dot wcms-color-gray">
+												<div class="wcms-list-contents">원큐페이 해외매장결제 등록한 브랜드카드로 결제 이용 가능합니다. 지원 가능 브랜드사 : Visa, mastercard</div>
+											</li>
+											<li class="wcms-list-item type-dot wcms-color-gray">
+												<div class="wcms-list-contents">
+													해외 대중교통 모바일 결제 시, 거래 당일이용건에 대해 합산하여 익일 새벽 승인요청됩니다. (사업자에 따라 승인요청시간이 다를 수 있습니다.)<br />
+													따라서 거래이용 시간과 승인시간이 다르며, 개별이용금액과 합산승인요청금액이 상이함을 양해부탁드립니다.<br />
+													상세 교통 이용내역은 해당 해외 교통 사업자 홈페이지에서 조회 가능합니다.
+												</div>
+											</li>
+											<li class="wcms-list-item type-dot wcms-color-gray">
+												<div class="wcms-list-contents">NFC결제 시, 가맹점에서 본인확인을 위해 카드 비밀번호를 요구할 수 있습니다.</div>
+											</li>
+											<li class="wcms-list-item type-dot wcms-color-gray">
+												<div class="wcms-list-contents">휴대폰 분실 시 부정거래 방지를 위해 반드시 하나카드 고객센터로 분실신고를 해주시기 바랍니다.</div>
+											</li>
+										</ul>
+										<!-- 2022.05.04 : mod : alt 값 변경 -->
+										<img src="./assets/images/contents/clause/abroad-pay-img.png" alt="브랜드사 Contactless 인증 단말기에 터치하시면 결제가 진행됩니다." class="wcms-image wcms-margin-regular" />
+										<p class="wcms-text wcms-size-small wcms-align-center">
+											브랜드사 Contactless 인증 단말기에 터치하시면<br />
+											결제가 진행됩니다.
+										</p>
+										<p class="wcms-info wcms-margin-large">[동의] 버튼을 누르시면 해외매장결제 카드 등록이 완료됩니다.</p>
+									</section>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button" data-role="layerClose">미동의</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">동의</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 카드등록 약관동의 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-card-register-agreement');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

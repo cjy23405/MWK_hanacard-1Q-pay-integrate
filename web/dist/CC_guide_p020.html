@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">체크카드 해외이용</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section">
+							<h2 class="page-title">체크카드 해외 이용 안내</h2>
+							<ul class="info-list">
+								<li class="info-item type-medium color-basic">전 세계 해당 브랜드 가맹점에서 국내와 동일한 방법으로 사용할 수 있습니다. (인터넷 사이트 포함)</li>
+								<li class="info-item type-medium color-basic">VISA/Plus, mastercard/Cirrus/Maestro, Amex, UPI 로고가 부착되어 있는 전세계 글로벌 ATM에서 현지 통화로 인출할 수 있습니다.</li>
+								<li class="info-item type-medium color-basic">제 3국 통화(KRW거래포함)는 미국달러로 환산되어 적용됩니다.</li>
+								<li class="info-item type-medium color-basic">
+									해외 가맹점에서 원화로 결제할 경우(DCC) 추가수수료가 발생하므로 현지 통화 또는 미화로 거래하시기 바랍니다. (단, 해외 ATM 현금인출(예금인출) 시 현지 통화로 거래해야 함)
+								</li>
+								<li class="info-item type-medium color-basic">
+									해외원화결제서비스(DCC) 사전차단 서비스 이용 방법
+									<ul class="info-list margin-top-10">
+										<li class="info-item type-hyphen color-basic">콜센터, 홈페이지/모바일App(마이페이지>이용안심서비스>해외원화결제(DCC) 차단서비스)</li>
+									</ul>
+								</li>
+								<li class="info-item type-medium color-basic">
+									계좌의 잔액부족(무승인매임, 매입금액이 승인금액을 초과한 경우 등)으로 출금되지 않을 경우 결제일까지 매 영업일 출금 시도를 하며, 결제일까지 최종 미출금 시에는 연체 전환되오니
+									주의하시기 바랍니다.
+								</li>
+								<li class="info-item type-medium color-basic">해외에서 카드 분실 시 반드시 하나카드 고객센터(+82-1800-1111)로 연락하여 주시기 바랍니다.</li>
+							</ul>
+						</div>
+						<div class="page-section type-line">
+							<h2 class="page-title">체크카드 해외 시 청구 금액</h2>
+
+							<ul class="info-list type-inherit type-outside margin-top-10 default-text">
+								<li class="info-item type-indent type-side-no-padding font-weight-light">
+									<span class="indent">①</span>
+									<div class="indent-block">
+										결제은행이 하나은행인 경우, 해외 이용 시(해외사이트 거래포함) 미화 (USD) 기준 거래 금액에 카드 승인시점의 하나은행이 고시한 전신환매도율을 적용한 금액으로 카드승인일에 회원의
+										계좌잔액에서 지급정지 되고, 이 후 매출표가 접수되면 지급정지금액 계산시와 동일한 방법으로 산정된 미화(USD) 금액에 접수일의 하나은행 최초고시 전신환매도율을 적용한 원화금액으로
+										회원의 계좌에서 출금됩니다. <br />
+										단, 1회 승인금액 100만원 이상의 거래(단, T&E 업종 제외), 또는 카드사가 정한 특정 브랜드 (BC등) 및 상품의 카드이용대금은 미화(USD) 기준 거래 금액에 카드승인시점의 하나은행이 고시한
+										전신환매도율을 적용한 원화금액으로 회원의 계좌잔액에서 즉시 인출됩니다.
+										<ul class="info-list type-inherit type-outside margin-top-10 default-text">
+											<li class="info-item type-presa margin-top-10 color-blur font-weight-regular">T&E 업종 : Travel and Entertainment 업종, 여행과 여가 관련 업종(항공, 호텔, 숙박, 렌터카 등)</li>
+										</ul>
+									</div>
+								</li>
+								<li class="info-item type-indent type-side-no-padding font-weight-light">
+									<span class="indent">②</span>
+									결제은행이 국민/기업/농협/신한/우리/SC제일은행인 경우 T&E 업종은 승인 거래가 불가하며, 1회 승인금액과 상관없이 회원의 계좌잔액에서 즉시 인출됩니다.
+								</li>
+								<li class="info-item type-indent type-side-no-padding font-weight-light">
+									<span class="indent">③</span>
+									①~②의 인출금액에는 국제브랜드사가 부과하는 국제브랜드수수료 (VISA 1.0% 혹은 1.1%, mastercard 1.0%, Amex 1.4%, UPI 0.6% 혹은 0.8%)와 하나카드가 부과하는 해외서비스수수료(US$0.5)가
+									포함됩니다.
+								</li>
+							</ul>
+							<div class="line-box-info margin-top-15">
+								<h3 class="default-text font-weight-bold">해외 이용 시 청구금액 산출방법</h3>
+								<ul class="info-list margin-top-10">
+									<li class="info-item color-basic">해외 이용 시 청구금액 = (거래미화금액 X 전신환 매도율1) + 국제브랜드수수료2 + 해외서비스수수료3</li>
+									<li class="info-item type-indent color-basic">
+										<span class="indent">1.</span>
+										<div class="indent-block">
+											전신환 매도율<br />
+											접수일의 하나은행 최초고시 전신환매도율 단, 즉시인출은 승인시점의 하나은행 전신환매도율
+										</div>
+									</li>
+									<li class="info-item type-indent color-basic">
+										<span class="indent">2.</span>
+										<div class="indent-block">국제브랜드수수료 = (거래미화금액 X 국게브랜드 이용수수료율) X 전신환 매도율</div>
+									</li>
+									<li class="info-item type-indent color-basic">
+										<span class="indent">3.</span>
+										<div class="indent-block">해외서비스수수료 = (거래건수 X US$0.5) X 전신환매도율</div>
+									</li>
+								</ul>
+							</div>
+							<p class="ui-notice margin-top-15">상품별 해외이용 수수료 우대 및 면제 사항은 상품설명서 및 약관을 확인하시기 바랍니다</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

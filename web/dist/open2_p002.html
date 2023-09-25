@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<!-- 2022.02.17 텍스트 수정 -->
+							<h1 class="header-title">송금</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<!-- 2022.02.21 : mod : 텍스트 수정 -->
+						<h2 class="page-title">
+							<span class="title-step">STEP 1</span>
+							어느 계좌에서 얼마를 보낼까요?
+						</h2>
+						<!--// 2022.02.21 : mod : 텍스트 수정 -->
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 2단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="page-section">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<!-- 2022.02.21 : mod : 텍스트 수정 -->
+										<strong class="title">어느 계좌에서 보낼까요?</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block">
+											<button type="button" class="ui-button ui-select" title="출금계좌 선택">
+												<span class="form-flex">
+													<span class="form-flex-cell">
+														<!-- 2022.02.21 : mod : 텍스트 수정 -->
+														<span class="display-block medium-text color-blur">신한은행</span>
+													</span>
+													<span class="form-flex-cell type-flexible">
+														<span class="display-block medium-text ellipsis">011020112341311</span>
+													</span>
+												</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<!-- 2022.02.21 : mod : 텍스트 수정 -->
+										<strong class="title">얼마를 보낼까요?</strong>
+									</div>
+									<div class="form-group">
+										<!-- 2022.02.21 : mod : 구조 수정 -->
+										<div class="form-flex type-narrow">
+											<div class="form-flex-cell type-flexible type-has-unit">
+												<div class="ui-input-block is-disabled">
+													<input type="number" pattern="\d*" class="ui-input align-right" title="보낼금액 입력" placeholder="금액 입력" />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<span class="medium-text">원</span>
+											</div>
+										</div>
+										<!--// 2022.02.21 : mod : 구조 수정 -->
+
+										<div class="ui-radio-group type-panel margin-top-15">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" checked />
+												<label for="radioPanel1-1" class="ui-label">
+													<span class="ui-label-text">+1만원</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" />
+												<label for="radioPanel1-2" class="ui-label">
+													<span class="ui-label-text">+5만원</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-3" />
+												<label for="radioPanel1-3" class="ui-label">
+													<span class="ui-label-text">+10만원</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-4" />
+												<label for="radioPanel1-4" class="ui-label">
+													<span class="ui-label-text">+100만원</span>
+												</label>
+											</div>
+										</div>
+										<div class="default-text color-blur margin-top-15">출금 가능 잔액 : 1,000,000 원</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="use-notice-area js-ui-accordion">
+								<div class="use-notice-item js-ui-accordion__item">
+									<button type="button" class="use-notice-opener js-ui-accordion__opener">
+										꼭 확인해 주세요!
+										<span class="for-a11y">
+											상세 내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+									<div class="use-notice-contents js-ui-accordion__layer">
+										<!-- 2022.02.21 : mod : 텍스트 변경 -->
+										<ul class="info-list">
+											<li class="info-item">오픈뱅킹을 이용한 송금 시 전 금융기관 합산하여 1일 1천만원까지 출금/송금이 가능합니다.</li>
+											<li class="info-item">송금서비스 운영 시간은 '연중무휴 01:00~23:00' 이며, 오픈뱅킹 참가 및 입금은행의 서비스 시간에 따라 제한될 수 있습니다.</li>
+											<li class="info-item">내 계좌 (오픈뱅킹) 참가 및 입금은행이 아닌 경우 송금이 불가능합니다.</li>
+											<li class="info-item">
+												보이스피싱 피해 주의 : 수사기관/공공기관이라며 전화로 출금 및 송금을 요구받거나 신용등급을 올려야 한다며 송금을 요구받는 등 피해가 발생할 경우 국번없이 112(경찰청)으로 지급정지
+												및 피해신고를 하시기 바랍니다.
+											</li>
+										</ul>
+										<!--// 2022.02.21 : mod : 텍스트 변경 -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">다음</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

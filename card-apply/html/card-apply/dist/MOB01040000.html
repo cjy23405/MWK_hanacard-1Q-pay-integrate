@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- progress bar -->
+					<div class="fixed-step">
+						<div class="step-box" role="img" aria-label="총 14단계 중 1단계">
+							<span class="step-bar" style="width: 20%"></span>
+						</div>
+					</div>
+					<!-- //progress bar -->
+
+					<div class="page-contents">
+						<!-- 2022.08.12 margin-bottom-10 클래스 추가 -->
+						<!-- 2022.08.18 : mod : 문구수정 -->
+						<h2 class="page-contents-title margin-bottom-10">
+							휴대폰번호만 알려주시면<br />
+							상담사가 빠르게 도와드릴게요.
+						</h2>
+						<!-- 2022.08.12 추가 -->
+						<p class="page-contents-info">입력한 휴대폰번호로 상담사가 곧 연락드립니다.</p>
+
+						<div class="ui-form">
+							<dl class="ui-form-list">
+								<div class="ui-form-item">
+									<!-- 2022.08.18 : mod : 띄어쓰기 수정 -->
+									<dt class="ui-form-key" data-focus-input="tel">휴대폰번호</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="in-input-block">
+													<!-- 2022.08.24 : mod : 문구 수정 -->
+													<input type="number" pattern="\d*" class="in-input" title="휴대폰번호 입력" placeholder="- 제외하고 입력" data-focus-input-target="tel" />
+												</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- 2022.08.24 : del : 에러 케이스 삭제 $('input').uiFormInvalid(true, '에러 메세지'); 함수 이용해주세요. (컴포넌트 가이드 참고)
+								<div class="ui-form-item is-invalid">
+									<dt class="ui-form-key" data-focus-input="tel">휴대폰번호</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="in-input-block is-invalid">
+													<input type="number" pattern="\d*" class="in-input" title="휴대폰번호 입력" placeholder="‘-’ 제외하고 입력" value="12345678" data-focus-input-target="tel" />
+												</div>
+												<p class="ui-form-invalid-message" aria-role="alert" aria-live="assertive">10자리 이상 입력해주세요.</p>
+											</div>
+										</div>
+									</dd>
+								</div>
+								 -->
+							</dl>
+
+							<div class="terms-area">
+								<div class="terms-item">
+									<div class="ui-form-check-block type-large type-align-top">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" data-checkbox-group-child="selectCheckbox" data-checkbox-group="selectCheckbox1-1" />
+										<label for="selectCheckbox1-1" class="ui-label">
+											<span class="ui-check-object"></span>
+											<span class="ui-label-text">개인(신용)정보 수집/이용에 대한 동의</span>
+										</label>
+										<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-guide-area js-ui-accordion">
+							<div class="use-guide-item js-ui-accordion__item">
+								<button type="button" class="use-guide-opener js-ui-accordion__opener">
+									확인해주세요
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-guide-contents js-ui-accordion__layer">
+									<!-- 2022.08.18 : mod : 문구수정 -->
+									<!-- 2022.08.12 태그 변경 div -> ul -->
+									<ul class="info-list">
+										<li class="info-item">전화상담 시 상담사가 카드발급을 위한 추가정보를 요청드립니다.</li>
+										<li class="info-item">입력한 휴대폰번호는 전화상담 목적 외에는 사용하지 않습니다.</li>
+										<li class="info-item">자세한 내용은 인터넷 카드신청 콜센터(1599-1118)로 문의해주세요.</li>
+										<li class="info-item">상담시간: 평일 09:00~18:00(이 외 시간 ARS 접수)</li>
+									</ul>
+									<!-- //2022.08.18 : mod : 문구수정 -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 2022.08.31 : mod : .page-buttons에 .type-fixed.type-no-line 클래스 추가 -->
+					<div class="page-buttons type-fixed type-no-line">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item type-narrow">
+									<a href="" class="ui-basic-button" role="button">다음에</a>
+								</li>
+								<!-- 2022.08.18 : mod : button 태그로 변경 -->
+								<!-- DD : 모든 필수값 입력됐을 경우 활성화 disabled 삭제 -->
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary" disabled>카드 간편신청하기</button>
+								</li>
+								<!-- //DD : 모든 필수값 입력됐을 경우 활성화 disabled 삭제 -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-notify-detaile">알림함 상세</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 알림함 상세 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-notify-detaile">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<div class="form-flex type-narrow">
+									<div class="form-flex-cell">
+										<span class="status-tag type-small type-secondary">혜택</span>
+									</div>
+									<div class="form-flex-cell type-flexible">
+										<h2 class="header__title">코웨이 렌탈 신청 고객</h2>
+									</div>
+								</div>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="margin-bottom-25">
+									<!-- 2022.04.27 : mod : alt 값 변경 -->
+									<img src="./assets/images/_dummy/image.png" alt="이미지 설명 넣어주세요." class="image-only" />
+								</div>
+
+								<div class="basic-text font-weight-light">가정의 달을 맞이하여 KT 스마트폰 신규 개통 고객에게 최대 30만 하나머니 적립과 함께 특별 사은품을 증정합니다.</div>
+
+								<section class="page-section margin-top-25">
+									<div class="section-title">
+										<h2 class="title">기간</h2>
+									</div>
+									<p class="basic-text color-blur">2021/08/01 ~ 2021/08/31</p>
+								</section>
+
+								<section class="page-section margin-top-25">
+									<div class="section-title">
+										<h2 class="title">대상</h2>
+									</div>
+									<p class="basic-text color-blur">
+										해당 문자 수신 고객 중, 연결된 이벤트페이지에서 KT 휴대폰을 개통하고 하나카드로 이동통신요금을 자동납부 신청한 고객<br />
+										*하나 신용/체크카드 본인 고객(법인/선불카드 제외)
+									</p>
+								</section>
+
+								<section class="page-section margin-top-25">
+									<div class="section-title">
+										<h2 class="title">혜택</h2>
+									</div>
+									<p class="basic-text color-blur">최대 30만 하나머니 적립 & 특별 사은품 증정</p>
+									<p class="basic-text font-weight-light margin-top-25">*사은품은 제휴사에 제공하며, 개통 후 1주일 내 제공됩니다.</p>
+								</section>
+
+								<div class="link-row margin-top-35">
+									<a href="" class="ui-arrow color-secondary">
+										<span class="default-text">이벤트 보러가기</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 알림함 상세 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-notify-detaile');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

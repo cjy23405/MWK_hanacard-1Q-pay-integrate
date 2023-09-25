@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-change-phone-number">휴대폰번호 변경</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-input-KCB">KCB 정보 자동입력</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 휴대폰번호 변경 -->
+			<div class="layer-wrap layer-wrap--full" data-layer="layer-change-phone-number">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">휴대폰번호 변경</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-select-multiple-list">
+									<div class="ui-select-multiple-item type-all">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox1-all" data-checkbox-group="termsCheckbox1" />
+											<label for="termsCheckbox1-all" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">전체 동의</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox1-1" data-checkbox-group-child="termsCheckbox1" />
+											<label for="termsCheckbox1-1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">개인(신용)정보 수집 및 이용 (필수)</span>
+											</label>
+											<button type="button" class="ui-arrow-button">
+												<span class="for-a11y">약관 상세 보기</span>
+											</button>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox1-2" data-checkbox-group-child="termsCheckbox1" />
+											<label for="termsCheckbox1-2" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">고유식별 정보처리 동의 (필수)</span>
+											</label>
+											<button type="button" class="ui-arrow-button">
+												<span class="for-a11y">약관 상세 보기</span>
+											</button>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox1-3" data-checkbox-group-child="termsCheckbox1" />
+											<label for="termsCheckbox1-3" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">통신사 이용약관 (필수)</span>
+											</label>
+											<button type="button" class="ui-arrow-button">
+												<span class="for-a11y">약관 상세 보기</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-list">
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">통신사 선택</strong>
+										</div>
+										<div class="form-group">
+											<div class="ui-select-block type-placeholder">
+												<button type="button" class="ui-button ui-select" title="통신사 선택" data-layer-open="layer-mobile-carrier">통신사 선택</button>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">휴대폰 번호</strong>
+										</div>
+										<div class="form-group type-phone">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="휴대폰 번호 입력" placeholder="‘-’ 제외하고 입력" />
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<button type="button" class="ui-button ui-basic-button type-small type-gray">인증번호 발송</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-item">
+										<div class="form-title">
+											<strong class="title">인증번호</strong>
+										</div>
+										<div class="form-group type-code">
+											<div class="form-flex">
+												<div class="form-flex-cell type-flexible">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input" title="인증번호 6자리 입력" placeholder="인증번호 6자리 입력" />
+														<span class="ui-timer">1분 30초</span>
+													</div>
+												</div>
+												<div class="form-flex-cell">
+													<button type="button" class="ui-button ui-basic-button type-small type-gray">시간연장</button>
+												</div>
+											</div>
+											<p class="ui-notice">본인 명의의 휴대전화로만 인증이 가능합니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">변경</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 휴대폰번호 변경 -->
+
+			<!-- layer: KCB 정보 자동입력 -->
+			<div class="layer-wrap layer-wrap--full" data-layer="layer-input-KCB">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">KCB 정보 자동입력</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="header">
+								<h3 class="header__title type-light">
+									직장/자택정보<br />
+									자동으로 입력하세요!
+								</h3>
+								<p class="header__text margin-top-15">
+									동의하신 개인(신용)조회 약관에 따라,<br />
+									신용평가사 (KCB) 정보를 활용하여 간편하게<br />
+									카드 신청이 가능합니다.
+								</p>
+							</div>
+							<div class="ui-layer__body-inner">
+								<div class="ui-select-multiple-list form-detail-list">
+									<div class="ui-select-multiple-item type-all">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox2-all" data-checkbox-group="termsCheckbox2" />
+											<label for="termsCheckbox2-all" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">전체선택</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox2-1" data-checkbox-group-child="termsCheckbox2" />
+											<label for="termsCheckbox2-1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text form-detail-item">
+													<span class="form-detail-title">자택주소</span>
+													<span class="form-detail-group">
+														서울 중구 을지로 66 하나금융그룹<br />
+														(을지로 2가 181)
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox2-2" data-checkbox-group-child="termsCheckbox2" />
+											<label for="termsCheckbox2-2" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text form-detail-item">
+													<span class="form-detail-title">직장명</span>
+													<span class="form-detail-group">하나카드</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox2-3" data-checkbox-group-child="termsCheckbox2" />
+											<label for="termsCheckbox2-3" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text form-detail-item">
+													<span class="form-detail-title">직장주소</span>
+													<span class="form-detail-group">
+														서울 중구 을지로 66 하나금융그룹<br />
+														(을지로 2가 181)
+													</span>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="termsCheckbox2-4" data-checkbox-group-child="termsCheckbox2" />
+											<label for="termsCheckbox2-4" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text form-detail-item">
+													<span class="form-detail-title">직장전화</span>
+													<span class="form-detail-group">070-0000-0000</span>
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="info-list margin-top-25">
+									<p class="info-item">현재 정보와 다를 경우, 다음 단계에서 직접 입력할 수 있습니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: KCB 정보 자동입력 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

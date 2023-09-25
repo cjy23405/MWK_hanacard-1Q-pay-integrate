@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">오토캐쉬백</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<p class="page-title">
+							자동차 일시불 결제 시<br />
+							캐쉬백 받는 방법!
+						</p>
+
+						<div class="ui-illust type-3"></div>
+
+						<div class="benefit">
+							<ul class="benefit-list">
+								<!-- 2022.05.30 : mod : type-align-top 클래스 값 추가 -->
+								<li class="benefit-item type-align-top">
+									<div class="benefit-info">
+										<h2 class="benefit-title">
+											캐쉬백 신청방식 따라<br />
+											1.0~1.5% 캐쉬백
+										</h2>
+										<!-- 2022.03.25 : mod : 문구 롤링 적용 -->
+										<p class="benefit-discription">
+											<span class="text-slide">
+												<!-- 2022.05.30 : add : .text-slide-controller 추가 -->
+												<span class="text-slide-controller"></span>
+												<!-- //2022.05.30 : add : .text-slide-controller 추가 -->
+												<span class="text-slide-list">
+													<span class="text-slide-item">선입금 방식 <span class="color-primary">1.50%</span></span>
+													<span class="text-slide-item">체크카드 방식 <span class="color-primary">1.00%</span></span>
+													<span class="text-slide-item">신용 방식 <span class="color-primary">1.00%</span></span>
+												</span>
+											</span>
+										</p>
+										<!-- //2022.03.25 : mod : 문구 롤링 적용 -->
+									</div>
+									<div class="benefit-icon type-4"></div>
+								</li>
+								<!-- 2022.05.30 : mod : type-align-top 클래스 값 추가 -->
+								<li class="benefit-item type-align-top">
+									<div class="benefit-info">
+										<h2 class="benefit-title">국산차 · 수입차 · 중고차 · 오토바이</h2>
+										<p class="benefit-discription"><span class="color-primary">전 차종</span> 이용</p>
+									</div>
+									<div class="benefit-icon type-5"></div>
+								</li>
+							</ul>
+						</div>
+
+						<div class="page-section-group">
+							<a href="" class="box-arrow-link">오토캐쉬백 안내</a>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									유의사항
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">오토캐쉬백 이용 고객의 경우 카드별 기본 서비스로 제공되는 포인트, 캐쉬백, 마일리지, 청구할인 등은 중복 적용되지 않습니다.</li>
+										<li class="info-item">
+											오토캐쉬백 서비스 이용 후 특별한도 기간 내 별도 신청없이 자동차 판매 업종에서 추가로 결제하시면 300만원 이상 결제건 1.0%, 300만원 미만 결제건 0.5% 캐쉬백이 적용됩니다.<br />
+											(단, 300만원 미만 결제건 중 체크방식은 제외)
+										</li>
+										<li class="info-item">선입금 방식의 경우, 특별한도는 입금 후 15일간 유지됩니다.</li>
+										<li class="info-item">차량 특별한도 이용 시 한도 범위 내에 자동결제가 가능하며 본인 이용한도와 합산하여 사용 불가합니다.</li>
+										<li class="info-item">신용방식 신청 시 본인 신용도에 따라 오토캐쉬백 서비스 이용이 제한될 수 있습니다.</li>
+										<li class="info-item">모바일카드 결제 시 자동차판매점에서 key-in 결제방식으로 처리됩니다. (단 수입차, 중고차, 오토바이 판매점 일부 제외)</li>
+										<li class="info-item">매출취소 시 캐쉬백 대상에서 제외되며 기지급된 캐쉬백은 환급금 지급 전 회수합니다.</li>
+										<li class="info-item">카드탈회 및 카드해지 시 캐쉬백 대상에서 제외됩니다.</li>
+										<li class="info-item">상기 서비스는 하나카드의 영업정책이나 제휴업체의 사정으로 변경 또는 중단될 수 있습니다.</li>
+										<li class="info-item">캐쉬백에 대한 자세한 상담은 오토서비스 고객센터 (1599-5955)로 문의해 주시기 바랍니다.</li>
+										<li class="info-item">
+											매출취소 시 오토서비스 고객센터 (1599-5955) 앞으로 환급 요청을 하셔야 환급이 가능하며, 매출 취소 후 재결제시에도 오토서비스 고객센터 (1599-5955) 앞으로 문의 후 진행하셔야 캐쉬백
+											지급이 가능합니다.
+										</li>
+										<li class="info-item">캐쉬백은 최대 3백만원까지 가능합니다.</li>
+										<li class="info-item">캐쉬백은 자동차결제 정상매입 기준으로 지급됩니다.</li>
+										<li class="info-item">신청채널 및 이용상품(결제금액/유형)에 따라 별도 캐쉬백율로 운영 됩니다.</li>
+										<li class="info-item">
+											<span class="color-basic">연체료율(약정이율+3%)은 회원별 ·이용상품별 차등 적용되며, 법정 최고금리(20%)를 초과하지 않습니다.</span>
+											<ul class="info-list type-child">
+												<li class="info-item type-presa">단, 연체 발생 시점에 약정이율이 없는 경우 아래와 같이 적용함</li>
+												<li class="info-item type-indent"><span class="indent">- </span>일시불거래 연체시 : 거래 발생 시점의 최소기간(2개월) 유이자 할부 금리</li>
+												<li class="info-item type-indent"><span class="indent">- </span>무이자 할부거래 연체시 : 거래 발생 시점의 동일한 할부계약 기간의 유이자 할부 금리</li>
+											</ul>
+										</li>
+										<li class="info-item color-basic">계약체결 전 상품설명서 및 상품약관을 반드시 확인하시기 바랍니다.</li>
+										<li class="info-item color-basic">신용카드 발급이 부적정한 경우(개인신용평점 낮음 등) 카드발급이 제한 될 수 있습니다.</li>
+										<li class="info-item color-basic">카드이용대금과 이에 수반되는 모든 수수료를 지정된 대금 결제일에 상환하여야 합니다.</li>
+										<li class="info-item color-basic">금융소비자는 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있습니다.</li>
+										<li class="info-item color-wrong">상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락 할 수 있습니다.</li>
+										<li class="info-item color-wrong">신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</li>
+										<li class="info-item color-wrong">일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</li>
+										<!-- 2022.03.10 문구 수정 -->
+										<li class="info-item type-presa">[준법심의 A-21-1599 (2021.10.01 ~ 2022.09.30)]</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button">전화상담신청</a>
+								</li>
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary">캐쉬백 신청</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

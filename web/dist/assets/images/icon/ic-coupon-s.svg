@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-3{fill:#fff}.cls-6{fill:#2d3239}.cls-8{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_coupon_s" transform="translate(-19.33 -746.768)">
+        <path id="사각형_7870" data-name="사각형 7870" class="cls-1" transform="translate(19.33 746.768)" d="M0 0h44v44H0z"/>
+        <g id="사각형_15777" data-name="사각형 15777" transform="rotate(-20 2172.584 310.487)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+            <rect class="cls-8" width="25" height="16" rx="4"/>
+            <rect class="cls-1" x=".75" y=".75" width="23.5" height="14.5" rx="3.25"/>
+        </g>
+        <path id="빼기_342" data-name="빼기 342" class="cls-3" d="M6831.33-14698.232h-16a4 4 0 0 1-4-4v-10a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v3a2 2 0 0 0-2 2 2 2 0 0 0 2 2v3a4 4 0 0 1-4 4z" transform="translate(-6783.5 15477.877)"/>
+        <path id="빼기_345" data-name="빼기 345" class="cls-3" d="M6834.329-14696.234h-19a4 4 0 0 1-4-4v-12a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4v3.5a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5v3.494a4 4 0 0 1-4 4.006z" transform="translate(-6783.5 15477.877)"/>
+        <path id="빼기_331" data-name="빼기 331" d="M6831.021-14696.234h-5.691v-19h5.691a4 4 0 0 1 4 4v3a2 2 0 0 0-2 2 2 2 0 0 0 2 2v4a4 4 0 0 1-4 4z" transform="translate(-6779.999 15478.877)" style="fill:#7dedf3"/>
+        <g id="빼기_326" data-name="빼기 326" style="fill:none">
+            <path class="cls-8" d="M6834.329-14696.234h-19a4 4 0 0 1-4-4v-12a4 4 0 0 1 4-4h19a4 4 0 0 1 4 4v3.5a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5v3.494a4 4 0 0 1-4 4.006z" transform="translate(-6783.5 15477.877)"/>
+            <path d="M6834.33-14697.734c1.378 0 2.499-1.121 2.499-2.5v-2.286a4.007 4.007 0 0 1-2.5-3.709 4.008 4.008 0 0 1 2.5-3.708v-2.296c0-1.38-1.121-2.5-2.5-2.5h-18.998a2.502 2.502 0 0 0-2.5 2.5v12a2.502 2.502 0 0 0 2.5 2.499h18.998m0 1.5h-18.998c-2.206 0-4-1.794-4-4v-12c0-2.205 1.794-4 4-4h18.998c2.206 0 4 1.795 4 4v3.505a2.503 2.503 0 0 0-2.5 2.5 2.503 2.503 0 0 0 2.5 2.501v3.495a4.004 4.004 0 0 1-4 3.999z" style="fill:#2d3239;stroke:none" transform="translate(-6783.5 15477.877)"/>
+        </g>
+        <rect id="사각형_14405" data-name="사각형 14405" class="cls-6" width="1.5" height="3" rx=".75" transform="translate(44.83 765.148)"/>
+        <rect id="사각형_14406" data-name="사각형 14406" class="cls-6" width="1.5" height="3" rx=".75" transform="translate(44.83 770.147)"/>
+        <rect id="사각형_14407" data-name="사각형 14407" class="cls-6" width="1.5" height="3" rx=".75" transform="translate(44.83 775.148)"/>
+        <path id="다각형_58" data-name="다각형 58" d="M4.319.379a.2.2 0 0 1 .361 0L5.8 2.734a.2.2 0 0 0 .156.112l2.614.324a.2.2 0 0 1 .111.345L6.766 5.288a.2.2 0 0 0-.061.185L7.2 8.021a.2.2 0 0 1-.292.214L4.6 6.98a.2.2 0 0 0-.191 0L2.091 8.235a.2.2 0 0 1-.291-.214l.495-2.548a.2.2 0 0 0-.061-.185L.316 3.515a.2.2 0 0 1 .111-.345l2.614-.324a.2.2 0 0 0 .159-.112z" transform="translate(32.58 767.395)" style="stroke:#2d3239;stroke-width:1.5px;fill:none"/>
+    </g>
+</svg>

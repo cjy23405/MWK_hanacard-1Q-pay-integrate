@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">우수회원 라운지</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="welcome-card">
+							<div class="welcome-card-row">
+								<div class="welcome-card-left">
+									<!-- Case : 미로그인 -->
+									<!-- 2022.03.30 : mod : 문구 수정 -->
+									<p class="welcome-card-text">
+										좋은 오후입니다.<br />
+										<strong>손님!</strong>
+									</p>
+									<!-- //Case : 미로그인 -->
+
+									<!-- Case : 로그인 -->
+									<!-- 2022.03.30 : mod : 문구 수정 -->
+									<p class="welcome-card-text">
+										좋은 오후입니다.<br />
+										<strong>김하나(KIM HANA)</strong> 님!
+									</p>
+									<!-- //Case : 로그인 -->
+								</div>
+								<div class="welcome-card-rigth">
+									<span class="ui-badge type-vvip">VVIP</span>
+								</div>
+							</div>
+							<div class="welcome-card-link-row">
+								<a href="" class="go-link">프리미엄 우수회원기간 : 2021.12.31까지</a>
+								<!-- 2022.03.30 : add : 미로그인시 노출 버튼 추가 -->
+								<a href="" class="go-link">프리미엄 우수회원 제도안내</a>
+							</div>
+						</div>
+
+						<div class="welcome-nav">
+							<ul class="welcome-nav-list">
+								<li class="welcome-nav-item">
+									<a href="" class="welcome-nav-link">찜한 혜택</a>
+								</li>
+								<li class="welcome-nav-item">
+									<a href="" class="welcome-nav-link">응모현황</a>
+								</li>
+								<li class="welcome-nav-item">
+									<a href="" class="welcome-nav-link">실적조회</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.02.22 : mod : .slide-banner 에 type-white 클래스 값 제거 -->
+						<div class="slide-banner type-full margin-top-35">
+							<div class="slide-banner-inner">
+								<div class="slide-banner-controller"></div>
+								<ul class="slide-banner-list">
+									<!-- 2022.03.18 : mod : 배너 구조 변경 -->
+									<li class="slide-banner-item">
+										<a href="" class="vip-event-link type-slide">
+											<div class="vip-event-image">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-8.png" alt="배너 타이틀 넣어주세요." />
+											</div>
+											<div class="vip-event-info">
+												<div class="vip-event-title">타이틀 최대 1줄 노출 타이틀 최대 1줄 노출 타이틀 최대 1줄 노출</div>
+												<div class="vip-event-text">설명 최대 1줄 노출 설명 최대 1줄 노출 설명 최대 1줄 노출 설명 최대 1줄 노출</div>
+												<div class="vip-event-date">2021.05.01 ~ 2021.07.31</div>
+											</div>
+										</a>
+									</li>
+									<!-- 2022.02.22 : add : 주석 추가 -->
+									<!-- DD : 버튼 흰색 버전 이용일 경우 is-white 클래스 값 추가 -->
+									<li class="slide-banner-item is-white">
+										<a href="" class="vip-event-link type-slide">
+											<div class="vip-event-image">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-8.png" alt="배너 타이틀 넣어주세요." />
+											</div>
+											<div class="vip-event-info">
+												<div class="vip-event-title">롯데호텔 서울, 월드</div>
+												<div class="vip-event-text">가을 객실 프로모션</div>
+												<div class="vip-event-date">2021.10.01 ~ 2021.10.31</div>
+											</div>
+										</a>
+									</li>
+									<li class="slide-banner-item">
+										<a href="" class="vip-event-link type-slide">
+											<div class="vip-event-image">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-8.png" alt="배너 타이틀 넣어주세요." />
+											</div>
+											<div class="vip-event-info">
+												<div class="vip-event-title">롯데호텔 서울, 월드</div>
+												<div class="vip-event-text">가을 객실 프로모션</div>
+												<div class="vip-event-date">2021.10.01 ~ 2021.10.31</div>
+											</div>
+										</a>
+									</li>
+									<!-- //2022.03.18 : mod : 배너 구조 변경 -->
+								</ul>
+							</div>
+						</div>
+
+						<div class="icon-nav margin-top-35">
+							<ul class="icon-nav-list">
+								<li class="icon-nav-item">
+									<a href="" class="icon-nav-link type-1">
+										<span class="icon-nav-text">국내호텔</span>
+									</a>
+								</li>
+								<li class="icon-nav-item">
+									<a href="" class="icon-nav-link type-2">
+										<span class="icon-nav-text">여행</span>
+									</a>
+								</li>
+								<li class="icon-nav-item">
+									<a href="" class="icon-nav-link type-3">
+										<span class="icon-nav-text">골프</span>
+									</a>
+								</li>
+								<li class="icon-nav-item">
+									<a href="" class="icon-nav-link type-4">
+										<span class="icon-nav-text">명품/쇼핑</span>
+									</a>
+								</li>
+								<li class="icon-nav-item">
+									<a href="" class="icon-nav-link type-5">
+										<span class="icon-nav-text">레스토랑</span>
+									</a>
+								</li>
+								<li class="icon-nav-item">
+									<a href="" class="icon-nav-link type-6">
+										<span class="icon-nav-text">생활/가전</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="counting-nav">
+								<ul class="counting-nav-list">
+									<li class="counting-nav-item">
+										<a href="" class="counting-nav-head type-link">
+											<div class="counting-nav-head-title">VIP 초청행사</div>
+											<div class="counting-nav-head-count">150</div>
+										</a>
+
+										<!-- 2022.02.22 : mod : .slide-banner 에 type-white, banner, margin-bottom-none 클래스 값 제거 -->
+										<div class="slide-banner margin-top-25">
+											<div class="slide-banner-inner">
+												<div class="slide-banner-controller"></div>
+												<ul class="slide-banner-list">
+													<li class="slide-banner-item">
+														<!-- 2022.02.17 : mod : 구조 변경 -->
+														<a href="" class="vip-event-link">
+															<div class="vip-event-image">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/banner-5.png" alt="배너 타이틀 넣어주세요." />
+															</div>
+															<div class="vip-event-info">
+																<div class="vip-event-title">타이틀 최대 1줄 노출 타이틀 최대 1줄 노출 타이틀 최대 1줄 노출</div>
+																<div class="vip-event-text">설명 최대 1줄 노출 설명 최대 1줄 노출 설명 최대 1줄 노출 설명 최대 1줄 노출</div>
+																<div class="vip-event-date">2021.05.01 ~ 2021.07.31</div>
+															</div>
+														</a>
+														<!-- //2022.02.17 : mod : 구조 변경 -->
+													</li>
+													<!-- 2022.02.22 : add : 주석 추가 -->
+													<!-- DD : 버튼 흰색 버전 이용일 경우 is-white 클래스 값 추가 -->
+													<li class="slide-banner-item is-white">
+														<!-- 2022.02.17 : mod : 구조 변경 -->
+														<a href="" class="vip-event-link">
+															<div class="vip-event-image">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/banner-5.png" alt="배너 타이틀 넣어주세요." />
+															</div>
+															<div class="vip-event-info">
+																<div class="vip-event-title">빙고 이벤트</div>
+																<div class="vip-event-text">하나카드 우수회원</div>
+																<div class="vip-event-date">2021.05.01 ~ 2021.07.31</div>
+															</div>
+														</a>
+														<!-- //2022.02.17 : mod : 구조 변경 -->
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+
+									<li class="counting-nav-item">
+										<a href="" class="counting-nav-head type-link">
+											<div class="counting-nav-head-title">진행중인 이벤트</div>
+											<div class="counting-nav-head-count">150</div>
+										</a>
+
+										<div class="event-cards margin-top-25">
+											<ul class="event-cards-list">
+												<li class="event-cards-item">
+													<a href="" class="event-cards-block">
+														<div class="event-cards-img-area">
+															<div class="event-cards-img-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/event-1.png" alt="이벤트 타이틀 넣어주세요." class="event-cards-img" />
+															</div>
+														</div>
+														<div class="event-cards-info">
+															<div class="event-cards-brand">브랜드명 최대 한줄 브랜드명 최대 한줄 브랜드명 최대 한줄</div>
+															<div class="event-cards-title">이벤트명 최대 두줄 이벤트명 최대 두줄 이벤트명 최대 두줄</div>
+														</div>
+													</a>
+												</li>
+												<li class="event-cards-item">
+													<a href="" class="event-cards-block">
+														<div class="event-cards-img-area">
+															<div class="event-cards-img-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/event-2.png" alt="이벤트 타이틀 넣어주세요." class="event-cards-img" />
+															</div>
+														</div>
+														<div class="event-cards-info">
+															<div class="event-cards-brand">포시즌스 호텔 서울</div>
+															<div class="event-cards-title">하나카드 단독 패키지</div>
+														</div>
+													</a>
+												</li>
+												<li class="event-cards-item">
+													<a href="" class="event-cards-block">
+														<div class="event-cards-img-area">
+															<div class="event-cards-img-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/event-1.png" alt="이벤트 타이틀 넣어주세요." class="event-cards-img" />
+															</div>
+														</div>
+														<div class="event-cards-info">
+															<div class="event-cards-brand">L7호텔·롯데시티호텔</div>
+															<div class="event-cards-title">1+1 숙박권 제공</div>
+														</div>
+													</a>
+												</li>
+												<li class="event-cards-item">
+													<a href="" class="event-cards-block">
+														<div class="event-cards-img-area">
+															<div class="event-cards-img-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/event-2.png" alt="이벤트 타이틀 넣어주세요." class="event-cards-img" />
+															</div>
+														</div>
+														<div class="event-cards-info">
+															<div class="event-cards-brand">포시즌스 호텔 서울</div>
+															<div class="event-cards-title">하나카드 단독 패키지</div>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+
+									<li class="counting-nav-item">
+										<a href="" class="counting-nav-head type-link">
+											<div class="counting-nav-head-title">상시이용가능! <span class="color-vip">추천 제휴쿠폰</span></div>
+										</a>
+
+										<div class="event-cards type-tripartition margin-top-25">
+											<ul class="event-cards-list">
+												<li class="event-cards-item">
+													<a href="" class="event-cards-block">
+														<div class="event-cards-img-area type-affiliate-coupon">
+															<div class="event-cards-img-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/event-3.png" alt="이벤트 타이틀 넣어주세요." class="event-cards-img" />
+															</div>
+														</div>
+														<div class="event-cards-info">
+															<div class="event-cards-brand">브랜드명 최대 한줄 브랜드명 최대 한줄 브랜드명 최대 한줄</div>
+															<div class="event-cards-title">이벤트명 최대 두줄 이벤트명 최대 두줄 이벤트명 최대 두줄</div>
+														</div>
+													</a>
+												</li>
+												<li class="event-cards-item">
+													<a href="" class="event-cards-block">
+														<div class="event-cards-img-area type-affiliate-coupon">
+															<div class="event-cards-img-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/event-4.png" alt="이벤트 타이틀 넣어주세요." class="event-cards-img" />
+															</div>
+														</div>
+														<div class="event-cards-info">
+															<div class="event-cards-brand">포시즌스 호텔 서울</div>
+															<div class="event-cards-title">전체 메뉴 10% 할인</div>
+														</div>
+													</a>
+												</li>
+												<li class="event-cards-item">
+													<a href="" class="event-cards-block">
+														<div class="event-cards-img-area type-affiliate-coupon">
+															<div class="event-cards-img-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/event-5.png" alt="이벤트 타이틀 넣어주세요." class="event-cards-img" />
+															</div>
+														</div>
+														<div class="event-cards-info">
+															<div class="event-cards-brand">소노펠리체</div>
+															<div class="event-cards-title">객실 특별 할인</div>
+														</div>
+													</a>
+												</li>
+												<li class="event-cards-item">
+													<a href="" class="event-cards-block">
+														<div class="event-cards-img-area type-affiliate-coupon">
+															<div class="event-cards-img-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/event-3.png" alt="이벤트 타이틀 넣어주세요." class="event-cards-img" />
+															</div>
+														</div>
+														<div class="event-cards-info">
+															<div class="event-cards-brand">브랜드명 최대 한줄 브랜드명 최대 한줄 브랜드명 최대 한줄</div>
+															<div class="event-cards-title">이벤트명 최대 두줄 이벤트명 최대 두줄 이벤트명 최대 두줄</div>
+														</div>
+													</a>
+												</li>
+												<li class="event-cards-item">
+													<a href="" class="event-cards-block">
+														<div class="event-cards-img-area type-affiliate-coupon">
+															<div class="event-cards-img-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/event-4.png" alt="이벤트 타이틀 넣어주세요." class="event-cards-img" />
+															</div>
+														</div>
+														<div class="event-cards-info">
+															<div class="event-cards-brand">포시즌스 호텔 서울</div>
+															<div class="event-cards-title">전체 메뉴 10% 할인</div>
+														</div>
+													</a>
+												</li>
+												<li class="event-cards-item">
+													<a href="" class="event-cards-block">
+														<div class="event-cards-img-area type-affiliate-coupon">
+															<div class="event-cards-img-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/event-5.png" alt="이벤트 타이틀 넣어주세요." class="event-cards-img" />
+															</div>
+														</div>
+														<div class="event-cards-info">
+															<div class="event-cards-brand">소노펠리체</div>
+															<div class="event-cards-title">객실 특별 할인</div>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+
+									<li class="counting-nav-item">
+										<div class="counting-nav-head">
+											<div class="counting-nav-head-title">
+												<span class="color-vip">특별한 카드, CLUB 프리미엄 라이프</span><br />
+												스페셜하게 제공되는 혜택을 비교해보세요.
+											</div>
+										</div>
+
+										<div class="club-cards margin-top-25">
+											<ul class="club-cards-list">
+												<li class="club-cards-item">
+													<div class="club-cards-block">
+														<!-- 2022.03.30 : mod : 카드 이미지 변경 -->
+														<div class="card-image">
+															<div class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/contents/vip-card/club-1.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<!-- //2022.03.30 : mod : 카드 이미지 변경 -->
+														<div class="club-cards-sub-text">업종에 따라 특별 적립</div>
+														<div class="club-cards-title">
+															<a href="" class="ui-arrow">
+																<span class="club-cards-title-text">CLUB Primus</span>
+															</a>
+														</div>
+													</div>
+												</li>
+												<li class="club-cards-item">
+													<div class="club-cards-block">
+														<!-- 2022.03.30 : mod : 카드 이미지 변경 -->
+														<div class="card-image">
+															<div class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/contents/vip-card/club-2.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<!-- //2022.03.30 : mod : 카드 이미지 변경 -->
+														<div class="club-cards-sub-text">항공 마일리지 적립형</div>
+														<div class="club-cards-title">
+															<a href="" class="ui-arrow">
+																<span class="club-cards-title-text">CLUB Signature</span>
+															</a>
+														</div>
+													</div>
+												</li>
+												<li class="club-cards-item">
+													<div class="club-cards-block">
+														<!-- 2022.03.30 : mod : 카드 이미지 변경 -->
+														<div class="card-image">
+															<div class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/contents/vip-card/club-3.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<!-- //2022.03.30 : mod : 카드 이미지 변경 -->
+														<div class="club-cards-sub-text">실속있게 누리는 프리미엄</div>
+														<div class="club-cards-title">
+															<a href="" class="ui-arrow">
+																<span class="club-cards-title-text">CLUB Premier</span>
+															</a>
+														</div>
+													</div>
+												</li>
+												<li class="club-cards-item">
+													<div class="club-cards-block">
+														<!-- 2022.03.30 : mod : 카드 이미지 변경 -->
+														<div class="card-image">
+															<div class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/contents/vip-card/club-4.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<!-- //2022.03.30 : mod : 카드 이미지 변경 -->
+														<div class="club-cards-sub-text">프리미엄 VVIP</div>
+														<div class="club-cards-title">
+															<a href="" class="ui-arrow">
+																<span class="club-cards-title-text">CLUB1카드 200</span>
+															</a>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				// 제휴쿠폰 swiper - 2022.01.07 추가
+				$('.event-cards.type-tripartition').each(function () {
+					var $this = $(this);
+					var $list = $this.find('.event-cards-list');
+
+					$list.swiperSet({
+						slidesPerView: 3,
+						slidesPerGroup: 3,
+						spaceBetween: 12,
+						pageControl: false,
+						autoplay: {
+							delay: 3500,
+						},
+					});
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

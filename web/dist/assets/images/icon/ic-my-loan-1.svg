@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <clipPath id="2yjsobvihc">
+            <use xlink:href="#2ejvoxu39a"/>
+        </clipPath>
+        <clipPath id="5dr9xppjyd">
+            <use xlink:href="#mmu66pu4ub"/>
+        </clipPath>
+    </defs>
+    <path data-name="사각형 7871" style="fill:none" d="M0 0h36v36H0z"/>
+    <path data-name="합치기 103" d="M15615.128 924.939v-.784a3.949 3.949 0 0 1-.664.089h-8.811a4 4 0 0 1-3.9-3.995V907h-2.5a4.249 4.249 0 1 1 0-8.5h21.5a4.249 4.249 0 1 1 0 8.5h-2.5v12.3c.029.277.051.551.063.817v-3.2s-.126-8.368 0-7.905 3.776 5.384 5 8.584 0 7.337 0 7.337z" transform="translate(-15592.002 -895.001)" style="stroke-width:1.5px;stroke:#2d3239;fill:none"/>
+    <path data-name="사각형 5641" d="M0 0h4.217v17.892A2.108 2.108 0 0 1 2.108 20 2.108 2.108 0 0 1 0 17.892V0z" transform="translate(7.783 8)" style="fill:#7dedf3"/>
+    <g data-name="사각형 5643" transform="translate(7 7)" style="stroke-width:2px;fill:#fff;stroke:#2d3239">
+        <rect id="2ejvoxu39a" width="22" height="1.5" rx=".75" style="stroke:none"/>
+        <path d="M0 .5h22M21 0v1.5m1-.5H0m1 .5V0" style="clip-path:url(#2yjsobvihc);fill:none"/>
+    </g>
+    <path data-name="합치기 95" d="M16086.126-20222.059v-1.055a4.961 4.961 0 0 1-1.87.363h-6.5a5 5 0 0 1-5-5v-16.5h16.5v16.514c.03.285.052.57.065.844v-3.182s-.127-8.369 0-7.906 3.771 5.385 4.994 8.586 0 7.338 0 7.338z" transform="translate(-16063 20252)" style="stroke-width:1.5px;stroke:#2d3239;fill:none"/>
+    <path data-name="패스 2253" d="M3588.123 5164.958c-.124-.464 0 7.9 0 7.9v4.819s.388-5.645-1.776-5.551-1.409 3.739-1.411 5.551c-.01 3.037 0 3.2 0 3.2h8.185s1.223-4.141 0-7.339-4.874-8.117-4.998-8.58z" transform="translate(-3561.809 -5150.939)" style="stroke-linejoin:round;stroke-linecap:round;stroke-width:1.5px;stroke:#2d3239;fill:none"/>
+    <g data-name="사각형 5645" transform="translate(22.886 29)" style="stroke-width:2px;fill:#fff;stroke:#2d3239">
+        <path id="mmu66pu4ub" style="stroke:none" d="M0 0h8.599v1.5H0z"/>
+        <path d="M0 .5h8.599m-1-.5v1.5m1-.5H0m1 .5V0" style="clip-path:url(#5dr9xppjyd);fill:none"/>
+    </g>
+    <g data-name="사각형 8425" style="fill:#fff;stroke-width:1.5px;stroke:#2d3239">
+        <path d="M0 0h9.7v3.5a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V0z" style="stroke:none" transform="translate(22.3 29)"/>
+        <path d="M.75.75h8.2V3.5a.25.25 0 0 1-.25.25H1a.25.25 0 0 1-.25-.25V.75z" style="fill:none" transform="translate(22.3 29)"/>
+    </g>
+    <g data-name="그룹 5863">
+        <path data-name="패스 2252" d="m3649.636 5413.028 1.5 5 2-5 2 5 1.5-5" transform="translate(-3635.136 -5399.028)" style="stroke-linejoin:round;stroke-linecap:round;stroke-width:1.5px;stroke:#2d3239;fill:none"/>
+        <path data-name="선 11" transform="translate(13.5 16.499)" style="stroke-linecap:round;stroke-width:1.5px;stroke:#2d3239;fill:none" d="M0 0h1.5"/>
+        <path data-name="선 166" transform="translate(21 16.499)" style="stroke-linecap:round;stroke-width:1.5px;stroke:#2d3239;fill:none" d="M0 0h1.5"/>
+    </g>
+</svg>

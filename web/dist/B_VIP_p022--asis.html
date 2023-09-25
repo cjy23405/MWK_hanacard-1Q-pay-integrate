@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">진행중인 이벤트</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="coupon-detail">
+							<div class="coupon-detail-info">
+								<div class="coupon-detail-name">정기 구독하고 최대 2만5천원 받기!</div>
+								<div class="coupon-detail-date">2021.05.01 ~ 2021.07.31</div>
+								<div class="coupon-detail-buttons">
+									<a href="" class="coupon-detail-button type-share" role="button"><span class="for-a11y">공유하기</span></a>
+									<!-- data-toggle 속성으로 토글기능 사용 / 활성화시 is-active 클래스 추가 -->
+									<button type="button" class="coupon-detail-button type-heart" data-toggle="true"><span class="for-a11y">찜하기</span></button>
+								</div>
+							</div>
+						</div>
+
+						<!-- 제휴쿠폰이 등록된 경우 -->
+						<section class="page-section-group margin-bottom-35">
+							<ul class="coupons-list">
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- DD : 이미지 없을 때 -->
+												<div class="logo-image type-store">
+													<div class="logo-image-inner"></div>
+												</div>
+												<div class="coupon-card-brand">포시즌스 호텔 서울</div>
+												<div class="coupon-card-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- DD : 이미지 에러 -->
+												<div class="logo-image type-store">
+													<div class="logo-image-inner">
+														<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="coupon-card-brand">포시즌스 호텔 서울</div>
+												<div class="coupon-card-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- DD : 이미지 있을 때 -->
+												<div class="logo-image type-store">
+													<div class="logo-image-inner">
+														<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="coupon-card-brand">포시즌스 호텔 서울</div>
+												<div class="coupon-card-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</section>
+						<!--// 제휴쿠폰이 등록된 경우 -->
+
+						<div class="wcms-data">
+							<section class="vip-event-data">
+								<!-- DD : 이 안에 wcms 상세 데이터 출력 --><img src="./assets/images/_dummy/mb_event_lotte_seoul_220121_01.png" width="100%" />
+								<img src="./assets/images/_dummy/mb_event_lotte_seoul_220121_02.png" width="100%" />
+								<a href="https://bit.ly/3KGAhsa" target="_blank" onclick="javascript:GA_Event('하나카드_MO_VIP_이벤트', '롯데호텔 서울 객실 프로모션', '온라인 예약하기');"
+									><img src="./assets/images/_dummy/mb_event_lotte_seoul_220121_03.png" alt="예약하기" width="100%" class="fi"
+								/></a>
+								<p style="position: relative">
+									<img src="./assets/images/_dummy/mb_event_lotte_seoul_220121_04.png" width="100%" class="fi" /><a href="tel:027711000" class="call"
+										><img src="./assets/images/_dummy/btn-call.png" alt="전화"
+									/></a>
+								</p>
+								<img src="./assets/images/_dummy/mb_event_lotte_seoul_220121_05.png" width="100%" />
+								<img src="./assets/images/_dummy/mb_event_lotte_seoul_220121_06.png" width="100%" />
+
+								<style type="text/css">
+									.call {
+										position: absolute;
+										top: 30%;
+										right: 5%;
+									}
+									.call img {
+										display: block;
+										width: 25px;
+										height: 25px;
+									}
+								</style>
+
+								<div class="hide">
+									<dl>
+										<dt>롯데호텔 서울<br /><strong>객실 프로모션</strong></dt>
+										<dd>
+											<ul>
+												<li>예약기간 : 2022. 1. 26 ~ 선착순 종료 시</li>
+												<li>이용기간 : 2022. 1. 26 ~ 3. 30 (체크인 일자 기준)</li>
+												<li>대 상 : 하나카드 우수회원</li>
+												<li>대상 호텔 : 롯데호텔 서울 (서울특별시 중구 을지로 30)</li>
+												<li>
+													예약방법 : 1) 하단 ‘온라인 예약하기‘ 에서 투숙 날짜 선택 후 예약 진행<br />
+													※ 선착순 진행, 조기 마감 가능<br />
+													※ 롯데호텔 리워즈회원 예약 전용, 온라인 예약만 가능<br />
+													※ 회원 1명당 기간 중 최대 2박 가능 (1회원 당 본관, 신관 각 1실 씩 예약 가능)<br />
+													2) 현장에서 상단 쿠폰 제시 및 하나카드로 결제
+												</li>
+												<li>기타 문의 : 롯데호텔 서울 ☎ 02-771-1000</li>
+											</ul>
+										</dd>
+									</dl>
+									<dl>
+										<dt>유의사항</dt>
+										<dd>
+											<ul>
+												<li>온라인 예약 전용으로 롯데호텔 리워즈 회원 가입 필요합니다.</li>
+												<li>회원 1명당 기간 중 최대 2박 가능합니다. (1회원 당 본관, 신관 각 1실 씩 예약 가능)</li>
+												<li>호텔 별 최저 요금 기준으로 요일, 날짜별 금액 상이합니다.</li>
+												<li>예약 취소는 체크인 하루 전 18시까지 가능, 이후 취소 및 변경 시 위약금 부과됩니다.</li>
+												<li>본인 명의 개인 신용카드에 한해 이용 가능합니다. (이용자 명과 카드 소지자 명 일치 확인)</li>
+												<li>다른 프로모션, 할인 혜택, 바우처, 호텔 멤버십 할인 혜택과 중복 적용되지 않습니다.</li>
+												<li>체크아웃 시 투숙객 본인 명의의 하나카드로 결제 필수이며, 이용 후에는 할인 적용 재 결제 불가합니다.</li>
+												<li>제휴사의 사정에 따라 사전 예고 없이 내용이 변경되거나 중단될 수 있습니다.</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="law_txt">
+									<ul class="txt_li" style="font-weight: normal">
+										<li>계약체결 전 상품설명서 및 상품약관을 반드시 확인하시기 바랍니다.</li>
+										<li>신용카드 발급이 부적정한 경우(개인신용평점 낮음 등) 카드발급이 제한될 수 있습니다.</li>
+										<li>카드이용대금과 이에 수반되는 모든 수수료를 지정된 대금결제일에 상환하여야 합니다.</li>
+										<li>금융소비자는 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있습니다.</li>
+									</ul>
+									<ul class="txt_li">
+										<li>상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</li>
+										<li>신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</li>
+										<li>일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</li>
+									</ul>
+									<p class="pdt10">[준법심의 A-22-0105(2022.01.25~2022.03.30)]</p>
+								</div>
+							</section>
+						</div>
+
+						<div class="page-section-group">
+							<p class="basic-text">
+								상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.<br />
+								신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.<br />
+								일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.
+							</p>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-gray" role="button">목록으로 이동</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

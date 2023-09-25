@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-select-apartment">아파트 동,호수 선택</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 아파트 동,호수 선택 -->
+			<!-- 2022.11.01 : mod : .layer-wrap--slide.is-not-background-close 클래스 삭제 / .layer-wrap--full.layer-clause-detail 클래스 추가 -->
+			<div class="layer-wrap layer-wrap--full layer-clause-detail" data-layer="layer-select-apartment">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2022.11.01 : mod : 문구변경 -->
+								<h2 class="header__title">아파트관리비 자동납부</h2>
+								<!-- 2022.11.17 : add : 추가 -->
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+								<!-- //2022.11.17 : add : 추가 -->
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<!-- 2022.11.01 : mod : 전반적인 UI 변경 -->
+								<p class="basic-text">아파트 동, 호수를 선택해주세요.</p>
+
+								<div class="page-section margin-top-36">
+									<div class="zip-area type-apply">
+										<div class="zip-list">
+											<div class="zip-item">
+												<div class="zip-block">
+													<div class="zip-item-head"><strong class="number">청라자이</strong></div>
+													<div class="zip-item-block">
+														<span class="category">도로명</span>
+														<span class="text">인천 서구 에코로 163 청라국제도시역</span>
+													</div>
+													<div class="zip-item-block">
+														<span class="category">지번</span>
+														<span class="text">인천 서구 경서동 519-2 청라국제도시역</span>
+													</div>
+													<span class="default-text color-blur-dark">납부마감일 31일</span>
+												</div>
+
+												<div class="ui-form type-flex-box margin-top-20">
+													<dl class="ui-form-list">
+														<div class="ui-form-item type-only-select">
+															<dt class="ui-form-key" data-focus-input="name">동</dt>
+															<dd class="ui-form-val">
+																<div class="ui-form-val-inner">
+																	<div class="ui-form-contents">
+																		<div class="in-select-block">
+																			<button type="button" class="in-select" title="동 선택" data-placeholder="동 선택" data-focus-input-target="name">101동</button>
+																		</div>
+																	</div>
+																</div>
+															</dd>
+														</div>
+													</dl>
+													<dl class="ui-form-list">
+														<div class="ui-form-item type-only-select">
+															<dt class="ui-form-key" data-focus-input="name">호수</dt>
+															<dd class="ui-form-val">
+																<div class="ui-form-val-inner">
+																	<div class="ui-form-contents">
+																		<div class="in-select-block">
+																			<button type="button" class="in-select" title="호수 선택" data-placeholder="호수 선택" data-focus-input-target="name">1206호</button>
+																		</div>
+																	</div>
+																</div>
+															</dd>
+														</div>
+													</dl>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="use-guide-area js-ui-accordion">
+									<div class="use-guide-item js-ui-accordion__item">
+										<button type="button" class="use-guide-opener js-ui-accordion__opener">
+											확인해주세요
+											<span class="for-a11y">
+												상세 내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+										<div class="use-guide-contents js-ui-accordion__layer">
+											<ul class="info-list">
+												<li class="info-item">화면에 표기된 최초 납부일에 해당하는 월 부터 하나카드로 자동납부됩니다.</li>
+												<li class="info-item">
+													자동납부 연결한 신용카드를 동일상품으로 갱신/재발급 받으신 경우 연체 방지를 위해 변경된 카드번호로 요금이 자동승계되어 납부됩니다. 만약 카드해지 또는 카드상품 교체할 경우
+													아파트관리비가 해지되오니 재신청 해주시기 바랍니다.
+												</li>
+												<li class="info-item">카드승인일은 납부마감일 기준 4영업일 전 등록된 카드로 승인됩니다.</li>
+												<li class="info-item">카드가 발급된 후 자동납부 신청 결과를 문자메시지로 안내해드립니다. 문제가 있을 경우 아래 고객센터로 문의하여 주시기 바랍니다.</li>
+												<li class="info-item">자동납부 전용 ARS: 1800-2183<br />(1번: 접수 / 2번: 문의상담)</li>
+												<li class="info-item">하나카드 제휴한 아파트만 자동납부 신청이 가능합니다.</li>
+												<li class="info-item">아파트관리비 자동납부 결제 금액은 연말정산 소득공제 대상에서 제외됩니다.</li>
+												<li class="info-item">미납금액이 있을 경우 미납금액이 포함되어 결제될 수 있습니다.</li>
+												<li class="info-item">
+													한도초과, 카드거래정지, 연체, 탈회 등의 사유로 승인이 되지 않아 요금이 결제되지 않을 경우 연체에 따른 가산금이 부과될 수 있고 가산금 기준은 아파트관리사무소 기준에 따릅니다.
+												</li>
+												<li class="info-item color-wrong">
+													현재 타 금융사(카드사 또는 은행) 자동납부를 이용중이시면 해당 금융사에 먼저 해지를 하셔야 합니다. 단, 납부 기관에 따라 중복 청구를 막기 위해 하나카드 등록 시 이전 기관은
+													자동해지 될 수 있습니다.
+												</li>
+												<li class="info-item">
+													아파트관리비 자동납부 신청 시 아파트 동/호수를 잘못 신청하신 경우, 다른 아파트의 관리비가 청구될 수 있으므로 문자메시지를 받으면 신청 내역을 재확인해주시기 바랍니다.
+												</li>
+												<li class="info-item">아파트관리비 자동납부 매출은 카드상품에 따라 전월 실적 산정 및 하나머니 적립 대상에서 제외될 수 있습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- //2022.11.01 : mod : 전반적인 UI 변경 -->
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 아파트 동,호수 선택 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-select-apartment');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

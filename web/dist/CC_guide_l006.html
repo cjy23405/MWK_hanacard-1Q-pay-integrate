@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-public-transport-mastercard">대중교통 이용 국가/도시</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 대중교통 이용 국가/도시 -->
+			<div class="layer-wrap layer-wrap layer-wrap--full" data-layer="layer-public-transport-mastercard">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<div class="global-card-brand type-medium-large">
+									<img src="./assets/images/contents/global-card-brand/mastercard.png" alt="mastercard" />
+								</div>
+								<h2 class="header__title">대중교통 이용 국가/도시</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="info-table-area">
+									<table class="info-table">
+										<!-- 2022.04.27 : mod : 텍스트 수정 -->
+										<caption class="for-a11y">
+											구분, 국가, 도시로 구성된 mastercard 카드 대중교통 이용 안내 표입니다.
+										</caption>
+										<colgroup>
+											<col style="width: 70px" />
+											<col style="width: 90px" />
+											<col />
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">구분</th>
+												<th scope="col">국가</th>
+												<th scope="col">도시</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td rowspan="35" scope="rowgroup">유럽</td>
+												<td rowspan="3" scope="rowgroup">영국</td>
+												<td>런던(London)</td>
+											</tr>
+											<tr>
+												<td>버밍엄(Birmingham)</td>
+											</tr>
+											<tr>
+												<td>캠브리지(Cambridge)</td>
+											</tr>
+											<tr>
+												<td>프랑스</td>
+												<td>디종(Dijon)</td>
+											</tr>
+											<tr>
+												<td>이탈리아</td>
+												<td>밀라노(Milan)</td>
+											</tr>
+											<tr>
+												<td>체코</td>
+												<td>프라하(Prague)</td>
+											</tr>
+											<tr>
+												<td rowspan="2" scope="rowgroup">스페인</td>
+												<td>마드리드(Madrid)</td>
+											</tr>
+											<tr>
+												<td>산세바스티안<br />(Donostia-San Sebastian)</td>
+											</tr>
+											<tr>
+												<td rowspan="23" scope="rowgroup">러시아</td>
+												<td>모스크바(Moscow)</td>
+											</tr>
+											<tr>
+												<td>상트페테르부르크<br />(Saint Peterburg)</td>
+											</tr>
+											<tr>
+												<td>노보시비르스크<br />(Nobosilirask)</td>
+											</tr>
+											<tr>
+												<td>예카테린부르크<br />(Ekaterinburg)</td>
+											</tr>
+											<tr>
+												<td>니즈니노브고로드<br />(N.Nobgorod)</td>
+											</tr>
+											<tr>
+												<td>이루쿠르츠(Irkutsk)</td>
+											</tr>
+											<tr>
+												<td>체랴빈스크(Chelyabinsk)</td>
+											</tr>
+											<tr>
+												<td>사라토프(Saratov)</td>
+											</tr>
+											<tr>
+												<td>사마라(Samara)</td>
+											</tr>
+											<tr>
+												<td>카잔(Kazan)</td>
+											</tr>
+											<tr>
+												<td>볼고그라드(Volgograd)</td>
+											</tr>
+											<tr>
+												<td>보로네슈(Voronezh)</td>
+											</tr>
+											<tr>
+												<td>칼리닌그라드(Kaliningrad)</td>
+											</tr>
+											<tr>
+												<td>페름(Perm)</td>
+											</tr>
+											<tr>
+												<td>크라스노다르(Kransnodar)</td>
+											</tr>
+											<tr>
+												<td>우파(Ufa)</td>
+											</tr>
+											<tr>
+												<td>투먼(Tyumen)</td>
+											</tr>
+											<tr>
+												<td>이제프스크(Izhevsk)</td>
+											</tr>
+											<tr>
+												<td>로스토프온돈<br />(Rostob-on-Don)</td>
+											</tr>
+											<tr>
+												<td>울랴노브스크(Ulyanovsk)</td>
+											</tr>
+											<tr>
+												<td>하바로프스크(Khabarovsk)</td>
+											</tr>
+											<tr>
+												<td>톰스크(Tomsk)</td>
+											</tr>
+											<tr>
+												<td>케메로보(Kemerovo)</td>
+											</tr>
+											<tr>
+												<td>오스트리아</td>
+												<td>비엔나(Vienna)</td>
+											</tr>
+											<tr>
+												<td>루마니아</td>
+												<td>부쿠레슈티(Bucharest)</td>
+											</tr>
+											<tr>
+												<td>세르비아</td>
+												<td>베오그라드(Belgrade)</td>
+											</tr>
+											<tr>
+												<td>우크라이나</td>
+												<td>키예프(Kiev)</td>
+											</tr>
+											<tr>
+												<td rowspan="4" scope="rowgroup">아시아</td>
+												<td>싱가포르</td>
+												<td>싱가포르(Singapore)</td>
+											</tr>
+											<tr>
+												<td>호주</td>
+												<td>시드니(Sydney)</td>
+											</tr>
+											<tr>
+												<td>대만</td>
+												<td>가오슝(Kaohsiung)</td>
+											</tr>
+											<tr>
+												<td>말레이시아</td>
+												<td>쿠알라룸프르<br />(Kuala Lumpur)</td>
+											</tr>
+											<tr>
+												<td>북아메리카</td>
+												<td>캐나다</td>
+												<td>벤쿠버<br />(Vancouver)</td>
+											</tr>
+											<tr>
+												<td>남아메리카</td>
+												<td>브라질</td>
+												<td>리우데자네이루<br />(Rio de janeiro)</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 대중교통 이용 국가/도시 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-public-transport-mastercard');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

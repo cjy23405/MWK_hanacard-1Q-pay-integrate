@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">재발급 신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title"><span class="title-step">STEP 1</span>카드 재발급을 위한 <br />정보를 선택해주세요.</h2>
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 2단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">카드수령지</strong>
+									<a href="" class="ui-arrow type-black" role="button">수정</a>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-full">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" data-checkbox-tab="radioBox1-1" checked />
+											<label for="radioBox1-1" class="ui-label type-block">
+												<div class="ui-label-text">
+													<span class="title">직장</span>
+													<div>(111-222) 인천 서구 에코로 181, 1층 (청라동, 하나금융그룹통합센터)</div>
+												</div>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" data-checkbox-tab="radioBox1-2" />
+											<label for="radioBox1-2" class="ui-label type-block">
+												<div class="ui-label-text">
+													<span class="title">자택</span>
+													<div>(111-222) 인천 서구 에코로 181, 1층 (청라동, 하나금융그룹통합센터)</div>
+												</div>
+											</label>
+										</div>
+
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-5" data-checkbox-tab="radioBox1-5" />
+											<label for="radioBox1-5" class="ui-label type-block">
+												<div class="ui-label-text">
+													<span class="title">직장 우편함</span>
+													<div>(111-222) 인천 서구 에코로 181, 1층 (청라동, 하나금융그룹통합센터)</div>
+												</div>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-6" data-checkbox-tab="radioBox1-5" />
+											<label for="radioBox1-6" class="ui-label type-block">
+												<div class="ui-label-text">
+													<span class="title">자택 우편함</span>
+													<div>(111-222) 인천 서구 에코로 181, 1층 (청라동, 하나금융그룹통합센터)</div>
+												</div>
+											</label>
+										</div>
+
+										<!-- [DD] 카드수령지 주소가 없을 경우  -->
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-3" data-checkbox-tab="radioBox1-3" />
+											<label for="radioBox1-3" class="ui-label type-block">
+												<div class="ui-label-text">
+													<span class="title">직장</span>
+													<div>직장 주소가 없습니다.</div>
+												</div>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-4" data-checkbox-tab="radioBox1-4" />
+											<label for="radioBox1-4" class="ui-label type-block">
+												<div class="ui-label-text">
+													<span class="title">자택</span>
+													<div>자택 주소가 없습니다.</div>
+												</div>
+											</label>
+										</div>
+										<!--// [DD] 카드수령지 주소가 없을 경우  -->
+										
+										<div data-checkbox-tab-panel="radioBox1-5" class="margin-top-10">
+											<p class="info-item type-presa color-wrong">수령지를 우편함으로 지정하신 경우 지정하신 우편함으로 배송됩니다.<br />배송 완료시 우편함 확인 부탁 드립니다.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">결제계좌</strong>
+									<a href="" class="ui-arrow type-black" role="button">수정</a>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block">
+										<input type="text" class="ui-input" title="결제계좌 입력" value="KEB하나은행(하나)123********123" disabled />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">
+											일부 체크카드의 경우 카드사를 통한 재발급 신청이 제한될 수 있으니, 고객센터(<a href="tel:1800-1111" class="text-underline">1800-1111</a>, 평일 09:00~1800)로 문의해주시기
+											바랍니다.
+										</li>
+										<li class="info-item">
+											통신, 전기요금, 보험료 등을 자동납부 중인 고객께서는 분실/파손으로 카드를 재발급하실 경우 미납방지를 위해 다른 유효 카드로 자동 승계되어 납부 처리됩니다. 자동승계를 원치 않으실
+											경우, 당사 고객센터(1800-2183)로 전화 주시기 바랍니다.
+										</li>
+										<li class="info-item">일부 자동승계가 불가능한 가맹점의 경우에는 요금이 미납될 수 있으므로 해당 업체에 새로 발급한 카드번호로 변경 신청하여 주시기 바랍니다.</li>
+										<li class="info-item">가족카드재발급은 고객센터(<a href="tel:1800-1111" class="text-underline">1800-1111</a>, 평일 09:00~1800)를 통해서 발급 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

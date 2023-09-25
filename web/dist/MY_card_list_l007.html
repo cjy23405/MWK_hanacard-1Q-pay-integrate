@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-agree-note">유의사항 동의</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-agree-note-detail">유의사항 동의 상세</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 유의사항 동의 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select" data-layer="layer-agree-note">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">유의사항에 동의합니다.</h2>
+								<!-- 2022.01.07 삭제 -->
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ui-select-multiple-list">
+									<div class="ui-select-multiple-item">
+										<div class="ui-checkbox-block">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" data-checkbox-group-child="selectCheckbox" />
+											<label for="selectCheckbox-1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">회원 탈회 유의사항 동의</span>
+											</label>
+											<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button" data-role="layerClose">아니오</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">네</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 유의사항 동의 -->
+
+			<!-- layer: 유의사항 동의 상세 -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-agree-note-detail">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="header">
+								<h2 class="header__title">
+									회원 탈회 유의사항을<br />
+									꼭 확인해주세요!
+								</h2>
+							</div>
+							<div class="ui-layer__body-inner">
+								<div class="layer-info">
+									<ul class="info-list type-inherit type-outside">
+										<li class="info-item">탈회하신 후에는 홈페이지 로그인, 카드 관련 각종 조회 및 업무처리, 포인트 조회 및 사용, 고객센터 이용 등이 불가합니다.</li>
+										<li class="info-item">
+											현시점에 완납했지만 차후 카드결제금액이 존재할 경우 (예:최근 사용금액→교통요금 이용금액, 통신요금 자동이체 등) 카드 해지 후에도 기존과 동일하게 청구되므로, 다음 결제일까지
+											결제계좌를 유지해주시기 바랍니다.<br />
+											(결제 계좌 해지 시 연체 될 수 있습니다)
+										</li>
+										<li class="info-item">탈회 후 재가입 하고자 하실 경우는 재심사를 받으셔야 합니다.</li>
+										<li class="info-item">자동납부 중이셨던 통신/전기/가스요금, 보험료, 관리비 등은 탈퇴 후 자동납부 처리 되지 않습니다.</li>
+										<li class="info-item">
+											탈회 후 보유하신 포인트 사용은 제한 될 수 있습니다.
+											<a href="" class="ui-arrow type-small margin-top-10">포인트 조회</a>
+										</li>
+										<li class="info-item">탈퇴 후에는 보유포인트 유효기간 동안 소멸처리하지 않으며, 회원 재가입 후에 사용 가능합니다.</li>
+										<li class="info-item">선불카드는 전체 카드 해지 목록에 포함되지 않습니다.</li>
+										<li class="info-item">자세한 내용은 고객센터(1800-1111)로 문의 주시기 바랍니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 유의사항 동의 상세 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

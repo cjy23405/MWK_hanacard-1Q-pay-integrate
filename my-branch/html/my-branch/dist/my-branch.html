@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/my-branch.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">하나카드</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<!-- branch-nav-area type-fixed-->
+				<div class="branch-nav-area type-fixed js-ui-accordion" data-focus-open="false">
+					<div class="branch-nav-inner js-ui-accordion__item">
+						<button type="button" class="branch-nav-opener js-ui-accordion__opener">
+							<span class="for-a11y">
+								탭 영역
+								<span class="open-text">펼치기</span>
+								<span class="close-text">닫기</span>
+							</span>
+						</button>
+						<div class="branch-nav-layer js-ui-accordion__layer">
+							<div class="branch-nav-contents">
+								<div class="branch-nav-list">
+									<div class="branch-nav-item">
+										<a href="#branch1" class="branch-nav-link js-hash-scroll-link">원더카드</a>
+									</div>
+									<div class="branch-nav-item">
+										<a href="#branch2" class="branch-nav-link js-hash-scroll-link">내맘대로쁨/MULTI</a>
+									</div>
+									<div class="branch-nav-item">
+										<a href="#branch3" class="branch-nav-link js-hash-scroll-link">생활</a>
+									</div>
+									<div class="branch-nav-item">
+										<a href="#branch4" class="branch-nav-link js-hash-scroll-link">마트/쇼핑</a>
+									</div>
+									<div class="branch-nav-item">
+										<a href="#branch5" class="branch-nav-link js-hash-scroll-link">통신/교통</a>
+									</div>
+									<div class="branch-nav-item">
+										<a href="#branch6" class="branch-nav-link js-hash-scroll-link">항공/여행/레저</a>
+									</div>
+									<div class="branch-nav-item">
+										<a href="#branch7" class="branch-nav-link js-hash-scroll-link">프리미엄</a>
+									</div>
+									<div class="branch-nav-item">
+										<a href="#branch8" class="branch-nav-link js-hash-scroll-link">개인사업자/단체/기타</a>
+									</div>
+									<div class="branch-nav-item">
+										<a href="#branch9" class="branch-nav-link js-hash-scroll-link">체크카드</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //branch-nav-area type-fixed -->
+
+				<div class="contents-wrap">
+					<div class="page-contents page-contents--my-branch">
+						<!-- 2023.04.12 : mod : 상단 비쥬얼 구조 수정 -->
+						<!-- top visual -->
+						<div class="branch-visual">
+							<div class="branch-visual-head">
+								<h2 class="branch-visual-title">인기카드 TOP3</h2>
+								<p class="branch-visual-text">하나카드 인기상품 중에 골라봤어요</p>
+							</div>
+							<div class="branch-visual-view">
+								<div class="branch-visual-slide">
+									<div class="branch-visual-slide-list">
+										<!-- item -->
+										<div class="branch-visual-slide-item">
+											<a href="" class="branch-visual-slide-link">
+												<span class="for-a11y">원더카드 T</span>
+											</a>
+										</div>
+										<!-- // item -->
+										<div class="branch-visual-slide-item">
+											<a href="" class="branch-visual-slide-link">
+												<span class="for-a11y">원더카드 T</span>
+											</a>
+										</div>
+										<div class="branch-visual-slide-item">
+											<a href="" class="branch-visual-slide-link">
+												<span class="for-a11y">원더카드 T</span>
+											</a>
+										</div>
+										<div class="branch-visual-slide-item">
+											<a href="" class="branch-visual-slide-link">
+												<span class="for-a11y">원더카드 T</span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="branch-visual-contents">
+									<!-- item -->
+									<div class="branch-visual-contents-item">
+										<div class="branch-visual-contents-block">
+											<div class="branch-visual-contents-info">
+												<div class="branch-visual-contents-info-inner" style="background-image: url('/mkca20/images/my-branch/_dummy/mybranch-topbg-01-purple.png')">
+													<div class="branch-visual-contents-title">원더카드 T</div>
+													<div class="branch-visual-contents-text">한장에 담은 SK통신·주유 혜택</div>
+													<div class="branch-visual-contents-num">1</div>
+												</div>
+											</div>
+											<div class="branch-visual-contents-card">
+												<div class="branch-visual-contents-card-inner">
+													<div class="branch-visual-contents-card-object">
+														<!-- DD : 이미지 있을 때 -->
+														<div class="card-image">
+															<div class="card-image-inner">
+																<img src="/images/_dummy/card-club-primus.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- // item -->
+									<div class="branch-visual-contents-item">
+										<div class="branch-visual-contents-block">
+											<div class="branch-visual-contents-info">
+												<div class="branch-visual-contents-info-inner" style="background-image: url('/mkca20/images/my-branch/_dummy/mybranch-topbg-02-blue.png')">
+													<div class="branch-visual-contents-title">원더카드 T</div>
+													<div class="branch-visual-contents-text">한장에 담은 SK통신·주유 혜택</div>
+													<div class="branch-visual-contents-num">2</div>
+												</div>
+											</div>
+											<div class="branch-visual-contents-card">
+												<div class="branch-visual-contents-card-inner">
+													<div class="branch-visual-contents-card-object">
+														<!-- DD : 이미지 있을 때 -->
+														<div class="card-image">
+															<div class="card-image-inner">
+																<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="branch-visual-contents-item">
+										<div class="branch-visual-contents-block">
+											<div class="branch-visual-contents-info">
+												<div class="branch-visual-contents-info-inner" style="background-image: url('/mkca20/images/my-branch/_dummy/mybranch-topbg-04-green.png')">
+													<div class="branch-visual-contents-title">원더카드 T</div>
+													<div class="branch-visual-contents-text">한장에 담은 SK통신·주유 혜택</div>
+													<div class="branch-visual-contents-num">3</div>
+												</div>
+											</div>
+											<div class="branch-visual-contents-card">
+												<div class="branch-visual-contents-card-inner">
+													<div class="branch-visual-contents-card-object">
+														<!-- DD : 이미지 에러 -->
+														<div class="card-image">
+															<div class="card-image-inner">
+																<img src="/images/_dummy/" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="branch-visual-contents-item">
+										<div class="branch-visual-contents-block">
+											<div class="branch-visual-contents-info">
+												<div class="branch-visual-contents-info-inner" style="background-image: url('/mkca20/images/my-branch/_dummy/mybranch-topbg-02-blue.png')">
+													<div class="branch-visual-contents-title">원더카드 T</div>
+													<div class="branch-visual-contents-text">한장에 담은 SK통신·주유 혜택</div>
+													<div class="branch-visual-contents-num">4</div>
+												</div>
+											</div>
+											<div class="branch-visual-contents-card">
+												<div class="branch-visual-contents-card-inner">
+													<div class="branch-visual-contents-card-object">
+														<!-- DD : 이미지 없을 때 -->
+														<div class="card-image">
+															<div class="card-image-inner"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // top visual -->
+						<!-- // 2023.04.12 : mod : 상단 비쥬얼 구조 수정 -->
+
+						<!-- branch-nav-area -->
+						<div class="branch-nav-area type-normal js-ui-accordion" data-focus-open="false">
+							<div class="branch-nav-inner js-ui-accordion__item">
+								<button type="button" class="branch-nav-opener js-ui-accordion__opener">
+									<span class="for-a11y">
+										탭 영역
+										<span class="open-text">펼치기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="branch-nav-layer js-ui-accordion__layer">
+									<div class="branch-nav-contents">
+										<div class="branch-nav-list">
+											<div class="branch-nav-item">
+												<a href="#branch1" class="branch-nav-link js-hash-scroll-link">원더카드</a>
+											</div>
+											<div class="branch-nav-item">
+												<a href="#branch2" class="branch-nav-link js-hash-scroll-link">내맘대로쁨/MULTI</a>
+											</div>
+											<div class="branch-nav-item">
+												<a href="#branch3" class="branch-nav-link js-hash-scroll-link">생활</a>
+											</div>
+											<div class="branch-nav-item">
+												<a href="#branch4" class="branch-nav-link js-hash-scroll-link">마트/쇼핑</a>
+											</div>
+											<div class="branch-nav-item">
+												<a href="#branch5" class="branch-nav-link js-hash-scroll-link">통신/교통</a>
+											</div>
+											<div class="branch-nav-item">
+												<a href="#branch6" class="branch-nav-link js-hash-scroll-link">항공/여행/레저</a>
+											</div>
+											<div class="branch-nav-item">
+												<a href="#branch7" class="branch-nav-link js-hash-scroll-link">프리미엄</a>
+											</div>
+											<div class="branch-nav-item">
+												<a href="#branch8" class="branch-nav-link js-hash-scroll-link">개인사업자/단체/기타</a>
+											</div>
+											<div class="branch-nav-item">
+												<a href="#branch9" class="branch-nav-link js-hash-scroll-link">체크카드</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //branch-nav-area -->
+
+						<!-- branch-section-group -->
+						<div class="branch-section-group">
+							<!-- section : 원더카드 / ONE THE CARD -->
+							<section class="branch-section" id="branch1">
+								<h3 class="branch-section-title">
+									원더카드 /<br />
+									ONE THE CARD
+								</h3>
+								<div class="branch-section-contents">
+									<div class="branch-cards">
+										<ul class="branch-card-list">
+											<!-- 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 없을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner"></div>
+															</div>
+															<!-- //DD : 이미지 없을 때 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">원더카드 T</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">SK통신, T우주 20%</li>
+																<li class="branch-card-benefit-item">SK주유, 11번가, 마트 10%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 에러 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card_.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //DD : 이미지 에러 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">K리그 축덕 Young Hana 체크카드 with OKcashbag</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">어학시험/외국어학원업종 5%</li>
+																<li class="branch-card-benefit-item">커피 20%</li>
+																<li class="branch-card-benefit-item">커피 20%</li>
+																<li class="branch-card-benefit-item">커피 20%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //DD : 이미지 있을 때 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">
+															원더카드<br />
+															HAPPY
+														</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">간편결제 5%</li>
+																<li class="branch-card-benefit-item">마트, 주유, 커피, 뷰티앤펫 5%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<!-- // 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+										</ul>
+									</div>
+								</div>
+							</section>
+							<!-- //section : 원더카드 / ONE THE CARD -->
+
+							<!-- section : 내맘대로 쁨 / MULTI Series -->
+							<section class="branch-section" id="branch2">
+								<h3 class="branch-section-title">
+									내맘대로 쁨 / <br />
+									MULTI Series
+								</h3>
+								<div class="branch-section-contents">
+									<div class="branch-cards">
+										<ul class="branch-card-list">
+											<!-- 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //DD : 이미지 있을 때 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">
+															원더카드<br />
+															HAPPY
+														</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">간편결제 5%</li>
+																<li class="branch-card-benefit-item">마트, 주유, 커피, 뷰티앤펫 5%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<!-- // 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+										</ul>
+									</div>
+								</div>
+							</section>
+							<!-- //section : 내맘대로 쁨 / MULTI Series -->
+
+							<!-- section : 생활 -->
+							<section class="branch-section" id="branch3">
+								<h3 class="branch-section-title">생활</h3>
+								<div class="branch-section-contents">
+									<div class="branch-cards">
+										<ul class="branch-card-list">
+											<!-- 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //DD : 이미지 있을 때 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">
+															원더카드<br />
+															HAPPY
+														</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">간편결제 5%</li>
+																<li class="branch-card-benefit-item">마트, 주유, 커피, 뷰티앤펫 5%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<!-- // 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+										</ul>
+									</div>
+								</div>
+							</section>
+							<!-- //section : 생활 -->
+
+							<!-- section : 마트 / 쇼핑 -->
+							<section class="branch-section" id="branch4">
+								<h3 class="branch-section-title">마트 / 쇼핑</h3>
+								<div class="branch-section-contents">
+									<div class="branch-cards">
+										<ul class="branch-card-list">
+											<!-- 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //DD : 이미지 있을 때 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">
+															원더카드<br />
+															HAPPY
+														</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">간편결제 5%</li>
+																<li class="branch-card-benefit-item">마트, 주유, 커피, 뷰티앤펫 5%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<!-- // 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+										</ul>
+									</div>
+								</div>
+							</section>
+							<!-- //section : 마트 / 쇼핑 -->
+
+							<!-- section : 통신 / 교통 -->
+							<section class="branch-section" id="branch5">
+								<h3 class="branch-section-title">통신 / 교통</h3>
+								<div class="branch-section-contents">
+									<div class="branch-cards">
+										<ul class="branch-card-list">
+											<!-- 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //DD : 이미지 있을 때 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">
+															원더카드<br />
+															HAPPY
+														</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">간편결제 5%</li>
+																<li class="branch-card-benefit-item">마트, 주유, 커피, 뷰티앤펫 5%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<!-- // 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+										</ul>
+									</div>
+								</div>
+							</section>
+							<!-- //section : 통신 / 교통 -->
+
+							<!-- section : 항공 / 여행 / 레저 -->
+							<section class="branch-section" id="branch6">
+								<h3 class="branch-section-title">항공 / 여행 / 레저</h3>
+								<div class="branch-section-contents">
+									<div class="branch-cards">
+										<ul class="branch-card-list">
+											<!-- 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //DD : 이미지 있을 때 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">
+															원더카드<br />
+															HAPPY
+														</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">간편결제 5%</li>
+																<li class="branch-card-benefit-item">마트, 주유, 커피, 뷰티앤펫 5%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<!-- // 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+										</ul>
+									</div>
+								</div>
+							</section>
+							<!-- //section : 항공 / 여행 / 레저 -->
+
+							<!-- section : 프리미엄 -->
+							<section class="branch-section" id="branch7">
+								<h3 class="branch-section-title">프리미엄</h3>
+								<div class="branch-section-contents">
+									<div class="branch-cards">
+										<ul class="branch-card-list">
+											<!-- 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //DD : 이미지 있을 때 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">
+															원더카드<br />
+															HAPPY
+														</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">간편결제 5%</li>
+																<li class="branch-card-benefit-item">마트, 주유, 커피, 뷰티앤펫 5%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<!-- // 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+										</ul>
+									</div>
+								</div>
+							</section>
+							<!-- //section : 프리미엄 -->
+
+							<!-- section : 개인사업자 / 단체 / 기타 -->
+							<section class="branch-section" id="branch8">
+								<h3 class="branch-section-title">개인사업자 / 단체 / 기타</h3>
+								<div class="branch-section-contents">
+									<div class="branch-cards">
+										<ul class="branch-card-list">
+											<!-- 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //DD : 이미지 있을 때 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">
+															원더카드<br />
+															HAPPY
+														</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">간편결제 5%</li>
+																<li class="branch-card-benefit-item">마트, 주유, 커피, 뷰티앤펫 5%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<!-- // 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+										</ul>
+									</div>
+								</div>
+							</section>
+							<!-- //section : 개인사업자 / 단체 / 기타 -->
+
+							<!-- section : 체크카드 -->
+							<section class="branch-section" id="branch9">
+								<h3 class="branch-section-title">체크카드</h3>
+								<div class="branch-section-contents">
+									<div class="branch-cards">
+										<ul class="branch-card-list">
+											<!-- 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+											<li class="branch-card-item">
+												<a href="" class="branch-card-block">
+													<div class="branch-card-image">
+														<div class="branch-card-image-inner">
+															<!-- DD : 이미지 있을 때 -->
+															<div class="card-image">
+																<div class="card-image-inner">
+																	<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //DD : 이미지 있을 때 -->
+														</div>
+													</div>
+													<div class="branch-card-info">
+														<span class="branch-card-name">
+															원더카드<br />
+															HAPPY
+														</span>
+														<div class="branch-card-benefit">
+															<ul class="branch-card-benefit-list">
+																<li class="branch-card-benefit-item">간편결제 5%</li>
+																<li class="branch-card-benefit-item">마트, 주유, 커피, 뷰티앤펫 5%</li>
+															</ul>
+														</div>
+													</div>
+												</a>
+											</li>
+											<!-- // 2023.04.14 : mod : .branch-card-block a 태그로 변경 -->
+										</ul>
+									</div>
+								</div>
+							</section>
+							<!-- //section : 체크카드 -->
+						</div>
+						<!-- //branch-section-group -->
+
+						<div class="use-guide-area js-ui-accordion">
+							<div class="use-guide-item js-ui-accordion__item">
+								<button type="button" class="use-guide-opener js-ui-accordion__opener">
+									확인해주세요
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-guide-contents js-ui-accordion__layer">
+									<ul class="info-list type-inherit type-outside">
+										<li class="info-item">상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</li>
+										<li class="info-item">신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.</li>
+										<li class="info-item">일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.</li>
+										<li class="info-item">
+											<div>
+												연체이자율(약정이율+최대 3%)은 회원별·이용상품별로 차등 적용되며, 법정 최고금리(20%)를 초과하지 않습니다.<br />
+												단, 연체 발생 시점에 약정이율이 없는 경우는 아래와 같이 적용함
+											</div>
+											<ul class="info-list type-inherit">
+												<li class="info-item type-indent">- 일시불 거래 연체 시 : 거래발생 시점의 최소기간(2개월) 유이자 할부금리</li>
+												<li class="info-item type-indent">- 무이자 할부 거래 연체 시 : 거래발생 시점의 동일한 할부 계약기간의 유이자 할부금리</li>
+											</ul>
+										</li>
+										<li class="info-item color-blur-dark">1Q Global VIVA, K리그 축덕 하나멤버스 1Q Play 1카드는 현재 국내외겸용 브랜드만 발급 가능합니다.</li>
+										<li class="info-item color-blur-dark">My Trip SKYPASS 카드 MY flight, My Trip AsianaClub 카드 My flight 는 현재 국내외겸용 브랜드(Mastercard)만 발급 가능합니다.</li>
+										<li class="info-item color-blur-dark">상세혜택 및 이용조건은 카드발급 신청 시 상품설명서 및 상품약관을 반드시 확인하시기 바랍니다.</li>
+										<li class="info-item color-blur-dark">각 카드별 혜택 및 자세한 이용조건은 카드안내/신청 페이지에서 확인하세요.</li>
+										<li class="info-item type-indent margin-top-18"><span class="info-bottom-text">준법심의 A-20-3104(2020.12.21 ~ 9999.12.31 현재)</span></li>
+									</ul>
+									<!-- //2022.08.18 : mod : 문구수정 -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/my-branch.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

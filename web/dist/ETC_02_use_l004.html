@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-my-consumption-analysis">내 소비 분석</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 내 소비 분석-->
+			<div class="layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-my-consumption-analysis">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">내 소비 분석</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<div class="total-amount type-no-line margin-bottom-none">
+										<div class="total-amount-head">
+											<span class="total-amount-title">9월 명세서</span>
+										</div>
+										<div class="total-amount-val">총 18,880,017 원</div>
+
+										<!-- [DD] 지난달 대비 케이스별 노출 텍스트 -->
+										<div data-checkbox-tab-panel="monthToggle">
+											<!--  지출 많을 경우 -->
+											<p class="total-amount-info">지난달보다 <span class="color-primary">0,000</span>원 더 썼어요</p>
+											<!-- 지출 적을 경우 -->
+											<p class="total-amount-info">지난달보다 <span class="color-primary">0,000</span>원 절약했어요</p>
+										</div>
+
+										<!-- [DD] 작년 대비 케이스별 노출 텍스트 -->
+										<div data-checkbox-tab-panel="yearToggle">
+											<!-- 지출 많을 경우 -->
+											<p class="total-amount-info">작년보다 <span class="color-primary">0,000</span>원 더 썼어요</p>
+											<!-- 지출 적을 경우 -->
+											<p class="total-amount-info">작년보다 <span class="color-primary">0,000</span>원 절약했어요</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="page-section type-line">
+									<div class="ui-radio-group type-toggle">
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="radioToggle" id="monthToggle" data-checkbox-tab="monthToggle" checked />
+											<label for="monthToggle" class="ui-label">
+												<span class="ui-label-text">월간</span>
+											</label>
+										</div>
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="radioToggle" id="yearToggle" data-checkbox-tab="yearToggle" />
+											<label for="yearToggle" class="ui-label">
+												<span class="ui-label-text">연간</span>
+											</label>
+										</div>
+									</div>
+
+									<div class="chart-area">
+										<div class="chart chart-month" data-checkbox-tab-panel="monthToggle">
+											<div class="chart-box">
+												<div class="bar-list">
+													<div class="bar-item" style="height: 22%">
+														<span class="chart-date">9월</span>
+														<button type="button" class="bar-item-button">
+															<!-- 2022.04.27 : mod : 문구 변경 -->
+															<span class="for-a11y"> 상세 금액 보기 </span>
+															<!-- //2022.04.27 : mod : 문구 변경 -->
+														</button>
+														<div class="chart-bubble">
+															<span class="chart-bubble-text">18,880 원</span>
+														</div>
+													</div>
+													<!-- [DD] 활성화시 is-active 클래스 추가 -->
+													<div class="bar-item is-active" style="height: 100%">
+														<span class="chart-date">10월</span>
+														<button type="button" class="bar-item-button">
+															<!-- 2022.04.27 : mod : 문구 변경 -->
+															<span class="for-a11y"> 상세 금액 보기 </span>
+															<!-- //2022.04.27 : mod : 문구 변경 -->
+														</button>
+														<div class="chart-bubble">
+															<span class="chart-bubble-text">20,880,017 원</span>
+														</div>
+													</div>
+													<div class="bar-item" style="height: 40%">
+														<span class="chart-date">11월</span>
+														<button type="button" class="bar-item-button">
+															<!-- 2022.04.27 : mod : 문구 변경 -->
+															<span class="for-a11y"> 상세 금액 보기 </span>
+															<!-- //2022.04.27 : mod : 문구 변경 -->
+														</button>
+														<div class="chart-bubble">
+															<span class="chart-bubble-text">15,000,000 원</span>
+														</div>
+													</div>
+													<div class="bar-item" style="height: 75%">
+														<span class="chart-date">12월</span>
+														<button type="button" class="bar-item-button">
+															<!-- 2022.04.27 : mod : 문구 변경 -->
+															<span class="for-a11y"> 상세 금액 보기 </span>
+															<!-- //2022.04.27 : mod : 문구 변경 -->
+														</button>
+														<div class="chart-bubble">
+															<span class="chart-bubble-text">18,880,017 원</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="chart chart-year" data-checkbox-tab-panel="yearToggle">
+											<div class="chart-box">
+												<div class="bar-list">
+													<!-- [DD] 활성화시 is-active 클래스 추가 -->
+													<div class="bar-item is-active" style="height: 100%">
+														<span class="chart-date">2019년</span>
+														<button type="button" class="bar-item-button">
+															<!-- 2022.04.27 : mod : 문구 변경 -->
+															<span class="for-a11y"> 상세 금액 보기 </span>
+															<!-- //2022.04.27 : mod : 문구 변경 -->
+														</button>
+														<div class="chart-bubble">
+															<span class="chart-bubble-text">100,000,000 원</span>
+														</div>
+													</div>
+													<div class="bar-item" style="height: 40%">
+														<span class="chart-date">2020년</span>
+														<button type="button" class="bar-item-button">
+															<!-- 2022.04.27 : mod : 문구 변경 -->
+															<span class="for-a11y"> 상세 금액 보기 </span>
+															<!-- //2022.04.27 : mod : 문구 변경 -->
+														</button>
+														<div class="chart-bubble">
+															<span class="chart-bubble-text">50,000,000 원</span>
+														</div>
+													</div>
+													<div class="bar-item" style="height: 60%">
+														<span class="chart-date">2021년</span>
+														<button type="button" class="bar-item-button">
+															<!-- 2022.04.27 : mod : 문구 변경 -->
+															<span class="for-a11y"> 상세 금액 보기 </span>
+															<!-- //2022.04.27 : mod : 문구 변경 -->
+														</button>
+														<div class="chart-bubble">
+															<span class="chart-bubble-text">200,000,000 원</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-bottom">
+										<div class="ui-buttons">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item">
+													<a href="" class="ui-basic-button type-secondary type-small" role="button">
+														<span class="ui-arrow type-black">내 지출 한눈에</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 내 소비 분석-->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-my-consumption-analysis');
+
+				// 2022.04.27 : mod : 차트 스크립트 수정
+				$('.bar-item-button').each(function () {
+					var $this = $(this);
+
+					if ($this.closest('.bar-item').hasClass('is-active')) {
+						$this.prop('disabled', true).attr('disabled', '');
+					}
+				});
+				$('.bar-item-button').on('click', function () {
+					var $this = $(this);
+					var $thisItem = $this.closest('.bar-item');
+					var $items = $this.closest('.bar-list').find('.bar-item');
+					var $buttons = $items.find('.bar-item-button');
+
+					$thisItem.addClass('is-active');
+					$items.not($thisItem).removeClass('is-active');
+					$this.prop('disabled', true).attr('disabled', '');
+					$buttons.not($this).prop('disabled', false).removeAttr('disabled');
+				});
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

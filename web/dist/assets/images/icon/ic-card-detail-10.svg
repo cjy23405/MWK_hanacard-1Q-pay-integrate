@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+    <g transform="translate(-74 -166)">
+        <g data-name="그룹 11808" transform="translate(-170 -1052)">
+            <rect data-name="사각형 7186" width="27" height="27" rx="8" transform="translate(244 1218)" style="fill:#f5f6f8"/>
+        </g>
+        <g data-name="사각형 14181" style="stroke-linecap:round;stroke-linejoin:round;stroke:#111;fill:none">
+            <path d="M2 0h11a2 2 0 0 1 2 2v4H0V2a2 2 0 0 1 2-2z" style="stroke:none" transform="translate(80 178.75)"/>
+            <path d="M2 .5h11A1.5 1.5 0 0 1 14.5 2v3.5h0-14 0V2A1.5 1.5 0 0 1 2 .5z" style="fill:none" transform="translate(80 178.75)"/>
+        </g>
+        <g data-name="빼기 4" style="stroke-linecap:round;stroke-linejoin:round;fill:none">
+            <path d="M-3046 7h-13V2a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v5z" style="stroke:none" transform="translate(3140 172.75)"/>
+            <path d="M-3047 6V2c0-.551-.449-1-1-1h-9a1 1 0 0 0-1 1v4h11m1 1h-13V2c0-1.103.897-2 2-2h9c1.103 0 2 .897 2 2v5z" style="fill:#111;stroke:none" transform="translate(3140 172.75)"/>
+        </g>
+        <g data-name="그룹 11986">
+            <g data-name="사각형 14148" transform="translate(83 176.25)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#111;fill:none">
+                <rect width="4" height="3.5" rx="1" style="stroke:none"/>
+                <rect x=".5" y=".5" width="3" height="2.5" rx=".5" style="fill:none"/>
+            </g>
+            <g data-name="사각형 14149" transform="translate(88 176.25)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#111;fill:none">
+                <rect width="4" height="3.5" rx="1" style="stroke:none"/>
+                <rect x=".5" y=".5" width="3" height="2.5" rx=".5" style="fill:none"/>
+            </g>
+        </g>
+        <rect data-name="사각형 18063" width="1" height="2.5" rx=".5" transform="translate(80 183.75)" style="fill:#111"/>
+        <rect data-name="사각형 18064" width="1" height="2.5" rx=".5" transform="translate(94 183.75)" style="fill:#111"/>
+    </g>
+</svg>

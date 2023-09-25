@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+    <defs>
+        <clipPath id="a">
+            <path data-name="touch area" transform="translate(317.5 398.499)" style="opacity:0;fill:#fff" d="M0 0h21v21H0z"/>
+        </clipPath>
+    </defs>
+    <g transform="translate(-317.5 -398.499)" style="clip-path:url(#a)">
+        <g data-name="빼기 345" style="fill:#fff">
+            <path d="M-18470.977 15682.986a7.495 7.495 0 0 1-5.334-2.748 7.496 7.496 0 0 0 5.334 2.745v.003z" style="stroke:none" transform="translate(18796.801 -15266.5)"/>
+            <path d="M-18470.5 15684.001c-4.686 0-8.5-3.814-8.5-8.5 0-4.688 3.814-8.501 8.5-8.501s8.5 3.813 8.5 8.501a8.46 8.46 0 0 1-.463 2.773h-2.156c.412-.867.621-1.8.621-2.773a6.509 6.509 0 0 0-6.502-6.502 6.509 6.509 0 0 0-6.502 6.502c0 3.582 2.916 6.497 6.502 6.497.176 0 .326-.006.473-.019l.105 2.002c-.195.014-.385.02-.578.02z" style="fill:#111;stroke:none" transform="translate(18796.801 -15266.5)"/>
+        </g>
+        <circle data-name="타원 1921" cx="1" cy="1" r="1" transform="translate(325.801 415.48)" style="fill:#111"/>
+        <path data-name="패스 12357" d="M298 240v5h-5" transform="rotate(51 139.572 366.053)" style="fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/>
+    </g>
+</svg>

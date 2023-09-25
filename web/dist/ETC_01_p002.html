@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">장기미이용카드 유지신청</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">카드를 선택해 주세요.</h2>
+
+						<div class="page-section">
+							<div class="section-title">
+								<h3 class="title type-flexible">전체카드</h3>
+								<div class="ui-checkbox-block">
+									<input type="checkbox" name="checkbox" class="ui-checkbox" id="checkboxGroupAll" data-checkbox-group="checkboxGroup" />
+									<label for="checkboxGroupAll" class="ui-label">
+										<span class="ui-checkbox-object"></span>
+										<span class="ui-label-text">전체 선택</span>
+									</label>
+								</div>
+							</div>
+
+							<div class="card-list-area type-default">
+								<ul class="card-list">
+									<!-- DD : 이미지 없을 때 -->
+									<li class="card-item">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-1" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkboxLarge1-1" class="ui-label">
+												<span class="card-block">
+													<span class="ui-checkbox-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="card-image">
+														<span class="card-image-inner"></span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">[본인] 하나골드 클럽 멤버스 스카이 패스 카드</span>
+														<div class="card-number">4048-12**-****-1234</div>
+													</div>
+												</span>
+											</label>
+										</div>
+										<div class="card-layer-contents">
+											<div class="form-detail-block">
+												<dl class="form-detail-list type-text-default">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">상태</dt>
+														<dd class="form-detail-group color-wrong"><strong>사용정지</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">사용 정지일</dt>
+														<dd class="form-detail-group"><strong>2022.06.12</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">해지 예정일</dt>
+														<dd class="form-detail-group"><strong>2022.06.12</strong></dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</li>
+									<!-- //DD : 이미지 없을 때 -->
+
+									<!-- DD : 이미지 에러 -->
+									<li class="card-item">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-2" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkboxLarge1-2" class="ui-label">
+												<span class="card-block">
+													<span class="ui-checkbox-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<!-- 2022.04.27 : mod : alt값 변경 -->
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">[가족/홍길동] 하나1Q My카드</span>
+														<div class="card-number">4048-12**-****-1234</div>
+													</div>
+												</span>
+											</label>
+										</div>
+										<div class="card-layer-contents">
+											<div class="form-detail-block">
+												<dl class="form-detail-list type-text-default">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">상태</dt>
+														<dd class="form-detail-group color-primary"><strong>정상</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">사용 정지일</dt>
+														<dd class="form-detail-group"><strong>2022.06.12</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">해지 예정일</dt>
+														<dd class="form-detail-group"><strong>2022.06.12</strong></dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</li>
+									<!-- //DD : 이미지 에러 -->
+
+									<!-- DD : 이미지 있을 때 -->
+									<li class="card-item">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-3" data-checkbox-group-child="checkboxGroup" />
+											<label for="checkboxLarge1-3" class="ui-label">
+												<span class="card-block">
+													<span class="ui-checkbox-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<!-- 2022.04.27 : mod : alt값 변경 -->
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">[가족/홍길동] 하나1Q My카드</span>
+														<div class="card-number">4048-12**-****-1234</div>
+													</div>
+												</span>
+											</label>
+										</div>
+										<div class="card-layer-contents">
+											<div class="form-detail-block">
+												<dl class="form-detail-list type-text-default">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">상태</dt>
+														<dd class="form-detail-group color-primary"><strong>정상</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">사용 정지일</dt>
+														<dd class="form-detail-group"><strong>2022.06.12</strong></dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">해지 예정일</dt>
+														<dd class="form-detail-group"><strong>2022.06.12</strong></dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</li>
+									<!-- //DD : 이미지 있을 때 -->
+								</ul>
+							</div>
+
+							<ul class="info-list margin-top-35">
+								<li class="info-item type-presa">보유 포인트는 카드의 이용정지 또는 해지에 따라 이용이 제한 될 수 있습니다.</li>
+							</ul>
+
+							<a href="" class="ui-arrow type-black type-aside margin-top-10" role="button">포인트 조회</a>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<div class="use-notice-section">
+										<dl class="use-notice-group">
+											<dt class="group-title">장기미이용카드란</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">최근 1년간 이용내역이 없는 휴면카드를 의미하며, 별도의 유지신청이 없을 시 개인회원 표준약관 제7조4에 의거 해지됨을 알려드립니다.</li>
+												</ul>
+											</dd>
+
+											<dt class="group-title">안내</dt>
+											<dd class="group-contents">
+												<ul class="info-list">
+													<li class="info-item">카드해지 이후 현금인출 기능을 사용할 수 없습니다.</li>
+													<li class="info-item">소유하고 계신 모든 카드가 휴면카드일 경우, 최종 소지카드 해지일에 회원 탈회될 수 있습니다..</li>
+													<li class="info-item">
+														보유 포인트는 유효기간까지 보존되며, 카드의 이용정지 또는 해지에 따라 이용이 제한 될 수 있습니다. 포인트 사용방법 및 소멸기간에 관한 세부내용은 홈페이지 및 고객센터로
+														문의하여 주시기 바랍니다.
+													</li>
+												</ul>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">신청</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

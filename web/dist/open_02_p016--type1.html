@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">계좌관리</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section-group">
+							<div class="section-title margin-bottom-15">
+								<h3 class="title">은행</h3>
+							</div>
+							<div class="section-contents">
+								<div class="card-list-area">
+									<ul class="card-list type-inner-box">
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 없을 때 -->
+												<div class="logo-image">
+													<div class="logo-image-inner"></div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="card-info">
+													<h4 class="card-name basic-text">우리은행</h4>
+													<div class="card-number-block">
+														<div class="card-number">
+															<span class="card-number-item">011020112341311</span>
+														</div>
+													</div>
+													<div class="ui-checkbox-list">
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox1-1-1" checked />
+															<label for="checkbox1-1-1" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">조회</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox1-1-2" />
+															<label for="checkbox1-1-2" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">출금</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<button type="button" class="ui-arrow type-small">계좌삭제</button>
+											</div>
+										</li>
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 에러 -->
+												<div class="logo-image">
+													<div class="logo-image-inner">
+														<!-- 2022.04.27 : mod : alt값 변경 -->
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/logo-hana-card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="card-info">
+													<h4 class="card-name basic-text">우리은행</h4>
+													<div class="card-number-block">
+														<div class="card-number">
+															<span class="card-number-item">011020112341311</span>
+														</div>
+													</div>
+													<div class="ui-checkbox-list">
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox1-2-1" checked />
+															<label for="checkbox1-2-1" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">조회</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox1-2-2" />
+															<label for="checkbox1-2-2" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">출금</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<button type="button" class="ui-arrow type-small">계좌삭제</button>
+											</div>
+										</li>
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 있을 때 -->
+												<div class="logo-image">
+													<div class="logo-image-inner">
+														<!-- 2022.04.27 : mod : alt값 변경 -->
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="card-info">
+													<h4 class="card-name basic-text">우리은행</h4>
+													<div class="card-number-block">
+														<div class="card-number">
+															<span class="card-number-item">011020112341311</span>
+														</div>
+													</div>
+													<div class="ui-checkbox-list">
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox1-3-1" checked />
+															<label for="checkbox1-3-1" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">조회</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox1-3-2" />
+															<label for="checkbox1-3-2" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">출금</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<button type="button" class="ui-arrow type-small">계좌삭제</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section-group">
+							<div class="section-title margin-bottom-15">
+								<h3 class="title">증권사</h3>
+							</div>
+							<div class="section-contents">
+								<div class="card-list-area">
+									<ul class="card-list type-inner-box">
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 없을 때 -->
+												<div class="logo-image">
+													<div class="logo-image-inner"></div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="card-info">
+													<h4 class="card-name basic-text">KB증권</h4>
+													<div class="card-number-block">
+														<div class="card-number">
+															<span class="card-number-item">011020112341311</span>
+														</div>
+													</div>
+													<div class="ui-checkbox-list">
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox2-1-1" checked />
+															<label for="checkbox2-1-1" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">조회</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox2-1-2" />
+															<label for="checkbox2-1-2" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">출금</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<button type="button" class="ui-arrow type-small">계좌삭제</button>
+											</div>
+										</li>
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 에러 -->
+												<div class="logo-image">
+													<div class="logo-image-inner">
+														<!-- 2022.04.27 : mod : alt값 변경 -->
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/logo-hana-card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="card-info">
+													<h4 class="card-name basic-text">KB증권</h4>
+													<div class="card-number-block">
+														<div class="card-number">
+															<span class="card-number-item">011020112341311</span>
+														</div>
+													</div>
+													<div class="ui-checkbox-list">
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox2-2-1" checked />
+															<label for="checkbox2-2-1" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">조회</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox2-2-2" />
+															<label for="checkbox2-2-2" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">출금</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<button type="button" class="ui-arrow type-small">계좌삭제</button>
+											</div>
+										</li>
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<!-- DD : 이미지 있을 때 -->
+												<div class="logo-image">
+													<div class="logo-image-inner">
+														<!-- 2022.04.27 : mod : alt값 변경 -->
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+												<div class="card-info">
+													<h4 class="card-name basic-text">KB증권</h4>
+													<div class="card-number-block">
+														<div class="card-number">
+															<span class="card-number-item">011020112341311</span>
+														</div>
+													</div>
+													<div class="ui-checkbox-list">
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox2-3-1" checked />
+															<label for="checkbox2-3-1" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">조회</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="checkbox2-3-2" />
+															<label for="checkbox2-3-2" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">출금</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<button type="button" class="ui-arrow type-small">계좌삭제</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 2022.02.25 : del : 토스트 얼럿 방식 변경
+			< !-- layer: 해지완료 팝업 -- >
+			<div class="layer-wrap layer-toast" data-layer="layer-failed-delete-account" data-layer-timer-close="2000">
+				<div class="layer-container">
+					<div class="ui-toast">
+						<p class="ui-toast-message">
+							KB국민은행 011020112341311<br />
+							계좌 삭제에 실패했습니다.
+						</p>
+					</div>
+				</div>
+			</div>
+			< !-- //layer: 해지완료 팝업 -- >
+			-->
+
+			<!-- 2022.02.25 : add : 토스트 얼럿 방식 변경 -->
+			<div class="ui-toast-alert" id="toastAlert"></div>
+			<!-- //2022.02.25 : add : 토스트 얼럿 방식 변경 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+		<script>
+			$(function () {
+				// 2022.02.25 : mod : 토스트 얼럿 방식 변경
+				uiJSToastAlert('#toastAlert', 'KB국민은행 011020112341311\n계좌 삭제에 실패했습니다.');
+			});
+		</script>
+	</body>
+</html>

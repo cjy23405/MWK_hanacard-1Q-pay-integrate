@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- 2022.04.06 : mod : 헤더 공통 수정 -->
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">대출신청</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+				<!--// 2022.04.06 : mod : 헤더 공통 수정 -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-privacy">
+						<h2 class="page-title">
+							하나카드 신차할부<br />
+							대출조건 확인 및 확정
+						</h2>
+
+						<!-- 생년월일 -->
+						<div class="page-info">
+							<p class="page-info-text">
+								거래 확인을 위해<br />
+								생년월일 6자리를 입력해 주세요.
+							</p>
+						</div>
+
+						<button type="button" class="privacy-area" title="생년월일 여섯자리 입력">
+							<div class="privacy-item is-active">
+								<span class="for-a11y">첫번째 자리</span>
+								<span class="for-a11y enter-text">입력됨</span>
+							</div>
+							<div class="privacy-item">
+								<span class="for-a11y">두번째 자리</span>
+								<span class="for-a11y enter-text">입력됨</span>
+							</div>
+							<div class="privacy-item">
+								<span class="for-a11y">세번째 자리</span>
+								<span class="for-a11y enter-text">입력됨</span>
+							</div>
+							<div class="privacy-item">
+								<span class="for-a11y">네번째 자리</span>
+								<span class="for-a11y enter-text">입력됨</span>
+							</div>
+							<div class="privacy-item">
+								<span class="for-a11y">다섯번째 자리</span>
+								<span class="for-a11y enter-text">입력됨</span>
+							</div>
+							<div class="privacy-item">
+								<span class="for-a11y">여섯번째 자리</span>
+								<span class="for-a11y enter-text">입력됨</span>
+							</div>
+						</button>
+						<!-- //생년월일 -->
+
+						<!-- 주민등록번호 -->
+						<div class="page-info">
+							<p class="page-info-text">
+								거래 확인을 위해<br />
+								주민등록번호 13자리를 입력해 주세요.
+							</p>
+						</div>
+						<button type="button" class="privacy-area" title="주민등록번호 열세자리 입력">
+							<div class="privacy-group">
+								<div class="privacy-item is-active">
+									<span class="for-a11y">첫번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">두번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">세번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">네번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">다섯번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">여섯번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+							</div>
+							<span class="hyphen">-</span>
+							<div class="privacy-group">
+								<div class="privacy-item is-active">
+									<span class="for-a11y">일곱번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">여덟번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">아홉번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">열번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">열한번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">열두번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+								<div class="privacy-item">
+									<span class="for-a11y">열세번째 자리</span>
+									<span class="for-a11y enter-text">입력됨</span>
+								</div>
+							</div>
+						</button>
+						<!-- //주민등록번호 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

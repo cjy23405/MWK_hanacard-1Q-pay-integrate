@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-card-register-list">전체카드 리스트</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 전체카드 리스트 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-card-register-list">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">카드를 선택해 주세요.</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="section-title">
+									<div class="ui-checkbox-block section-title-right">
+										<input type="checkbox" name="checkbox" class="ui-checkbox" id="checkboxGroupAll" data-checkbox-group="checkboxGroup" />
+										<label for="checkboxGroupAll" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">전체 선택</span>
+										</label>
+									</div>
+								</div>
+
+								<div class="card-list-area margin-top-25">
+									<ul class="card-list">
+										<li class="card-item">
+											<div class="ui-checkbox-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-1" data-checkbox-group-child="checkboxGroup" />
+												<label for="checkboxLarge1-1" class="ui-label">
+													<span class="card-block">
+														<span class="ui-checkbox-object"></span>
+														<!-- DD : 이미지 없을 때 -->
+														<span class="card-image">
+															<span class="card-image-inner"></span>
+														</span>
+														<div class="card-info">
+															<span class="card-name">CLUB SK (클럽 SK) 카드</span>
+														</div>
+													</span>
+												</label>
+											</div>
+										</li>
+										<li class="card-item">
+											<div class="ui-checkbox-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-2" data-checkbox-group-child="checkboxGroup" />
+												<label for="checkboxLarge1-2" class="ui-label">
+													<span class="card-block">
+														<span class="ui-checkbox-object"></span>
+														<!-- DD : 이미지 에러 -->
+														<span class="card-image">
+															<span class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</span>
+														</span>
+														<div class="card-info">
+															<span class="card-name">My Trip SKYPASS 카드</span>
+														</div>
+													</span>
+												</label>
+											</div>
+										</li>
+										<li class="card-item">
+											<div class="ui-checkbox-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-3" data-checkbox-group-child="checkboxGroup" />
+												<label for="checkboxLarge1-3" class="ui-label">
+													<span class="card-block">
+														<span class="ui-checkbox-object"></span>
+														<!-- DD : 이미지 있을 때 -->
+														<span class="card-image">
+															<span class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</span>
+														</span>
+														<div class="card-info">
+															<span class="card-name">My Trip SKYPASS 카드</span>
+														</div>
+													</span>
+												</label>
+											</div>
+										</li>
+										<li class="card-item">
+											<div class="ui-checkbox-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-4" data-checkbox-group-child="checkboxGroup" />
+												<label for="checkboxLarge1-4" class="ui-label">
+													<span class="card-block">
+														<span class="ui-checkbox-object"></span>
+														<!-- DD : 이미지 있을 때 -->
+														<span class="card-image">
+															<span class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</span>
+														</span>
+														<div class="card-info">
+															<span class="card-name">My Trip SKYPASS 카드</span>
+														</div>
+													</span>
+												</label>
+											</div>
+										</li>
+										<li class="card-item">
+											<div class="ui-checkbox-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-5" data-checkbox-group-child="checkboxGroup" />
+												<label for="checkboxLarge1-5" class="ui-label">
+													<span class="card-block">
+														<span class="ui-checkbox-object"></span>
+														<!-- DD : 이미지 있을 때 -->
+														<span class="card-image">
+															<span class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</span>
+														</span>
+														<div class="card-info">
+															<span class="card-name">My Trip SKYPASS 카드</span>
+														</div>
+													</span>
+												</label>
+											</div>
+										</li>
+										<li class="card-item">
+											<div class="ui-checkbox-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-6" data-checkbox-group-child="checkboxGroup" />
+												<label for="checkboxLarge1-6" class="ui-label">
+													<span class="card-block">
+														<span class="ui-checkbox-object"></span>
+														<!-- DD : 이미지 있을 때 -->
+														<span class="card-image">
+															<span class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</span>
+														</span>
+														<div class="card-info">
+															<span class="card-name">My Trip SKYPASS 카드</span>
+														</div>
+													</span>
+												</label>
+											</div>
+										</li>
+										<li class="card-item">
+											<div class="ui-checkbox-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-7" data-checkbox-group-child="checkboxGroup" />
+												<label for="checkboxLarge1-7" class="ui-label">
+													<span class="card-block">
+														<span class="ui-checkbox-object"></span>
+														<!-- DD : 이미지 있을 때 -->
+														<span class="card-image">
+															<span class="card-image-inner">
+																<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+																<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</span>
+														</span>
+														<div class="card-info">
+															<span class="card-name">My Trip SKYPASS 카드</span>
+														</div>
+													</span>
+												</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 전체카드 리스트 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-card-register-list');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

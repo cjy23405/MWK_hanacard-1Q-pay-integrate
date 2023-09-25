@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-1,.cls-2,.cls-4{fill:none}.cls-2,.cls-4{stroke:#2d3239}.cls-2{stroke-width:1.5px}.cls-3{fill:#fff}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_cardissuance_2" transform="translate(102.5 -622)">
+        <path id="사각형_12182" data-name="사각형 12182" class="cls-1" transform="translate(-102.5 622)" d="M0 0h50v50H0z"/>
+        <g id="사각형_13469" data-name="사각형 13469" class="cls-2" transform="translate(-90.5 637.001)">
+            <rect class="cls-7" width="26" height="21" rx="5"/>
+            <rect class="cls-1" x=".75" y=".75" width="24.5" height="19.5" rx="4.25"/>
+        </g>
+        <circle id="타원_1746" data-name="타원 1746" class="cls-3" cx="4.595" cy="4.595" r="4.595" transform="translate(-71.352 644.931)"/>
+        <g id="타원_1747" data-name="타원 1747" class="cls-2" transform="translate(-84.75 642)">
+            <circle class="cls-7" cx="2.75" cy="2.75" r="2.75"/>
+            <circle class="cls-1" cx="2.75" cy="2.75" r="2"/>
+        </g>
+        <g id="사각형_13470" data-name="사각형 13470" class="cls-2">
+            <path class="cls-7" d="M3 0h3a3 3 0 0 1 3 3v3H0V3a3 3 0 0 1 3-3z" transform="translate(-86.5 648)"/>
+            <path class="cls-1" d="M3 .75h3A2.25 2.25 0 0 1 8.25 3v1.5a.75.75 0 0 1-.75.75h-6a.75.75 0 0 1-.75-.75V3A2.25 2.25 0 0 1 3 .75z" transform="translate(-86.5 648)"/>
+        </g>
+        <path id="사각형_13471" data-name="사각형 13471" class="cls-3" transform="translate(-86.563 651.75)" d="M0 0h9.19v2.974H0z"/>
+        <g id="타원_1748" data-name="타원 1748" class="cls-4" transform="translate(-86.5 651)">
+            <circle class="cls-7" cx=".75" cy=".75" r=".75"/>
+            <circle class="cls-1" cx=".75" cy=".75" r=".25"/>
+        </g>
+        <g id="타원_1749" data-name="타원 1749" class="cls-4" transform="translate(-79 651)">
+            <circle class="cls-7" cx=".75" cy=".75" r=".75"/>
+            <circle class="cls-1" cx=".75" cy=".75" r=".25"/>
+        </g>
+        <g id="사각형_13472" data-name="사각형 13472" class="cls-4" transform="rotate(90 -356.75 287.25)">
+            <rect class="cls-7" width="1.5" height="7" rx=".75"/>
+            <rect class="cls-1" x=".5" y=".5" width=".5" height="6" rx=".25"/>
+        </g>
+        <g id="사각형_13473" data-name="사각형 13473" class="cls-4" transform="rotate(90 -359.5 287)">
+            <rect class="cls-7" width="1.5" height="4" rx=".75"/>
+            <rect class="cls-1" x=".5" y=".5" width=".5" height="3" rx=".25"/>
+        </g>
+        <circle id="타원_1750" data-name="타원 1750" cx="4.595" cy="4.595" r="4.595" transform="translate(-68.352 646.443)" style="fill:#7dedf3"/>
+        <g id="사각형_13474" data-name="사각형 13474" transform="rotate(-45 757.39 402.315)" style="fill:#111;stroke:#2d3239">
+            <rect class="cls-7" width="1.5" height="4.5" rx=".75"/>
+            <rect class="cls-1" x=".5" y=".5" width=".5" height="3.5" rx=".25"/>
+        </g>
+        <g id="타원_1751" data-name="타원 1751" class="cls-2" transform="translate(-70.648 644.931)">
+            <circle class="cls-7" cx="5.251" cy="5.251" r="5.251"/>
+            <circle class="cls-1" cx="5.251" cy="5.251" r="4.501"/>
+        </g>
+    </g>
+</svg>

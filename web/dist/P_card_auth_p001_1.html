@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 2</span> 약관동의와 본인인증을<br />
+							진행해 주세요.
+						</h2>
+						<nav class="page-progress" aria-label="progress">
+							<ol class="progress-tracker">
+								<li class="progress-step"><span class="for-a11y">STEP 1</span></li>
+								<li class="progress-step is-active" aria-current="step"><span class="for-a11y">STEP 2</span></li>
+							</ol>
+						</nav>
+
+						<div class="page-section">
+
+							<div class="page-section-group">
+								<div class="section-title">
+									<h3 class="title">약관동의</h3>
+								</div>
+								<div class="section-contents margin-top-25">
+									<div class="ui-select-multiple-list">
+										<div class="ui-select-multiple-item type-all">
+											<div class="ui-checkbox-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox-all" data-checkbox-group="selectCheckbox" />
+												<label for="selectCheckbox-all" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">전체동의</span>
+												</label>
+											</div>
+										</div>
+										<div class="ui-select-terms">
+											<div class="ui-select-terms-list-group">
+												<!-- 2022.04.04 체크박스 없는 케이스 삭제 -->
+												<!-- 빠른 진행 신청 동의 -->
+												<div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item js-accordion-opened" data-initial-open="true">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<!-- Case : checked + disabled -->
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" data-checkbox-group-child="selectCheckbox">
+															<label for="selectCheckbox1-1" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">빠른 진행 신청 동의</span>
+															</label>
+															<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener js-accordion-active">
+																<span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+														<div class="ui-select-terms-layer js-ui-accordion__layer js-accordion-opened" style="display: block; height: auto;">
+															<div class="ui-select-terms-contents">
+																<p class="paragraph">정보제공에 동의해주시면 빠른 카드발급이 진행됩니다.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- //빠른 진행 신청 동의 -->
+                                                <!-- 약관 및 주요 안내사항 동의 -->
+												<div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item" data-initial-open="true" style="">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2" data-checkbox-group-child="selectCheckbox" data-checkbox-group="selectCheckbox1-2">
+															<label for="selectCheckbox1-2" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">약관 및 주요 안내사항 동의</span>
+															</label>
+                                                            <button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+                                                            <span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+														<div class="ui-select-terms-layer js-ui-accordion__layer" style="">
+															<div class="ui-select-terms-contents">
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2-1" data-checkbox-group-child="selectCheckbox1-2">
+																		<label for="selectCheckbox1-2-1" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">개인회원 표준약관</span>
+																		</label>
+																	</div>
+																</div>
+                                                                <div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2-2" data-checkbox-group-child="selectCheckbox1-2">
+																		<label for="selectCheckbox1-2-2" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">주요 거래 조건 및 고객정보취급방침 안내 주요거래 조건 및 고객정보취급방침에 대해 충분히 설명을 들었고, 이해하였음을 확인합니다.</span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- //약관 및 주요 안내사항 동의 -->
+                                                <!-- 개인(신용)정보 필수적 동의서 -->
+												<div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item" data-initial-open="true" style="">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3" data-checkbox-group-child="selectCheckbox" data-checkbox-group="selectCheckbox1-3">
+															<label for="selectCheckbox1-3" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">개인(신용)정보 필수적 동의서</span>
+															</label>
+															<button type="button" class="ui-arrow type-black type-big"><span class="for-a11y">약관 상세 보기</span></button>
+															<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+																<span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+														<div class="ui-select-terms-layer js-ui-accordion__layer" style="">
+															<div class="ui-select-terms-contents">
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-list-title">
+																		<p class="paragraph">수집/이용에 관한 사항</p>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-1-1" data-checkbox-group-child="selectCheckbox1-3">
+																			<label for="selectCheckbox1-3-1-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">고유식별정보수집/이용 동의</span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-1-2" data-checkbox-group-child="selectCheckbox1-3">
+																			<label for="selectCheckbox1-3-1-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-list-title">
+																		<p class="paragraph">조회에 관한 사항</p>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-2-1" data-checkbox-group-child="selectCheckbox1-3">
+																			<label for="selectCheckbox1-3-2-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">고유식별정보수집/이용 동의</span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-2-2" data-checkbox-group-child="selectCheckbox1-3">
+																			<label for="selectCheckbox1-3-2-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-list-title">
+																		<p class="paragraph">제공에 관한 사항</p>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-1" data-checkbox-group-child="selectCheckbox1-3" data-checkbox-group="selectCheckbox1-3-3-1">
+																			<label for="selectCheckbox1-3-3-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">종합신용정보 집중기관 및 신용정보회사에 개인(신용)정보 제공</span>
+																			</label>
+																			<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																        </div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-1-1" data-checkbox-group-child="selectCheckbox1-3-3-1" checked="checked">
+																				<label for="selectCheckbox1-3-3-1-1" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">고유식별정보수집/이용 동의</span>
+																				</label>
+																				<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-1-2" data-checkbox-group-child="selectCheckbox1-3-3-1">
+																				<label for="selectCheckbox1-3-3-1-2" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																				</label>
+																				<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-2" data-checkbox-group-child="selectCheckbox1-3" data-checkbox-group="selectCheckbox1-3-3-2" checked="checked">
+																			<label for="selectCheckbox1-3-3-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">여신금융협회등에 개인(신용)정보 제공</span>
+																			</label>
+																			<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-2-1" data-checkbox-group-child="selectCheckbox1-3-3-2">
+																				<label for="selectCheckbox1-3-3-2-1" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">고유식별정보수집/이용 동의</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-2-2" data-checkbox-group-child="selectCheckbox1-3-3-2">
+																				<label for="selectCheckbox1-3-3-2-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-3" data-checkbox-group-child="selectCheckbox1-3" data-checkbox-group="selectCheckbox1-3-3-3" checked="checked">
+																			<label for="selectCheckbox1-3-3-3" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text"> 고객이 요청한 서비스의 이행유지를 위한 서비스 제공업체에 개인(신용)정보 제공 (고객이 신청한 서비스에 한함) </span>
+																			</label>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-3-1" data-checkbox-group-child="selectCheckbox1-3-3-3">
+																				<label for="selectCheckbox1-3-3-3-1" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">고유식별정보수집/이용 동의</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-3-2" data-checkbox-group-child="selectCheckbox1-3-3-3">
+																				<label for="selectCheckbox1-3-3-3-2" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-4" data-checkbox-group-child="selectCheckbox1-3" data-checkbox-group="selectCheckbox1-3-3-4">
+																			<label for="selectCheckbox1-3-3-4" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">
+																					은행연계서비스의 이행유지를 위한<br>
+																					개인(신용)정보 제공 (결제계좌 및 여수신 등 은행상품 거래자에 한함)
+																				</span>
+																			</label>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-4-1" data-checkbox-group-child="selectCheckbox1-3-3-4">
+																				<label for="selectCheckbox1-3-3-4-1" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">고유식별정보수집/이용 동의</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-3-3-4-2" data-checkbox-group-child="selectCheckbox1-3-3-4">
+																				<label for="selectCheckbox1-3-3-4-2" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+												             </div>
+														</div>
+													</div>
+												</div>
+												<!-- //개인(신용)정보 필수적 동의서 -->
+                                                <!-- 개인(신용)정보 선택적 동의서-->
+                                                <div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item js-accordion-opened" data-initial-open="true">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4" data-checkbox-group-child="selectCheckbox" data-checkbox-group="selectCheckbox1-4">
+															<label for="selectCheckbox1-4" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">개인(신용)정보 선택적 동의서</span>
+															</label>
+															<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener js-accordion-active">
+															<span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+														<div class="ui-select-terms-layer js-ui-accordion__layer js-accordion-opened" style="display: block; height: auto;">
+														<div class="ui-select-terms-contents">
+																<!-- 2022.04.04 체크박스 없는 케이스 삭제 -->
+																<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1" data-checkbox-group-child="selectCheckbox1-4" data-checkbox-group="selectCheckbox1-4-1">
+																		<label for="selectCheckbox1-4-1" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">수집/이용에 관한 사항</span>
+																		</label>
+																	</div>
+																	<!-- 2022.04.04 체크박스 없는 케이스 삭제 -->
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-1" data-checkbox-group-child="selectCheckbox1-4-1" data-checkbox-group="selectCheckbox1-4-1-1">
+																			<label for="selectCheckbox1-4-1-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">카드상품안내 및 이용권유를 위한 수집/이용</span>
+																			</label>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-1-1" data-checkbox-group-child="selectCheckbox1-4-1-1">
+																				<label for="selectCheckbox1-4-1-1-1" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">고유식별정보수집/이용 동의</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-1-2" data-checkbox-group-child="selectCheckbox1-4-1-1">
+																				<label for="selectCheckbox1-4-1-1-2" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2" data-checkbox-group-child="selectCheckbox1-4-1" data-checkbox-group="selectCheckbox1-4-1-2">
+																			<label for="selectCheckbox1-4-1-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">카드상품 이외의 부수 서비스 안내 등을 위한 수집/이용</span>
+																			</label>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2-1" data-checkbox-group-child="selectCheckbox1-4-1-2">
+																				<label for="selectCheckbox1-4-1-2-1" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">고유식별정보수집/이용 동의</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2-2" data-checkbox-group-child="selectCheckbox1-4-1-2">
+																				<label for="selectCheckbox1-4-1-2-2" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2-3" data-checkbox-group-child="selectCheckbox1-4-1-2" data-checkbox-group="selectCheckbox1-4-1-2-3">
+																				<label for="selectCheckbox1-4-1-2-3" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">전자적 전송매체를 통한 광고성 정보 수신 동의</span>
+																				</label>
+																			</div>
+																			<div class="ui-select-terms-item-group type-col2">
+																				<div class="ui-select-terms-item">
+																					<div class="ui-checkbox-block">
+																						<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2-3-1" data-checkbox-group-child="selectCheckbox1-4-1-2-3">
+																						<label for="selectCheckbox1-4-1-2-3-1" class="ui-label">
+																							<span class="ui-checkbox-object"></span>
+																							<span class="ui-label-text">문자</span>
+																						</label>
+																					</div>
+																				</div>
+																				<div class="ui-select-terms-item">
+																					<div class="ui-checkbox-block">
+																						<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2-3-2" data-checkbox-group-child="selectCheckbox1-4-1-2-3">
+																						<label for="selectCheckbox1-4-1-2-3-2" class="ui-label">
+																							<span class="ui-checkbox-object"></span>
+																							<span class="ui-label-text">이메일</span>
+																						</label>
+																					</div>
+																				</div>
+																				<div class="ui-select-terms-item">
+																					<div class="ui-checkbox-block">
+																						<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2-3-3" data-checkbox-group-child="selectCheckbox1-4-1-2-3">
+																						<label for="selectCheckbox1-4-1-2-3-3" class="ui-label">
+																							<span class="ui-checkbox-object"></span>
+																							<span class="ui-label-text">전화</span>
+																						</label>
+																					</div>
+																				</div>
+																				<div class="ui-select-terms-item">
+																					<div class="ui-checkbox-block">
+																						<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2-3-4" data-checkbox-group-child="selectCheckbox1-4-1-2-3">
+																						<label for="selectCheckbox1-4-1-2-3-4" class="ui-label">
+																							<span class="ui-checkbox-object"></span>
+																							<span class="ui-label-text">DM</span>
+																						</label>
+																					</div>
+																				</div>
+																				<div class="ui-select-terms-item">
+																					<div class="ui-checkbox-block">
+																						<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-1-2-3-5" data-checkbox-group-child="selectCheckbox1-4-1-2-3">
+																						<label for="selectCheckbox1-4-1-2-3-5" class="ui-label">
+																							<span class="ui-checkbox-object"></span>
+																							<span class="ui-label-text">App push</span>
+																						</label>
+																					</div>
+																				</div>
+																			</div>
+																			</div>
+																	    </div>
+																   </div>
+																   <div class="ui-select-terms-item">
+																	<div class="ui-checkbox-block">
+																		<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2" data-checkbox-group-child="selectCheckbox1-4" data-checkbox-group="selectCheckbox1-4-2">
+																		<label for="selectCheckbox1-4-2" class="ui-label">
+																			<span class="ui-checkbox-object"></span>
+																			<span class="ui-label-text">제공에 관한 사항</span>
+																		</label>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1" data-checkbox-group-child="selectCheckbox1-4-2" data-checkbox-group="selectCheckbox1-4-2-1">
+																				<label for="selectCheckbox1-4-2-1" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">하나은행 등 하나금융그룹 자회사에 제공</span>
+																				</label>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-1-1" data-checkbox-group-child="selectCheckbox1-4-2-1">
+																					<label for="selectCheckbox1-4-2-1-1" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																					</label>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="ui-select-terms-item">
+																			<div class="ui-checkbox-block">
+																				<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-2" data-checkbox-group-child="selectCheckbox1-4-2" data-checkbox-group="selectCheckbox1-4-2-2">
+																				<label for="selectCheckbox1-4-2-2" class="ui-label">
+																					<span class="ui-checkbox-object"></span>
+																					<span class="ui-label-text">부정사용 방지 등의 목적달성을 위한 개인(신용)정보 제공</span>
+																				</label>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-2-1" data-checkbox-group-child="selectCheckbox1-4-2-2">
+																					<label for="selectCheckbox1-4-2-2-1" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">하나생명보험(주)</span>
+																					</label>
+																				</div>
+																			</div>
+																			<div class="ui-select-terms-item">
+																				<div class="ui-checkbox-block">
+																					<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-4-2-2-2" data-checkbox-group-child="selectCheckbox1-4-2-2">
+																					<label for="selectCheckbox1-4-2-2-2" class="ui-label">
+																						<span class="ui-checkbox-object"></span>
+																						<span class="ui-label-text">하나생명보험(주)</span>
+																					</label>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+                                                <!-- //개인(신용)정보 선택적 동의서-->
+                                                <!-- 제휴서비스 관련 주요안내사항 및 약관 동의-->
+                                                <div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox3-1" data-checkbox-group-child="selectCheckbox">
+															<label for="selectCheckbox3-1" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">제휴서비스 관련 주요안내사항 및 약관 동의</span>
+															</label>
+															<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+                                                            <span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+														<div class="ui-select-terms-layer js-ui-accordion__layer">
+															<div class="ui-select-terms-contents">
+																<p class="paragraph">
+																	내용내용<br>
+																	내용내용
+																</p>
+															</div>
+														</div>
+                                                     </div>
+												</div>
+                                                <!-- //제휴서비스 관련 주요안내사항 및 약관 동의-->
+                                                <!-- 금융서비스 동의-->
+                                                <div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox3-2" data-checkbox-group-child="selectCheckbox">
+															<label for="selectCheckbox3-2" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">금융서비스 동의</span>
+															</label>
+															<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+                                                            <span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+														<div class="ui-select-terms-layer js-ui-accordion__layer">
+															<div class="ui-select-terms-contents">
+																<p class="paragraph">
+																	내용내용<br>
+																	내용내용
+																</p>
+															</div>
+														</div>
+                                                     </div>
+												</div>
+                                                <!-- //금융서비스 동의-->
+                                                <!-- 하나머니 이용약관-->
+                                                <div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item js-accordion-opened" data-initial-open="true">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-5" data-checkbox-group-child="selectCheckbox" data-checkbox-group="selectCheckbox1-5">
+															<label for="selectCheckbox1-5" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">하나머니 서비스 가입 약관(선택)</span>
+															</label>
+															<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener js-accordion-active">
+															<span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>  
+                                                        <div class="ui-select-terms-layer js-ui-accordion__layer js-accordion-opened" style="display: block; height: auto;">
+														   <div class="ui-select-terms-contents">
+                                                               <div class="ui-select-terms-item">
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-5-1" data-checkbox-group-child="selectCheckbox1-5">
+																			<label for="selectCheckbox1-5-1" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">(필수)서비스 이용약관 동의</span>
+																			</label>
+																			<button type="button" class="ui-arrow" data-layer-open="layer-clause-detail"><span class="for-a11y">약관 상세 보기</span></button>
+																		</div>
+																	</div>
+																</div>
+
+												              	<div class="ui-select-terms-item">
+																	<div class="ui-checkbox-list-title">
+																		<p class="paragraph">개인(신용)정보 필수적 동의</p>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-5-2" data-checkbox-group-child="selectCheckbox1-5">
+																			<label for="selectCheckbox1-5-2" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">(필수)수집&middot;이용에 관한 사항</span>
+																			</label>
+																			<button type="button" class="ui-arrow" data-layer-open="layer-clause-detail02"><span class="for-a11y">약관 상세 보기</span></button>
+																		</div>
+																	</div>
+																	<div class="ui-select-terms-item">
+																		<div class="ui-checkbox-block">
+																			<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-5-3" data-checkbox-group-child="selectCheckbox1-5">
+																			<label for="selectCheckbox1-5-3" class="ui-label">
+																				<span class="ui-checkbox-object"></span>
+																				<span class="ui-label-text">(필수)제공에 관한 사항</span>
+																			</label>
+																			<button type="button" class="ui-arrow" data-layer-open="layer-clause-detail03"><span class="for-a11y">약관 상세 보기</span></button>
+																		</div>
+																	</div>
+																</div>
+												           </div>
+														</div>
+													</div>
+												</div>
+                                                <!-- //하나머니 이용약관-->
+                                                <!-- 우편명세서 대체발송 동의-->
+                                                <div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox3-3" data-checkbox-group-child="selectCheckbox">
+															<label for="selectCheckbox3-3" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">우편명세서 대체발송 동의</span>
+															</label>
+															<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+                                                            <span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+														<div class="ui-select-terms-layer js-ui-accordion__layer">
+															<div class="ui-select-terms-contents">
+																<p class="paragraph">
+																	내용내용<br>
+																	내용내용
+																</p>
+															</div>
+														</div>
+                                                     </div>
+												</div>
+                                                <!-- //우편명세서 대체발송 동의-->
+                                                <!-- 모바일 약관교부 동의-->
+                                                <div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox3-4" data-checkbox-group-child="selectCheckbox">
+															<label for="selectCheckbox3-4" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">모바일 약관교부 동의</span>
+															</label>
+															<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+                                                            <span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+														<div class="ui-select-terms-layer js-ui-accordion__layer">
+															<div class="ui-select-terms-contents">
+																<p class="paragraph">
+																	내용내용<br>
+																	내용내용
+																</p>
+															</div>
+														</div>
+                                                     </div>
+												</div>
+                                                <!-- //모바일 약관교부 동의-->
+                                                <!-- 카카오 알림톡 수신 신청-->
+                                                <div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox3-5" data-checkbox-group-child="selectCheckbox">
+															<label for="selectCheckbox3-5" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">카카오 알림톡 수신 신청</span>
+															</label>
+															<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+                                                            <span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+														<div class="ui-select-terms-layer js-ui-accordion__layer">
+															<div class="ui-select-terms-contents">
+																<p class="paragraph">
+																	내용내용<br>
+																	내용내용
+																</p>
+															</div>
+														</div>
+                                                     </div>
+												</div>
+                                                <!-- //카카오 알림톡 수신 신청-->
+                                                <!-- 카드의 실제 소유자입니다-->
+                                                <div class="ui-select-terms-list js-ui-accordion">
+													<div class="ui-select-terms-item js-ui-accordion__item">
+														<!-- 2022.04.18 : mod : type-large-secondary 클래스 값 추가 -->
+														<div class="ui-checkbox-block type-large type-large-secondary">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox3-6" data-checkbox-group-child="selectCheckbox">
+															<label for="selectCheckbox3-6" class="ui-label">
+																<span class="ui-checkbox-object"></span>
+																<span class="ui-label-text">카드의 실제 소유자입니다</span>
+															</label>
+															<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+                                                            <span class="for-a11y">
+																	상세내용
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+														<div class="ui-select-terms-layer js-ui-accordion__layer">
+															<div class="ui-select-terms-contents">
+																<p class="paragraph">
+																	내용내용<br>
+																	내용내용
+																</p>
+															</div>
+														</div>
+                                                     </div>
+												</div>
+                                                <!-- //카드의 실제 소유자입니다-->
+								            </div>
+									   </div>
+								  </div>
+							 </div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="section-title">
+								<h3 class="title">본인인증</h3>
+							</div>
+							<div class="section-contents">
+								<div class="js-ui-tab-panel page-tab-panel type-certificate">
+									<div class="ui-tab">
+										<ul class="ui-tab-list">
+											<li class="ui-tab-item">
+												<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-auth">공동인증서</button>
+											</li>
+											<li class="ui-tab-item">
+												<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-phone">휴대폰</button>
+											</li>
+											<li class="ui-tab-item">
+												<button type="button" class="ui-button ui-tab-link" data-tab-open="certificate-card">카드</button>
+											</li>
+										</ul>
+									</div>
+
+									<!-- tab contents -->
+									<!-- tab: 공동인증서 -->
+									<div class="ui-tab-panel panel-card" data-tab="certificate-auth">
+										<div style="line-height: 250px; background-color: var(--gray-30); text-align: center; text-decoration: underline">
+											<a href="_certificate.html" target="_blank">공통 인증 영역 참고</a>
+										</div>
+									</div>
+									<!-- //tab: 공동인증서 -->
+
+									<!-- tab: 휴대폰 -->
+									<div class="ui-tab-panel panel-phone" data-tab="certificate-phone">
+										<div style="line-height: 250px; background-color: var(--gray-30); text-align: center; text-decoration: underline">
+											<a href="_certificate.html" target="_blank">공통 인증 영역 참고</a>
+										</div>
+									</div>
+									<!-- //tab: 휴대폰 -->
+
+									<!-- tab: 카드 -->
+									<div class="ui-tab-panel panel-card" data-tab="certificate-card">
+										<div style="line-height: 250px; background-color: var(--gray-30); text-align: center; text-decoration: underline">
+											<a href="_certificate.html" target="_blank">공통 인증 영역 참고</a>
+										</div>
+									</div>
+									<!-- //tab: 카드 -->
+									<!-- //tab contents -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item">
+								<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+            <!-- layer: 하나머니 서비스 이용약관 -->
+			<div class="layer-wrap layer-wrap--full layer-clause-detail" data-layer="layer-clause-detail">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="for-a11y">약관 상세</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="wcms-data">
+									<section class="clause-data">
+										<h1 class="wcms-title-large">
+											하나머니 서비스 이용약관
+										</h1>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small wcms-size-normal">제 1장 총칙</h2>
+											<h2 class="wcms-title-small">제 1 조(목적)</h2>
+											<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												이 약관은 하나카드 주식회사(이하 "회사"라 합니다.)가 회원에게 제공하는 하나머니 서비스와 관련하여 필요한 회원과 회사간의 권리, 의무 및 책임사항, 이용에 따른 이용조건 및 절차 등 기타 제반 사항을 규정함을 목적으로 합니다.
+											</p>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 2 조(용어의 정의)</h2>
+											<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												이 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.
+											</p>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"하나머니 서비스"(이하 "서비스")란 회사가 제공하는 서비스로서 하나머니를 적립·충전·사용하는 서비스를 말합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"하나머니 서비스 회원"(이하 "회원")이란 회사 또는 제휴사의 영업점이나 홈페이지를 통해 약관에 정해진 가입절차에 따라 가입하여 정상적으로 서비스를 이용할 수 있는 권한을 부여받은 고객을 말합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"하나머니 서비스 준회원"(이하 "준회원")이란 하나카드를 발급받아 하나머니를 보유하고 있는 회원을 말하며, 별도의 가입 절차는 없습니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"하나머니 서비스 제휴사"(이하, "제휴사")란 제휴 계약을 체결한 하나금융그룹 계열회사 또는 일반 제휴 업체를 말합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="5.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"하나머니 서비스 제휴가맹점"(이하 "제휴 가맹점")이란 회사와 제휴 가맹점 계약을 체결한 가맹점 또는 제휴사의 가맹점 또는 회사가 발급한 신용/체크카드 등을 이용하는 경우 하나머니의 적립 또는 사용이 가능한 회사의 제휴 가맹점을 말합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="6.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"하나머니"란 회원이 서비스를 이용하기 위하여 취득, 사용하는 선불전자지급수단의 일종인 포인트를 가리키는 것으로서 그 취득 및 사용 등에 관한 구체적인 사항은 본 약관에 기술된 바와 같으며, 다음 각 목과 같은 하나머니의 유형별로 구분해 관리됩니다. 
+														</div>
+														<ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	적립 하나머니 : 회원이 제휴사 및 제휴 가맹점에서 상품을 구매하거나 서비스를 이용하고 그에 따른 대금을 결제했을 때 또는 회사가 발급한 신용/체크카드 등을 이용하는 경우 해당 상품 약관에 따라 회사가 회원에게 적립해 드리는 하나머니
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	충전 하나머니 : 회원이 미리 직접 대가를 지급하여 회사가 발행한 하나머니 
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	전환 하나머니 : 회원이 기존에 보유한 하나카드 하나머니와 하나은행이 제공한 YES포인트가 하나머니 서비스 회원 가입에 따라 전환된 하나머니 또는 하나금융 계열회사 외 제휴사 운영 포인트를 회원이 전환한 하나머니로서 적립 하나머니 또는 충전 하나머니로 관리됩니다.
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="7.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"하나머니 카드"란 회원이 이를 제시함으로써 제휴사 및 제휴 가맹점에서 서비스를 이용할 수 있는 증표로서 회사가 발행한 신용/체크 카드(모바일 카드 포함) 및 모바일 어플리케이션의 바코드 등을 말합니다.  
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="8.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"모바일 어플리케이션"(이하 "APP(앱)")이란 회원이 본인 소유의 모바일 디바이스(스마트폰 등)에 다운로드를 받아 설치하여, 이를 제휴사 및 제휴 가맹점에 제시함으로서 서비스를 이용하거나, APP(앱) 내에서 서비스에서 제공하는 모바일 서비스를 이용할 수 있는 것을 말합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="9.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"은행선불"이란 회원이 스마트폰 어플리케이션 또는 웹 사이트에서 하나은행 또는 금융기관의 계좌 등과 연계하여 개인간 송금, 결제 등을 할 수 있도록 하나은행이 운영하는 선불 전자지갑수단(계정)의 서비스로서, 회사와 하나은행간 제휴 계약에 의해 회원에게 서비스 됩니다. 회원이 "은행선불"에 가입하여 이용함에 따라 발생하는 권리, 의무는 하나은행의 "은행선불"과 관련된 이용약관에 의하여 정하여 집니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="10.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"충전"이란 회원이 일정한 대가를 APP(앱) 등 회사가 정한 방법에 따라 하나머니로 저장·생성하는 것을 말합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="11.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"신용카드 충전"이란 회사가 정한 방법에 따라 본인명의의 신용카드를 결제하여 하나머니로 저장·생성하는 것으로서 하나카드 상품(하나BC 제외) 중 일부 충전 가능한 상품만 신용카드 충전이 가능합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="12.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"체크카드 충전"이란 회사가 정한 방법에 따라 본인명의의 체크카드를 결제하여 하나머니로 저장·생성하는 것으로서 하나카드 상품(하나BC 제외) 중 일부 충전이 가능한 상품만 체크카드 충전이 가능합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="13.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"직전 카드 충전 잔액"이란 회원이 신용카드 또는 체크카드 충전을 통해 최종적으로 취득한 하나머니 잔액을 말합니다.(최종 카드 충전 직전의 카드 충전 하나머니 잔액+최종 카드 충전 하나머니)
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="14.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"환급"이란 회원의 청구가 있을 때 하나머니 잔액을 회원과 회사 간에 약정한 방법과 절차에 따라 회원에게 반환하는 것을 말합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="15.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"계좌 연결"이란 본인 실지명의의 예금계좌를 연결하여 하나머니를 발행하기 위해 APP(앱)에 해당 계좌를 등록하는 것을 말합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="16.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"보내기"란 APP(앱)을 통하여 회원이 타회원 또는 비회원에게 하나머니를 전자적으로 보내는 행위를 의미합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="17.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"준회원 쿠폰 구매 서비스"란 회사가 판매 또는 제공하는 쿠폰을 준회원이 하나카드 하나머니로 구매할 수 있는 서비스로서, 서비스 제공을 위해 별도의 가입 또는 정보 조회, 이용 동의 등을 요구하지 않습니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="18.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"동전 적립 서비스"란 회사가 제휴한 가맹점에서 현금 결제 후 남는 잔돈으로 하나머니를 충전하는 서비스입니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="19.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															"동전 적립 제휴 가맹점"이란 동전적립 서비스 제공을 위해 회사와 별도로 제휴 계약을 맺은 가맹점을 말합니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 3 조(약관의 변경 등)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															이 약관을 변경할 경우 회사는 그 내용을 변경약관 시행일로부터 1개월 이전까지 홈페이지 및  APP(앱)에 게시하고 회원에게 서면, 전자우편(E-MAIL), 문자메시지(SMS, LMS 등) 중 1가지 이상의 방법으로 개별 통지하여 드립니다. (단, 문자메시지로 개별 통지는 회원이 동의한 경우에 한함)
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															제1항의 경우, "회원이 변경에 동의하지 아니한 경우 통지일로부터 1개월이내에 계약을 해지할수 있으며, 별도 계약해지 의사표시를 하지 않는 경우 변경에 동의한 것으로 본다"는 내용을 명시하여 통지합니다. 회원이 변경 예정일까지 이의를 제기하지 않았을 때에는 변경된 약관을 승인한 것으로 간주합니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 4 조(거래 내용의 확인)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회사는 홈페이지, APP(앱) 등의 조회 화면을 통하여 회원의 거래내용을 확인할 수 있도록 하며, 회원의 요청이 있으면 요청을 받은 날로부터 2주 이내에 팩스, 우편 또는 직접 교부의 방법으로 거래내용에 관한 서면을 교부합니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															제1항의 대상이 되는 거래내용의 종류는 다음 각 호와 같습니다.
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	거래의 종류, 금액, 일자 및 거래 상대방을 나타내는 정보
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	거래일시, 전자적 장치의 종류 및 전자적 장치를 식별할 수 있는 정보
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	거래에 관한 회원의 오류정정 요구사실 및 처리결과에 관한 사항
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="라.">
+																<div class="wcms-list-contents">
+																	전자금융거래 신청, 조건변경에 관한 내용
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원은 제1항에서 정한 서면 교부를 다음의 주소와 전화번호로 요청할 수 있습니다. 
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	주소: 서울특별시 중구 을지로 66 (을지로 2가) 하나카드 주식회사
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	이메일주소: hanamoney@hanafn.com
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	전화번호: 1800-0000
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 5 조(거래 지시의 철회)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															이용자가 하나머니로 대가를 지급하여 재화 또는 용역을 제공받고 거래 지시된 금액의 정보가 제휴사 및 제휴 가맹점 등이 지정한 전자적 장치에 도달한 이후에는 거래가 확정되어, 회사에 대하여 거래지시를 철회할 수 없습니다. 단, 제휴 가맹점의 단말기 등 전자적 장치의 조작 오류 등으로 거래지시 철회 사유가 발생했을 때에는 해당 거래 이후 별도의 추가 거래가 발생하기 이전 시점에 한하여 거래 지시를 철회할 수 있습니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															거래 확정으로 회사에 대하여 거래 지시를 철회할 수 없는 경우, 회원은 제휴 가맹점 등 거래상대방과의 약관, 법령 등에 따라 거래상대방에 대하여 청약 철회, 거래취소 등을 하여야 합니다. 
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	거래의 종류, 금액, 일자 및 거래 상대방을 나타내는 정보
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	거래일시, 전자적 장치의 종류 및 전자적 장치를 식별할 수 있는 정보
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	거래에 관한 회원의 오류정정 요구사실 및 처리결과에 관한 사항
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="라.">
+																<div class="wcms-list-contents">
+																	전자금융거래 신청, 조건변경에 관한 내용
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원은 제1항에서 정한 서면 교부를 다음의 주소와 전화번호로 요청할 수 있습니다. 
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	주소: 서울특별시 중구 을지로 66 (을지로 2가) 하나카드 주식회사
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	이메일주소: hanamoney@hanafn.com
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	전화번호: 1800-0000
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small wcms-size-normal">제 2장 서비스 이용계약</h2>
+											<h2 class="wcms-title-small">제 6 조(이용계약의 성립)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															서비스를 이용하고자 하시는 분이 이 약관에 동의하고, 회사가 정하는 절차를 통해 신청하면, 회사는 내부기준에 따른 심사 등을 거쳐 이에 대해 승낙함으로써 이용 계약이 성립됩니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															서비스 신청은 본인이 직접 이행하여야 하며, 이를 타인이 대신하게 하거나 인증번호 및 비밀번호 등의 정보를 타인에게 노출하여서는 안 됩니다. 
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 7 조(이용 신청에 대한 승낙의 제한)</h2>
+											<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												회사는 다음 각 호의 어느 하나에 해당하는 사유가 있는 경우 서비스 이용신청을 승낙하지 않을 수 있습니다.
+											</p>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															신청 내용에 허위, 기재 누락, 오기가 있는 경우
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															14세 미만인 경우 
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small wcms-size-normal">제 3 장 서비스의 이용</h2>
+											<h2 class="wcms-title-small">제 8 조(서비스의 이용)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원은 회사와 서비스 이용에 대한 계약을 체결한 제휴사 및 제휴 가맹점에서 서비스를 이용할 수 있습니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															서비스 이용이 가능한 제휴사 및 제휴 가맹점이 제공하는 서비스 내용은 회사와 제휴사 등이 약정하여 홈페이지, APP(앱) 등을 통해 안내합니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원은 APP(앱) 또는 회사가 발행한 신용/체크카드 등의 제시 및 카드번호를 직접 입력하는 등 회사가 제공하는 매체를 통해 이용이 가능하며, APP(앱) 비밀번호 혹은 카드 비밀번호 입력이 필요합니다.  
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															하나머니의 적립·충전·사용 내역은 APP(앱)의 PUSH알림 등을 통하여 회원에게 통보하여 드립니다. 다만, 회원이 이를 원하지 않으면 통보하지 아니할 수 있습니다.   
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 9 조(하나머니 적립)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원은 회사와 서비스 이용에 대한 계약을 체결한 제휴사 및 제휴 가맹점에서 하나머니를 적립할 수 있습니다. 하나머니의 적립 기준 및 적립 시점은 회사가 제휴사 및 제휴 가맹점과 약정하여 홈페이지, APP(앱) 등을 통해 안내합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															신용/체크카드 등의 사용에 따른 하나머니의 적립 기준 및 적립 시점은 해당 카드 상품 약관에 따르며, 이에 대한 세부 내용은 홈페이지, 하나카드 홈페이지, APP(앱) 등을 통해 안내합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															하나머니가 적립된 거래를 취소하는 경우 이미 적립된 하나머니 적립도 취소되며, 만약 적립된 하나머니의 사용으로 인해 취소할 하나머니가 없을 경우 회원의 보유한 잔여 적립 및 충전 하나머니에서 차감하거나, 향후 적립, 충전되는 하나머니에서 차감합니다. 
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 10 조(하나머니의 충전)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원은 아래와 같은 방법으로 하나머니를 충전할 수 있습니다.
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	계좌 연결된 예금 계좌에서 출금하는 방식
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	"은행선불"의 "선불전자지급수단"을 전환하는 방식
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	동전적립 제휴 가맹점에서 현금 결제 후 남는 잔돈을 저장하는 방식
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	제2조 제11호 및 제12호에 정의된 신용카드 및 체크카드 충전을 통한 방식
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	회원별 발급된 가상계좌를 통하여 충전하는 방식
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															본 조 제1항의 "선불전자지급수단" 전환 등의 "은행선불" 서비스를 이용하기 위해서는, "은행선불" 서비스 가입 및 동의 절차를 거쳐야 하며, "은행선불" 서비스 가입, 서비스에 관한 권리·의무의 발생 등 세부 내용은 하나은행에서 정한 "은행선불" 서비스 관련 약관에 따릅니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															본 조 제1항 제2호의 "은행선불"을 통한 하나머니 충전은 홈페이지, APP(앱) 등에서 안내합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															하나머니는 잔액한도 내에서 충전할 수 있으며 충전 잔액한도는 아래와 같습니다.
+														</div>
+                                                        <div class="wcms-table">
+												           <div class="wcms-table-inner">
+													          <table>
+														         <caption>
+															         충전 잔액한도 안내
+														         </caption>
+														         <colgroup>
+															         <col style="width: 33%">
+															         <col style="width: 33%">
+															         <col style="width: 33%">
+														         </colgroup>
+														         <tbody>
+															         <tr>
+																         <th>
+																	        구분
+																         </th>
+																         <th>
+																	        실지명의 확인되거나<br>예금계좌와 연결된 경우
+																         </th>
+																         <th>
+																	       실지명의 확인이 없거나<br>예금계좌와 연결되지 않은 경우
+																         </th>
+															         </tr>
+                                                                     <tr>
+                                                                         <td>
+																	       충전 잔액한도
+																         </td>
+                                                                         <td>
+																	       200만원
+																         </td>
+                                                                         <td>
+																	       50만원
+																         </td>
+                                                                     </tr>
+														         </tbody>
+													          </table>
+												           </div>
+											           </div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="5.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															제11조의 하나머니 사용 또는 제14조의 하나머니 보내기 등의 방법으로 사용한 충전 하나머니의 사용이 취소되어 충전 하나머니의 잔액이 제10조 제4항의 충전 한도를 넘을 경우, 회사는 이에 대해 별도 구분 관리하여 고객의 사용 가능 충전 하나머니의 잔액이 한도를 넘기지 않도록 합니다.
+                                                        </div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="6.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															신용카드 충전 및 체크카드 충전이 가능한 카드는 하나카드(하나BC 제외)에 한하며, 홈페이지,  APP(앱) 등을 통해 안내합니다.
+                                                        </div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="7.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															여신전문금융업법 시행령 제1조의2 1항 7호에 따라 신용카드로 충전할 수 있는 한도는 월 1백만원(선불카드 구매&middot;충전, 상품권 구매, 하나머니 카드 충전 금액을 합하여 산정)을 초과할 수 없습니다.
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 11 조(하나머니 사용)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															사용 가능한 하나머니를 보유한 회원은 제휴사, 제휴 가맹점에 하나머니 카드를 제시하는 등 회사가 정한 절차에 따라 상품 구매나 서비스 이용에 따른 대금의 일부 또는 전부를 하나머니로 결제할 수 있습니다. 단, 일부 제휴사 등에서는 결제가 제한될 수 있으며, 세부 내용은 회사와 제휴사 등이 약정하여 홈페이지, APP(앱) 등을 통해 안내합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															하나머니 사용을 위한 최저 기준은 1 하나머니이며, 1 하나머니는 1원의 가치를 가집니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원은 하나머니를 타인에게 대여 또는 담보의 목적으로 이용할 수 없습니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															적립된 각각의 하나머니 유효 기간이 다른 경우 유효 기간이 가장 먼저 도래하는 하나머니가 먼저 사용됩니다. 다만, 신용카드 및 체크카드 결제 방식으로 충전한 하나머니가 있을 경우 해당 하나머니가 가장 먼저 사용됩니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 12 조(하나카드 하나머니 및 하나은행 YES포인트의 전환)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원이 하나금융그룹 계열회사와의 거래(신용카드 사용, 하나은행 거래 실적 등)로 적립 받아 보유하고 있던 하나카드 하나머니 및 하나은행 YES포인트는 서비스 가입과 동시에 하나머니로 전환 되고, 이후 하나머니로 통합 관리됩니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															제1항에 따라 전환된 하나머니는 전환 이전 부여된 유효기간이 그대로 유지되고, 서비스 이용 정지 또는 이용 계약 해지 시 하나카드 하나머니 또는 하나은행 YES포인트로 복원되지 않습니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															하나카드 하나머니의 자동 전환이나 사용에 대해 규정하는 상품 또는 서비스를 이용하고 있는 경우, 해당 상품 또는 서비스 약관이 우선 적용 되며, 해당 상품 또는 서비스는 홈페이지, 하나카드 홈페이지, APP(앱) 등을 통해 안내합니다. 
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 13 조(하나금융 계열회사 외 제휴사 운영 포인트의 전환 또는 합산 사용)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원은 하나머니와 하나금융그룹 계열 회사가 아닌 제휴사가 운영하는 포인트를 상호 전환 또는 합산하여 사용할 수 있습니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															제1항의 포인트 전환 및 합산 사용에 대한 세부적인 절차와 기준 등의 내용은 회사와 제휴사 등이 약정하여 홈페이지, APP(앱) 등을 통해 안내합니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 14 조(하나머니 보내기 서비스)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															하나머니 보내기 서비스란 회원이 APP(앱)을 통해 본인의 하나머니를 타회원 또는 비회원에게 보낼 수 있는 서비스를 말합니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															하나머니 보내기 서비스의 1회 한도는 제10조 제4항에 따른 충전 잔액한도(전자금융거래법 상의 선불전자지급수단 발행권면한도)로 제한되며, 아래 각 호에 해당하는 경우 보내기가 불가능합니다.
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	제휴사의 보내기 제한 요청에 의해 보내기가 불가능함을 별도 안내한 제휴사 운영 포인트를 전환하여 취득한 하나머니
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	신용카드 충전 하나머니 및 체크카드 충전 하나머니
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	1일 1천만원을 초과하여 보내는 경우
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원이 타인에게 하나머니 보내기를 한 경우, 상대방이 승낙하기 전에는 언제든지 보내기 한 하나머니를 철회할 수 있으나, 상대방이 승낙한 이후에는 철회할 수 없습니다.  
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원이 타인에게 하나머니 보내기를 철회하거나 보내기 한 시점으로부터 3일이 지나도록 상대방이 승낙하지 않으면 즉시 회원에게 반환됩니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 15 조(하나머니 환급)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원이 하나머니의 환급을 요청한 경우 계좌 입금 등 회사가 정한 절차에 따라 환급할 수 있습니다. 환급의 절차는 홈페이지, APP(앱) 등을 통해 안내합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															하나머니의 환급은 1 하나머니부터 가능하며, 아래 각 호에 해당하는 경우 환급이 불가능합니다.
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	제휴사의 환급 제한 요청에 의해 환급이 불가능함을 별도 안내한 제휴사 운영 포인트를 전환하여 취득한 하나머니
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	신용카드 충전 하나머니 및 체크카드 충전 하나머니
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															위 제2항 제2호에도 불구하고 신용카드 및 체크카드 충전 하나머니는 제2조 제13호의 직전 카드 충전 잔액의 60%이상 사용 시 회원의 요청에 따라 환급 해 드립니다. 단, 회원이 '직전카드충전잔액'의 60% 이상을 사용하여 남아있는 잔액의 일부 또는 전부를 환급 받은 이후에 하나머니의 사용을 취소한 경우, 사용취소액만큼의 하나머니 잔액이 복원되며 해당 잔액은 계좌 입금 등의 방식으로 재환급되지 않습니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															다음 각 호에 해당하는 경우 하나머니 잔액 전액을 환급합니다. 단, 제3호의 카드 충전 하나머니 환급은 APP(앱)을 통해 신청할 수 있습니다.
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	천재지변 등의 사유로 제휴사 또는 제휴 가맹점이 재화 또는 용역을 제공하지 못하여 하나머니를 사용하지 못하게 된 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	서비스 자체의 결함으로 제휴사 또는 제휴 가맹점이 재화 또는 용역을 제공하지 못하는 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	신용카드 및 체크카드 충전 후 충전일로부터 7일 이내에 하나머니를 사용하지 않은 경우 경우(카드매출을 취소하는 방식으로 환급)
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 16 조(하나머니 유효기간 및 소멸)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												            적립 하나머니의 유효기간은 5년, 충전 하나머니의 유효 기간은 없으며, 유효 기간이 지난 하나머니는 자동으로 소멸 됩니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회사는 하나머니의 유효기간이 도래하여 하나머니를 소멸시키는 경우, 소멸예정 하나머니, 소멸시기 등 하나머니 소멸과 관련된 내용을 6개월 전부터 매월 이메일, APP(앱)의 PUSH 메시지 등을 통해 통지하도록 합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															서비스 이용정지 또는 이용계약 해지 등의 경우라도 잔여 하나머니는 유효기간 동안 유지되어야 하나, 회원이 개인정보삭제를 요청하는 경우에는 그러하지 아니합니다. 회사는 회원이 서비스 탈회나 개인정보삭제를 요청한 경우 서비스 탈회 또는 삭제 전 잔여 하나머니 소멸기간 및 사용방법에 대한 정보를 안내하여야 합니다. 다만, 회사의 개인정보유출 또는 전자금융거래법 등 금융 관련 법률 위반으로 인한 서비스 탈회나 개인정보삭제 요청인 경우, 회사는 잔여포인트 가치에 상응하는 별도의 보전조치를 하여야 합니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 17 조(서비스 이용의 중단)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												            회사는 시스템의 유지보수, 점검 등이 필요한 경우 서비스 제공을 중단할 수 있습니다. 이 경우 회사는 서비스 중단 예정사실 등을 홈페이지 또는 APP(앱)에 게시하고 이용자에게 서면, 전화, 전자우편, 휴대폰 메시지 등으로 30일 전에 안내합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															다음 각 호의 경우 회사는 사전 안내 없이 서비스를 중단할 수 있으며 이 경우 회원에게 서비스 중단 사실 등을 즉시 안내합니다.
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	긴급한 시스템 유지보수, 점검 등이 필요한 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	통신장애, 정전 등이 발생한 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	서비스 이용 급증 등으로 서비스 제공에 장애가 발생한 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="라.">
+																<div class="wcms-list-contents">
+																	해킹 등으로 회사 또는 회원에게 피해가 발생할 우려가 있는 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="마.">
+																<div class="wcms-list-contents">
+																	회사가 제공하는 추가적인 보안조치를 거부한 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="바.">
+																<div class="wcms-list-contents">
+																	기타 회원이 「여신전문금융업법」,「전자금융거래법」등 관련 법규를 위반한 경우
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 18 조(모바일 기기의 변경 및 신고)</h2>
+											<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												모바일 기기의 명의나 전화번호가 변경된 경우 회원은 기존 APP(앱)을 더 이상 사용할 수 없고, APP(앱)을 새로 설치하고 가입신청을 하여야 합니다. 
+											</p>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 19 조(서비스 탈회 및 이용 정지)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												            회원이 서비스 이용 계약을 해지하고자 할 경우에는 회사의 고객센터, 홈페이지 등을 통해 회사가 정한 절차를 거쳐 이용 계약을 해지합니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회사는 회원에게 다음 각 호의 어느 하나에 해당하는 사유가 있는 경우 서비스의 이용을 정지할 수 있으며, 이용정지 사유 발생 즉시 서면, 전자우편(E-MAIL), 휴대폰메시지 등을 통해 미리 알려 드립니다.
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																	회원의 고의&middot;중과실로 인해 전자금융거래법 등 관계법령 또는 이 약관을 위반하여 계약의 목적 달성이 어려운 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	가입 신청서에 필수 기재사항 등 중요 기재사항을 허위로 작성한 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	APP(앱)을 통해 서비스를 이용할 때, 모바일 기기의 명의나 전화번호 변경 등의 사유가 발생하였음에도 APP(앱)을 새로 설치하고 가입신청 하지 않은 경우
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회사는 회원의 서비스이용 정지 상태가 해소되는 경우 사유 발생 당일에 제2항에 정한 방법으로 알려드립니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+																회사는 회원에 다음 각 호의 어느 하나에 해당하는 사유가 있는 경우 10영업일 전에 서비스 이용 계약이 해지될 수 있음을 서면, 전자우편(E-MAIL), 휴대폰메시지 등을 통해 알려드리며, 10영업일이 경과할 경우 서비스 이용 계약을 해지할 수 있습니다.(단, 제3호, 제4호, 제5호의 경우 즉시 해지)
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																		회원의 고의&middot;중과실로 인해 전자금융거래법 등 관계법령 또는 이 약관을 위반하여 계약의 목적 달성이 현저히 어려운 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	가입신청서에 필수기재사항 등 중요 기재사항을 허위로 작성하여 계약을 지속하기 어려운 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	바이러스 프로그램 등을 유포한 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="라.">
+																<div class="wcms-list-contents">
+																	해킹에 이용하거나 해킹을 한 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="마.">
+																<div class="wcms-list-contents">
+																	회원의 암호화된 동일인 식별정보(CI)가 효력을 상실하거나 회원이 암호화된 동일인 식별정보(CI) 수집 활용 동의를 철회한 경우
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="5.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+																본 조 제2항 및 제3항의 조치에 대하여 회원은 회사에 이의 신청을 할 수 있으며 이의 신청이 정당하다고 회사가 인정하는 경우에 회사는 즉시 서비스의 이용을 재개하여야 합니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="6.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+																회원의 탈회 요청 시, 제9조 제3항에서 정한 대로 회원의 적립 취소에 따라 하나머니 잔액이 0보다 작은 경우(이하 마이너스 하나머니) 회원은 탈회를 할 수 없으며, 마이너스 하나머니를 적립·충전 또는 현금 상환을 통해 소멸시킨 후 탈회할 수 있습니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 20 조(양도 및 증여)</h2>
+											<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												회원은 서비스의 이용권한, 기타 이용 계약상 지위를 타인에게 양도, 증여할 수 없습니다.
+											</p>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 21 조(준회원 서비스 제공)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												            회사는 준회원에게 제2조 제17호에서 정한 준회원 쿠폰 구매 서비스를 제공해 드립니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															준회원에게 제공하여 드리는 쿠폰 구매 서비스의 세부적인 내용, 이용 절차 및 기준 등은 회사의 홈페이지를 통해 안내하여 드립니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															준회원의 하나카드 하나머니의 적립, 이용, 소멸 및 권리와 의무 등에 관한 제반 사항은 하나카드의 '포인트 운영 기준'을 따릅니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 22 조(동전적립 서비스 제공)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												           회원은 회사가 동전적립 서비스 제공을 위해 제휴한 가맹점에서 현금 결제 후 남은 잔돈을 하나머니로 충전할 수 있으며, 동전적립 서비스를 통해 충전된 하나머니는 충전 하나머니로 관리 됩니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															동전적립 서비스의 세부적인 내용, 이용 절차 및 기준 등은 회사의 홈페이지 또는 APP(앱)을 통해 안내하여 드립니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small wcms-size-normal">제 4 장 계약당사자의 의무</h2>
+											<h2 class="wcms-title-small">제 23 조(회사의 의무)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												          회사는 이 약관에서 정한 바에 따라 계속적, 안정적으로 서비스를 제공해야 합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															제8조 제2항 및 제13조 제2항에 따라 안내한 제휴사, 제휴가맹점이 제공하는 서비스 및 제휴포인트의 전환·합산 사용에 관한 내용이 회원에게 불리하게 변경되는 경우나 제10조 제6항의 충전 가능한 상품이 축소되는 경우 시행예정일 기준 1개월 전부터 APP(앱)의 PUSH 메시지나 팝업창을 통해 고지해 드립니다. 이 경우 회원이 통지일로부터 1개월 이내에 별도의 계약해지 의사를 표시하지 않는 경우 변경에 동의한 것으로 본다는 내용을 명시하여 통지하며, 변경 예정일까지 이의 제기를 하지 않는 경우 변경된 내용을 승인한 것으로 간주합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회사는 회원의 개인정보보호를 위하여 관리자의 수를 최소한으로 한정하며, 회원의 개인 정보의 분실, 도난, 유출 등으로 야기된 회원의 손해에 대해 책임을 부담합니다. 다만, 회사가 고의 또는 과실이 없음을 증명한 경우에는 그러하지 아니합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+																회사는 관련 법령에서 정한 바에 따라 회원의 정보를 관리하여야 하며, 이에 대한 세부적인 내용은 회사의 '개인정보 처리방침'에 정한 바에 의합니다. 회사는 '개인정보 처리방침'에 대한 세부 내용을 홈페이지나 APP(앱)에 게시하여 회원이 확인할 수 있도록 합니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 24 조(회원의 의무)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												         비밀번호 등 회원 정보에 대한 관리 책임은 회원에게 있으며, 회원이 이를 제3자에게 제공·누설 또는 노출하거나 이와 유사한 행위를 해서는 안됩니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원은 자신의 명의가 도용되거나 제3자에게 부정하게 사용된 것을 인지한 경우 즉시 그 사실을 회사에 통보하여야 합니다. 
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 25 조(개인정보의 제공, 위탁)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												          회사는 서비스 이용을 위하여 회원의 동의를 받아 회원의 개인정보를 제휴사에 제공할 수 있습니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회사는 수집된 개인정보의 취급 및 관리 등의 업무(이하 "업무"라 합니다)를 스스로 수행함을 원칙으로 하나, 필요한 경우 업무의 일부 또는 전부를 회사가 선정한 수탁사에 위탁할 수 있습니다. 
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small wcms-size-normal">제 5 장 손해배상 등</h2>
+											<h2 class="wcms-title-small">제 26 조(손실부담 및 면책사항)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												          금융회사는 이용자로부터 접근매체의 분실이나 도난의 통지를 받은 후에 제3자가 그 접근매체를 사용하여 이용자에게 손해가 발생한 경우 그 손해를 배상합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															금융회사는 다음 각 호의 사고로 인하여 이용자에게 손해가 발생한 경우 그 손해를 배상합니다.
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																    접근매체의 위조나 변조로 발생한 사고
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	계약체결 또는 거래지시의 전자적 전송이나 처리과정에서 발생한 사고
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	전자금융거래를 위한 전자적 장치 또는 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」제2조 제1항 제1호에 따른 금융회사의 정보통신망에 침입하여 거짓이나 그 밖의 부정한 방법으로 획득한 접근매체의 이용으로 발생한 사고
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												             본 조 제2항의 규정에도 불구하고 금융회사는 이용자가 고의 또는 중과실로 다음 각 호의 행위를 하였음을 증명하는 경우 이용자에게 손해가 생기더라도 책임의 전부 또는 일부를 지지 아니합니다.
+														</div>
+                                                        <ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="가.">
+																<div class="wcms-list-contents">
+																   이용자가 접근매체를 제3자에게 대여하거나 사용을 위임한 경우 또는 양도나 담보의 목적으로 제공한 경우(「전자금융거래법」제18조에 따라 선불전자지급수단이나 전자화폐를 양도하거나 담보로 제공한 경우를 제외합니다.)
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="나.">
+																<div class="wcms-list-contents">
+																	제3자가 권한 없이 이용자의 접근매체를 이용하여 전자금융거래를 할 수 있음을 알았거나 쉽게 알 수 있었음에도 불구하고 이용자가 자신의 접근매체를 누설 또는 노출하거나 방치한 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="다.">
+																<div class="wcms-list-contents">
+																	금융회사가 접근매체를 통하여 이용자의 신원, 권한 및 거래지시의 내용 등을 확인하는 것 외에 보안강화를 위하여 전자금융거래시 사전에 요구하는 추가적인 보안조치를 이용자가 정당한 사유 없이 거부하여 사고가 발생한 경우
+																</div>
+                                                            </li>
+															<li class="wcms-list-item" data-symbol="라.">
+																<div class="wcms-list-contents">
+																	<div class="wcms-margin-small">
+																	  이용자가 본 항 제3호에 따른 추가적인 보안조치에 사용되는 매체·수단 또는 정보에 대하여 다음 각 목의 어느 하나에 해당하는 행위를 하여 사고가 발생한 경우
+																    </div>
+																	<ul class="wcms-list">
+															           <li class="wcms-list-item" data-symbol="①">
+																           <div class="wcms-list-contents">
+																	      누설·노출 또는 방치한 행위
+																           </div>
+                                                                       </li>
+															           <li class="wcms-list-item" data-symbol="②">
+																           <div class="wcms-list-contents">
+																	       제3자에게 대여하거나 그 사용을 위임한 행위 또는 양도나 담보의 목적으로 제공한 행위
+																           </div>
+                                                                       </li>
+                                                                    </ul>
+																</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 27 조(하나머니 카드 등의 분실 및 사고 신고)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												          하나머니 카드, APP(앱), APP(앱)이 설치된 모바일 디바이스, 카드 또는 App의 비밀번호(이하 "하나머니 카드 등")의 도난 및 분실 시 회원은 즉시 회사에 사고 신고를 해야 하며, 신고 접수시 분실된 하나머니 카드 등은 요청에 따라 일시 정지 또는 해지됩니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															도난 및 분실 신고된 경우 회사는 즉시 신고접수자, 접수번호, 신고시점 기타 접수사실을 확인할 수 있는 사항을 회원에게 알려드리며, 회원은 이러한 사항을 확인하여야 합니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												             본 조 제1항의 절차를 이행한 회원이 분실·도난으로 인한 부정사용 하나머니에 대하여 보상신청을 하고자 할 때에는 회사가 정하는 소정양식에 따라 서면으로 보상신청을 하여야 하며, 이 경우 회사는 회원으로부터 분실·도난 신고를 받은 때부터 60일전 이후에 제3자가 그 하나머니 카드 등을 사용함으로 인하여 회원에게 발생한 손해를 배상할 책임을 집니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												             본 조 제2항 및 제3항에 의한 회원의 분실·도난 신고가 회사의 조사결과 회원의 고의에 의한 허위신고로 밝혀질 경우 회원은 회사가 입은 손해 및 조사비용을 부담하여야 합니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 28 조(이의 신청 및 분쟁 처리&middot;조정)</h2>
+											<ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												          회원은 회사의 홈페이지 메인 화면 하단에 게시된 분쟁처리 책임자와 담당자에게 서비스와 관련한 의견과 불만을 제기할 수 있으며, 손해배상의 청구 등 분쟁처리를 요구할 수 있습니다. 
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+															회원이 회사에 분쟁처리를 신청하면 회사는 회원의 가입 경위, 이용일시, 이용내역, 이용주체 등을 철저히 조사하여 그 결과를 회원에게 서면으로 통지하여 드립니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="3.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												             회원이 회사의 조사결과에 이의가 있는 경우에는 조사결과를 통지받은 날로부터 7일 이내에 금융감독원에 조정을 요청할 수 있습니다.
+														</div>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="4.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">
+												             회원과 회사는 금융감독원의 분쟁조정 결과에 따릅니다. 다만, 금융감독원의 분쟁조정결과에 불복하여 관할법원에 민사소송을 제기하는 경우에는 그러하지 아니합니다.
+														</div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 29 조(준용)</h2>
+											<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												이 약관에 명시되지 아니한 사항이나 약관의 해석에 관한 사항에 대하여는 관계법령, 상관례 및표준전자금융거래기본약관에 따릅니다. 
+											</p>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제 30 조(관할법원)</h2>
+											<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												이 약관에 따른 거래에 관하여 분쟁이 발생하는 경우에는 회원의 주소지 또는 영업소 소재지를 관할하는 법원을 제1심 관할법원으로 합니다. 
+											</p>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">부칙</h2>
+											<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												본 약관은 2022년 2월 25일부터 시행합니다.  
+											</p>
+                                        </section>
+									</section>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 하나머니 서비스 이용약관 -->
+			
+            <!-- layer: 수집 이용에 관한 사항 -->
+			<div class="layer-wrap layer-wrap--full layer-clause-detail" data-layer="layer-clause-detail02">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="for-a11y">약관 상세</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="wcms-data">
+									<section class="clause-data">
+										<h1 class="wcms-title-large">
+											(필수) 수집&middot;이용에 관한 사항
+										</h1>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">수집&middot;이용 목적</h2>
+                                            <p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												하나머니 서비스 (그룹 관계사, 제휴사에서의 포인트 적립·사용 및 우대·제휴 서비스 등) 제공, 계약의 체결·유지·이행 ·관리·개선, 신청 상품 서비스 제공, 법령상 의무이행, 신용질서 문란행위 조사, 분쟁처리, 전화상담 업무, 민원처리, 본인 여부 확인
+											</p>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">보유 및 이용기간</h2>
+                                            <p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												거래 종료일로부터 5년 (단, 다른 관련 법령에 해당하는 경우 해당 법령상의 보존기간을 따름)
+											</p>
+                                            <p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												* 위 보유 기간에서의 거래 종료일이란 "회원 탈회 또는 채권ㆍ채무 관계가 소멸된 날"을 말한다.
+											</p>
+                                        </section>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">수집&middot;이용 항목</h2>
+                                            <p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">개인(신용)정보</p>
+                                            <ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">일반개인정보</div>
+														<ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="-">
+																<div class="wcms-list-contents">
+																	성명·영문명·생년월일·성별·국적·직업·휴대전화번호·통신회사·주소(자택/직장)·e-mail주소·음성data·휴대전화관련정보(UICC ID, ADID/IDFA)·CI
+																</div>
+															</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">신용거래정보</div>
+														<ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="-">
+																<div class="wcms-list-contents">
+																	송금·충전·결제·환불·포인트 교환·적립·사용 취소 등 하나머니를 이용한 거래정보, 거래 금액, 거래 일시, 잔액
+																</div>
+															</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                             </ol>
+                                         </section>
+									</section>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 수집 이용에 관한 사항 -->
+			
+            <!-- layer: 제공에 관한 사항 -->
+			<div class="layer-wrap layer-wrap--full layer-clause-detail" data-layer="layer-clause-detail03">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="for-a11y">약관 상세</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="wcms-data">
+									<section class="clause-data">
+										<h1 class="wcms-title-large">
+											(필수) 제공에 관한 사항
+										</h1>
+										<section class="wcms-section">
+											<h2 class="wcms-title-small">제공받는 자</h2>
+											<ul class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item type-dot wcms-color-gray">
+													<div class="wcms-list-contents">
+													    ㈜하나은행, 하나증권(주), 하나캐피탈㈜, 하나생명보험㈜, ㈜하나저축은행 제공받는 자의 이용 목적
+													</div>
+												</li>
+												<li class="wcms-list-item type-dot wcms-color-gray">
+													<div class="wcms-list-contents">하나머니 서비스 제공 및 비용 정산</div>
+												</li>
+                                            </ul>
+                                        </section>
+                                        <section class="wcms-section">
+											<h2 class="wcms-title-small">보유 및 이용기간</h2>
+                                            <p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												거래 종료일로부터 5년 (단, 다른 관련 법령에 해당하는 경우 해당 법령상의 보존기간을 따름)
+											</p>
+                                            <p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+												* 위 보유 기간에서의 거래 종료일이란 "회원 탈회 또는 채권ㆍ채무 관계가 소멸된 날"을 말한다.
+											</p>
+                                        </section>
+                                        <section class="wcms-section">
+											<h2 class="wcms-title-small">제공항목</h2>
+                                            <p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">개인(신용)정보</p>
+                                            <ol class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="1.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">일반개인정보</div>
+														<ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="-">
+																<div class="wcms-list-contents">
+																	성명·영문명·생년월일·성별·국적·직업·휴대전화번호·주소(자택/직장)·e-mail주소·CI
+																</div>
+															</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+												<li class="wcms-list-item wcms-color-gray" data-symbol="2.">
+													<div class="wcms-list-contents">
+														<div class="wcms-margin-small">신용거래정보</div>
+														<ul class="wcms-list">
+															<li class="wcms-list-item" data-symbol="-">
+																<div class="wcms-list-contents">
+																	송금·충전·결제·환불·포인트 교환·적립·사용 취소 등 하나머니를 이용한 거래정보, 거래 금액, 거래 일시, 잔액
+																</div>
+															</li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                             </ol>
+                                         </section>
+									</section>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 제공에 관한 사항 -->
+
+
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

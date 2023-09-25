@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">업무위탁 현황</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="wcms-data">
+							<section class="clause-data">
+								<!-- 약관 내용 -->
+								<h1 class="wcms-title-large">
+									업무위탁 현황 <br />
+									(2021. 12. 17 기준)
+								</h1>
+
+								<p class="wcms-text wcms-size-small wcms-weight-light wcms-color-gray">
+									하나카드는 효율적인 업무수행을 위하여 관계법령 허용범위 내 업무를 위탁하여 수행하게 하고 있으며, 해당 업무위탁 내용 및 수탁사는 아래와 같습니다. <br />
+									업무위탁 현황은 하나카드의 경영정책 및 업무수탁사의 사정에 따라 추가 및 변경될 수 있습니다.
+								</p>
+
+								<!-- 고객상담 및 고객서비스 -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">고객상담 및 고객서비스</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 고객상담 및 고객서비스 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>고객상담 및 민원응대</td>
+														<td>에프앤유신용정보, 리딩아이, 제이앤비컨설팅, 폴렉스존, 케이에스한국고용정보, 고려휴먼스, 휴머니아, 에이치엔서브, 유세스파트너스</td>
+														<td>성명, 연락처, 주소, 카드번호, 결제계좌 등</td>
+														<td>계약 종료 시까지 (필요정보만 열람)</td>
+													</tr>
+													<tr>
+														<td>채무면제·유예상품(DCDS)</td>
+														<td>폴렉스존</td>
+														<td>성명, 생년월일, 주소, 카드번호, 결제은행, 보상관련정보</td>
+														<td>계약 종료 시까지 (보상관련 정보는 거래완료 후 1개월)</td>
+													</tr>
+													<tr>
+														<td>콜센터 통화품질관리</td>
+														<td>외향산업</td>
+														<td>성명, 연락처, 주소, 카드번호, 녹취정보 등</td>
+														<td>계약 종료 시까지 (필요정보만 열람)</td>
+													</tr>
+													<tr>
+														<td>다이렉트 고객센터</td>
+														<td>콜게이트</td>
+														<td>휴대전화번호, 휴대전화단말번호(PUSH ID)</td>
+														<td>동의여부 대조후 즉시삭제</td>
+													</tr>
+													<tr>
+														<td>ARS 출금동의</td>
+														<td>씽크에이티</td>
+														<td>성명, 계좌번호, 휴대폰번호</td>
+														<td>수탁사 자료수신 후 2개월</td>
+													</tr>
+													<tr>
+														<td>카드본인확인서비스</td>
+														<td>코리아크레딧뷰로㈜, 브이피㈜, 다우데이타, KG이니시스, SCI평가정보, 씽크에이티, 라온시큐어</td>
+														<td>성명, 생년월일, 휴대폰번호, 고객식별정보(CI)</td>
+														<td>제공 후 2년까지</td>
+													</tr>
+													<tr>
+														<td>주민번호 대체수단 이용</td>
+														<td>코리아크레딧뷰로㈜, SCI평가정보㈜</td>
+														<td>주민등록번호</td>
+														<td>본인확인 후 즉시 삭제</td>
+													</tr>
+													<tr>
+														<td>휴대폰본인확인서비스</td>
+														<td>코리아크레딧뷰로㈜, SCI평가정보㈜</td>
+														<td>성명, 생년월일, 성별, 내/외국인 구분 값, 휴대폰번호, 가입한 이동전화 회사</td>
+														<td>제공 후 1년까지</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<!-- 모집 및 계약 관리 -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">모집 및 계약 관리</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 모집 및 계약 관리 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>카드회원 모집 및 관리 업무</td>
+														<td>하나은행, 하나증권, 하나저축은행, 하나캐피탈</td>
+														<td>성명, 주민등록번호, 연락처, 카드번호 외 업무수행에 필요한 정보</td>
+														<td>거래종료 후 5년까지</td>
+													</tr>
+													<tr>
+														<td>회원모집</td>
+														<td>여전법상 회원모집인</td>
+														<td>성명, 주소, 휴대폰번호, 이메일, 직장정보, 계좌번호 등 가입신청서 기재항목</td>
+														<td>정보보유 없음</td>
+													</tr>
+													<tr>
+														<td>가맹점 모집</td>
+														<td>가맹점 모집인</td>
+														<td>가맹점 대표자 성명, 주민등록번호, 연락처, 주소, 계좌번호 등 가맹점 신청서 기재항목</td>
+														<td>정보보유 없음</td>
+													</tr>
+													<tr>
+														<td>카드신청서 입력</td>
+														<td>제이앤비컨설팅, 에이치엔서브</td>
+														<td>성명, 자택주소, 연락처, 직장명, 직장주소, 계좌번호 외 카드신청서상 기재된 항목</td>
+														<td>정보보유 없음</td>
+													</tr>
+													<tr>
+														<td>개인회원심사 보조</td>
+														<td>제이앤비컨설팅, 휴머니아, 외향산업, 에프앤유신용정보, 리딩아이, 폴렉스존, 케이에스한국고용정보, 고려휴먼스, 에이치엔서브, 유세스파트너스</td>
+														<td>성명, 자택주소, 연락처, 직장명, 직장주소, 계좌번호 외 카드신청서상 기재된 항목</td>
+														<td>정보보유 없음</td>
+													</tr>
+													<tr>
+														<td>기업회원심사 보조</td>
+														<td>㈜에이치엔서브</td>
+														<td>기업 대표자 성명, 주민등록번호, 연락처, 주소, 계좌번호 등 카드신청서상 기재된 항목</td>
+														<td>정보보유 없음</td>
+													</tr>
+													<tr>
+														<td>가맹점심사 보조</td>
+														<td>고려휴먼스</td>
+														<td>가맹점 대표자 성명, 주민등록번호, 연락처, 주소, 계좌번호 등 가맹점 신청서 기재항목</td>
+														<td>정보보유 없음</td>
+													</tr>
+													<tr>
+														<td>불량의심 가맹점 현장실사</td>
+														<td>미래신용정보</td>
+														<td>가맹점 대표자명(마스킹), 사업자명, 사업장주소, 사업자전화번호</td>
+														<td>계약 종료 시 및 목적달성 시까지</td>
+													</tr>
+													<tr>
+														<td>제휴카드 회원 모집 (온라인)</td>
+														<td>㈜비바리퍼블리카</td>
+														<td>성명, 주소, 휴대폰번호, 이메일, 직장정보, 계좌번호 등 가입신청서 기재항목</td>
+														<td>신청 후 30일까지</td>
+													</tr>
+													<tr>
+														<td>금융상품/오토서비스</td>
+														<td>자동차 금융 판매 대리 중개 모집인, 폴렉스존, MG신용정보</td>
+														<td>
+															성명, 주소, 생년월일, 휴대폰번호, 이메일, 직장 정보, 계좌번호, 신청금액, 할부개월수, 하나카드 보유여부, 하나카드 발급 진행현황 등 금융상품 및 오토서비스 이용을 위해
+															필요한 정보
+														</td>
+														<td>위탁계약 종료 시까지</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<!-- 결제서비스 -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">결제서비스</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 결제서비스 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>금융자동화기기(CD/ATM)서비스</td>
+														<td>효성티엔에스, 한네트, 에이티엠플러스, 한국전자금융, 브랑스코리아, 코리아세븐</td>
+														<td>카드번호, 유효기간, 카드이용내역, 비밀번호, 승인번호</td>
+														<td>거래종료 후 5년까지</td>
+													</tr>
+													<tr>
+														<td>매출전표 접수</td>
+														<td>하나은행, 제이앤비컨설팅, 휴머니아, 외향산업, 에프앤유신용정보, 리딩아이, 폴렉스존, 케이에스한국고용정보, 고려휴먼스, 에이치엔서브, 유세스파트너스</td>
+														<td>카드번호, 유효기간, 카드이용내역, 가맹점 사업자번호, 가맹점번호</td>
+														<td>거래종료 후 5년까지</td>
+													</tr>
+													<tr>
+														<td>승인거래중계, 매입데이터 전송, 전자서명 보관 등</td>
+														<td>
+															한국정보통신, 나이스정보통신, KIS정보통신, 스마트로, 코밴, 한국사이버결제, 다우데이타, 코레일네트웍스, 금융결제원, 케이에스넷, 제이티넷, 한국신용카드결제, 토스페이먼츠㈜,
+															하모니테크㈜, 티머니, ㈜케이지이니스, ㈜케이알시스, 언레스, 이삭랜드코리아㈜, ㈜사이렉스페이, 섹터나인, 에스에스지닷컴, 파이서브코리아, ㈜이롬넷
+														</td>
+														<td>카드번호, 유효기간, 승인번호, 승인일자, 승인금액, 가맹점정보</td>
+														<td>거래종료 후 5년까지</td>
+													</tr>
+													<tr>
+														<td>기업카드.연구비카드 및 부가세환급 정보중계서비스</td>
+														<td>㈜쿠콘, ㈜파투아</td>
+														<td>카드번호, 사업자번호, 고객명, 주소, 연락처, 거래정보</td>
+														<td>정보 제공일로부터 60일까지</td>
+													</tr>
+													<tr>
+														<td>기업카드 정보중계서비스</td>
+														<td>KSNET</td>
+														<td>카드번호, 사업자번호, 고객명, 주소, 연락처, 거래정보</td>
+														<td>보유정보 없음</td>
+													</tr>
+													<tr>
+														<td>카드사 공통 QR pay</td>
+														<td>시루정보</td>
+														<td>카드번호, 승인번호, 승인일자, 승인금액, 가맹점정보, 유효기간, CVV</td>
+														<td>거래종료 후 5년까지</td>
+													</tr>
+													<tr>
+														<td>위챗페이거래승인 데이터중계</td>
+														<td>KIS정보통신, 다우데이타, 에스피씨네트웍스, 알리엑스, 케이알파트너스, 페이콕, 코밴, 한국신용카드결제</td>
+														<td>상품정보, 거래일시, 거래요청 IP 등 거래 정보</td>
+														<td>제공일로부터 5년까지</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<!-- 기타서비스 -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">기타서비스</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 기타서비스 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>내카드 한눈에 서비스</td>
+														<td>금융결제원</td>
+														<td>
+															카드번호(마스킹), 결제계좌번호(마스킹), 카드이용한도, 카드상품명, 카드구분 및 종류, 휴면카드여부, BC카드여부, 결제예정금액 및 연체금액, 이용대금 총금액 및 연체금액,
+															보유포인트명, 잔여포인트, 소멸예정포인트, 소멸예정일
+														</td>
+														<td>보유정보 없음</td>
+													</tr>
+													<tr>
+														<td>건강키트 발송</td>
+														<td>㈜녹십자헬스케어(재수탁사:제니엘맥)</td>
+														<td>고객명, 휴대폰번호, 우편번호, 주소</td>
+														<td>제공일로부터 1년까지</td>
+													</tr>
+													<tr>
+														<td>하나금융그룹 마이데이터 공동 프로모션</td>
+														<td>㈜핀크</td>
+														<td>CI, 휴대전화번호, 성명, 생년월일, 휴대폰번호, UUID, 통신사, 성별, 마이데이터 약관 동의여부, 마이데이터 전송요구권 동의 여부</td>
+														<td>이벤트 혜택 지급완료 1개월까지</td>
+													</tr>
+													<tr>
+														<td>마이데이터 서비스</td>
+														<td>㈔한국신용정보원</td>
+														<td>
+															본인신용정보관리업 관련, 「금융분야 마이데이터 표준API규격」「금융분야 개인신용정보 전송요구 표준API규격」에 의한 정보항목 제공<br />
+															카드정보(카드번호(마스킹),카드상품명 등), 포인트정보(잔여포인트 등), 청구(청구금액 등) · 결제(결제일 등) · 승인(승인일시, 가맹점명 등)정보, 대출상품정보 등
+														</td>
+														<td>
+															계약종료시까지<br />
+															(신용정보의 이용 및 보호에 관한 법률 및 관련 규약에 근거한 기간까지)
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<!-- 카드배송 및 명세서 발송 -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">카드배송 및 명세서 발송</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 카드배송 및 명세서 발송 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>카드배송</td>
+														<td>㈜국제, ㈜제니엘시스템, 한승서비스㈜, ㈜성호라인, 동서울우편집중국</td>
+														<td>성명, 안심번호, 수령지 주소</td>
+														<td>제공 후 60일까지</td>
+													</tr>
+													<tr>
+														<td>카드발급 업무대행</td>
+														<td>㈜에이치엔서브</td>
+														<td>정보 제공 없음(단, 발급카드실물 기재정보 접근가능)</td>
+														<td>보유없이 필요정보만 열람</td>
+													</tr>
+													<tr>
+														<td>이용대금명세서, 사용금액 확인서 등 제작 및 발송</td>
+														<td>데이타존, 카카오페이(재수탁사:트랜스코스모스코리아(고객상담)), 트랜스코스모스코리아, 조우니, 인포바인</td>
+														<td>성명, CI, 주소, 카드번호(마스킹), 휴대폰번호, 계좌번호(마스킹), 카드사용내역</td>
+														<td>발송 후 즉시 폐기, 모바일 청구서는 발송 후 1년</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<!-- 모바일서비스 -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">모바일서비스</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 모바일서비스 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>연락처 안심번호 변환서비스</td>
+														<td>SK브로드밴드</td>
+														<td>휴대폰번호, 연락처(안심번호)</td>
+														<td>제공 후 60일까지</td>
+													</tr>
+													<tr>
+														<td>SMS / MMS 발송</td>
+														<td>SK텔링크㈜, 언레스</td>
+														<td>휴대폰번호</td>
+														<td>발송 후 폐기</td>
+													</tr>
+													<tr>
+														<td>모바일 쿠폰, 경품 등 발송/포인트 교환에 따른 상품권 발송 등 관련 업무 위탁</td>
+														<td>11번가, 쿠프마케팅, GS엠비즈(주), 두레시닝</td>
+														<td>휴대폰번호, 성명, 주소</td>
+														<td>발송 후 6개월까지</td>
+													</tr>
+													<tr>
+														<td>카카오 비즈메시지(알림톡) 서비스</td>
+														<td>(주)엠티에스컴퍼니</td>
+														<td>휴대폰번호, 성명</td>
+														<td>제공일로부터 1년까지</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<!-- 채권관리 및 법률 자문/소송 -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">채권관리 및 법률 자문/소송</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 채권관리 및 법률 자문/소송 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>채권추심</td>
+														<td>미래신용정보, 에프앤유신용정보, MG신용정보, 우리신용정보, SGI신용정보, 고려신용정보, 중앙신용정보</td>
+														<td>성명, 주민등록번호, 주소, 전화번호, 직업, 이메일, 카드번호, 거래일시, 사용금액, 사용처, 신용카드 발급 및 해지정보, 연체정보(타기관 연체 등 해제 정보 포함)</td>
+														<td>계약 종료 시까지</td>
+													</tr>
+													<tr>
+														<td>단기 연체관리</td>
+														<td>KS신용정보, 고려신용정보</td>
+														<td>성명, 주민등록번호, 주소, 전화번호, 직업, 이메일, 카드번호, 거래일시, 사용금액, 사용처, 신용카드 발급 및 해지 정보, 연체정보(타기관 연체 등 해제 정보 포함)</td>
+														<td>계약 종료 시까지 (필요정보만 열람)</td>
+													</tr>
+													<tr>
+														<td>신용회복 신청자 등 회원관리</td>
+														<td>고려신용정보</td>
+														<td>성명,주민등록번호,주소,전화번호,직업,이메일,카드번호,거래일시,사용금액,사용처,신용카드 발급 및 해지 정보,연체정보(타기관 연체 등 해제 정보 포함)</td>
+														<td>계약 종료 시까지 (필요정보만 열람)</td>
+													</tr>
+													<tr>
+														<td>통신단말기 대금 청구 및 회수</td>
+														<td>SK텔레콤</td>
+														<td>성명, 카드번호</td>
+														<td>거래종료 후 5년까지</td>
+													</tr>
+													<tr>
+														<td>법률 자문/소송</td>
+														<td>법무법인 태평양, 김앤장, 열림, 세종</td>
+														<td>성명,주민등록번호,카드번호,연락처,주소,이메일등 소송 및 자문진행 정도에 따라 필요한 정보</td>
+														<td>소송 또는 자문위임시부터 업무종료 시까지</td>
+													</tr>
+													<tr>
+														<td>법조치 거래 약정</td>
+														<td>법무법인 한울</td>
+														<td>성명, 주민등록번호, 주소(자택/직장), 연락처, 직장명, 직장전화번호, 카드번호, 계좌정보, 결제은행</td>
+														<td>제공 후 1개월까지</td>
+													</tr>
+													<tr>
+														<td>자산유동화 관련 자산실사 업무 용역</td>
+														<td>삼정KPMG</td>
+														<td>성명, 연락처, 주소 등</td>
+														<td>보유정보 없음</td>
+													</tr>
+													<tr>
+														<td>자동차 할부금융 연체채권 공매대행 업무</td>
+														<td>(주)디알티 컴퍼니, (주)에스엘 컴퍼니, (주)카옥션</td>
+														<td>성명, 연락처 등</td>
+														<td>공매 완료 후 차량 출고 시 까지</td>
+													</tr>
+													<tr>
+														<td>연체채권 전자추심</td>
+														<td>나이스평가정보주식회사</td>
+														<td>회원명, 주민등록번호, 사업자등록번호(법인등록번호), 법원사건번호, 압류금액</td>
+														<td>제공 후 5년까지</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<!-- 업무위탁 및 전산시스템 -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">업무위탁 및 전산시스템</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 업무위탁 및 전산시스템 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>신용카드업무협약, 자금정산대행, 상품권위탁판매, 해외정산업무대행, 전자금융서비스(가상계좌)이용</td>
+														<td>하나은행</td>
+														<td>성명, 주민등록번호, 연락처, 카드번호 외 업무수행에 필요한 정보</td>
+														<td>계약 종료 시까지</td>
+													</tr>
+													<tr>
+														<td>신용카드업무협약, 자금정산대행, 해외정산업무대행 등</td>
+														<td>비씨카드 (재수탁사는 비씨카드 홈페이지 참조)</td>
+														<td>성명, 주민등록번호, 영문명, 휴대폰번호 외 카드발급 관련 필요 정보</td>
+														<td>계약 종료 시까지</td>
+													</tr>
+													<tr>
+														<td>선불카드(Gift카드 등) 대행판매</td>
+														<td>하나은행</td>
+														<td>카드번호, 유효기간, 카드이용내역, 가맹점 사업자번호, 가맹점번호</td>
+														<td>계약 종료 시까지</td>
+													</tr>
+													<tr>
+														<td>전산시스템 운영/유지보수</td>
+														<td>하나금융티아이</td>
+														<td>성명, 생년월일, 연락처, 주소, 카드번호 등</td>
+														<td>계약 종료 시까지</td>
+													</tr>
+													<tr>
+														<td>하나원큐 연계대출</td>
+														<td>하나은행</td>
+														<td>상품종류, 거래조건(이자율, 만기 등), 거래일시, 금액 등 거래 설정내역정보</td>
+														<td>거래종료 후 5년까지</td>
+													</tr>
+													<tr>
+														<td>자동차근저당 설정 및 해지</td>
+														<td>카방㈜</td>
+														<td>성명,주민등록번호(앞7자리),차량번호,휴대폰 번호</td>
+														<td>근저당 설정 및 해지 후 1개월까지</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<!-- 문서관리 -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">문서관리</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 문서관리 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>전자문서 보관서비스</td>
+														<td>하나금융티아이</td>
+														<td>성명, 주소, 연락처, 이메일, 직장정보, 계좌번호 등 가입신청서 기재항목</td>
+														<td>거래종료 후 5년 또는 문서생성 후 10년</td>
+													</tr>
+													<tr>
+														<td>문서처리 업무</td>
+														<td>하나금융티아이</td>
+														<td>가입신청서, 제신고서</td>
+														<td>정보보유 없음</td>
+													</tr>
+													<tr>
+														<td>문서보관</td>
+														<td>통인안전보관</td>
+														<td>가입신청서, 제신고서, 채권서류</td>
+														<td>업무관련 실물 서류 및 부속서류(봉인된 형태로 제공)를 제공일로부터 보관(보존)기간 까지</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<!-- 사고조사 -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">사고조사</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 사고조사 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>부정사용 의심 건 정상 사용여부 모니터링, 사후처리 및 고객안내</td>
+														<td>고려휴먼스</td>
+														<td>성명, 생년월일, 주소, 카드번호, 결제은행, 거래정보 등</td>
+														<td>계약 종료 시까지</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+
+								<!-- TM(선택 업무처리를 위한 위탁업체) -->
+								<section class="wcms-section">
+									<h2 class="wcms-title-small">TM(선택 업무처리를 위한 위탁업체)</h2>
+									<div class="wcms-table">
+										<div class="wcms-table-inner">
+											<table>
+												<!-- 2022.05.04 : mod : 텍스트 수정 -->
+												<caption>
+													목적, 제공받는자, 항목, 보유 및 이용기간으로 구성된 TM(선택 업무처리를 위한 위탁업체) 안내 표입니다.
+												</caption>
+												<colgroup>
+													<col style="width: 140px" />
+													<col style="width: 250px" />
+													<col style="width: 150px" />
+													<col style="width: 120px" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>목적</th>
+														<th>제공받는자</th>
+														<th>항목</th>
+														<th>보유 및 이용기간</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>고객 마케팅, TM</td>
+														<td>케이에스한국고용정보 , 폴렉스존, 리딩아이, 제이앤비컨설팅, 에프앤유신용정보, 휴머니아, 고려휴먼스, 에이치엔서브, 유세스파트너스</td>
+														<td>성명, 연락처, 주소 등</td>
+														<td>
+															계약 종료 시까지<br />
+															(필요정보만 열람
+														</td>
+													</tr>
+													<tr>
+														<td>보험대리점 TM</td>
+														<td>한일네트웍스, 탑텔레인슈런스컨설팅, 인슈어랩스, 휴랑</td>
+														<td>성명, 카드번호, 휴대폰번호</td>
+														<td>
+															계약 종료 시까지<br />
+															(필요정보만 열람)
+														</td>
+													</tr>
+													<tr>
+														<td>상조서비스 TM</td>
+														<td>올링크스</td>
+														<td>성명, 주소, 휴대폰번호</td>
+														<td>
+															계약 종료 시까지<br />
+															(필요정보만 열람)
+														</td>
+													</tr>
+													<tr>
+														<td>여행서비스 TM</td>
+														<td>하나투어</td>
+														<td>성명, 카드번호, 휴대폰번호</td>
+														<td>
+															계약 종료 시까지<br />
+															(필요정보만 열람)
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

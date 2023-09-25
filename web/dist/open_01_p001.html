@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">내 계좌(오픈뱅킹) 가입</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- 2022.03.16 클래스 추가 -->
+					<div class="page-contents type-flex-column">
+						<!-- 2022.02.25 : mod : .margin-bottom-none 클래스 추가 -->
+						<div class="ui-tab type-nav margin-bottom-none">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">계좌(은행/증권)</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">카드(신용/체크)</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">카드(신용/체크)</h2>
+
+						<!-- 2022.03.16 디자인 변경으로 인한 구조변경 -->
+						<div class="flex-middle">
+							<!-- 2022.02.25 : add : 이미지 영역 추가 -->
+							<!-- 2022.07.01 : add : full-contents클래스 삭제 -->
+							<div class="margin-top-35">
+								<!-- 2022.07.01 : mod : 슬라이드 기능 변경 -->
+								<!-- logo slider -->
+								<div class="slide-account-empty">
+									<div class="slide-account-controller"></div>
+									<ul class="slide-account-empty-list">
+										<li class="slide-account-empty-item">
+											<div class="slide-account-inner">
+												<img src="./assets/images/contents/empty-logo/logo-color-hyundai.png" alt="현대카드" />
+											</div>
+										</li>
+										<li class="slide-account-empty-item">
+											<div class="slide-account-inner">
+												<img src="./assets/images/contents/empty-logo/logo-color-ibk.png" alt="기업은행" />
+											</div>
+										</li>
+										<li class="slide-account-empty-item">
+											<div class="slide-account-inner">
+												<img src="./assets/images/contents/empty-logo/logo-color-kb.png" alt="국민은행" />
+											</div>
+										</li>
+										<li class="slide-account-empty-item">
+											<div class="slide-account-inner">
+												<img src="./assets/images/contents/empty-logo/logo-color-bc.png" alt="비씨카드" />
+											</div>
+										</li>
+										<li class="slide-account-empty-item">
+											<div class="slide-account-inner">
+												<img src="./assets/images/contents/empty-logo/logo-color-woori.png" alt="우리은행" />
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- //logo slider -->
+								<!-- //2022.07.01 : mod : 슬라이드 기능 변경 -->
+							</div>
+							<!--// 2022.02.25 : add : 이미지 영역 추가 -->
+
+							<!-- 2022.02.25 : mod : 텍스트 수정 및 구조 변경 -->
+							<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+							<h3 class="page-title align-center margin-top-25">
+								흩어져 있는 여러 카드사의 정보를<br />
+								한 번에 조회하세요!
+							</h3>
+
+							<div class="page-info">
+								<p class="page-info-text align-center">
+									다른 카드사의 보유 카드 정보, 청구내역 등을<br />
+									조회하실 수 있습니다.
+								</p>
+							</div>
+						</div>
+						<!-- //2022.03.16 디자인 변경으로 인한 구조변경 -->
+
+						<!-- 2022.03.16 추가 -->
+						<div class="margin-top-35 align-center">
+							<a href="" class="default-text color-blur text-underline" role="button">오픈뱅킹 해지하기</a>
+						</div>
+						<!-- //2022.03.16 추가 -->
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">시작하기</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--// 2022.02.25 : mod : 텍스트 수정 및 구조 변경 -->
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

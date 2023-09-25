@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">나만의 Pick 이용내역</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-tab type-nav">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">혜택내역</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">이용실적</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">이용실적</h2>
+
+						<p class="page-title">
+							이번달 <span class="color-primary">2</span>건의<br />
+							실적이 있어요.
+						</p>
+
+						<div class="down-arrow-link-wrap">
+							<button type="button" class="down-arrow-link">2021.09</button>
+						</div>
+
+						<!-- Case : 내역 없을 때 -->
+						<div class="link-item type-none type-flex type-no-line">
+							<p class="item-text">이용실적이 없습니다.</p>
+						</div>
+						<!-- Case : //내역 없을 때 -->
+
+						<!-- Case : 내역 있을 때 -->
+						<div class="usage-history">
+							<ul class="usage-history-list">
+								<li class="usage-history-item">
+									<div class="usage-history-block">
+										<a href="" class="usage-history-top type-link">
+											<div class="usage-history-category">나만의 Pick 첫만남 이벤트</div>
+											<div class="usage-history-title">커피빈 2,000원 캐쉬백 혜택</div>
+										</a>
+										<div class="usage-history-body">
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">실적충족</dt>
+												<dd class="form-detail-group font-weight-medium"><span class="color-primary">충족</span></dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">전체 최소기준금액</dt>
+												<dd class="form-detail-group font-weight-medium">10,000 원</dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">전체 사용실적</dt>
+												<dd class="form-detail-group font-weight-medium">744,284 원</dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">실적합산기간</dt>
+												<dd class="form-detail-group font-weight-medium">2021.09.04 ~ 2021.09.30</dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">행사가맹점 최소기준금액</dt>
+												<dd class="form-detail-group font-weight-medium">10,000 원</dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">행사가맹점 사용실적</dt>
+												<dd class="form-detail-group font-weight-medium">117,330 원</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+								<li class="usage-history-item">
+									<div class="usage-history-block">
+										<a href="" class="usage-history-top type-link">
+											<div class="usage-history-category">김부섭수학학원 5% 할인</div>
+											<div class="usage-history-title">50,000원 이상 결제 시, 500원까지 (기간 내 월 1회 한도)</div>
+										</a>
+										<div class="usage-history-body">
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">실적충족</dt>
+												<dd class="form-detail-group font-weight-medium"><span class="color-wrong">미충족</span></dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">전체 최소기준금액</dt>
+												<dd class="form-detail-group font-weight-medium">10,000 원</dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">전체 사용실적</dt>
+												<dd class="form-detail-group font-weight-medium">744,284 원</dd>
+											</dl>
+											<dl class="form-detail-item">
+												<dt class="form-detail-title">실적합산기간</dt>
+												<dd class="form-detail-group font-weight-medium">2021.09.04 ~ 2021.09.30</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //Case : 내역 있을 때 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">치아보험</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section">
+							<div class="page-section-group">
+								<img src="./assets/images/contents/logo-chubb-1.png" alt="CHUBB" class="insurance-logo-img" />
+								<h2 class="page-title margin-top-10">(무)Chubb 치아안심보험</h2>
+							</div>
+							<div class="page-section-group">
+								<ul class="guide-info-list type-wide">
+									<li class="guide-info-item">
+										<div class="guide-info-block">
+											<strong class="guide-info-title">소소한 치과치료도 보장받을 수 있습니다.</strong>
+											<div class="guide-info-text">
+												큰 병 되기 전에 미리미리 치아 건강을 유지할 수 있도록 세심하게 보장해 드립니다.<br />
+												※ 질병의 경우 가입 후 91일부터 보장하며 이후 6개월 동안 보험 가입금액의 50%로 감액 지급
+											</div>
+										</div>
+										<!-- 2022.03.31 아이콘 변경 -->
+										<span class="guide-info-icon type-icon-68"></span>
+									</li>
+									<li class="guide-info-item">
+										<div class="guide-info-block">
+											<strong class="guide-info-title">충전치료는 몇 개까지 보장되나요?</strong>
+											<div class="guide-info-text">
+												금/아말감/컴퍼짓 레진 충전치료도 개수 제한 없이 탄탄하게 보장!<br />
+												※ 질병의 경우 가입 후 91일부터 보장하며 이후 6개월 동안 보험 가입금액의 50%로 감액 지급
+											</div>
+										</div>
+										<!-- 2022.03.31 아이콘 변경 -->
+										<span class="guide-info-icon type-icon-43"></span>
+									</li>
+									<li class="guide-info-item">
+										<div class="guide-info-block">
+											<strong class="guide-info-title">보장을 많이 받으면 보험료가 오르지 않을까요?</strong>
+											<div class="guide-info-text">네, 처음 보험료 그대로! 단1원도 오르지 않습니다.(만기이내 변동 없음)</div>
+										</div>
+										<!-- 2022.03.31 아이콘 변경 -->
+										<span class="guide-info-icon type-icon-42"></span>
+									</li>
+								</ul>
+								<div class="info-list margin-top-15">
+									<div class="info-item">준법감시인 심의필 Digital-2022-012 (2022.01.26 ~ 2023.01.25)</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="js-ui-tab-panel margin-top-minus-10">
+								<div class="ui-tab">
+									<ul class="ui-tab-list type-wide">
+										<li class="ui-tab-item">
+											<button type="button" class="ui-button ui-tab-link" data-tab-open="tab01">보장내용</button>
+										</li>
+										<li class="ui-tab-item">
+											<button type="button" class="ui-button ui-tab-link" data-tab-open="tab02">가입예시</button>
+										</li>
+										<li class="ui-tab-item">
+											<button type="button" class="ui-button ui-tab-link" data-tab-open="tab03">알아두실 사항</button>
+										</li>
+									</ul>
+								</div>
+
+								<!-- [DD] 보장내용 선택시 노출 -->
+								<div class="ui-tab-panel margin-top-10" data-tab="tab01">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+									<h3 class="for-a11y">보장내용</h3>
+									<div class="section-accordion-list js-ui-accordion">
+										<div class="section-accordion-item js-ui-accordion__item">
+											<button type="button" class="section-accordion-opener js-ui-accordion__opener">
+												보장내용
+												<span class="for-a11y">
+													상세 내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+											<div class="js-ui-accordion__layer">
+												<div class="section-accordion-contents">
+													<div class="info-table-area">
+														<table class="info-table type-thead-line type-tbody-heading">
+															<!-- 2022.05.04 : mod : 텍스트 수정 -->
+															<caption class="for-a11y">
+																보험기간, 납입기간, 납입방법, 가입나이, 보험유형으로 구성된 보장내용 안내 표입니다.
+															</caption>
+															<colgroup>
+																<col class="info-table-heading-width" />
+																<col />
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th scope="row">보험기간</th>
+																	<td>10년만기 (단, 71세 이상은 80세 만기)</td>
+																</tr>
+																<tr>
+																	<th scope="row">납입기간</th>
+																	<td>10년 (단, 71세 이상은 80세까지 납입)</td>
+																</tr>
+																<tr>
+																	<th scope="row">납입방법</th>
+																	<td>매월납입 / 연간 1회 납입</td>
+																</tr>
+																<tr>
+																	<th scope="row">가입나이</th>
+																	<td>1~75세 (단, 일부 특약의 경우 가입 가능나이가 상이함)</td>
+																</tr>
+																<tr>
+																	<th scope="row">보험유형</th>
+																	<td>만기환급형 (비갱신형)</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="section-accordion-item js-ui-accordion__item">
+											<button type="button" class="section-accordion-opener js-ui-accordion__opener">
+												세부보장내용
+												<span class="for-a11y">
+													상세 내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+											<div class="js-ui-accordion__layer">
+												<div class="section-accordion-contents">
+													<div class="basic-text font-weight-regular">
+														<ul class="info-list type-inherit">
+															<li class="info-item">기준: 자가용 운전자, 10년만기, 10년간 매월 납입</li>
+														</ul>
+													</div>
+													<div class="form-detail">
+														<div class="form-detail-head margin-top-10">
+															<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+														</div>
+														<div class="info-table-area type-scroll-x">
+															<table class="info-table type-thead-line type-tbody-heading">
+																<!-- 2022.05.04 : mod : 텍스트 수정 -->
+																<caption class="for-a11y">
+																	구분, 담보명, 보장내용(지급사유), 보험가입금액으로 구성된 세부보장내용 안내 표입니다.
+																</caption>
+																<thead>
+																	<tr>
+																		<th scope="col">구분</th>
+																		<th scope="col">담보명</th>
+																		<th scope="col">보장내용(지급사유)</th>
+																		<th scope="col">보험가입금액</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th scope="row" rowspan="2">기본계약</th>
+																		<td rowspan="2">(기본계약) 치아 관련 16개 담보 보장 및 만기환급금</td>
+																		<td>
+																			보험기간 중 피보험자가 보장개시일 이후에 상해 또는 질병을 직접적인 원인으로 치과의사 면허를 가진 자에 의해 의료법 제3조(의료기관)에서 정한 치과 병·의원 또는
+																			국외의 의료관련법에서 정한 의료기관에서 약관에 따른 '세부보상기준'에서 정한 치아관련 치료를 받았을 때 보험가입금액을 보험수익자에게 지급함<br />
+																			* 세부보상기준에 없는 불소도포, 실린트 (치아봉합), 크라운, 보철, 의치, 임플란트, 치열교정 및 치아미백 등은 보상하지 않음<br />
+																			* 보장개시일: 상해 (계약일 당일부터), 질병 (계약 후 91일부터, 3세 미만인 경우 계약일 당일부터)<br />
+																			*감액기간 (질병사고)<br />
+																			- 계약일로부터 90일 이내 : 지급하지 않음<br />
+																			- 계약일로부터 90일 초과 270일 이내 : 가입금액의 50% 보장<br />
+																			- 계약일로부터 270일 초과 : 가입금액의 100% 보장<br />
+																			*감액기간 (상해사고)<br />
+																			- 전기간 가입금액의100% 보장
+																		</td>
+																		<td class="align-right">
+																			- 치아치료(치아미백제외)를 위한 종합구강검진: 3,500원 (연간 1회 한도)<br />
+																			- 치아치료(치아미백제외)를 위한 치석제거 (스케일링): 1만원 (연간 1회 한도)<br />
+																			- 직접치아충전치료 (아말감 충전): 7,500원 (치아당)<br />
+																			- 직접치아충전치료 (컴퍼짓 레진): 50,000원 (치아당)<br />
+																			- 직접치아충전치료 (기타 직접치아충전치료): 7,500원 (치아당)<br />
+																			- 간접치아충전치료 (골드인레이/온레이): 130,000원 (치아당)<br />
+																			- 간접치아충전치료 (기타 간접치아충전치료): 130,000원 (치아당)<br />
+																			- 단순발치 (맹출치아 및 노출된 치근): 7,000원 (치아당)<br />
+																			- 정교한 발치 (부분적으로 매복된 치아 및 치근): 9,000원 (치아당)<br />
+																			- 매복된 치아의 발치: 21,000원 (치아당)<br />
+																			- 구내방사선 및 교익방사선 사진: 4,500원 (촬영당)<br />
+																			- 파노라마 사진: 6,500원 (촬영당)<br />
+																			- 1개 근관치료 (엑스레이 포함): 10,500원 (치아당)<br />
+																			- 2개 근관치료 (엑스레이 포함): 16,000원 (치아당)<br />
+																			- 3개 근관치료 (엑스레이 포함): 22,500원 (치아당)<br />
+																			- 치수절단술: 7,000원 (치아당)
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>회사는 보험기간이 끝난 때에는 보험증권에 기재된 만기환급금 (50만원)을 보험수익자에게 지급합니다.</td>
+																		<td class="align-right">50만원</td>
+																	</tr>
+																	<tr>
+																		<th scope="row" rowspan="3">선택특약</th>
+																		<td>New크라운치료보장Ⅰ특별약관</td>
+																		<td>
+																			보험기간 중 피보험자가 보장개시일 이후에 질병(치아우식증, 치주질환) 또는 상해를 직접적인 원인으로 크라운치료를 진단확정 받고, 해당 치아에 대하여 치과의사 면허를
+																			가진 자에 의해 의료법 제3조(의료기관)에서 정한 치과 병?의원 또는 국외의 의료관련법에서 정한 의료기관에서 크라운치료를 받았을 경우 보험수익자에게 보험가입금액
+																			지급<br />
+																			* 보장개시일: 상해 (계약일 당일부터), 질병 (계약 후 91일부터, 3세 미만인 경우 계약일 당일부터)<br />
+																			*감액기간 (질병사고)<br />
+																			- 계약일로부터 90일 이내 : 지급하지 않음<br />
+																			- 계약일로부터 90일 초과 270일 이내 : 가입금액의 50% 보장<br />
+																			- 계약일로부터 270일 초과 : 가입금액의 100% 보장<br />
+																			*감액기간 (상해사고)<br />
+																			- 전기간 가입금액의100% 보장
+																		</td>
+																		<td class="align-right">20만원 (치아당)</td>
+																	</tr>
+																	<tr>
+																		<td>컴퍼짓레진 직접치아충전치료 보장 특별약관</td>
+																		<td>
+																			보험기간 중 피보험자가 보장개시일 이후에 상해 또는 질병을 직접적인 원인으로 치과의사 면허를 가진 자에 의해 의료법 제3조(의료기관)에서 정한 치과 병·의원 또는
+																			국외의 의료관련법에서 정한 의료기관에서 '컴퍼짓레진 직접치아충전치료'를 받았을 때 보험가입금액을 보험수익자에게 지급함 (치아당)<br />
+																			* 보장개시일: 상해 (계약일 당일부터), 질병 (계약 후 91일부터, 3세 미만인 경우 계약일 당일부터)<br />
+																			*감액기간 (질병사고)<br />
+																			- 계약일로부터 90일 이내 : 지급하지 않음<br />
+																			- 계약일로부터 90일 초과 270일 이내 : 가입금액의 50% 보장<br />
+																			- 계약일로부터 270일 초과 : 가입금액의 100% 보장<br />
+																			*감액기간 (상해사고)<br />
+																			- 전기간 가입금액의100% 보장
+																		</td>
+																		<td class="align-right">5만원 (치아당)</td>
+																	</tr>
+																	<tr>
+																		<td>골드인레이/골드온레이 충전치료 보장 특별약관</td>
+																		<td>
+																			보험기간 중 피보험자가 보장개시일 이후에 상해 또는 질병을 직접적인 원인으로 치과의사 면허를 가진 자에 의해 의료법 제3조(의료기관)에서 정한 치과 병·의원 또는
+																			국외의 의료관련법에서 정한 의료기관에서 '골드인레이/골드온레이 충전치료'를 받았을 때 보험가입금액을 보험수익자에게 지급함 (치아당)<br />
+																			* 보장개시일: 상해 (계약일 당일부터), 질병 (계약 후 91일부터, 3세 미만인 경우 계약일 당일부터)<br />
+																			*감액기간 (질병사고)<br />
+																			- 계약일로부터 90일 이내 : 지급하지 않음<br />
+																			- 계약일로부터 90일 초과 270일 이내 : 가입금액의 50% 보장<br />
+																			- 계약일로부터 270일 초과 : 가입금액의 100% 보장<br />
+																			*감액기간 (상해사고)<br />
+																			- 전기간 가입금액의100% 보장
+																		</td>
+																		<td class="align-right">7만원 (치아당)</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<ul class="info-list type-default margin-top-15">
+															<li class="info-item type-presa font-weight-regular">상해관련 담보에서 전문 암벽등반 등 직업, 직무, 동호회 활동중 발생한 사고는 보장되지 않습니다.</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--// [DD] 보장내용 선택시 노출 -->
+
+								<!-- [DD] 가입예시 선택시 노출 -->
+								<div class="ui-tab-panel margin-top-10" data-tab="tab02">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+									<h3 class="for-a11y">가입예시</h3>
+									<div class="section-accordion-list js-ui-accordion">
+										<div class="section-accordion-item js-ui-accordion__item">
+											<button type="button" class="section-accordion-opener js-ui-accordion__opener">
+												보장담보별 보험료 예시
+												<span class="for-a11y">
+													상세 내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+											<div class="js-ui-accordion__layer">
+												<div class="section-accordion-contents">
+													<div class="page-section-group">
+														<div class="basic-text font-weight-regular">
+															<ul class="info-list type-inherit">
+																<li class="info-item">기준: 기본형, 상해 1급, 10년 만기, 10년 동안 매월 납입, 비갱신형</li>
+															</ul>
+														</div>
+														<div class="form-detail">
+															<div class="form-detail-head margin-top-10">
+																<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+															</div>
+															<div class="info-table-area type-scroll-x">
+																<table class="info-table type-thead-line type-tbody-heading">
+																	<!-- 2022.05.04 : mod : 텍스트 수정 -->
+																	<caption class="for-a11y">
+																		구분, 담보명, 보험 가입금액, 30세 남성, 30세 여성으로 구성된 보장담보별 보험료 안내 표입니다.
+																	</caption>
+																	<thead>
+																		<tr>
+																			<th scope="col" rowspan="2">구분</th>
+																			<th scope="col" rowspan="2" class="info-table-left-line">담보명</th>
+																			<!-- 2022.03.31 텍스트 수정 -->
+																			<th scope="col" rowspan="2" class="info-table-left-line">보험<br />가입금액</th>
+																			<th scope="col" colspan="2" class="info-table-left-line">30세</th>
+																		</tr>
+																		<tr>
+																			<th scope="col" class="info-table-left-line">남성</th>
+																			<th scope="col" class="info-table-left-line">여성</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<th scope="row">기본계약</th>
+																			<td>(기본계약) 치아 관련 16개 담보 보장 및 만기환급금</td>
+																			<td class="align-right">1백만원</td>
+																			<td class="align-right">18,653</td>
+																			<td class="align-right">21,023</td>
+																		</tr>
+																		<tr>
+																			<th scope="row" rowspan="3">선택특약</th>
+																			<td>New크라운치료보장I특별약관</td>
+																			<td class="align-right">20만원</td>
+																			<td class="align-right">6,240</td>
+																			<td class="align-right">8,240</td>
+																		</tr>
+																		<tr>
+																			<td>컴퍼짓레진 직접치아충전치료 보장 특별약관</td>
+																			<td class="align-right">5만원</td>
+																			<td class="align-right">5,235</td>
+																			<td class="align-right">6,800</td>
+																		</tr>
+																		<tr>
+																			<td>골드인레이/골드온레이 충전치료 보장 특별약관</td>
+																			<td class="align-right">7만원</td>
+																			<td class="align-right">2,485</td>
+																			<td class="align-right">2,632</td>
+																		</tr>
+																	</tbody>
+																	<tfoot>
+																		<th>합계보험료</th>
+																		<td></td>
+																		<td></td>
+																		<td>32,610</td>
+																		<td>38,700</td>
+																	</tfoot>
+																</table>
+															</div>
+														</div>
+													</div>
+													<div class="page-section-group">
+														<div class="basic-text font-weight-regular">
+															<ul class="info-list type-inherit">
+																<li class="info-item">기준: 기본형, 상해 1급, 10년 만기, 10년 동안 매월 납입, 비갱신형</li>
+															</ul>
+														</div>
+														<div class="form-detail">
+															<div class="form-detail-head margin-top-10">
+																<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+															</div>
+															<div class="info-table-area type-scroll-x">
+																<table class="info-table type-thead-line type-tbody-heading">
+																	<!-- 2022.05.04 : mod : 텍스트 수정 -->
+																	<caption class="for-a11y">
+																		구분, 담보명, 보험 가입금액, 40세 남성, 40세 여성으로 구성된 보장담보별 보험료 안내 표입니다.
+																	</caption>
+																	<thead>
+																		<tr>
+																			<th scope="col" rowspan="2">구분</th>
+																			<th scope="col" rowspan="2" class="info-table-left-line">담보명</th>
+																			<!-- 2022.03.31 텍스트 수정 -->
+																			<th scope="col" rowspan="2" class="info-table-left-line">보험<br />가입금액</th>
+																			<th scope="col" colspan="2" class="info-table-left-line">40세</th>
+																		</tr>
+																		<tr>
+																			<th scope="col" class="info-table-left-line">남성</th>
+																			<th scope="col" class="info-table-left-line">여성</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<th scope="row">기본계약</th>
+																			<td>(기본계약) 치아 관련 16개 담보 보장 및 만기환급금</td>
+																			<td class="align-right">1백만원</td>
+																			<td class="align-right">14,960</td>
+																			<td class="align-right">17,494</td>
+																		</tr>
+																		<tr>
+																			<th scope="row" rowspan="3">선택특약</th>
+																			<td>New크라운치료보장I특별약관</td>
+																			<td class="align-right">20만원</td>
+																			<td class="align-right">17,020</td>
+																			<td class="align-right">14,620</td>
+																		</tr>
+																		<tr>
+																			<td>컴퍼짓레진 직접치아충전치료 보장 특별약관</td>
+																			<td class="align-right">5만원</td>
+																			<td class="align-right">4,290</td>
+																			<td class="align-right">5,625</td>
+																		</tr>
+																		<tr>
+																			<td>골드인레이/골드온레이 충전치료 보장 특별약관</td>
+																			<td class="align-right">7만원</td>
+																			<td class="align-right">1,316</td>
+																			<td class="align-right">1,757</td>
+																		</tr>
+																	</tbody>
+																	<tfoot>
+																		<th>합계보험료</th>
+																		<td></td>
+																		<td></td>
+																		<td>37,590</td>
+																		<td>39,500</td>
+																	</tfoot>
+																</table>
+															</div>
+														</div>
+													</div>
+													<div class="page-section-group">
+														<div class="basic-text font-weight-regular">
+															<ul class="info-list type-inherit">
+																<li class="info-item">기준: 기본형, 상해 1급, 10년 만기, 10년 동안 매월 납입, 비갱신형</li>
+															</ul>
+														</div>
+														<div class="form-detail">
+															<div class="form-detail-head margin-top-10">
+																<span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+															</div>
+															<div class="info-table-area type-scroll-x">
+																<table class="info-table type-thead-line type-tbody-heading">
+																	<!-- 2022.05.04 : mod : 텍스트 수정 -->
+																	<caption class="for-a11y">
+																		구분, 담보명, 보험 가입금액, 50세 남성, 50세 여성으로 구성된 보장담보별 보험료 안내 표입니다.
+																	</caption>
+																	<thead>
+																		<tr>
+																			<th scope="col" rowspan="2">구분</th>
+																			<th scope="col" rowspan="2" class="info-table-left-line">담보명</th>
+																			<!-- 2022.03.31 텍스트 수정 -->
+																			<th scope="col" rowspan="2" class="info-table-left-line">보험<br />가입금액</th>
+																			<th scope="col" colspan="2" class="info-table-left-line">50세</th>
+																		</tr>
+																		<tr>
+																			<th scope="col" class="info-table-left-line">남성</th>
+																			<th scope="col" class="info-table-left-line">여성</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<th scope="row">기본계약</th>
+																			<td>(기본계약) 치아 관련 16개 담보 보장 및 만기환급금</td>
+																			<td class="align-right">1백만원</td>
+																			<td class="align-right">14,788</td>
+																			<td class="align-right">17,574</td>
+																		</tr>
+																		<tr>
+																			<th scope="row" rowspan="3">선택특약</th>
+																			<td>New크라운치료보장I특별약관</td>
+																			<td class="align-right">20만원</td>
+																			<td class="align-right">34,620</td>
+																			<td class="align-right">26,860</td>
+																		</tr>
+																		<tr>
+																			<td>컴퍼짓레진 직접치아충전치료 보장 특별약관</td>
+																			<td class="align-right">5만원</td>
+																			<td class="align-right">4,250</td>
+																			<td class="align-right">5,805</td>
+																		</tr>
+																		<tr>
+																			<td>골드인레이/골드온레이 충전치료 보장 특별약관</td>
+																			<td class="align-right">7만원</td>
+																			<td class="align-right">1,183</td>
+																			<td class="align-right">1,666</td>
+																		</tr>
+																	</tbody>
+																	<tfoot>
+																		<th>합계보험료</th>
+																		<td></td>
+																		<td></td>
+																		<td>54,840</td>
+																		<td>51,910</td>
+																	</tfoot>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="section-accordion-item js-ui-accordion__item">
+											<button type="button" class="section-accordion-opener js-ui-accordion__opener">
+												예상 해지환급금 예시
+												<span class="for-a11y">
+													상세 내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+											<div class="js-ui-accordion__layer">
+												<div class="section-accordion-contents">
+													<div class="page-section-group">
+														<div class="basic-text form-weight-regular">
+															<ul class="info-list type-inherit type-outside">
+																<li class="info-item">기준: 40세 남자, 기본형, 상해 1급, 10년 만기, 10년 동안 매월 납입, 비갱신형</li>
+															</ul>
+														</div>
+														<div class="info-table-area">
+															<!-- 2022.03.31 환급률 텍스트 수정 -->
+															<table class="info-table type-thead-line type-tbody-heading">
+																<!-- 2022.05.04 : mod : 텍스트 수정 -->
+																<caption class="for-a11y">
+																	경과기간, 납입보험료, 환급금, 환급률로 구성된 예상 해지환급금 예시 안내 표입니다.
+																</caption>
+																<colgroup>
+																	<col style="width: 76px" />
+																	<col />
+																	<col />
+																	<col style="width: 72px" />
+																</colgroup>
+																<thead>
+																	<tr>
+																		<th scope="col">경과기간</th>
+																		<th scope="col">납입보험료</th>
+																		<th scope="col">환급금</th>
+																		<th scope="col">환급률</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>1년</td>
+																		<td class="align-right">451,080</td>
+																		<td class="align-right">-</td>
+																		<td>0.0%</td>
+																	</tr>
+																	<tr>
+																		<td>3년</td>
+																		<td class="align-right">1,353,240</td>
+																		<td class="align-right">77,778</td>
+																		<td>5.7%</td>
+																	</tr>
+																	<tr>
+																		<td>5년</td>
+																		<td class="align-right">2,255,400</td>
+																		<td class="align-right">421,314</td>
+																		<td>18.7%</td>
+																	</tr>
+																	<tr>
+																		<td>7년</td>
+																		<td class="align-right">3,157,560</td>
+																		<td class="align-right">595,734</td>
+																		<td>18.9%</td>
+																	</tr>
+																	<tr>
+																		<td>10년</td>
+																		<td class="align-right">4,510,800</td>
+																		<td class="align-right">500,000</td>
+																		<td>11.1%</td>
+																	</tr>
+																</tbody>
+															</table>
+															<!-- //2022.03.31 환급률 텍스트 수정 -->
+														</div>
+														<ul class="info-list type-default margin-top-15">
+															<li class="info-item type-presa font-weight-regular">
+																보험계약자는 계약이 소멸하기 전에 언제든지 계약을 해지할 수 있으며 계약해지 시 보험기간 중 남은 미경과 기간에 대해 단기요율을 적용하여 해지환급금을 돌려 드리므로
+																납입하신 보험료보다 적거나 없을 수 있습니다.
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--// [DD] 가입예시 선택시 노출 -->
+
+								<!-- [DD] 알아두실 사항 선택시 노출 -->
+								<div class="ui-tab-panel margin-top-35" data-tab="tab03">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+									<h3 class="for-a11y">알아두실 사항</h3>
+									<strong class="page-section-title">가입시 알아두실 사항</strong>
+									<div class="page-section-group">
+										<div class="default-text font-weight-light margin-top-10">
+											<ul class="info-list type-inherit type-outside">
+												<li class="info-item">
+													기존 보험계약을 해지하고 새로운 보험계약을 체결하는 경우 보험인수가 거절되거나 보험료가 인상될 수 있으며, 보장내용(면책기간 재적용 등)이 달라질 수 있습니다.
+												</li>
+												<li class="info-item">계약 체결 전 약관 및 상품설명서를 반드시 참고하여 주시기 바랍니다.</li>
+												<li class="info-item">
+													이 보험계약은 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 본 보험회사에 있는 귀하의 모든 예금보호대상 금융상품의 해약환급금(또는 만기 시 보험금이나 사고보험금)에
+													기타지급금을 합하여 1인당 “최고 5천만원”이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다. 다만, 보험계약자 및 보험료 납부자가 법인인 보험계약은 예금자보호법에 따라
+													예금보험공사가 보호하지 않습니다.
+												</li>
+												<li class="info-item">지급한도, 면책사항 등에 따라 보험금 지급이 제한될 수 있습니다.</li>
+												<li class="info-item">상해담보의 경우 암벽등반, 스카이다이빙 등 직업, 직무, 동호회 활동 중 발생한 사고는 보상하지 않습니다.</li>
+												<li class="info-item">
+													계약 전 알릴 의무사항은 회사가 보험계약의 청약을 인수하는데 필요한 자료이므로 보험계약자 및 피보험자는 사실대로 알려야 합니다. 위 사항에 대하여 만약 사실대로 알리지 않거나
+													사실과 다르게 알린 경우에는 보험가입이 거절될 수 있으며, 특히 그 내용이 [중요한 사항]에 해당하는 경우에는 보험계약자 또는 피보험자의 의사와 관계없이 보험약관상 [계약 전 알릴
+													의무 위반의 효과]조항에 의해 계약이 해지되거나 보장이 제한될 수 있습니다. 단, 전화를 이용하여 청약한 경우 청약의 전 과정이 음성 녹음되므로 구두로만 알렸더라도 계약 전 알릴
+													의무를 이행한 것으로 간주됩니다.
+												</li>
+												<li class="info-item">회사는 계약 후 알릴 의무를 이행하지 않았을 때 손해의 발생여부에 관계없이 그 사실을 안 날부터 1개월 이내에 계약을 해지할 수 있습니다.</li>
+												<li class="info-item">
+													보험계약자가 납입한 보험료 중 일부는 불의의 사고를 당한 다른 보험계약자에게 지급되는 재원으로, 또 다른 일부는 보험회사 운영에 필요한 사업경비로 사용되므로 중도해약 시
+													지급되는 해지환급금은 납입한 보험료보다 적거나 없을 수도 있습니다.
+												</li>
+												<li class="info-item">
+													일반금융소비자인 계약자는 ?금융소비자 보호에 관한 법률? 제46조, 동법 시행령 제37조, 동법 감독규정 제30조에서 정하는 바에 따라 보험증권을 받은 날부터 15일 이내(청약을 한
+													날부터 30일 이내에 한하며 만 65세 이상 계약자가 전화를 이용하여 체결한 계약은 45일)에 청약을 철회할 수 있으며, 이 경우 철회를 접수한 날부터 3영업일 이내에 보험료를
+													돌려드립니다. 다만, 보장기간이 90일 이내인 계약 또는 전문금융소비자가 체결한 계약은 청약을 철회할 수 없습니다.
+												</li>
+												<li class="info-item">
+													보험계약자가 보험 가입 시 보험약관과 청약서 부본을 전달받지 못하였거나 청약서에 자필서명 또는 날인(도장을 찍음)을 하지 않았을 경우(전화를 이용하여 계약을 체결하는 경우
+													자필서명을 생략할 수 있음), 약관의 중요한 내용을 설명 받지 못하였을 때에는 계약이 성립한 날로부터 3개월 이내에 회사에 보험계약의 취소를 요구할 수 있는 “품질보증제도”을
+													운영하고 있습니다.
+												</li>
+												<li class="info-item">
+													계약이 취소된 경우에는 회사는 이미 납입한 보험료를 계약자에게 돌려드리며, 보험료를 받은 기간에 대하여 해당 보험약관에서 약정한 이율로 계산한 금액을 되돌려 드립니다. 다만,
+													전자거래기본법에 의해 컴퓨터를 이용하여 가상의 영업장(사이버 몰)을 이용하여 계약을 체결한 때에는 청약서부본을 드리지 아니할 수 있습니다.
+												</li>
+												<li class="info-item">하나카드 보험대리점은 해당 상품에 대해 충분히 설명할 의무가 있으며, 가입자는 가입에 앞서 이에 대한 충분한 설명을 받으시기 바랍니다.</li>
+												<li class="info-item">
+													하나카드 보험대리점은 다수의 보험사와 계약 체결 및 대리?중개하는 보험대리점이며 보험사로부터 금융상품계약체결권을 부여받지 않은 금융상품판매대리 중개업자입니다.
+												</li>
+												<li class="info-item">대리점 등록번호: 2014110113</li>
+												<li class="info-item">손해보험협회 심의필 제043188호<br />(2021.05.26~2022.05.25)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!--// [DD] 알아두실 사항 선택시 노출 -->
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary type-icon-tel" role="button">상담 예약</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

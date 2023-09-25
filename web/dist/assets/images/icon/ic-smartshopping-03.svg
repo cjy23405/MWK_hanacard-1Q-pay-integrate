@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <style>
+            .cls-2{fill:#fff;stroke:#2d3239;stroke-width:1.5px}.cls-8{fill:none}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_smartshopping_03" transform="translate(-260 -1674)">
+        <g id="그룹_9800" data-name="그룹 9800" transform="translate(-.296 3.25)">
+            <g id="사각형_11970" data-name="사각형 11970" class="cls-2" transform="translate(266.781 1675.25)">
+                <rect class="cls-7" width="19" height="28" rx="5"/>
+                <rect class="cls-8" x=".75" y=".75" width="17.5" height="26.5" rx="4.25"/>
+            </g>
+            <g id="사각형_12414" data-name="사각형 12414" class="cls-2" transform="translate(273.297 1680)">
+                <rect class="cls-7" width="5.5" height="5.5" rx="2"/>
+                <rect class="cls-8" x=".75" y=".75" width="4" height="4" rx="1.25"/>
+            </g>
+            <g id="그룹_12716" data-name="그룹 12716">
+                <path id="패스_11011" data-name="패스 11011" d="M6.313 0A6.313 6.313 0 1 1 0 6.313 6.313 6.313 0 0 1 6.313 0z" transform="translate(275.963 1690.625)" style="fill:#fff"/>
+                <path id="패스_10995" data-name="패스 10995" d="M5.625 0A5.625 5.625 0 1 1 0 5.625 5.625 5.625 0 0 1 5.625 0z" transform="translate(278.561 1692)" style="fill:#7dedf3"/>
+                <path id="패스_12287" data-name="패스 12287" d="m-1262.506 2163.582 1.116-.8v4.232" transform="translate(1543.666 -467.962)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+                <g id="패스_12288" data-name="패스 12288" style="fill:none">
+                    <path class="cls-7" d="M6.313 0A6.313 6.313 0 1 1 0 6.313 6.313 6.313 0 0 1 6.313 0z" transform="translate(275.963 1690.625)"/>
+                    <path d="M6.313 1.5A4.818 4.818 0 0 0 1.5 6.313a4.818 4.818 0 0 0 4.813 4.812 4.818 4.818 0 0 0 4.812-4.813A4.818 4.818 0 0 0 6.312 1.5m0-1.5a6.312 6.312 0 1 1 0 12.625A6.312 6.312 0 0 1 6.313 0z" style="fill:#2d3239;stroke:none" transform="translate(275.963 1690.625)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

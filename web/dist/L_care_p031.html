@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">스마트쇼핑안심(프리미엄)</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<h2 class="page-title">월 <span class="color-primary">5,500</span> 원으로<br />SSG.COM 할인, 안전 쇼핑 지원 이용</h2>
+							<ul class="guide-info-list">
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">SSG.COM<br />할인쿠폰</strong>
+									</div>
+									<!-- 2022.03.18 아이콘 이미지 적용 -->
+									<span class="guide-info-icon type-icon-72"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">구매물품<br />손상보증</strong>
+									</div>
+									<!-- 2022.03.18 아이콘 이미지 적용 -->
+									<span class="guide-info-icon type-icon-73"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">쇼핑안전<br />(가상 전화,카드번호)</strong>
+									</div>
+									<!-- 2022.03.18 아이콘 이미지 적용 -->
+									<span class="guide-info-icon type-icon-74"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">인터넷<br />명의보호</strong>
+									</div>
+									<!-- 2022.03.18 아이콘 이미지 적용 -->
+									<span class="guide-info-icon type-icon-75"></span>
+								</li>
+							</ul>
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">신청하기</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-secondary">조회/해지</button>
+									</li>
+								</ul>
+							</div>
+
+							<div class="accordion-list margin-top-35 js-ui-accordion" data-once="true">
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">상세내용</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">[구매물품손상보증]</h3>
+												</div>
+											</div>
+											<div class="accordion-section margin-top-10">
+												<div class="accordion-section-head">
+													<h4 class="title">구매물품손상보증안내</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">하나카드로 구매한 새 물품에 대해 제조사의 품질보증에 미 포함된 파손 및 도난을 보험으로 보상해 드립니다.</p>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">보상한도</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">건당 최대 1,000,000원</li>
+														<li class="info-item">연간 최대 5,000,000원</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">보장하는 손해</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">하나카드로 구매한 새물품 중 구매 후 90일 이내에 도난, 화재, 사고손상으로 인해 발생한 손해비용 보상</li>
+														<li class="info-item">도난 : 범죄사실이 객관적으로 증명되는 사고로 관할경찰서의 도난신고확인서를 발급받은 경우</li>
+														<li class="info-item">사고손상 : 고의로 인하지 않은 급격하고도 우연하며 가시적인 외래의 물리적 손상</li>
+														<li class="info-item">수리비는 부품비, 인건비, 수리를 위해 사용된 운반비(배송비)를 포함함</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">보장하지 않는 손해</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">중고품, 골동품, 재조립품, 렌트 또는 리스제품, 소모성/소멸성 제품</li>
+														<li class="info-item">서비스, 음식, 소프트웨어, 동력장치가 부착된 운송수단 등</li>
+														<li class="info-item">제품 고유의 결함 및 설계상의 결함</li>
+														<li class="info-item">천재지변으로 인한 손해, 해외 구매 물품</li>
+														<li class="info-item">해외 구매 물품</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">보상 접수/문의처</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">NICE평가정보㈜ 고객센터 (1600-1533)</p>
+													<p class="paragraph margin-top-10">
+														보상서비스는 NICE평가정보㈜와 제휴 보험회사가 계약한 구매물품손상보증보험에 의한 회원님을 피보험자로 하여 보상하는 서비스이며, 보상과 관련된 모든 업무는 제휴 보험 회사에서
+														제공합니다.
+													</p>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">[SSG.COM 할인쿠폰]</h3>
+												</div>
+											</div>
+											<div class="accordion-section margin-top-10">
+												<div class="accordion-section-head">
+													<h4 class="title">쿠폰안내</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">제공 쿠폰 : SSG.COM 5,000원 할인쿠폰 2매</li>
+														<li class="info-item type-indent type-side-no-padding font-weight-regular color-blur">
+															<span class="indent">※</span>2018년 4월 1일까지 Cjmall 할인쿠폰 제공/2021년 3월 1일부터 변경됨
+														</li>
+														<li class="info-item">쿠폰 제공 방식 : 매월 1일 당사에 등록된 휴대전화로 LMS를 통해 모바일 쿠폰 발송</li>
+														<li class="info-item">유효기간 : 해당월 말일</li>
+														<li class="info-item">쿠폰 제공처 : NICE평가정보㈜ (1600-1533)</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">사용방법</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">SSG.COM 로그인후 쿠폰번호 등록하여 사용</li>
+														<li class="info-item">타 할인수단과 중복불가</li>
+														<li class="info-item">SSG.COM에서 제공하는 전상품에 적용가능(백화점 명품등 일부제외)</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h4 class="title">유의사항</h4>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">잔액 환불 및 현금으로 교환할 수 없습니다.</li>
+														<li class="info-item">유효기간을 연장할 수 없으며, 유효기간 종료 후 사용하거나 재발송할 수 없습니다.</li>
+														<li class="info-item">휴대전화번호를 변경하셨다면 하나카드 고객센터(1800-1111)를 통해 변경하시기 바랍니다.</li>
+														<li class="info-item">문의사항은 NICE평가정보㈜ 고객센터(1600-1533)로 연락하시기 바랍니다.</li>
+														<li class="info-item">위 서비스는 NICE평가정보㈜ 또는 제휴업체의 사정에 의해 변경 또는 중단될 수 있습니다.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">스마트쇼핑안심(프리미엄) 안내</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head margin-bottom-15">
+													<h3 class="title">이용안내</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">
+															스마트 쇼핑안심(프리미엄)은 하나카드와 NICE평가정보㈜의 제휴를 통해 제공되며, 이에 따라 서비스 세부내역에 대한 책임과 관리는 NICE평가정보㈜에서 담당하고 있습니다.
+														</li>
+														<li class="info-item">스마프 쇼핑안심(프리미엄)은 하나카드서비스 앱을 기반으로 제공되는 서비스입니다.</li>
+														<li class="info-item">휴대전화 기기변경을 하셨을 경우 하나카드서비스 앱을 다시 다운받아 사용하실 수 있습니다.</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head margin-bottom-15">
+													<h3 class="title color-primary">[서비스 제공주체]</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">NICE평가정보주식회사</p>
+													<p class="paragraph margin-top-10">
+														대표자 : 신희부<br />
+														주소 : 서울시 영등포구 은행로 17<br />
+														전화 : 02-2122-4000
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="menu-link-area">
+								<ul class="menu-link-list">
+									<li class="menu-link-item"><a href="" class="ui-arrow-block menu-link-button" role="button">이용약관 안내</a></li>
+									<li class="menu-link-item"><a href="" class="ui-arrow-block menu-link-button" role="button">서비스 이용</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

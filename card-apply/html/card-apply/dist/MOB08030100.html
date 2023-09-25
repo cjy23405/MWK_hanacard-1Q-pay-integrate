@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-search-company">회사 검색</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 회사 검색 -->
+			<!-- 2022.10.27 : mod : .layer-wrap에 .layer-wrap--zip 클래스 추가 -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--zip" data-layer="layer-search-company">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header-title">회사 검색</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="header">
+								<!-- 2022.11.17 : mod : 문구수정 -->
+								<h3 class="header__title">회사 이름을 알려주시겠어요?</h3>
+							</div>
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<div class="ui-form">
+										<div class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">회사명</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<!-- 2022.11.28 : mod : type-center-delete 클래스 추가 -->
+															<div class="in-input-block type-center-delete">
+																<input type="search" class="in-input" title="회사명 입력" placeholder="회사명 입력" data-focus-input-target="name" value="" />
+															</div>
+														</div>
+													</div>
+													<div class="ui-form-side">
+														<button type="button" class="ui-button ui-button-search">
+															<span class="for-a11y">검색</span>
+														</button>
+													</div>
+												</dd>
+											</div>
+										</div>
+									</div>
+									<!-- DD : 회사 검색 후 검색결과 있을시에만 노출 -->
+									<div class="flex-box type-right margin-top-10">
+										<p class="normal-text color-blur">찾는 회사가 없나요?</p>
+										<button type="button" class="basic-link normal-text font-weight-medium color-secondary margin-left-10" data-role="layerClose">직접입력</button>
+									</div>
+									<!-- //DD : 회사 검색 후 검색결과 있을시에만 노출 -->
+								</div>
+								<!-- case : 검색결과 없을 경우 -->
+								<div class="page-section-group row-group type-line">
+									<div class="link-item type-none type-flex type-no-line type-height-auto">
+										<p class="item-text">검색결과가 없습니다.</p>
+										<button type="button" class="basic-link normal-text font-weight-medium color-secondary margin-top-20" data-role="layerClose">직접입력</button>
+									</div>
+								</div>
+								<!-- //case : 검색결과 없을 경우 -->
+								<!-- case : 검색결과 있을 경우 -->
+								<div class="page-section type-line row-contents-group">
+									<div class="zip-area type-apply">
+										<div class="zip-head">
+											<strong class="total">총 <strong class="color-primary">123</strong>건</strong>
+										</div>
+										<div class="zip-list">
+											<div class="zip-item">
+												<div class="zip-item-head"><strong class="number">하나카드(주)</strong></div>
+												<button type="button" class="zip-item-block">
+													<span class="category">주소</span>
+													<span class="text">인천 서구 에코로 163 청라국제도시역</span>
+												</button>
+												<button type="button" class="zip-item-block">
+													<!-- 2022.10.27 : mod : 문구수정 -->
+													<span class="category">전화번호</span>
+													<span class="text">인천 서구 경서동 519-2 청라국제도시역</span>
+												</button>
+											</div>
+											<div class="zip-item">
+												<div class="zip-item-head"><strong class="number">하나카드</strong></div>
+												<button type="button" class="zip-item-block">
+													<span class="category">도로명</span>
+													<span class="text">서울 중구 을지로 66</span>
+												</button>
+												<button type="button" class="zip-item-block">
+													<span class="category">전화번호</span>
+													<span class="text">1800-1234</span>
+												</button>
+											</div>
+										</div>
+										<button type="button" class="ui-button ui-button-view-more">더보기</button>
+									</div>
+								</div>
+								<!-- //case : 검색결과 있을 경우 -->
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 회사 검색 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-search-company');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

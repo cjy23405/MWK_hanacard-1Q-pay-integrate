@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">내맘대로 서비스</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 2</span>
+							신청할 서비스를 선택해 주세요.
+						</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 2단계">
+							<div class="progress-tracker">
+								<div class="progress-step"></div>
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<!-- 신청할 서비스 선택 -->
+						<div class="ui-checkbox-group type-full type-size-basic margin-top-10 js-ui-accordion">
+							<div class="ui-checkbox-block type-box type-has-button js-ui-accordion__item">
+								<input type="checkbox" class="ui-checkbox" id="checkbox1-2" />
+								<div class="ui-label type-block">
+									<div class="ui-checkbox-block-head">
+										<label for="checkbox1-2" class="ui-label-text">
+											<span class="title basic-text"
+												>여행 혜택<span class="ui-badge color-secondary font-weight-regular margin-left-10 ui-arrow"
+													><a href="javascript:void(0);" data-layer-open="test-basic">'22 한정 혜택 안내</a></span
+												></span
+											>
+											<div class="form-blok margin-top-5">
+												<p class="default-text">"이동부터 휴식까지 한 번에"</p>
+												<p class="default-text margin-top-5">숙박, 고속철도, 항공 가맹점에서 <span class="highlighting-text">10%</span> 적립</p>
+											</div>
+										</label>
+										<button type="button" class="guide-layer-opener js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="js-ui-accordion__layer">
+										<div class="ui-checkbox-block-detail">
+											<div class="form-detail-list type-text-default">
+												<div class="font-weight-bold color-basic margin-bottom-10">상세혜택</div>
+												<div class="font-weight-light color-blur">
+													지난달 실적 50만원 이상 이용 시<br />
+													최대 1만 하나머니까지<br />
+													10% 적립 혜택을 받을 수 있어요.
+												</div>
+												<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+												<span class="ui-badge color-primary-dark font-weight-regular margin-top-10"><span class="color-basic">제휴연회비</span> 1만원</span>
+												<div class="benefit-detail margin-top-15 color-basic">
+													<ul class="benefit-detail-list">
+														<li class="benefit-detail-item">
+															<span class="card-detail-benefit-icon type-15"></span>
+															<span class="benefit-detail-text">숙박 (여기어때, 야놀자)</span>
+														</li>
+														<li class="benefit-detail-item">
+															<span class="card-detail-benefit-icon type-16"></span>
+															<span class="benefit-detail-text">철도 (KTX, SRT)</span>
+														</li>
+														<li class="benefit-detail-item">
+															<span class="card-detail-benefit-icon type-17"></span>
+															<span class="benefit-detail-text">항공 (대한항공, 아시아나, 진에어, 제주항공, 에어부산, 에어서울)</span>
+														</li>
+													</ul>
+												</div>
+
+												<div class="benefit-detail padding-top-45">
+													<div class="font-weight-bold color-basic margin-bottom-10">'22년 한정 혜택</div>
+													<div class="font-weight-light color-blur">국내/해외 여행 월 최대 2만 하나머니 추가 적립!</div>
+
+													<div class="form-list type-box margin-top-20">
+														<div class="font-weight-bold color-basic margin-bottom-1">국내여행</div>
+														<div class="font-weight-light color-basic margin-bottom-10">월 최대 <span class="color-primary">1만 하나머니</span> 적립</div>
+
+														<ul class="benefit-detail-list">
+															<li class="benefit-detail-item">
+																<span class="card-detail-benefit-icon type-20"></span>
+																<span class="benefit-detail-text">로컬맛집 100선 10% 적립</span>
+															</li>
+															<li class="benefit-detail-item">
+																<span class="card-detail-benefit-icon type-21"></span>
+																<span class="benefit-detail-text">빵지순례 10선 10% 적립</span>
+															</li>
+															<li class="benefit-detail-item">
+																<span class="card-detail-benefit-icon type-22"></span>
+																<span class="benefit-detail-text">쏘카,그린카 10% 적립</span>
+															</li>
+														</ul>
+													</div>
+
+													<div class="form-list type-box margin-top-20">
+														<div class="font-weight-bold color-basic margin-bottom-1">해외여행</div>
+														<div class="font-weight-light color-basic margin-bottom-10">월 최대 <span class="color-primary">1만 하나머니</span> 적립</div>
+
+														<ul class="benefit-detail-list">
+															<li class="benefit-detail-item">
+																<span class="card-detail-benefit-icon type-23"></span>
+																<span class="benefit-detail-text">공항철도/K리무진 50% 적립</span>
+															</li>
+															<li class="benefit-detail-item">
+																<span class="card-detail-benefit-icon type-24"></span>
+																<span class="benefit-detail-text">3대 면세점(신라, 신세계, 롯데)<br />10% 적립</span>
+															</li>
+															<li class="benefit-detail-item">
+																<span class="card-detail-benefit-icon type-25"></span>
+																<span class="benefit-detail-text">노랑풍선 10% 적립</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui-checkbox-block type-box type-has-button js-ui-accordion__item">
+								<input type="checkbox" class="ui-checkbox" id="checkbox1-4" />
+								<div class="ui-label type-block">
+									<div class="ui-checkbox-block-head">
+										<label for="checkbox1-4" class="ui-label-text">
+											<span class="title basic-text">케어 혜택</span>
+											<div class="form-blok margin-top-5">
+												<p class="default-text">"내가 아플 때도, 반려동물이 아플 때도"</p>
+												<p class="default-text margin-top-5">병원, 동물병원 가맹점에서 <span class="highlighting-text">10%</span> 적립</p>
+											</div>
+										</label>
+										<button type="button" class="guide-layer-opener js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="js-ui-accordion__layer">
+										<div class="ui-checkbox-block-detail">
+											<div class="form-detail-list type-text-default">
+												<div class="font-weight-bold color-basic margin-bottom-10">상세혜택</div>
+												<div class="font-weight-light color-blur">
+													지난달 실적 50만원 이상 이용 시<br />
+													최대 1만 하나머니까지<br />
+													10% 적립 혜택을 받을 수 있어요.
+												</div>
+												<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+												<span class="ui-badge color-primary-dark font-weight-regular margin-top-10"><span class="color-basic">제휴연회비</span> 1만원</span>
+												<div class="benefit-detail margin-top-15 color-basic">
+													<ul class="benefit-detail-list type-col2">
+														<li class="benefit-detail-item">
+															<span class="card-detail-benefit-icon type-18"></span>
+															<span class="benefit-detail-text">병원</span>
+														</li>
+														<li class="benefit-detail-item">
+															<span class="card-detail-benefit-icon type-19"></span>
+															<span class="benefit-detail-text">동물병원</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui-checkbox-block type-box type-has-button js-ui-accordion__item">
+								<input type="checkbox" class="ui-checkbox" id="checkbox1-3" />
+								<div class="ui-label type-block">
+									<div class="ui-checkbox-block-head">
+										<label for="checkbox1-3" class="ui-label-text">
+											<span class="title basic-text">골프 혜택</span>
+											<div class="form-blok margin-top-5">
+												<p class="default-text">"가볍게 스크린 골프 어때요?"</p>
+												<p class="default-text margin-top-5">골프장, 골프연습장, 카카오골프 가맹점에서 <span class="highlighting-text">10%</span> 적립</p>
+											</div>
+										</label>
+										<button type="button" class="guide-layer-opener js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="js-ui-accordion__layer">
+										<div class="ui-checkbox-block-detail">
+											<div class="form-detail">
+												<div class="form-detail-list type-text-default">
+													<div class="font-weight-bold color-basic margin-bottom-10">상세혜택</div>
+													<div class="font-weight-light color-blur">
+														지난달 실적 50만원 이상 이용 시<br />
+														최대 1만 하나머니까지<br />
+														지난달 실적 100만원 이상 이용 시<br />
+														최대 2만원 하나머니까지<br />
+														10% 적립 혜택을 받을 수 있어요.
+													</div>
+													<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+													<span class="ui-badge color-primary-dark font-weight-regular margin-top-10"><span class="color-basic">제휴연회비</span> 2만원</span>
+													<div class="benefit-detail margin-top-15 color-basic">
+														<ul class="benefit-detail-list type-col2">
+															<li class="benefit-detail-item">
+																<span class="card-detail-benefit-icon type-8"></span>
+																<span class="benefit-detail-text">골프장</span>
+															</li>
+															<li class="benefit-detail-item">
+																<span class="card-detail-benefit-icon type-9"></span>
+																<span class="benefit-detail-text">골프연습장</span>
+															</li>
+															<li class="benefit-detail-item">
+																<span class="card-detail-benefit-icon type-10"></span>
+																<span class="benefit-detail-text">스크린골프</span>
+															</li>
+															<li class="benefit-detail-item">
+																<span class="card-detail-benefit-icon type-11"></span>
+																<span class="benefit-detail-text">카카오골프</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-detail-list type-text-default type-line">
+													<div class="font-weight-medium color-basic margin-bottom-10">[마스터카드 골프장 무료커피 프로모션]</div>
+													<ul class="info-list type-default type-outside">
+														<li class="info-item type-flex-box"><span class="info-left">기간 :</span>2022년 3월 ~ 2023년 2월까지</li>
+														<li class="info-item type-flex-box"><span class="info-left">대상 :</span>골프 혜택 신청한 내맘대로 쁨카드 마스터 브랜드 발급 고객 (지난달 실적 50만원 이상)</li>
+														<li class="info-item type-flex-box"><span class="info-left">혜택 :</span> 더 라운지 앱에서 카드 등록 후 골프장 클럽하우스 커피 무료 4인 쿠폰 수령 (기간 중 2회)</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="ui-checkbox-block type-box type-has-button js-ui-accordion__item">
+								<input type="checkbox" class="ui-checkbox" id="checkbox1-1" />
+								<div class="ui-label type-block">
+									<div class="ui-checkbox-block-head">
+										<label for="checkbox1-1" class="ui-label-text">
+											<span class="title basic-text">에듀 혜택</span>
+											<div class="form-blok margin-top-5">
+												<p class="default-text">“건강하게 공부하자!”</p>
+												<p class="default-text margin-top-5">학원, 헬스장, 수영장 가맹점에서 <span class="highlighting-text">5%</span> 적립</p>
+											</div>
+										</label>
+										<button type="button" class="guide-layer-opener js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="js-ui-accordion__layer">
+										<div class="ui-checkbox-block-detail">
+											<div class="form-detail-list type-text-default">
+												<div class="font-weight-bold color-basic margin-bottom-10">상세혜택</div>
+												<div class="font-weight-light color-blur">
+													지난달 실적 50만원 이상 이용 시<br />
+													최대 1만 하나머니까지<br />
+													지난달 실적 100만원 이상 이용 시<br />
+													최대 2만원 하나머니까지<br />
+													5% 적립 혜택을 받을 수 있어요.
+												</div>
+												<!-- 2022.07.29 : mod : 클래스 변경 .color-primary => .color-primary-dark -->
+												<span class="ui-badge color-primary-dark font-weight-regular margin-top-10"><span class="color-basic">제휴연회비</span> 2만원</span>
+												<div class="benefit-detail margin-top-15 color-basic">
+													<ul class="benefit-detail-list type-col2">
+														<li class="benefit-detail-item">
+															<span class="card-detail-benefit-icon type-12"></span>
+															<span class="benefit-detail-text">학원</span>
+														</li>
+														<li class="benefit-detail-item">
+															<span class="card-detail-benefit-icon type-13"></span>
+															<span class="benefit-detail-text">헬스장</span>
+														</li>
+														<li class="benefit-detail-item">
+															<span class="card-detail-benefit-icon type-14"></span>
+															<span class="benefit-detail-text">수영장</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //신청할 서비스 선택 -->
+						<div class="margin-top-15">
+							<ul class="info-list">
+								<li class="info-item">선택하신 혜택에 따라 추가 연회비가 발생 됩니다.</li>
+								<li class="info-item">중도 해지 시, 혜택 받은 금액을 제외 후 해지일 기준으로 일할 계산되어 환불 됩니다.</li>
+							</ul>
+						</div>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">신청하기</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">내맘대로 혜택은 서비스별 월 1회 신청 가능하며, 해지 시에는 다음달 1일부터 재신청 가능합니다.</li>
+										<li class="info-item">내맘대로 혜택은 가족회원 신청이 불가합니다.</li>
+										<li class="info-item">내맘대로 혜택은 혜택별 신청일 기준으로 혜택 해지 전가지 1년 단위로 자동연장됩니다.</li>
+										<li class="info-item">내맘대로 혜택은 내맘대로 쁨카드에 한하여 추가로 이용할 수 있는 부가서비스이므로 카드를 해지하는 경우 내맘대로 혜택도 자동 해지 됩니다.</li>
+										<li class="info-item">제휴연회비는 에듀 혜택, 골프 혜택, 여행 혜택, 케어혜택, 제공에 소요됩니다.</li>
+										<li class="info-item">제휴연회비는 혜택 금액을 제외한 후 일할 계산하여 서비스해지일 기준 다음 다음달 5영업일 이내 입금됩니다.</li>
+										<li class="info-item">내맘대로 혜택의 상세 내용은 하나카드 홈페이지 고객센터>상품공시실>약관/서식>상품약관에서 확인 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- popup -->
+			<div class="layer-wrap layer-wrap--full" data-layer="test-basic">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">'22 한정 혜택 안내</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<div class="cont_deli">
+										<h2 class="page-title">
+											국내/해외 여행<br />
+											<strong>월 최대 2만 하나머니 추가적립!</strong>
+										</h2>
+
+										<div class="bene_box">
+											<div class="tit">
+												<strong>국내여행</strong>
+												<span>월 최대 <strong>1만 하나머니</strong></span>
+												<button class="ui-button ui-basic-button type-senary color-primary">맛집 / 빵집 찾아보기</button>
+											</div>
+
+											<ul>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_01.png" alt="" />
+													<strong>로컬 맛집 100선</strong>
+													10% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_02.png" alt="" />
+													<strong>빵지순례 10선</strong>
+													10% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_03.png" alt="" />
+													<strong>쏘카, 그린카</strong>
+													10% 적립
+												</li>
+											</ul>
+										</div>
+
+										<div class="bene_box ty02">
+											<div class="tit">
+												<strong>해외여행</strong>
+												<span>월 최대 <strong>1만 하나머니</strong></span>
+											</div>
+											<ul>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_04.png" alt="" />
+													<strong>공항철도/K리무진</strong>
+													50% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_05.png" alt="" />
+													<strong>신라, 롯데, 신세계<br />3대 면세점</strong>
+													10% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_06.png" alt="" />
+													<strong>노랑풍선</strong>
+													10% 적립
+												</li>
+											</ul>
+										</div>
+
+										<div class="bene_box ty03">
+											<div class="tit">
+												<strong>기존 혜택 그대로</strong>
+												<span>월 최대 <strong>1만 하나머니</strong></span>
+											</div>
+											<ul>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_07.png" alt="" />
+													<strong>야놀자, 여기어때</strong>
+													10% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_08.png" alt="" />
+													<strong>6대 항공사</strong>
+													10% 적립
+												</li>
+												<li>
+													<img src="./assets/images/contents/deli_tour/ic_benefit_09.png" alt="" />
+													<strong>KTX, SRT</strong>
+													10% 적립
+												</li>
+											</ul>
+										</div>
+										<div class="wcms-data margin-top-20">
+											<ul class="wcms-list">
+												<li class="wcms-list-item" data-symbol="※">
+													<div class="wcms-list-contents">이벤트는 하나카드 및 제휴사의 사정에 따라 사전 예고 없이 변경되거나 중단 될 수 있습니다.</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- // popup -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

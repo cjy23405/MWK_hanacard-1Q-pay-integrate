@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-suitability-congruity">적합성 판단 확인서(적합)</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-suitability-incongruity">적합성 판단 확인서(부적합)</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 적합성 판단 확인서(적합) -->
+			<div class="layer-wrap layer-wrap layer-wrap--full" data-layer="layer-suitability-congruity">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">적합성 판단 확인서</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<p class="paragraph color-blur">
+										하나카드로 신용카드를 신청해주셔서 감사합니다.<br /><br />
+
+										손님께서 기재해주신 소중한 정보로 신용카드 상품계약 체결 적합성 판단 절차를 진행하였으며, 적합한 것으로 판단되었습니다.<br /><br />
+
+										'금융소비자 보호에 관한 법률' 제 17조에 의거, 아래와 같이 판단 결과를 안내합니다.
+									</p>
+								</div>
+								<div class="page-section-group">
+									<div class="info-area type-line-box">
+										<strong class="info-area-title">적합성 판단 결과</strong>
+										<ul class="info-list">
+											<li class="info-item">판단 결과 : <span class="color-primary">적합</span></li>
+											<li class="info-item">판단시점 : 2021년 03월 25일</li>
+											<li class="info-item">대상상품 : MULTI Young 모바일카드</li>
+											<li class="info-item">
+												<div>주요내용</div>
+												<ul class="info-list">
+													<li class="info-item type-indent"><span class="indent">1)</span>신용카드 상품 가입조건 충족</li>
+													<li class="info-item type-indent"><span class="indent">2)</span>고객의 채무상환 능력</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<div class="small-text align-right color-blur font-weight-light margin-top-15">
+										2021년 03월 25일<br />
+										하나카드주식회사
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 적합성 판단 확인서(적합) -->
+
+			<!-- layer: 적합성 판단 확인서(부적합) -->
+			<div class="layer-wrap layer-wrap layer-wrap--full" data-layer="layer-suitability-incongruity">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">적합성 판단 확인서</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<p class="paragraph color-blur">
+										하나카드로 신용카드를 신청해주셔서 감사합니다.<br /><br />
+
+										손님께서 기재해주신 소중한 정보로 신용카드 상품계약 체결 적합성 판단 절차를 진행하였으며, 적합한 것으로 판단되었습니다.<br /><br />
+
+										'금융소비자 보호에 관한 법률' 제 17조에 의거, 아래와 같이 판단 결과를 안내합니다.
+									</p>
+								</div>
+								<div class="page-section-group">
+									<div class="info-area type-line-box">
+										<strong class="info-area-title">적합성 판단 결과</strong>
+										<ul class="info-list">
+											<li class="info-item">판단 결과 : <span class="color-wrong">부적합</span></li>
+											<li class="info-item">판단시점 : 2021년 03월 25일</li>
+											<li class="info-item">대상상품 : MULTI Young 모바일카드</li>
+											<li class="info-item">
+												<div>주요내용</div>
+												<ul class="info-list">
+													<li class="info-item type-indent"><span class="indent">1)</span>신용카드 상품 가입조건 충족</li>
+													<li class="info-item type-indent"><span class="indent">2)</span>고객의 채무상환 능력</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<div class="small-text align-right color-blur font-weight-light margin-top-15">
+										2021년 03월 25일<br />
+										하나카드주식회사
+									</div>
+								</div>
+								<div class="page-section-group">
+									<ul class="info-list">
+										<li class="info-item">
+											당사는 신용조회회사 또는 신용정보집중기관으로 제공받은 신용정보 외에 자체적으로 운영하는 신용카드 상품 발급심사기준 등을 따라 종합적으로 적합성을 판단하였습니다.
+										</li>
+										<li class="info-item">또한, 평가 결과는 신용카드 상품신청시 제출하신 정보에 따른 결과이며, 타 금융회사에서 평가한 정보와 다를 수 있습니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 적합성 판단 확인서(부적합) -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

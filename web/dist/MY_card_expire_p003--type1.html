@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">유효기간만료예정카드</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title margin-bottom-none">
+							<span class="title-step">STEP 1</span> 발급 예정 카드의 정보를<br />
+							확인해 주세요.
+						</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="page-info">
+							<p class="page-info-text color-basic">
+								소지하신 카드의 유효기간이 얼마 남지 않았습니다.<br /><br />
+								카드 이용에 불편 없으시도록 <span class="color-primary">유효기간이 연장</span>된 카드를 발급하여 보내드리겠습니다.
+							</p>
+						</div>
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="process type-change">
+								<ol class="process-list">
+									<li class="process-item type-align-baseline type-left-line">
+										<div class="process-stage"></div>
+										<div class="process-text">
+											<div class="form-detail type-line-bottom">
+												<div class="form-detail-head">
+													<h3 class="title">만료예정카드</h3>
+												</div>
+												<dl class="form-detail-list">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">만료예정카드</dt>
+														<dd class="form-detail-group">
+															하나가족사랑카드<br />
+															4365-****-****-1234
+														</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">소지구분</dt>
+														<dd class="form-detail-group">본인</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">유효년월</dt>
+														<dd class="form-detail-group">2018-08</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">브랜드</dt>
+														<dd class="form-detail-group">국내전용(LOCAL)</dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</li>
+									<li class="process-item type-align-baseline margin-top-none">
+										<div class="process-stage is-active"></div>
+										<div class="process-text">
+											<div class="form-detail">
+												<div class="form-detail-head">
+													<h3 class="title">발급예정카드</h3>
+												</div>
+												<dl class="form-detail-list">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">발급예정카드</dt>
+														<dd class="form-detail-group">하나가족사랑카드</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">소지구분</dt>
+														<dd class="form-detail-group">본인</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">브랜드</dt>
+														<dd class="form-detail-group">국내전용(MASTER)</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">배송예정주소</dt>
+														<dd class="form-detail-group">[자택] 서울 중구 다동 ****</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">카드배송일</dt>
+														<dd class="form-detail-group">ㅡ 로부터 약 1~2주 소요</dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</li>
+								</ol>
+							</div>
+
+							<div class="info-area margin-top-35">
+								<ul class="info-list type-outside type-default color-basic">
+									<li class="info-item">자동갱신발급을 원하지 않으실 경우 <span class="color-primary">_XXXXX</span> 까지 하나카드 고객센터(1800-1111)로 문의주시기 바랍니다.</li>
+									<li class="info-item">수령지변경은 <span class="color-primary">_XXXXX</span> 까지 가능합니다.</li>
+								</ul>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-primary" role="button">다음</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion margin-top-35">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">
+											<span>
+												갱신발급된 카드를 처음 이용하시면 기존카드는 사용이 정지되오니, 기존카드는 폐기하여 주시기 바랍니다.<br />
+												(갱신카드 첫 이용 후 매출표 접수 시점에 기존카드는 사용이 정지됩니다.)
+											</span>
+											<ul class="info-list">
+												<li class="info-item type-indent">
+													<span class="indent">-</span> 기존카드 사용정지 이후에는, 기존카드에 등록되어 있던 자동이체(통신요금, 아파트관리비, 보험료 등)는 자동납부 처리가 되지 않습니다. 단, 이용
+													가능한 신용카드가 있을 경우 보유중인 신용카드 중 한가지로 자동이체 승계가 될 수 있으므로, 자동이체를 다른 카드로 변경하거나 해지를 원하는 경우 해당 가맹점 앞으로 연락하여
+													주시기 바랍니다.
+												</li>
+											</ul>
+										</li>
+										<li class="info-item">
+											모바일카드는 플라스틱카드 갱신발급 후 사용등록일 다음날 “갱신발급 다운로드 안내” SMS가 발송되오니, 안내 절차에 따라 갱신발급 받으시기 바랍니다. (단, 휴대폰 기종 및 통신사,
+											USIM칩에 따라 갱신발급이 불가할 수 있습니다.)
+										</li>
+										<li class="info-item">가족카드는 자동갱신발급이 되지 않습니다. 유효기간이 도래한 가족카드가 있으실 경우 하나카드 고객센터(1800-1111)를 통해 발급안내를 받으시기 바랍니다.</li>
+										<li class="info-item">
+											후불하이패스카드만 이용하시는 경우 신용카드는 자동갱신발급이 되지 않으므로 하나카드 고객센터(1800-1111)를 통해 갱신발급(또는 추가발급)을 안내받으시기 바랍니다.
+										</li>
+										<li class="info-item">현금인출 기능은 최초 신규 발급시 부여된 경우 동일하게 사용 가능하며, 타행계좌를 이용중인 경우 현금인출 기능은 제외되어 발급됩니다.</li>
+										<li class="info-item">
+											갱신발급카드 수령 시 제휴서비스 제공 및 각종 제휴업무에 따른 개인신용정보 제공 및 이용에 관련된 동의서가 카드와 함께 배송될 수 있습니다. 배송인의 안내에 따라 동의서에 서명하셔서
+											하나카드의 혜택을 누려 보시기 바랍니다. (동의서 미동의 시 사은행사 참여 등에 제한이 있을 수 있습니다. )
+										</li>
+										<li class="info-item">
+											해외겸용카드(VISA,MASTER,AMEX 등)와 국내전용카드(LOCAL)는 연회비가 상이하며, 소지하신 카드의 자세한 브랜드 혜택 및 연회비 정보는 홈페이지 및 하나카드 고객센터를 통해 안내 받으실
+											수 있습니다. (일부 카드상품의 경우 국내전용 카드 발급이 불가합니다. )
+										</li>
+										<li class="info-item">갱신발급 시점의 회원님의 신용도 및 당사 규정에 따라 별도의 통보 없이 발급이 제한되거나 한도가 축소될 수 있습니다.</li>
+										<li class="info-item">갱신발급될 카드의 수령지 변경 및 문의사항은 하나카드 고객센터(1800-1111)로 문의하여 주시기 바랍니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

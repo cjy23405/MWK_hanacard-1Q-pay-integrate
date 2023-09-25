@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">납부예정금액</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="check-range type-border-none margin-bottom-none">
+							<button type="button" class="ui-button-down">[하나카드1] 9411-81**-****-1234</button>
+						</div>
+
+						<div class="page-section type-line margin-top-none">
+							<div class="date-head margin-top-none">
+								<a href="" class="date-head-button type-prev">
+									<span class="for-a11y">전월</span>
+								</a>
+								<h3 class="date-head-title">2021년 8월</h3>
+								<a href="" class="date-head-button type-next">
+									<span class="for-a11y">후월</span>
+								</a>
+							</div>
+
+							<div class="usage-accordion-list js-ui-accordion">
+								<div class="usage-accordion-item js-ui-accordion__item" data-initial-open="">
+									<div class="usage-accordion-head">
+										<div class="total-amount type-no-line margin-bottom-none">
+											<div class="total-amount-head">
+												<h4 class="total-amount-title">2021.09.25 출금예정 (09.10 기준)</h4>
+											</div>
+											<div class="total-amount-val">총 150,000 원</div>
+										</div>
+										<button type="button" class="ui-button usage-accordion-opener js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+
+									<div class="usage-accordion-layer js-ui-accordion__layer">
+										<div class="usage-accordion-contents type-no-line">
+											<div class="form-detail">
+												<dl class="form-detail-list">
+													<div class="form-detail-item">
+														<dt class="form-detail-title">일시불</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">할부</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">일시불 일부결제금액이월<br />약정</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">단기카드대출 일부결제금액<br />이월약정</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">단기카드대출(현금서비스)</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">장기카드대출(카드론)</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">수수료</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">연회비</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">선수금</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+												</dl>
+											</div>
+
+											<div class="form-detail type-line">
+												<dl class="form-detail-list">
+													<div class="form-detail-item">
+														<dt class="form-detail-title font-weight-medium color-basic">연체</dt>
+														<dd class="form-detail-group font-weight-medium">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">연체원금</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">연체수수료</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+													<div class="form-detail-item">
+														<dt class="form-detail-title">연체료</dt>
+														<dd class="form-detail-group">999,999,999 원</dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="page-section-group">
+								<div class="section-title">
+									<h2 class="title type-flexible">
+										<a href="" role="button" class="ui-arrow-block">납부정보</a>
+									</h2>
+								</div>
+								<div class="form-detail margin-top-25">
+									<dl class="form-detail-list">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">납부 계좌</dt>
+											<dd class="form-detail-group">기업<br />324324523432</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">납부일</dt>
+											<dd class="form-detail-group">매월 14일</dd>
+										</div>
+									</dl>
+								</div>
+							</div>
+
+							<div class="page-section-group type-line">
+								<div class="section-title">
+									<h2 class="title">카드 이용기간</h2>
+								</div>
+								<div class="form-detail margin-top-25">
+									<dl class="form-detail-list">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">일시불&middot;할부</dt>
+											<dd class="form-detail-group">2021.08.02<br />~ 2021.09.01</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">단기카드대출(현금서비스)</dt>
+											<dd class="form-detail-group">2021.07.15<br />~ 2021.08.14</dd>
+										</div>
+									</dl>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="usage-accordion">
+								<ul class="usage-accordion-list js-ui-accordion">
+									<li class="usage-accordion-item js-ui-accordion__item">
+										<div class="usage-accordion-head">
+											<div class="usage-accordion-data">
+												<span class="usage-accordion-data-key">상세내역</span>
+											</div>
+											<button type="button" class="ui-button usage-accordion-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="usage-accordion-contents">
+												<div class="usage-default">
+													<ul class="usage-default-list">
+														<li class="usage-default-item">
+															<div class="usage-default-date">2021.10.23</div>
+															<button type="button" class="usage-default-block">
+																<div class="usage-default-left">
+																	<div class="usage-default-title">스타벅스 청라점</div>
+																	<div class="usage-default-etc">
+																		<div class="usage-default-etc-item">본인1234</div>
+																		<div class="usage-default-etc-item">일시불</div>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="usage-default-sum">128,050 원</div>
+																</div>
+															</button>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-date">2021.10.19</div>
+															<button type="button" class="usage-default-block">
+																<div class="usage-default-left">
+																	<div class="usage-default-title">올리브영</div>
+																	<div class="usage-default-etc">
+																		<div class="usage-default-etc-item">본인1234</div>
+																		<div class="usage-default-etc-item">일시불</div>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="usage-default-sum">30,000 원</div>
+																</div>
+															</button>
+
+															<button type="button" class="usage-default-block">
+																<div class="usage-default-left">
+																	<div class="usage-default-title">ZARA 가로수길점</div>
+																	<div class="usage-default-etc">
+																		<div class="usage-default-etc-item">본인1234</div>
+																		<div class="usage-default-etc-item">일시불</div>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="usage-default-sum">100,000 원</div>
+																</div>
+															</button>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<div class="section-title">
+								<h2 class="title">카드별 금액</h2>
+							</div>
+							<div class="section-contents">
+								<div class="card-list-area type-default">
+									<ul class="card-list">
+										<li class="card-item">
+											<a href="" class="card-block" role="button">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<!-- DD : 이미지 없을 때 -->
+												<span class="card-image">
+													<span class="card-image-inner"></span>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<div class="card-info">
+													<div class="ui-arrow-block">
+														<span class="card-name">[본인] 모두의 쇼핑</span>
+														<div class="card-number">
+															<span class="card-number-item">VISA</span>
+															<span class="card-number-item">4365-12**-****-1234</span>
+														</div>
+													</div>
+													<div class="card-price">18,880,017 원</div>
+												</div>
+											</a>
+										</li>
+										<li class="card-item">
+											<a href="" class="card-block" role="button">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<!-- DD : 이미지 에러 -->
+												<span class="card-image">
+													<span class="card-image-inner">
+														<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<div class="card-info">
+													<div class="ui-arrow-block">
+														<span class="card-name">[본인] 모두의 쇼핑</span>
+														<div class="card-number">
+															<span class="card-number-item">VISA</span>
+															<span class="card-number-item">4365-12**-****-1234</span>
+														</div>
+													</div>
+													<div class="card-price">18,880,017 원</div>
+												</div>
+											</a>
+										</li>
+										<li class="card-item">
+											<a href="" class="card-block" role="button">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<!-- DD : 이미지 있을 때 -->
+												<span class="card-image">
+													<span class="card-image-inner">
+														<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<div class="card-info">
+													<div class="ui-arrow-block">
+														<span class="card-name">[본인] 모두의 쇼핑</span>
+														<div class="card-number">
+															<span class="card-number-item">VISA</span>
+															<span class="card-number-item">4365-12**-****-1234</span>
+														</div>
+													</div>
+													<div class="card-price">18,880,017 원</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<ul class="menu-link-list">
+								<li class="menu-link-item"><a href="" class="ui-arrow-block menu-link-button" role="button" data-layer-open="layer-info-cdd">안내&middot;유의사항</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<!-- layer: 납부예정금액 안내 유의사항 -->
+		<div class="layer-wrap layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-info-cdd">
+			<div class="layer-container">
+				<section class="ui-layer">
+					<div class="ui-layer__head">
+						<div class="header">
+							<h2 class="header__title">안내&middot;유의사항</h2>
+							<div class="header__right">
+								<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+									<span class="for-a11y">레이어 닫기</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="ui-layer__body">
+						<div class="ui-layer__body-inner">
+							<div class="info-area">
+								<ul class="info-list type-text-large">
+									<li class="info-item">조회하는 시점에 선결제나 취소(환금) 및 결제당일 일부 출금된 내용 등이 반영되지 않은 경우 실제 결제하실 금액과 다를 수 있습니다.</li>
+									<li class="info-item">
+										KEB하나은행 외 타행 납부계좌를 이용하시는 경우 납부대금이 정상적으로 출금되었다면 납부일 다음날에 연체수수료 없이 정상 처리되며, 출금결과 반영완료 전 납부예정금액 조회 시
+										일시적으로 연체 항목에서 납부대금이 확인될 수 있습니다.
+									</li>
+									<li class="info-item">납부예정금액조회는 매일 06시~24시까지 가능하오니 이용에 참고하시기 바랍니다.</li>
+									<li class="info-item">선결제 시 연체료 등 수수료가 포함된 경우는 납부예정금액과 실제 결제금액이 다를 수 있습니다.</li>
+									<li class="info-item">카드번호별 납부예정금액 조회는 단순 조회성이며 실제 청구는 명세구분 기준으로 청구됩니다.</li>
+									<li class="info-item">해당 메뉴는 해당월 납부예정금액이 있는 매출만 조회되므로 체크카드의 납부예정금액 조회 시 0원으로 조회될 수 있습니다.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- //layer: 납부예정금액 안내 유의사항 -->
+
+
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

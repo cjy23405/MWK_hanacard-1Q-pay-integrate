@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+    <g transform="translate(-104 -166)">
+        <rect data-name="사각형 7186" width="27" height="27" rx="8" transform="translate(104 166)" style="fill:#f5f6f8"/>
+        <path data-name="사각형 14096" transform="translate(110 172)" style="fill:transparent" d="M0 0h15v15H0z"/>
+        <g data-name="사각형 18055" style="stroke:#111;fill:none">
+            <path style="stroke:none" d="M0 0h6.25v3H0z" transform="translate(114.4 178)"/>
+            <path style="fill:none" d="M.5.5h5.25v2H.5z" transform="translate(114.4 178)"/>
+        </g>
+        <g data-name="사각형 18056" transform="translate(111.4 174.5)" style="stroke:#111;fill:none">
+            <rect width="4" height="10" rx="1.5" style="stroke:none"/>
+            <rect x=".5" y=".5" width="3" height="9" rx="1" style="fill:none"/>
+        </g>
+        <g data-name="사각형 18071" transform="translate(119.65 174.5)" style="stroke:#111;fill:none">
+            <rect width="4" height="10" rx="1.5" style="stroke:none"/>
+            <rect x=".5" y=".5" width="3" height="9" rx="1" style="fill:none"/>
+        </g>
+        <g data-name="사각형 18060" style="stroke:#111;fill:none">
+            <path d="M2 0h1v6.5H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" style="stroke:none" transform="translate(109.4 176.25)"/>
+            <path d="M2 .5h.5V6H2A1.5 1.5 0 0 1 .5 4.5V2A1.5 1.5 0 0 1 2 .5z" style="fill:none" transform="translate(109.4 176.25)"/>
+        </g>
+        <g data-name="사각형 18062" style="stroke:#111;fill:none">
+            <path d="M0 0h1a2 2 0 0 1 2 2v2.5a2 2 0 0 1-2 2H0V0z" style="stroke:none" transform="translate(122.65 176.25)"/>
+            <path d="M.5.5H1A1.5 1.5 0 0 1 2.5 2v2.5A1.5 1.5 0 0 1 1 6H.5V.5z" style="fill:none" transform="translate(122.65 176.25)"/>
+        </g>
+    </g>
+</svg>

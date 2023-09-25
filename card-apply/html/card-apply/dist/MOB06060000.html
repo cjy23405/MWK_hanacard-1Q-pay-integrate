@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- progress bar -->
+					<div class="fixed-step">
+						<div class="step-box" role="img" aria-label="총 14단계 중 1단계">
+							<span class="step-bar" style="width: 20%"></span>
+						</div>
+					</div>
+					<!-- //progress bar -->
+
+					<div class="page-contents">
+						<h2 class="page-contents-title margin-bottom-10">본인인증을 진행해주세요.</h2>
+						<p class="page-contents-text">적합성 및 상품설명서 확인에 대한 인증을 포함합니다.</p>
+
+						<div class="ui-form margin-bottom-40">
+							<dl class="ui-form-list">
+								<!-- DD : 실명인증 완료 후 비활성화 .ui-form-item 에 .type-disabled 클래스 추가 -->
+								<div class="ui-form-item type-disabled">
+									<dt class="ui-form-key" data-focus-input="name">이름</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="in-input-block">
+													<!-- DD : 실명인증 완료 후 비활성화 input에 disabled 속성 추가 -->
+													<input type="text" class="in-input" title="이름 입력" placeholder="이름" data-focus-input-target="name" value="김하나" disabled />
+												</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- DD : 실명인증 완료 후 비활성화 .ui-form-item 에 .type-disabled 클래스 추가 -->
+								<div class="ui-form-item type-disabled">
+									<dt class="ui-form-key" data-focus-input="id-card">주민등록번호</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="flex-box">
+													<div class="flex-box-cell type-flexible">
+														<div class="in-input-block">
+															<!-- DD : 실명인증 완료 후 비활성화 input에 disabled 속성 추가 -->
+															<input type="number" pattern="\d*" class="in-input" title="주민등록번호 앞자리 입력" placeholder="900101" data-focus-input-target="id-card" value="900101" disabled />
+														</div>
+													</div>
+													<div class="flex-box-dash"></div>
+													<div class="flex-box-cell">
+														<div class="in-input-block type-no-delete input-width-one">
+															<!-- DD : 실명인증 완료 후 비활성화 input에 disabled 속성 추가 -->
+															<input type="number" pattern="\d*" class="in-input" title="주민등록번호 뒤 첫자리 입력" placeholder="0" value="2" disabled />
+														</div>
+													</div>
+													<div class="flex-box-cell type-regular-margin">
+														<div class="flex-box-dot type-id-card-number"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- DD : 실명인증 완료 후 인증방법 선택->PASS인증서 선택했을 경우 -->
+								<div class="ui-form-item type-only-select">
+									<dt class="ui-form-key" data-focus-input="name">인증방법</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="in-select-block">
+													<button type="button" class="in-select" title="인증방법 선택" data-placeholder="인증방법 선택" data-focus-input-target="name">PASS인증서</button>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<div class="ui-form-item">
+									<dt class="ui-form-key" data-focus-input="tel">휴대폰번호</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="flex-box">
+													<div class="flex-box-cell">
+														<!-- 2022.12.06 : mod :  개발 가이드 주석 추가 -->
+														<!-- DD : 해당화면 진입 시 통신사 선택 팝업 자동 노출 -->
+														<div class="in-select-block">
+															<button type="button" class="in-select" title="통신사 선택" data-placeholder="선택" data-focus-input-target="tel"></button>
+														</div>
+													</div>
+													<!-- 2022.12.06 : mod :  개발 가이드 주석 추가 및 input태그에 data속성 추가(하단 스크립트 참고) -->
+													<!-- 
+														DD : 통신사 선택 팝업 layerAfterClosed 이벤트 발생 후 휴대폰번호 입력 input에 포커스 이동
+														     이동된 input에 휴대전화번호 11자리 입력 완료 시 하단의 '약관 전체 동의' 체크박스로 포커스 이동(하단 스크립트 참고)
+													-->
+													<div class="flex-box-cell type-flexible">
+														<div class="in-input-block">
+															<input type="number" pattern="\d*" class="in-input" title="휴대폰번호 입력" placeholder="- 제외하고 입력" value="010" data-auto-focus="phone" />
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+								<!-- //DD : 실명인증 완료 후 인증방법 선택->PASS인증서 선택했을 경우 -->
+							</dl>
+						</div>
+
+						<div class="ui-check-terms">
+							<div class="ui-check-terms-list-group js-ui-accordion">
+								<div class="ui-check-terms-list">
+									<div class="ui-check-terms-item js-ui-accordion__item" data-initial-open="true">
+										<div class="ui-form-check-block type-large type-line">
+											<!-- 2022.12.06 : mod :  input태그에 data속성 추가(하단 스크립트 참고) -->
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox1" data-checkbox-group="selectCheckbox1" data-auto-focus-target="phone" />
+											<label for="selectCheckbox1" class="ui-label">
+												<span class="ui-check-object"></span>
+												<span class="ui-label-text">본인인증 약관 전체동의</span>
+											</label>
+											<button type="button" class="ui-button ui-check-terms-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="ui-check-terms-layer js-ui-accordion__layer">
+											<div class="ui-check-terms-contents type-margin-6">
+												<div class="ui-check-terms-item">
+													<div class="ui-form-check-block">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" data-checkbox-group-child="selectCheckbox1" />
+														<label for="selectCheckbox1-1" class="ui-label">
+															<span class="ui-check-object"></span>
+															<span class="ui-label-text">PASS 인증서(제3자 정보제공동의)</span>
+														</label>
+														<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+													</div>
+												</div>
+												<div class="ui-check-terms-item">
+													<div class="ui-form-check-block">
+														<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2" data-checkbox-group-child="selectCheckbox1" />
+														<label for="selectCheckbox1-2" class="ui-label">
+															<span class="ui-check-object"></span>
+															<span class="ui-label-text">카드신청 미완료 시 연락 선택 동의 </span>
+														</label>
+														<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- DD : 모든 필수값 입력됐을 경우 활성화 disabled 속석 삭제 -->
+					<div class="page-buttons type-fixed type-no-line">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary" disabled>인증요청</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //DD : 모든 필수값 입력됐을 경우 활성화 disabled 속석 삭제 -->
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<script>
+			$(function () {
+				// 2022.12.06 : mod : 스크립트 추가
+				// 휴대폰 번호 11자리 입력시 포커스 이동
+				$(document).on('keyup', '[data-auto-focus]', function () {
+					var $enterBox = $('[data-auto-focus]');
+					var $enterLength = $enterBox.val().length;
+					var $focusTarget = $('[data-auto-focus-target]');
+
+					if ($enterLength === 11) {
+						$focusTarget.focus();
+					}
+				});
+
+				// 카드상품 이외의 부수서비스 안내 등을 위한 수집/이용 > 전자적 매체를 통한 광고성 정보 수신 동의의 경우 아래 체크박스 네가지 중 한개만 선택해도 체크가 되어야 함
+				// 자식요소 체크박스 1개 이상 체크시 부모요소 체크박스 자동 체크
+				$(document).on('change', '[data-auto-checkbox-child]', function () {
+					var $parent = $('[data-auto-checkbox]');
+					var $child = $parent.closest('.ui-check-terms-item').find('[data-auto-checkbox-child]');
+					var checkedLength = $child.filter(':checked').length;
+
+					if (checkedLength >= 1) {
+						$parent.prop('checked', true).attr('checked', '');
+					} else if (checkedLength === 0) {
+						$parent.prop('checked', false).removeAttr('checked');
+					}
+				});
+
+				// 부모요소 체크박스 클릭 시 전체 선택 or 전체 선택 취고
+				$(document).on('change', '[data-auto-checkbox]', function () {
+					var $this = $(this);
+					var $child = $this.closest('.ui-check-terms-item').find('[data-auto-checkbox-child]');
+
+					if ($this.is(':checked')) {
+						$child.prop('checked', true).attr('checked', '');
+					} else {
+						$child.prop('checked', false).removeAttr('checked');
+					}
+				});
+
+				// 하단 체크박스 전체 체크 시 체크 후 자동 접힘/펼쳐짐
+				$(document).on('change', '[data-checkbox-group-child="selectCheckbox"]', function () {
+					var $this = $(this);
+					var $accordion = $this.closest('.js-ui-accordion');
+					var $item = $this.closest('.js-ui-accordion__item');
+
+					if ($this.is(':checked')) {
+						$accordion.uiAccordion('close', $item);
+					} else {
+						$accordion.uiAccordion('open', $item);
+					}
+				});
+			});
+		</script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

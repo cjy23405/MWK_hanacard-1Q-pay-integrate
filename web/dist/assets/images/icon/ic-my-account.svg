@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="22" viewBox="0 0 29 22">
+  <g id="그룹_11783" data-name="그룹 11783" transform="translate(-260.5 -1409.5)">
+    <g id="사각형_14074" data-name="사각형 14074" transform="translate(260.5 1409.5)" fill="#fff" stroke="#2d3239" stroke-width="1.5">
+      <rect width="29" height="22" rx="5" stroke="none"/>
+      <rect x="0.75" y="0.75" width="27.5" height="20.5" rx="4.25" fill="none"/>
+    </g>
+    <circle id="타원_868" data-name="타원 868" cx="5" cy="5" r="5" transform="translate(271.8 1418)" fill="#7dedf3"/>
+    <g id="타원_867" data-name="타원 867" transform="translate(269 1416.5)" fill="none" stroke="#2d3239" stroke-width="1.5">
+      <circle cx="6" cy="6" r="6" stroke="none"/>
+      <circle cx="6" cy="6" r="5.25" fill="none"/>
+    </g>
+    <g id="그룹_5455" data-name="그룹 5455" transform="translate(272.01 1419.973)">
+      <path id="패스_2252" data-name="패스 2252" d="M3649.637,5413.027l1,3,1-3,1,3,1-3" transform="translate(-3648.646 -5412)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_11" data-name="선 11" x2="1" transform="translate(0.49 2.531)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1"/>
+      <line id="선_166" data-name="선 166" x2="1" transform="translate(4.49 2.531)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1"/>
+    </g>
+    <line id="선_728" data-name="선 728" x2="18.5" transform="translate(265.75 1414)" fill="none" stroke="#2d3239" stroke-linecap="round" stroke-width="1.5"/>
+  </g>
+</svg>

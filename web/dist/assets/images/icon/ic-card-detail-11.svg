@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+    <g data-name="그룹 11916" transform="translate(-244 -1218)">
+        <rect data-name="사각형 7186" width="27" height="27" rx="8" transform="translate(244 1218)" style="fill:#f5f6f8"/>
+    </g>
+    <path data-name="사각형 14170" transform="translate(6 6)" style="fill:transparent" d="M0 0h15v15H0z"/>
+    <g data-name="사각형 17524" transform="translate(7.75 6)" style="stroke:#111;fill:none">
+        <rect width="11.5" height="13" rx="2" style="stroke:none"/>
+        <rect x=".5" y=".5" width="10.5" height="12" rx="1.5" style="fill:none"/>
+    </g>
+    <path data-name="선 732" transform="translate(8 9)" style="stroke:#111;fill:none" d="M0 0h11"/>
+    <path data-name="선 733" transform="translate(13.5 9.099)" style="stroke:#111;fill:none" d="M0 0v4.132"/>
+    <path data-name="선 734" transform="rotate(90 -2.322 13.928)" style="stroke-linecap:round;stroke:#111;fill:none" d="M0 0v1.033"/>
+    <path data-name="선 730" transform="rotate(90 .088 16.338)" style="stroke-linecap:round;stroke:#111;fill:none" d="M0 0v1.033"/>
+    <path data-name="선 731" transform="translate(8.335 13.575)" style="stroke:#111;fill:none" d="M0 0h10.329"/>
+    <path data-name="선 735" transform="translate(9.059 18.75)" style="stroke-linecap:round;stroke:#111;fill:none" d="M2.014 0 0 2.417"/>
+    <path data-name="선 729" transform="translate(15.944 18.75)" style="stroke-linecap:round;stroke:#111;fill:none" d="m0 0 2.014 2.417"/>
+</svg>

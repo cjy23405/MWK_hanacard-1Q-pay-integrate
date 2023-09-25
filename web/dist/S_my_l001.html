@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-change-profile">프로필 변경</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 프로필 변경 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-change-profile">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">최승일님, 프로필을 꾸며보세요.</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<div class="profile-area">
+										<!-- 2022.04.04 : mod : 프로필 이미지 구조 변경 -->
+										<div class="profile-image js-profile-image">
+											<div class="profile-image-inner"></div>
+										</div>
+										<!-- //2022.04.04 : mod : 프로필 이미지 구조 변경 -->
+									</div>
+									<div class="ui-radio-group type-select-profile">
+										<!-- 2022.04.04 : mod : 이미지명 변경 -->
+										<!-- 2022.04.27 : mod : img태그 alt 값 변경 -->
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="profileImage" id="profileImage1" />
+											<label for="profileImage1" class="ui-label type-block">
+												<span class="ui-profile-img"><img src="./assets/images/contents/profile/img-profile-01.png" alt="하트 이미지" class="img" /></span>
+											</label>
+										</div>
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="profileImage" id="profileImage2" />
+											<label for="profileImage2" class="ui-label type-block">
+												<span class="ui-profile-img"><img src="./assets/images/contents/profile/img-profile-02.png" alt="별 이미지" class="img" /></span>
+											</label>
+										</div>
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="profileImage" id="profileImage3" />
+											<label for="profileImage3" class="ui-label type-block">
+												<span class="ui-profile-img"><img src="./assets/images/contents/profile/img-profile-03.png" alt="달 이미지" class="img" /></span>
+											</label>
+										</div>
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="profileImage" id="profileImage4" />
+											<label for="profileImage4" class="ui-label type-block">
+												<span class="ui-profile-img"><img src="./assets/images/contents/profile/img-profile-04.png" alt="꽃 이미지" class="img" /></span>
+											</label>
+										</div>
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="profileImage" id="profileImage5" />
+											<label for="profileImage5" class="ui-label type-block">
+												<span class="ui-profile-img"><img src="./assets/images/contents/profile/img-profile-05.png" alt="태양 이미지" class="img" /></span>
+											</label>
+										</div>
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="profileImage" id="profileImage6" />
+											<label for="profileImage6" class="ui-label type-block">
+												<span class="ui-profile-img"><img src="./assets/images/contents/profile/img-profile-06.png" alt="구름 이미지" class="img" /></span>
+											</label>
+										</div>
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="profileImage" id="profileImage7" />
+											<label for="profileImage7" class="ui-label type-block">
+												<span class="ui-profile-img"><img src="./assets/images/contents/profile/img-profile-07.png" alt="나무 이미지" class="img" /></span>
+											</label>
+										</div>
+										<div class="ui-radio-block">
+											<input type="radio" class="ui-radio" name="profileImage" id="profileImage8" />
+											<label for="profileImage8" class="ui-label type-block">
+												<span class="ui-profile-img"><img src="./assets/images/contents/profile/img-profile-08.png" alt="바다 이미지" class="img" /></span>
+											</label>
+										</div>
+										<!-- //2022.04.27 : mod : img태그 alt 값 변경 -->
+										<!-- //2022.04.04 : mod : 이미지명 변경 -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button">초기화</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">완료</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 프로필 변경 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-change-profile');
+			});
+
+			// 2022.04.04 : add : 프로필 이미지 변경 스크립트 추가
+			// DD : 프로필 이미지 변경
+			function changeProfileImage($input) {
+				var isChecked = $input.is(':checked');
+				var $thumbImg = $input.siblings('.ui-label').find('img');
+				var src = $thumbImg.attr('src');
+				var $imageWrap = $('.js-profile-image');
+				var html = '';
+
+				if (isChecked) {
+					html = '<div class="profile-image-inner"><img src="' + src + '" alt="" onerror="this.parentNode.className += \' is-error\';" /></div>';
+					$imageWrap.html(html);
+				}
+			}
+
+			$(document).on('change.profileImage', '[name="profileImage"]', function () {
+				var $this = $(this);
+				changeProfileImage($this);
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

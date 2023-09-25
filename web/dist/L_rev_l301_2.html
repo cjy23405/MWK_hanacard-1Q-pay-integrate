@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-revolving-change-rate">약정 결제비율 변경</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 약정 결제비율 변경 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-revolving-change-rate">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									당월 약정결제비율을 최소결제비율<br />
+									<span class="color-primary">30%</span>로 변경하시겠습니까?
+								</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="use-notice-area js-ui-accordion">
+                                    <div class="use-notice-item js-ui-accordion__item">
+                                        <button type="button" class="use-notice-opener js-ui-accordion__opener">
+                                            유의사항
+                                            <span class="for-a11y">
+                                                상세 내용
+                                                <span class="open-text">열기</span>
+                                                <span class="close-text">닫기</span>
+                                            </span>
+                                        </button>
+                                        <div class="use-notice-contents js-ui-accordion__layer">
+                                            <ul class="info-list">
+                                                <li class="info-item">당월 약정결제비율 변경 후 약정 결제비율 변경 시 약정결제비율은 다음 결제일부터 적용됩니다.</li>
+                                                <li class="info-item">당월 약정결제비율 변경 후 취소를 원하시면 고객센터(1800-1111)로 문의바랍니다.</li>
+                                                <li class="info-item">당월 약정결제비율을 최소결제비율로 변경 후 최소결제금액 이상 즉시납부 시 당월 결제일에는 일부결제금액이월약정(리볼빙) 청구금액이 추가 출금이 되지 않습니다. (단, 청구서 발행 이후 매출취소 등으로 인해 최소결제금액은 변경될 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+                                    <li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button" data-role="layerClose">아니오</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">예</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 약정 결제비율 변경 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-revolving-change-rate');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

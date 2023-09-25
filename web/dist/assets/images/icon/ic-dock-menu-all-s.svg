@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <linearGradient id="d4yzc2f3qb" x1=".046" y1=".954" x2=".96" y2=".04" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#54c3be" stop-opacity=".502"/>
+            <stop offset="1" stop-color="#d8f3f2" stop-opacity=".4"/>
+        </linearGradient>
+        <clipPath id="1ng8rzxb3a">
+            <path data-name="사각형 18189" transform="translate(310 31)" style="fill:#fff" d="M0 0h28v28H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="tab_ic_05_s" style="clip-path:url(#1ng8rzxb3a)" transform="translate(-310 -31)">
+        <path data-name="합치기 389" d="M13 20a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2zM2 20a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2zM13 9a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2zM2 9a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2z" transform="rotate(30 102.317 614.584)" style="fill:#00a49d"/>
+        <g data-name="합치기 388" transform="translate(311 38.5)" style="fill:url(#d4yzc2f3qb)">
+            <path d="M13 20a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2zM2 20a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2zM13 9a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2zM2 9a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2z" style="stroke:none"/>
+            <path d="M18 19.5c.827 0 1.5-.673 1.5-1.5v-5c0-.827-.673-1.5-1.5-1.5h-5c-.827 0-1.5.673-1.5 1.5v5c0 .827.673 1.5 1.5 1.5h5m-11 0c.827 0 1.5-.673 1.5-1.5v-5c0-.827-.673-1.5-1.5-1.5H2c-.827 0-1.5.673-1.5 1.5v5c0 .827.673 1.5 1.5 1.5h5m11-11c.827 0 1.5-.673 1.5-1.5V2c0-.827-.673-1.5-1.5-1.5h-5c-.827 0-1.5.673-1.5 1.5v5c0 .827.673 1.5 1.5 1.5h5m-11 0c.827 0 1.5-.673 1.5-1.5V2C8.5 1.173 7.827.5 7 .5H2C1.173.5.5 1.173.5 2v5c0 .827.673 1.5 1.5 1.5h5M18 20h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2zM7 20H2a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2zM18 9h-5a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2zM7 9H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2z" style="fill:rgba(255,255,255,.2);stroke:none"/>
+        </g>
+        <path data-name="사각형 18187" d="M2 1.5a.5.5 0 0 0-.5.5v4.977a.5.5 0 0 0 .5.5h4.977a.5.5 0 0 0 .5-.5V2a.5.5 0 0 0-.5-.5H2M2 0h4.977a2 2 0 0 1 2 2v4.977a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" transform="rotate(90 140.738 190.25)" style="fill:#fff"/>
+    </g>
+</svg>

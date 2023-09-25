@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합 - WCMS 컨텐츠 가이드</title>
+
+		<meta charset="euc-kr" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- favicon -->
+		<link rel="icon" href="../dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="../dist/assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="../dist/assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="../dist/assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="../dist/assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="../dist/assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="../dist/assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="../dist/assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="../dist/assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../dist/assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="../dist/assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/highlightjs/vs2015.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/codemirror/lib/codemirror.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/codemirror/theme/vscode-dark.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/style.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap layout-wrap--editor">
+				<header class="header">
+					<h1 class="header__title">
+						<a href="./" class="header__title__link">
+							<span class="header__title__top-text">하나카드 원큐페이 통합</span>
+							<span class="header__title__text"> WCMS 컨텐츠 가이드</span>
+						</a>
+					</h1>
+					<nav class="gnb">
+						<ul class="gnb__list"></ul>
+					</nav>
+				</header>
+
+				<div class="contents">
+					<section class="section js-editor">
+						<div class="section__head">
+							<h2 class="section__title">미리보기 에디터</h2>
+						</div>
+						<div class="tab">
+							<ul class="tab__list">
+								<li class="tab__item">
+									<a href="" class="tab__button is-active" data-type="./example/editor/001-default.html">기본</a>
+								</li>
+								<li class="tab__item">
+									<a href="" class="tab__button" data-type="./example/editor/002-faq.html">자주 묻는 질문</a>
+								</li>
+								<li class="tab__item">
+									<a href="" class="tab__button" data-type="./example/editor/003-notice-popup.html">공지 팝업</a>
+								</li>
+								<li class="tab__item">
+									<a href="" class="tab__button" data-type="./example/editor/004-open-banking-notice-popup.html">오픈뱅킹 긴급공지 팝업</a>
+								</li>
+								<li class="tab__item">
+									<a href="" class="tab__button" data-type="./example/editor/005-search-1.html">통합검색 - 콘텐츠 카드 형</a>
+								</li>
+								<li class="tab__item">
+									<a href="" class="tab__button" data-type="./example/editor/006-search-2.html">통합검색 - 콘텐츠 아코디언 형</a>
+								</li>
+							</ul>
+						</div>
+						<div class="example">
+							<section class="example__section example__section--viewer">
+								<div class="example__section-head">
+									<h5 class="example__section-title">미리보기</h5>
+								</div>
+								<div class="viewer">
+									<iframe src="./example/editor/001-default.html" frameborder="0"></iframe>
+								</div>
+							</section>
+							<section class="example__section example__section--code">
+								<div class="example__section-head">
+									<h5 class="example__section-title">HTML</h5>
+								</div>
+								<div class="code-editor"></div>
+							</section>
+						</div>
+						<div class="buttons">
+							<a href="" class="ui-button js-editor-submit">적용</a>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="../dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/highlightjs/highlight.min.js"></script>
+		<script type="text/javascript" src="./assets/highlightjs/highlightjs-line-numbers.min.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/lib/codemirror.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/xml/xml.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/css/css.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/javascript/javascript.js"></script>
+		<script type="text/javascript" src="./assets/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+		<script type="text/javascript" src="./assets/script.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드상세 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-detail.css" />
+		<!-- //카드상세 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">#MY WAY(샵 마이웨이) 카드</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents page-contents--visual-card-detail">
+						<!-- top visual -->
+						<div class="detail-top-visual">
+							<style type="text/css">
+								.detail-top-visual {
+									padding-bottom: 30px;
+									margin-bottom: 40px; /* 2022.12.06 : add : margin-bottom 속성 추가 */
+								}
+								.detail-top-visual-buttons {
+									padding-bottom: 0;
+									-webkit-transition-delay: 100ms;
+									transition-delay: 100ms;
+									-webkit-transform: translateY(-30px);
+									transform: translateY(-30px);
+								}
+								.detail-top-visual.is-button-show .detail-top-visual-buttons {
+									z-index: 20;
+									opacity: 1;
+									-webkit-transform: translateY(0);
+									transform: translateY(0);
+								}
+								.detail-top-visual-first-view-objects,
+								.detail-top-visual-block.type-001 {
+									background: -moz-linear-gradient(top, rgba(241, 241, 241, 1) 0%, rgba(241, 241, 241, 1) 83%, rgba(241, 241, 241, 0) 100%);
+									background: -webkit-linear-gradient(top, rgba(241, 241, 241, 1) 0%, rgba(241, 241, 241, 1) 83%, rgba(241, 241, 241, 0) 100%);
+									background: linear-gradient(to bottom, rgba(241, 241, 241, 1) 0%, rgba(241, 241, 241, 1) 83%, rgba(241, 241, 241, 0) 100%);
+									filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#00f1f1f1',GradientType=0 );
+								}
+								.detail-top-visual-block.type-002 {
+									background: -moz-linear-gradient(top, rgba(237, 255, 226, 1) 0%, rgba(237, 255, 226, 1) 83%, rgba(237, 255, 226, 0) 100%);
+									background: -webkit-linear-gradient(top, rgba(237, 255, 226, 1) 0%, rgba(237, 255, 226, 1) 83%, rgba(237, 255, 226, 0) 100%);
+									background: linear-gradient(to bottom, rgba(237, 255, 226, 1) 0%, rgba(237, 255, 226, 1) 83%, rgba(237, 255, 226, 0) 100%);
+									filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edffe2', endColorstr='#00edffe2',GradientType=0 );
+								}
+								.detail-top-visual-slide .swiper-object {
+									overflow: hidden;
+								}
+								.detail-top-visual-slide .swiper {
+									overflow: visible;
+									width: 232px;
+									height: 340px;
+									margin: 246px auto 0;
+								}
+								.detail-top-visual-slide .detail-top-visual-block {
+									overflow: visible;
+									width: 214px;
+									height: 340px;
+									margin: 0 auto;
+									-webkit-transform: scale(0.78823529);
+									transform: scale(0.78823529);
+									-webkit-transition: transform 0.3s;
+									transition: transform 0.3s;
+								}
+								.detail-top-visual-slide .detail-top-visual-card {
+									bottom: 0;
+								}
+								.detail-top-visual-slide .detail-top-visual-card .card-image-inner {
+									box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.08);
+								}
+								.detail-top-visual-item.swiper-slide-active .detail-top-visual-block {
+									-webkit-transform: scale(1);
+									transform: scale(1);
+								}
+								.detail-top-visual-bg,
+								.detail-top-visual-bg .detail-top-visual-block {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 100%;
+									height: 100%;
+									overflow: hidden;
+								}
+								.detail-top-visual-bg .detail-top-visual-block {
+									-webkit-transition: -webkit-transform 0.15s linear;
+									transition: transform 0.15s linear;
+								}
+								.detail-top-visual-first-view-objects {
+									-webkit-perspective: 400px;
+									perspective: 400px;
+									-webkit-perspective-origin: 50% 416px;
+									perspective-origin: 50% 416px;
+								}
+								.detail-top-visual-object.type-main-card {
+									top: 246px;
+									left: 50%;
+									margin-left: -107px;
+									width: 214px;
+									height: 340px;
+									border-radius: 12px;
+									background-color: #fff;
+									box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.08);
+								}
+								.detail-top-visual-first-view-objects .detail-top-visual-object.type-main-card {
+									-webkit-transform-style: preserve-3d;
+									transform-style: preserve-3d;
+								}
+								.detail-top-visual-object.type-logo {
+									right: 9px;
+									bottom: 11px;
+									width: 63px;
+									height: 8px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/myway-card-logo.svg');
+								}
+								.detail-top-visual-object.type-icchip {
+									top: 37px;
+									right: 70px;
+									width: 33px;
+									height: 45px;
+									/* 2022.11.25 : mod : 이미지 확장자 변경 */
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/img-ic.png');
+								}
+								.detail-top-visual-object.type-hash {
+									top: 8px;
+									left: 5px;
+									width: 64px;
+									height: 65px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/myway-card-sharp.svg');
+								}
+								.detail-top-visual-object.type-path-1 {
+									top: 37px;
+									left: 38px;
+									width: 118px;
+									height: 108px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/myway-card-bg-m.svg');
+								}
+								.detail-top-visual-object.type-path-2 {
+									top: 107px;
+									left: 25px;
+									width: 124px;
+									height: 115px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/myway-card-bg-w.svg');
+								}
+								.detail-top-visual-object.type-path-3 {
+									top: 160px;
+									left: 26px;
+									width: 133px;
+									height: 85px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/myway-card-bg-a.svg');
+								}
+								.detail-top-visual-object.type-path-4 {
+									top: 209px;
+									left: 66px;
+									width: 95px;
+									height: 122px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/myway-card-bg-y.svg');
+								}
+								.detail-top-visual-object.type-letter-1 {
+									top: 36px;
+									left: 38px;
+									width: 50px;
+									height: 55px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/m.svg');
+								}
+								.detail-top-visual-object.type-letter-2 {
+									top: 94px;
+									left: 122px;
+									width: 33px;
+									height: 50px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/y-1.svg');
+								}
+								.detail-top-visual-object.type-letter-3 {
+									top: 160px;
+									left: 24px;
+									width: 72px;
+									height: 63px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/w.svg');
+								}
+								.detail-top-visual-object.type-letter-4 {
+									top: 207px;
+									left: 130px;
+									width: 32px;
+									height: 39px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/a.svg');
+								}
+								.detail-top-visual-object.type-letter-5 {
+									top: 283px;
+									left: 64px;
+									width: 39px;
+									height: 50px;
+									background-image: url('/mkca20/images/card-detail/cards/0002_myway/y-2.svg');
+								}
+								.detail-top-visual-object.type-side-card {
+									top: 246px;
+									left: 50%;
+									margin-left: 125px;
+									width: 214px;
+									height: 340px;
+								}
+								.detail-top-visual-object.type-side-card .detail-top-visual-card {
+									bottom: 0;
+								}
+								.detail-top-visual-object.type-side-card .card-image {
+									-webkit-transform: scale(0.78823529);
+									transform: scale(0.78823529);
+								}
+								.detail-top-visual-object.type-side-card .card-image-inner {
+									box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.08);
+								}
+
+								@-webkit-keyframes detail-top-visual-card-sway {
+									0% {
+										-webkit-transform: rotateY(-10deg);
+									}
+									50% {
+										-webkit-transform: rotateY(10deg);
+									}
+									100% {
+										-webkit-transform: rotateY(-10deg);
+									}
+								}
+								@keyframes detail-top-visual-card-sway {
+									0% {
+										transform: rotateY(-10deg);
+									}
+									50% {
+										transform: rotateY(10deg);
+									}
+									100% {
+										transform: rotateY(-10deg);
+									}
+								}
+								@-webkit-keyframes detail-top-visual-card-sway-2 {
+									0% {
+										-webkit-transform: rotateY(0deg);
+									}
+									50% {
+										-webkit-transform: rotateY(35deg);
+									}
+									100% {
+										-webkit-transform: rotateY(0deg);
+									}
+								}
+								@keyframes detail-top-visual-card-sway-2 {
+									0% {
+										transform: rotateY(0deg);
+									}
+									50% {
+										transform: rotateY(35deg);
+									}
+									100% {
+										transform: rotateY(0deg);
+									}
+								}
+								@-webkit-keyframes detail-top-visual-card-x-move {
+									0% {
+										-webkit-transform: translateX(0px);
+									}
+									50% {
+										-webkit-transform: translateX(-4px);
+									}
+									100% {
+										-webkit-transform: translateX(0px);
+									}
+								}
+								@keyframes detail-top-visual-card-x-move {
+									0% {
+										transform: translateX(0px);
+									}
+									50% {
+										transform: translateX(-4px);
+									}
+									100% {
+										transform: translateX(0px);
+									}
+								}
+								@-webkit-keyframes detail-top-visual-card-y-move {
+									0% {
+										-webkit-transform: translateY(0px);
+									}
+									50% {
+										-webkit-transform: translateY(6px);
+									}
+									100% {
+										-webkit-transform: translateY(0px);
+									}
+								}
+								@keyframes detail-top-visual-card-y-move {
+									0% {
+										transform: translateY(0px);
+									}
+									50% {
+										transform: translateY(6px);
+									}
+									100% {
+										transform: translateY(0px);
+									}
+								}
+								@-webkit-keyframes detail-top-visual-card-zoom {
+									0% {
+										-webkit-transform: scale(1);
+									}
+									50% {
+										-webkit-transform: scale(1.2);
+									}
+									100% {
+										-webkit-transform: scale(1);
+									}
+								}
+								@keyframes detail-top-visual-card-zoom {
+									0% {
+										transform: scale(1);
+									}
+									50% {
+										transform: scale(1.2);
+									}
+									100% {
+										transform: scale(1);
+									}
+								}
+								.detail-top-visual-slide .detail-top-visual-object.type-main-card {
+									position: relative;
+									top: auto;
+									left: auto;
+									margin-left: 0;
+								}
+								.detail-top-visual-item,
+								.detail-top-visual-slide .detail-top-visual-object.type-main-card {
+									-webkit-perspective: 400px;
+									perspective: 400px;
+								}
+								.detail-top-visual-slide .detail-top-visual-frame,
+								.detail-top-visual-item.swiper-slide-active .detail-top-visual-object.type-letter-3 {
+									-webkit-transform-style: preserve-3d;
+									transform-style: preserve-3d;
+								}
+								.detail-top-visual.is-animation-end .detail-top-visual-item.swiper-slide-active .detail-top-visual-frame {
+									-webkit-animation: detail-top-visual-card-sway 3.2s infinite ease-in-out;
+									animation: detail-top-visual-card-sway 3.2s infinite ease-in-out;
+								}
+								.detail-top-visual.is-animation-end .detail-top-visual-item.swiper-slide-active .detail-top-visual-object.type-letter-1 {
+									-webkit-animation: detail-top-visual-card-x-move 2.4s infinite ease-in-out;
+									animation: detail-top-visual-card-x-move 2.4s infinite ease-in-out;
+								}
+								.detail-top-visual.is-animation-end .detail-top-visual-item.swiper-slide-active .detail-top-visual-object.type-letter-2 {
+									-webkit-animation: detail-top-visual-card-zoom 2.2s infinite ease-in-out;
+									animation: detail-top-visual-card-zoom 2.2s infinite ease-in-out;
+								}
+								.detail-top-visual.is-animation-end .detail-top-visual-item.swiper-slide-active .detail-top-visual-object.type-letter-3 {
+									-webkit-animation: detail-top-visual-card-sway-2 2.6s infinite ease-in-out;
+									animation: detail-top-visual-card-sway-2 2.6s infinite ease-in-out;
+								}
+								.detail-top-visual.is-animation-end .detail-top-visual-item.swiper-slide-active .detail-top-visual-object.type-letter-4 {
+									-webkit-animation: detail-top-visual-card-y-move 2.3s infinite ease-in-out;
+									animation: detail-top-visual-card-y-move 2.3s infinite ease-in-out;
+								}
+								.detail-top-visual.is-animation-end .detail-top-visual-item.swiper-slide-active .detail-top-visual-object.type-letter-5 {
+									-webkit-animation: detail-top-visual-card-zoom 3s infinite ease-in-out;
+									animation: detail-top-visual-card-zoom 3s infinite ease-in-out;
+								}
+							</style>
+							<script type="text/javascript">
+								var uiJSCardDetailTopVisualAnimation = function (cardDetailTopVisual) {
+									var $wrap = cardDetailTopVisual.$wrap;
+									var completeFn = cardDetailTopVisual.completeFn;
+									var $view = $wrap.find('.detail-top-visual-first-view');
+									var $title = $view.find('.detail-top-visual-title');
+									var $controller = $view.find('.detail-top-visual-dummy-controller');
+									var $mainCard = $view.find('.detail-top-visual-object.type-main-card');
+									var $sideCard = $view.find('.detail-top-visual-object.type-side-card');
+									var $logo = $view.find('.detail-top-visual-object.type-logo');
+									var $icchip = $view.find('.detail-top-visual-object.type-icchip');
+									var $hash = $view.find('.detail-top-visual-object.type-hash');
+									var $path1 = $view.find('.detail-top-visual-object.type-path-1');
+									var $path2 = $view.find('.detail-top-visual-object.type-path-2');
+									var $path3 = $view.find('.detail-top-visual-object.type-path-3');
+									var $path4 = $view.find('.detail-top-visual-object.type-path-4');
+									var $letter1 = $view.find('.detail-top-visual-object.type-letter-1');
+									var $letter2 = $view.find('.detail-top-visual-object.type-letter-2');
+									var $letter3 = $view.find('.detail-top-visual-object.type-letter-3');
+									var $letter4 = $view.find('.detail-top-visual-object.type-letter-4');
+									var $letter5 = $view.find('.detail-top-visual-object.type-letter-5');
+									var scale = 0.78823529;
+
+									function frame1() {
+										$mainCard
+											.prop('transformPer', 1)
+											.css({
+												transform: 'translate(-24px, -250px) scale(' + scale + ') translateZ(0)',
+											})
+											.animate(
+												{
+													transformPer: 0,
+													opacity: 1,
+												},
+												{
+													duration: 480,
+													easing: 'easeOutBack',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$mainCard.css('transform', 'translate(-24px, ' + now * -250 + 'px) scale(' + scale + ') translateZ(0)');
+														}
+													},
+													complete: frame2,
+												}
+											);
+									}
+									function frame2() {
+										$sideCard
+											.prop('transformPer', 1)
+											.css({
+												transform: 'translate(-170px, -250px) translateZ(0)',
+											})
+											.animate(
+												{
+													transformPer: 0,
+													opacity: 1,
+												},
+												{
+													duration: 480,
+													easing: 'easeOutBack',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$sideCard.css('transform', 'translate(-170px, ' + now * -250 + 'px) translateZ(0)');
+														}
+													},
+													complete: frame3,
+												}
+											);
+									}
+									function frame3() {
+										$mainCard
+											.prop('transformPer', 0)
+											.css({
+												transform: 'translate(-24px, 0) scale(' + scale + ') translateZ(0)',
+											})
+											.animate(
+												{
+													transformPer: 1,
+												},
+												{
+													duration: 300,
+													easing: 'easeInCubic',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$mainCard.css('transform', 'translate(-24px, 0) scale(' + scale + ') rotateY(' + now * -180 + 'deg) translateZ(0)');
+														}
+													},
+													complete: frame4,
+												}
+											);
+									}
+									function frame4() {
+										$sideCard
+											.prop('transformPer', 1)
+											.css({
+												transform: 'translate(-170px, 0) translateZ(0)',
+											})
+											.animate(
+												{
+													transformPer: 0,
+												},
+												{
+													duration: 520,
+													easing: 'easeOutCubic',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$sideCard.css('transform', 'translate(' + now * -170 + 'px, 0) translateZ(0)');
+														}
+													},
+												}
+											);
+										$mainCard
+											.prop('transformPer', 1)
+											.css({
+												transform: 'translate(-24px, 0) scale(' + scale + ') rotateY(180deg) translateZ(0)',
+											})
+											.animate(
+												{
+													transformPer: 0,
+												},
+												{
+													duration: 300,
+													easing: 'easeOutCubic',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$mainCard.css('transform', 'translate(' + now * -24 + 'px, 0) scale(' + scale + ') rotateY(' + now * 180 + 'deg) translateZ(0)');
+														}
+													},
+													complete: frame5,
+												}
+											);
+									}
+									function frame5() {
+										$mainCard
+											.prop('transformPer', scale)
+											.css({
+												transform: 'scale(' + scale + ') translateZ(0)',
+											})
+											.animate(
+												{
+													transformPer: 1,
+												},
+												{
+													duration: 300,
+													easing: 'easeOutQuad',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$mainCard.css('transform', 'scale(' + now + ') translateZ(0)');
+														}
+													},
+													complete: frame6,
+												}
+											);
+									}
+									function frame6() {
+										$controller
+											.prop('transformPer', 1)
+											.css({
+												transform: 'translateY(-5px) translateZ(0)',
+											})
+											.animate(
+												{
+													transformPer: 0,
+													opacity: 1,
+												},
+												{
+													duration: 300,
+													easing: 'easeOutQuad',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$controller.css('transform', 'translateY(' + now * -5 + 'px) translateZ(0)');
+														}
+													},
+												}
+											);
+										$title
+											.prop('transformPer', 1)
+											.css({
+												transform: 'translateY(-10px) translateZ(0)',
+											})
+											.animate(
+												{
+													transformPer: 0,
+													opacity: 1,
+												},
+												{
+													duration: 300,
+													easing: 'easeOutQuad',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$title.css('transform', 'translateY(' + now * -10 + 'px) translateZ(0)');
+														}
+													},
+													complete: frame7,
+												}
+											);
+									}
+									function frame7() {
+										$logo.animate(
+											{
+												opacity: 1,
+											},
+											250
+										);
+										$path4.animate(
+											{
+												opacity: 1,
+											},
+											250
+										);
+										$letter5.animate(
+											{
+												opacity: 1,
+											},
+											150
+										);
+										$hash
+											.prop('transformPer', 0)
+											.css({
+												transform: 'translate(48px, 266px) translateZ(0)',
+											})
+											.animate(
+												{
+													transformPer: 1,
+													opacity: 1,
+												},
+												{
+													duration: 250,
+													easing: 'easeOutExpo',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$hash.css('transform', 'translate(' + (48 + now * 60) + 'px, ' + (266 - now * 79) + 'px) translateZ(0)');
+														}
+													},
+													complete: frame8,
+												}
+											);
+									}
+									function frame8() {
+										$path3.animate(
+											{
+												opacity: 1,
+											},
+											250
+										);
+										$letter4.animate(
+											{
+												opacity: 1,
+											},
+											150
+										);
+										$hash.prop('transformPer', 0).animate(
+											{
+												transformPer: 1,
+											},
+											{
+												duration: 250,
+												easing: 'easeOutExpo',
+												step: function (now, fx) {
+													if (fx.prop === 'transformPer') {
+														$hash.css('transform', 'translate(' + (108 - now * 85) + 'px, ' + (187 - now * 36) + 'px) translateZ(0)');
+													}
+												},
+												complete: frame9,
+											}
+										);
+									}
+									function frame9() {
+										$path2.animate(
+											{
+												opacity: 1,
+											},
+											250
+										);
+										$letter3.animate(
+											{
+												opacity: 1,
+											},
+											150
+										);
+										$hash.prop('transformPer', 0).animate(
+											{
+												transformPer: 1,
+											},
+											{
+												duration: 250,
+												easing: 'easeOutExpo',
+												step: function (now, fx) {
+													if (fx.prop === 'transformPer') {
+														$hash.css('transform', 'translate(' + (23 + now * 79) + 'px, ' + (151 - now * 73) + 'px) translateZ(0)');
+													}
+												},
+												complete: frame10,
+											}
+										);
+									}
+									function frame10() {
+										$path1.animate(
+											{
+												opacity: 1,
+											},
+											250,
+											function () {
+												$letter1.animate(
+													{
+														opacity: 1,
+													},
+													150
+												);
+												$icchip.animate(
+													{
+														opacity: 1,
+													},
+													150
+												);
+											}
+										);
+										$letter2.animate(
+											{
+												opacity: 1,
+											},
+											150
+										);
+										$hash.prop('transformPer', 1).animate(
+											{
+												transformPer: 0,
+											},
+											{
+												duration: 950,
+												easing: 'easeOutElastic',
+												step: function (now, fx) {
+													if (fx.prop === 'transformPer') {
+														$hash.css('transform', 'translate(' + now * 102 + 'px, ' + now * 78 + 'px) translateZ(0)');
+													}
+												},
+												complete: frame11,
+											}
+										);
+									}
+									function frame11() {
+										$wrap.addClass('is-button-show');
+										$mainCard
+											.prop('transformPer', 0)
+											.css({
+												transform: 'rotateY(0deg) translateZ(0)',
+											})
+											.animate(
+												{
+													transformPer: 1,
+												},
+												{
+													duration: 800,
+													easing: 'easeOutSine',
+													step: function (now, fx) {
+														if (fx.prop === 'transformPer') {
+															$mainCard.css('transform', 'rotateY(' + now * -10 + 'deg) translateZ(0)');
+														}
+													},
+													complete: completeFn,
+												}
+											);
+									}
+
+									frame1();
+								};
+								var uiJSCardDetailTopVisualInit = function (cardDetailTopVisual) {
+									var $wrap = cardDetailTopVisual.$wrap;
+									var swiper = cardDetailTopVisual.swiper;
+									var $bgItems = $wrap.find('.detail-top-visual-bg .detail-top-visual-block');
+
+									swiper.on('progress', function (swiper, progress) {
+										var lastIndex = $bgItems.length - 1;
+
+										$bgItems.each(function (i) {
+											var $this = $(this);
+											var per = (progress - i) * -1;
+
+											if ((i === 0 && per > 0) || (i === lastIndex && per < 0)) {
+												per = 0;
+											}
+
+											$this.css({
+												transform: 'translateX(' + per * 100 + '%)',
+											});
+										});
+									});
+								};
+							</script>
+							<div class="detail-top-visual-first-view">
+								<div class="detail-top-visual-first-view-inner">
+									<p class="detail-top-visual-title">
+										출근에서 퇴근까지<br />
+										나의 하루를 함께하는 카드
+									</p>
+									<div class="detail-top-visual-dummy-controller">
+										<div class="detail-top-visual-dummy-controller-pagination">
+											<div></div>
+											<div></div>
+										</div>
+									</div>
+								</div>
+								<div class="detail-top-visual-first-view-objects">
+									<div class="detail-top-visual-object type-side-card">
+										<div class="detail-top-visual-card">
+											<div class="card-image">
+												<div class="card-image-inner">
+													<!-- 2022.11.25 : mod : 이미지 변경 -->
+													<img src="/mkca20/images/card-detail/cards/0002_myway/myway-green.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="detail-top-visual-object type-main-card">
+										<div class="detail-top-visual-object type-logo"></div>
+										<div class="detail-top-visual-object type-path-4"></div>
+										<div class="detail-top-visual-object type-path-3"></div>
+										<div class="detail-top-visual-object type-path-2"></div>
+										<div class="detail-top-visual-object type-path-1"></div>
+										<div class="detail-top-visual-object type-hash"></div>
+										<div class="detail-top-visual-object type-icchip"></div>
+										<div class="detail-top-visual-object type-letter-5"></div>
+										<div class="detail-top-visual-object type-letter-4"></div>
+										<div class="detail-top-visual-object type-letter-3"></div>
+										<div class="detail-top-visual-object type-letter-2"></div>
+										<div class="detail-top-visual-object type-letter-1"></div>
+									</div>
+								</div>
+							</div>
+							<div class="detail-top-visual-contents">
+								<div class="detail-top-visual-contents-inner">
+									<p class="detail-top-visual-title">
+										출근에서 퇴근까지<br />
+										나의 하루를 함께하는 카드
+									</p>
+									<div class="detail-top-visual-controller"></div>
+								</div>
+								<div class="detail-top-visual-bg">
+									<div class="detail-top-visual-block type-001"></div>
+									<div class="detail-top-visual-block type-002"></div>
+								</div>
+								<div class="detail-top-visual-slide">
+									<div class="detail-top-visual-list">
+										<div class="detail-top-visual-item">
+											<div class="detail-top-visual-frame">
+												<div class="detail-top-visual-block">
+													<div class="detail-top-visual-object type-main-card">
+														<div class="detail-top-visual-object type-logo"></div>
+														<div class="detail-top-visual-object type-path-4"></div>
+														<div class="detail-top-visual-object type-path-3"></div>
+														<div class="detail-top-visual-object type-path-2"></div>
+														<div class="detail-top-visual-object type-path-1"></div>
+														<div class="detail-top-visual-object type-hash"></div>
+														<div class="detail-top-visual-object type-icchip"></div>
+														<div class="detail-top-visual-object type-letter-5"></div>
+														<div class="detail-top-visual-object type-letter-4"></div>
+														<div class="detail-top-visual-object type-letter-3"></div>
+														<div class="detail-top-visual-object type-letter-2"></div>
+														<div class="detail-top-visual-object type-letter-1"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="detail-top-visual-item">
+											<div class="detail-top-visual-frame">
+												<div class="detail-top-visual-block">
+													<div class="detail-top-visual-card">
+														<div class="card-image">
+															<div class="card-image-inner">
+																<!-- 2022.11.25 : mod : 이미지 변경 -->
+																<img src="/mkca20/images/card-detail/cards/0002_myway/myway-green.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="detail-top-visual-buttons">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-primary">카드신청</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //top visual -->
+
+						<!-- 2022.12.06 : add : 연회비 컨텐츠 추가 -->
+						<!-- 상단 혜택 -->
+						<div class="page-section">
+							<section class="annual-fee">
+								<div class="annual-fee-head">
+									<h2 class="annual-fee-title">
+										<a href="" class="detail-arrow-link" data-layer-open="layer-annual-fee">연회비</a>
+									</h2>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">국내전용</dt>
+										<dd class="form-detail-group">20,000원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">국내외겸용</dt>
+										<dd class="form-detail-group">20,000원</dd>
+									</div>
+								</dl>
+							</section>
+						</div>
+						<!-- //상단 혜택 -->
+
+						<!-- layer: 연회비 안내 -->
+						<div class="layer-wrap layer-wrap--slide" data-layer="layer-annual-fee">
+							<div class="layer-container">
+								<section class="ui-layer">
+									<div class="ui-layer__head">
+										<div class="header">
+											<h2 class="header__title">연회비</h2>
+											<div class="header__right">
+												<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+													<span class="for-a11y">레이어 닫기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="ui-layer__body">
+										<div class="ui-layer__body-inner">
+											<ul class="annual-fee-list">
+												<li class="annual-fee-list-item">
+													<div class="annual-fee-list-block">
+														<div class="annual-fee-list-logo">
+															<img src="/mkca20/images/card-detail/contents/brand/ic-brand-visa-on.png" alt="VISA" />
+														</div>
+														<div class="annual-fee-list-contents">
+															<div class="annual-fee-list-title">VISA 20,000원</div>
+															<div class="annual-fee-list-text">기본연회비 20,000원+제휴연회비 0원</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+						<!-- //layer: 연회비 안내 -->
+						<!-- //2022.12.06 : add : 연회비 컨텐츠 추가 -->
+
+						<!-- 하단 혜택 -->
+						<!-- 2022.12.06 : mod : type-line 클래스 값 추가 -->
+						<div class="page-section type-line">
+							<div class="benefit-section-group">
+								<section class="benefit-section">
+									<div class="benefit-section-visual type-004">
+										<div class="benefit-section-visual-object-1"></div>
+										<div class="benefit-section-visual-object-2"></div>
+									</div>
+									<p class="benefit-section-sub-title">실적과 관계없이 서비스 제공</p>
+									<p class="benefit-section-title">
+										국내 전가맹점<br />
+										2~3개월 <mark class="color-primary">무이자할부</mark>
+									</p>
+									<div class="benefit-section-link-area">
+										<a href="" class="detail-arrow-link">자세히보기</a>
+									</div>
+								</section>
+
+								<section class="benefit-section">
+									<div class="benefit-section-visual type-005">
+										<div class="benefit-section-visual-object-1"></div>
+										<div class="benefit-section-visual-object-2"></div>
+										<div class="benefit-section-visual-object-3"></div>
+										<div class="benefit-section-visual-object-4"></div>
+										<div class="benefit-section-visual-object-5"></div>
+									</div>
+									<p class="benefit-section-sub-title">버스, 지하철 월 최대 30건</p>
+									<p class="benefit-section-title">
+										대중교통 <br />
+										건당 <mark class="color-primary">300원</mark> 청구할인
+									</p>
+									<div class="benefit-section-link-area">
+										<a href="" class="detail-arrow-link">자세히보기</a>
+									</div>
+								</section>
+
+								<section class="benefit-section">
+									<div class="benefit-section-visual type-006">
+										<div class="benefit-section-visual-object-1"></div>
+										<div class="benefit-section-visual-object-2"></div>
+										<div class="benefit-section-visual-object-3"></div>
+										<div class="benefit-section-visual-object-4"></div>
+										<div class="benefit-section-visual-object-5"></div>
+										<div class="benefit-section-visual-object-6"></div>
+										<div class="benefit-section-visual-object-7"></div>
+										<div class="benefit-section-visual-object-8"></div>
+										<div class="benefit-section-visual-object-9"></div>
+									</div>
+									<p class="benefit-section-sub-title">직장인 LIFE STYLE 특화 혜택!</p>
+									<p class="benefit-section-title">
+										커피&편의점<br />
+										건당 <mark class="color-primary">300원</mark> 청구할인
+									</p>
+									<div class="benefit-section-link-area">
+										<a href="" class="detail-arrow-link">자세히보기</a>
+									</div>
+								</section>
+
+								<section class="benefit-section">
+									<div class="benefit-section-visual type-007">
+										<div class="benefit-section-visual-object-1"></div>
+										<div class="benefit-section-visual-object-2"></div>
+										<div class="benefit-section-visual-object-3"></div>
+										<div class="benefit-section-visual-object-4"></div>
+										<div class="benefit-section-visual-object-5"></div>
+										<div class="benefit-section-visual-object-6"></div>
+									</div>
+									<p class="benefit-section-sub-title">디지털구독 및 4대 주유소 할인!</p>
+									<p class="benefit-section-title">
+										디지털구독&주유/충전<br />
+										건당 <mark class="color-primary">3,000원</mark> 청구할인
+									</p>
+									<div class="benefit-section-link-area">
+										<a href="" class="detail-arrow-link">자세히보기</a>
+									</div>
+								</section>
+
+								<section class="benefit-section">
+									<div class="benefit-section-visual type-008">
+										<div class="benefit-section-visual-object-1"></div>
+										<div class="benefit-section-visual-object-2"></div>
+										<div class="benefit-section-visual-object-3"></div>
+										<div class="benefit-section-visual-object-4"></div>
+									</div>
+									<p class="benefit-section-sub-title">쇼핑&생활요금 자동이체 청구할인</p>
+									<p class="benefit-section-title">
+										쇼핑&생활요금<br />
+										건당 <mark class="color-primary">3,000원</mark> 청구할인
+									</p>
+									<div class="benefit-section-link-area">
+										<a href="" class="detail-arrow-link">자세히보기</a>
+									</div>
+								</section>
+							</div>
+						</div>
+						<!-- //하단 혜택 -->
+
+						<!-- 이용안내 -->
+						<div class="page-section type-line">
+							<section class="page-section-group">
+								<ul class="info-list">
+									<li class="info-item color-basic font-weight-medium">카드 출시 시기 : 2022.08.26</li>
+									<li class="info-item color-basic font-weight-medium">준법심의 A-22-1284 (2022.09.16)</li>
+									<li class="info-item color-basic font-weight-medium">여신금융협회 심의필 제2022-C1a-07777호(2022.09.15)</li>
+								</ul>
+							</section>
+						</div>
+						<!-- //이용안내 -->
+					</div>
+
+					<div class="page-buttons type-fixed type-detail-top-visual">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary">카드신청</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드상세 js -->
+		<script type="text/javascript" src="/mkca20/js/card-detail.js"></script>
+		<!-- //카드상세 js -->
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">민원건수&middot;실태평가 결과</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents has-no-top-padding type-complaint-result">
+						<div class="js-ui-tab-panel page-tab-panel">
+							<div class="ui-tab">
+								<ul class="ui-tab-list">
+									<li class="ui-tab-item">
+										<button type="button" class="ui-button ui-tab-link" data-tab-open="init">민원건수</button>
+									</li>
+									<li class="ui-tab-item">
+										<a href="" class="ui-button ui-tab-link" role="button">실태평가 결과</a>
+									</li>
+									<li class="ui-tab-item">
+										<a href="" class="ui-button ui-tab-link" role="button">실태평가 평가항목</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="ui-tab-panel" data-tab="init">
+								<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+								<h2 class="for-a11y">민원건수</h2>
+								<div class="page-section">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+									<h3 class="info-detail-title">
+										2021년 2분기<br />
+										(2021.04.01 ~ 2021.06.30)
+									</h3>
+								</div>
+								<div class="page-section type-line">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+									<h4 class="page-section-title type-line">민원건수</h4>
+									<div class="page-section-group">
+										<div class="section-title">
+											<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+											<h5 class="title">신용카드</h5>
+										</div>
+										<div class="section-contents">
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수으로 구성된 신용카드 자체민원 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">자체민원</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>9</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>-7</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-22.2</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.15</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.12</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-21.6</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수으로 구성된 신용카드 대외민원 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">대외민원</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>86</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>102</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-18.6</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>1.44</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>1.77</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-19.6</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수으로 구성된 신용카드 소계 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">소계</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>95</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>109</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>14.7</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>1.59</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>1.84</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>15.7</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="page-section-group">
+										<div class="section-title">
+											<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+											<h5 class="title">체크카드</h5>
+										</div>
+										<div class="section-contents">
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 체크카드 자체민원 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">자체민원</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>4</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>3</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-25.0</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.07</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.05</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-25.1</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 체크카드 대외민원 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">대외민원</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>6</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>7</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>16.7</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.10</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.11</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>16.6</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 체크카드 소계 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">소계</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>10</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>10</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>0.0</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.16</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.16</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-0.1</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="page-section-group">
+										<div class="section-title">
+											<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+											<h5 class="title">전체</h5>
+										</div>
+										<div class="section-contents">
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 전체 자체민원 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">자체민원</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>13</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>10</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-23.1</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.11</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.08</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-22.8</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 전체 대외민원건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">대외민원</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>92</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>109</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>18.5</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.76</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.91</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>18.9</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 전체 소계건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">소계</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>105</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>119</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>13.3</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.87</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.99</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>13.7</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="use-notice-area">
+										<div class="use-notice-contents">
+											<p class="use-notice-paragraph">자체민원은 중복&middot;반복 및 단순 질의성 민원을, 대외민원은 중복&middot;반복민원을 제외함.</p>
+											<ul class="info-list">
+												<li class="info-item">
+													<strong>중복민원</strong><br />
+													2개 이상의 행정기관에 제출한 민원을 이송받은 경우
+												</li>
+												<li class="info-item">
+													<strong>반복민원</strong><br />
+													동일한 내용의 민원을 2회 이상 반복하여 제출한 경우
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="page-section type-line">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+									<h4 class="page-section-title type-line">유형별 민원건수</h4>
+									<div class="page-section-group">
+										<div class="section-title">
+											<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+											<h5 class="title">신용카드</h5>
+										</div>
+										<div class="section-contents">
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 신용카드 영업 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">영업</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>15</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>12</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-20.0</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.25</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.20</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-19.3</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 신용카드 채권건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">채권</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>12</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>20</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>66.7</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.20</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.34</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>68.0</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 신용카드 고객상담건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">고객상담</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>2</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>4</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>100.0</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.03</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.07</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>101.7</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 신용카드 제도정책건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">제도정책</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>25</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>32</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>28.0</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.42</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.54</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>29.1</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 신용카드 기타건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">기타</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>41</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>41</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>0.0</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.69</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.69</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>0.8</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 신용카드 소계건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">소계</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>95</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>109</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>14.7</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>1.59</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>1.84</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>15.7</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="page-section-group">
+										<div class="section-title">
+											<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+											<h5 class="title">체크카드</h5>
+										</div>
+										<div class="section-contents">
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 체크카드 영업건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">영업</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>0</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>2</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.00</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.03</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 체크카드 채권건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">채권</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>0</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.00</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.00</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 체크카드 고객상담건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">고객상담</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>3</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>2</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-33.3</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.05</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.03</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-33.4</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 체크카드 제도정책건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">제도정책</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>4</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>2</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-50.0</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.07</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.03</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-50.0</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 체크카드 기타건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">기타</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>3</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>4</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>33.3</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.05</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.07</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>33.2</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 체크카드 소계건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">소계</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>10</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>10</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>0.0</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.16</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.16</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-0.1</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="page-section-group">
+										<div class="section-title">
+											<!-- 2022.07.22 : mod : 탭패널 헤딩 추가로 인한 태그변경 -->
+											<h5 class="title">전체</h5>
+										</div>
+										<div class="section-contents">
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 전체 영업건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">영업</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>15</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>14</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-6.7</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.12</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.12</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>-6.3</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 전체 채권건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">채권</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>12</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>20</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>66.7</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.10</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.17</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>67.3</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 전체 고객상담건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">고객상담</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>5</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>6</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>20.0</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.04</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.05</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>20.4</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 전체 제도정책건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">제도정책</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>29</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>34</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>17.2</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.24</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.28</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>17.7</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 전체 기타건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">기타</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>44</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>45</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>2.3</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.36</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.37</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>2.6</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="info-table-area">
+												<table class="info-table">
+													<!-- 2022.05.04 : mod : 텍스트 수정 -->
+													<caption class="for-a11y">
+														민원건수, 환산건수로 구성된 전체 소계건수 안내 표입니다.
+													</caption>
+													<thead>
+														<tr>
+															<th colspan="3" scope="colgroup">소계</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3" scope="rowgroup">민원건수</td>
+															<td>전분기</td>
+															<td>105</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>119</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>13.3</td>
+														</tr>
+														<tr>
+															<td rowspan="3" scope="rowgroup">
+																환산건수<br />
+																(고객/회원 10만명당 건)
+															</td>
+															<td>전분기</td>
+															<td>0.87</td>
+														</tr>
+														<tr>
+															<td>금분기</td>
+															<td>0.99</td>
+														</tr>
+														<tr>
+															<td>증감률(%)</td>
+															<td>13.7</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="use-notice-area">
+									<div class="use-notice-contents">
+										<ul class="info-list">
+											<li class="info-item type-indent">
+												<span class="indent">①</span>본 서식은 매년 금융감독원에서 금융 소비자보호 실태평가를 받는 금융회사(신용카드사)만 기재하며, 동 민원건수 공시는 경영공시 외에 분기별로 협회 및 각
+												사 홈페이지에 별도 공시
+											</li>
+											<li class="info-item type-indent"><span class="indent">②</span>자체민원은 전자매체(홈페이지, 이메일) 및 서면(우편, 팩스, 방문)을 통해 접수된 민원 건수 기재</li>
+											<li class="info-item type-indent">
+												<span class="indent">③</span>대외민원은 금융감독원 및 한국소비자원에 접수되어 카드사로 이관(이첩, 사실조회, 자율조정 등) 된 민원건수 기재 (이관일 기준)
+											</li>
+											<li class="info-item type-indent"><span class="indent">④</span>민원의 유형을 5가지로 세분화하여 기재하며 그의 합은 상기 민원건수의 합과 일치해야 함</li>
+											<li class="info-item type-indent"><span class="indent">⑤</span>민원건수는 경영공시 외에 분기별로 협회 및 각 사 홈페이지에 별도 공시</li>
+											<li class="info-item">금융소비자보호 실태평가 제도에 따라 금융감독원이 직접 평가한는 7개 신용카드사의 민원건수를 확인 할 수 있습니다.</li>
+										</ul>
+										<div class="use-notice-link-list">
+											<div class="use-notice-link-item">
+												<a href="https://gongsi.crefia.or.kr/portal/creditcard/creditcardDisclosureDetail24?cgcMode=24" target="_blank" class="link-button">여신금융협회 공시실</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

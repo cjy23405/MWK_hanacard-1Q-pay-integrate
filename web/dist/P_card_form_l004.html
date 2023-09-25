@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-guide">이용안내</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 이용안내 -->
+			<div class="layer-wrap layer-wrap layer-wrap--full" data-layer="layer-info-guide">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">이용안내</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<div class="info-area">
+										<div class="info-area-section">
+											<h3 class="info-list-title">일부결제금액이월약정(리볼빙)란?</h3>
+											<p class="default-text color-blur">카드대금이 부담될 때 10%(일부회원 최대 30%) ~ 100%까지 5% 단위의 결제비율을 지정하여 자유롭게 결제하는 서비스</p>
+										</div>
+										<div class="info-area-section">
+											<h3 class="info-list-title">서비스 대상</h3>
+											<p class="default-text color-blur">국내외 일시불 이용금액(가족카드 포함) 대상으로 적용되며, 신청일 이전에 이용하신 금액도 리볼빙 결제 방식이 적용됩니다.</p>
+										</div>
+										<div class="info-area-section">
+											<h3 class="info-list-title">대상회원</h3>
+											<p class="default-text color-blur">
+												심사 기준에 의거하여 자격을 부여 받은 개인회원<br />
+												(신용도에 따라 가입 제한될 수 있음)
+											</p>
+										</div>
+										<div class="info-area-section">
+											<h3 class="info-list-title">이용 시 유의사항</h3>
+											<ul class="info-list type-default color-basic">
+												<li class="info-item">
+													<div>결제 및 이월처리</div>
+													<ul class="info-list type-default">
+														<li class="info-item type-indent">
+															<span class="indent">-</span>결제일에 리볼빙 청구금액보다 적은 금액을 결제하신 경우라도, 리볼빙 이용금액의 10% (또는 5만원 중 큰금액) 이상만 결제하시면 리볼빙 청구금액은
+															연체가 되지 않습니다.
+														</li>
+														<li class="info-item type-indent"><span class="indent">-</span>상기의 경우,당월 리볼빙 청구금액 중 미결제 금액은 다음달로 이월되며 소정의 리볼빙 수수료가 부과됩니다.</li>
+													</ul>
+												</li>
+												<li class="info-item">신청하신 카드 심사 시 리볼빙 서비스 취소나 결제비율 변경은 되지 않으며, 카드 발급 이후 고객센터 혹은 홈페이지를 통해 처리하실 수 있습니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 이용안내 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-info-guide');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

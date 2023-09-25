@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+    <defs>
+        <style>
+            .cls-1,.cls-3,.cls-4{fill:none}.cls-3,.cls-4{stroke:#111;stroke-width:1.5px}.cls-4{stroke-linecap:round}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_benefit_7_on" transform="translate(-48 -377)">
+        <path id="사각형_7186" data-name="사각형 7186" class="cls-1" transform="translate(48 377)" d="M0 0h21v21H0z"/>
+        <path id="사각형_14412" data-name="사각형 14412" transform="translate(51 380)" style="fill:transparent" d="M0 0h15v15H0z"/>
+        <g id="사각형_14418" data-name="사각형 14418" class="cls-3" transform="translate(53 383)">
+            <rect class="cls-5" width="11" height="11" rx="2"/>
+            <rect class="cls-1" x=".75" y=".75" width="9.5" height="9.5" rx="1.25"/>
+        </g>
+        <g id="사각형_14422" data-name="사각형 14422" class="cls-3">
+            <path class="cls-5" d="M2 0h3a2 2 0 0 1 2 2v2.5H0V2a2 2 0 0 1 2-2z" transform="translate(55 380)"/>
+            <path class="cls-1" d="M2 .75h3A1.25 1.25 0 0 1 6.25 2v1a.75.75 0 0 1-.75.75h-4A.75.75 0 0 1 .75 3V2A1.25 1.25 0 0 1 2 .75z" transform="translate(55 380)"/>
+        </g>
+        <path id="선_473" data-name="선 473" class="cls-4" transform="translate(55.5 393.391)" d="M0 0v.809"/>
+        <path id="선_486" data-name="선 486" class="cls-4" transform="translate(61.5 393.391)" d="M0 0v.809"/>
+        <path id="선_488" data-name="선 488" class="cls-4" transform="translate(57 386.5)" d="M0 0v4"/>
+        <path id="선_489" data-name="선 489" class="cls-4" transform="translate(60 386.5)" d="M0 0v4"/>
+    </g>
+</svg>

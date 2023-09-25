@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="26" viewBox="0 0 40 26">
+    <g data-name="ic_add membership" transform="translate(-225 -1778)">
+        <rect data-name="사각형 13626" width="26" height="40" rx="2" transform="rotate(-90 1014.5 789.5)" style="fill:#f5f5f5"/>
+        <g data-name="btn_add">
+            <path data-name="선 245" transform="rotate(90 -771.5 1016.5)" style="stroke-linecap:round;stroke:#888;fill:none" d="M0 0h6"/>
+            <path data-name="선 519" transform="translate(241.999 1791)" style="stroke-linecap:round;stroke:#888;fill:none" d="M0 0h6"/>
+        </g>
+        <g data-name="타원 1773" transform="translate(238 1784)" style="stroke:#888;fill:none">
+            <circle cx="7" cy="7" r="7" style="stroke:none"/>
+            <circle cx="7" cy="7" r="6.5" style="fill:none"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="24" viewBox="0 0 32 24">
+    <path data-name="사각형 14083" style="fill:none" d="M0 0h32v24H0z"/>
+    <path data-name="빼기 346" d="M25.5 18h-23A2.5 2.5 0 0 1 0 15.5v-13A2.5 2.5 0 0 1 2.5 0h23A2.5 2.5 0 0 1 28 2.5v3.614a3 3 0 0 0 0 5.773V15.5a2.5 2.5 0 0 1-2.5 2.5z" transform="translate(2 3)" style="stroke:#111;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+    <path data-name="패스 13913" d="M-.315-2.42v-1.07h-1.22a15.742 15.742 0 0 0 .31-3.52v-.83h-6.45v1.05h5.18c0 .31.01.61-.02.94l-5.46.17.15 1.12 5.22-.27a13.013 13.013 0 0 1-.23 1.34h-5.8v1.07h3.49V.84h1.32v-3.26zm8.94-1.12h-3.51v-.83h2.7v-1.04h-1.1v-1.55h1.17v-1.05h-6.85v1.05h1.17v1.55H1.1v1.04h2.7v.83H.305v1.05h8.32zm-5.11-1.87v-1.55h1.89v1.55zm-.88 5.06V-1.9h-1.32V.7H7.7V-.35z" transform="translate(15.32 16)" style="fill:#111"/>
+</svg>

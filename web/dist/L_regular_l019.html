@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-rental-fee-use">임대료 이용안내</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 임대료 이용안내 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-info-rental-fee-use">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">임대료 이용안내</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="info-area">
+									<ul class="info-list type-text-large type-outside">
+										<li class="info-item">매월 10일(절대일)까지 신청하시면 신청월부터 카드승인이 발생하며, 11일~말일까지 신청분은 다음달부터 카드승인이 발생하게 됩니다.</li>
+										<li class="info-item margin-top-10">
+											등록된 카드가 거래정지 및 한도부족, 연체, 분실, 기타 사유로 임대료 승인이 거절될 수 있습니다. 이 경우 해당월의 임대료는 LH공사(1600-1004),SH공사(1600-3456),
+											JD공사(063-280-7500)를 통해 별도로 납부하여 주시기 바랍니다.
+										</li>
+										<li class="info-item margin-top-10">
+											<div class="indent-block">임대료 자동납부 등록 후 최초 납부 개시되는 임대료는 해당월 정상납부 대상금액과 미납금액이 있을 경우 미납금액이 포함되어 결제됩니다.</div>
+											<ul class="info-list type-default">
+												<li class="info-item type-indent type-side-no-padding"><span class="indent">-</span>임대료 납부마감일 기준 2영업일 전에 해지하셔야 해당월에 승인처리 되지 않습니다.</li>
+												<li class="info-item type-indent type-side-no-padding margin-top-10">
+													<span class="indent">-</span>임대료 납부마김일은 임대료고지서 및 LH공사, SH공사, JD공사 고객센터를 통해 확인이 가능합니다.<br />(LH공사 : 1600-1004 / SH공사 :1600-3456 /
+													JD공사 : 063-280-7500 )
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 임대료 이용안내 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-info-rental-fee-use');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

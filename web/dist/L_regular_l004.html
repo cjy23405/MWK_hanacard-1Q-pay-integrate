@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-living-fee-internet">제휴사에서 신청 (인터넷)</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 제휴사에서 신청 (인터넷) -->
+			<div class="layer-wrap layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-living-fee-internet">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">인터넷</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section-group margin-top-minus-5">
+									<div class="section-title type-medium">
+										<h3 class="title">서비스 안내</h3>
+									</div>
+									<div class="section-contents-info">하나카드로 간편하게 인터넷요금(초고속통신/TV/인터넷전화)을 납부해 드리는 서비스 입니다.</div>
+								</div>
+								<div class="page-section-group margin-top-25">
+									<div class="section-title type-medium">
+										<h3 class="title">자동납부 신청</h3>
+									</div>
+									<div class="phone-company-list margin-top-15">
+										<div class="phone-company-item">
+											<div class="phone-company-left">
+												<!-- 2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-logo type-skt"></div>
+												<!-- //2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-title">SKT 브로드밴드</div>
+											</div>
+											<div class="phone-company-right">
+												<a href="tel:106" class="ui-tel-link color-blur">106</a>
+											</div>
+										</div>
+										<div class="phone-company-item">
+											<div class="phone-company-left">
+												<!-- 2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-logo type-kt"></div>
+												<!-- //2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-title">KT</div>
+											</div>
+											<div class="phone-company-right">
+												<a href="tel:100" class="ui-tel-link color-blur">100</a>
+											</div>
+										</div>
+										<div class="phone-company-item">
+											<div class="phone-company-left">
+												<!-- 2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-logo type-uplus"></div>
+												<!-- //2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-title">LG U+</div>
+											</div>
+											<div class="phone-company-right">
+												<a href="tel:101" class="ui-tel-link color-blur">101</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="use-notice-area js-ui-accordion">
+									<div class="use-notice-item js-ui-accordion__item">
+										<button type="button" class="use-notice-opener js-ui-accordion__opener">
+											이용안내
+											<span class="for-a11y">
+												상세 내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+										<div class="use-notice-contents js-ui-accordion__layer">
+											<div class="info-list">
+												<p class="info-item">법인카드, 체크카드, 기프트카드는 신청 불가합니다.</p>
+												<p class="info-item">해지 신청은 각 통신사를 통해서만 가능합니다.</p>
+												<p class="info-item">카드 교체, 갱신, 재발급, 기타 거래정지 등의 경우에는 회원이 보유한 다른 정상카드로 계속하여 요금이 자동납부 됩니다.</p>
+												<p class="info-item">
+													매월 17일(영업일 기준)까지 신청하시면 지난달에 사용하신 요금이 당월부터 승인됩니다.<br />
+													단, 신청일(17일) 이후 일자가 휴일인 경우에는 익월에 승인될 수도 있습니다.<br />
+													(자동납부 신청 등록 시 최초 납부일자 확인 가능)
+												</p>
+												<p class="info-item">
+													자동납부 신청건이 정상 등록되지 않은 경우에는 고객님의 휴대폰으로 문자메세지를 통해 알려드리오니, 확인 후 하나카드 고객센터 및 해당 통신사로 문의하여 주시기 바랍니다.
+												</p>
+												<p class="info-item">신용카드 연체, 분실, 거래정지, 한도부족, 기타 사유로 인해 인터넷 요금 신용카드 자동납부가 거절될 수 있습니다.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 제휴사에서 신청 (인터넷) -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-living-fee-internet');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

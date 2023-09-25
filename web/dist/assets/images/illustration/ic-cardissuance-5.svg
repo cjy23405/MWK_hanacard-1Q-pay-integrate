@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-5{stroke:#2d3239;stroke-width:1.5px;fill:#fff}.cls-6{fill:#2d3239}.cls-7,.cls-8{stroke:none}.cls-8{fill:#2d3239}
+        </style>
+    </defs>
+    <g id="ic_cardissuance_5" transform="translate(102.5 -622)">
+        <path id="사각형_12182" data-name="사각형 12182" class="cls-1" transform="translate(-102.5 622)" d="M0 0h50v50H0z"/>
+        <g id="사각형_12028" data-name="사각형 12028" style="stroke:#2d3239;stroke-width:1.5px;fill:none">
+            <path class="cls-7" d="M5 0h11a5 5 0 0 1 5 5v16H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" transform="translate(-92.5 636)"/>
+            <path class="cls-1" d="M5 .75h11A4.25 4.25 0 0 1 20.25 5v14.5a.75.75 0 0 1-.75.75H5A4.25 4.25 0 0 1 .75 16V5A4.25 4.25 0 0 1 5 .75z" transform="translate(-92.5 636)"/>
+        </g>
+        <g id="합치기_152" data-name="합치기 152" class="cls-3">
+            <path class="cls-7" d="M.254 17.833V.12S5.76-.438 7.786.856c1.783 1.139 3.839 5.716 4.307 6.8a1.493 1.493 0 0 1 .075.175l.023.056a1.5 1.5 0 0 1 .066.441v4.5a5 5 0 0 1-5 5z" transform="translate(-73.254 639.168)"/>
+            <path class="cls-8" d="M7.254 16.333c1.93 0 3.5-1.57 3.5-3.5V8.331l-.02-.04-.018-.04C9.4 5.205 7.863 2.684 6.978 2.12c-.227-.145-1.194-.62-4.074-.62-.414 0-.805.01-1.15.024v14.809h5.5m0 1.5h-7V.12S5.76-.438 7.787.856c1.783 1.138 3.838 5.716 4.307 6.8.028.057.054.115.075.176l.023.056-.004.003a1.5 1.5 0 0 1 .066.441v4.5a5 5 0 0 1-4.999 5z" transform="translate(-73.254 639.168)"/>
+        </g>
+        <path id="교차_8" data-name="교차 8" d="M23965.191 956.826a1.5 1.5 0 0 1-1.5-1.5v-2.719a1.5 1.5 0 0 1 1.5-1.5h4.395a38.329 38.329 0 0 1 1.754 3.544 1.733 1.733 0 0 1 .072.18.372.372 0 0 1 .025.054h-.006a1.412 1.412 0 0 1 .066.445v.749a1.5 1.5 0 0 1-1.295.743z" transform="translate(-24034.193 -306.832)" style="fill:#7dedf3"/>
+        <g id="타원_1484" data-name="타원 1484" class="cls-5" transform="translate(-88.501 653)">
+            <circle class="cls-7" cx="3.5" cy="3.5" r="3.5"/>
+            <circle class="cls-1" cx="3.5" cy="3.5" r="2.75"/>
+        </g>
+        <g id="타원_1485" data-name="타원 1485" class="cls-5" transform="translate(-72 653)">
+            <circle class="cls-7" cx="3.5" cy="3.5" r="3.5"/>
+            <circle class="cls-1" cx="3.5" cy="3.5" r="2.75"/>
+        </g>
+        <rect id="사각형_12114" data-name="사각형 12114" class="cls-6" width="4.902" height="1.5" rx=".75" transform="translate(-88.501 641)"/>
+        <rect id="사각형_12115" data-name="사각형 12115" class="cls-6" width="6.127" height="1.5" rx=".75" transform="translate(-88.501 644.064)"/>
+        <g id="교차_7" data-name="교차 7" class="cls-3">
+            <path class="cls-7" d="M23966.965 956.214a2 2 0 0 1-2-2v-1.992a2 2 0 0 1 2-2h4.682a39.544 39.544 0 0 1 1.691 3.436 1.565 1.565 0 0 1 .078.174.249.249 0 0 0 .023.054.006.006 0 0 0-.006.006 1.493 1.493 0 0 1 .066.439v1.384a1.985 1.985 0 0 1-1.318.5z" transform="translate(-24034.5 -306.832)"/>
+            <path class="cls-8" d="M23972 954.714v-.377l-.012-.023-.025-.06a40.863 40.863 0 0 0-1.21-2.532h-3.788a.497.497 0 0 0-.496.497v1.992a.5.5 0 0 0 .496.503h5.035m.182 1.5h-5.217c-1.1 0-1.996-.896-1.996-2.003v-1.992a2 2 0 0 1 1.996-1.997h4.681a39.848 39.848 0 0 1 1.692 3.435c.03.054.055.115.078.175a.249.249 0 0 0 .023.054s-.005 0-.005.006c.043.138.066.289.066.44v1.383c-.352.31-.813.5-1.318.5z" transform="translate(-24034.5 -306.832)"/>
+        </g>
+    </g>
+</svg>

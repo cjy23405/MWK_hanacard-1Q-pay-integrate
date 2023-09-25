@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">신분증 정보 확인</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							신분증 정보를<br />
+							확인해주세요.
+						</h2>
+
+						<div class="page-section-group">
+							<div class="img-area type-260">
+								<!-- 2022.04.27 : mod : alt 값 변경 -->
+								<img src="./assets/images/contents/img-personallicense.png" alt="주민등록증 정보 확인 예시 이미지" class="img" />
+							</div>
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-secondary">신분증 재촬영</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section-group">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">이름</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block type-use-delete">
+											<input type="text" class="ui-input" title="이름 입력" placeholder="이름 입력" value="김하나" disabled />
+											<button type="button" class="ui-button ui-input-delete">
+												<span class="for-a11y">입력 내용 지우기</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">주민등록번호</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block">
+											<input type="text" class="ui-input" title="주민등록번호 13자리 입력" placeholder="‘-’ 제외하고 입력" value="123456-1234567" disabled />
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">발급일자</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block">
+											<input type="number" pattern="\d*" class="ui-input" title="발급일자 입력" placeholder="발급일자 입력" value="20180101" disabled />
+										</div>
+									</div>
+								</div>
+							</div>
+							<ul class="info-list margin-top-35">
+								<li class="info-item">신분증 정보가 다를 경우 재촬영 하거나 PC에서 직접 입력 할 수 있습니다.</li>
+								<li class="info-item">실제 정보와 다른 경우 거래가 제한될 수 있습니다.</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

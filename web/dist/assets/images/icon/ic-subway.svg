@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <g data-name="그룹 14087">
+        <g data-name="그룹 14086">
+            <path data-name="패스 13091" d="M1156.017 182h10.758a1.22 1.22 0 0 1 1.075.644l4.585 8.561a1.219 1.219 0 0 1-1.075 1.795h-19.928a1.219 1.219 0 0 1-1.075-1.795l4.585-8.561a1.22 1.22 0 0 1 1.075-.644z" transform="translate(-1139.396 -154.888)" style="fill:#7dedf3"/>
+            <path data-name="선 381" transform="translate(26.5 30.5)" style="stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none" d="m0 0 4 6.625"/>
+            <g data-name="사각형 15716" transform="translate(10.5 6)" style="stroke:#2d3239;stroke-width:1.5px;fill:none">
+                <rect width="23" height="25" rx="5" style="stroke:none"/>
+                <rect x=".75" y=".75" width="21.5" height="23.5" rx="4.25" style="fill:none"/>
+            </g>
+            <path data-name="선 380" transform="translate(13.5 30.5)" style="stroke-linecap:round;stroke:#2d3239;stroke-width:1.5px;fill:none" d="M4 0 0 6.625"/>
+            <g data-name="타원 1918" transform="translate(14.5 22)" style="stroke:#2d3239;stroke-width:1.5px;fill:none">
+                <circle cx="2.5" cy="2.5" r="2.5" style="stroke:none"/>
+                <circle cx="2.5" cy="2.5" r="1.75" style="fill:none"/>
+            </g>
+            <g data-name="타원 1919" transform="translate(24.5 22)" style="stroke:#2d3239;stroke-width:1.5px;fill:none">
+                <circle cx="2.5" cy="2.5" r="2.5" style="stroke:none"/>
+                <circle cx="2.5" cy="2.5" r="1.75" style="fill:none"/>
+            </g>
+            <g data-name="사각형 15715" transform="translate(14.5 10)" style="stroke:#2d3239;stroke-width:1.5px;fill:none">
+                <rect width="15" height="9" rx="2" style="stroke:none"/>
+                <rect x=".75" y=".75" width="13.5" height="7.5" rx="1.25" style="fill:none"/>
+            </g>
+            <path data-name="선 727" transform="translate(22 11)" style="stroke:#2d3239;stroke-width:1.5px;fill:none" d="M0 0v7"/>
+        </g>
+    </g>
+</svg>

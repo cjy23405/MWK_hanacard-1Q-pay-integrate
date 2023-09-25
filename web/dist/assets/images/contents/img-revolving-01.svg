@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="272" height="182" viewBox="0 0 272 182">
+    <defs>
+        <style>
+            .cls-2{fill:#fff;stroke:#111}.cls-3{fill:#111;font-size:12px;font-family:SpoqaHanSansNeo-Regular,Spoqa Han Sans Neo;letter-spacing:-.025em}.cls-7{fill:none}.cls-8{stroke:none}
+        </style>
+    </defs>
+    <g id="img_revolving_01" transform="translate(-44 -1743)">
+        <path id="사각형_11875" data-name="사각형 11875" transform="translate(180 1744)" style="fill:#e5e5e5" d="M0 0h1v138H0z"/>
+        <g id="그룹_9379" data-name="그룹 9379" transform="translate(-78.641 1640)">
+            <g id="사각형_11873" data-name="사각형 11873" class="cls-2" transform="translate(122.641 103)">
+                <rect class="cls-8" width="272" height="33" rx="6"/>
+                <rect class="cls-7" x=".5" y=".5" width="271" height="32" rx="5.5"/>
+            </g>
+            <text id="일시불_100만원" data-name="일시불 100만원" class="cls-3" transform="translate(258.641 124)"><tspan x="-38.472" y="0">일시불 100만원</tspan></text>
+        </g>
+        <g id="그룹_12033" data-name="그룹 12033" transform="translate(-78.641 1746)">
+            <g id="사각형_11873-2" data-name="사각형 11873" class="cls-2" transform="translate(122.641 103)">
+                <rect class="cls-8" width="272" height="33" rx="6"/>
+                <rect class="cls-7" x=".5" y=".5" width="271" height="32" rx="5.5"/>
+            </g>
+            <text id="청구금액_50만원" data-name="청구금액 50만원" class="cls-3" transform="translate(258.641 124)"><tspan x="-40.416" y="0">청구금액 50만원</tspan></text>
+        </g>
+        <g id="그룹_12034" data-name="그룹 12034" transform="translate(-78.641 1789)">
+            <rect id="사각형_11873-3" data-name="사각형 11873" width="272" height="33" rx="6" transform="translate(122.641 103)" style="fill:#008882"/>
+            <text id="이월금액_50만원" data-name="이월금액 50만원" transform="translate(258.641 124)" style="font-size:12px;font-family:SpoqaHanSansNeo-Regular,Spoqa Han Sans Neo;letter-spacing:-.025em;fill:#fff"><tspan x="-40.416" y="0">이월금액 50만원</tspan></text>
+        </g>
+        <g id="그룹_9380" data-name="그룹 9380" transform="translate(0 1683)">
+            <g id="사각형_11873-4" data-name="사각형 11873" transform="translate(113 103)" style="stroke:#e5e5e5;fill:#fff">
+                <rect class="cls-8" width="134" height="33" rx="6"/>
+                <rect class="cls-7" x=".5" y=".5" width="133" height="32" rx="5.5"/>
+            </g>
+            <text id="약정결제비율_50_" data-name="약정결제비율 50 %" class="cls-3" transform="translate(180 124)"><tspan x="-46.986" y="0">약정결제비율 50 %</tspan></text>
+        </g>
+        <path id="사각형_15755" data-name="사각형 15755" class="cls-7" transform="translate(44 1743)" d="M0 0h272v182H0z"/>
+    </g>
+</svg>

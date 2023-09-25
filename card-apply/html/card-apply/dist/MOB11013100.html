@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+
+		<style></style>
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<!-- 2022.11.11 : mod : page에서 modal로 구조변경 -->
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-ocr">신분증 촬영(OCR) 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 신분증 촬영(OCR) 팝업 -->
+			<div class="layer-wrap layer-wrap--full layer-ocr" data-layer="layer-ocr">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header-title">신분증 촬영</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="ocr-wrap">
+									<div class="ocr-view">
+										<div class="ocr-view-inner" id="test-stage" style="border-color: rgb(255, 86, 117); background-color: rgb(255, 86, 117)">
+											<video autoplay="" muted="" playsinline=""></video>
+											<canvas id="id-card"></canvas>
+										</div>
+									</div>
+									<!-- 2022.12.12 : mod : html 위치 변경 (.ocr-wrap 안으로) -->
+									<div class="ocr-guide">
+										<h3 class="ocr-guide-title">신분증을 오렌지색 선 안에 맞춰주세요.</h3>
+										<div class="ocr-guide-contents">
+											<ul class="ocr-guide-list">
+												<li class="ocr-guide-item has-icon type-1">흔들리거나, 빛이 반사되지 않도록 해주세요.</li>
+												<li class="ocr-guide-item has-icon type-2">어두운 바닥에서 촬영해주세요.</li>
+											</ul>
+										</div>
+									</div>
+									<!-- //2022.12.12 : mod : html 위치 변경 (.ocr-wrap 안으로) -->
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 신분증 촬영(OCR) 팝업 -->
+			<!-- //2022.11.11 : mod : page에서 modal로 구조변경 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- OCR관련 js -->
+		<script type="text/javascript" src="/mkca20/lib/fincube/fincube.js"></script>
+		<script type="text/javascript" src="/mkca20/lib/fincube/js/webcam.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-ocr');
+			});
+
+			$(function () {
+				window.dataLayer = window.dataLayer || [];
+				function gtag() {
+					dataLayer.push(arguments);
+				}
+				gtag('js', new Date());
+				gtag('config', 'G-V47163063B');
+
+				var user_infos = ['홍길동', '901109'];
+				var user_name = user_infos[0];
+				var user_birth = user_infos[1];
+
+				var detected = false;
+				var address = 0;
+				var PageEnd = false;
+				var timer = 0;
+				var curOrientation = window.orientation;
+
+				webcam.changeStage(3);
+
+				var resolution;
+				var DlcLength = 14;
+				var RrcLength = 12;
+				var loadFinished = false;
+
+				console.log('2. address : ' + address);
+
+				Module.onRuntimeInitialized = async (_) => {
+					timer = setInterval(function () {
+						if (detected) {
+							webcam.sleep(10);
+							return;
+						}
+
+						if (address === 0 && !PageEnd && webcam.getResolutionCompatibility()) {
+							webcam.changeStage(1);
+
+							address = getIDCardScanner();
+
+							loadFinished === false;
+							{
+								loadFinished = true;
+							}
+
+							console.log('getIDCardScanner address : ' + address);
+
+							// return;
+						}
+
+						if (address === 0 || PageEnd) {
+							webcam.sleep(10);
+							return;
+						}
+
+						resolution = webcam.getResolution();
+
+						if (!detected) {
+							var type;
+							var name;
+							var number;
+							var licenseNumber;
+							var Date;
+							var region;
+							var serial;
+							var licenseType;
+							var Completed;
+							var birth;
+							var overseasResident;
+							var color_point;
+							var face_score;
+							var specular;
+							var start_t;
+							var end_t;
+
+							var detect_card = webcam.detectCardbox(address);
+
+							$('.ocr-view').removeClass('is-in');
+
+							if (detect_card) {
+								webcam.changeStage(2);
+								var result = webcam.startRecognition(address, 0);
+
+								$('.ocr-view').addClass('is-in');
+
+								if (!result.indexOf('true')) {
+									// && result != "" && result !== undefined && result !== null)
+									console.log(`result : ${result}`);
+									resultSplit = result.split('/');
+									detected = true;
+									var resultIndex = 0;
+									(Completed = resultSplit[resultIndex]), resultIndex++;
+									(type = resultSplit[resultIndex]), resultIndex++;
+
+									if (detected && (resultSplit.length == RrcLength || resultSplit.length == DlcLength)) {
+										if (type === '1' && resultSplit.length == RrcLength) {
+											(name = resultSplit[resultIndex]), resultIndex++;
+											(number = resultSplit[resultIndex]), resultIndex++;
+											(Date = resultSplit[resultIndex]), resultIndex++;
+											(region = resultSplit[resultIndex]), resultIndex++;
+
+											region = region.trim();
+											birth = number.slice(0, 6);
+
+											if (number.length == 13) number = number.slice(0, 6) + '-' + number.slice(6, 13);
+											else number = '';
+
+											(overseasResident = resultSplit[resultIndex]), resultIndex++;
+										} else if (type === '2' && resultSplit.length == DlcLength) {
+											(name = resultSplit[resultIndex]), resultIndex++;
+											(number = resultSplit[resultIndex]), resultIndex++;
+											(licenseNumber = resultSplit[resultIndex]), resultIndex++;
+											(Date = resultSplit[resultIndex]), resultIndex++;
+											(region = resultSplit[resultIndex]), resultIndex++;
+											region = region.trim();
+											(serial = resultSplit[resultIndex]), resultIndex++;
+											(licenseType = resultSplit[resultIndex]), resultIndex++;
+											birth = number.slice(0, 6);
+
+											if (number.length == 13) number = number.slice(0, 6) + '-' + number.slice(6, 13);
+											else number = '';
+										}
+
+										(color_point = resultSplit[resultIndex]), resultIndex++;
+										(face_score = resultSplit[resultIndex]), resultIndex++;
+										(specular = resultSplit[resultIndex]), resultIndex++;
+										(start_t = resultSplit[resultIndex]), resultIndex++;
+										(end_t = resultSplit[resultIndex]), resultIndex++;
+
+										//if (detected) {
+										//chageStage(true);
+
+										$('.ocr-view').addClass('is-active');
+
+										//webcam.stopStreamedVideo();
+										//webcam.drawImage();
+										webcam.drawJpg(address);
+										//webcam.drawRgba(address);
+
+										var resultString = '';
+
+										if (type === '1') {
+											resultString += '이름: ' + name + '\n';
+											resultString += '주민등록번호: ' + number + '\n';
+											resultString += '발행처: ' + region + '\n';
+											resultString += '발급일자: ' + Date + '\n';
+											resultString += '재외국민: ' + (overseasResident === 'true') ? '예' : '아니오' + '\n';
+											resultString += '색상: ' + color_point + '\n';
+											resultString += '얼굴 점수: ' + face_score + '\n';
+											resultString += '반사광: ' + specular + '\n';
+											resultString += '시작: ' + start_t + '\n';
+											resultString += '끝: ' + end_t + '\n';
+
+											console.log(resultString);
+										} else if (type === '2') {
+											resultString += '이름: ' + name + '\n';
+											resultString += '주민등록번호: ' + number + '\n';
+											resultString += '운전면허번호: ' + licenseNumber + '\n';
+											resultString += '발행처: ' + region + '\n';
+											resultString += '발급일자: ' + Date + '\n';
+											resultString += '시리얼: ' + serial + '\n';
+											resultString += '면허타입: ' + licenseType + '\n';
+											resultString += '색상: ' + color_point + '\n';
+											resultString += '얼굴 점수: ' + face_score + '\n';
+											resultString += '반사광: ' + specular + '\n';
+											resultString += '시작: ' + start_t + '\n';
+											resultString += '끝: ' + end_t + '\n';
+
+											console.log(resultString);
+										}
+
+										if (name === user_name && birth === user_birth) {
+											// alert("Correct");
+										} else {
+											// alert("Wrong");
+											console.log(name, user_name);
+											console.log(birth, user_birth);
+										}
+										webcam.stopStreamedVideo();
+										//}
+									}
+								}
+								//chageStage(1);
+							} else {
+								webcam.changeStage(0);
+							}
+						}
+					}, 1);
+				};
+
+				window.addEventListener('beforeunload', (event) => {
+					// 명세에 따라 preventDefault는 호출해야하며, 기본 동작을 방지합니다.
+					//event.preventDefault();
+					// 대표적으로 Chrome에서는 returnValue 설정이 필요합니다.
+					PageEnd = true;
+
+					clearInterval(timer);
+
+					webcam.destroyPrevImage();
+					destroyIDCardScanner(address);
+					address = 0;
+
+					event.preventDefault();
+				});
+
+				window.addEventListener(
+					'orientationchange',
+					function () {
+						if (curOrientation !== window.orientation && !detected) {
+							curOrientation = window.orientation;
+							webcam.setupWebcam();
+						}
+					},
+					false
+				);
+
+				webcam.setupWebcam();
+			});
+		</script>
+		<!-- //OCR관련 js -->
+		<!-- //script -->
+	</body>
+</html>

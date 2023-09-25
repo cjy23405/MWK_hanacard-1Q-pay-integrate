@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-4{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_info___r" data-name="ic_info_!_r" transform="translate(-59 -847)">
+        <path id="사각형_11200" data-name="사각형 11200" class="cls-1" transform="translate(59 847)" d="M0 0h18v18H0z"/>
+        <g id="타원_1338" data-name="타원 1338" transform="translate(60 848)" style="stroke:#ce2d2d;stroke-width:1.5px;fill:none">
+            <circle class="cls-4" cx="8" cy="8" r="8"/>
+            <circle class="cls-1" cx="8" cy="8" r="7.25"/>
+        </g>
+        <g id="합치기_128" data-name="합치기 128" style="fill:none">
+            <path class="cls-4" d="M-8199.001 16976.5a.501.501 0 1 1 0-1.002.501.501 0 0 1 0 1.002zm0-2.998a.502.502 0 0 1-.501-.502v-4c0-.28.22-.498.501-.498s.501.219.501.498v4a.502.502 0 0 1-.501.502z" transform="translate(8267 -16116.5)"/>
+            <path d="m-8199.001 16973.002.001-.002-.002-3.998v4h.001m0 3.998a1 1 0 1 1 1.001-1 1 1 0 0 1-1.001 1zm0-2.998a1 1 0 0 1-1.001-1.002v-4a.997.997 0 0 1 1.001-.998.997.997 0 0 1 1.001.998v4a1 1 0 0 1-1.001 1.002z" style="fill:#ce2d2d;stroke:none" transform="translate(8267 -16116.5)"/>
+        </g>
+    </g>
+</svg>

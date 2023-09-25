@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-payment-date">결제일 안내</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 결제일 안내 -->
+			<div class="layer-wrap layer-wrap layer-wrap--full" data-layer="layer-info-payment-date">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">결제일 안내</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<div class="section-title">
+										<h3 class="title">일시불/할부 및 단기카드대출</h3>
+									</div>
+									<div class="section-contents">
+										<div class="form-list">
+											<div class="form-item">
+												<div class="form-title margin-bottom-10">
+													<strong class="title">결제일자</strong>
+												</div>
+												<div class="ui-radio-group type-panel type-scroll-x">
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" data-checkbox-tab="radioPanel1-1" checked />
+														<label for="radioPanel1-1" class="ui-label">
+															<span class="ui-label-text">1일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-5" data-checkbox-tab="radioPanel1-5" />
+														<label for="radioPanel1-5" class="ui-label">
+															<span class="ui-label-text">5일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-7" data-checkbox-tab="radioPanel1-7" />
+														<label for="radioPanel1-7" class="ui-label">
+															<span class="ui-label-text">7일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-8" data-checkbox-tab="radioPanel1-8" />
+														<label for="radioPanel1-8" class="ui-label">
+															<span class="ui-label-text">8일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-10" data-checkbox-tab="radioPanel1-10" />
+														<label for="radioPanel1-10" class="ui-label">
+															<span class="ui-label-text">10일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-12" data-checkbox-tab="radioPanel1-12" />
+														<label for="radioPanel1-12" class="ui-label">
+															<span class="ui-label-text">12일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-13" data-checkbox-tab="radioPanel1-13" />
+														<label for="radioPanel1-13" class="ui-label">
+															<span class="ui-label-text">13일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-14" data-checkbox-tab="radioPanel1-14" />
+														<label for="radioPanel1-14" class="ui-label">
+															<span class="ui-label-text">14일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-15" data-checkbox-tab="radioPanel1-15" />
+														<label for="radioPanel1-15" class="ui-label">
+															<span class="ui-label-text">15일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-17" data-checkbox-tab="radioPanel1-17" />
+														<label for="radioPanel1-17" class="ui-label">
+															<span class="ui-label-text">17일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-18" data-checkbox-tab="radioPanel1-18" />
+														<label for="radioPanel1-18" class="ui-label">
+															<span class="ui-label-text">18일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-20" data-checkbox-tab="radioPanel1-20" />
+														<label for="radioPanel1-20" class="ui-label">
+															<span class="ui-label-text">15일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-21" data-checkbox-tab="radioPanel1-21" />
+														<label for="radioPanel1-21" class="ui-label">
+															<span class="ui-label-text">15일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-23" data-checkbox-tab="radioPanel1-23" />
+														<label for="radioPanel1-23" class="ui-label">
+															<span class="ui-label-text">23일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-25" data-checkbox-tab="radioPanel1-25" />
+														<label for="radioPanel1-25" class="ui-label">
+															<span class="ui-label-text">25일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-27" data-checkbox-tab="radioPanel1-27" />
+														<label for="radioPanel1-27" class="ui-label">
+															<span class="ui-label-text">27일</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-1">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전전월 19일 ~ 전월 18일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 2일 ~ 전월 1일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-5">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전전월 23일 ~ 전월 22일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 6일 ~ 전월 5일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-7">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전전월 25일 ~ 전월 24일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 8일 ~ 전월 7일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-8">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전전월 26일 ~ 전월 25일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 9일 ~ 전월 8일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-10">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전전월 28일 ~ 전월 27일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 11일 ~ 전월 10일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-12">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전전월 30일 ~ 전월 29일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 13일 ~ 전월 12일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-13">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전월 1일 ~ 전월 말일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 15일 ~ 전월 14일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-14">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전월 2일 ~ 당월 1일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 15일 ~ 전월 14일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-15">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전월 3일 ~ 당월 2일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 16일 ~ 전월 15일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-17">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전월 5일 ~ 당월 4일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 18일 ~ 전월 17일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-18">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전월 6일 ~ 당월 5일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 19일 ~ 전월 18일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-20">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전월 8일 ~ 당월 7일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 21일 ~ 전월 20일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-21">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전월 9일 ~ 당월 8일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 22일 ~ 전월 21일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-23">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전월 11일 ~ 당월 10일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 24일 ~ 전월 23일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-25">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전월 13일 ~ 당월 12일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 26일 ~ 전월 25일</dd>
+											</div>
+										</dl>
+										<dl class="form-detail-list margin-top-25" data-checkbox-tab-panel="radioPanel1-27">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">일시불/할부</dt>
+												<dd class="form-detail-group">전월 15일 ~ 당월 14일</dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">단기카드대출</dt>
+												<dd class="form-detail-group">전전월 28일 ~ 전월 27일</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+								<div class="page-section type-line">
+									<div class="section-title">
+										<h3 class="title">장기카드대출(카드론)</h3>
+									</div>
+									<div class="section-contents">
+										<dl class="form-detail-list margin-top-25">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">결제일자</dt>
+												<dd class="form-detail-group">전전월 1일 ~ 전전월 말일 (공통)</dd>
+											</div>
+										</dl>
+										<ul class="info-list margin-top-35">
+											<li class="info-item">카드 이용기간은 휴일과 업무사정에 따라 변경될 수 있습니다.</li>
+											<li class="info-item">지정 결제일이 공휴일 또는 은행 휴무일인 경우, 돌아오는 첫 시작 영업일을 결제일로 합니다.</li>
+											<li class="info-item">
+												후불 교통카드의 이용기간은 신용구매이용기간과 동일하게 적용하여 청구됩니다. <br />
+												(단, 비씨카드의 경우 카드 사용기간 말일이 공휴일 또는 휴무일인 경우 신용구매 이용기간과 1~2일정도 차이가 발생할수 있습니다.)
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 결제일 안내 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-info-payment-date');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

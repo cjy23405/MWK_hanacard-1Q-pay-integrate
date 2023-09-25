@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">대출회원정보변경</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							회원정보를 변경할<br />
+							대출을 선택해 주세요.
+						</h2>
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">대출번호</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-radio-group type-full">
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" checked />
+												<label for="radioBox1-1" class="ui-label type-block">
+													<div class="ui-label-text">
+														<span class="title color-primary">일반대출</span>
+														<div>1520999001530</div>
+													</div>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" />
+												<label for="radioBox1-2" class="ui-label">
+													<div class="ui-label-text">
+														<span class="title color-primary">상품명</span>
+														<div>상품번호</div>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+
+									<!-- [DD] 대출이용내역이 없는 경우 -->
+									<div class="form-group type-none">
+										<p class="item-text">대출이용내역이 없습니다.</p>
+									</div>
+									<!-- //[DD] 대출이용내역이 없는 경우 -->
+								</div>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">조회</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- 조회 시 -->
+						<!-- section -->
+						<div class="page-section type-line">
+							<!-- [DD] 대출이용내역이 없는 경우 -->
+							<div class="form-detail type-none">
+								<p class="item-text">조회 결과가 없습니다.</p>
+							</div>
+							<!-- //[DD] 대출이용내역이 없는 경우 -->
+
+							<div class="form-detail">
+								<div class="form-detail-head">
+									<h3 class="title">기본정보</h3>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이름</dt>
+										<dd class="form-detail-group">김하나</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">휴대폰번호</dt>
+										<dd class="form-detail-group">SKT 010-1234-****</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이메일</dt>
+										<dd class="form-detail-group">Ab*****@naver.com</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">전화번호</dt>
+										<dd class="form-detail-group">010-1234-****</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">직장정보</h3>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">직장명</dt>
+										<dd class="form-detail-group">하나카드</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">부서/직위</dt>
+										<dd class="form-detail-group">개발팀/사원</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">전화번호</dt>
+										<dd class="form-detail-group">02-7878-****</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h3 class="title">주소정보</h3>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">주소</dt>
+										<dd class="form-detail-group type-block">
+											<div>04753</div>
+											<div>서울 종로구 종로동 종로아파트</div>
+											<div>104동 *****</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-primary" role="button">회원정보변경</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+						<!-- //조회 시 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

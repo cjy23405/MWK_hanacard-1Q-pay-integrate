@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">내 정보</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="profile-area">
+								<!-- DD : 이미지 없을 때 -->
+								<div class="profile-image">
+									<div class="profile-image-inner"></div>
+									<button type="button" class="ui-button-change">
+										<span class="for-a11y">프로필 변경</span>
+									</button>
+								</div>
+								<!-- //DD : 이미지 없을 때 -->
+
+								<!-- DD : 이미지 에러 -->
+								<div class="profile-image">
+									<div class="profile-image-inner">
+										<img src="./assets/images/contents/profile/img-profile-01 .png" alt="프로필 이미지" onerror="this.parentNode.className += ' is-error';" />
+									</div>
+									<button type="button" class="ui-button-change">
+										<span class="for-a11y">프로필 변경</span>
+									</button>
+								</div>
+								<!-- //DD : 이미지 에러 -->
+
+								<!-- DD : 이미지 있을 때 -->
+								<div class="profile-image">
+									<div class="profile-image-inner">
+										<img src="./assets/images/contents/profile/img-profile-01.png" alt="프로필 이미지" onerror="this.parentNode.className += ' is-error';" />
+									</div>
+									<button type="button" class="ui-button-change">
+										<span class="for-a11y">프로필 변경</span>
+									</button>
+								</div>
+								<!-- //DD : 이미지 있을 때 -->
+								<div class="ui-buttons type-center">
+									<div class="ui-buttons-list">
+										<div class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-gray type-tiny">내 정보 수정</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="form-detail">
+								<div class="form-detail-head">
+									<h2 class="title">기본정보</h2>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">성명</dt>
+										<dd class="form-detail-group">최승일</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">영문명</dt>
+										<dd class="form-detail-group">CHOI SEUNG IL</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">휴대폰번호</dt>
+										<dd class="form-detail-group">SKT 010-2222-3333</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">이메일</dt>
+										<dd class="form-detail-group">csi97@ksmartech.com</dd>
+									</div>
+								</dl>
+							</div>
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h2 class="title">자택정보</h2>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">전화번호</dt>
+										<dd class="form-detail-group">031-777-3333</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">주소</dt>
+										<dd class="form-detail-group type-block">
+											<div>01234</div>
+											<div>경기 시흥시 대야동아파트</div>
+											<div>15동 11111호</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h2 class="title">직장정보</h2>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">직장명</dt>
+										<dd class="form-detail-group">(주)케이스마텍</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">부서/직위</dt>
+										<dd class="form-detail-group">기타/차장</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">전화번호</dt>
+										<dd class="form-detail-group">070-7510-1000</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">주소</dt>
+										<dd class="form-detail-group type-block">
+											<div>56789</div>
+											<div>서울 금천구 가산디지털1로</div>
+											<div>168 A동 1297호</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h2 class="title">기타정보</h2>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">전화번호</dt>
+										<dd class="form-detail-group">031-777-3333</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">주소</dt>
+										<dd class="form-detail-group type-block">
+											<div>01234</div>
+											<div>경기 시흥시 대야동아파트</div>
+											<div>15동 11111호</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+							<div class="form-detail type-line">
+								<div class="form-detail-head">
+									<h2 class="title">홈페이지 회원정보</h2>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">ID</dt>
+										<dd class="form-detail-group">CSI97</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">홈페이지 비밀번호</dt>
+										<dd class="form-detail-group"><a href="" class="ui-arrow color-blur type-text-default">변경</a></dd>
+									</div>
+								</dl>
+							</div>
+							<div class="form-detail type-line align-center">
+								<a href="" class="text-underline color-blur" role="button">홈페이지 회원 탈퇴하기</a>
+
+								<div class="margin-top-25">
+									<a href="" class="text-underline color-blur" role="button">가맹점 간편조회 연결 해제</a>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

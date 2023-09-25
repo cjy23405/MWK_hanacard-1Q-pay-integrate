@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-my-service">쇼핑주유서비스</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 쇼핑서비스(5~10%할인) -->
+			<!-- 2022.09.02 : mod : layer-wrap에 is-not-background-close 클래스 추가/ layer-wrap--select 클래스 삭제 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select is-not-background-close" data-layer="layer-my-service">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-section">
+									<div class="layer-section-title">
+										<!-- 2022.11.28 : add : 카드명 추가 -->
+										<p class="card-name color-primary">#Tag1카드 Navy</p>
+										<h2 class="title">어떤 쇼핑혜택을 담을까요?</h2>
+									</div>
+									<div class="layer-section-contents margin-top-20">
+										<!-- 2022.08.12 : mod : 이미지 반영 및 리스트 추가 작업 -->
+										<!-- 2022.08.18 : mod : benefits-selector로 클래스 변경 -->
+										<div class="ui-radio-group type-full benefits-selector">
+											<div class="ui-radio-block type-box">
+												<!-- 2022.08.18 : mod : checked 속성 삭제 -->
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-1" />
+												<label for="radio1-1" class="ui-label type-block">
+													<span class="guide-info-box">
+														<!-- 2022.08.18 : add : .sub 문구 추가 -->
+														<strong class="guide-info-title">오픈마켓<span class="sub">(5~10% 할인)</span></strong>
+														<span class="store-logo-list">
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-11-st.svg" alt="11번가" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-gmarket.svg" alt="G마켓" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-auction.svg" alt="옥션" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-interpark.svg" alt="인터파크" />
+															</span>
+														</span>
+													</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-2" />
+												<label for="radio1-2" class="ui-label type-block">
+													<span class="guide-info-box">
+														<!-- 2022.08.18 : add : .sub 문구 추가 -->
+														<strong class="guide-info-title">소셜커머스<span class="sub">(5~10% 할인)</span></strong>
+														<span class="store-logo-list">
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-coupang.svg" alt="쿠팡" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-wemakeprice.svg" alt="위메프" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-tmon.svg" alt="티몬" />
+															</span>
+														</span>
+													</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-3" />
+												<label for="radio1-3" class="ui-label type-block">
+													<span class="guide-info-box">
+														<!-- 2022.08.18 : add : .sub 문구 추가 -->
+														<strong class="guide-info-title">홈쇼핑<span class="sub">(5~10% 할인)</span></strong>
+														<span class="store-logo-list">
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-gsshop.svg" alt="지에스샵" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-lottehomeshopping.svg" alt="롯데홈쇼핑" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-hmall.svg" alt="에이치몰" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-cjoshopping.svg" alt="CJ쇼핑" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-nsshopping.svg" alt="NS쇼핑" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-home-shopping.png" alt="홈쇼핑" />
+															</span>
+														</span>
+													</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-4" />
+												<label for="radio1-4" class="ui-label type-block">
+													<span class="guide-info-box">
+														<!-- 2022.08.18 : add : .sub 문구 추가 -->
+														<strong class="guide-info-title">슈퍼마켓<span class="sub">(5~10% 할인)</span></strong>
+														<span class="store-logo-list">
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-emarteveryday.svg" alt="이마트" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-lottesuper.svg" alt="롯데슈퍼" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-gssupermarket.svg" alt="지에스슈퍼마켓" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-homeplusexpress.svg" alt="홈플러스익스프레스" />
+															</span>
+														</span>
+													</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-5" />
+												<label for="radio1-5" class="ui-label type-block">
+													<span class="guide-info-box">
+														<!-- 2022.08.18 : add : .sub 문구 추가 -->
+														<strong class="guide-info-title">편의점<span class="sub">(5~10% 할인)</span></strong>
+														<span class="store-logo-list">
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-7-eleven.svg" alt="세븐일레븐" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-cu.svg" alt="씨유" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-gs-25.svg" alt="GS25" />
+															</span>
+														</span>
+													</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radio1" id="radio1-6" />
+												<label for="radio1-6" class="ui-label type-block">
+													<span class="guide-info-box">
+														<!-- 2022.08.18 : add : .sub 문구 추가 -->
+														<strong class="guide-info-title">백화점<span class="sub">(5~10% 할인)</span></strong>
+														<span class="store-logo-list">
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-lottedepartmentstore.svg" alt="롯데백화점" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-thehyungdai.svg" alt="현대백화점" />
+															</span>
+															<span class="store-logo-item">
+																<img src="/mkca20/images/contents/logo/ic-shopping-shinsegae.svg" alt="신세계백화점" />
+															</span>
+														</span>
+													</span>
+												</label>
+											</div>
+										</div>
+										<!-- //2022.08.12 : mod : 이미지 반영 및 리스트 추가 작업 -->
+									</div>
+								</div>
+
+								<div class="layer-section">
+									<div class="layer-section-title">
+										<!-- 2022.08.18 : mod : 문구수정 -->
+										<h2 class="title">어떤 주유혜택을 담을까요?</h2>
+									</div>
+									<div class="layer-section-contents margin-top-20">
+										<!-- 2022.08.12 : mod : 이미지 반영 작업 -->
+										<!-- 2022.08.18 : mod : benefits-selector 클래스 추가 -->
+										<div class="ui-radio-group type-grid type-col2 benefits-selector">
+											<div class="ui-radio-block type-box">
+												<!-- 2022.08.18 : mod : checked 속성 삭제 -->
+												<input type="radio" class="ui-radio" name="radio2" id="radio2-1" />
+												<label for="radio2-1" class="ui-label type-block">
+													<span class="guide-info-box">
+														<span class="brand-logo-img">
+															<img src="/mkca20/images/contents/logo/ic-oil-gs.svg" alt="" />
+														</span>
+														<!-- 2022.08.18 : mod : 디자인 변경에 따른 구조변경 -->
+														<strong class="guide-info-title display-block">GS 칼텍스<span class="sub">(50~60/L 할인)</span></strong>
+													</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radio2" id="radio2-2" />
+												<label for="radio2-2" class="ui-label type-block">
+													<span class="guide-info-box">
+														<span class="brand-logo-img">
+															<img src="/mkca20/images/contents/logo/ic-oil-sk.svg" alt="" />
+														</span>
+														<!-- 2022.08.18 : mod : 디자인 변경에 따른 구조변경 -->
+														<strong class="guide-info-title display-block">SK 에너지<span class="sub">(50~60/L 할인)</span></strong>
+													</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radio2" id="radio2-3" />
+												<label for="radio2-3" class="ui-label type-block">
+													<span class="guide-info-box">
+														<span class="brand-logo-img">
+															<img src="/mkca20/images/contents/logo/ic-oil-soil.svg" alt="" />
+														</span>
+														<!-- 2022.08.18 : mod : 디자인 변경에 따른 구조변경 -->
+														<strong class="guide-info-title display-block">에쓰오일<span class="sub">(50~60/L 할인)</span></strong>
+													</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radio2" id="radio2-4" />
+												<label for="radio2-4" class="ui-label type-block">
+													<span class="guide-info-box">
+														<span class="brand-logo-img">
+															<img src="/mkca20/images/contents/logo/ic-oil-hyundaioilbank.svg" alt="" />
+														</span>
+														<!-- 2022.08.18 : mod : 디자인 변경에 따른 구조변경 -->
+														<strong class="guide-info-title display-block">현대오일뱅크<span class="sub">(50~60/L 할인)</span></strong>
+													</span>
+												</label>
+											</div>
+											<div class="ui-radio-block type-box">
+												<input type="radio" class="ui-radio" name="radio2" id="radio2-5" />
+												<label for="radio2-5" class="ui-label type-block">
+													<span class="guide-info-box">
+														<span class="brand-logo-img">
+															<img src="/mkca20/images/contents/logo/ic-oil-knoc.svg" alt="" />
+														</span>
+														<!-- 2022.08.18 : mod : 디자인 변경에 따른 구조변경 -->
+														<strong class="guide-info-title display-block">알뜰주유소<span class="sub">(50~60/L 할인)</span></strong>
+													</span>
+												</label>
+											</div>
+										</div>
+										<!-- //2022.08.12 : mod : 이미지 반영 작업 -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 쇼핑서비스(5~10%할인) -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-my-service');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

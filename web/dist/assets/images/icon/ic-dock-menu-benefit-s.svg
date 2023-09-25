@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_18220" data-name="사각형 18220" width="28" height="28" transform="translate(93 286)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.192" y1="0.901" x2="0.858" y2="0.138" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00a49d"/>
+      <stop offset="1" stop-color="#00a49d"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.175" y1="0.86" x2="0.89" y2="0.066" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#54c3be" stop-opacity="0.502"/>
+      <stop offset="1" stop-color="#d8f3f2" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="사각형_7232" x="8.5" y="6.498" width="4.5" height="22" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-color="#008882" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_7232-2" x="0" y="17.25" width="8.5" height="4.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-2"/>
+      <feFlood flood-color="#008882" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_7232-3" x="13" y="17.25" width="9" height="4.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-3"/>
+      <feFlood flood-color="#008882" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="tab_ic_02_s" transform="translate(-93 -286)">
+    <g id="마스크_그룹_12623" data-name="마스크 그룹 12623" clip-path="url(#clip-path)">
+      <rect id="사각형_7865" data-name="사각형 7865" width="28" height="28" transform="translate(94 286)" fill="none"/>
+      <rect id="사각형_17982" data-name="사각형 17982" width="20" height="20" rx="5" transform="translate(104 286.5) rotate(30)" fill="url(#linear-gradient)"/>
+      <g id="패스_13872" data-name="패스 13872" transform="translate(94 293.5)" fill="url(#linear-gradient-2)">
+        <path d="M5,0H15a5,5,0,0,1,5,5V15a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V5A5,5,0,0,1,5,0Z" stroke="none"/>
+        <path d="M 5 0.5 C 2.51869010925293 0.5 0.5 2.51869010925293 0.5 5 L 0.5 15 C 0.5 17.48130989074707 2.51869010925293 19.5 5 19.5 L 15 19.5 C 17.48130989074707 19.5 19.5 17.48130989074707 19.5 15 L 19.5 5 C 19.5 2.51869010925293 17.48130989074707 0.5 15 0.5 L 5 0.5 M 5 0 L 15 0 C 17.76141929626465 0 20 2.238580703735352 20 5 L 20 15 C 20 17.76141929626465 17.76141929626465 20 15 20 L 5 20 C 2.238580703735352 20 0 17.76141929626465 0 15 L 0 5 C 0 2.238580703735352 2.238580703735352 0 5 0 Z" stroke="none" fill="rgba(255,255,255,0.2)"/>
+      </g>
+      <g id="그룹_14684" data-name="그룹 14684" transform="translate(-121.025 -2900)">
+        <g transform="matrix(1, 0, 0, 1, 214.03, 3186)" filter="url(#사각형_7232)">
+          <path id="사각형_7232-4" data-name="사각형_7232" d="M0,0H1.5V19H0Z" transform="translate(10 8)" fill="#fff"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 214.03, 3186)" filter="url(#사각형_7232-2)">
+          <path id="사각형_7232-5" data-name="사각형_7232" d="M0,0H1.5V5.5H0Z" transform="translate(1.5 19.25) rotate(-90)" fill="#fff"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 214.03, 3186)" filter="url(#사각형_7232-3)">
+          <path id="사각형_7232-6" data-name="사각형_7232" d="M0,0H1.5V6H0Z" transform="translate(14.5 19.25) rotate(-90)" fill="#fff"/>
+        </g>
+        <g id="패스_3185" transform="translate(-0.809 5.695)">
+          <path id="패스_13862" data-name="패스 13862" d="M2.25,7A2.293,2.293,0,0,0,4.5,4.667C4.5,1.045,2.25,0,2.25,0S0,1.045,0,4.667A2.293,2.293,0,0,0,2.25,7Z" transform="matrix(-0.643, 0.766, -0.766, -0.643, 227.089, 3198.553)" fill="none"/>
+          <path id="패스_13863" data-name="패스 13863" d="M2.25,5.5a.71.71,0,0,0,.511-.225A.868.868,0,0,0,3,4.667a4.434,4.434,0,0,0-.75-2.693A4.494,4.494,0,0,0,1.5,4.667a.8.8,0,0,0,.75.833m0,1.5A2.293,2.293,0,0,1,0,4.667C0,1.045,2.25,0,2.25,0S4.5,1.045,4.5,4.667A2.293,2.293,0,0,1,2.25,7Z" transform="matrix(-0.643, 0.766, -0.766, -0.643, 227.339, 3198.553)" fill="#fff"/>
+        </g>
+        <g id="패스_3186" transform="translate(0.064 5.695)">
+          <path id="패스_13864" data-name="패스 13864" d="M2.25,0A2.293,2.293,0,0,1,4.5,2.333C4.5,5.955,2.25,7,2.25,7S0,5.955,0,2.333A2.293,2.293,0,0,1,2.25,0Z" transform="matrix(0.643, 0.766, -0.766, 0.643, 228.324, 3194.053)" fill="none"/>
+          <path id="패스_13865" data-name="패스 13865" d="M2.25,1.5a.8.8,0,0,0-.75.833,4.423,4.423,0,0,0,.75,2.692A4.423,4.423,0,0,0,3,2.333a.867.867,0,0,0-.239-.608A.712.712,0,0,0,2.25,1.5m0-1.5A2.293,2.293,0,0,1,4.5,2.333C4.5,5.955,2.25,7,2.25,7S0,5.955,0,2.333A2.293,2.293,0,0,1,2.25,0Z" transform="matrix(0.643, 0.766, -0.766, 0.643, 228.324, 3194.053)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

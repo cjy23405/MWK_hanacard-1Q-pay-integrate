@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">페이플래너 예상하기</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-tab type-nav">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">리볼빙</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">분할납부</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">장기카드대출</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">단기카드대출</a>
+								</li>
+							</ul>
+						</div>
+
+						<h2 class="for-a11y">분할납부</h2>
+
+						<p class="page-title margin-bottom-none">“일시불을 할부로 바꾸고 싶어요.”</p>
+
+						<div class="page-info margin-top-2">
+							<p class="page-info-text">분할납부</p>
+						</div>
+
+						<div class="form-detail margin-top-35">
+							<dl class="form-detail-list">
+								<div class="form-detail-item">
+									<dt class="form-detail-title">분할납부 가능금액</dt>
+									<dd class="form-detail-group">
+										<div>
+											<span class="color-primary">5,800,000</span> 원
+											<div class="default-text color-blur margin-top-2">2021.01.01 기준</div>
+										</div>
+									</dd>
+								</div>
+							</dl>
+						</div>
+
+						<div class="page-section-group type-line">
+							<div class="form-detail">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">분할상환기간</dt>
+										<dd class="form-detail-group"><span class="color-primary" id="repaymentPeriod1-1"></span>개월</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="ui-rangeslider margin-top-50" data-rangeslider-watch="#repaymentPeriod1-1, #repaymentPeriod1-2">
+								<input type="range" min="2" max="12" value="3" title="분할상환기간(개월)" />
+								<div class="chart-bubble" aria-hidden="true" inert>
+									<div class="chart-bubble-text"><span id="repaymentPeriod1-2"></span>개월</div>
+								</div>
+								<div class="ui-rangeslider-gradation" aria-hidden="true" inert>
+									<div class="ui-rangeslider-gradation-item">
+										<div class="ui-rangeslider-gradation-item-text">2개월</div>
+									</div>
+									<div class="ui-rangeslider-gradation-item">
+										<div class="ui-rangeslider-gradation-item-text">12개월</div>
+									</div>
+								</div>
+							</div>
+
+							<p class="ui-notice">일시불→할부(분할납부) 전환 가능 대상 기준입니다.</p>
+							<p class="ui-notice">건별 분할납부 가능내역은 [건별신청] 버튼을 눌러 확인해 보세요.</p>
+							<p class="ui-notice">서비스 이용 전 이용안내를 꼭 확인해 주세요.</p>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">하나카드가 정한 기준에 따라 일부 이용건은 일괄 전환 신청건에서 제외됩니다. 이점 양해해주시기 바랍니다.</li>
+										<li class="info-item">일부결제금액이월약정(리볼빙) 일시불 매출은 일괄 전환신청이 불가하나, 건별 전환신청은 가능합니다.</li>
+										<li class="info-item">
+											일시불 매출을 분할납부 서비스로 전환하실 경우 회원님의 일반 할부수수료와 동일한 이용수수료가 부과되며, 이 경우 할부 철회권이나 항변권의 대상이 되지 않습니다.
+										</li>
+										<li class="info-item">
+											이용 구분/가맹점 업종별로 최대 할부 개월수가 상이하여 원하시는 할부개월수로 변경이 불가할 수 있습니다. (일시불 매출은 최대 12개월까지만 분할납부 가능합니다.)
+										</li>
+										<li class="info-item">일괄 신청 후, 전환 완료까지 약 5분 정도 시간이 소요됩니다.</li>
+										<li class="info-item">일괄 신청 후, 취소를 원하실 경우 건별 취소만 가능하오니 이용에 참고 부탁드립니다. 취소는 마이페이지 > 이용금액결제 > 분할납부서비스에서 신청 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">결과보기</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

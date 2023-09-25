@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">택배팩</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<h2 class="page-title">
+								월 <span class="color-primary">2,900</span> 원으로<br />
+								편의점 택배 무제한 할인
+							</h2>
+							<ul class="guide-info-list">
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">기준요금 결제로<br />무제한 택배</strong>
+									</div>
+									<div class="benefit-icon type-10"></div>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">편의점, 택배<br />1천원 할인</strong>
+									</div>
+									<div class="benefit-icon type-11"></div>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">연 최대 500만원<br />손실보상</strong>
+									</div>
+									<div class="benefit-icon type-12"></div>
+								</li>
+							</ul>
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<button type="button" class="ui-button ui-basic-button type-primary">신청하기</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-secondary">조회/해지</button>
+									</li>
+								</ul>
+							</div>
+							<div class="accordion-list margin-top-35 js-ui-accordion" data-once="true">
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">편의점 택배 무제한 이용</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">GS25 편의점 택배 무제한 이용</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph font-weight-regular">1건당 기준 요금만 결제하면 무제한 할인 요금 이용<br />* 500g이하 2,700원/ 500g~5kg 3,290원/ 5kg~10kg 4,500원</p>
+													<p class="paragraph margin-top-10">회원 전용 페이지에서 예약 및 결제후 가까운 GS25 편의점에 방문하여 무인택배기에 승인번호(12자리)를 입력하고 송장을 출력하셔서 택배 접수</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">편의점 할인&택배 할인권</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">GS25 편의점 할인권 1천원</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">매월 1천원 쿠폰 제공(매장에서 직접 사용)<br />* 전국 매장(단, 특수 점포/ 일부 상품 제외)</p>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">GS25 택배 예약 할인권 1천원</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<p class="paragraph">회원전용 페이지 쿠폰 입력 후 편의점 택배 이용</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">구매물품 손실 보상</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-contents">
+													<p class="paragraph">
+														‘회원’ 명의 하나카드로 구매한 물품이 구매일로부터 90일 이내에 도난, 파손당한 경우 최대 100만원, 연간 최대 500만원까지 보상해 드리는 서비스 입니다. (분실 및 일부 품목 제외)
+													</p>
+													<div class="info-table-area">
+														<table class="info-table type-tbody-heading">
+															<!-- 2022.05.04 : mod : 텍스트 수정 -->
+															<caption class="for-a11y">
+																보상기간, 보상한도, 보상제외로 구성된 구매물품 손실 보상 안내 표입니다.
+															</caption>
+															<colgroup>
+																<col class="info-table-heading-width" />
+																<col />
+															</colgroup>
+															<tbody>
+																<tr>
+																	<th scope="row">보상기간</th>
+																	<td>택배팩 서비스 개시일(가입 익일 0시)로부터 90일 이후에 발생한 사고에 대해 보상</td>
+																</tr>
+																<tr>
+																	<th scope="row">보상한도</th>
+																	<td>
+																		최대 100만원/연간 최대 500원<br />
+																		<ul class="info-list margin-top-10">
+																			<li class="info-item type-presa type-medium font-weight-regular color-blur">제품구매카드 영수증, 도난신고서 등 필수</li>
+																		</ul>
+																	</td>
+																</tr>
+																<tr>
+																	<th scope="row">보상제외</th>
+																	<td>
+																		<ul class="info-list type-inherit">
+																			<li class="info-item type-indent">동력운송수단과 동령장지등 동, 식물 소모품 및 소비재</li>
+																			<li class="info-item type-indent">중고품, 골동품, 수집품, 재활용품 등 부동산, 가구, 휴대폰, 보석</li>
+																			<li class="info-item type-indent">지진, 해일 등 천재지변으로 인한 손해</li>
+																		</ul>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

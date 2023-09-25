@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-living-fee-loan">제휴사에서 신청 (보험)</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 제휴사에서 신청 (보험) -->
+			<div class="layer-wrap layer-wrap layer-wrap--full layer-wrap--confirm" data-layer="layer-living-fee-loan">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">보험</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section-group margin-top-minus-5">
+									<div class="section-title type-medium">
+										<h3 class="title">서비스 안내</h3>
+									</div>
+									<div class="section-contents-info">매 월 납부하는 보험료를 하나카드로 간편하게 자동 납부하는 서비스입니다.</div>
+								</div>
+
+								<div class="page-section-group margin-top-25">
+									<div class="section-title type-medium">
+										<h3 class="title">자동납부 신청 및 해지</h3>
+									</div>
+									<div class="phone-company-list margin-top-15">
+										<div class="phone-company-item">
+											<div class="phone-company-left">
+												<!-- 2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-logo type-cigna"></div>
+												<!-- //2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-title">라이나생명</div>
+											</div>
+											<div class="phone-company-right">
+												<a href="tel:1599-0058" class="ui-tel-link color-blur">1599-0058</a>
+											</div>
+										</div>
+										<div class="phone-company-item">
+											<div class="phone-company-left">
+												<!-- 2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-logo type-chubb"></div>
+												<!-- //2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-title">에이스보험</div>
+											</div>
+											<div class="phone-company-right">
+												<a href="tel:1566-5800" class="ui-tel-link color-blur">1566-5800</a>
+											</div>
+										</div>
+										<div class="phone-company-item">
+											<div class="phone-company-left">
+												<!-- 2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-logo type-aig"></div>
+												<!-- //2022.02.17 : mod : 로고 영역 변경 -->
+												<div class="phone-company-title">AIG 손해보험</div>
+											</div>
+											<div class="phone-company-right">
+												<a href="tel:1544-2792" class="ui-tel-link color-blur">1544-2792</a>
+											</div>
+										</div>
+									</div>
+									<div class="ui-notice">해당 보험사 고객센터를 통해 자동납부 신청이 가능한 서비스로 카드자동이체는 보험사 사정에 따라 변경될 수 있습니다.</div>
+								</div>
+
+								<div class="use-notice-area js-ui-accordion">
+									<div class="use-notice-item js-ui-accordion__item">
+										<button type="button" class="use-notice-opener js-ui-accordion__opener">
+											이용안내
+											<span class="for-a11y">
+												상세 내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+										<div class="use-notice-contents js-ui-accordion__layer">
+											<div class="info-list">
+												<p class="info-item">하나BC, 법인카드, 체크카드, 기프트카드는 신청 불가</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 제휴사에서 신청 (보험) -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-living-fee-loan');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

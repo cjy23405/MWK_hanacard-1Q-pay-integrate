@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">출국 전 이용방법</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">출국 전 체크 사항 확인</h2>
+						<h3 class="basic-text margin-top-35">본인카드 소지</h3>
+						<ul class="info-list margin-top-10">
+							<li class="info-item type-medium color-basic">신용카드는 본인만이 사용할 수 있습니다. 부모는 물론 배우자의 카드도 사용할 수 없습니다.</li>
+							<li class="info-item type-medium color-basic">
+								다른 사람의 카드를 사용한 후 카드의 분실, 도난 또는 가맹점의 허위청구로 인한 문제가 발생할 경우 보호를 받지 못할 뿐 아니라 카드 명의인에게도 피해가 됩니다.
+							</li>
+						</ul>
+						<h3 class="basic-text margin-top-35">카드 영문명 확인</h3>
+						<ul class="info-list margin-top-10">
+							<li class="info-item type-medium color-basic">신용카드 앞면의 영문명과 여권 상의 영문명이 일치하는지 확인하여 주시기 바랍니다.</li>
+							<li class="info-item type-medium color-basic">
+								영문명이 일치하지 않은 경우 해외여행 시 문제가 될 수 있으며, 일부 가맹점으로부터 거부 당할 수 있으니, 확인 후 일치하지 않을 경우 카드를 재발급 하시기 바랍니다.
+							</li>
+						</ul>
+						<h3 class="basic-text margin-top-35">카드 뒷면에 서명 기재</h3>
+						<ul class="info-list margin-top-10">
+							<li class="info-item type-medium color-basic">
+								신용카드 뒷면의 서명란에 서명이 기재되어 있는지 확인하십시오. <br />서명이 없는 경우 가맹점에서 카드를 거부할 수도 있으며 또한 카드의 분실/도난으로 인한 피해 발생 시 피해보상을 받으실
+								수 없으니 필히 뒷면 서명란에 서명하여 주시기 바랍니다.
+							</li>
+						</ul>
+						<h3 class="basic-text margin-top-35">카드 유효기간 확인</h3>
+						<ul class="info-list margin-top-10">
+							<li class="info-item type-medium color-basic">
+								유효기간이 얼마 남지 않은 카드로 장기간의 해외체재가 예상되실 경우 하나카드 고객센터에 연락하시면 유효기간이 끝나기 전애 유효기간 연장 재발급이 가능합니다. (단, 해당 카드가 발급이
+								중단된 상품일 경우 유효기간 연장이 불가할 수 있습니다.)
+							</li>
+						</ul>
+						<h3 class="basic-text margin-top-35">비밀번호 확인</h3>
+						<ul class="info-list margin-top-10">
+							<li class="info-item type-medium color-basic">
+								해외에서 ATM 단기카드대출(현금서비스)를 사용하실 경우에 비밀번호를 입력하셔야 합니다.<br />
+								신용카드 비밀번호를 미리 확인하셔서 비밀번호 입력 오류로 카드가 정지되는 일이 없도록 유의하시기 바랍니다.
+							</li>
+						</ul>
+						<h3 class="basic-text margin-top-35">해외 이용한도액 체크</h3>
+						<ul class="info-list margin-top-10">
+							<li class="info-item type-medium color-basic">회원님의 해외이용가능 한도를 미리 확인하시고 출국하시기 바랍니다.</li>
+							<li class="info-item type-medium color-basic">회원님이 해외에서 사용하실 수 있는 월간 해외 이용한도는 카드 수령 시 안내문 또는 매월 발송되는 사용대금명세서에 기재되어 있습니다.</li>
+							<li class="info-item type-medium color-basic">해외이용한도는 국내한도와 통합하여 관리되므로 국내한도가 모두 소진될 경우 잔여한도부족으로 이용하실 수 없습니다.</li>
+							<li class="info-item type-medium color-basic">출국 전 항공권, 면세점 사용 등으로 고액을 사용하신 경우 해외한도가 부족할 수 있으니 주의하시기 바랍니다.</li>
+							<li class="info-item type-medium color-basic">한도증액이 필요하신 경우 하나카드 고객센터를 통해 증액가능 여부를 문의하시기 바랍니다.</li>
+						</ul>
+						<h3 class="basic-text margin-top-35">대체 결제수단 준비</h3>
+						<ul class="info-list margin-top-10">
+							<li class="info-item type-medium color-basic">
+								해외에서 분실, 도난, 위/변조카드에 의한 피해사례가 증가함에 따라 당사에서는 국제승인에 대해 FDS (Fraud Detection System)에 의한 모니터링을 강화하고 있습니다.
+							</li>
+							<li class="info-item type-medium color-basic">
+								부정사용이 의심되는 거래에 대해 거래승인 제한 및 회원확인요청 등을 통해 피해를 예방하도록 노력하고 있습니다.<br />
+								따라서 해외이용 시 가급적 대체결제수단(여분의 신용카드)를 소지하시도록 권고드립니다.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">자동차보험</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="page-section">
+							<div class="page-section-group">
+								<img src="./assets/images/contents/logo-hana-insurance.png" alt="하나손해보험" class="insurance-logo-img" />
+								<h2 class="page-title margin-top-10">하나 에듀카(다이렉트)자동차보험</h2>
+								<div class="page-info">
+									<p class="page-info-text">
+										30만원이상 결제 시 3만원 캐시백!<br />
+										하나 신용/체크카드 결제고객<br />
+										(법인/기프트/선불카드 제외)
+									</p>
+								</div>
+							</div>
+
+							<div class="page-section-group">
+								<ul class="guide-info-list type-wide">
+									<li class="guide-info-item">
+										<div class="guide-info-block">
+											<strong class="guide-info-title">마일리지 선(先) 할인!</strong>
+											<div class="guide-info-text">
+												보험 가입 즉시 18%, 적게 타면 추가 22% 할인<br />
+												실제 주행거리 2,000km이하 시 최대 40% 할인
+											</div>
+										</div>
+										<!-- 2022.03.30 : mod : type-icon 클래스 수정 -->
+										<span class="guide-info-icon type-icon-99"></span>
+									</li>
+									<li class="guide-info-item">
+										<div class="guide-info-block">
+											<strong class="guide-info-title">블랙박스 할인!</strong>
+											<div class="guide-info-text">
+												블랙박스 사진 올리면 보험료의 4% 추가 할인<br />
+												(승용자동차 한정, 블랙박스 할인 특약 가입 시)
+											</div>
+										</div>
+										<span class="guide-info-icon type-icon-26"></span>
+									</li>
+									<li class="guide-info-item">
+										<div class="guide-info-block">
+											<strong class="guide-info-title">자녀 할인!</strong>
+											<div class="guide-info-text">
+												만 7세 이하의 어린 자녀가 있다면 자녀 할인 특약 5% 추가할인<br />
+												(지속형특약 한정, 자녀 할인 특약가입 시)
+											</div>
+										</div>
+										<span class="guide-info-icon type-icon-27"></span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="page-section-group">
+								<!-- 2022.03.30 : mod : h3에 ui-notice, color-basic 클래스 추가 -->
+								<h3 class="ui-notice color-basic basic-text">꼭 확인해 주세요.</h3>
+								<dl class="use-notice-group margin-top-10">
+									<dt class="group-title">안내사항</dt>
+									<dd class="group-contents">
+										<div class="default-text font-weight-light">
+											<ul class="info-list type-dafult type-inherit type-outside">
+												<li class="info-item">보험계약 체결 전 상품설명서 및 약관을 반드시 읽어보시길 바랍니다.</li>
+												<li class="info-item">
+													보험계약자가 기존 보험계약을 해지하고 새로운 보험계약을 체결하는 경우, 보험인수가 거절되거나 보험료가 인상될 수 있으며, 보장내용 (면책기간 재적용 등)이 달라질 수 있습니다.
+												</li>
+												<li class="info-item">지급한도 및 면책사항 등에 따라 보험금 지급이 제한될 수 있습니다.</li>
+												<li class="info-item">
+													이 보험계약은 예금자보호법에 따라 예금보험공사가 보호하되, 보호한도는 본 보험회사에 있는 귀하의 모든 예금보험대상 금융상품의 해약환급금(또는 만기 시 보험금이나 사고보험금)에
+													기타지급금을 합하여 1인당 ‘최고 5천만원’이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다. 다만, 보험계약자 및 보험료 납부자가 법인인 보험계약은 예금자보호법에 따라
+													예금보험공사가 보호하지 않습니다.
+												</li>
+												<li class="info-item">하나손해보험㈜는 해당 상품에 대해 충분히 설명할 의무가 있으며, 가입자는 가입에 앞서 이에 대한 충분한 설명을 받으시길 바랍니다.</li>
+												<li class="info-item type-indent type-side-no-padding">준법감시인 확인필 제2021-204호<br />(2021.06.28~2022.06.27)</li>
+											</ul>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">보험 가입</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

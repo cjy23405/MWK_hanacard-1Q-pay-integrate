@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-card-comparison">카드 비교하기</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 카드 비교하기 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-card-comparison">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">카드 비교하기</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<!-- 2022.02.17 : mod : 구조 변경 -->
+								<div class="info-cards type-regular type-tile">
+									<div class="info-cards-inner">
+										<ul class="info-cards-list">
+											<li class="info-cards-item">
+												<div class="info-cards-link">
+													<!-- DD : 이미지 없을 때
+													<div class="card-image">
+														<div class="card-image-inner"></div>
+													</div>
+													-->
+
+													<!-- DD : 이미지 에러
+													<div class="card-image">
+														<div class="card-image-inner">
+															<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+													-->
+
+													<!-- DD : 이미지 있을 때 -->
+													<div class="card-image">
+														<div class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+
+													<div class="info-cards-explain">
+														<div class="info-cards-title type-multi-ellipsis align-center">멀티카드</div>
+													</div>
+
+													<div class="ui-buttons type-center margin-top-15">
+														<ul class="ui-buttons-list">
+															<li class="ui-buttons-item">
+																<a href="" class="ui-basic-button type-gray type-tiny">상세보기</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+											<li class="info-cards-item">
+												<div class="info-cards-link">
+													<div class="card-image">
+														<div class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</div>
+													</div>
+
+													<div class="info-cards-explain">
+														<div class="info-cards-title type-multi-ellipsis align-center">태국의 기쁨</div>
+													</div>
+
+													<div class="ui-buttons type-center margin-top-15">
+														<ul class="ui-buttons-list">
+															<li class="ui-buttons-item">
+																<a href="" class="ui-basic-button type-gray type-tiny">상세보기</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //2022.02.17 : mod : 구조 변경 -->
+								<div class="card-comparison">
+									<div class="card-comparison-section">
+										<h3 class="card-comparison-title">브랜드</h3>
+										<div class="card-comparison-items">
+											<div class="card-comparison-item">
+												<h4 class="for-a11y">멀티카드 브랜드</h4>
+												<ul class="info-list type-outside">
+													<li class="info-item">VISA</li>
+													<li class="info-item">국내전용</li>
+												</ul>
+											</div>
+											<div class="card-comparison-item">
+												<h4 class="for-a11y">태국의 기쁨 브랜드</h4>
+												<ul class="info-list type-outside">
+													<li class="info-item">VISA</li>
+													<li class="info-item">mastercard</li>
+													<li class="info-item">국내전용</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="card-comparison-section">
+										<h3 class="card-comparison-title">연회비</h3>
+										<div class="card-comparison-items">
+											<div class="card-comparison-item">
+												<h4 class="for-a11y">멀티카드 연회비</h4>
+												<ul class="info-list type-outside">
+													<li class="info-item">
+														국내전용(local)<br />
+														15,000원
+													</li>
+													<li class="info-item">
+														국내외겸용<br />
+														mastercard<br />
+														15,000원
+													</li>
+													<li class="info-item">
+														국내외겸용<br />
+														VISA<br />
+														17,000원
+													</li>
+												</ul>
+											</div>
+											<div class="card-comparison-item">
+												<h4 class="for-a11y">태국의 기쁨 연회비</h4>
+												<ul class="info-list type-outside">
+													<li class="info-item">
+														국내전용(local)<br />
+														28,000원
+													</li>
+													<li class="info-item">
+														국내외전용<br />
+														30,000원
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="card-comparison-section">
+										<h3 class="card-comparison-title">기준실적</h3>
+										<div class="card-comparison-items">
+											<div class="card-comparison-item">
+												<h4 class="for-a11y">멀티카드 기준실적</h4>
+												<ul class="info-list type-outside">
+													<li class="info-item">이용금액 30만원 이상</li>
+													<li class="info-item">이용금액 60/100만원 이상 시 추가 혜택</li>
+												</ul>
+											</div>
+											<div class="card-comparison-item">
+												<h4 class="for-a11y">태국의 기쁨 기준실적</h4>
+												<ul class="info-list type-outside">
+													<li class="info-item">이용금액 30만원 이상</li>
+													<li class="info-item">이용금액 60/100만원 이상 시 추가 혜택</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="card-comparison-section">
+										<h3 class="card-comparison-title">혜택제공방법</h3>
+										<div class="card-comparison-items">
+											<div class="card-comparison-item">
+												<h4 class="for-a11y">멀티카드 혜택제공방법</h4>
+												<ul class="info-list">
+													<li class="info-item">적립</li>
+												</ul>
+											</div>
+											<div class="card-comparison-item">
+												<h4 class="for-a11y">태국의 기쁨 혜택제공방법</h4>
+												<ul class="info-list type-outside">
+													<li class="info-item">적립</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="card-comparison-section">
+										<h3 class="card-comparison-title">혜택제공방법</h3>
+										<div class="card-comparison-items">
+											<div class="card-comparison-item">
+												<h4 class="for-a11y">멀티카드 혜택제공방법</h4>
+												<ul class="info-list type-outside">
+													<li class="info-item">요식 10% 적립</li>
+													<li class="info-item">레저 7% 적립</li>
+													<li class="info-item">쇼핑 5% 적립</li>
+													<li class="info-item">대중교통 7% 적립</li>
+													<li class="info-item">통신 7% 적립</li>
+												</ul>
+											</div>
+											<div class="card-comparison-item">
+												<h4 class="for-a11y">태국의 기쁨 혜택제공방법</h4>
+												<ul class="info-list type-outside">
+													<li class="info-item">통신 10% 적립</li>
+													<li class="info-item">뷰티 7% 적립</li>
+													<li class="info-item">레저 5% 적립</li>
+													<li class="info-item">요식 7% 적립</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 카드 비교하기 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-card-comparison');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

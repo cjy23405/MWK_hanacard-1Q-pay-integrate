@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">고객센터 전화번호</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							ARS 전화로<br />
+							무엇이든 상담하세요.
+						</h2>
+						<div class="page-info">
+							<p class="page-info-text">상담시간 : 평일 9:00 ~ 18:00</p>
+						</div>
+
+						<!-- 2021.12.08 수정 -->
+						<ul class="service-info-list">
+							<li class="service-info-item">
+								<h3 class="service-info-title">고객센터 대표전화</h3>
+								<button type="button" class="service-info-button" data-layer-open="layer-ars-main">빠른 번호 안내</button>
+								<a href="tel:1800-1111" class="ui-basic-button type-primary type-small type-icon-tel" role="button">1800-1111</a>
+							</li>
+							<li class="service-info-item">
+								<h3 class="service-info-title">금융신청</h3>
+								<div class="service-info-text">
+									단기&middot;장기카드대출, 일부 결제 금액 이월약정 등<br />
+									(즉시 결제는 평일 8:00 ~ 20:00 이용 가능)
+								</div>
+								<button type="button" class="service-info-button" data-layer-open="layer-ars-banking">빠른 번호 안내</button>
+								<a href="tel:1800-1000" class="ui-basic-button type-gray type-small type-icon-tel" role="button">1800-1000</a>
+							</li>
+							<li class="service-info-item">
+								<h3 class="service-info-title">승인내역조회</h3>
+								<div class="service-info-text">
+									결제내역 조회, 이용한도, 승인 취소 등<br />
+									(승인내역조회 상담만 365일 24시간)
+								</div>
+								<button type="button" class="service-info-button" data-layer-open="layer-ars-approval">빠른 번호 안내</button>
+								<a href="tel:1800-2000" class="ui-basic-button type-gray type-small type-icon-tel" role="button">1800-2000</a>
+							</li>
+							<li class="service-info-item">
+								<h3 class="service-info-title">카드신청</h3>
+								<div class="service-info-text">카드신청을 위한 상담</div>
+								<a href="tel:1800-3000" class="ui-basic-button type-gray type-small type-icon-tel" role="button">1800-3000</a>
+							</li>
+							<li class="service-info-item">
+								<h3 class="service-info-title">해외상담</h3>
+								<a href="tel:82-1800-1111" class="ui-basic-button type-gray type-small type-icon-tel" role="button">82-1800-1111</a>
+								<!-- 2021.12.15 ui-tel-link 클래스 수정 -->
+								<div class="service-info-text">해외서비스이용, 해외결제 등 연결이 안되실 경우<a href="tel:82-2-3489-1000" class="ui-tel-link">82-2-3489-1000</a></div>
+							</li>
+							<li class="service-info-item">
+								<h3 class="service-info-title">도난&middot;분실 및 해지</h3>
+								<a href="tel:1599-1133" class="ui-basic-button type-gray type-small type-icon-tel" role="button">1599-1133</a>
+								<!-- 2021.12.15 ui-tel-link 클래스 수정 -->
+								<div class="service-info-text">해외 도난&middot;분실 및<br />해지일 경우<a href="tel:82-2-1599-1133" class="ui-tel-link">82-2-1599-1133</a></div>
+							</li>
+						</ul>
+						<!-- //2021.12.08 수정 -->
+
+						<div class="use-notice-area">
+							<div class="use-notice-item">
+								<h3 class="use-notice-title">이용안내</h3>
+								<div class="use-notice-contents">
+									<ul class="info-list">
+										<li class="info-item">ARS 상담서비스는 유료입니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 고객센터 대표전화 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-ars-main">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">고객센터 대표전화</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<ul class="ars-number-list">
+										<li class="has-numbering">
+											<span class="ui-numbering">1</span>개인회원
+											<ul>
+												<li class="has-numbering type-sub"><span class="ui-numbering">1</span>이용한도 조회</li>
+												<li class="has-numbering type-sub"><span class="ui-numbering">2</span>결제 대금 및 입금관련문의</li>
+												<li class="has-numbering type-sub"><span class="ui-numbering">3</span>금융서비스</li>
+												<li class="has-numbering type-sub"><span class="ui-numbering">4</span>해외사용 관련 안내</li>
+												<li class="has-numbering type-sub"><span class="ui-numbering">5</span>모바일 서비스, 포인트 안내</li>
+												<li class="has-numbering type-sub"><span class="ui-numbering">6</span>상품서비스제공실적조회</li>
+												<li class="has-numbering type-sub"><span class="ui-numbering">7</span>카드 재발급</li>
+												<li class="has-numbering type-sub"><span class="ui-numbering">8</span>카드해지</li>
+												<li class="has-numbering type-sub"><span class="ui-numbering">0</span>상담원 연결</li>
+											</ul>
+										</li>
+										<li class="has-numbering"><span class="ui-numbering">8</span>분실신고 및 금융사고신고</li>
+										<li class="has-numbering"><span class="ui-numbering">9</span>사용등록</li>
+										<li class="has-numbering"><span class="ui-numbering">0</span>상담원 연결</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="tel:1800-1111" class="ui-basic-button type-primary type-icon-tel" role="button">1800-1111</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 고객센터 대표전화 -->
+
+			<!-- layer: 금융신청 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-ars-banking">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">금융신청</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<ul class="ars-number-list">
+										<li class="has-numbering"><span class="ui-numbering">1</span>단기카드대출</li>
+										<li class="has-numbering"><span class="ui-numbering">2</span>장기카드 대출</li>
+										<li class="has-numbering"><span class="ui-numbering">3</span>대출이자 예스포인트 상환 신청</li>
+										<li class="has-numbering"><span class="ui-numbering">4</span>일부결제금액 이월약정</li>
+										<li class="has-numbering"><span class="ui-numbering">0</span>상담원연결</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="tel:1800-1000" class="ui-basic-button type-primary type-icon-tel" role="button">1800-1000</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 금융신청 -->
+
+			<!-- layer: 승인내역조회 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-ars-approval">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">승인내역조회</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<ul class="ars-number-list">
+										<li class="has-numbering"><span class="ui-numbering">1</span>분실신고 및 금융사고 신고</li>
+										<li class="has-numbering"><span class="ui-numbering">2</span>가맹점 거래승인</li>
+										<li class="has-numbering"><span class="ui-numbering">3</span>가맹점 승인취소</li>
+										<li class="has-numbering"><span class="ui-numbering">4</span>이용한도조회</li>
+										<li class="has-numbering"><span class="ui-numbering">5</span>승인내역조회</li>
+										<li class="has-numbering"><span class="ui-numbering">6</span>카드사용이 불가</li>
+										<li class="has-numbering"><span class="ui-numbering">7</span>일반상담 ARS연결</li>
+										<li class="has-numbering"><span class="ui-numbering">0</span>상담원연결</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="tel:1800-2000" class="ui-basic-button type-primary type-icon-tel" role="button">1800-2000</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 승인내역조회 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

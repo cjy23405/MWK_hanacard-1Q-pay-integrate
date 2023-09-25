@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12">
+    <defs>
+        <style>
+            .cls-2{fill:#707070}
+        </style>
+    </defs>
+    <g id="ic_clock" transform="translate(8416 726)">
+        <g id="타원_767" data-name="타원 767" transform="translate(-8416 -726)" style="stroke:#707070;fill:none">
+            <circle cx="6" cy="6" r="6" style="stroke:none"/>
+            <circle cx="6" cy="6" r="5.5" style="fill:none"/>
+        </g>
+        <rect id="사각형_7091" data-name="사각형 7091" class="cls-2" width="4" height="1" rx=".5" transform="translate(-8413 -720)"/>
+        <rect id="사각형_7092" data-name="사각형 7092" class="cls-2" width="1" height="4" rx=".5" transform="translate(-8410 -723)"/>
+    </g>
+</svg>

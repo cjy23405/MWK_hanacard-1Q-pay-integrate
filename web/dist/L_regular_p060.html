@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">임대료</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title"><span class="title-step">STEP 1</span>납부정보를<br />입력해 주세요.</h2>
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title margin-bottom-10">
+									<strong class="title">카드선택</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block type-card">
+										<button type="button" class="ui-button ui-select" title="카드 선택">
+											<!-- DD : 이미지 없을 때
+											<span class="card-image"><span class="card-image-inner"></span></span>[본인123] 아멕스 아시아나클럽 카드
+											-->
+
+											<!-- 2022.04.27 : mod : 카드 이미지 alt값 변경 -->
+											<!-- DD : 이미지 에러
+											<span class="card-image"
+												><span class="card-image-inner"><img src="./assets/images/_dummy/card .png" alt="카드이름 넣어주세요." onerror="this.parentNode.className += ' is-error';" /></span></span
+											>[본인123] 아멕스 아시아나클럽 카드
+											-->
+
+											<!-- 2022.04.27 : mod : 카드 이미지 alt값 변경 -->
+											<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+											<!-- DD : 이미지 있을 때 -->
+											<span class="card-image"
+												><span class="card-image-inner"><img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" /></span></span
+											>[본인123] 아멕스 아시아나클럽 카드
+										</button>
+									</div>
+								</div>
+							</div>
+							<!-- [DD] 대상카드 없을 때 -->
+							<div class="form-item">
+								<div class="form-title margin-bottom-10">
+									<strong class="title">카드선택</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-select-block type-card">
+										<button type="button" class="ui-button ui-select color-blur-more" title="카드 선택">서비스 대상 카드가 없습니다.</button>
+									</div>
+								</div>
+							</div>
+							<!--// [DD] 대상카드 없을 때 -->
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">임대사업자 선택</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-radio-group type-panel">
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" checked />
+											<label for="radioPanel1-1" class="ui-label">
+												<span class="ui-label-text">LH공사</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" />
+											<label for="radioPanel1-2" class="ui-label">
+												<span class="ui-label-text">SH공사</span>
+											</label>
+										</div>
+										<div class="ui-radio-block type-box">
+											<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-3" />
+											<label for="radioPanel1-3" class="ui-label">
+												<span class="ui-label-text">JD공사</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">납부자번호(11자리)</strong>
+								</div>
+								<div class="form-group">
+									<div class="form-flex">
+										<div class="form-flex-cell type-flexible type-has-unit">
+											<div class="ui-input-block">
+												<input type="number" pattern="\d*" class="ui-input" title="납부자번호(11자리) 입력" placeholder="‘-’ 제외하고 입력" />
+											</div>
+										</div>
+										<div class="form-flex-cell">
+											<button type="button" class="ui-button ui-basic-button type-small type-gray">조회</button>
+										</div>
+									</div>
+								</div>
+								<p class="ui-notice">납부자번호는 임대료 고지서 또는 임대사업자 고객센터에서 확인 가능합니다.</p>
+								<div class="form-detail">
+									<div class="form-detail-block margin-top-15">
+										<dl class="form-detail-list type-text-default">
+											<div class="form-detail-item">
+												<dt class="form-detail-title">주소</dt>
+												<dd class="form-detail-group"><strong>인천 청라시 청라동 123-11</strong></dd>
+											</div>
+											<div class="form-detail-item">
+												<dt class="form-detail-title">납부마감일</dt>
+												<dd class="form-detail-group"><strong>31일</strong></dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-login">
+						<!-- 2021.11.02 텍스트 수정 -->
+						<h1 class="page-title">반갑습니다!</h1>
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">아이디</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block type-use-delete">
+										<!-- 2021.10.26 placeholder 수정 -->
+										<!-- 2022.04.27 : mod : title 값 수정 -->
+										<input type="text" class="ui-input" title="아이디 6~12자리 입력" placeholder="아이디 6~12자리 입력" required />
+										<button type="button" class="ui-button ui-input-delete">
+											<span class="for-a11y">입력 내용 지우기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-item">
+								<div class="form-title">
+									<strong class="title">비밀번호</strong>
+								</div>
+								<div class="form-group">
+									<div class="ui-input-block">
+										<!-- 2021.10.26 placeholder 수정 -->
+										<!-- 2022.04.27 : mod : title 값 수정 -->
+										<input type="password" class="ui-input" title="비밀번호 8~15자리 입력" placeholder="비밀번호 8~15자리 입력" required />
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="submit" class="ui-button ui-basic-button type-primary">로그인</button>
+									</li>
+								</ul>
+							</div>
+							<ul class="support-list">
+								<li class="support-item"><a href="" class="support-link">아이디&middot;비밀번호 찾기</a></li>
+								<li class="support-item"><a href="" class="support-link">회원가입</a></li>
+							</ul>
+						</div>
+
+						<div class="login-method">
+							<h2 class="login-method-title"><span class="inner">다른 방법으로 로그인</span></h2>
+							<ul class="login-method-list">
+								<li class="login-method-item type-app"><button type="button" class="ui-button login-method-button">원큐페이 앱 로그인</button></li>
+								<li class="login-method-item type-certificate">
+									<!-- 2022.07.22 : mod : title 추가 -->
+									<button type="button" class="ui-button login-method-button" title="새창열림">공동인증서 로그인</button>
+								</li>
+								<li class="login-method-item type-disposable">
+									<button type="button" class="ui-button login-method-button">일회용 로그인 (비회원용)</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

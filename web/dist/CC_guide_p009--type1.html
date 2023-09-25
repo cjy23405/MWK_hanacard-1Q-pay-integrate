@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">결제가 안될 때</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="basic-text">원큐페이 결제오류 해결방법</h2>
+						<p class="default-text font-weight-light margin-top-10">
+							무선 인터넷 신호가 약하거나 앱과 맞지 않은 휴대폰 설정 변경이 원인일 수 있으며, 아래와 같이 간단한 휴대폰 설정만으로 쉽게 해결이 가능합니다.
+						</p>
+
+						<!-- 2022.04.06 전반적인 이미지 적용작업 -->
+						<div class="page-section type-line">
+							<!-- 삼성전자 스마트폰 결제 안될 경우 -->
+							<div class="page-section-group">
+								<h2 class="basic-text">
+									삼성전자 스마트폰에서 모바일결제 시<br />
+									자동실행이 안되는 경우
+								</h2>
+								<div class="margin-top-15">
+									<div class="process-question">
+										<div class="process-num">1</div>
+										<div class="process-text">
+											백그라운드 데이터 사용 설정
+											<div class="sub">홈화면에서 앱스 > 설정 > 데이터사용 > 백그라운드 데이터 > 쇼핑몰 앱(ex.11번가)과 원큐페이 선택한 후 스위치를 눌러 설정합니다.</div>
+										</div>
+									</div>
+
+									<!-- 2022.04.27 : mod : alt값 변경 -->
+									<div class="margin-top-15">
+										<img src="./assets/images/contents/usage-guide/img-guide-payment-error-01.png" alt="홈화면에서 앱스 > 설정 아이콘을 선택합니다." class="image-only" />
+									</div>
+									<div class="margin-top-15">
+										<img src="./assets/images/contents/usage-guide/img-guide-payment-error-02.png" alt="어플리케이션 메뉴를 선택합니다." class="image-only" />
+									</div>
+									<div class="margin-top-15">
+										<img src="./assets/images/contents/usage-guide/img-guide-payment-error-03.png" alt="하나카드 앱를 선택합니다." class="image-only" />
+									</div>
+									<div class="margin-top-15">
+										<img src="./assets/images/contents/usage-guide/img-guide-payment-error-04.png" alt="배터리 메뉴를 선택합니다." class="image-only" />
+									</div>
+									<div class="margin-top-15">
+										<img src="./assets/images/contents/usage-guide/img-guide-payment-error-05.png" alt="'백그라운드에서 실행'을 선택합니다." class="image-only" />
+									</div>
+									<!--// 2022.04.27 : mod : alt값 변경 -->
+								</div>
+							</div>
+							<!-- //삼성전자 스마트폰 결제 안될 경우 -->
+
+							<!-- 안드로이드 스마트폰 결제 안될 경우 -->
+							<div class="page-section-group type-line">
+								<h2 class="basic-text">
+									안드로이드 스마트폰에서<br />
+									결제가 안되는 경우
+								</h2>
+								<div class="margin-top-15">
+									<div class="process-question">
+										<div class="process-num">1</div>
+										<div class="process-text">
+											앱 브라우저 캐시 삭제(갤럭시S21 기준)
+											<div class="sub">
+												<p class="color-secondary font-weight-medium margin-bottom-4">삼성 인터넷 브라우저</p>
+												홈화면에서 앱스 > 인터넷 > 더보기(우측상단) > 개인정보 보호 > 개인데이터 삭제 > 방문기록/캐시/쿠키 및 사이트 데이터 삭제를 체크 후 삭제합니다.
+											</div>
+											<!-- 2022.04.27 : mod : alt값 변경 -->
+											<div class="margin-top-15">
+												<img src="./assets/images/contents/usage-guide/img-guide-payment-error-06.png" alt="홈화면에서 앱스 > 인터넷을 선택합니다." class="image-only" />
+											</div>
+											<div class="margin-top-15">
+												<img src="./assets/images/contents/usage-guide/img-guide-payment-error-07.png" alt="우측상단에 더보기 버튼을 선택합니다." class="image-only" />
+											</div>
+											<div class="margin-top-15">
+												<img src="./assets/images/contents/usage-guide/img-guide-payment-error-08.png" alt="설정을 선택합니다." class="image-only" />
+											</div>
+											<div class="margin-top-15">
+												<img src="./assets/images/contents/usage-guide/img-guide-payment-error-09.png" alt="개인 데이터 메뉴를 선택합니다." class="image-only" />
+											</div>
+											<div class="margin-top-15">
+												<img src="./assets/images/contents/usage-guide/img-guide-payment-error-10.png" alt="인터넷 사용 기록 삭제를 선택합니다." class="image-only" />
+											</div>
+											<div class="margin-top-15">
+												<img
+													src="./assets/images/contents/usage-guide/img-guide-payment-error-11.png"
+													alt="방문기록, 쿠키 및 사이트 데이터, 캐시 이미지와 파일을 선택 후, '데이터 삭제' 버튼을 선택합니다."
+													class="image-only"
+												/>
+											</div>
+											<!--// 2022.04.27 : mod : alt값 변경 -->
+
+											<div class="sub margin-top-20">
+												<p class="color-secondary font-weight-medium margin-bottom-4">구글 크롬브라우저</p>
+												홈화면에서 앱스 > Chrome > 우측상단 (점 3개로 된 더보기 버튼) 클릭 > 개인정보 > 인터넷 사용기록 삭제 > 데이터삭제를 클릭합니다.
+											</div>
+
+											<!-- 2022.04.27 : mod : alt값 변경 -->
+											<div class="margin-top-15">
+												<img src="./assets/images/contents/usage-guide/img-guide-payment-error-12.png" alt="홈화면에서 앱스 > Chrome을 실행합니다." class="image-only" />
+											</div>
+											<div class="margin-top-15">
+												<img src="./assets/images/contents/usage-guide/img-guide-payment-error-13.png" alt="우측 상단 점 3대로 된 더보기 버튼을 선택합니다." class="image-only" />
+											</div>
+											<div class="margin-top-15">
+												<img src="./assets/images/contents/usage-guide/img-guide-payment-error-14.png" alt="설정을 선택합니다." class="image-only" />
+											</div>
+											<div class="margin-top-15">
+												<img src="./assets/images/contents/usage-guide/img-guide-payment-error-15.png" alt="'개인정보 및 보안'을 선택합니다." class="image-only" />
+											</div>
+											<div class="margin-top-15">
+												<img src="./assets/images/contents/usage-guide/img-guide-payment-error-16.png" alt="'인터넷 사용 기록 삭제'를 선택합니다." class="image-only" />
+											</div>
+											<div class="margin-top-15">
+												<img
+													src="./assets/images/contents/usage-guide/img-guide-payment-error-17.png"
+													alt="인터넷 사용 기록, 쿠키 및 사이트 데이터, 캐시된 이미지 및 파일을 선택 후, '인터넷 사용 기록 삭제' 버튼을 선택합니다."
+													class="image-only"
+												/>
+											</div>
+											<!--// 2022.04.27 : mod : alt값 변경 -->
+										</div>
+									</div>
+								</div>
+
+								<div class="margin-top-20">
+									<div class="process-question">
+										<div class="process-num">2</div>
+										<div class="process-text">
+											Android 시스템 Webview 삭제
+											<div class="sub">홈화면에서 앱스 > Play스토어 > 'Android 시스템 WebView' 검색 > 제거(삭제)를 클릭합니다.</div>
+										</div>
+									</div>
+
+									<!-- 2022.04.27 : mod : alt값 변경 -->
+									<div class="margin-top-15">
+										<img src="./assets/images/contents/usage-guide/img-guide-payment-error-18.png" alt="홈화면에서 앱스 > Play스토어를 실행합니다." class="image-only" />
+									</div>
+									<div class="margin-top-15">
+										<img src="./assets/images/contents/usage-guide/img-guide-payment-error-19.png" alt="우측 상단에 구글 프로필 버튼을 선택합니다." class="image-only" />
+									</div>
+									<div class="margin-top-15">
+										<img src="./assets/images/contents/usage-guide/img-guide-payment-error-20.png" alt="'앱 및 기기 관리' 메뉴를 선택합니다." class="image-only" />
+									</div>
+									<div class="margin-top-15">
+										<img src="./assets/images/contents/usage-guide/img-guide-payment-error-21.png" alt="'Android 시스템 WebView' 메뉴를 선택합니다." class="image-only" />
+									</div>
+									<div class="margin-top-15">
+										<img src="./assets/images/contents/usage-guide/img-guide-payment-error-22.png" alt="제거 버튼을 선택합니다." class="image-only" />
+									</div>
+								</div>
+								<!--// 2022.04.27 : mod : alt값 변경 -->
+
+								<div class="margin-top-20">
+									<div class="process-question">
+										<div class="process-num">3</div>
+										<div class="process-text">
+											스마트폰 기본브라우저 또는 크롬 브라우저에서<br />
+											결제합니다.
+											<div class="sub">
+												원큐페이는 스마트폰에 기본으로 내장된 브라우저 또는 구글 크롬브라우저에 최적화 되어 있습니다.<br />
+												안전한 결제를 위해 기본 브라우저 또는 구글 크롬브라우저를 이용해주시기 바랍니다.
+											</div>
+
+											<!-- 2022.04.06 이미지 삭제 / 브라우저리스트 추가 -->
+											<!-- 기본브라우저/구글 크롬/ 아이폰 -->
+											<div class="margin-top-25">
+												<p class="default-text color-secondary margin-bottom-10">기본브라우저/구글 크롬/ 아이폰</p>
+												<div class="store-logos type-guide">
+													<ul class="store-logos-list">
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-01.png" alt="기본 브라우저" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-02.png" alt="크롬" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-03.png" alt="사파리" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<!-- //기본브라우저/구글 크롬/ 아이폰 -->
+
+											<!-- 최적화 되지 않은 브라우저 -->
+											<div class="margin-top-20">
+												<p class="default-text color-secondary margin-bottom-10">최적화 되지 않은 브라우저</p>
+												<div class="store-logos type-guide">
+													<ul class="store-logos-list">
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-04.png" alt="네이버" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-05.png" alt="다음" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-06.png" alt="파이어폭스" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-07.png" alt="UC 브라우저" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-08.png" alt="habit 브라우저" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-09.png" alt="puffin 브라우저" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-10.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+														<li class="store-logos-item">
+															<div class="logo-image type-store type-medium-large">
+																<div class="logo-image-inner">
+																	<img src="./assets/images/contents/browser/browser-11.png" alt="돌핀 브라우저" onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<!-- //최적화 되지 않은 브라우저 -->
+											<!-- //2022.04.06 이미지 삭제 / 브라우저리스트 추가 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- //안드로이드 스마트폰 결제 안될 경우 -->
+						</div>
+						<!-- //2022.04.06 전반적인 이미지 적용작업 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드 119 Center</h1>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+                        <div class="banner margin-top-none">
+							<img src="/images/banner/direct_contact_center_banner04.png" alt="상담 응대율 확인 - 영업현장과 카드를 모바일로 연결한 신속 상담 응대율 확인 가능 합니다." class="banner-image">
+						</div>
+						<div class="form-list">
+                            <div class="form-item">
+                                <div class="form-title">
+                                    <strong class="title">조회기간</strong><span class="ui-notice margin-top-none margin-left-10">최근 1개월 이내로만 조회 가능합니다.</span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="date-range">
+                                        <div class="form-flex">
+                                            <div class="form-flex-cell type-flexible">
+                                                <div class="ui-input-block type-date">
+                                                    <input type="date" class="ui-input" title="조회기간 시작일" value="2021-01-01">
+                                                </div>
+                                            </div>
+                                            <div class="form-flex-cell">
+                                                <div class="ui-range-dash">-</div>
+                                            </div>
+                                            <div class="form-flex-cell type-flexible">
+                                                <div class="ui-input-block type-date">
+                                                    <input type="date" class="ui-input" title="조회기간 종료일" value="2021-01-31">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+                        <ul class="ui-buttons-list type-full margin-top-15">
+                            <li class="ui-buttons-item">
+                                <a href="" class="ui-basic-button type-tertiary" role="button">상담 응대율 조회</a>
+                            </li>
+                        </ul>
+
+                        <div class="ui-chart-area" id="chart"></div>
+
+                        <div class="form-detail-head margin-top-10">
+                            <span class="icon type-scroll-x"><span class="for-a11y">표 좌우 스크롤</span></span>
+                        </div>
+                        <div class="info-table-area type-scroll-x">
+                            <table class="info-table type-big">
+                                <caption class="for-a11y">
+                                    상담분류, 전체문의, 응대완료, 응대율로 구성된 상담응대율 확인표
+                                </caption>
+                                
+                                <thead>
+                                    <tr>
+                                        <th>상담분류</th>
+                                        <th>전체문의</th>
+                                        <th>응대완료</th>
+                                        <th>응대율</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="align-center">기업회원심사</td>
+                                        <td class="align-center">65</td>
+                                        <td class="align-center">65</td>
+                                        <td class="align-center">100%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">기업회원심사전산문의</td>
+                                        <td class="align-center">60</td>
+                                        <td class="align-center">57</td>
+                                        <td class="align-center">95%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">개인회원심사</td>
+                                        <td class="align-center"></td>
+                                        <td class="align-center"></td>
+                                        <td class="align-center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">기업회원 업무공통</td>
+                                        <td class="align-center"></td>
+                                        <td class="align-center"></td>
+                                        <td class="align-center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">개인회원 업무공통</td>
+                                        <td class="align-center"></td>
+                                        <td class="align-center"></td>
+                                        <td class="align-center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">기타(업무전반)</td>
+                                        <td class="align-center"></td>
+                                        <td class="align-center"></td>
+                                        <td class="align-center"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+        <script type="text/javascript">
+			Highcharts.setOptions({
+				lang: {
+					thousandsSep: ',',
+				},
+			});
+			Highcharts.chart('chart', {
+				chart: {
+					plotBackgroundColor: null,
+					plotBorderWidth: null,
+					plotShadow: false,
+					type: 'pie',
+					style: {
+						fontFamily: 'inherit',
+					},
+					margin: [25, 0, 25, 0],
+					height: 250,
+				},
+				title: {
+					useHTML: true,
+					text: '<div class="align-center"><div class="font-weight-bold">90%</div><div style="font-size:1.2rem; color:#111;">응대완료</div></div>',
+					align: 'center',
+					verticalAlign: 'middle',
+				},
+				tooltip: {
+					enabled: false,
+				},
+				plotOptions: {
+					pie: {
+						size: 200,
+						colors: ['#9FC6EE', '#e5e5e5'],
+						borderWidth: 0,
+						dataLabels: {
+							enabled: false,
+						},
+						animation: {
+							duration: 0,
+						},
+					},
+					series: {
+						states: {
+							hover: {
+								enabled: false,
+							},
+							inactive: {
+								enabled: false,
+							},
+						},
+					},
+				},
+				series: [
+					{
+						innerSize: '60%',
+						data: [935, 65],
+					},
+				],
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

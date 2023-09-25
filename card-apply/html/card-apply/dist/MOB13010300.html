@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="card-area">
+							<!-- 2022.10.27 : add : 동시발급 케이스 추가 -->
+							<!-- case : 카드발급 (1개) -->
+							<!-- DD : 가로형일 경우 type-vertical클래스 삭제 -->
+							<div class="card-image type-vertical has-shadow">
+								<div class="card-image-inner">
+									<img src="/images/contents/my-branch/card-bbm-multi-01.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+								</div>
+							</div>
+							<h2 class="card-name">내맘대로 쁨 카드</h2>
+							<!-- //case : 카드발급 (1개) -->
+
+							<!-- case : 카드발급 (2개) -->
+							<div class="card-image-group">
+								<div class="card-image type-left">
+									<div class="card-image-inner">
+										<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</div>
+								</div>
+								<div class="card-image type-right">
+									<div class="card-image-inner">
+										<img src="/images/contents/my-branch/card-myseries-01.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</div>
+								</div>
+							</div>
+							<!-- //case : 카드발급 (2개) -->
+
+							<!-- case : 카드발급 (3개) -->
+							<div class="card-image-group">
+								<div class="card-image type-left">
+									<div class="card-image-inner">
+										<img src="/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</div>
+								</div>
+								<div class="card-image type-right">
+									<div class="card-image-inner">
+										<img src="/images/contents/my-branch/card-myseries-01.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</div>
+								</div>
+								<div class="card-image type-center">
+									<div class="card-image-inner">
+										<img src="/images/contents/my-branch/card-bbm-multi-01.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+									</div>
+								</div>
+							</div>
+							<!-- //case : 카드발금 (3개) -->
+							<!-- //2022.10.27 : add : 동시발급 케이스 추가 -->
+						</div>
+						<div class="completion-area">
+							<h2 class="completion-title">카드를 신청했어요!</h2>
+							<p class="completion-text">
+								카드발급조회 메뉴에서 신청하신 카드의<br />
+								발급 진행상황을 확인할 수 있습니다.
+							</p>
+							<!-- 2022.11.09 : add : 비대면(학생증카드) 케이스 문구 추가 -->
+							<!-- DD : 비대면(학생증카드)의 경우 카드수령지 안내문구 노출 -->
+							<p class="completion-text">
+								카드발급이 완료되면, <span class="color-primary font-weight-regular">&관리지점명&</span>에서<br />
+								수령해주세요.
+							</p>
+							<!-- //DD : 비대면(학생증카드)의 경우 카드수령지 안내문구 노출 -->
+							<!-- //2022.11.09 : add : 비대면(학생증카드) 케이스 문구 추가 -->
+						</div>
+					</div>
+
+					<!-- 2022.08.31 : mod : .page-buttons에 .type-fixed.type-no-line 클래스 추가 -->
+					<div class="page-buttons type-fixed type-no-line">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<!-- 2022.08.18 : mod : button 태그로 변경 -->
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

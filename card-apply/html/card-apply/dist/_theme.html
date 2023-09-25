@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+
+		<!-- DD : 테마 CSS -->
+		<!-- Theme CSS -->
+		<style type="text/css">
+			/* DD : 카드신청 정보입력 화면에서만 추가 (MOB02000000) : start */
+			/*
+			.header,
+			.card-bg {
+				/ * 1. 배경 색상 * /
+				background-color: #ffef8c;
+			}
+			*/
+			/* DD : 카드신청 정보입력 화면에서만 추가 (MOB02000000) : end */
+			.ui-checkbox-block.type-box .ui-checkbox:checked + .ui-label,
+			.ui-radio-block.type-box .ui-radio:checked + .ui-label,
+			.ui-checkbox-block.type-box.is-checked .ui-label,
+			.ui-radio-block.type-box.is-checked .ui-label,
+			.ui-radio-block.type-box a.ui-label:active,
+			.ui-form-check-block.type-box .ui-checkbox:checked + .ui-label,
+			.ui-form-radio-block.type-box .ui-radio:checked + .ui-label,
+			.ui-form-check-block.type-box.is-checked .ui-label,
+			.ui-form-radio-block.type-box.is-checked .ui-label,
+			.ui-form-radio-block.type-box a.ui-label:active {
+				/* 2. 버튼 선택 색상 */
+				box-shadow: inset 0 0 0 2px #e7ac12;
+			}
+			.ui-basic-button.type-primary {
+				/* 3. 하단 버튼 색상 */
+				border-color: #fb9d1e;
+				background-color: #fb9d1e;
+			}
+			/* 2022.10.27 : add : 버튼클릭시 색상 추가 */
+			.ui-basic-button.type-primary:not(:disabled):active {
+				/* 3. 하단 버튼 active 색상 */
+				border-color: #cf7f13;
+				background-color: #cf7f13;
+			}
+		</style>
+		<!-- //Theme CSS -->
+		<!-- //DD : 테마 CSS -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">타이틀</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h3 class="large-text margin-bottom-10">radio button</h3>
+						<div class="ui-radio-group type-grid type-col2">
+							<div class="ui-form-radio-block type-box">
+								<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-1" checked />
+								<label for="radioGrid1-1" class="ui-label">
+									<span class="ui-label-text">checked</span>
+								</label>
+							</div>
+							<div class="ui-form-radio-block type-box">
+								<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-2" />
+								<label for="radioGrid1-2" class="ui-label">
+									<span class="ui-label-text">dafault</span>
+								</label>
+							</div>
+							<div class="ui-form-radio-block type-box">
+								<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-3" />
+								<label for="radioGrid1-3" class="ui-label">
+									<span class="ui-label-text">dafault</span>
+								</label>
+							</div>
+							<div class="ui-form-radio-block type-box">
+								<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-4" />
+								<label for="radioGrid1-4" class="ui-label">
+									<span class="ui-label-text">dafault<br />2 line label</span>
+								</label>
+							</div>
+						</div>
+
+						<h3 class="large-text margin-bottom-10 margin-top-40">checkbox</h3>
+						<div class="ui-checkbox-group type-grid type-col3">
+							<div class="ui-form-check-block type-box">
+								<input type="checkbox" class="ui-checkbox" id="checkbox9" checked />
+								<label for="checkbox9" class="ui-label">
+									<span class="ui-label-text">checked</span>
+								</label>
+							</div>
+							<div class="ui-form-check-block type-box">
+								<input type="checkbox" class="ui-checkbox" id="checkbox10" />
+								<label for="checkbox10" class="ui-label">
+									<span class="ui-label-text">dafault</span>
+								</label>
+							</div>
+							<div class="ui-form-check-block type-box">
+								<input type="checkbox" class="ui-checkbox" id="checkbox11" />
+								<label for="checkbox11" class="ui-label">
+									<span class="ui-label-text">dafault</span>
+								</label>
+							</div>
+							<div class="ui-form-check-block type-box">
+								<input type="checkbox" class="ui-checkbox" id="checkbox12" />
+								<label for="checkbox12" class="ui-label">
+									<span class="ui-label-text">dafault<br />2 line label</span>
+								</label>
+							</div>
+						</div>
+
+						<h3 class="large-text margin-bottom-10 margin-top-40">button tag</h3>
+						<div class="flex-box">
+							<button type="button" class="ui-button ui-basic-button type-primary">button</button>
+							<button type="button" class="ui-button ui-basic-button type-primary" disabled>button</button>
+						</div>
+
+						<h3 class="large-text margin-bottom-10 margin-top-40">a tag</h3>
+						<div class="flex-box">
+							<a href="" class="ui-basic-button type-primary">button</a>
+							<a href="" class="ui-basic-button type-primary" disabled>button</a>
+						</div>
+
+						<h3 class="large-text margin-bottom-10 margin-top-40">layer popup</h3>
+						<div class="ui-buttons type-full">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-test-basic">기본형(Full)</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-test-slide">슬라이드형</button>
+								</li>
+							</ul>
+						</div>
+
+						<!-- layer: 기본형(Full) -->
+						<div class="layer-wrap layer-wrap--full" data-layer="layer-test-basic">
+							<div class="layer-container">
+								<section class="ui-layer">
+									<div class="ui-layer__head">
+										<div class="header">
+											<h2 class="header__title">레이어 타이틀</h2>
+											<div class="header__right">
+												<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+													<span class="for-a11y">레이어 닫기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="ui-layer__body">
+										<div class="ui-layer__body-inner">
+											// contents<br /><br />
+											<div class="layer-contents">
+												<p class="paragraph">기본 폰트 사이즈 태그</p>
+											</div>
+										</div>
+									</div>
+									<div class="ui-layer__foot">
+										<div class="ui-buttons">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item type-narrow">
+													<button type="button" class="ui-button ui-basic-button" data-role="layerClose">취소</button>
+												</li>
+												<li class="ui-buttons-item">
+													<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+						<!-- //layer: 기본형(Full) -->
+
+						<!-- layer: 슬라이드형 -->
+						<div class="layer-wrap layer-wrap--slide" data-layer="layer-test-slide">
+							<div class="layer-container">
+								<section class="ui-layer">
+									<div class="ui-layer__head">
+										<div class="header">
+											<h2 class="header__title">레이어 타이틀</h2>
+											<div class="header__right">
+												<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+													<span class="for-a11y">레이어 닫기</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="ui-layer__body">
+										<div class="ui-layer__body-inner">
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+											// contents <br />
+										</div>
+									</div>
+									<div class="ui-layer__foot">
+										<div class="ui-buttons">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item">
+													<button type="button" class="ui-button ui-basic-button" data-role="layerClose">취소</button>
+												</li>
+												<li class="ui-buttons-item">
+													<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+						<!-- //layer: 슬라이드형 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>

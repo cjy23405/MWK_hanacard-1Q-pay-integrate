@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-payment-account">결제계좌 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 결제계좌 -->
+			<!-- 2022.09.02 : mod : layer-wrap에 is-not-background-close 클래스 추가 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select is-not-background-close" data-layer="layer-payment-account">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2022.08.18 : mod : 문구수정 -->
+								<h2 class="header__title">결제 금융기관을 선택해주세요</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<!-- case : 은행 선택 -->
+									<div class="page-section">
+										<div class="section-contents">
+											<!-- 2022.12.22 : 구조변경 => .js-ui-tab-panel.page-tab-panel 에서 .ui-tab-area분리  -->
+											<div class="js-ui-tab-panel page-tab-panel">
+												<div class="ui-tab-area">
+													<ul class="ui-tab-list">
+														<li class="ui-tab-item">
+															<button type="button" class="ui-button ui-tab-link" data-tab-open="tab01">은행</button>
+														</li>
+														<li class="ui-tab-item">
+															<button type="button" class="ui-button ui-tab-link" data-tab-open="tab02">증권</button>
+														</li>
+													</ul>
+												</div>
+
+												<!-- tab contents -->
+												<!-- tab: 은행 -->
+												<!-- 2022.12.22 : 클래스명 변경 .panel-card => .tab-panel-account -->
+												<div class="ui-tab-panel tab-panel-account" data-tab="tab01">
+													<div class="ui-radio-group type-grid type-col3">
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-1" />
+															<label for="radioBox1-1" class="ui-label type-flex-column">
+																<!-- DD : 이미지 없을 때 -->
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner"></span>
+																</span>
+																<span class="ui-label-text">하나</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-2" />
+															<label for="radioBox1-2" class="ui-label type-flex-column">
+																<!-- DD : 이미지 에러 -->
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/bank/logo.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">국민</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-3" />
+															<label for="radioBox1-3" class="ui-label type-flex-column">
+																<!-- DD : 이미지 있을 때 -->
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">기업</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-4" />
+															<label for="radioBox1-4" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">농협</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-5" />
+															<label for="radioBox1-5" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">신한</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-6" />
+															<label for="radioBox1-6" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">우리</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-7" />
+															<label for="radioBox1-7" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">지역단위농협</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-8" />
+															<label for="radioBox1-8" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">SC</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-9" />
+															<label for="radioBox1-9" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">한국시티</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-10" />
+															<label for="radioBox1-10" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">경남</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-11" />
+															<label for="radioBox1-11" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">광주</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-12" />
+															<label for="radioBox1-12" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">대구</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-13" />
+															<label for="radioBox1-13" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">부산</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-14" />
+															<label for="radioBox1-14" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">도이치</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-15" />
+															<label for="radioBox1-15" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">산업</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-16" />
+															<label for="radioBox1-16" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">새마을금고</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-17" />
+															<label for="radioBox1-17" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">수협</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-18" />
+															<label for="radioBox1-18" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">신용협동조합</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-19" />
+															<label for="radioBox1-19" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">우체국</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-20" />
+															<label for="radioBox1-20" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">전북</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-21" />
+															<label for="radioBox1-21" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">제주</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-22" />
+															<label for="radioBox1-22" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">HSBC</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-23" />
+															<label for="radioBox1-23" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">상호저축</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-24" />
+															<label for="radioBox1-24" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">산림조합중앙회</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-25" />
+															<label for="radioBox1-25" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">에이비엔 암로</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-26" />
+															<label for="radioBox1-26" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">UFJ</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-27" />
+															<label for="radioBox1-27" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">케이뱅크</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-28" />
+															<label for="radioBox1-28" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">카카오뱅크</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox1" id="radioBox1-29" />
+															<label for="radioBox1-29" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">토스뱅크</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<!-- //tab: 은행 -->
+
+												<!-- tab: 증권 -->
+												<!-- 2022.12.22 : 클래스명 변경 .panel-phone => .tab-panel-account -->
+												<div class="ui-tab-panel tab-panel-account" data-tab="tab02">
+													<div class="ui-radio-group type-grid type-col3">
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-1" />
+															<label for="radioBox2-1" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">유안타증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-2" />
+															<label for="radioBox2-2" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">현대증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-3" />
+															<label for="radioBox2-3" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">미래에셋</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-4" />
+															<label for="radioBox2-4" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">대우증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-5" />
+															<label for="radioBox2-5" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">NH투자증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-6" />
+															<label for="radioBox2-6" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">하나금융투자</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-7" />
+															<label for="radioBox2-7" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">삼성증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-8" />
+															<label for="radioBox2-8" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">한국투자증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-9" />
+															<label for="radioBox2-9" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">교보증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-10" />
+															<label for="radioBox2-10" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">하이투자증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-11" />
+															<label for="radioBox2-11" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">HMC투자증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-12" />
+															<label for="radioBox2-12" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">키움증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-13" />
+															<label for="radioBox2-13" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">이베스트투자증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-14" />
+															<label for="radioBox2-14" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">SK증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-15" />
+															<label for="radioBox2-15" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">대신증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-16" />
+															<label for="radioBox2-16" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">솔로몬투자증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-17" />
+															<label for="radioBox2-17" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">한화증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-18" />
+															<label for="radioBox2-18" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">신한금융투자</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-19" />
+															<label for="radioBox2-19" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">동부증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-20" />
+															<label for="radioBox2-20" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">유진투자증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-21" />
+															<label for="radioBox2-21" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">메리츠증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-22" />
+															<label for="radioBox2-22" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">부국증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-23" />
+															<label for="radioBox2-23" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">신영증권</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box type-wide">
+															<input type="radio" class="ui-radio" name="radioBox2" id="radioBox2-24" />
+															<label for="radioBox2-24" class="ui-label type-flex-column">
+																<span class="logo-image type-circle type-small">
+																	<span class="logo-image-inner">
+																		<img src="/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+																	</span>
+																</span>
+																<span class="ui-label-text">LIG투자증권</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<!-- //tab: 증권 -->
+												<!-- //tab contents -->
+											</div>
+											<!-- //2022.12.22 : 구조변경 => .js-ui-tab-panel.page-tab-panel 에서 .ui-tab-area분리  -->
+										</div>
+									</div>
+									<!-- //case : 은행 선택 -->
+
+									<!-- case : 계좌 입력 - 은행 선택 전 해당 영역 display: none 처리 -->
+									<div class="page-section" style="display: none">
+										<div class="section-contents">
+											<div class="ui-form">
+												<dl class="ui-form-list">
+													<!-- DD : 클릭시 은행 선택 영역으로 변경 -->
+													<div class="ui-form-item">
+														<dt class="ui-form-key" data-focus-input="name">금융기관</dt>
+														<dd class="ui-form-val">
+															<div class="ui-form-val-inner">
+																<div class="ui-form-contents">
+																	<div class="in-input-block">
+																		<button type="button" class="in-select" title="금융기관 선택" data-placeholder="금융기관 선택" data-focus-input-target="name">하나은행</button>
+																	</div>
+																</div>
+															</div>
+														</dd>
+													</div>
+													<!-- //DD : 클릭시 은행 선택 영역으로 변경 -->
+													<!-- 2022.11.30 : mod : .ui-form-item 의 .type-inputed 클래스 삭제 -->
+													<div class="ui-form-item">
+														<dt class="ui-form-key" data-focus-input="name">계좌번호</dt>
+														<dd class="ui-form-val">
+															<div class="ui-form-val-inner">
+																<div class="ui-form-contents">
+																	<div class="in-input-block">
+																		<input type="number" pattern="\d*" class="in-input" title="계좌번호 입력" placeholder="‘-’없이 입력" data-focus-input-target="name" />
+																	</div>
+																</div>
+															</div>
+														</dd>
+													</div>
+												</dl>
+
+												<div class="terms-area">
+													<div class="terms-item">
+														<div class="ui-form-check-block type-large type-align-top">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" data-checkbox-group-child="selectCheckbox" data-checkbox-group="selectCheckbox1-1" />
+															<label for="selectCheckbox1-1" class="ui-label">
+																<span class="ui-check-object"></span>
+																<span class="ui-label-text">자동이체 출금동의</span>
+															</label>
+															<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //case : 계좌 입력 - 은행 선택 전 해당 영역 display: none 처리 -->
+								</div>
+							</div>
+						</div>
+						<!-- 2022.08.18 : del : 버튼 영역 삭제 -->
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 결제계좌 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-payment-account');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

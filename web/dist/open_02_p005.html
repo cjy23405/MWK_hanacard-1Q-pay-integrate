@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">내 계좌(오픈뱅킹)</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- 2022.04.08 : mod : margin-top-minus-30 클래스 값 추가 -->
+					<div class="page-contents margin-top-minus-30">
+						<div class="page-tab-panel">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-button ui-tab-link" role="button">계좌(은행/증권)</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-button ui-tab-link is-active" role="button">카드(신용/체크)</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">카드(신용/체크)</h2>
+
+						<!-- section -->
+						<div class="page-section-group">
+							<div class="section-title">
+								<!-- 2022.03.16 버튼 아이콘으로 수정 -->
+								<a href="" class="header-button type-setting section-title-right" role="button"><span class="for-a11y">설정</span></a>
+							</div>
+
+							<div class="card-list-area type-default">
+								<ul class="card-list js-ui-accordion">
+									<li class="card-item js-ui-accordion__item">
+										<div class="card-block type-flex-center">
+											<!-- DD : 이미지 없을 때 -->
+											<div class="logo-image">
+												<div class="logo-image-inner"></div>
+											</div>
+											<div class="card-info-group type-has-opener">
+												<div class="card-info">
+													<span class="card-name">IBK기업은행(카드)</span>
+												</div>
+												<button type="button" class="card-layer-opener js-ui-accordion__opener">
+													<span class="for-a11y">
+														상세보기
+														<span class="open-text">열기</span>
+														<span class="close-text">닫기</span>
+													</span>
+												</button>
+											</div>
+										</div>
+										<div class="card-layer-contents js-ui-accordion__layer type-padding-left">
+											<ul class="card-list js-ui-accordion">
+												<li class="card-item type-box js-ui-accordion__item">
+													<div class="card-block">
+														<div class="card-info-group type-has-opener">
+															<div class="card-info">
+																<span class="card-name">[본인] 우리ABC카드</span>
+																<div class="card-number-block">
+																	<div class="card-number">
+																		<span class="card-number-item">991212******1234</span>
+																	</div>
+																</div>
+															</div>
+															<button type="button" class="card-layer-opener js-ui-accordion__opener">
+																<span class="for-a11y">
+																	상세보기
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+													</div>
+													<div class="card-accordion-layer js-ui-accordion__layer">
+														<div class="form-detail">
+															<dl class="form-detail-list type-text-default">
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">구분</dt>
+																	<dd class="form-detail-group">신용</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">발급일</dt>
+																	<dd class="form-detail-group">2021.02.25</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">결제계좌번호</dt>
+																	<dd class="form-detail-group">우리은행 000-1230000-***</dd>
+																</div>
+															</dl>
+														</div>
+													</div>
+												</li>
+												<li class="card-item type-box js-ui-accordion__item">
+													<div class="card-block">
+														<div class="card-info-group type-has-opener">
+															<div class="card-info">
+																<span class="card-name">[가족] 우리SUPER카드</span>
+																<div class="card-number-block">
+																	<div class="card-number">
+																		<span class="card-number-item">991212******1234</span>
+																	</div>
+																</div>
+															</div>
+															<button type="button" class="card-layer-opener js-ui-accordion__opener">
+																<span class="for-a11y">
+																	상세보기
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+													</div>
+													<div class="card-accordion-layer js-ui-accordion__layer">
+														<div class="form-detail">
+															<dl class="form-detail-list type-text-default">
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">구분</dt>
+																	<dd class="form-detail-group">신용</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">발급일</dt>
+																	<dd class="form-detail-group">2021.02.25</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">결제계좌번호</dt>
+																	<dd class="form-detail-group">우리은행 000-1230000-***</dd>
+																</div>
+															</dl>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="card-item js-ui-accordion__item">
+										<div class="card-block type-flex-center">
+											<!-- DD : 이미지 에러 -->
+											<div class="logo-image">
+												<div class="logo-image-inner">
+													<!-- 2022.04.27 : mod : alt값 변경 -->
+													<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+													<img src="./assets/images/_dummy/logo-hana-card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<div class="card-info-group type-has-opener">
+												<div class="card-info">
+													<span class="card-name">KB국민카드</span>
+												</div>
+												<button type="button" class="card-layer-opener js-ui-accordion__opener">
+													<span class="for-a11y">
+														상세보기
+														<span class="open-text">열기</span>
+														<span class="close-text">닫기</span>
+													</span>
+												</button>
+											</div>
+										</div>
+										<div class="card-layer-contents js-ui-accordion__layer type-padding-left">
+											<ul class="card-list js-ui-accordion">
+												<li class="card-item type-box js-ui-accordion__item">
+													<div class="card-block">
+														<div class="card-info-group type-has-opener">
+															<div class="card-info">
+																<span class="card-name">[본인] 우리ABC카드</span>
+																<div class="card-number-block">
+																	<div class="card-number">
+																		<span class="card-number-item">991212******1234</span>
+																	</div>
+																</div>
+															</div>
+															<button type="button" class="card-layer-opener js-ui-accordion__opener">
+																<span class="for-a11y">
+																	상세보기
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+													</div>
+													<div class="card-accordion-layer js-ui-accordion__layer">
+														<div class="form-detail">
+															<dl class="form-detail-list type-text-default">
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">구분</dt>
+																	<dd class="form-detail-group">신용</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">발급일</dt>
+																	<dd class="form-detail-group">2021.02.25</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">결제계좌번호</dt>
+																	<dd class="form-detail-group">우리은행 000-1230000-***</dd>
+																</div>
+															</dl>
+														</div>
+													</div>
+												</li>
+												<li class="card-item type-box js-ui-accordion__item">
+													<div class="card-block">
+														<div class="card-info-group type-has-opener">
+															<div class="card-info">
+																<span class="card-name">[가족] 우리SUPER카드</span>
+																<div class="card-number-block">
+																	<div class="card-number">
+																		<span class="card-number-item">991212******1234</span>
+																	</div>
+																</div>
+															</div>
+															<button type="button" class="card-layer-opener js-ui-accordion__opener">
+																<span class="for-a11y">
+																	상세보기
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+													</div>
+													<div class="card-accordion-layer js-ui-accordion__layer">
+														<div class="form-detail">
+															<dl class="form-detail-list type-text-default">
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">구분</dt>
+																	<dd class="form-detail-group">신용</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">발급일</dt>
+																	<dd class="form-detail-group">2021.02.25</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">결제계좌번호</dt>
+																	<dd class="form-detail-group">우리은행 000-1230000-***</dd>
+																</div>
+															</dl>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="card-item js-ui-accordion__item">
+										<div class="card-block type-flex-center">
+											<!-- DD : 이미지 있을 때 -->
+											<div class="logo-image">
+												<div class="logo-image-inner">
+													<!-- 2022.04.27 : mod : alt값 변경 -->
+													<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+													<img src="./assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<div class="card-info-group type-has-opener">
+												<div class="card-info">
+													<span class="card-name">KB국민카드</span>
+												</div>
+												<button type="button" class="card-layer-opener js-ui-accordion__opener">
+													<span class="for-a11y">
+														상세보기
+														<span class="open-text">열기</span>
+														<span class="close-text">닫기</span>
+													</span>
+												</button>
+											</div>
+										</div>
+										<div class="card-layer-contents js-ui-accordion__layer type-padding-left">
+											<ul class="card-list js-ui-accordion">
+												<li class="card-item type-box js-ui-accordion__item">
+													<div class="card-block">
+														<div class="card-info-group type-has-opener">
+															<div class="card-info">
+																<span class="card-name">[본인] 우리ABC카드</span>
+																<div class="card-number-block">
+																	<div class="card-number">
+																		<span class="card-number-item">991212******1234</span>
+																	</div>
+																</div>
+															</div>
+															<button type="button" class="card-layer-opener js-ui-accordion__opener">
+																<span class="for-a11y">
+																	상세보기
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+													</div>
+													<div class="card-accordion-layer js-ui-accordion__layer">
+														<div class="form-detail">
+															<dl class="form-detail-list type-text-default">
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">구분</dt>
+																	<dd class="form-detail-group">신용</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">발급일</dt>
+																	<dd class="form-detail-group">2021.02.25</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">결제계좌번호</dt>
+																	<dd class="form-detail-group">우리은행 000-1230000-***</dd>
+																</div>
+															</dl>
+														</div>
+													</div>
+												</li>
+												<li class="card-item type-box js-ui-accordion__item">
+													<div class="card-block">
+														<div class="card-info-group type-has-opener">
+															<div class="card-info">
+																<span class="card-name">[가족] 우리SUPER카드</span>
+																<div class="card-number-block">
+																	<div class="card-number">
+																		<span class="card-number-item">991212******1234</span>
+																	</div>
+																</div>
+															</div>
+															<button type="button" class="card-layer-opener js-ui-accordion__opener">
+																<span class="for-a11y">
+																	상세보기
+																	<span class="open-text">열기</span>
+																	<span class="close-text">닫기</span>
+																</span>
+															</button>
+														</div>
+													</div>
+													<div class="card-accordion-layer js-ui-accordion__layer">
+														<div class="form-detail">
+															<dl class="form-detail-list type-text-default">
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">구분</dt>
+																	<dd class="form-detail-group">신용</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">발급일</dt>
+																	<dd class="form-detail-group">2021.02.25</dd>
+																</div>
+																<div class="form-detail-item">
+																	<dt class="form-detail-title">결제계좌번호</dt>
+																	<dd class="form-detail-group">우리은행 000-1230000-***</dd>
+																</div>
+															</dl>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<!-- 2022.03.16 버튼 디자인 변경 -->
+							<div class="margin-top-25">
+								<a href="" class="card-add-block" role="button">
+									<span class="logo-image type-add"><span class="logo-image-inner"></span></span>
+									<span class="card-add-text"> 카드사 추가</span>
+								</a>
+							</div>
+
+							<!-- 2022.03.16 추가 -->
+							<div class="margin-top-35 align-center">
+								<a href="" class="default-text color-blur text-underline" role="button">오픈뱅킹 해지하기</a>
+							</div>
+							<!-- //2022.03.16 추가 -->
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									꼭 확인해 주세요!
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">서비스 해지 시 현재 등록된 이용카드는 자동으로 일괄 등록 해제 됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

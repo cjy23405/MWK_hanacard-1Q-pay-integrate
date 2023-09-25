@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+    <defs>
+        <style>
+            .cls-3{fill:none;stroke:#111;stroke-linecap:round;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="ic_cardrelease" transform="translate(-248 -407)">
+        <path id="사각형_14278" data-name="사각형 14278" transform="translate(248 407)" style="fill:transparent" d="M0 0h15v15H0z"/>
+        <g id="그룹_13339" data-name="그룹 13339" transform="translate(-.381 .505)">
+            <g id="패스_12367" data-name="패스 12367" style="fill:none">
+                <path d="M1.835 0h10.092a1.835 1.835 0 0 1 1.835 1.835v7.34a1.835 1.835 0 0 1-1.835 1.835H1.835A1.835 1.835 0 0 1 0 9.175v-7.34A1.835 1.835 0 0 1 1.835 0z" style="stroke:none" transform="rotate(180 131.69 210.002)"/>
+                <path d="M1.835 1.5a.335.335 0 0 0-.335.335v7.34c0 .184.15.335.335.335h10.092c.185 0 .335-.15.335-.335v-7.34a.335.335 0 0 0-.335-.335H1.835m0-1.5h10.092c1.014 0 1.835.822 1.835 1.835v7.34a1.835 1.835 0 0 1-1.835 1.835H1.835A1.835 1.835 0 0 1 0 9.175v-7.34C0 .822.822 0 1.835 0z" style="fill:#111;stroke:none" transform="rotate(180 131.69 210.002)"/>
+            </g>
+            <path id="패스_12366" data-name="패스 12366" class="cls-3" d="M0 0h11.193" transform="translate(250.812 412.206)"/>
+            <path id="패스_12364" data-name="패스 12364" class="cls-3" d="M0 0h3.243" transform="rotate(45 -372.67 515.488)"/>
+            <path id="패스_12365" data-name="패스 12365" class="cls-3" d="M0 0h3.243" transform="rotate(135 42.977 260.61)"/>
+        </g>
+    </g>
+</svg>

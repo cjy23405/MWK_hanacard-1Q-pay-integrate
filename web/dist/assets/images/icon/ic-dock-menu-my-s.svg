@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_18219" data-name="사각형 18219" width="28" height="28" transform="translate(26 555)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.157" y1="0.788" x2="0.828" y2="0.1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#54c3be" stop-opacity="0.502"/>
+      <stop offset="1" stop-color="#d8f3f2" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="타원_2316" x="5.2" y="13" width="5.5" height="5.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-color="#008882" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="타원_2317" x="11.2" y="13" width="5.5" height="5.5" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-2"/>
+      <feFlood flood-color="#008882" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="패스_13893" x="6" y="17.5" width="10" height="6" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-3"/>
+      <feFlood flood-color="#008882" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="tab_ic_01_s" transform="translate(-26 -555)">
+    <g id="마스크_그룹_12624" data-name="마스크 그룹 12624" clip-path="url(#clip-path)">
+      <rect id="사각형_7865" data-name="사각형 7865" width="28" height="28" transform="translate(26 555)" fill="none"/>
+      <g id="그룹_14734" data-name="그룹 14734" transform="translate(-35.128 -4)">
+        <g id="그룹_14732" data-name="그룹 14732" transform="translate(225.539 240.813) rotate(30)">
+          <path id="패스_13886" data-name="패스 13886" d="M409.811,79.657a9.872,9.872,0,1,0,19.744,0,5.6,5.6,0,0,0-.531-2.37c-.849-1.79-1.8-2.663-1.7-4.814.128-2.9-3.592-2.938-5.6-2.938a14.532,14.532,0,0,0-6.473,1.292,9.86,9.86,0,0,0-5.446,8.6v.226" transform="translate(-381.771 281.465)" fill="#00a49d"/>
+        </g>
+        <g id="그룹_14733" data-name="그룹 14733" transform="translate(0)">
+          <path id="패스_13886-2" data-name="패스 13886" d="M409.811,79.657a9.872,9.872,0,1,0,19.744,0,5.6,5.6,0,0,0-.531-2.37c-.849-1.79-1.8-2.663-1.7-4.814.128-2.9-3.592-2.938-5.6-2.938a14.532,14.532,0,0,0-6.473,1.292,9.86,9.86,0,0,0-5.446,8.6v.226" transform="translate(-347.683 496.465)" stroke="rgba(255,255,255,0.2)" stroke-width="0.5" fill="url(#linear-gradient)"/>
+          <g transform="matrix(1, 0, 0, 1, 61.13, 559)" filter="url(#타원_2316)">
+            <circle id="타원_2316-2" data-name="타원 2316" cx="1.25" cy="1.25" r="1.25" transform="translate(6.7 13.5)" fill="#fff"/>
+          </g>
+          <g transform="matrix(1, 0, 0, 1, 61.13, 559)" filter="url(#타원_2317)">
+            <circle id="타원_2317-2" data-name="타원 2317" cx="1.25" cy="1.25" r="1.25" transform="translate(12.7 13.5)" fill="#fff"/>
+          </g>
+          <g transform="matrix(1, 0, 0, 1, 61.13, 559)" filter="url(#패스_13893)">
+            <path id="패스_13893-2" data-name="패스 13893" d="M3.522,3A4,4,0,0,1,.11,1.11a.721.721,0,0,1,.248-1A.758.758,0,0,1,1.384.349a2.511,2.511,0,0,0,2.138,1.19A2.515,2.515,0,0,0,5.625.4.758.758,0,0,1,6.658.186.721.721,0,0,1,6.88,1.2,4.012,4.012,0,0,1,3.522,3" transform="translate(7.5 18)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

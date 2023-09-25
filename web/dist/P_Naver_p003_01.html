@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap NaverPay">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title"></h1>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+					    <h2 class="page-title">
+							본인 정보를 입력해 주세요
+						</h2>
+							
+						
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-contents">
+									<div class="form-list">
+										<div class="form-item">
+											<div class="form-title">
+												이름
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input" title="이름 입력" value="" placeholder="이름을 입력해 주세요" required />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title is-disabled">
+												주민등록번호
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-use-delete">
+													<input type="text" class="ui-input personal-number-fault" title="주민등록번호 13자리 입력" placeholder="‘-’없이 입력해 주세요" value="" />
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												신분증 정보
+												<!-- <span class="ui-required"><span class="for-a11y">필수항목</span></span> -->
+											</div>
+											<div class="form-group">
+												<div class="ui-radio-group type-panel">
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel3" id="testCheckboxTabA1" data-checkbox-tab="testCheckboxTabA1" checked="" />
+														<label for="testCheckboxTabA1" class="ui-label">
+															<span class="ui-label-text">주민등록증</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel3" id="testCheckboxTabA2" data-checkbox-tab="testCheckboxTabA2" />
+														<label for="testCheckboxTabA2" class="ui-label">
+															<span class="ui-label-text">운전면허증</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-checkbox-tab-panel="testCheckboxTabA1" class="margin-top-25">
+											<div class="margin-top-35">
+												<div class="card-image">
+													<div class="img-area ty03">
+														<!-- 2022.04.27 : mod : alt 값 변경 -->
+														<img src="/images/naverpay/img-personallicense.svg" alt="주민등록증 정보 확인 예시 이미지" class="img" />
+													</div>
+												</div>
+											</div>
+											<div class="form-item" data-checkbox-tab-panel="radioToggle1-1" style="display: block;">
+												<div class="form-group">
+													<div class="ui-input-block">
+														<input type="number" pattern="\d*" class="ui-input date-fault" title="발급일자 입력" placeholder="주민등록증 발행일자 입력 예)20200505" value="" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-checkbox-tab-panel="testCheckboxTabA2" class="margin-top-25">
+											<div class="margin-top-35">
+												<div class="card-image">
+													<div class="img-area ty03">
+														<!-- 2022.04.27 : mod : alt 값 변경 -->
+														<img src="/images/naverpay/img-drivelicense.svg" alt="자동차 운전 면허증 정보 확인 예시 이미지" class="img" />
+													</div>
+												</div>
+											</div>
+											<div class="form-item" data-checkbox-tab-panel="radioToggle1-2" style="display: block">
+												<div class="form-group type-input-range">
+													<div class="form-flex">
+														<div class="form-flex-cell type-narrow">
+															<!-- 2022.03.23 입력박스 셀렉트 버튼으로 변경 -->
+															<div class="ui-select-block">
+																<select class="ui-select" title="title">
+																	<option value="-1" disabled="" selected="">발행기관</option>
+																	<option value="">option 1</option>
+																	<option value="">option 2</option>
+																	<option value="">option 3</option>
+																	<option value="">option 4</option>
+																	<option value="">option 5</option>
+																</select>
+															</div>
+														</div>
+														<div class="form-flex-cell type-flexible">
+															<div class="ui-input-block is-disabled">
+																<input type="text" class="ui-input" title="면허번호 입력" placeholder="'-'없이 면허번호 입력" value="" />
+															</div>
+														</div>
+													</div>
+													<p class="ui-notice ty02">(구)면허증은 발행기관에 번호 대신 지역명이 표시됩니다.</p>
+												</div>
+											</div>
+										</div>
+									</div>		
+								</div>
+							</div>
+						</div>
+							<!-- //section -->
+					</div>
+
+					<div class="page-buttons type-naver-button">
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-area-disabled-target="nextButton" disabled>다음</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<script>
+			// 유효성 체크 샘플 코드
+			var message1 = '본인 주민등록번호를 입력해 주세요';
+			var $input = $('.ui-select, .personal-number-fault');
+			$input.on('keyup blur focus', function () {
+				if (!$(this).closest('.type-e-date').length) {
+					if ($(this).val().length) {
+						$(this).invalid(true);
+					} else {
+						$(this).invalid(false, message1);
+					}
+				}
+			});
+			var message2 = '발행 일자를 정확히 입력해 주세요';
+			var $input = $('.ui-select, .date-fault');
+			$input.on('keyup blur focus', function () {
+				if (!$(this).closest('.type-e-date').length) {
+					if ($(this).val().length) {
+						$(this).invalid(true);
+					} else {
+						$(this).invalid(false, message2);
+					}
+				}
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

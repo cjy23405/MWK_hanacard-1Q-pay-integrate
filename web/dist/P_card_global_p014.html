@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-card-auth">카드 인증</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 카드 인증 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-card-auth">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">서비스명과 체크카드명이 확정되었습니다.</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<ul class="card-list type-box">
+										<li class="card-item">
+											<div class="card-block">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<!-- DD : 이미지 없을 때
+                                                <span class="card-image">
+                                                    <span class="card-image-inner"></span>
+                                                </span>
+                                                -->
+
+												<!-- DD : 이미지 에러
+                                                <span class="card-image">
+                                                    <span class="card-image-inner">
+                                                        <img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+                                                    </span>
+                                                </span>
+                                                -->
+
+												<!-- DD : 이미지 있을 때 -->
+												<span class="card-image">
+													<span class="card-image-inner">
+														<!-- 2022.04.27 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/card.png" alt="카드이름 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+
+												<div class="card-info">
+													<span class="card-name">트래블로그 체크카드</span>
+													<div class="card-number"><span class="card-number-item">4365-12**-****-1234</span></div>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<div class="card-pw-wrap margin-top-25">
+										<p class="txt">카드 비밀번호 앞 2자리 입력</p>
+										<div class="card-pw">
+											<ul>
+												<li class="item done"><span class="for-a11y">비밀번호 첫번째 자리</span></li>
+												<li class="item"><span class="for-a11y">비밀번호 두번째 자리</span></li>
+												<li class="item none"><span class="for-a11y">비밀번호 세번째 자리</span></li>
+												<li class="item none"><span class="for-a11y">비밀번호 네번째 자리</span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 카드 인증 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-card-auth');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <g data-name="그룹 13200">
+        <g data-name="타원 1900" transform="translate(6 9.882)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+            <circle cx="14.359" cy="14.359" r="14.359" style="stroke:none"/>
+            <circle cx="14.359" cy="14.359" r="13.609" style="fill:none"/>
+        </g>
+        <g data-name="타원 1902" transform="translate(13.732 17.613)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+            <circle cx="6.627" cy="6.627" r="6.627" style="stroke:none"/>
+            <circle cx="6.627" cy="6.627" r="5.877" style="fill:none"/>
+        </g>
+        <g data-name="타원 1901" transform="translate(17.045 20.927)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+            <circle cx="3.314" cy="3.314" r="3.314" style="stroke:none"/>
+            <circle cx="3.314" cy="3.314" r="2.564" style="fill:none"/>
+        </g>
+        <path data-name="패스 12231" d="M0 3.951A6.092 6.092 0 0 1 1.591 0" transform="rotate(17 -49.531 51.71)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+        <path data-name="패스 12232" d="M1.591 0A6.092 6.092 0 0 1 0 3.951" transform="rotate(14.98 -90.77 118.012)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px"/>
+        <g data-name="그룹 12504" transform="translate(25.473 5)">
+            <circle data-name="타원 1905" cx="4.944" cy="4.944" r="4.944" transform="translate(0 6.039)" style="fill:#fff"/>
+            <circle data-name="타원 1904" cx="4.944" cy="4.944" r="4.944" transform="translate(2.342 6.039)" style="fill:#7dedf3"/>
+            <g data-name="타원 1903" transform="translate(0 6.039)" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+                <circle cx="4.944" cy="4.944" r="4.944" style="stroke:none"/>
+                <circle cx="4.944" cy="4.944" r="4.194" style="fill:none"/>
+            </g>
+            <path data-name="선 323" transform="translate(9.08 1.413)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px" d="M0 0v9.571"/>
+            <path data-name="선 324" transform="translate(9.079)" style="stroke-linecap:round;fill:none;stroke:#2d3239;stroke-width:1.5px" d="M3.108 0 0 1.413"/>
+        </g>
+    </g>
+</svg>

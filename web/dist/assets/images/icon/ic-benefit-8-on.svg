@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+    <defs>
+        <style>
+            .cls-1,.cls-3,.cls-4{fill:none}.cls-3,.cls-4{stroke:#2d3239;stroke-width:1.5px}.cls-4{stroke-linecap:round}
+        </style>
+    </defs>
+    <g id="ic_benefit_8_on" transform="translate(-142 -645)">
+        <rect id="사각형_7186" data-name="사각형 7186" class="cls-1" width="21" height="21" rx="8" transform="translate(142 645)"/>
+        <path id="사각형_14170" data-name="사각형 14170" transform="translate(145 648)" style="fill:transparent" d="M0 0h15v15H0z"/>
+        <g id="사각형_14171" data-name="사각형 14171" class="cls-3" transform="translate(147 648)">
+            <rect width="11" height="12.5" rx="2" style="stroke:none"/>
+            <rect class="cls-1" x=".75" y=".75" width="9.5" height="11" rx="1.25"/>
+        </g>
+        <path id="선_330" data-name="선 330" class="cls-3" transform="translate(147.5 651.5)" d="M0 0h10"/>
+        <path id="선_332" data-name="선 332" class="cls-3" transform="translate(152.5 651)" d="M0 0v4"/>
+        <path id="선_336" data-name="선 336" class="cls-4" transform="rotate(90 -253.45 404.2)" d="M0 0v1"/>
+        <path id="선_337" data-name="선 337" class="cls-4" transform="rotate(90 -251.225 406.425)" d="M0 0v1"/>
+        <path id="선_331" data-name="선 331" class="cls-3" transform="translate(147.5 655.5)" d="M0 0h10"/>
+        <path id="선_333" data-name="선 333" class="cls-4" transform="translate(148.208 659.829)" d="M1.951 0 0 2.341"/>
+        <path id="선_334" data-name="선 334" class="cls-4" transform="translate(154.841 659.829)" d="m0 0 1.951 2.341"/>
+    </g>
+</svg>

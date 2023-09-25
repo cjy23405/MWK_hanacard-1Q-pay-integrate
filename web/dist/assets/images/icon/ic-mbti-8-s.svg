@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-5,.cls-7{fill:none}.cls-5{stroke:#2d3239;stroke-width:1.5px}.cls-4{fill:#2d3239}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_mbti_8_s" transform="translate(-38 -312)">
+        <path id="사각형_16660" data-name="사각형 16660" d="M1.5 0H13a1.5 1.5 0 0 1 1.5 1.5V5H0V1.5A1.5 1.5 0 0 1 1.5 0z" transform="translate(39.5 322.5)" style="fill:#7dedf3"/>
+        <g id="사각형_16581" data-name="사각형 16581" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+            <path class="cls-6" d="M2 0h10a2 2 0 0 1 2 2v5a.5.5 0 0 1-.5.5H.5A.5.5 0 0 1 0 7V2a2 2 0 0 1 2-2z" transform="translate(41 315)"/>
+            <path class="cls-7" d="M2 .75h10A1.25 1.25 0 0 1 13.25 2v4.5a.25.25 0 0 1-.25.25H1a.25.25 0 0 1-.25-.25V2A1.25 1.25 0 0 1 2 .75z" transform="translate(41 315)"/>
+        </g>
+        <rect id="사각형_16599" data-name="사각형 16599" class="cls-4" width="1.5" height="4" rx=".75" transform="translate(40 325)"/>
+        <rect id="사각형_16600" data-name="사각형 16600" class="cls-4" width="1.5" height="4" rx=".75" transform="translate(54.5 325)"/>
+        <g id="사각형_16601" data-name="사각형 16601" class="cls-5">
+            <path class="cls-6" d="M2 0h12a2 2 0 0 1 2 2v4H0V2a2 2 0 0 1 2-2z" transform="translate(40 321)"/>
+            <path class="cls-7" d="M2 .75h12A1.25 1.25 0 0 1 15.25 2v2.5a.75.75 0 0 1-.75.75h-13a.75.75 0 0 1-.75-.75V2A1.25 1.25 0 0 1 2 .75z" transform="translate(40 321)"/>
+        </g>
+        <g id="사각형_16602" data-name="사각형 16602" class="cls-5" transform="translate(43.5 318.5)">
+            <rect class="cls-6" width="4" height="4" rx="1"/>
+            <rect class="cls-7" x=".75" y=".75" width="2.5" height="2.5" rx=".25"/>
+        </g>
+        <g id="사각형_16603" data-name="사각형 16603" class="cls-5" transform="translate(48.5 318.5)">
+            <rect class="cls-6" width="4" height="4" rx="1"/>
+            <rect class="cls-7" x=".75" y=".75" width="2.5" height="2.5" rx=".25"/>
+        </g>
+    </g>
+</svg>

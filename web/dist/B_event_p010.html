@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">찜한 쿠폰</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- 2022.01.12 문구 수정 -->
+						<p class="ui-notice">고객님이 찜한 내역을 확인하세요.</p>
+
+						<div class="form-flex type-align-middle margin-top-35">
+							<div class="form-flex-cell type-flexible">
+								<h2 class="check-detail-title margin-bottom-none">총&nbsp;<strong class="color-secondary">22</strong>건</h2>
+							</div>
+							<div class="form-flex-cell">
+								<div class="ui-checkbox-block">
+									<input type="checkbox" class="ui-checkbox" id="deleteAll" data-checkbox-group="delete" />
+									<label for="deleteAll" class="ui-label">
+										<span class="ui-checkbox-object"></span>
+										<span class="ui-label-text">전체 선택</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section-group type-line margin-top-15">
+							<div class="coupons margin-top-minus-10">
+								<ul class="coupons-list">
+									<li class="coupons-item">
+										<div class="form-flex">
+											<div class="form-flex-cell">
+												<div class="ui-checkbox-block type-large usage-default-checkbox-block">
+													<input type="checkbox" class="ui-checkbox" id="delete1" data-checkbox-group-child="delete" />
+													<label for="delete1" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="for-a11y">선택</span>
+													</label>
+												</div>
+											</div>
+											<div class="form-flex-cell type-flexible type-no-margin">
+												<div class="coupon-card">
+													<div class="coupon-card-left">
+														<div class="coupon-card-info">
+															<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+															<!-- DD : 이미지 없을 때 -->
+															<div class="logo-image type-store">
+																<div class="logo-image-inner"></div>
+															</div>
+															<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+															<div class="coupon-card-brand">포시즌스 호텔 서울</div>
+															<div class="coupon-card-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+															<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+															<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+														</div>
+													</div>
+													<div class="coupon-card-right">
+														<button type="button" class="ui-button coupon-card-action type-download">
+															<span class="for-a11y">다운로드</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="coupons-item">
+										<div class="form-flex">
+											<div class="form-flex-cell">
+												<div class="ui-checkbox-block type-large usage-default-checkbox-block">
+													<input type="checkbox" class="ui-checkbox" id="delete2" data-checkbox-group-child="delete" />
+													<label for="delete2" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="for-a11y">선택</span>
+													</label>
+												</div>
+											</div>
+											<div class="form-flex-cell type-flexible type-no-margin">
+												<div class="coupon-card">
+													<div class="coupon-card-left">
+														<div class="coupon-card-info">
+															<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+															<!-- DD : 이미지 에러 -->
+															<div class="logo-image type-store">
+																<div class="logo-image-inner">
+																	<!-- 2022.05.04 : mod : alt 값 변경 -->
+																	<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+															<div class="coupon-card-brand">G9</div>
+															<div class="coupon-card-name">20만원 이상 구매 시, 2만원 즉시 할인</div>
+															<div class="coupon-card-date">2021.05.01 ~ 2021.07.31 <span class="color-wrong">(7일 남음)</span></div>
+															<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+														</div>
+													</div>
+													<div class="coupon-card-right">
+														<button type="button" class="ui-button coupon-card-action type-link">
+															<span class="for-a11y">쿠폰 바로가기</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="coupons-item">
+										<div class="form-flex">
+											<div class="form-flex-cell">
+												<div class="ui-checkbox-block type-large usage-default-checkbox-block">
+													<input type="checkbox" class="ui-checkbox" id="delete3" data-checkbox-group-child="delete" />
+													<label for="delete3" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="for-a11y">선택</span>
+													</label>
+												</div>
+											</div>
+											<div class="form-flex-cell type-flexible type-no-margin">
+												<div class="coupon-card">
+													<div class="coupon-card-left">
+														<div class="coupon-card-info">
+															<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+															<!-- DD : 이미지 있을 때 -->
+															<div class="logo-image type-store">
+																<div class="logo-image-inner">
+																	<!-- 2022.05.04 : mod : alt 값 변경 -->
+																	<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+															<div class="coupon-card-brand">브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출</div>
+															<div class="coupon-card-name">쿠폰명 최대 2줄 노출 쿠폰명 최대 2줄 노출 쿠폰명 최대 2줄 노출</div>
+															<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+															<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+														</div>
+													</div>
+													<div class="coupon-card-right">
+														<button type="button" class="ui-button coupon-card-action type-download">
+															<span class="for-a11y">다운로드</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="coupons-item">
+										<div class="form-flex">
+											<div class="form-flex-cell">
+												<div class="ui-checkbox-block type-large usage-default-checkbox-block">
+													<input type="checkbox" class="ui-checkbox" id="delete4" data-checkbox-group-child="delete" />
+													<label for="delete4" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="for-a11y">선택</span>
+													</label>
+												</div>
+											</div>
+											<div class="form-flex-cell type-flexible type-no-margin">
+												<div class="coupon-card">
+													<div class="coupon-card-left">
+														<div class="coupon-card-info">
+															<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+															<div class="logo-image type-store">
+																<div class="logo-image-inner">
+																	<!-- 2022.05.04 : mod : alt 값 변경 -->
+																	<img src="./assets/images/_dummy/brand-icon-4.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+															<div class="coupon-card-brand">올리브영 온라인몰 및 구로디지털점 오프라인 매장</div>
+															<div class="coupon-card-name">10만원 이상 구매시, 1만원 즉시 할인</div>
+															<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+															<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+														</div>
+													</div>
+													<div class="coupon-card-right">
+														<button type="button" class="ui-button coupon-card-action type-download">
+															<span class="for-a11y">다운로드</span>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button">취소</button>
+								</li>
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-secondary">삭제</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

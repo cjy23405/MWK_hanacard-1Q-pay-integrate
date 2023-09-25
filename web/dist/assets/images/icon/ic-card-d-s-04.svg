@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+    <defs>
+        <style>
+            .cls-4{fill:none;stroke:#111;stroke-linecap:round;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="card_d_s_ic_04" transform="translate(-164 -166)">
+        <g id="그룹_11923" data-name="그룹 11923" transform="translate(-80 -1052)">
+            <rect id="사각형_7186" data-name="사각형 7186" width="27" height="27" rx="8" transform="translate(244 1218)" style="fill:#f5f6f8"/>
+        </g>
+        <path id="사각형_14108" data-name="사각형 14108" transform="translate(170 172)" style="fill:transparent" d="M0 0h15v15H0z"/>
+        <path id="패스_12018" data-name="패스 12018" d="M11.339 13.373h-8.78A1.756 1.756 0 0 1 .8 11.617L.75 5.016a1.757 1.757 0 0 1 .885-1.525L6.025.982a1.757 1.757 0 0 1 1.742 0l4.39 2.509a1.757 1.757 0 0 1 .885 1.525l.053 6.6a1.756 1.756 0 0 1-1.756 1.757z" transform="translate(170.723 172.237)" style="stroke-linejoin:round;fill:none;stroke:#111;stroke-linecap:round;stroke-width:1.5px"/>
+        <path id="선_253" data-name="선 253" class="cls-4" transform="translate(177.5 177.732)" d="M0 0v4.136"/>
+        <path id="선_254" data-name="선 254" class="cls-4" transform="translate(175.432 179.8)" d="M4.136 0H0"/>
+    </g>
+</svg>

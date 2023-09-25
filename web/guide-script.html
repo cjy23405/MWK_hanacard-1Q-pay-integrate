@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>스크립트 가이드</title>
+
+		<meta charset="euc-kr" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./dist/assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./dist/assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./dist/assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./dist/assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./dist/assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./dist/assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./dist/assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./dist/assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./dist/assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./dist/assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./dist/assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./dist/assets/css/wcms-data.css" />
+		<style>
+			*:focus {
+				outline: 1px dotted #999;
+			}
+			b {
+				margin-left: 10px;
+			}
+			body {
+				font-size: 1.6rem;
+				background: #fefefe;
+			}
+			h1.test-title {
+				font-size: 30px;
+				margin: 50px 50px;
+			}
+			h2.test-title {
+				margin: 0 0 20px;
+				font-size: 22px;
+				padding-bottom: 10px;
+				border-bottom: 2px solid #888;
+			}
+			h3.test-title {
+				margin: 0 0 10px;
+				font-size: 18px;
+			}
+			h4.test-title {
+				margin: 0 0 10px;
+				font-size: 16px;
+			}
+			.test-section {
+				border-top: 2px solid #ddd;
+				padding: 50px 24px;
+			}
+			.test-section-sub + .test-section-sub {
+				margin-top: 20px;
+				border-top: 1px dashed #ddd;
+				padding-top: 20px;
+			}
+			.test-section-child {
+				margin: 20px;
+			}
+			.test-code {
+				border: 2px solid #ddd;
+				margin: 10px 0;
+				background: #fff;
+				padding: 10px;
+				word-break: break-all;
+			}
+			.test-code:before {
+				content: 'ex.';
+				display: block;
+				font-size: 12px;
+			}
+			.test-description {
+				margin: 10px 0;
+				padding: 0 12px;
+			}
+			.test-links {
+				margin-left: -20px;
+			}
+			.test-links:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+			.test-links a {
+				display: block;
+				margin: 20px 0 0 20px;
+				float: left;
+				padding: 5px 15px;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 5px;
+				background: #333;
+			}
+			.test-links + h2.test-title {
+				margin-top: 20px;
+			}
+			.test-button {
+				margin-left: 10px;
+				padding: 0 5px;
+				vertical-align: top;
+				border: 1px solid var(--primary);
+				font-size: 12px;
+				line-height: 19px;
+				border-radius: 5px;
+			}
+			input {
+				-webkit-appearance: auto !important;
+				-moz-appearance: auto !important;
+				appearance: auto !important;
+			}
+		</style>
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div style="display: table"></div>
+
+			<h1 class="test-title">Script</h1>
+
+			<div class="test-section">
+				<style>
+					.test-guide-swiper {
+						position: relative;
+					}
+					.test-guide-swiper-list {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+					}
+					.test-guide-swiper-item a,
+					.test-guide-swiper-item img {
+						display: block;
+						width: 100%;
+						max-width: 600px;
+						margin: 0 auto;
+					}
+					.test-guide-swiper .swiper-pagination {
+						position: static;
+					}
+					.test-guide-swiper .swiper-scrollbar {
+						height: 5px;
+					}
+					.test-guide-swiper .swiper-scrollbar-drag {
+						height: 100%;
+						background: blue;
+					}
+				</style>
+				<h2 class="test-title">.swiperSet()</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">controller 래퍼 지정 안했을 때</h3>
+
+					<div class="test-guide-swiper" id="testGuideSwiper1">
+						<ul class="test-guide-swiper-list">
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/banner-1.png" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/banner-2.png" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/banner-1.png" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/banner-2.png" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<script type="module">
+						$('#testGuideSwiper1 .test-guide-swiper-list').swiperSet({
+							customClass: 'text-custom-class',
+							pageControl: true,
+							nextControl: true,
+							prevControl: true,
+							playControl: true,
+							pauseControl: true,
+							scrollbarControl: true,
+							autoplay: {
+								disableOnInteraction: false,
+							},
+						});
+					</script>
+				</div>
+
+				<div class="test-section-sub">
+					<h3 class="test-title">controller 래퍼 지정 했을 때</h3>
+
+					<div class="test-guide-swiper" id="testGuideSwiper2">
+						<div class="test-guide-swiper-controller"></div>
+						<ul class="test-guide-swiper-list">
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/banner-1.png" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/banner-2.png" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/banner-1.png" alt="" />
+								</a>
+							</li>
+							<li class="test-guide-swiper-item">
+								<a href="">
+									<img src="./dist/assets/images/_dummy/banner-2.png" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<script type="module">
+						$('#testGuideSwiper2 .test-guide-swiper-list').each(function () {
+							var $this = $(this);
+							var $controller = $this.siblings('.test-guide-swiper-controller');
+							$this.swiperSet({
+								appendController: $controller,
+								customClass: 'text-custom-class',
+								pageControl: true,
+								nextControl: true,
+								prevControl: true,
+								playControl: true,
+								pauseControl: true,
+								scrollbarControl: true,
+								autoplay: {
+									disableOnInteraction: false,
+								},
+							});
+						});
+					</script>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<style>
+					.test-guide-tab-list {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+					}
+					.test-guide-tab-list::after {
+						content: '';
+						display: table;
+						clear: both;
+					}
+					.test-guide-tab-item {
+						float: left;
+					}
+					.test-guide-tab-item + .test-guide-tab-item {
+						margin-left: 15px;
+					}
+					.test-guide-tab-link {
+						display: block;
+					}
+					.test-guide-tab-link.js-tabpanel-active {
+						color: #000;
+						border-bottom: 2px solid #000;
+					}
+					.test-guide-panel {
+						margin-top: 20px;
+					}
+				</style>
+				<h2 class="test-title">.uiTabPanel()</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<div class="js-ui-tab-panel">
+						<div class="test-guide-tab">
+							<ul class="test-guide-tab-list">
+								<li class="test-guide-tab-item">
+									<button type="button" class="ui-button ui-tab-link test-guide-tab-link" data-tab-open="test-guide-tab-A-01">탭 1</button>
+								</li>
+								<li class="test-guide-tab-item">
+									<button type="button" class="ui-button ui-tab-link test-guide-tab-link" data-tab-open="test-guide-tab-A-02">탭 2</button>
+								</li>
+							</ul>
+						</div>
+
+						<div class="test-guide-panel" data-tab="test-guide-tab-A-01">
+							피어나기 갑 천지는 그들에게 능히 것이다. 목숨을 구할 인생에 꽃이 끓는 희망의 창공에 길지 봄바람이다. 창공에 풀이 새 불어 있다.<br /><br />
+
+							수 피가 황금시대를 청춘이 광야에서 것이다. 거선의 가장 품고 이상 할지라도 꾸며 쓸쓸하랴? 무엇을 구하지 위하여서, 천자만홍이 든 그들에게 얼마나 가는 보이는 운다. 대한 뭇 끝까지 것이다.<br /><br />
+
+							들어 광야에서 위하여서, 청춘의 목숨을 있으며, 품으며, 심장은 못하다 위하여서. 얼마나 산야에 것은 길을 끓는다. 있으며, 미묘한 시들어 실로 평화스러운 청춘 인생에 풍부하게 운다. 피가 물방아
+							옷을 귀는 얼음과 곳이 사라지지 가지에 아름다우냐?
+						</div>
+
+						<div class="test-guide-panel" data-tab="test-guide-tab-A-02">
+							별 언덕 가을로 너무나 이름과, 듯합니다. 언덕 이런 가슴속에 소녀들의 별이 쉬이 북간도에 버리었습니다. 다 아름다운 이름을 새워 말 아침이 나는 듯합니다.<br /><br />
+
+							쉬이 사람들의 위에도 무성할 어머니 헤는 계절이 있습니다. 봄이 시와 옥 패, 시인의 하나에 계집애들의 못 별 있습니다.<br /><br />
+
+							이름자 시인의 비둘기, 별이 계십니다. 가난한 많은 나는 써 별에도 밤이 까닭입니다.
+						</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">data-initial</h4>
+						<div class="test-code">&lt;div class="js-ui-tab-panel" <mark>data-initial="test-guide-tab-A-02"</mark>&gt;</div>
+						<div class="test-description">먼저 보여줄 탭을 지정하는 속성</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">Event</h4>
+						<div class="test-code">$('.js-ui-tab-panel').on('uiTabPanelChange', function($currentOpener, $currentPanel, $openers, $panels){...});</div>
+						<div class="test-description">탭 패널이 바뀔 때 발생</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">Method</h4>
+						<div class="test-code">$('.js-ui-tab-panel').uiTabPanel('addA11y');</div>
+						<div class="test-description">접근성 관련 속성 추가</div>
+						<div class="test-code">$('.js-ui-tab-panel').uiTabPanel('clearA11y');</div>
+						<div class="test-description">접근성 관련 속성 제거</div>
+						<div class="test-code">$('.js-ui-tab-panel').uiTabPanel('open', 'test-guide-tab-A-01' [, focus:Boolean]);</div>
+						<div class="test-description">
+							이름으로 지정한 탭 열기<br />
+							focus값이 true면 탭버튼에 포커스를 보냅니다. (default: true)
+						</div>
+						<div class="test-code">$('.js-ui-tab-panel').uiTabPanel('indexOpen', index:Number [, focus:Boolean]);</div>
+						<div class="test-description">
+							인덱스로 지정한 탭 열기<br />
+							focus값이 true면 탭버튼에 포커스를 보냅니다. (default: true)
+						</div>
+						<div class="test-code">$('.js-ui-tab-panel').uiTabPanel('next');</div>
+						<div class="test-description">다음 탭 열기</div>
+						<div class="test-code">$('.js-ui-tab-panel').uiTabPanel('prev');</div>
+						<div class="test-description">이전 탭 열기</div>
+						<div class="test-code">$('.js-ui-tab-panel').uiTabPanel('goStart');</div>
+						<div class="test-description">처음 탭 열기</div>
+						<div class="test-code">$('.js-ui-tab-panel').uiTabPanel('goEnd');</div>
+						<div class="test-description">마지막 탭 열기</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<style>
+					.test-guide-accordion {
+						position: relative;
+					}
+					.test-guide-accordion-list {
+						list-style: none;
+						margin: 0;
+						padding: 0;
+					}
+					.test-guide-accordion-item + .test-guide-accordion-item {
+						margin-top: 1px;
+					}
+					.test-guide-accordion-head {
+						position: relative;
+						padding: 10px;
+						background-color: #888;
+					}
+					.test-guide-accordion-item.js-accordion-opened .test-guide-accordion-head {
+						color: #fff;
+						background-color: #111;
+					}
+					.test-guide-accordion-opener {
+						display: block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: rgba(0, 0, 0, 0);
+					}
+					.test-guide-accordion-contents {
+						background-color: #fff;
+						padding: 10px;
+					}
+				</style>
+				<h2 class="test-title">.uiAccordion()</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<div class="test-guide-accordion js-ui-accordion">
+						<ul class="test-guide-accordion-list">
+							<li class="test-guide-accordion-item js-ui-accordion__item">
+								<div class="test-guide-accordion-head">
+									<span class="test-guide-accordion-title">아코디언 1</span>
+									<button type="button" class="ui-button test-guide-accordion-opener js-ui-accordion__opener">
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+								</div>
+								<div class="test-guide-accordion-layer js-ui-accordion__layer">
+									<div class="test-guide-accordion-contents">
+										지나가는 동경과 어머니, 그리워 아름다운 시와 것은 옥 거외다. 라이너 이름을 이네들은 어머니, 말 써 멀리 못 불러 계십니다.<br /><br />
+
+										봄이 어머님, 가득 버리었습니다. 소학교 청춘이 이름과 나는 이웃 책상을 봅니다. 패, 경, 내 하나에 하나에 봅니다. 가을로 사랑과 이름과, 패, 무성할 잠, 내 차 추억과 듯합니다.<br /><br />
+
+										마리아 하나에 이런 가득 까닭입니다. 걱정도 별 하나에 이런 아름다운 거외다.
+									</div>
+								</div>
+							</li>
+							<li class="test-guide-accordion-item js-ui-accordion__item">
+								<div class="test-guide-accordion-head">
+									<span class="test-guide-accordion-title">아코디언 2</span>
+									<button type="button" class="ui-button test-guide-accordion-opener js-ui-accordion__opener">
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+								</div>
+								<div class="test-guide-accordion-layer js-ui-accordion__layer">
+									<div class="test-guide-accordion-contents">
+										지나가는 동경과 어머니, 그리워 아름다운 시와 것은 옥 거외다. 라이너 이름을 이네들은 어머니, 말 써 멀리 못 불러 계십니다.<br /><br />
+
+										봄이 어머님, 가득 버리었습니다. 소학교 청춘이 이름과 나는 이웃 책상을 봅니다. 패, 경, 내 하나에 하나에 봅니다. 가을로 사랑과 이름과, 패, 무성할 잠, 내 차 추억과 듯합니다.<br /><br />
+
+										마리아 하나에 이런 가득 까닭입니다. 걱정도 별 하나에 이런 아름다운 거외다.
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">data-once</h4>
+						<div class="test-code">&lt;div class="js-ui-accordion" <mark>data-once="true"</mark>&gt;</div>
+						<div class="test-description">하나씩만 열리게 다중 열림을 막기</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">data-focus-open</h4>
+						<div class="test-code">&lt;div class="js-ui-accordion" <mark>data-focus-open="false"</mark>&gt;</div>
+						<div class="test-description">컨텐츠에 포커스 이벤트가 발생하면 해당 아코디언 열리는 기능을 해제하는 속성</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">data-initial-open</h4>
+						<div class="test-code">&lt;div class="js-ui-accordion__item" <mark>data-initial-open="true"</mark>&gt;</div>
+						<div class="test-description">처음에 보여줄 아코디언을 지정하는 속성 (다중 오픈 가능 할 땐 다중지정 가능)</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">Event</h4>
+						<div class="test-code">$('.js-ui-accordion__item').on('uiAccordionOpened', function(event, beforeHeight, afterHeight){...});</div>
+						<div class="test-description">아코디언이 열릴 때 발생</div>
+						<div class="test-code">$('.js-ui-accordion__item').on('uiAccordionAfterOpened', function(){...});</div>
+						<div class="test-description">아코디언이 열리는 애니메이션이 끝난 후 발생</div>
+						<div class="test-code">$('.js-ui-accordion__item').on('uiAccordionClosed', function(event, beforeHeight, afterHeight){...});</div>
+						<div class="test-description">아코디언이 닫힐 때 발생</div>
+						<div class="test-code">$('.js-ui-accordion__item').on('uiAccordionAfterClosed', function(){...});</div>
+						<div class="test-description">아코디언이 닫히는 애니메이션이 끝난 후 발생</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">Method</h4>
+						<div class="test-code">$('.js-ui-accordion').uiAccordion('allClose');</div>
+						<div class="test-description">아코디언 전부 닫기</div>
+						<div class="test-code">$('.js-ui-accordion').uiAccordion('open', $item:jQueryObject [, speed:Number]);</div>
+						<div class="test-description">
+							지정한 아코디언 열기<br />
+							speed : 애니메이션 시간 (default: 500 또는 옵션으로 지정한 값)
+						</div>
+						<div class="test-code">$('.js-ui-accordion').uiAccordion('close', $item:jQueryObject [, speed:Number]);</div>
+						<div class="test-description">
+							지정한 아코디언 닫기<br />
+							speed : 애니메이션 시간 (default: 500 또는 옵션으로 지정한 값)
+						</div>
+						<div class="test-code">$('.js-ui-accordion').uiAccordion('update', {...options});</div>
+						<div class="test-description">아코디언 옵션 변경</div>
+					</div>
+				</div>
+
+				<div class="test-section-sub">
+					<h3 class="test-title">닫혀 있을 때 컨텐츠 일부 보이게 하기</h3>
+					<style>
+						.test-guide-accordion-layer.type-preview.js-ui-accordion__layer {
+							display: block;
+							height: 70px;
+							overflow: hidden;
+						}
+					</style>
+
+					<div class="test-guide-accordion js-ui-accordion">
+						<ul class="test-guide-accordion-list">
+							<li class="test-guide-accordion-item js-ui-accordion__item">
+								<div class="test-guide-accordion-head">
+									<span class="test-guide-accordion-title">아코디언 1</span>
+									<button type="button" class="ui-button test-guide-accordion-opener js-ui-accordion__opener">
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+								</div>
+								<div class="test-guide-accordion-layer type-preview js-ui-accordion__layer">
+									<div class="test-guide-accordion-contents">
+										지나가는 동경과 어머니, 그리워 아름다운 시와 것은 옥 거외다. 라이너 이름을 이네들은 어머니, 말 써 멀리 못 불러 계십니다.<br /><br />
+
+										봄이 어머님, 가득 버리었습니다. 소학교 청춘이 이름과 나는 이웃 책상을 봅니다. 패, 경, 내 하나에 하나에 봅니다. 가을로 사랑과 이름과, 패, 무성할 잠, 내 차 추억과 듯합니다.<br /><br />
+
+										마리아 하나에 이런 가득 까닭입니다. 걱정도 별 하나에 이런 아름다운 거외다.
+									</div>
+								</div>
+							</li>
+							<li class="test-guide-accordion-item js-ui-accordion__item">
+								<div class="test-guide-accordion-head">
+									<span class="test-guide-accordion-title">아코디언 2</span>
+									<button type="button" class="ui-button test-guide-accordion-opener js-ui-accordion__opener">
+										<span class="for-a11y">
+											내용
+											<span class="open-text">열기</span>
+											<span class="close-text">닫기</span>
+										</span>
+									</button>
+								</div>
+								<div class="test-guide-accordion-layer type-preview js-ui-accordion__layer">
+									<div class="test-guide-accordion-contents">
+										지나가는 동경과 어머니, 그리워 아름다운 시와 것은 옥 거외다. 라이너 이름을 이네들은 어머니, 말 써 멀리 못 불러 계십니다.<br /><br />
+
+										봄이 어머님, 가득 버리었습니다. 소학교 청춘이 이름과 나는 이웃 책상을 봅니다. 패, 경, 내 하나에 하나에 봅니다. 가을로 사랑과 이름과, 패, 무성할 잠, 내 차 추억과 듯합니다.<br /><br />
+
+										마리아 하나에 이런 가득 까닭입니다. 걱정도 별 하나에 이런 아름다운 거외다.
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">.uiDropDown()</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<div class="js-ui-dropdown">
+						<button type="button" class="js-ui-dropdown__opener">
+							<span class="open-text">open</span>
+							<span class="close-text">close</span>
+						</button>
+						<div class="js-ui-dropdown__layer">
+							피어나기 갑 천지는 그들에게 능히 것이다. 목숨을 구할 인생에 꽃이 끓는 희망의 창공에 길지 봄바람이다. 창공에 풀이 새 불어 있다.
+							<button type="button" class="js-ui-dropdown__closer">닫기</button>
+						</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">data-vertical</h4>
+						<div class="test-code">&lt;div class="js-ui-dropdown" <mark>data-vertical="top"</mark>&gt;</div>
+						<div class="test-description">레이어 기본 위치를 위로 설정하는 속성</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">Event</h4>
+						<div class="test-code">$('.js-ui-dropdown').on('uiDropDownOpened', function(){...});</div>
+						<div class="test-description">레이어 열릴 때 발생</div>
+						<div class="test-code">$('.js-ui-dropdown').on('uiDropDownClosed', function(){...});</div>
+						<div class="test-description">레이어 닫힐 때 발생</div>
+					</div>
+
+					<div class="test-section-child">
+						<h4 class="test-title">Method</h4>
+						<div class="test-code">$('.js-ui-dropdown').uiDropDown('close');</div>
+						<div class="test-description">레이어 닫기</div>
+						<div class="test-code">$('.js-ui-dropdown').uiDropDown('open');</div>
+						<div class="test-description">레이어 열기</div>
+						<div class="test-code">$('.js-ui-dropdown').uiDropDown('update');</div>
+						<div class="test-description">레이어 위치 업데이트</div>
+						<div class="test-code">$('.js-ui-dropdown').uiDropDown('btnClose');</div>
+						<div class="test-description">별도 버튼을 통해서 레이어 닫기 (접근성 포커스 관련 지원)</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">input invalid</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">invalid<button type="button" class="test-button">click!</button></h3>
+					<div class="ui-input-block type-use-delete">
+						<input type="text" class="ui-input" title="title" placeholder="value : text(true)" id="validationInput" required />
+						<button type="button" class="ui-button ui-input-delete">
+							<span class="for-a11y">입력 내용 지우기</span>
+						</button>
+					</div>
+					<div class="test-section-child">
+						<div class="test-code">$('#아이디 or .클래스').invalid(true);</div>
+						<div class="test-description">유효성 true</div>
+						<div class="test-code">$('#아이디 or .클래스').invalid(false, 'Validation message');</div>
+						<div class="test-description">유효성 false, 유효성 실패 메세지 출력</div>
+					</div>
+				</div>
+			</div>
+
+			<script type="module">
+				var message = 'Validation message';
+				var $input = $('#validationInput');
+				$('.test-button').on('click', function () {
+					$input.invalid(false, message);
+					$input.focus();
+				});
+				$input.on('keyup blur focus', function () {
+					if ($(this).val() == 'text') {
+						$(this).invalid(true);
+					} else {
+						$(this).invalid(false, message);
+					}
+				});
+			</script>
+
+			<div class="test-section">
+				<h2 class="test-title">Checkbox tab</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<ul>
+						<li>
+							<input type="radio" name="testCheckboxTabA" id="testCheckboxTabA1" data-checkbox-tab="testCheckboxTabA1" />
+							<label for="testCheckboxTabA1">탭 1</label>
+						</li>
+						<li>
+							<input type="radio" name="testCheckboxTabA" id="testCheckboxTabA2" data-checkbox-tab="testCheckboxTabA2" />
+							<label for="testCheckboxTabA2">탭 2</label>
+						</li>
+					</ul>
+					<div data-checkbox-tab-panel="testCheckboxTabA1" style="background-color: #ffd9d9">
+						천자만홍이 고동을 물방아 약동하다. 풀밭에 소담스러운 끓는 힘차게 방황하여도, 하여도 인간의 타오르고 봄바람이다. 생의 소금이라 크고 얼음과 그들에게 뜨거운지라, 그들은 있는 없는 운다. 밥을
+						없으면, 있는 싶이 바로 얼음이 따뜻한 이는 칼이다.<br /><br />
+
+						무엇을 끓는 인도하겠다는 청춘을 그들의 아니다. 사랑의 그러므로 무엇이 그들은 철환하였는가? 인생을 스며들어 고동을 약동하다. 남는 힘차게 때에, 그러므로 같은 끓는다.<br /><br />
+
+						있을 할지니, 뛰노는 용기가 이상 청춘 청춘에서만 대중을 위하여 힘있다. 이상의 우리의 있는 내려온 그들의 위하여 모래뿐일 뛰노는 이상, 힘있다. 풀이 그와 속에서 구하기 그리하였는가?
+					</div>
+					<div data-checkbox-tab-panel="testCheckboxTabA2" style="background-color: #d9ffe1">
+						이름을 옥 자랑처럼 아이들의 못 나는 봅니다. 너무나 위에 아침이 무성할 가난한 벌레는 있습니다. 가득 이름을 이런 하나에 계십니다.<br /><br />
+
+						그리고 아름다운 아침이 사람들의 계십니다. 내 프랑시스 아침이 까닭입니다.<br /><br />
+
+						별 보고, 별 덮어 자랑처럼 쓸쓸함과 벌레는 부끄러운 까닭입니다. 별에도 나는 슬퍼하는 무성할 책상을 까닭입니다. 시인의 이웃 내린 까닭입니다. 이네들은 없이 사랑과 계절이 릴케 하나에 애기
+						듯합니다.
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">특정한것만 내용이 있을 경우</h3>
+
+					<ul>
+						<li>
+							<input type="radio" name="testCheckboxTabB" id="testCheckboxTabB1" data-checkbox-tab="testCheckboxTabB1" />
+							<label for="testCheckboxTabB1">탭 1</label>
+						</li>
+						<li>
+							<input type="radio" name="testCheckboxTabB" id="testCheckboxTabB2" data-checkbox-tab="testCheckboxTabB2" />
+							<label for="testCheckboxTabB2">탭 2</label>
+						</li>
+					</ul>
+					<div data-checkbox-tab-panel="testCheckboxTabB2" style="background-color: #ffd9d9">
+						이름을 옥 자랑처럼 아이들의 못 나는 봅니다. 너무나 위에 아침이 무성할 가난한 벌레는 있습니다. 가득 이름을 이런 하나에 계십니다.<br /><br />
+
+						그리고 아름다운 아침이 사람들의 계십니다. 내 프랑시스 아침이 까닭입니다.<br /><br />
+
+						별 보고, 별 덮어 자랑처럼 쓸쓸함과 벌레는 부끄러운 까닭입니다. 별에도 나는 슬퍼하는 무성할 책상을 까닭입니다. 시인의 이웃 내린 까닭입니다. 이네들은 없이 사랑과 계절이 릴케 하나에 애기
+						듯합니다.
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default - checkbox</h3>
+
+					<ul>
+						<li>
+							<input type="checkbox" name="testCheckboxTabC" id="testCheckboxTabC1" data-checkbox-tab="testCheckboxTabC1" />
+							<label for="testCheckboxTabC1">탭 1</label>
+						</li>
+						<li>
+							<input type="checkbox" name="testCheckboxTabC" id="testCheckboxTabC2" data-checkbox-tab="testCheckboxTabC2" />
+							<label for="testCheckboxTabC2">탭 2</label>
+						</li>
+					</ul>
+					<div data-checkbox-tab-panel="testCheckboxTabC1" style="background-color: #ffd9d9">
+						천자만홍이 고동을 물방아 약동하다. 풀밭에 소담스러운 끓는 힘차게 방황하여도, 하여도 인간의 타오르고 봄바람이다. 생의 소금이라 크고 얼음과 그들에게 뜨거운지라, 그들은 있는 없는 운다. 밥을
+						없으면, 있는 싶이 바로 얼음이 따뜻한 이는 칼이다.<br /><br />
+
+						무엇을 끓는 인도하겠다는 청춘을 그들의 아니다. 사랑의 그러므로 무엇이 그들은 철환하였는가? 인생을 스며들어 고동을 약동하다. 남는 힘차게 때에, 그러므로 같은 끓는다.<br /><br />
+
+						있을 할지니, 뛰노는 용기가 이상 청춘 청춘에서만 대중을 위하여 힘있다. 이상의 우리의 있는 내려온 그들의 위하여 모래뿐일 뛰노는 이상, 힘있다. 풀이 그와 속에서 구하기 그리하였는가?
+					</div>
+					<div data-checkbox-tab-panel="testCheckboxTabC2" style="background-color: #d9ffe1">
+						이름을 옥 자랑처럼 아이들의 못 나는 봅니다. 너무나 위에 아침이 무성할 가난한 벌레는 있습니다. 가득 이름을 이런 하나에 계십니다.<br /><br />
+
+						그리고 아름다운 아침이 사람들의 계십니다. 내 프랑시스 아침이 까닭입니다.<br /><br />
+
+						별 보고, 별 덮어 자랑처럼 쓸쓸함과 벌레는 부끄러운 까닭입니다. 별에도 나는 슬퍼하는 무성할 책상을 까닭입니다. 시인의 이웃 내린 까닭입니다. 이네들은 없이 사랑과 계절이 릴케 하나에 애기
+						듯합니다.
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Radio Group</h3>
+
+					<ul>
+						<li>
+							<input type="radio" name="testCheckboxTabD" id="testCheckboxTabD1" data-checkbox-tab="testCheckboxTabD1" data-checkbox-tab-group="testCheckboxTabDE" />
+							<label for="testCheckboxTabD1">탭 DE-1</label>
+						</li>
+						<li>
+							<input type="radio" name="testCheckboxTabD" id="testCheckboxTabD2" data-checkbox-tab="testCheckboxTabD2" data-checkbox-tab-group="testCheckboxTabDE" />
+							<label for="testCheckboxTabD2">탭 D-2</label>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<input type="radio" name="testCheckboxTabE" id="testCheckboxTabE1" data-checkbox-tab="testCheckboxTabE1" data-checkbox-tab-group="testCheckboxTabDE" />
+							<label for="testCheckboxTabE1">탭 DE-1</label>
+						</li>
+						<li>
+							<input type="radio" name="testCheckboxTabE" id="testCheckboxTabE2" data-checkbox-tab="testCheckboxTabE2" data-checkbox-tab-group="testCheckboxTabDE" />
+							<label for="testCheckboxTabE2">탭 E-2</label>
+						</li>
+					</ul>
+					<div data-checkbox-tab-panel="testCheckboxTabD1, testCheckboxTabE1" style="background-color: #dbf5ff">
+						얼음이 이상의 때까지 시들어 온갖 이상 얼마나 타오르고 칼이다. 천고에 청춘의 남는 때문이다.
+					</div>
+					<div data-checkbox-tab-panel="testCheckboxTabD1" style="background-color: #ffd9d9">
+						릴케 가득 하나에 부끄러운 까닭입니다. 하나에 이제 다 새워 속의 별에도 듯합니다. 멀리 멀듯이, 아스라히 무엇인지 불러 있습니다.
+					</div>
+					<div data-checkbox-tab-panel="testCheckboxTabD2" style="background-color: #d9ffe1">
+						겨울이 속의 어머님, 무성할 이웃 걱정도 멀듯이, 딴은 듯합니다. 다 잔디가 아직 못 파란 까닭이요, 쓸쓸함과 듯합니다. 보고, 파란 이런 아직 풀이 책상을 소녀들의 있습니다. 시와 헤일 밤을 다하지
+						흙으로 하나에 듯합니다.
+					</div>
+					<div data-checkbox-tab-panel="testCheckboxTabE1" style="background-color: #ffffdb">그들에게 새가 용기가 거친 사랑의 평화스러운 힘있다. 풍부하게 수 인간의 대중을 것이다.</div>
+					<div data-checkbox-tab-panel="testCheckboxTabE2" style="background-color: #ddd9ff">
+						부끄러운 별 책상을 파란 듯합니다. 동경과 많은 부끄러운 무성할 나의 시인의 잔디가 거외다. 소녀들의 어머니 까닭이요, 아이들의 나의 언덕 지나고 계집애들의 봅니다.
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">Checkbox group</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<ul>
+						<li>
+							<input type="checkbox" name="" id="testCheckboxGroupAAll" data-checkbox-group="testCheckboxGroupA" />
+							<label for="testCheckboxGroupAAll">A 전체 선택</label>
+							<ul>
+								<li>
+									<input type="checkbox" name="" id="testCheckboxGroupA1" data-checkbox-group-child="testCheckboxGroupA" data-checkbox-group="testCheckboxGroupA1" />
+									<label for="testCheckboxGroupA1">A 1</label>
+									<ul>
+										<li>
+											<input type="checkbox" name="" id="testCheckboxGroupA1-1" data-checkbox-group-child="testCheckboxGroupA1" />
+											<label for="testCheckboxGroupA1-1">A 1-1</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="testCheckboxGroupA1-2" data-checkbox-group-child="testCheckboxGroupA1" />
+											<label for="testCheckboxGroupA1-2">A 1-2</label>
+										</li>
+										<li>
+											<input type="checkbox" name="" id="testCheckboxGroupA1-3" data-checkbox-group-child="testCheckboxGroupA1" />
+											<label for="testCheckboxGroupA1-3">A 1-2</label>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<input type="checkbox" name="" id="testCheckboxGroupA2" data-checkbox-group-child="testCheckboxGroupA" />
+									<label for="testCheckboxGroupA2">A 2</label>
+								</li>
+								<li>
+									<input type="checkbox" name="" id="testCheckboxGroupA3" data-checkbox-group-child="testCheckboxGroupA" />
+									<label for="testCheckboxGroupA3">A 2</label>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<input type="checkbox" name="" id="testCheckboxGroupBAll" data-checkbox-group="testCheckboxGroupB" />
+							<label for="testCheckboxGroupBAll">B 전체 선택</label>
+							<ul>
+								<li>
+									<input type="checkbox" name="" id="testCheckboxGroupB1" data-checkbox-group-child="testCheckboxGroupB" />
+									<label for="testCheckboxGroupB1">B 1</label>
+								</li>
+								<li>
+									<input type="checkbox" name="" id="testCheckboxGroupB2" data-checkbox-group-child="testCheckboxGroupB" disabled />
+									<label for="testCheckboxGroupB2">B 2</label>
+								</li>
+								<li>
+									<input type="checkbox" name="" id="testCheckboxGroupB3" data-checkbox-group-child="testCheckboxGroupB" />
+									<label for="testCheckboxGroupB3">B 2</label>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<h2 class="test-title">Selet tab</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<select class="ui-select">
+						<option value="">option 1</option>
+						<option value="" data-select-tab="testSeletTab2">option 2</option>
+						<option value="">option 3</option>
+						<option value="" data-select-tab="testSeletTab4">option 4</option>
+					</select>
+					<div data-select-tab-panel="testSeletTab2">
+						천자만홍이 고동을 물방아 약동하다. 풀밭에 소담스러운 끓는 힘차게 방황하여도, 하여도 인간의 타오르고 봄바람이다. 생의 소금이라 크고 얼음과 그들에게 뜨거운지라, 그들은 있는 없는 운다. 밥을
+						없으면, 있는 싶이 바로 얼음이 따뜻한 이는 칼이다.<br /><br />
+
+						무엇을 끓는 인도하겠다는 청춘을 그들의 아니다. 사랑의 그러므로 무엇이 그들은 철환하였는가? 인생을 스며들어 고동을 약동하다. 남는 힘차게 때에, 그러므로 같은 끓는다.<br /><br />
+
+						있을 할지니, 뛰노는 용기가 이상 청춘 청춘에서만 대중을 위하여 힘있다. 이상의 우리의 있는 내려온 그들의 위하여 모래뿐일 뛰노는 이상, 힘있다. 풀이 그와 속에서 구하기 그리하였는가?
+					</div>
+					<div data-select-tab-panel="testSeletTab4">
+						이름을 옥 자랑처럼 아이들의 못 나는 봅니다. 너무나 위에 아침이 무성할 가난한 벌레는 있습니다. 가득 이름을 이런 하나에 계십니다.<br /><br />
+
+						그리고 아름다운 아침이 사람들의 계십니다. 내 프랑시스 아침이 까닭입니다.<br /><br />
+
+						별 보고, 별 덮어 자랑처럼 쓸쓸함과 벌레는 부끄러운 까닭입니다. 별에도 나는 슬퍼하는 무성할 책상을 까닭입니다. 시인의 이웃 내린 까닭입니다. 이네들은 없이 사랑과 계절이 릴케 하나에 애기
+						듯합니다.
+					</div>
+				</div>
+			</div>
+
+			<div class="test-section">
+				<style>
+					.test-guide-area-disabled.is-area-disabled {
+						color: #ddd;
+					}
+				</style>
+				<h2 class="test-title">체크박스로 특정 영역 활성/비활성</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					<ul>
+						<li>
+							<input type="radio" name="testAreaDisabledA" id="testAreaDisabledA1" data-area-disabled="testAreaDisabledA1" />
+							<label for="testAreaDisabledA1">활성</label>
+						</li>
+						<li>
+							<input type="radio" name="testAreaDisabledA" id="testAreaDisabledA2" data-area-disabled="testAreaDisabledA2" />
+							<label for="testAreaDisabledA2">비활성</label>
+						</li>
+					</ul>
+					<div class="test-guide-area-disabled" data-area-disabled-target="testAreaDisabledA1">
+						<p>텍스트</p>
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" disabled />
+						<button type="button" disabled>button</button>
+						<select disabled>
+							<option value="">option 1</option>
+							<option value="">option 2</option>
+							<option value="">option 3</option>
+							<option value="">option 4</option>
+						</select>
+						<input type="radio" />
+						<input type="checkbox" />
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default - checkbox</h3>
+
+					<ul>
+						<li>
+							<input type="checkbox" name="testAreaDisabledB" id="testAreaDisabledB1" data-area-disabled="testAreaDisabledB1" />
+							<label for="testAreaDisabledB1">B - 1</label>
+						</li>
+						<li>
+							<input type="checkbox" name="testAreaDisabledB" id="testAreaDisabledB2" data-area-disabled="testAreaDisabledB2" />
+							<label for="testAreaDisabledB2">B - 2</label>
+						</li>
+					</ul>
+					<div class="test-guide-area-disabled" data-area-disabled-target="testAreaDisabledB1">
+						<p>B - 1</p>
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" disabled />
+						<button type="button" disabled>button</button>
+						<select disabled>
+							<option value="">option 1</option>
+							<option value="">option 2</option>
+							<option value="">option 3</option>
+							<option value="">option 4</option>
+						</select>
+						<input type="radio" />
+						<input type="checkbox" />
+					</div>
+					<div class="test-guide-area-disabled" data-area-disabled-target="testAreaDisabledB2">
+						<p>B - 2</p>
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" disabled />
+						<button type="button" disabled>button</button>
+						<select disabled>
+							<option value="">option 1</option>
+							<option value="">option 2</option>
+							<option value="">option 3</option>
+							<option value="">option 4</option>
+						</select>
+						<input type="radio" />
+						<input type="checkbox" />
+					</div>
+				</div>
+				<div class="test-section-sub">
+					<h3 class="test-title">multi</h3>
+
+					<ul>
+						<li>
+							<input type="checkbox" name="testAreaDisabledC" id="testAreaDisabledC1" data-area-disabled="testAreaDisabledC1" data-area-disabled-type="multi" />
+							<label for="testAreaDisabledC1">C - 1</label>
+						</li>
+						<li>
+							<input type="checkbox" name="testAreaDisabledC" id="testAreaDisabledC2" data-area-disabled="testAreaDisabledC1" data-area-disabled-type="multi" />
+							<label for="testAreaDisabledC2">C - 2</label>
+						</li>
+					</ul>
+					<div class="test-guide-area-disabled" data-area-disabled-target="testAreaDisabledC1">
+						<p>C - 1</p>
+						<input type="text" class="ui-input" title="title" placeholder="placeholder" disabled />
+						<button type="button" disabled>button</button>
+						<select disabled>
+							<option value="">option 1</option>
+							<option value="">option 2</option>
+							<option value="">option 3</option>
+							<option value="">option 4</option>
+						</select>
+						<input type="radio" />
+						<input type="checkbox" />
+					</div>
+				</div>
+			</div>
+
+			<!--
+			<div class="test-section">
+				<style>
+					.test- {
+						position: relative;
+					}
+				</style>
+				<h2 class="test-title">.swiperSet()</h2>
+				<div class="test-section-sub">
+					<h3 class="test-title">Default</h3>
+
+					//
+
+					<script type="module">
+						//
+					</script>
+				</div>
+			</div>
+			-->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./dist/assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./dist/assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

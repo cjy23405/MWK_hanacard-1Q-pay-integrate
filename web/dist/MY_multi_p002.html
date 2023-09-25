@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">멀티서비스</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<p class="page-title">
+							멀티서비스를 이용하시기 전에<br />
+							유의사항을 확인해주세요.
+						</p>
+
+						<!-- 2022.04.04 : mod : 구조 수정 -->
+						<div class="ui-select-terms type-no-margin">
+							<div class="ui-select-terms-list js-ui-accordion">
+								<div class="ui-select-terms-item js-ui-accordion__item">
+									<div class="ui-checkbox-block type-large type-all">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-1" data-checkbox-group-child="selectCheckbox2" data-checkbox-group="selectCheckbox2-1" />
+										<label for="selectCheckbox2-1" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">멀티카드 이용안내</span>
+										</label>
+										<button type="button" class="ui-button ui-select-terms-opener js-ui-accordion__opener">
+											<span class="for-a11y">
+												상세내용
+												<span class="open-text">열기</span>
+												<span class="close-text">닫기</span>
+											</span>
+										</button>
+									</div>
+									<div class="ui-select-terms-layer js-ui-accordion__layer">
+										<div class="ui-select-terms-contents">
+											<ul class="info-list">
+												<li class="info-item">부가서비스 및 이용에 대한 상세 기준은 결제카드 상품 약관에 따라 적용됩니다.</li>
+												<li class="info-item">
+													제휴간편결제 및 자동이체 등 무승인거래 (카드사의 승인 없이 이용금액이 카드사에 접수됨)의 경우 가맹점에 등록된 카드 기준으로 결제됩니다.
+													<ul class="info-list margin-top-10">
+														<li class="info-item type-indent">
+															<span class="indent">*</span>제휴간편결제 및 자동이체 이용을 위해서는 하나원큐페이 앱에서 결제카드의 카드번호를 확인하여 등록하시기 바랍니다.
+														</li>
+													</ul>
+												</li>
+												<li class="info-item">
+													후불교통금액은 승인 시점에 설정된 결제카드로 처리됩니다.
+													<ul class="info-list margin-top-10">
+														<li class="info-item type-hyphen">단, 해외결제 시 승인 내역 확인이 불가능한 경우 매입 시점에 설정된 결제카드로 처리됩니다.</li>
+													</ul>
+												</li>
+												<li class="info-item">
+													본인 명의의 멀티 시리즈 개인 신용, 체크카드에 한해 등록 가능하며, 현장할인, 멤버십 서비스, 브랜드 서비스를 제공하는 일부 상품은 멀티서비스 결제카드 설정이 제한될 수 있습니다.
+												</li>
+												<li class="info-item">국내 결제 이용 시 대행 승인이 불가합니다.</li>
+												<li class="info-item">멀티카드에 연결된 결제카드가 정지/ 해지 시 멀티카드로 해당 결제카드 이용이 불가합니다.</li>
+												<li class="info-item">가족카드는 멀티서비스 이용이 불가합니다.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--// 2022.04.04 : mod : 구조 수정 -->
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

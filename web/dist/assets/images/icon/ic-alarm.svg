@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-3{stroke:#111;stroke-width:2px}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_alarm" transform="translate(-313 -38)">
+        <path id="사각형_12221" data-name="사각형 12221" class="cls-1" transform="translate(313 38)" d="M0 0h22v22H0z"/>
+        <g id="사각형_11155" data-name="사각형 11155" transform="translate(314.5 54)" style="stroke:#111;fill:none">
+            <rect class="cls-5" width="19" height="2" rx="1"/>
+            <rect class="cls-1" x=".5" y=".5" width="18" height="1" rx=".5"/>
+        </g>
+        <g id="사각형_11156" data-name="사각형 11156" class="cls-3">
+            <path class="cls-5" d="M8 0a8 8 0 0 1 8 8v8H0V8a8 8 0 0 1 8-8z" transform="translate(316 40)"/>
+            <path class="cls-1" d="M8 1a7 7 0 0 1 7 7v6.929a.071.071 0 0 1-.071.071H1.071A.071.071 0 0 1 1 14.929V8a7 7 0 0 1 7-7z" transform="translate(316 40)"/>
+        </g>
+        <g id="사각형_11157" data-name="사각형 11157" class="cls-3">
+            <path class="cls-5" d="M0 0h8v2a4 4 0 0 1-4 4 4 4 0 0 1-4-4V0z" transform="translate(320 54)"/>
+            <path class="cls-1" d="M1 1h6v1a3 3 0 0 1-3 3 3 3 0 0 1-3-3V1z" transform="translate(320 54)"/>
+        </g>
+        <path id="선_187" data-name="선 187" transform="translate(324 39)" style="stroke-linecap:round;stroke-width:2px;stroke:#111;fill:none" d="M0 0v2"/>
+    </g>
+</svg>

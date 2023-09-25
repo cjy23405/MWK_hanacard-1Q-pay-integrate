@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-notice-service-application">이용알림서비스 신청 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 이용알림서비스 신청 팝업 -->
+			<!-- 2021.12.17 layer-wrap--full 클래스 변경 -->
+			<div class="layer-wrap layer-wrap--full" data-layer="layer-notice-service-application">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">누적이용금액이란?</h2>
+								<!-- 2021.12.17 추가 -->
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+								<!-- //2021.12.17 추가 -->
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<div class="paragraph">
+										누적이용금액이란 결제하지 않은 국내외 일시불/할부 및 단기카드대출의 총 이용금액(가족카드 사용액 포함)입니다.<br /><br />누적이용금액 발송을 원하지 않으실 경우 하나카드 홈페이지,
+										ARS 또는 고객센터를 통해 누적이용금액 발송제외 등록을 요청해주시기 바랍니다.<br /><br />본 서비스는 개인신용카드 본인회원에게만 제공됩니다. (only체크, only법인, only가족카드 소지자
+										서비스 제공 불가) 누적이용금액은 해당 승인거래 발생 시점을 기준으로 미결제된 일시불, 할부, 단기카드대출, 해외사용내역을 합산한 신용카드 총 사용액입니다. (단, 장기카드대출 및
+										체크카드 이용금액, 연회비, 단기카드대출 이자, 할부수수료 등은 포함되지 않습니다.)<br /><br />누적이용금액은 해당 월 결제일의 결제예정금액과는 다를 수 있으니 실제 결제할 금액은
+										이용대금명세서, 홈페이지 등을 참고하여 주시기 바랍니다.<br /><br />해외 승인, 가족카드, 아이사랑 복지 지원금 승인건에 대한 SMS 발송시에는 누적이용금액이 표기되지 않고 발송되나,
+										누적이용금액에는 자동합산됩니다.<br /><br />통신요금, 보험료, 후불교통카드 요금 등 무승인매입방식으로 발생한 거래내역은 별도 SMS는 발송되지 않으나 누적이용금액에는
+										자동합산됩니다.<br /><br />가족회원이 있는 경우 가족회원의 사용금액도 본인회원의 누적이용금액에 포함됩니다. <br /><br />누적이용금액 미수신을 신청한 고객의 경우 누적이용금액이
+										미표기된 거래승인 SMS가 발송됩니다.<br /><br />포인트 사용, 즉시할인 적용 시 누적이용금액이 별도로 발송됩니다. (거래승인 SMS + 누적이용금액 SMS)
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 이용알림서비스 신청 팝업 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-notice-service-application');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

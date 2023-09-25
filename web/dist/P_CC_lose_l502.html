@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-info-third-party-tel">타사카드 분실신고 전화번호</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 타사카드 분실신고 전화번호 -->
+			<div class="layer-wrap layer-wrap--full" data-layer="layer-info-third-party-tel">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">타사카드 분실신고 전화번호</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="js-ui-tab-panel">
+								<div class="ui-tab">
+									<ul class="ui-tab-list">
+										<li class="ui-tab-item">
+											<button type="button" class="ui-button ui-tab-link" data-tab-open="tab01">국내 전화번호</button>
+										</li>
+										<li class="ui-tab-item">
+											<button type="button" class="ui-button ui-tab-link" data-tab-open="tab02">해외에서 전화 시</button>
+										</li>
+									</ul>
+								</div>
+
+								<div class="ui-tab-panel" data-tab="tab01">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+									<h3 class="for-a11y">국내 전화번호</h3>
+									<div class="page-section">
+										<div class="page-section-group">
+											<div class="section-contents">
+												<div class="info-table-area">
+													<table class="info-table">
+														<!-- 2022.05.04 : mod : 텍스트 수정 -->
+														<caption class="for-a11y">
+															카드사명, 국내전화번호로 구성된 타사카드 분실신고 국내 전화번호 안내 표입니다.
+														</caption>
+														<colgroup>
+															<col />
+															<col style="width: 45%" />
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">카드사명</th>
+																<th scope="col">국내전화번호</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>KB국민카드<br />(&KB국민BC카드)</td>
+																<td>1588-1688</td>
+															</tr>
+															<tr>
+																<td>신한카드<br />(&신한BC카드)</td>
+																<td>1544-7000<br />(분실 1544-7200)</td>
+															</tr>
+															<tr>
+																<td>롯데카드</td>
+																<td>1588-8100<br />(분실 1588-8300)</td>
+															</tr>
+															<tr>
+																<td>현대카드</td>
+																<td>1577-6000<br />(분실 1577-6200)</td>
+															</tr>
+															<tr>
+																<td>삼성카드</td>
+																<td>1588-8700<br />(분실 1588-8900)</td>
+															</tr>
+															<tr>
+																<td>씨티카드<br />(&씨티BC카드)</td>
+																<td>1566-1000</td>
+															</tr>
+															<tr>
+																<td>농협NH카드<br />(&농협NHBC카드)</td>
+																<td>1644-4000</td>
+															</tr>
+															<tr>
+																<td>우리카드<br />(&우리BC카드)</td>
+																<td>1588-9955<br />(분실 1588-5300)</td>
+															</tr>
+															<tr>
+																<td>광주은행</td>
+																<td>1600-4000<br />(분실 1588-3388)</td>
+															</tr>
+															<tr>
+																<td>제주은행</td>
+																<td>1588-0079</td>
+															</tr>
+															<tr>
+																<td>전북은행</td>
+																<td>1588-4477</td>
+															</tr>
+															<tr>
+																<td>수혐중앙회</td>
+																<td>1588-1515</td>
+															</tr>
+															<tr>
+																<td>SC제일은행</td>
+																<td>1588-1599</td>
+															</tr>
+															<tr>
+																<td>부산은행</td>
+																<td>1588-6200</td>
+															</tr>
+															<tr>
+																<td>경남은행</td>
+																<td>1600-8585</td>
+															</tr>
+															<tr>
+																<td>IBK기업은행</td>
+																<td>1566-2566</td>
+															</tr>
+															<tr>
+																<td>BC바로카드</td>
+																<td>1588-5666<br />(분실 1588-4515)</td>
+															</tr>
+															<tr>
+																<td>케이뱅크</td>
+																<td>1522-1155</td>
+															</tr>
+															<tr>
+																<td>카카오뱅크</td>
+																<td>1599-8888</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="ui-tab-panel" data-tab="tab02">
+									<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+									<h3 class="for-a11y">해외에서 전화 시</h3>
+									<div class="page-section">
+										<div class="page-section-group">
+											<div class="section-contents">
+												<div class="info-table-area">
+													<table class="info-table">
+														<!-- 2022.05.04 : mod : 텍스트 수정 -->
+														<caption class="for-a11y">
+															카드사명, 국내전화번호로 구성된 타사카드 분실신고 해외에서 전화 시 안내 표입니다.
+														</caption>
+														<colgroup>
+															<col />
+															<col style="width: 45%" />
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">카드사명</th>
+																<th scope="col">국내전화번호</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>KB국민카드<br />(&KB국민BC카드)</td>
+																<td>82-2-6300-7300</td>
+															</tr>
+															<tr>
+																<td>신한카드<br />(&신한BC카드)</td>
+																<td>82-1544-7000</td>
+															</tr>
+															<tr>
+																<td>롯데카드</td>
+																<td>82-1588-8100</td>
+															</tr>
+															<tr>
+																<td>현대카드</td>
+																<td>82-2-3015-9200</td>
+															</tr>
+															<tr>
+																<td>삼성카드</td>
+																<td>82-2-2000-8100</td>
+															</tr>
+															<tr>
+																<td>씨티카드<br />(&씨티BC카드)</td>
+																<td>82-2-2004-1004</td>
+															</tr>
+															<tr>
+																<td>농협NH카드<br />(&농협NHBC카드)</td>
+																<td>82-2-6942-6478</td>
+															</tr>
+															<tr>
+																<td>우리카드<br />(&우리BC카드)</td>
+																<td>82-2-2169-5001</td>
+															</tr>
+															<tr>
+																<td>광주은행</td>
+																<td>82-62-239-5000</td>
+															</tr>
+															<tr>
+																<td>제주은행</td>
+																<td>82-64-759-2002</td>
+															</tr>
+															<tr>
+																<td>전북은행</td>
+																<td>82-63-270-8585</td>
+															</tr>
+															<tr>
+																<td>수혐중앙회</td>
+																<td>82-2-2013-0000</td>
+															</tr>
+															<tr>
+																<td>SC제일은행</td>
+																<td>82-2-950-8510</td>
+															</tr>
+															<tr>
+																<td>부산은행</td>
+																<td>82-2-950-8510</td>
+															</tr>
+															<tr>
+																<td>경남은행</td>
+																<td>82-2-950-8510</td>
+															</tr>
+															<tr>
+																<td>IBK기업은행</td>
+																<td>82-2-950-8510</td>
+															</tr>
+															<tr>
+																<td>BC바로카드</td>
+																<td>82-2-950-8510</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 타사카드 분실신고 전화번호 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-info-third-party-tel');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

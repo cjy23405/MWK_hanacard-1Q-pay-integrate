@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-3{fill:#111}
+        </style>
+    </defs>
+    <g id="ic_delete" transform="translate(-18 -10)">
+        <path id="사각형_7864" data-name="사각형 7864" transform="translate(18 10)" style="fill:none" d="M0 0h24v24H0z"/>
+        <g id="합치기_98" data-name="합치기 98" style="fill:none">
+            <path d="M13478.5-1659.5h17v13.5a3 3 0 0 1-3 3h-11a3 3 0 0 1-3-3z" style="stroke:none" transform="translate(-13457 1675)"/>
+            <path d="M13480.5-1657.5v11.5a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-11.5h-13m-2-2h17v13.5a3 3 0 0 1-3 3h-11a3 3 0 0 1-3-3v-13.5z" style="fill:#111;stroke:none" transform="translate(-13457 1675)"/>
+        </g>
+        <rect id="사각형_8215" data-name="사각형 8215" class="cls-3" width="2" height="8" rx="1" transform="translate(26.766 20)"/>
+        <rect id="사각형_15403" data-name="사각형 15403" class="cls-3" width="2" height="8" rx="1" transform="translate(31.266 20)"/>
+        <rect id="사각형_15432" data-name="사각형 15432" class="cls-3" width="2" height="20.381" rx="1" transform="rotate(90 12.353 27.853)"/>
+        <rect id="사각형_15448" data-name="사각형 15448" class="cls-3" width="2" height="10.5" rx="1" transform="rotate(90 11.633 23.633)"/>
+    </g>
+</svg>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">PC/모바일결제</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-my-coupon">
+						<div class="ui-tab type-nav">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">PC 결제</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">모바일 결제</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">PC 결제</h2>
+
+						<!-- 이용방법 -->
+						<!-- 2022.04.06 전반적인 이미지 적용작업 -->
+						<div class="page-section">
+							<div class="page-section-group margin-top-15">
+								<div class="process-question">
+									<div class="process-num">1</div>
+									<div class="process-text">
+										PC 상의 쇼핑몰 결제화면의 결제수단에서<br />
+										'원큐페이(앱카드)'를 선택해 주세요.
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-pc-01.png" alt="" class="image-only" />
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">2</div>
+									<div class="process-text">
+										'원큐페이' 결제 방법 중 <span class="color-primary">전화번호</span> 입력 또는<br />
+										<span class="color-primary">QR코드 스캔</span>을 이용할 지 선택해 주세요.
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-pc-02.png" alt="" class="image-only" />
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">3</div>
+									<div class="process-text">
+										<span class="color-primary">전화번호</span> 선택 시, 본인 명의 휴대폰 번호를<br />
+										입력하면 바로 원큐페이 앱이 실행되고,<br />
+										온라인 결제 화면으로 이동합니다.
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-pc-03.png" alt="" class="image-only" />
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">4</div>
+									<div class="process-text">
+										<span class="color-primary">QR코드 스캔</span> 선택 시, '원큐페이' 앱을 직접<br />
+										실행하여 결제 화면의 [QR스캔]을 눌러 주세요.
+										<div class="sub">
+											<ul class="info-list type-inherit">
+												<li class="info-item type-indent"><span class="indent">-</span>'원큐페이'앱을 실행</li>
+												<li class="info-item type-indent"><span class="indent">-</span>앱의 결제 화면에서 [QR스캔] 선택</li>
+												<li class="info-item type-indent">
+													<span class="indent">-</span>PC 상의 쇼핑몰 결제 화면의 QR코드 스캔<br />
+													또는 앱의 [인증코드 입력] 하여 PC 상의 쇼핑몰 결제 화면의 결제코드 7자리 입력
+												</li>
+												<li class="info-item type-indent"><span class="indent">-</span>온라인 결제 화면으로 자동 이동</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-pc-04.png" alt="" class="image-only" />
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">5</div>
+									<div class="process-text">
+										'원큐페이' 앱의 온라인 결제 화면에서<br />
+										결제할 카드를 선택해 주세요.
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-pc-05.png" alt="" class="image-only" />
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">6</div>
+									<div class="process-text">
+										생체인증 또는 결제비밀번호를 입력하여<br />
+										결제 인증을 진행해 주세요.
+									</div>
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">7</div>
+									<div class="process-text">
+										ARS 인증 설정이 되어 있다면,<br />
+										결제금액이 50만원 이상일 경우, 전화 착신 후<br />
+										ARS 인증번호를 입력하면 인증됩니다.
+									</div>
+								</div>
+
+								<div class="margin-top-15">
+									<!-- 2022.05.24 : mod : alt 값 빈 값으로 변경 -->
+									<img src="./assets/images/contents/usage-guide/img-guide-payment-pc-06.png" alt="" class="image-only" />
+								</div>
+							</div>
+
+							<div class="page-section-group margin-top-20">
+								<div class="process-question">
+									<div class="process-num">8</div>
+									<div class="process-text">
+										인증이 완료되면, 결제가 완료됩니다.<br />
+										PC 상의 쇼핑몰 화면에서<br />
+										결제완료를 확인해 주세요.
+									</div>
+								</div>
+								<!-- 2022.04.06 이미지 영역 삭제 -->
+							</div>
+						</div>
+						<!-- //2022.04.06 전반적인 이미지 적용작업 -->
+						<!-- //이용방법 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

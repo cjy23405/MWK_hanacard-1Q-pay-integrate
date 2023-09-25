@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+    <defs>
+        <style>
+            .cls-1{fill:none}.cls-4{fill:#2d3239}
+        </style>
+    </defs>
+    <g id="ic_phone_fee_s" data-name="ic_phone fee_s" transform="translate(-26 -475)">
+        <path id="사각형_14313" data-name="사각형 14313" class="cls-1" transform="translate(26 475)" d="M0 0h26v26H0z"/>
+        <path id="빼기_322" data-name="빼기 322" d="M4945-10766h-14v-1h10a1.5 1.5 0 0 0 1.5-1.5v-11.5h2.5v14z" transform="translate(-4899 11260.5)" style="fill:#7dedf3"/>
+        <g id="사각형_12097" data-name="사각형 12097" transform="translate(31.5 476)" style="stroke:#2d3239;stroke-width:1.5px;fill:none">
+            <rect width="15" height="24" rx="4" style="stroke:none"/>
+            <rect class="cls-1" x=".75" y=".75" width="13.5" height="22.5" rx="3.25"/>
+        </g>
+        <rect id="사각형_12101" data-name="사각형 12101" class="cls-4" width="15" height="1.5" rx=".75" transform="translate(31.5 493.5)"/>
+        <rect id="사각형_14340" data-name="사각형 14340" class="cls-4" width="2.5" height="1.5" rx=".75" transform="translate(37.75 496)"/>
+        <rect id="사각형_12139" data-name="사각형 12139" class="cls-4" width="15" height="1.5" rx=".75" transform="translate(31.5 480)"/>
+    </g>
+</svg>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-share">공유하기</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 친구에게 공유하기 -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-share">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2022.02.17 체크박스 텍스트 수정 -->
+								<h2 class="header__title">친구에게 공유하기</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<!-- 2022.05.23 문구 추가-->
+									<div class="margin-bottom-30">
+										<p class="basic-text font-weight-light">받는 사람이 계좌정보를 입력하여<br />송금 받을 수 있도록 공유해 주세요.</p>
+									</div>
+									<!-- 2022.02.17 .section-title 영역 삭제 -->
+									<!-- 2022.02.17 : mod : .sns-area-inner 제거 및 클래스 값 수정 -->
+									<div class="sns-area type-center">
+										<ul class="sns-list">
+											<li class="sns-item type-kakao">
+												<div class="sns-checkbox">
+													<input type="radio" name="sns-radio" id="sns-radio-01" class="ui-radio" checked />
+													<label for="sns-radio-01" class="ui-label">
+														<span class="sns-button">카카오톡</span>
+													</label>
+												</div>
+											</li>
+											<li class="sns-item type-sms">
+												<div class="sns-checkbox">
+													<input type="radio" name="sns-radio" id="sns-radio-02" class="ui-radio" />
+													<label for="sns-radio-02" class="ui-label">
+														<!-- 2022.03.04 : mod : 텍스트 수정 -->
+														<span class="sns-button">메세지</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- //2022.02.17 : mod : .sns-area-inner 제거 및 클래스 값 수정 -->
+
+									<!-- 2022.02.17 체크박스 위치 및 텍스트 수정 -->
+									<div class="ui-checkbox-block type-align-top margin-top-25">
+										<input type="checkbox" class="ui-checkbox" id="selectCheckbox-1" data-checkbox-tab="postcard" />
+										<label for="selectCheckbox-1" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">봉투에 담아서 보낼수 있어요.</span>
+										</label>
+									</div>
+									<!--// 2022.02.17 체크박스 위치 및 텍스트 수정 -->
+
+									<!-- 2022.02.17 탭메뉴 수정 -->
+									<!-- 2022.04.06 : mod : .ui-tab에 클래스 값 변경 (margin-bottom-35 -> margin-bottom-15) -->
+									<!-- 2022.07.22 : mod : 태그 변경 (div -> section) -->
+									<section class="ui-tab type-full type-side-blur margin-top-20 margin-bottom-15" data-checkbox-tab-panel="postcard">
+										<!-- 2022.07.22 : mod : 헤딩 추가 -->
+										<h3 class="for-a11y">필터</h3>
+										<div class="ui-tab-list">
+											<div class="ui-tab-item">
+												<div class="ui-radio-block">
+													<input type="radio" class="ui-radio" name="sorting" id="sorting-all" data-checkbox-tab="postcardAll" checked />
+													<label for="sorting-all" class="ui-label">
+														<span class="ui-tab-link">전체</span>
+													</label>
+												</div>
+											</div>
+											<div class="ui-tab-item">
+												<div class="ui-radio-block">
+													<input type="radio" class="ui-radio" name="sorting" id="sorting-1" data-checkbox-tab="postcard1" />
+													<label for="sorting-1" class="ui-label">
+														<span class="ui-tab-link">축하/감사</span>
+													</label>
+												</div>
+											</div>
+											<div class="ui-tab-item">
+												<div class="ui-radio-block">
+													<input type="radio" class="ui-radio" name="sorting" id="sorting-2" data-checkbox-tab="postcard2" />
+													<label for="sorting-2" class="ui-label">
+														<span class="ui-tab-link">격려</span>
+													</label>
+												</div>
+											</div>
+											<div class="ui-tab-item">
+												<div class="ui-radio-block">
+													<input type="radio" class="ui-radio" name="sorting" id="sorting-3" data-checkbox-tab="postcard3" />
+													<label for="sorting-3" class="ui-label">
+														<span class="ui-tab-link">경조사</span>
+													</label>
+												</div>
+											</div>
+											<div class="ui-tab-item">
+												<div class="ui-radio-block">
+													<input type="radio" class="ui-radio" name="sorting" id="sorting-4" data-checkbox-tab="postcard4" />
+													<label for="sorting-4" class="ui-label">
+														<span class="ui-tab-link">명절</span>
+													</label>
+												</div>
+											</div>
+											<div class="ui-tab-item">
+												<div class="ui-radio-block">
+													<input type="radio" class="ui-radio" name="sorting" id="sorting-5" data-checkbox-tab="postcard5" />
+													<label for="sorting-5" class="ui-label">
+														<span class="ui-tab-link">FUN/기타</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</section>
+									<!-- // 2022.07.22 : mod : 태그 변경 (div -> section) -->
+									<!--// 2022.02.17 탭메뉴 수정 -->
+
+									<div class="postcard" data-checkbox-tab-panel="postcard">
+										<!-- 2022.04.06 : mod : .postcard-thumbs, .postcard-thumbs-inner 추가 -->
+										<div class="postcard-thumbs">
+											<div class="postcard-thumbs-inner">
+												<ul class="postcard-list">
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard1">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard1" checked />
+																<label for="postcard1" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-1.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard1">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard2" />
+																<label for="postcard2" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-2.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard2">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard3" />
+																<label for="postcard3" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-3.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard2">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard4" />
+																<label for="postcard4" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-4.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard2">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard5" />
+																<label for="postcard5" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-5.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard3">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard6" />
+																<label for="postcard6" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-6.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard3">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard7" />
+																<label for="postcard7" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-7.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard3">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard8" />
+																<label for="postcard8" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-8.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard4">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard9" />
+																<label for="postcard9" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-9.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard5">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard10" />
+																<label for="postcard10" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-10.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard5">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard11" />
+																<label for="postcard11" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-11.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+													<li class="postcard-item" data-checkbox-tab-panel="postcardAll, postcard5">
+														<div class="postcard-block">
+															<div class="ui-radio-block">
+																<input type="radio" class="ui-radio" name="postcard" id="postcard12" />
+																<label for="postcard12" class="ui-label">
+																	<img src="./assets/images/_dummy/postcard-12.png" alt="새해 복 많이 받으세요" class="postcard-image" />
+																</label>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- //2022.04.06 : mod : .postcard-thumbs, .postcard-thumbs-inner 추가 -->
+
+										<!-- 2022.04.06 : add : 미리보기 이미지 추가 -->
+										<div class="postcard-preview">
+											<img src="" alt="" class="postcard-preview-image" />
+										</div>
+										<!-- //2022.04.06 : add : 미리보기 이미지 추가 -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary" data-role="layerClose">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 친구에게 공유하기 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-share');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

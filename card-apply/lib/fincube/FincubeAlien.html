@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-V47163063B');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Fingram OCR</title>
+
+    <meta name='application-name' content='Fingram OCR' />
+    <meta name='msapplication-tooltip' content='Fingram OCR' />
+    <meta id='meta_og_title' property='og:title' content='Fingram OCR' />
+    <meta name='description' content='핀그램 외국인등록증 인식, Fingram OCR' />
+    <meta property='og:description' content='핀그램 외국인등록증 인식, Fingram OCR' />
+    <meta id='meta_og_image' property="og:image" content="./js/resource/fingram_logo_godo2.png" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:type" content="website" />
+    <meta name='keywords' content='여권인식, 신분증인식, 외국인등록증인식, OCR' />
+
+    <link rel="icon" type="image/png" href="./js/resource/ic_launcher.png" sizes="96x96" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <style>
+        html,
+        body {
+            background-color:  rgba( 55, 55, 55, 255 );
+        }
+    </style>
+    <link rel="stylesheet" href="./js/ui.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+      console.log("document.referrer: ", document.referrer); // 이전 페이지의 base url
+      if (String(document.referrer).indexOf("https://fincubeocr.posicube.com:8497") === -1) {
+        // 허용된 base url 이 아니면 403 페이지로 이동 또는 렌더링을 하지 않음
+        location.href = "https://fincubeocr.posicube.com:8497/50x.html";
+      }
+    </script>
+    <div class="container">
+        <form>
+
+        </form>
+        <section class="top">
+            <div class="row-fluid justify-content-md-center mt-4 mb-5">
+                <div class="col text-center">
+
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col">
+                    <p class="text-center text-white">외국인등록증 인식을 시작합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mid text-center">
+            <!-- Modal -->
+            <div id="process" class="modal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <!-- Modal content-->
+                    <div class="notice-wrapper">
+                        <img src="./js/resource/loading.gif" class="icon-loading">
+                        <p id="text-loading" class="text-smaller text-primary"><br></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="result" class="modal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <!-- Modal content-->
+                    <div class="notice-wrapper">
+                        <img src="./js/resource/notice.svg" class="icon-notice">
+                        <p class="text-smaller"> .<br /> .<br />
+                            <br /><br />
+                            (인증횟수 <span class="fail-count text-primary">1</span>/5)
+                        </p>
+                        <button type="button" id="btn-fail"
+                            class="btn btn-lg btn-block btn-primary btn-agree">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="col">
+                    <div class="stage">
+                        <video autoplay muted playsinline></video>
+                        <canvas id="id-card" class="d-none"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-green text-small pt-5 text-guide">
+                외국인등록증을 가이드 영역에 맞춰 주세요.
+                <br>※조명의 빛 반사를 유의해 주세요.
+            </p>
+        </section>
+
+        <section class="mid text-center container mt-4">
+
+            <!-- 외국인등록증 -->
+            <form class="form form-alien d-none" id="form-alien">
+                <input type="hidden" name="userName" id="userName">
+                <input type="hidden" name="identity" id="identity">
+                <input type="hidden" class="birthDate">
+
+                <div class="form-group row">
+                    <label for="name" class="col-4 col-form-label text-left">이름</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control text-secondary" id="Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="RrNumber" class="col-4 col-form-label text-left">주민등록번호</label>
+                    <div class="col-8">
+                        <div class="eye off"></div>
+                        <input type="text" class="form-control text-primary" id="RrNumber" maxlength="14">
+                        <input type="hidden" id="juminNoShow">
+                        <input type="hidden" id="juminNoHide">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="nationality" class="col-4 col-form-label text-left">국가</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control text-primary" id="Nationality">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="issueDate" class="col-4 col-form-label text-left">발급일자</label>
+                    <div class="col-8">
+                            <input type="text" class="form-control text-primary" name="issueDate" id="issueDate"  >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="region" class="col-4 col-form-label text-left">체류자격</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control text-primary" id="VisaType">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="name_kor" class="col-4 col-form-label text-left" id="name_korLabel">한글이름</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control text-primary" id="Name_kor">
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="bottom mt-5">
+            <!-- 버튼 -->
+            <div class="row-fluid justify-content-md-center button-box">
+                <div class="col">
+                    <button type="button" class="btn btn-lg btn-block btn-primary btn-agree d-none"  id="takePicture" >촬영</button> 
+                    <button type="button" class="btn btn-lg btn-block btn-secondary d-none" id="takePictureAgain" disabled="disabled">재촬영</button>
+
+                    <div class="row button-block d-none">
+                        <div class="col-6 pl-1">
+                            <button type="button" class="btn btn-lg btn-inline btn-primary btn-block"
+                                id="btn-ocr">다음</button>
+                            <button type="button" class="btn btn-lg btn-inline btn-primary btn-block d-none"
+                                id="btn-verify">확인</button>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-white" id="Resolution"></div>
+                    <img src="./js/resource/fingram_logo_godo1.png" class="logo-bottom">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <input type="hidden" id="flag" value="1">
+    <div class="resolution"></div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+
+    <script src="./js/ui.js"></script>
+    <script src="./js/webcam.js"></script>
+    <script src="./js/ocr.js"></script>
+    <script src="./fincube.js"></script>
+    <!-- <script>
+        const img_buf = Module._malloc(256);
+        /*var result = Module.ccall(
+            'test_scanFrame_image',	// name of C function
+            'string',	// return type
+            ['string'],	// argument types
+            [img_buf] // arguments
+            );*/
+            
+            scanCard(img_buf, 10, 15, 'bbb');
+            
+            console.log(`Result: ${result}`);
+            </script> -->
+    <script>
+
+        var detected = false;
+        var address = 0;
+        var PageEnd = false;
+        var timer = 0;
+        var curOrientation = window.orientation;
+
+        function chageStage(val) {
+            if (val === true) {
+                var stage = document.querySelector('.stage');
+                stage.style.borderColor = "white";
+                stage.style.backgroundColor = "white";
+            }
+            else {
+                var stage = document.querySelector('.stage');
+                stage.style.borderColor = "#796f6f69";
+                stage.style.backgroundColor = "#796f6f69";
+            }
+        }
+
+        $(document).ready(function () {
+
+            var resolution;
+            var ForeignerLength = 7;
+            var loadFinished = false;
+
+            //시작
+            $(".stage video").addClass("d-none");
+            console.log("2. address : " + address );
+            Module.onRuntimeInitialized = async _ => {
+                timer = setInterval(function () {
+
+                if(detected)
+                {
+                    webcam.sleep(10);
+                    return;
+                }
+
+                if(address === 0 && !PageEnd && webcam.getResolutionCompatibility())
+                {
+
+
+                    (loadFinished === false)
+                    {
+                        loadFinished = true;
+                        $(".stage video").removeClass("d-none");
+                    }
+                    address = getAlienScanner();
+                    console.log("getAlienScanner address : " + address);
+
+                    return;
+
+                }
+
+                if(address === 0 || PageEnd)
+                {
+                    webcam.sleep(10);
+                    return;
+                }
+                resolution = webcam.getResolution();
+                $("#Resolution").text(resolution);
+                //var timer_sec = Number($("#span_sec").text());
+                //$("#span_sec").text(timer_sec + 1);
+
+                if (!detected) 
+                {       
+                    var name;
+                    var number;
+                    var Date;
+                    var nationality;
+                    var visaType;
+                    var Completed;
+           
+                    var result = webcam.startRecognition(address, 2);
+
+                    if (result != "" && result !== undefined && result !== null) 
+                    {
+         
+                        console.log(`result : ${result}`);
+                        resultSplit = result.split('/');
+
+                        if (resultSplit.length > 0 && (resultSplit[0] === "detected" || resultSplit[0] === "true"))
+                        {
+                            chageStage(true);
+                        }
+                        else
+                        {
+                            chageStage(false);
+                            return;
+                        }
+
+                        if (resultSplit.length == ForeignerLength) 
+                        {
+                            var resultIndex = 0;
+                            Completed = resultSplit[resultIndex] , resultIndex++;
+
+                            if(Completed === "true")
+                                detected = true;
+
+                            name = resultSplit[resultIndex] , resultIndex++;
+                            number = resultSplit[resultIndex] , resultIndex++;
+                            Date = resultSplit[resultIndex] , resultIndex++;
+                            nationality = resultSplit[resultIndex] , resultIndex++;
+                            visaType = resultSplit[resultIndex] , resultIndex++;
+                            name_kor = resultSplit[resultIndex];
+
+                            if (number.length == 13)
+                                number = number.slice(0, 6) + '-' + number.slice(6, 13);
+                            else
+                                number = "";
+
+                            if (detected) {
+
+                                $(".stage video").addClass("d-none");
+                                $(".stage canvas").removeClass("d-none");
+
+                                //webcam.drawImage();
+                                webcam.drawJpg(address);
+                                //webcam.drawRgba(address);
+
+                                $("#takePictureAgain").removeClass("d-none");
+                                $("#takePictureAgain").attr("disabled", false);
+
+                                webcam.stopStreamedVideo();
+
+                                $("#Name").val(name);
+                                $("#RrNumber").val(number);
+                                $("#Nationality").val(nationality);
+                                $("#issueDate").val(Date);
+                                $("#VisaType").val(visaType);
+                                if (name_kor !== "")
+                                {
+                                    $("#Name_kor").removeClass("d-none");
+                                    $("#name_korLabel").removeClass("d-none");
+                                    $("#Name_kor").val(name_kor);
+                                }
+                                else
+                                {
+                                    $("#Name_kor").addClass("d-none");
+                                    $("#name_korLabel").addClass("d-none");
+                                }
+                                $(".form-alien").removeClass("d-none");
+                                $("#Resolution").addClass("d-none");
+                            }  
+                        }
+                    }
+                             
+                }
+            }, 1);
+
+        }
+        });
+
+    $("#takePictureAgain").click(function () {
+        chageStage(false);
+        destroyAlienScanner(address);
+        address = 0;
+
+        console.log("재촬영")
+       
+        // Memory Leak check
+        //Module.doLeakCheck();
+
+        detected = false;
+        Count = 0;
+
+        $(".form-alien").addClass("d-none");
+        $("#Resolution").removeClass("d-none");
+
+        webcam.setupWebcam();
+    });
+
+
+
+    window.addEventListener('beforeunload', (event) => {
+        // 명세에 따라 preventDefault는 호출해야하며, 기본 동작을 방지합니다. 
+        event.preventDefault();
+        // 대표적으로 Chrome에서는 returnValue 설정이 필요합니다.
+        PageEnd = true;
+        clearInterval(timer);
+        destroyAlienScanner(address);
+        address = null;
+
+        return event.returnValue = 'Are you sure you want to leave?';
+    });
+
+    
+    window.addEventListener("orientationchange", function() {
+        if ((curOrientation !== window.orientation) && !detected)
+        {
+            curOrientation = window.orientation;
+            webcam.setupWebcam();   
+        }
+	}, false);
+
+
+    </script>
+</body>
+</html>

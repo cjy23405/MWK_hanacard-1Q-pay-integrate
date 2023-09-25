@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-1{fill:#fff;stroke:#707070;opacity:0}.cls-2,.cls-6{fill:none}.cls-2{stroke:#2d3239;stroke-width:1.5px}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_movie" transform="translate(-862 -189)">
+        <g id="그룹_12725" data-name="그룹 12725" transform="translate(7 -9)">
+            <g id="사각형_15714" data-name="사각형 15714" class="cls-2" transform="rotate(180 445.185 115.188)">
+                <rect class="cls-5" width="30.741" height="25.394" rx="5"/>
+                <rect class="cls-6" x=".75" y=".75" width="29.241" height="23.894" rx="4.25"/>
+            </g>
+            <path id="다각형_101" data-name="다각형 101" d="M5.639 1.457a1 1 0 0 1 1.722 0l4.748 8.034A1 1 0 0 1 11.248 11h-9.5a1 1 0 0 1-.856-1.509z" transform="rotate(90 333.411 546.589)" style="fill:#7dedf3"/>
+            <g id="다각형_100" data-name="다각형 100" style="fill:none">
+                <path class="cls-5" d="M5.639 1.457a1 1 0 0 1 1.722 0l4.748 8.034A1 1 0 0 1 11.248 11h-9.5a1 1 0 0 1-.856-1.509z" transform="rotate(90 335.411 546.589)"/>
+                <path d="M6.5 2.949 2.629 9.5h7.742L6.5 2.949m0-1.983c.334 0 .667.163.86.491l4.748 8.034a1 1 0 0 1-.86 1.509H1.752a1 1 0 0 1-.86-1.509l4.747-8.034A.991.991 0 0 1 6.5.966z" style="fill:#2d3239;stroke:none" transform="rotate(90 335.411 546.589)"/>
+            </g>
+            <path id="선_375" data-name="선 375" class="cls-2" transform="translate(884.69 205.707)" d="M0 0v23.942"/>
+            <path id="선_376" data-name="선 376" class="cls-2" transform="translate(884.69 224.519)" d="M4.56 0H0"/>
+            <path id="선_373" data-name="선 373" class="cls-2" transform="translate(860.749 224.519)" d="M4.56 0H0"/>
+            <path id="선_377" data-name="선 377" class="cls-2" transform="translate(884.69 219.958)" d="M4.56 0H0"/>
+            <path id="선_374" data-name="선 374" class="cls-2" transform="translate(860.749 219.958)" d="M4.56 0H0"/>
+            <path id="선_378" data-name="선 378" class="cls-2" transform="translate(884.69 215.398)" d="M4.56 0H0"/>
+            <path id="선_371" data-name="선 371" class="cls-2" transform="translate(860.749 215.398)" d="M4.56 0H0"/>
+            <path id="선_379" data-name="선 379" class="cls-2" transform="translate(884.69 210.838)" d="M4.56 0H0"/>
+            <path id="선_370" data-name="선 370" class="cls-2" transform="translate(860.749 210.838)" d="M4.56 0H0"/>
+            <path id="선_372" data-name="선 372" class="cls-2" transform="translate(865.309 205.707)" d="M0 0v23.942"/>
+        </g>
+    </g>
+</svg>

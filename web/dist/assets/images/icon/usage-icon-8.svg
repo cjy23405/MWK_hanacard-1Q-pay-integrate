@@ -1,0 +1,22 @@
+<svg data-name="ic-shop point-size36" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <g data-name="그룹 13209" transform="translate(-23 -575)">
+        <g data-name="패스 13206" style="fill:#fff">
+            <path d="M18 24.25H5A4.255 4.255 0 0 1 .75 20V2C.75 1.31 1.31.75 2 .75h19c.69 0 1.25.56 1.25 1.25v18A4.255 4.255 0 0 1 18 24.25z" style="stroke:none" transform="translate(25 582)"/>
+            <path d="M2 1.5a.5.5 0 0 0-.5.5v18c0 1.93 1.57 3.5 3.5 3.5h13c1.93 0 3.5-1.57 3.5-3.5V2a.5.5 0 0 0-.5-.5H2M2 0h19a2 2 0 0 1 2 2v18a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V2a2 2 0 0 1 2-2z" style="fill:#2d3239;stroke:none" transform="translate(25 582)"/>
+        </g>
+        <g data-name="사각형 16166" style="stroke-width:1.5px;stroke:#2d3239;fill:none">
+            <path d="M6 0a6 6 0 0 1 6 6v1.5H0V6a6 6 0 0 1 6-6z" style="stroke:none" transform="translate(30.5 576)"/>
+            <path d="M6 .75A5.25 5.25 0 0 1 11.25 6v.75H.75V6A5.25 5.25 0 0 1 6 .75z" style="fill:none" transform="translate(30.5 576)"/>
+        </g>
+        <rect data-name="사각형 16167" width="8" height="1.5" rx=".75" transform="rotate(180 20.25 294.12)" style="fill:#2d3239"/>
+        <g data-name="그룹 13186">
+            <path data-name="패스 12496" d="M7 0a7 7 0 1 1-7 7 7 7 0 0 1 7-7z" transform="translate(41.469 594.259)" style="fill:#fff"/>
+            <path data-name="패스 12497" d="M7 0a7 7 0 1 1-7 7 7 7 0 0 1 7-7z" transform="translate(43.971 595.477)" style="fill:#7dedf3"/>
+            <g data-name="타원 1989" transform="translate(41 594)" style="stroke-width:1.5px;stroke:#2d3239;fill:none">
+                <circle cx="8" cy="8" r="8" style="stroke:none"/>
+                <circle cx="8" cy="8" r="7.25" style="fill:none"/>
+            </g>
+            <path data-name="패스 14063" d="M3.762-7.865a3.91 3.91 0 0 1 1.183.16 2.237 2.237 0 0 1 .831.456 1.822 1.822 0 0 1 .489.715 2.573 2.573 0 0 1 .16.924v.165a2.583 2.583 0 0 1-.165.935 1.972 1.972 0 0 1-.5.742 2.345 2.345 0 0 1-.836.49 3.532 3.532 0 0 1-1.173.178H2.057v2.649a.388.388 0 0 1-.17.351.7.7 0 0 1-.387.111.678.678 0 0 1-.389-.111.392.392 0 0 1-.165-.351v-6.6a.878.878 0 0 1 .182-.638.959.959 0 0 1 .665-.176zm-.143 3.828A2.018 2.018 0 0 0 4.9-4.378a1.3 1.3 0 0 0 .424-1.078v-.132a1.218 1.218 0 0 0-.407-1.029 1.92 1.92 0 0 0-1.188-.313H2.057v2.893z" transform="translate(45.5 606.073)" style="stroke-width:.5px;fill:#2d3239;stroke:#2d3239"/>
+        </g>
+    </g>
+</svg>

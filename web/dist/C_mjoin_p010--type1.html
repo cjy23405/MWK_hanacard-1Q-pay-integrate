@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">가입 완료</h1>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-completion">
+						<!-- [DD] 원큐페이만 가입 시 -->
+						<h2 class="page-title">
+							원큐페이 가입이<br />
+							완료되었습니다.
+						</h2>
+						<div class="page-info has-com-icon type-icon-id">
+							<p class="page-info-text">
+								김하나님,<br />
+								이제 가장 빠른 결제를 경험해보세요!
+							</p>
+						</div>
+						<!--// [DD] 원큐페이만 가입 시 -->
+
+						<!-- [DD] 원큐페이&오픈뱅킹 가입 시 -->
+						<h2 class="page-title">
+							원큐페이 가입이<br />
+							완료되었습니다.
+						</h2>
+						<div class="page-info has-com-icon type-icon-id">
+							<p class="page-info-text">
+								출금 계좌 하나 101xxxxxxxx345<br />
+								오픈뱅킹 정상 등록 되었습니다.
+							</p>
+						</div>
+						<!--// [DD] 원큐페이&오픈뱅킹 가입 시 -->
+
+						<!-- [DD] 오픈뱅킹 정상 등록 계좌가 여러 개일 경우 -->
+						<h2 class="page-title">
+							원큐페이 가입이<br />
+							완료되었습니다.
+						</h2>
+						<div class="page-info has-com-icon type-icon-id">
+							<p class="page-info-text">
+								출금 계좌 하나 101xxxxxxxx345 외 1개<br />
+								오픈뱅킹 정상 등록 되었습니다.
+							</p>
+						</div>
+						<!--// [DD] 오픈뱅킹 정상 등록 계좌가 여러 개일 경우 -->
+
+						<!-- [DD] 픈뱅킹 미동의 또는 비정상등록일 경우 문구 미노출 -->
+						<h2 class="page-title has-com-icon type-icon-id">
+							원큐페이 가입이<br />
+							완료되었습니다.
+						</h2>
+						<!--// [DD] 픈뱅킹 미동의 또는 비정상등록일 경우 문구 미노출 -->
+					</div>
+					<div class="ui-link-box type-bottom">
+						<a href="" class="ui-link-block type-align-middle" role="button">
+							<!-- 2022.04.27 : mod : 이미지 css 처리 -->
+							<div class="ui-link-img type-at-a-look"></div>
+							<!-- //2022.04.27 : mod : 이미지 css 처리 -->
+							<div class="ui-link-right">
+								<strong class="ui-link-title">마이데이터</strong>
+								<div class="ui-link-text">
+									가장 쉽고, 안전하게 원큐페이와<br />
+									함께하는 새로운 금융생활
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<!-- 2022.03.23 : mod : type-fixed 클래스 값 추가 -->
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

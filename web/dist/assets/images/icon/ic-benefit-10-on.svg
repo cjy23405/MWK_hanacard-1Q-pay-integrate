@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+    <defs>
+        <style>
+            .cls-1,.cls-3,.cls-4{fill:none}.cls-3,.cls-4{stroke:#111;stroke-width:1.5px;stroke-linecap:round}.cls-3{stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="ic_benefit_10_on" transform="translate(-73 -1020)">
+        <g id="그룹_12099" data-name="그룹 12099" transform="translate(-174 -201)">
+            <path id="사각형_7186" data-name="사각형 7186" class="cls-1" transform="translate(247 1221)" d="M0 0h21v21H0z"/>
+        </g>
+        <path id="합치기_205" data-name="합치기 205" class="cls-3" d="M-3058 0h3a1 1 0 0 1 1 1v.8a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1z" transform="translate(3140 1023.811)"/>
+        <path id="빼기_21" data-name="빼기 21" class="cls-3" d="M-3046.531 14.57h-6a2 2 0 0 1-2-2V6.347l1.957-2.165h6.087l1.956 2.165v6.223a2 2 0 0 1-2 2z" transform="translate(3133.031 1022.43)"/>
+        <g id="그룹_12100" data-name="그룹 12100" transform="translate(-96.926 252.306)">
+            <path id="선_341" data-name="선 341" class="cls-4" transform="translate(180.425 779.5)" d="M0 0v2.85"/>
+            <path id="선_342" data-name="선 342" class="cls-4" transform="translate(179 780.925)" d="M2.85 0H0"/>
+        </g>
+        <path id="선_361" data-name="선 361" transform="translate(78.5 1029.5)" style="stroke:#111;stroke-width:1.5px;fill:none" d="M0 0h10"/>
+    </g>
+</svg>

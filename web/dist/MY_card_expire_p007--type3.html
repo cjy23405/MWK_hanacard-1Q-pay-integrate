@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">유효기간만료예정카드</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<!-- 2022.07.15 : mod : 문구변경 발급 → 만료 -->
+						<h2 class="page-title margin-bottom-none">
+							<span class="title-step">STEP 1</span> 만료 예정 카드의 정보를<br />
+							확인해 주세요.
+						</h2>
+						<!-- //2022.07.15 : mod : 문구변경 발급 → 만료 -->
+
+						<!-- 2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+						<div class="page-progress" role="img" aria-label="총 3단계 중 1단계">
+							<div class="progress-tracker">
+								<div class="progress-step is-active"></div>
+								<div class="progress-step"></div>
+								<div class="progress-step"></div>
+							</div>
+						</div>
+						<!-- //2022.05.04 : mod : 스텝 프로그레스 구조 변경 -->
+
+						<div class="page-info">
+							<p class="page-info-text color-basic">
+								소지하신 카드는 발급이 중단되었습니다.<br /><br />
+								$카드명$을 사랑해주신 $이름$님께 진심으로 사과드립니다. <br /><br />
+								유효기간 만료 후에는 카드이용(현금인출기능 포함)이 불가능하니 이용에 불편 없으시도록 <span class="color-primary">추천카드 안내</span>를 통해 새로운 카드를 발급 받으시기 바랍니다.
+							</p>
+						</div>
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="form-detail">
+								<div class="form-detail-head">
+									<h3 class="title">만료예정카드</h3>
+								</div>
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">만료예정카드</dt>
+										<dd class="form-detail-group">
+											하나가족사랑카드<br />
+											4365-****-****-1234
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">소지구분</dt>
+										<dd class="form-detail-group">본인</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">유효년월</dt>
+										<dd class="form-detail-group">2018-08</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">브랜드</dt>
+										<dd class="form-detail-group">국내전용(LOCAL)</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-primary" role="button">추천카드 바로가기</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion margin-top-35">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">유효기간 만료 이후에는 카드이용(현금인출 기능 포함) 및 갱신발급이 불가합니다.</li>
+										<li class="info-item">소지하신 카드가 하나카드의 상품운영 정책에 의하여 발급이 중단된 경우에는 갱신발급이 불가하거나 혹은 다른 종류의 카드로 전환갱신되어 발급될 수 있습니다.</li>
+										<li class="info-item">
+											유효기간 만료 후에는, 기존카드에 등록되어 있던 자동이체(통신요금, 아파트관리비, 보험료 등)는 자동납부 처리가 되지 않습니다. 단, 보유 중인 이용 가능한 신용카드 중 한 개의 카드로
+											자동이체 승계가 될 수 있으므로, 자동이체를 다른 카드로 변경하거나 해지를 원하는 경우 해당 가맹점 앞으로 연락하여 주시기 바랍니다.
+										</li>
+										<li class="info-item">회원님의 신용도 및 당사 규정에 따라 별도의 통보 없이 발급이 제한되거나 한도가 축소될 수 있습니다.</li>
+										<li class="info-item">
+											보유한 모든 신용카드의 유효기간이 만료되면 하나카드 개인신용회원에서 탈회되며, 탈회 후 신용카드를 다시 발급받으실 경우 신규 기준이 적용되어 심사 결과에 따라 발급이 불가할 수
+											있습니다.
+										</li>
+										<li class="info-item">포인트를 보유하신 경우, 잔여 포인트는 포인트 유효기간까지 유지됩니다. (포인트 사용관련 세부 내용은 하나카드 고객센터로 문의하여 주시기 바랍니다. )</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">우수회원 실적 조회</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="round-block">
+							<ul class="round-block-list js-ui-accordion">
+								<li class="round-block-item js-ui-accordion__item">
+									<div class="round-block-box type-color-basic type-accordion">
+										<h2 class="round-block-text font-weight-medium">
+											김하나님은<br />
+											<span class="color-vip">프리미엄 로열</span> 등급입니다.
+										</h2>
+										<div class="form-detail margin-top-20">
+											<dl class="form-detail-list type-text-default">
+												<div class="form-detail-item">
+													<dt class="form-detail-title">2022년 예상등급</dt>
+													<dd class="form-detail-group"><span class="font-weight-medium">로열</span></dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">다음 등급(퍼스트)까지</dt>
+													<dd class="form-detail-group">
+														<span class="font-weight-medium"><span class="color-secondary-dark">280</span>점 부족</span>
+													</dd>
+												</div>
+												<div class="form-detail-item">
+													<dt class="form-detail-title">다음 등급 산정일</dt>
+													<dd class="form-detail-group"><span class="font-weight-medium">2022.02.13</span></dd>
+												</div>
+											</dl>
+										</div>
+
+										<div class="round-block-opener-area">
+											<button type="button" class="ui-button round-block-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세 내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+
+										<div class="round-block-layer js-ui-accordion__layer">
+											<div class="round-block-contents">
+												<h3 class="basic-text font-weight-medium">2022년 예상 점수</h3>
+												<div class="form-detail margin-top-20">
+													<dl class="form-detail-list type-text-default">
+														<div class="form-detail-item">
+															<dt class="form-detail-title">종합점수</dt>
+															<dd class="form-detail-group">
+																<span class="font-weight-medium"><span class="color-vip">0</span>점</span>
+															</dd>
+														</div>
+														<div class="form-detail-item">
+															<dt class="form-detail-title">카드이용점수</dt>
+															<dd class="form-detail-group">
+																<span class="font-weight-medium">0점</span>
+															</dd>
+														</div>
+														<div class="form-detail-item">
+															<dt class="form-detail-title">우대점수</dt>
+															<dd class="form-detail-group"><span class="font-weight-medium">0점</span></dd>
+														</div>
+														<div class="form-detail-item">
+															<dt class="form-detail-title">최근 6개월 이용개월수</dt>
+															<dd class="form-detail-group"><span class="font-weight-medium">0개월</span></dd>
+														</div>
+														<div class="form-detail-item">
+															<dt class="form-detail-title">프리미엄 카드 보유 여부</dt>
+															<dd class="form-detail-group"><span class="font-weight-medium">N</span></dd>
+														</div>
+													</dl>
+												</div>
+
+												<p class="ui-notice margin-top-20">
+													직전 월 말일까지의 이용실적 기준 예상 등급이며, 종합점수 5,000점 이상이면서 카드이용점수 4,000점 이상인 회원 중 신용도 및 당사 내부기준을 만족하시는 경우는 VVIP등급 또는
+													퍼스트 등급으로 상향될 수 있으며, 2022년 1월 2일에 확정된 등급을 조회하실 수 있습니다.
+												</p>
+												<p class="ui-notice">프리미엄 카드 상품 : 클럽 시그니처, 클럽 프리미어, 클럽 프리머스(구.프리머스 포함, 일반형 제외)</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<ul class="info-list type-default margin-top-35">
+							<li class="info-item color-basic">
+								<span class="color-vip">[ 2021.09.30 ] 현재</span>까지 이용하신 실적 기준의 예상 등급으로, 이후 회원님의 취소, 변경 등에 따라 실제 이용 금액과 다를 수 있습니다.
+							</li>
+							<li class="info-item color-basic">실적 기준으로 제시된 차년도 예상등급에도 「프리미엄 우수회원 선정기준」 상세조건(이용개월수 등) 미충족 시, 우수회원 선정에서 제외될 수 있습니다.</li>
+						</ul>
+
+						<div class="form-bottom margin-top-none margin-top-15">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-vip">우수회원 제도안내</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<section class="page-section type-line">
+							<div class="section-title margin-bottom-25">
+								<h2 class="title"><span class="color-vip">2022년</span> 프리미엄 우수회원 선정 기준</h2>
+							</div>
+
+							<div class="info-table-area">
+								<table class="info-table">
+									<!-- 2022.05.04 : mod : caption 값 변경 -->
+									<caption class="for-a11y">
+										등급, 종합점수(카드이용+우대), 카드이용점수로 구성된 2022년 프리미엄 우수회원 선정 기준 표
+									</caption>
+									<colgroup>
+										<col style="width: 21.5%" />
+										<col />
+										<col />
+									</colgroup>
+									<thead>
+										<tr>
+											<th rowspan="2">등급</th>
+											<th rowspan="2">
+												종합 점수<br />
+												(카드이용+우대)
+											</th>
+											<th></th>
+										</tr>
+										<tr>
+											<th class="info-table-top-line info-table-left-line">카드이용점수</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td scope="row"><span class="color-vip">VVIP</span></td>
+											<td colspan="2" rowspan="2">종합점수 5,000점 이상 & 카드이용점수 4,000점 이상 회원 중 신용도 및 당사 내부 기준에 따라 선정</td>
+										</tr>
+										<tr>
+											<td scope="row" class="info-table-vertical-line"><span class="color-vip">퍼스트</span></td>
+										</tr>
+										<tr>
+											<td scope="row"><span class="color-vip">로열</span></td>
+											<td>3,000점 이상</td>
+											<td>2,400점 이상</td>
+										</tr>
+										<tr>
+											<td scope="row"><span class="color-vip">클래식</span></td>
+											<td>1,500점 이상</td>
+											<td>1,200점 이상</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="info-table-area margin-top-none">
+								<table class="info-table margin-top-none">
+									<!-- 2022.05.04 : mod : caption 값 변경 -->
+									<caption class="for-a11y">
+										비고로 구성된 2022년 프리미엄 우수회원 선정 기준 표
+									</caption>
+									<thead>
+										<tr>
+											<th>비고</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>프리미엄 카드 상품 보유 시 클래식 등급 부여</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<ul class="info-list type-default margin-top-15">
+								<li class="info-item color-wrong">VVIP 및 퍼스트 등급의 경우, 실적 및 신용도, 기타 당사 내부 기준에 따라 선정됩니다.</li>
+								<li class="info-item color-wrong">
+									2021.12.31 기준 프리미엄 카드 상품 보유 시, 선정기준을 충족하지 못하시더라도 클래식 등급이 부여됩니다.
+									<ul class="info-list margin-top-10">
+										<li class="info-item type-hyphen">프리미엄 카드 상품 : 클럽 시그니처, 클럽 프리미어, 클럽 프리머스(구. 프리머스 포함, 일반형 제외)</li>
+										<li class="info-item type-hyphen">프리미엄 카드 상품 보유로 얻은 클래식 등급은 해당 카드 상품 해지 시 취소됩니다.</li>
+									</ul>
+								</li>
+								<li class="info-item color-basic">필수조건 : 선정 월 직전 6개월 중 3개월 이상 카드 이용</li>
+								<li class="info-item color-basic">필수조건 미충족 시, 종합점수 충족 시에도 프리미엄 우수회원 선정에서 제외</li>
+								<li class="info-item color-basic">
+									실적 기준이 충족되어도 선정 시점 당시 이용금액이 카드사로 접수 여부 (승인/매입 시점 차이), 매출 취소, 필수이용기간 조건 등 미충족 시 프리미엄 우수회원 선정에서 제외됩니다.
+								</li>
+							</ul>
+						</section>
+
+						<section class="page-section type-line">
+							<div class="section-title margin-bottom-25">
+								<h2 class="title"><span class="color-vip">2022년</span> 프리미엄 우수회원 예상 실적(상세)</h2>
+							</div>
+
+							<div class="usage-accordion type-medium-margin">
+								<ul class="usage-accordion-list js-ui-accordion">
+									<li class="usage-accordion-item js-ui-accordion__item">
+										<div class="usage-accordion-head">
+											<div class="total-amount type-no-line margin-bottom-none">
+												<div class="total-amount-head">
+													<h3 class="total-amount-title">카드이용점수</h3>
+												</div>
+												<div class="total-amount-val"><span class="color-secondary-dark">2,500 점</span></div>
+											</div>
+											<button type="button" class="ui-button usage-accordion-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="usage-accordion-contents type-no-line type-no-padding margin-top-25">
+												<div class="usage-default type-point type-line">
+													<ul class="usage-default-list">
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">국내이용 (일시불)</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">9,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>900점</div>
+																		<div class="color-blur">(1만원당 1점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">해외이용</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">2,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>200점</div>
+																		<div class="color-blur">(1만원당 2점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">유이자할부</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">2,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>200점</div>
+																		<div class="color-blur">(1만원당 2점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">무이자할부</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">4,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>400점</div>
+																		<div class="color-blur">(1만원당 1점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">체크카드이용</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">4,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>400점</div>
+																		<div class="color-blur">(1만원당 1점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">국세, 지방세</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">0 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>-</div>
+																		<div class="color-blur">(실적제외)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">4대 보험료 납부금액</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">0 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>-</div>
+																		<div class="color-blur">(실적제외)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">Gift카드 구매 금액</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">0 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>-</div>
+																		<div class="color-blur">(실적제외)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item type-total">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">합계</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text"><span class="color-secondary">2,500</span> 점</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+
+												<ul class="info-list type-default margin-top-15">
+													<li class="info-item color-basic">표시되는 금액 및 점수는 직전 월 말일 기준이며, 당사에 접수된 금액을 기반으로 산출되어 현재 사용금액과 일치하지 않을 수 있습니다.</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="usage-accordion-item js-ui-accordion__item">
+										<div class="usage-accordion-head">
+											<div class="total-amount type-no-line margin-bottom-none">
+												<div class="total-amount-head">
+													<h3 class="total-amount-title">우대점수</h3>
+												</div>
+												<div class="total-amount-val"><span class="color-secondary-dark">676 점</span></div>
+											</div>
+											<button type="button" class="ui-button usage-accordion-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="usage-accordion-contents type-no-line type-no-padding margin-top-25">
+												<div class="usage-default type-point type-line">
+													<ul class="usage-default-list">
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">
+																		단기카드대출<br />
+																		(현금서비스)
+																	</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">3,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>300점</div>
+																		<div class="color-blur">(1만원당 1점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">
+																		장기카드대출<br />
+																		(카드론)
+																	</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">2,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>200점</div>
+																		<div class="color-blur">(1만원당 2점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">장기고객우대</div>
+																	<div class="default-text margin-top-4">9년 11개월</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>0점</div>
+																		<div class="color-blur">(10년당 200점/최대 600점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">리볼빙 신청여부</div>
+																	<div class="default-text margin-top-4">Y</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>20점</div>
+																		<div class="color-blur">(신청 시 20점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">카드론 동의여부</div>
+																	<div class="default-text margin-top-4">Y</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>20점</div>
+																		<div class="color-blur">(동의 시 20점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">마케팅 동의여부</div>
+																	<div class="default-text margin-top-4">Y</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>20점</div>
+																		<div class="color-blur">(동의 시 20점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">
+																		자동이체<br />
+																		(최대 50점)
+																	</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">16 건</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>16점</div>
+																		<div class="color-blur">(월1건당 1점/최대 50점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">디지털 청구서 여부</div>
+																	<div class="default-text margin-top-4">Y</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>100점</div>
+																		<div class="color-blur">(신청 시 100점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">
+																		프리미엄 카드<br />
+																		상품 보유 여부
+																	</div>
+																	<div class="default-text margin-top-4">N</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>-</div>
+																		<div class="color-blur">(보유 시 클래식 등급 보유)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item type-total">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">합계</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text"><span class="color-secondary">676</span> 점</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+
+												<ul class="info-list type-default margin-top-15">
+													<li class="info-item color-basic">표시되는 점수는 직전 월 말일 기준이며, 현재 사용금액과 일치하지 않을 수 있습니다.</li>
+													<li class="info-item color-basic">
+														디지털 청구서 : 실물 청구서를 받지 않고, 디지털 청구서만 받으시는 경우에만 점수가 부여됩니다.<br />
+														예) 우편+Email : 점수 미부여 / 하나멤버스+Email : 점수 부여
+													</li>
+													<li class="info-item color-basic">자동이체는 휴대전화, 아파트 관리비에 한합니다.</li>
+													<li class="info-item color-basic">프리미엄 카드 상품 : 클럽 시그니처, 클럽 프리미어, 클럽 프리머스(구.프리머스 포함, 일반형 제외)</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</section>
+
+						<section class="page-section type-line">
+							<div class="section-title margin-bottom-25">
+								<h2 class="title"><span class="color-vip">2021년</span> 프리미엄 우수회원 선정 점수</h2>
+							</div>
+
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">연도 선택</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block">
+											<button type="button" class="ui-button ui-select" title="연도 선택">2021년</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="info-table-area margin-top-25">
+								<table class="info-table type-tbody-heading">
+									<!-- 2022.05.04 : mod : caption 값 변경 -->
+									<caption class="for-a11y">
+										종합점수, 카드이용점수, 우대점수, 최근 6개월 이용개월 수, 프리미엄 카드 보유 여부로 구성된 프리미엄 우수회원 선정 점수 표
+									</caption>
+									<tbody>
+										<tr>
+											<th scope="row">종합점수</th>
+											<td><span class="color-vip">0</span>점</td>
+										</tr>
+										<tr>
+											<th scope="row">카드이용점수</th>
+											<td>0점</td>
+										</tr>
+										<tr>
+											<th scope="row">우대점수</th>
+											<td>0점</td>
+										</tr>
+										<tr>
+											<th scope="row">최근 6개월 이용개월수</th>
+											<td>0개월</td>
+										</tr>
+										<tr>
+											<th scope="row">프리미엄 카드 보유 여부</th>
+											<td>N</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<ul class="info-list type-default margin-top-15">
+								<li class="info-item type-presa color-basic">프리미엄 카드 상품 : 클럽 시그니처, 클럽 프리미어, 클럽 프리머스(구.프리머스 포함, 일반형 제외)</li>
+							</ul>
+						</section>
+
+						<section class="page-section type-line">
+							<div class="section-title margin-bottom-25">
+								<h2 class="title"><span class="color-vip">2021년</span> 프리미엄 우수회원 예상 점수(상세)</h2>
+							</div>
+
+							<div class="usage-accordion type-medium-margin">
+								<ul class="usage-accordion-list js-ui-accordion">
+									<li class="usage-accordion-item js-ui-accordion__item">
+										<div class="usage-accordion-head">
+											<div class="total-amount type-no-line margin-bottom-none">
+												<div class="total-amount-head">
+													<h3 class="total-amount-title">카드이용점수</h3>
+												</div>
+												<div class="total-amount-val"><span class="color-secondary-dark">2,500 점</span></div>
+											</div>
+											<button type="button" class="ui-button usage-accordion-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="usage-accordion-contents type-no-line type-no-padding margin-top-25">
+												<div class="usage-default type-point type-line">
+													<ul class="usage-default-list">
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">국내이용 (일시불)</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">9,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>900점</div>
+																		<div class="color-blur">(1만원당 1점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">해외이용</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">2,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>200점</div>
+																		<div class="color-blur">(1만원당 2점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">유이자할부</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">2,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>200점</div>
+																		<div class="color-blur">(1만원당 2점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">무이자할부</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">4,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>400점</div>
+																		<div class="color-blur">(1만원당 1점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">체크카드이용</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">4,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>400점</div>
+																		<div class="color-blur">(1만원당 1점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">국세, 지방세</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">0 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>-</div>
+																		<div class="color-blur">(실적제외)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">4대 보험료 납부금액</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">0 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>-</div>
+																		<div class="color-blur">(실적제외)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="basic-text">Gift카드 구매 금액</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">0 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>-</div>
+																		<div class="color-blur">(실적제외)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item type-total">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">합계</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text"><span class="color-secondary">2,500</span> 점</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+
+												<ul class="info-list type-default margin-top-15">
+													<li class="info-item color-basic">표시되는 금액 및 점수는 직전 월 말일 기준이며, 당사에 접수된 금액을 기반으로 산출되어 현재 사용금액과 일치하지 않을 수 있습니다.</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="usage-accordion-item js-ui-accordion__item">
+										<div class="usage-accordion-head">
+											<div class="total-amount type-no-line margin-bottom-none">
+												<div class="total-amount-head">
+													<h3 class="total-amount-title">우대점수</h3>
+												</div>
+												<div class="total-amount-val"><span class="color-secondary-dark">676 점</span></div>
+											</div>
+											<button type="button" class="ui-button usage-accordion-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-accordion-layer js-ui-accordion__layer">
+											<div class="usage-accordion-contents type-no-line type-no-padding margin-top-25">
+												<div class="usage-default type-point type-line">
+													<ul class="usage-default-list">
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">
+																		단기카드대출<br />
+																		(현금서비스)
+																	</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">3,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>300점</div>
+																		<div class="color-blur">(1만원당 1점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">
+																		장기카드대출<br />
+																		(카드론)
+																	</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">2,000,000 원</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>200점</div>
+																		<div class="color-blur">(1만원당 2점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">장기고객우대</div>
+																	<div class="default-text margin-top-4">9년 11개월</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>0점</div>
+																		<div class="color-blur">(10년당 200점/최대 600점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">리볼빙 신청여부</div>
+																	<div class="default-text margin-top-4">Y</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>20점</div>
+																		<div class="color-blur">(신청 시 20점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">카드론 동의여부</div>
+																	<div class="default-text margin-top-4">Y</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>20점</div>
+																		<div class="color-blur">(동의 시 20점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">마케팅 동의여부</div>
+																	<div class="default-text margin-top-4">Y</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>20점</div>
+																		<div class="color-blur">(동의 시 20점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">
+																		자동이체<br />
+																		(최대 50점)
+																	</div>
+																	<div class="link-row margin-top-4">
+																		<button type="button" class="ui-arrow type-black">
+																			<span class="default-text">16 건</span>
+																		</button>
+																	</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>16점</div>
+																		<div class="color-blur">(월1건당 1점/최대 50점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">디지털 청구서 여부</div>
+																	<div class="default-text margin-top-4">Y</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>100점</div>
+																		<div class="color-blur">(신청 시 100점)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">
+																		프리미엄 카드<br />
+																		상품 보유 여부
+																	</div>
+																	<div class="default-text margin-top-4">N</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text">
+																		<div>-</div>
+																		<div class="color-blur">(보유 시 클래식 등급 보유)</div>
+																	</div>
+																</div>
+															</div>
+														</li>
+														<li class="usage-default-item type-total">
+															<div class="usage-default-block type-align-middle">
+																<div class="usage-default-left">
+																	<div class="default-text">합계</div>
+																</div>
+																<div class="usage-default-right">
+																	<div class="default-text"><span class="color-secondary">676</span> 점</div>
+																</div>
+															</div>
+														</li>
+													</ul>
+												</div>
+
+												<ul class="info-list type-default margin-top-15">
+													<li class="info-item color-basic">표시되는 점수는 직전 월 말일 기준이며, 현재 사용금액과 일치하지 않을 수 있습니다.</li>
+													<li class="info-item color-basic">
+														디지털 청구서 : 실물 청구서를 받지 않고, 디지털 청구서만 받으시는 경우에만 점수가 부여됩니다.<br />
+														예) 우편+Email : 점수 미부여 / 하나멤버스+Email : 점수 부여
+													</li>
+													<li class="info-item color-basic">자동이체는 휴대전화, 아파트 관리비에 한합니다.</li>
+													<li class="info-item color-basic">프리미엄 카드 상품 : 클럽 시그니처, 클럽 프리미어, 클럽 프리머스(구.프리머스 포함, 일반형 제외)</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

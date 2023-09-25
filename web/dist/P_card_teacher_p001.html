@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							교직원 신분증 카드 발급을 위해<br />
+							증명사진(3x4cm)을<br />
+							사진 촬영하시거나<br />
+							휴대폰 증명사진 이미지를 업로드해<br />
+							주시기 바랍니다.
+						</h2>
+						<div class="img-area type-150">
+							<!-- 2022.04.27 : mod : alt 값 변경 -->
+							<img src="./assets/images/contents/img-picture-face.png" alt="증명사진(3x4cm) 또는 휴대폰 증명사진 이미지 업로드 촬영 예시 이미지" class="img" />
+						</div>
+						<div class="info-list type-default margin-top-20">
+							<p class="info-item type-presa font-weight-regular">이미지 업로드는 내파일/사진보관함 등에서 이미지 파일을 선택하시기 바랍니다.</p>
+						</div>
+						<div class="use-notice-area">
+							<div class="use-notice-item">
+								<div class="use-notice-opener">촬영이 안되시나요?</div>
+								<div class="use-notice-contents">
+									<ul class="info-list">
+										<li class="info-item"><span class="color-wrong">얼굴을 중앙</span>에 놓고 화면에서 <span class="color-wrong">얼굴이 차지하는 비중이 50%가 넘지 않게</span> 해주세요.</li>
+										<li class="info-item"><span class="color-wrong">어두운 바닥에 놓으면</span> 더 잘 인식됩니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item type-narrow">
+									<button type="button" class="ui-button ui-basic-button">취소</button>
+								</li>
+								<li class="ui-buttons-item">
+									<!-- 2022.01.12 버튼 수정 -->
+									<div class="ui-file-block type-button">
+										<input type="file" class="ui-file" id="file1" />
+										<label for="file1" class="ui-label ui-basic-button type-primary">
+											<span class="ui-label-text">촬영/이미지 업로드</span>
+										</label>
+									</div>
+									<!-- //2022.01.12 버튼 수정 -->
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">투어메이트</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents type-step">
+						<h2 class="page-title">
+							<span class="title-step">STEP 1</span>
+							투어메이트 신청 정보를<br />
+							확인해 주세요.
+						</h2>
+
+						<nav class="page-progress" aria-label="progress">
+							<ol class="progress-tracker">
+								<li class="progress-step is-active" aria-current="step"><span class="for-a11y">STEP 1</span></li>
+								<li class="progress-step"><span class="for-a11y">STEP 2</span></li>
+							</ol>
+						</nav>
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="ui-buttons type-right margin-bottom-25">
+								<div class="ui-buttons-list">
+									<div class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-gray type-tiny">개인정보 조회/변경</a>
+									</div>
+								</div>
+							</div>
+
+							<dl class="form-detail-list">
+								<div class="form-detail-item">
+									<dt class="form-detail-title">이름</dt>
+									<dd class="form-detail-group">김하나</dd>
+								</div>
+								<div class="form-detail-item">
+									<dt class="form-detail-title">휴대폰번호</dt>
+									<dd class="form-detail-group">010-4195-****</dd>
+								</div>
+								<div class="form-detail-item">
+									<dt class="form-detail-title">이메일주소</dt>
+									<dd class="form-detail-group">ks*******@gmail.com</dd>
+								</div>
+								<div class="form-detail-item">
+									<dt class="form-detail-title">신청서비스</dt>
+									<dd class="form-detail-group">투어메이트 (월 4,900 원)</dd>
+								</div>
+							</dl>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-primary" role="button">다음</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item" data-initial-open="true">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">투어메이트 서비스는 가입 신청 후 별도의 해지요청이 없으면 자동 연장됩니다.</li>
+										<li class="info-item">일부 스팸차단기능을 설정한 휴대전화의 경우 서비스 제공 LMS수신이 제한될 수 있습니다.</li>
+										<li class="info-item">가입 후 31일이 경과하면 매월 7~21일 사이에 4,900원이 자동 승인됩니다.(주사용카드 기준 승인)</li>
+										<li class="info-item">휴대폰 번호가 변경되었을 경우, 즉시 정보 변경을 해주시기 바랍니다.</li>
+										<li class="info-item">정보 변경 및 가입/해지 문의는 하나카드 대표번호 1800-1111로 문의주세요.</li>
+										<li class="info-item">투어메이트 서비스는 브이피(주)의 책임하에 운영되며 하나카드는 통신판매중개자로서 위탁판매(판매중개)역할을 담당합니다.</li>
+										<li class="info-item">서비스 관련 문의 : 1599-0986</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{stroke:#2d3239;stroke-width:1.5px}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_cardissuance_3" transform="translate(102.5 -622)">
+        <path id="사각형_12182" data-name="사각형 12182" class="cls-1" transform="translate(-102.5 622)" d="M0 0h50v50H0z"/>
+        <g id="사각형_13455" data-name="사각형 13455" class="cls-2">
+            <path class="cls-7" d="M5 0h8a8 8 0 0 1 8 8v13a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" transform="translate(-88 634)"/>
+            <path class="cls-1" d="M5 .75h8A7.25 7.25 0 0 1 20.25 8v13A4.25 4.25 0 0 1 16 25.25H5A4.25 4.25 0 0 1 .75 21V5A4.25 4.25 0 0 1 5 .75z" transform="translate(-88 634)"/>
+        </g>
+        <g id="교차_10" data-name="교차 10" style="fill:none">
+            <path class="cls-7" d="M4.52 7.21a4 4 0 0 1-4-4v-4a8 8 0 0 1 8 8z" transform="translate(-75.52 634.791)"/>
+            <path d="M6.845 5.71A6.522 6.522 0 0 0 2.019.884V3.21c0 1.38 1.122 2.5 2.5 2.5h2.326m1.674 1.5h-4a4 4 0 0 1-4-4l.001-4a8 8 0 0 1 8 8z" style="fill:#2d3239;stroke:none" transform="translate(-75.52 634.791)"/>
+        </g>
+        <g id="사각형_13452" data-name="사각형 13452" transform="rotate(90 -361.25 285.25)" style="stroke:#2d3239;fill:none">
+            <rect class="cls-7" width="1.5" height="8" rx=".75"/>
+            <rect class="cls-1" x=".5" y=".5" width=".5" height="7" rx=".25"/>
+        </g>
+        <rect id="사각형_13453" data-name="사각형 13453" width="5.5" height="5.5" rx="2.75" transform="translate(-81.5 640)" style="fill:#7dedf3"/>
+        <g id="사각형_13454" data-name="사각형 13454" class="cls-2" transform="translate(-83.5 639)">
+            <rect class="cls-7" width="6.5" height="6.5" rx="3.25"/>
+            <rect class="cls-1" x=".75" y=".75" width="5" height="5" rx="2.5"/>
+        </g>
+        <path id="패스_11962" data-name="패스 11962" d="m-10169.5 5362.342 1.769 1.825 3.231-3.5" transform="translate(10093.001 -4709.667)" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;stroke:#2d3239;fill:none"/>
+    </g>
+</svg>

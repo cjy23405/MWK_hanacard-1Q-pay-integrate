@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">계좌 추가</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							출금권한변경이<br />
+							완료되었습니다.
+						</h2>
+
+						<div class="page-info has-com-icon type-icon-pay">
+							<p class="page-info-text">출금동의가 없는 계좌의 경우<br />조회전용계좌로 등록됩니다.</p>
+						</div>
+
+						<div class="page-section-group type-line">
+							<div class="section-title">
+								<h2 class="title type-flexible">변경계좌</h2>
+								<div class="section-title-right font-weight-light">
+									<span>완료 <strong class="color-primary">2</strong>건</span><span class="slash">/</span><span>실패 <strong class="color-wrong">0</strong>건</span>
+								</div>
+							</div>
+
+							<div class="card-list-area type-default">
+								<ul class="card-list js-ui-accordion">
+									<li class="card-item">
+										<div class="card-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 없을 때 -->
+											<div class="logo-image">
+												<div class="logo-image-inner"></div>
+											</div>
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="card-info">
+												<span class="card-name">신한은행</span>
+												<div class="card-number-block">
+													<div class="card-number">
+														<span class="card-number-item">011020112341311</span>
+													</div>
+												</div>
+												<div class="card-result-group">
+													<!-- is-checked 클래스로 선택 아이콘 활성화 -->
+													<span class="card-result type-icon-check is-checked">조회<span class="for-a11y">선택됨</span></span>
+													<span class="card-result type-icon-check is-checked">출금<span class="for-a11y">선택됨</span></span>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="card-item">
+										<div class="card-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 에러 -->
+											<div class="logo-image">
+												<div class="logo-image-inner">
+													<!-- 2022.04.27 : mod : alt값 변경 -->
+													<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+													<img src="./assets/images/_dummy/logo-hana-card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="card-info">
+												<span class="card-name">KB국민은행</span>
+												<div class="card-number-block">
+													<div class="card-number">
+														<span class="card-number-item">011020112341311</span>
+													</div>
+												</div>
+												<div class="card-result-group">
+													<span class="card-result type-icon-check is-checked">조회<span class="for-a11y">선택됨</span></span>
+													<span class="card-result type-icon-check">출금<span class="for-a11y">선택 안 됨</span></span>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="card-item">
+										<div class="card-block">
+											<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<!-- DD : 이미지 있을 때 -->
+											<div class="logo-image">
+												<div class="logo-image-inner">
+													<!-- 2022.04.27 : mod : alt값 변경 -->
+													<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+													<img src="./assets/images/_dummy/logo-hana-card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+											<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+											<div class="card-info">
+												<span class="card-name">KB국민은행</span>
+												<div class="card-number-block">
+													<div class="card-number">
+														<span class="card-number-item">011020112341311</span>
+													</div>
+												</div>
+												<div class="card-result-group">
+													<span class="card-result type-icon-check is-checked">조회<span class="for-a11y">선택됨</span></span>
+													<span class="card-result type-icon-check">출금<span class="for-a11y">선택 안 됨</span></span>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-primary" role="button">확인</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

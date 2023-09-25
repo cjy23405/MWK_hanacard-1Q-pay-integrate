@@ -1,0 +1,3913 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title></title>
+
+		<meta charset="euc-kr" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<style>
+			body {
+				margin: 0;
+			}
+			.is-emphasis {
+				font-weight: 700;
+				color: #ff4040;
+			}
+			.is-emphasis.is-mwk {
+				color: #1919ff;
+			}
+			.index-wrap {
+				box-sizing: border-box;
+				min-width: 1900px;
+				padding: 20px;
+			}
+			.index-title {
+				font-size: 30px;
+				line-height: 40px;
+				margin: 0 0 20px;
+			}
+			.index-links:before {
+				content: '';
+				display: table;
+			}
+			.index-links__inner {
+				margin: -10px 0 0 -10px;
+			}
+			.index-links__inner:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+			.index-links a {
+				display: block;
+				margin: 10px 0 0 10px;
+				float: left;
+				padding: 5px 15px;
+				font-size: 14px;
+				line-height: 20px;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 5px;
+				background: #666;
+			}
+			.index-gnb {
+				margin: 20px 0;
+			}
+			.index-bottom {
+				position: fixed;
+				z-index: 1000;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				min-width: 1900px;
+				box-sizing: border-box;
+				padding: 10px 20px;
+				background: rgba(0, 0, 0, 0.4);
+			}
+			.index-bottom a {
+				background-color: #066cb3;
+			}
+			.index-section + .index-section {
+				margin-top: 20px;
+			}
+			.index-section--clicked {
+				border-radius: 5px;
+				-webkit-animation: index-section-clicked 0.8s linear;
+				animation: index-section-clicked 0.8s linear;
+			}
+			@-webkit-keyframes index-section-clicked {
+				0% {
+					background-color: rgba(255, 202, 222, 0);
+				}
+				30% {
+					background-color: rgba(255, 202, 222, 1);
+				}
+				70% {
+					background-color: rgba(255, 202, 222, 1);
+				}
+				100% {
+					background-color: rgba(255, 202, 222, 0);
+				}
+			}
+			@keyframes index-section-clicked {
+				0% {
+					background-color: rgba(255, 202, 222, 0);
+				}
+				30% {
+					background-color: rgba(255, 202, 222, 1);
+				}
+				70% {
+					background-color: rgba(255, 202, 222, 1);
+				}
+				100% {
+					background-color: rgba(255, 202, 222, 0);
+				}
+			}
+			.index-section__title {
+				margin: 0;
+				padding: 5px 15px;
+				font-size: 14px;
+				line-height: 20px;
+				color: #fff;
+				border-radius: 5px 5px 0 0;
+				background: #333;
+			}
+			.index-table > table {
+				width: 100%;
+				table-layout: fixed;
+				margin: 0;
+				padding: 0;
+				border-spacing: 0;
+				box-sizing: border-box;
+			}
+			.index-table > table > thead > tr > th,
+			.index-table > table > tbody > tr > th,
+			.index-table > table > tbody > tr > td {
+				box-sizing: border-box;
+				font-size: 12px;
+				line-height: 18px;
+				text-align: left;
+				padding: 5px 15px;
+				border: 0 solid #cdcdcd;
+				border-width: 0 1px 1px 0;
+				background: none;
+				word-break: keep-all;
+				word-wrap: break-word;
+			}
+			.index-table > table > tbody > tr:hover > th,
+			.index-table > table > tbody > tr:hover > td {
+				background-color: #f6f6f6;
+			}
+			.index-table > table > thead > tr > th:first-child,
+			.index-table > table > tbody > tr > th:first-child,
+			.index-table > table > tbody > tr > td:first-child {
+				border-left-width: 1px;
+			}
+			.index-table > table > thead > tr > th {
+				border-top-width: 1px;
+			}
+			.index-table > table > thead > tr > th,
+			.index-table > table > tbody > tr > th {
+				background-color: #e8e8e8;
+			}
+			.index-table > table > tbody > tr:last-child > td:first-child {
+				border-radius: 0 0 0 5px;
+			}
+			.index-table > table > tbody > tr:last-child > td:last-child {
+				border-radius: 0 0 5px 0;
+			}
+			.index-status {
+				display: block;
+				padding: 3px 8px;
+				margin: -3px 0;
+				background: #999;
+				color: #fff;
+				border-radius: 5px;
+				text-align: center;
+			}
+			.index-status--confirm {
+				background-color: #ffb01a;
+			}
+			.index-status--end {
+				background-color: #00a6a0;
+			}
+			.index-status--moding {
+				background-color: #ff4594;
+			}
+			.index-status--waiting {
+				background-color: #8ea7eb;
+			}
+			.index-log {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			.index-log__item {
+				position: relative;
+				padding-left: 72px;
+			}
+			.index-log__item__date {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.index-text {
+				margin-bottom: 20px;
+			}
+			.index-type {
+				color: #2b5cd9;
+			}
+		</style>
+		<!-- //style -->
+	</head>
+	<body>
+		<div class="index-wrap">
+			<h1 class="index-title"></h1>
+			<div class="index-gnb">
+				<div class="index-links">
+					<div class="index-links__inner">
+						<a href="./guide-component.html" target="_blank">컴포넌트 가이드</a>
+					</div>
+				</div>
+			</div>
+			<div class="index-bottom">
+				<div class="index-links">
+					<div class="index-links__inner" id="nav"></div>
+				</div>
+			</div>
+
+			<!--
+			<div class="index-text">
+				추가 설명
+			</div>
+			-->
+
+			<div class="index-datas" id="indexTable"></div>
+		</div>
+
+		<div class="index-fake-botttom"></div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script>
+			var title = '하나카드 원큐페이 통합 - 카드신청';
+			var tableData = [
+				/*
+										{
+											depth1: '',
+											data: [
+												{
+													depthOnly : false,
+													id: '',
+													type: '',
+													depth2: '',
+													depth3: '',
+													depth4: '',
+													depth5: '',
+													depth6: '',
+													path: '',
+													status: '',
+													create: '',
+													update: '',
+													log: [
+														//{ date: '', text: '', },
+													],
+												},
+											],
+										},
+										*/
+				{
+					depth1: '공통',
+					data: [
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '공통테마',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/_theme.html',
+							status: 'end',
+							create: '2022.11.09',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Modal',
+							depth2: '텍스트형 선택 팝업',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/_layer_pop_01.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '선택메뉴 button 태그로 변경' },
+								{ date: '2022.08.18', text: 'X버튼 삭제' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								// { date: '2022.10.14', text: '팝업 딤영역 클릭시 레이어 닫히도록 is-not-background-close 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB01010000',
+							type: 'Modal',
+							depth2: '세션 만료 전 안내 팝업',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB01010000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '하단 버튼 button 태그로 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB01020000',
+							type: 'Modal',
+							depth2: '세션 만료 안내 팝업',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB01020000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.24', text: '문구 및 클래스 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB01030000',
+							type: 'Modal',
+							depth2: '이탈방지 팝업',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB01030000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '본문 텍스트에 basic-text 클래스 추가' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.10.14', text: 'UI 변경' },
+								{ date: '2022.10.27', text: '아이콘 img 태그로 태그 변경' },
+								{ date: '2022.11.01', text: '혜택영역 구조 및 클래스명 변경' },
+								{ date: '2022.11.17', text: '문구 변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB01030100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '임시저장 안내 팝업',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB01030100.html',
+							status: 'end',
+							create: '2022.08.29',
+							log: [
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.11.17', text: '문구 변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02010000',
+							type: 'Modal',
+							depth2: '이어하기 안내',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02010000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구변경, data 속성 삭제 및 하단 버튼 태그 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB01040000',
+							type: 'Page',
+							depth2: '콜센터 카드 간편신청',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB01040000.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: 'data-focus-input-target 속성 추가 및 에러 케이스 추가\n태그변경, 하단버튼 type-disabled 클래스 및 주석 추가' },
+								{ date: '2022.08.18', text: '띄어쓰기, 상단 문구, 확인해주세요 영역 문구 수정\n 하단 버튼 태그변경' },
+								{ date: '2022.08.24', text: '문구 수정, 에러 케이스 삭제: 에러메세지는 .uiFormInvalid 함수 이용(컴포넌트 가이드 참고)' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+							],
+						},
+					],
+				},
+				{
+					depth1: '통합인증 - 공통',
+					data: [
+						{
+							id: '',
+							type: '',
+							depth2: '레이아웃',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/_layout.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB19010000',
+							type: '',
+							depth2: '인증방법 선택',
+							depth3: '인증방법이 3개 이상인 경우',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB19010000--type1.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: '',
+							type: '',
+							depth2: '',
+							depth3: '인증방법이 2개인 경우',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB19010000--type2.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB06020100',
+							type: '팝업',
+							depth2: '',
+							depth3: '휴대폰',
+							depth4: '통신사 선택',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06020100.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB19010101',
+							type: '팝업',
+							depth2: '',
+							depth3: '',
+							depth4: '약관동의',
+							depth5: '',
+							depth6: '',
+							path: '/MOB19010101.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB06020200',
+							type: '팝업',
+							depth2: '',
+							depth3: '',
+							depth4: '인증번호 입력',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06020200.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB19010201',
+							type: '팝업',
+							depth2: '',
+							depth3: '토스',
+							depth4: '약관동의',
+							depth5: '',
+							depth6: '',
+							path: '/MOB19010201.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB19010202',
+							type: '팝업',
+							depth2: '',
+							depth3: '',
+							depth4: '인증서 인증요청',
+							depth5: '',
+							depth6: '',
+							path: '/MOB19010202.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [{ date: '2023.03.22', text: '문구수정 및 변경 디자인 반영' }],
+						},
+						{
+							id: 'MOB06050100',
+							type: '팝업',
+							depth2: '',
+							depth3: '네이버',
+							depth4: '인증서 인증요청',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06050100--type2.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB06020100',
+							type: '팝업',
+							depth2: '',
+							depth3: 'PASS',
+							depth4: '통신사 선택',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06020100.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB19010401',
+							type: '팝업',
+							depth2: '',
+							depth3: '',
+							depth4: '약관동의',
+							depth5: '',
+							depth6: '',
+							path: '/MOB19010401.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB06060100',
+							type: '팝업',
+							depth2: '',
+							depth3: '',
+							depth4: '인증서 인증요청',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06060100--type2.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB19010501',
+							type: '팝업',
+							depth2: '',
+							depth3: '하나원사인',
+							depth4: '약관동의',
+							depth5: '',
+							depth6: '',
+							path: '/MOB19010501.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB19010502',
+							type: '팝업',
+							depth2: '',
+							depth3: '',
+							depth4: '인증서 인증요청',
+							depth5: '',
+							depth6: '',
+							path: '/MOB19010502.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [{ date: '2023.03.22', text: '문구수정 및 변경 디자인 반영' }],
+						},
+						{
+							id: 'MOB19010203',
+							type: '팝업',
+							depth2: '',
+							depth3: '',
+							depth4: '인증서 인증요청(app)',
+							depth5: '',
+							depth6: '',
+							path: '/MOB19010203.html',
+							status: 'confirm',
+							create: '2023.03.22',
+							log: [],
+						},
+					],
+				},
+				{
+					depth1: '카드정보 입력',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB02000000',
+							type: 'Page',
+							depth2: '카드정보\n(with 가로형 카드)',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02000000.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '로고 이미지 추가 및 브랜드 추가, 무의미한 클래스 삭제' },
+								{ date: '2022.08.18', text: '카드 디자인 선택 영역 추가 및 문구수정' },
+								{ date: '2022.08.24', text: '이미지 파일명 수정, 후불교통 기능 기본제공 케이스 추가' },
+								{ date: '2022.08.29', text: '상단 progress bar 영역 삭제\n체크카드일 경우 케이스 추가에 따른 문구수정 및 가이드 주석 추가' },
+								{ date: '2022.09.06', text: '브랜드 선택 라디오에 클래스 값 추가\n하단 버튼 불필요 클래스 값 제거\n하단 그라데이션 제거' },
+								{ date: '2022.09.07', text: '스크롤 내리기 버튼 삭제' },
+								{ date: '2022.10.21', text: '디자인 및 기능 추가로 인한 내부css추가\n.card-bg 영역 추가' },
+								{ date: '2022.10.27', text: '가족카드 신청 추가, 버튼선택시 css추가' },
+								{ date: '2022.11.01', text: '후불교통 기능과 가족카드 신청 구조변경' },
+								{ date: '2022.11.17', text: '후불교통 기능 기본제공 시 문구수정 및 띄어쓰기 수정' },
+								{ date: '2022.11.24', text: 'radio,checkbox 색상 추가' },
+								{ date: '2022.11.29', text: '카드디자인 버튼색상 삭제' },
+								{ date: '2022.12.22', text: '브랜드 선택 시 카드 작아지는 곳 까지 스크롤 되는 기능 제거' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '카드별 예외 케이스\n(with 세로형 카드)',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02000000--type2.html',
+							status: 'end',
+							create: '2022.08.29',
+							log: [
+								{ date: '2022.09.06', text: '세로형 카드 케이스 추가\n브랜드 선택 라디오에 클래스 값 추가\n하단 버튼 불필요 클래스 값 제거\n하단 그라데이션 제거' },
+								{ date: '2022.09.07', text: '스크롤 내리기 버튼 삭제, 트래블로그 케이스 문구추가' },
+								{ date: '2022.10.21', text: '디자인 및 기능 추가로 인한 내부css추가\n.card-bg 영역 추가' },
+								{ date: '2022.10.27', text: '버튼선택시 css추가' },
+								{ date: '2022.11.09', text: '의약사카드일 때 노출 안내문구 추가' },
+								{ date: '2022.11.17', text: '후불교통 기능 기본제공 시 문구수정' },
+								{ date: '2022.11.24', text: 'radio,checkbox 색상 추가' },
+								{ date: '2022.11.29', text: '카드디자인 버튼색상 삭제' },
+								{ date: '2022.12.22', text: '브랜드 선택 시 카드 작아지는 곳 까지 스크롤 되는 기능 제거' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02000000',
+							type: 'Page',
+							depth2: '',
+							depth3: '가로형 카드 스크롤시 회전 기능 없음',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02000000--type3.html',
+							status: 'end',
+							create: '2022.09.07',
+							log: [
+								{ date: '2022.10.21', text: '디자인 및 기능 추가로 인한 내부css추가\n.card-bg 영역 추가' },
+								{ date: '2022.10.27', text: '버튼선택시 css추가' },
+								{ date: '2022.11.17', text: '후불교통 기능 사용 안함 텍스트 띄어쓰기 수정' },
+								{ date: '2022.11.24', text: 'radio,checkbox 색상 추가' },
+								{ date: '2022.11.29', text: '카드디자인 버튼색상 삭제' },
+								{ date: '2022.12.22', text: '브랜드 선택 시 카드 작아지는 곳 까지 스크롤 되는 기능 제거' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02000000',
+							type: 'Page',
+							depth2: '',
+							depth3: '세로형 카드 스크롤시 회전 기능 없음',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02000000--type4.html',
+							status: 'end',
+							create: '2022.09.07',
+							log: [
+								{ date: '2022.10.21', text: '디자인 및 기능 추가로 인한 내부css추가\n.card-bg 영역 추가' },
+								{ date: '2022.10.27', text: '버튼선택시 css추가' },
+								{ date: '2022.11.17', text: '후불교통 기능 사용 안함 텍스트 띄어쓰기 수정' },
+								{ date: '2022.11.24', text: 'radio,checkbox 색상 추가' },
+								{ date: '2022.11.29', text: '카드디자인 버튼색상 삭제' },
+								{ date: '2022.12.22', text: '브랜드 선택 시 카드 작아지는 곳 까지 스크롤 되는 기능 제거' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02030000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '연회비 안내',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02030000.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '로고 이미지 추가' },
+								{ date: '2022.08.18', text: '가족카드 금액 띄어쓰기' },
+								{ date: '2022.08.24', text: 'X버튼 삭제' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02020000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '후불교통 기능 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02020000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02030000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '멀티카드 옵션 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02030000_01.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.17', text: '문구수정 및 띄어쓰기 수정' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02030100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '카드번호, CVV 미표기(클리어 옵션) 안내',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02030100.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.17', text: '클래스 삭제 및 문구 변경' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02110000',
+							type: 'Modal',
+							depth2: '',
+							depth3: 'CLUB Signature 카드의 경우',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02110000.html',
+							status: 'end',
+							create: '2022.11.01',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02040000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '추천인 이름 입력',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02040000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02050000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '추천인 사번 입력',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02050000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02060000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '추천인 확인',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02060000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.10.21', text: '상단 닫기 버튼 삭제, 추천인 변경 버튼 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02070000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '추천인 찾기_이름',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02070000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.28', text: '타입클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02080000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '추천인 찾기_사번',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02080000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.28', text: '타입클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02090000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '추천 영업점 찾기',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02090000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.28', text: '타입클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB02100000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '추가발급카드 선택',
+							depth4: '신용카드',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02100000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.10.27', text: '아이콘 img 태그로 태그 변경' },
+								{ date: '2022.11.01', text: '혜택영역 구조 및 클래스명 변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '체크카드',
+							depth5: '',
+							depth6: '',
+							path: '/MOB02100000--type2.html',
+							status: 'end',
+							create: '2022.11.01',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB14000000',
+							type: 'Page',
+							depth2: '추가카드 정보',
+							depth3: '가로형',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB14000000--type1.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.01', text: '"확인해주세요" 영역 삭제' },
+								{ date: '2022.11.17', text: '후불교통 기능 사용 안함 텍스트 띄어쓰기 수정' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '세로형',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB14000000--type2.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.01', text: '"확인해주세요" 영역 삭제' },
+								{ date: '2022.11.17', text: '후불교통 기능 사용 안함 텍스트 띄어쓰기 수정' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB01040000',
+							type: 'Page',
+							depth2: '콜센터 카드 간편신청',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB01040000.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '간격클래스 및 에러 케이스 추가' },
+								{ date: '2022.08.18', text: '띄어쓰기, 상단 문구, 확인해주세요 영역 문구 수정\n 하단 버튼 태그변경' },
+							],
+						},
+					],
+				},
+				{
+					depth1: '약관동의',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB04010000',
+							type: 'Page',
+							depth2: '약관목록',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB04010000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{
+									date: '2022.08.18',
+									text: '간격 클래스 추가 및 문구 삭제\ndata-initial-open 속성 추가\n디자인 변경으로 인한 구조 변경 및 data-checkbox-group속성 삭제\ndata-auto-checkbox속성 및 관련 기능 추가',
+								},
+								{
+									date: '2022.08.24',
+									text: 'data-area-disabled, data-area-disabled-type 속성 위치 변경 및 추가',
+								},
+								{
+									date: '2022.08.29',
+									text: '태그 변경, 클래스 수정 및 약관상세보기 버튼 삭제\n문구수정 및 평가등급 표기 디자인 변경\n약관동의 항목 추가',
+								},
+								{ date: '2022.08.31', text: '약관상세보기 버튼 추가, .page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.09.07', text: '체크박스 비활성화시 자동으로 펼쳐지도록 스크립스 추가' },
+								{ date: '2022.11.09', text: '동시발급 케이스 추가' },
+								{ date: '2022.11.24', text: '타입클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '트래블로그 체크카드',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB04010000--type2.html',
+							status: 'end',
+							create: '2022.08.29',
+							log: [
+								{ date: '2022.08.31', text: '약관상세보기 버튼 추가, .page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.09.07', text: '체크박스 비활성화시 자동으로 펼쳐지도록 스크립스 추가' },
+								{ date: '2022.11.24', text: '타입클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB04020000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '약관상세',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB04020000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [],
+						},
+					],
+				},
+				{
+					depth1: '금융소비자보호법',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB05000000',
+							type: 'Page',
+							depth2: '금융소비자보호법(적합성)',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB05000000.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '문구, title값 수정 및 간격클래스 추가\naccordion 영역 구조 변경\n하단버튼 type-disabled 클래스 및 주석 추가' },
+								{ date: '2022.08.24', text: '디폴트 선택 값(checked) 변경\n data 속성 추가' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.10.14', text: '신용카드, 상품 설명서 하나로 통일 및 결제일 기본값 적용' },
+								{ date: '2022.11.17', text: '문구수정' },
+								{ date: '2022.12.23', text: '문구변경, UI 변경에 따른 전반적인 구조변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB05020000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '결제일 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB05020000.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '문구 수정, 선택메뉴 button 태그로 변경' },
+								{ date: '2022.08.18', text: '문구 수정, 클래스 및 리스트 내용 추가' },
+								{ date: '2022.08.24', text: '결제일 25,27일 삭제' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB05030100\nMOB05030200\nMOB05030300',
+							type: 'Modal',
+							depth2: '신용카드 및 상품설명서(PDF뷰어)',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB05030100.html',
+							status: 'end',
+							create: '2022.11.17',
+							log: [{ date: '2022.12.06', text: '타입클래스 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB05040000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '적합성 판단 결과서',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB05040000.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '문구 수정, 삭제 및 간격 클래스 삭제' },
+								{ date: '2022.08.18', text: 'X버튼 삭제' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+					],
+				},
+				{
+					depth1: '본인인증',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB06010000',
+							type: 'Page',
+							depth2: '본인인증',
+							depth3: '실명인증',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06010000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.17', text: '네이버페이 간편 신청 버튼 삭제' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06010000',
+							type: 'Page',
+							depth2: '',
+							depth3: '인증방법 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06010000_pop.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.29', text: '타입클래스 변경' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06020000',
+							type: 'Page',
+							depth2: '',
+							depth3: '휴대폰',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06020000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.17', text: '하단 버튼 띄어쓰기 수정' },
+								{ date: '2022.11.29', text: 'input-width-tel-exchange클래스 삭제' },
+								{ date: '2022.12.06', text: '개발 가이드 주석 추가 및 스크립트 추가\ninput에 value값 및 data값 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06020200',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '인증번호 입력',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06020200.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.17', text: '간격 클래스 변경' },
+								{ date: '2022.11.28', text: '타입클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06040000',
+							type: 'Page',
+							depth2: '',
+							depth3: '카드',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06040000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.17', text: '하단 버튼 문구 수정' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06050000',
+							type: 'Page',
+							depth2: '',
+							depth3: '네이버인증서',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06050000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.23', text: '약관동의 삭제' },
+								{ date: '2022.11.29', text: 'input-width-tel-exchange클래스 삭제' },
+								{ date: '2022.12.06', text: '개발 가이드 주석 추가 및 input에 value값 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06050100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '인증요청',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06050100.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.17', text: '변경 UI반영 및 띄어쓰기 수정' },
+								{ date: '2022.12.06', text: '클래스 변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06060000',
+							type: 'Page',
+							depth2: '',
+							depth3: 'PASS인증서',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06060000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.29', text: 'input-width-tel-exchange클래스 삭제' },
+								{ date: '2022.12.06', text: '개발 가이드 주석 추가 및 스크립트 추가\ninput에 value값 및 data값 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06060100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '인증요청',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06060100.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.11.17', text: '변경 UI반영 및 띄어쓰기 수정' },
+								{ date: '2022.12.06', text: '클래스 변경' },
+								{ date: '2022.12.23', text: 'push 알림 안내 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06070000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '가족 실명인증',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06070000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06030000',
+							type: 'Modal',
+							depth2: '플라스틱 카드 전환 안내(알뜰폰)',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06030000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: 'X버튼, 카드 받는 곳 영역 삭제\n디폴드 - 사용에 체크' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.11.09', text: '확인해주세요 문구수정' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB06080000',
+							type: 'Modal',
+							depth2: '	멀티카드 옵션 선택',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06080000.html',
+							status: 'end',
+							create: '2022.11.09',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB07010000',
+							type: 'Page',
+							depth2: '신청불가',
+							depth3: '신용카드(체크카드추천)',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB07010000.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '문구수정' },
+								{ date: '2022.08.31', text: 'progress bar 삭제, .page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.09.07', text: '문구 색상 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB07020000',
+							type: 'Page',
+							depth2: '',
+							depth3: '체크카드',
+							depth4: '체크카드 발급불가',
+							depth5: '',
+							depth6: '',
+							path: '/MOB07020000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [{ date: '2022.08.31', text: 'progress bar 삭제, .page-buttons에 .type-fixed.type-no-line 클래스 추가' }],
+						},
+					],
+				},
+				{
+					depth1: '신청서 작성',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB08010100',
+							type: 'Modal',
+							depth2: 'KCB 정보 자동입력',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010100.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '레이어 제목 구조 및 문구 변경, 간격클래스 추가' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010000',
+							type: 'Page',
+							depth2: '개인정보',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010000.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '폼요소 케이스별 추가작업 및 문구수정\n하단버튼 type-disabled 클래스 및 주석 추가' },
+								{ date: '2022.08.18', text: '클래스 추가' },
+								{ date: '2022.08.24', text: '휴대폰 번호 입력란 기능에 따른 구조변경' },
+								{ date: '2022.08.29', text: '휴대폰 번호 입력란 .type-arrow.input-width-tel-agency 클래스 삭제' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010200',
+							type: 'Modal',
+							depth2: '',
+							depth3: '영문이름',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010200.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '선택메뉴 button 태그로 변경' },
+								{ date: '2022.08.18', text: '직접입력 추가' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010300',
+							type: 'Modal',
+							depth2: '',
+							depth3: '내맘대로 서비스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010300.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '문구수정' },
+								{ date: '2022.08.18', text: 'checked 속성 삭제' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010400',
+							type: 'Modal',
+							depth2: '',
+							depth3: '쇼핑/주유 서비스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010400.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '이미지 반영 및 추가 작업' },
+								{ date: '2022.08.18', text: '클래스, 문구추가 및 checked속성 삭제\n 문구추가로 인한 구조변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010600',
+							type: 'Modal',
+							depth2: '',
+							depth3: 'Simple Life 서비스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010600.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.18', text: '문구수정 및 에러 케이스 추가' },
+								{ date: '2022.08.24', text: '에러 케이스 삭제: 에러메세지는 .uiFormInvalid 함수 이용(컴포넌트 가이드 참고)' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.09.13', text: 'input 요소의 ui-form-item에 type-inputed 클래스 추가 및 type 값 변경, pattern 속성 추가' },
+								{ date: '2022.10.27', text: '타입클래스 추가 및 문구 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010700',
+							type: 'Modal',
+							depth2: '',
+							depth3: '사업자번호',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010700.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.08.12', text: '문구, input type값 수정\n하단버튼 type-disabled 클래스 및 주석 추가' },
+								{ date: '2022.08.18', text: '문구수정 및 type-disabled 클래스 disabled속성으로 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.09.13', text: 'input 요소의 ui-form-item에 type-inputed 클래스 추가' },
+								{ date: '2022.11.28', text: '타입클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010800',
+							type: 'Modal',
+							depth2: '',
+							depth3: '휴대폰 번호 변경',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010800.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [
+								{ date: '2022.10.27', text: '클래스명 변경' },
+								{ date: '2022.11.29', text: 'input-width-tel-exchange클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010901',
+							type: 'Modal',
+							depth2: '',
+							depth3: '주소검색',
+							depth4: '검색어',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010901.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.10.11', text: 'UI 변경으로 인한 전반적인 구조 변경' },
+								{ date: '2022.11.17', text: '안내문구 추가 및 수정' },
+								{ date: '2022.11.28', text: '타입클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010902',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '도로명/지번',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010901.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [{ date: '2022.10.11', text: 'UI 변경으로 인한 전반적인 구조 변경' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB09020903',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '상세주소 입력',
+							depth5: '',
+							depth6: '',
+							path: '/MOB09020903.html',
+							status: 'end',
+							create: '2022.08.05',
+							log: [
+								{ date: '2022.10.11', text: 'UI 변경으로 인한 전반적인 구조 변경' },
+								{ date: '2022.10.27', text: '타입 클래스 삭제 및 문구수정' },
+								{ date: '2022.11.17', text: '문구수정' },
+								{ date: '2022.11.30', text: '버튼 타입클래스 변경' },
+								{ date: '2022.12.07', text: '버튼 타입클래스 변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08011000',
+							type: 'Modal',
+							depth2: '',
+							depth3: 'BC카드 주소검증 실패',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08011000.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2022.11.17', text: '문구수정' }],
+						},
+
+						{
+							depthOnly: false,
+							id: 'MOB08030000',
+							type: 'Page',
+							depth2: '회사정보',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08030000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정' },
+								{ date: '2022.08.24', text: '우편번호 텍스트에 display-block 클래스 추가' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08030100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '회사검색',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08030100.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [
+								{ date: '2022.10.27', text: '클래스 추가 및 문구수정' },
+								{ date: '2022.11.17', text: '문구수정' },
+								{ date: '2022.11.28', text: '타입클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040100',
+							type: 'Page',
+							depth2: '카드 수령지',
+							depth3: '집, 회사 주소를 입력 받은 상태',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040100.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040200',
+							type: 'Page',
+							depth2: '',
+							depth3: '회사 주소를 입력 받지 않은 상태',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040200_01.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040000',
+							type: 'Page',
+							depth2: '결제정보 입력',
+							depth3: '신용카드',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040000--type1.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '하단 버튼 button태그로 변경 및 띄어쓰기 제거' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.10.27', text: 'form요소, 안내문구 추가' },
+								{ date: '2022.11.01', text: '입력항목 추가, 희망한도 UI변경' },
+								{ date: '2022.11.23', text: '하나은행 간편계좌 개설 배너 추가' },
+								{ date: '2022.12.12', text: '이메일 입력 항목에 타입클래스 추가,삭제\nSK텔레콤 동의 항목 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '체크카드',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040000--type2.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '하단 버튼 button태그로 변경 및 띄어쓰기 제거' },
+								{ date: '2022.08.29', text: '결제일, 결제일 안내 삭제 및 입력란 하단에 출금안내 문구 추가' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.10.27', text: 'form요소 추가' },
+								{ date: '2022.11.09', text: '결제 계좌 케이스 추가' },
+								{ date: '2022.12.12', text: '이메일 입력 항목에 타입클래스 추가,삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '체크카드(트레블로그)',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040000--type3.html',
+							status: 'end',
+							create: '2022.08.29',
+							log: [
+								{ date: '2022.08.31', text: '문구 줄바꿈 적용\n .page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.10.27', text: 'form요소 추가' },
+								{ date: '2022.12.12', text: '이메일 입력 항목에 타입클래스 추가,삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '신용+체크(트래블로그)',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040000--type4.html',
+							status: 'end',
+							create: '2022.11.01',
+							log: [{ date: '2022.12.12', text: '이메일 입력 항목에 타입클래스 추가,삭제' }],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '체크+체크(트래블로그)',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040000--type5.html',
+							status: 'end',
+							create: '2022.11.01',
+							log: [{ date: '2022.12.12', text: '이메일 입력 항목에 타입클래스 추가,삭제' }],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '추가 [PLCC 상품]',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040000--type6.html',
+							status: 'end',
+							create: '2022.11.09',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08051500',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '결제계좌 선택',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08051500.html',
+							status: 'end',
+							create: '2022.11.09',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '마이너스 통장 결제계좌 이용안내',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040100_02.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08050000',
+							type: 'Page',
+							depth2: '',
+							depth3: '청구단위 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08050000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '확인해주세요 내부 컨텐츠 내용 추가' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.10.14', text: '입력항목, 안내문구 추가 및 기본값 적용' },
+								{ date: '2022.11.01', text: '희망한도 UI변경' },
+								{ date: '2022.12.12', text: '이메일 입력 항목에 타입클래스 추가,삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB05020000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '결제일 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB05020000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '결제일 안내',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040100_01.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040200',
+							type: 'Modal',
+							depth2: '',
+							depth3: '결제계좌',
+							depth4: '은행 선택 전',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040200_02--type1.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정 및 하단 버튼 삭제' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.09.13', text: 'input 요소의 ui-form-item에 type-inputed 클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+								{ date: '2022.12.22', text: '은행선택 상단 탭 구조변경 => .js-ui-tab-panel.page-tab-panel 에서 .ui-tab-area분리' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '은행 선택 후 계좌 입력',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040200_02--type2.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.24', text: '에러 케이스 삭제: 에러메세지는 .uiFormInvalid 함수 이용(컴포넌트 가이드 참고)' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.09.13', text: 'input 요소의 ui-form-item에 type-inputed 클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+								{ date: '2022.12.22', text: '은행선택 상단 탭 구조변경 => .js-ui-tab-panel.page-tab-panel 에서 .ui-tab-area분리' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '체크카드일 경우',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040200_02--type3.html',
+							status: 'end',
+							create: '2022.08.29',
+							log: [
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.09.13', text: 'input 요소의 ui-form-item에 type-inputed 클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040300',
+							type: 'Modal',
+							depth2: '',
+							depth3: '결제계좌 인증',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040300.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가 ' },
+								{ date: '2022.09.13', text: 'input 요소의 ui-form-item에 type-inputed 클래스 추가' },
+								{ date: '2022.11.17', text: '간격클래스 추가 및 재요청,시간연장 버튼 추가' },
+								{ date: '2022.11.28', text: '타입클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040301',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '모바일 전용 카드일 경우',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040301.html',
+							status: 'end',
+							create: '2022.08.18',
+							log: [
+								{ date: '2022.08.24', text: '문구수정' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040302',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '플라스틱 카드',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040302.html',
+							status: 'end',
+							create: '2022.08.18',
+							log: [
+								{ date: '2022.08.24', text: '문구수정' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040500',
+							type: 'Modal',
+							depth2: '',
+							depth3: '희망한도 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040500.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040501',
+							type: 'Modal',
+							depth2: '',
+							depth3: '희망한도 입력',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040501.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.24', text: 'type 속성 값 변경 및 pattern 속성 추가\n에러 케이스 삭제: 에러메세지는 .uiFormInvalid 함수 이용(컴포넌트 가이드 참고)' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.09.13', text: 'input 요소의 ui-form-item에 type-inputed 클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040600',
+							type: 'Modal',
+							depth2: '',
+							depth3: '결제알림 서비스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040600.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040601',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '결제알림 서비스 안내',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040601.html',
+							status: 'end',
+							create: '2022.08.18',
+							log: [{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08051000',
+							type: 'Modal',
+							depth2: '',
+							depth3: '이용대금명세서 수령방법 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08051000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.10.21', text: '팝업 바깥영역 클릭시 레이어 닫히도록 is-not-background-close 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08051100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '메일주소 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08051100.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '직접입력 추가' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.10.21', text: '팝업 바깥영역 클릭시 레이어 닫히도록 is-not-background-close 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08051201',
+							type: 'Modal',
+							depth2: '',
+							depth3: '메일주소 입력',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08051201.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.24', text: '에러 케이스 삭제: 에러메세지는 .uiFormInvalid 함수 이용(컴포넌트 가이드 참고)' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.09.13', text: 'input 요소의 ui-form-item에 type-inputed 클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040701\nMOB08051001\nMOB08051101',
+							type: 'Modal',
+							depth2: '',
+							depth3: '출금동의',
+							depth4: '약관동의',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040701.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정 및 클래스 추가, 삭제' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.10.21', text: '네이버, PASS인증서 추가로 인한 UI 및 구조변경' },
+								{ date: '2022.11.17', text: '문구수정' },
+								{ date: '2022.11.23', text: '네이버 인증 약관동의 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040702',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: 'ARS 인증',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040702.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.11.17', text: '문구수정' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08051002',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '네이버인증서 인증요청',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06050100.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08051102',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: 'PASS인증서 인증요청',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06060100.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08051103',
+							type: 'Page',
+							depth2: '',
+							depth3: '',
+							depth4: '',
+							depth5: 'PASS 앱 출금이체동의 정보확인',
+							depth6: '',
+							path: '/MOB08051103.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08051200',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '결제계좌변경(제신고) 안내',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08051200.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08051300',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '결제계좌변경(제신고) 완료',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08051300.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [{ date: '2022.11.17', text: '문구수정' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08051400',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '하나 밀리언달러 통장 계좌번호',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08051400.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040703',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '모바일 전용 카드일 경우',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040703.html',
+							status: 'end',
+							create: '2022.08.18',
+							log: [
+								{ date: '2022.08.24', text: '문구수정' },
+								{ date: '2022.08.29', text: '문구 구조 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08040704',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '플라스틱 카드',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08040704.html',
+							status: 'end',
+							create: '2022.08.18',
+							log: [
+								{ date: '2022.08.24', text: '문구수정' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08050905',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '제신고 취소',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08050905.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08060000',
+							type: 'Page',
+							depth2: '부가정보 입력',
+							depth3: '신용카드',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060000--type1.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.24', text: 'data-checkbox-group 관련 속성 삭제' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.10.14', text: '이용대금명세서, 간편결제 연결 서비스, 확인해주세요 컨텐츠 삭제\n이벤트 배너, 입력/선택 항목 추가' },
+								{ date: '2022.11.09', text: '후불하이패스 카드신청 UI변경 및 배너 위치 변경' },
+								{ date: '2022.11.17', text: '해외원화결제(DOC) 차단서비스 UI변경 및 위치 변경' },
+								{ date: '2022.11.28', text: '타입클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '체크카드',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060000--type2.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.24', text: 'data-checkbox-group 관련 속성 삭제' },
+								{ date: '2022.08.29', text: 'DCC차단 서비스- 트래블로그 체크카드의 경우 케이스 추가' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.10.14', text: '간편결제 연결 서비스, 확인해주세요 컨텐츠 삭제\n이벤트 배너, 입력/선택 항목 추가' },
+								{ date: '2022.11.17', text: '해외원화결제(DOC) 차단서비스 UI변경 및 위치 변경' },
+								{ date: '2022.12.12', text: '이메일 입력 항목에 타입클래스 추가,삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08060300',
+							type: 'Modal',
+							depth2: '',
+							depth3: '해외원화결제(DCC)차단 서비스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060300.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정 및 클래스 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08060400',
+							type: 'Modal',
+							depth2: '',
+							depth3: '일부결제금액 이월약정(리볼빙)',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060400.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정, 클래스 추가 및 인풋 max값 수정' },
+								{ date: '2022.08.24', text: '문구수정, 클래스 추가 및 포지션값 적용' },
+								{ date: '2022.08.31', text: '결제비율 max값 변경' },
+								{ date: '2022.10.14', text: '약관동의 영역 삭제, 설명서 버튼 영역 추가' },
+								{ date: '2022.12.23', text: '문구변경, 버튼 비활성 속성 추가 및 가이드 주석 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08060402',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '설명서',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060402.html',
+							status: 'end',
+							create: '2022.10.14',
+							log: [{ date: '2023.04.12', text: '금리인하요구권 하단 라디오 버튼 위치 변경 및 전체동의 UI변경' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08060800',
+							type: 'Modal',
+							depth2: '',
+							depth3: '간편결제 연결 서비스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060800.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [
+								{ date: '2022.11.17', text: '문구수정 및 버튼 삭제' },
+								{ date: '2022.11.29', text: '상단 타이틀 영역 클래스 수정' },
+								{ date: '2022.12.06', text: '간격클래스 삭제 및 태그 위치 변경\n버튼UI변경' },
+								{ date: '2022.12.07', text: '간격클래스 변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08060801',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '네이버 아이디 선택',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060801.html',
+							status: 'end',
+							create: '2022.11.09',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08060500',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '제휴간편결제 개인정보 필수 제공 동의',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060500.html',
+							status: 'end',
+							create: '2022.08.18',
+							log: [{ date: '2022.08.24', text: '내용 수정' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08060900',
+							type: 'Modal',
+							depth2: '',
+							depth3: '후불하이패스 카드 약관동의',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060900.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [{ date: '2022.11.17', text: '레이어 닫기 버튼 추가, 하단 "다음에"버튼 삭제 및 문구수정' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08061000',
+							type: 'Modal',
+							depth2: '',
+							depth3: 'KT휴대폰요금 자동납부',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08061000.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [{ date: '2022.11.17', text: '문구수정' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08061100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '아파트관리비 자동납부',
+							depth4: '아파트 검색',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08061100.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [
+								{ date: '2022.11.01', text: '확인해주세요 영역 삭제 및 검색아파트 리스트 영역 UI 변경' },
+								{ date: '2022.11.17', text: '더보기 버튼 삭제' },
+								{ date: '2022.11.28', text: '타입클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08061101',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '동,호수 선택',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08061101.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [
+								{ date: '2022.11.01', text: '클래스명, 문구 수정 및 전반적인 UI변경' },
+								{ date: '2022.11.17', text: '레이어 닫기 버튼 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08061102',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '동 선택',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08061102.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08061103',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '호 선택',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08061103.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08070000',
+							type: 'Modal',
+							depth2: '가족정보',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08070000.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [{ date: '2022.11.29', text: 'input-width-tel-exchange클래스 삭제' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08070100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '가족관계 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08070100.html',
+							status: 'end',
+							create: '2022.10.21',
+							log: [],
+						},
+					],
+				},
+				{
+					depth1: '고객확인의무사항',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB08020000',
+							type: 'Page',
+							depth2: '고객확인의무사항(CDD/EDD)',
+							depth3: '소득구분 - 부동산 선택 시',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020000--type1.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정 및 직접입력 케이스 삭제\n하단 버튼 button 태그로 변경' },
+								{ date: '2022.08.24', text: '우편번호 텍스트에 display-block 클래스 추가' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '소득구분 - 개인사업자 선택 시',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020000--type2.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정 및 체크박스 삭제\n하단 버튼 button 태그로 변경' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '소득구분 - 배우자 직장 선택 시',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020000--type3.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정\n하단 버튼 button 태그로 변경' },
+								{ date: '2022.08.24', text: '우편번호 텍스트에 display-block 클래스 추가' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '소득구분 - 배우자 재산세 선택 시',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020000--type4.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정 및 직접입력 케이스 삭제\n하단 버튼 button 태그로 변경' },
+								{ date: '2022.08.24', text: '우편번호 텍스트에 display-block 클래스 추가' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Page',
+							depth2: '',
+							depth3: '소득구분 - 배우자 개인사업자 선택 시',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020000--type5.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정 및 사업자등록번호 추가\n하단 버튼 button 태그로 변경' },
+								{ date: '2022.08.24', text: '우편번호 텍스트에 display-block 클래스 추가' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08020500',
+							type: 'Modal',
+							depth2: '',
+							depth3: '부동산구분',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020500.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08020600',
+							type: 'Page',
+							depth2: '',
+							depth3: '배우자 본인인증',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020600.html',
+							status: 'end',
+							create: '2022.08.18',
+							log: [
+								{ date: '2022.08.24', text: '네이버인증, PASS인증 탭 삭제 및 탭메뉴 클래스 변경: as-is화면' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.10.14', text: 'UI 변경으로 인한 전반적인 구조 변경' },
+								{ date: '2022.11.29', text: 'input-width-tel-exchange클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08020300',
+							type: 'Modal',
+							depth2: '',
+							depth3: '거래목적',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020300.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08020400',
+							type: 'Modal',
+							depth2: '',
+							depth3: '자금출처',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020400.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08020100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '직업정보',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020100.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08020200',
+							type: 'Modal',
+							depth2: '',
+							depth3: '소득구분',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08020200.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '문구수정' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+					],
+				},
+				{
+					depth1: '신청서 간소화',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB09000000',
+							type: 'Page',
+							depth2: 'main',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB09000000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '간편결제 연결서비스 추가' },
+								{ date: '2022.08.24', text: '우편번호 텍스트에 display-block 클래스 추가\n에러 케이스 삭제: 에러메세지는 .uiFormInvalid 함수 이용(컴포넌트 가이드 참고)' },
+								{ date: '2022.08.29', text: 'DCC차단 서비스- 트래블로그 체크카드의 경우 케이스 추가, 전화번호 폼 기능에 따른 구조 변경' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.10.14', text: '폼요소 순서 변경 및 추가,삭제' },
+								{ date: '2022.11.01', text: '희망한도 추가' },
+								{ date: '2022.11.09', text: '배너영역 추가, 후불하이패스 카드신청 UI변경' },
+								{ date: '2022.11.17', text: '해외원화결제(DOC) 차단서비스 UI변경 및 위치 변경' },
+								{ date: '2022.12.12', text: 'SK텔레콤 동의 항목 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08060800',
+							type: 'Modal',
+							depth2: '',
+							depth3: '간편결제 연결 서비스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060800.html',
+							status: 'end',
+							create: '2022.11.09',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08060801',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '네이버 아이디 선택',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08060801.html',
+							status: 'end',
+							create: '2022.11.09',
+							log: [],
+						},
+
+						{
+							depthOnly: false,
+							id: 'MOB09020100',
+							type: 'Modal',
+							depth2: '스마트 신용지킴이 안내',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB09020100.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '약관동의 영역 추가' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB09020200',
+							type: 'Modal',
+							depth2: '쇼핑케어 안내',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB09020200.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.24', text: '할인권 선택, 약관동의 영역 추가 및 디자인 변경으로 인한 전반적인 구조 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.09.15', text: '하단버튼 구조 변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010300',
+							type: 'Modal',
+							depth2: '개인정보',
+							depth3: '내맘대로 서비스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010300.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.24', text: '간격 클래스 추가' },
+								{ date: '2022.09.16', text: '하단버튼 구조 변경' },
+								{ date: '2022.11.28', text: '상단 타이틀 영역 구조변경 및 카드명 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010400',
+							type: 'Modal',
+							depth2: '',
+							depth3: '쇼핑/주유 서비스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010400.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [{ date: '2022.11.28', text: '상단 타이틀 영역 카드명 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010600',
+							type: 'Modal',
+							depth2: '',
+							depth3: 'Simple Life 서비스',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010600.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.11.17', text: '문구수정' },
+								{ date: '2022.11.28', text: '상단 타이틀 영역 구조변경 및 카드명 추가, 문구수정' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB08010700',
+							type: 'Modal',
+							depth2: '',
+							depth3: '사업자 등록번호 입력',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08010700.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.11.17', text: '문구수정' },
+								{ date: '2022.11.28', text: '상단 타이틀 영역 구조변경 및 카드명 추가\n타입 클래스 추가' },
+							],
+						},
+					],
+				},
+				{
+					depth1: '신분증',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB11010000',
+							type: 'Page',
+							depth2: '신분증 촬영안내',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11010000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '간격 클래스 추가' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.11.01', text: '상단 타이틀 문구수정 및 가이드 텍스트 삭제' },
+								{ date: '2022.11.11', text: '촬영 전/후 동일페이지에서 노출 될 수 있도록 전반적인 구조변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11013100',
+							type: 'Modal',
+							depth2: '신분증 촬영(OCR) 팝업',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11013100.html',
+							status: 'end',
+							create: '2022.11.09',
+							log: [
+								{ date: '2022.11.11', text: '페이지에서 모달창으로 변경' },
+								{ date: '2022.12.12', text: '가이드 문구 html 위치 변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Modal',
+							depth2: '',
+							depth3: '카메라 화면 전체 버전',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11013100--type-full.html',
+							status: 'end',
+							create: '2022.12.12',
+							log: [{ date: '2022.12.27', text: '해상도 대응 버전 반영' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11010202',
+							type: 'Modal',
+							depth2: '',
+							depth3: 'Mobile Web 인식 실패 시 (1회 실패)',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11010202.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.11.01', text: '문구수정 및 안내문구 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11010203',
+							type: 'Modal',
+							depth2: '',
+							depth3: 'Mobile Web 인식 실패 시 (2회 실패)',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11010203.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+								{ date: '2022.11.01', text: '문구수정' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11020000',
+							type: 'Page',
+							depth2: 'OCR인식 완료',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11020000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.11.11', text: '촬영 전/후 동일페이지에서 노출 될 수 있도록 전반적인 구조변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11020100',
+							type: 'Modal',
+							depth2: '',
+							depth3: '이름 확인 팝업',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11020100.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: 'data-role 속성 추가' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11020201',
+							type: 'Modal',
+							depth2: '',
+							depth3: '신분증 진위확인 실패',
+							depth4: '주민등록증',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11020201.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '하단 버튼 button 태그로 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11020202',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '운전면허증',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11020202.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '하단 버튼 button 태그로 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11020203',
+							type: 'Modal',
+							depth2: '',
+							depth3: '신분증 진위확인 전문오류',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11020203.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '하단 버튼 button 태그로 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11030600',
+							type: 'Page',
+							depth2: '신분증 직접입력(운전면허증)',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11030600.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '체크박스의 data속성 값 삭제 및 id, for 값 변경' },
+								{ date: '2022.08.24', text: '클래스 변경, 추가 및 구조변경\npattern 속성 추가' },
+								{ date: '2022.08.29', text: '클래스 변경' },
+								{ date: '2022.08.31', text: '하단 약관동의 accordion으로 구조 변경\n.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.09.13', text: '불필요한 가이드 삭제 처리' },
+								{ date: '2022.09.16', text: 'type-inputed 클래스 추가' },
+								{ date: '2022.11.30', text: 'type-inputed 클래스 삭제' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11030601',
+							type: 'Modal',
+							depth2: '',
+							depth3: '발급기관 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11030601.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '하단 버튼 삭제' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11030500',
+							type: 'Page',
+							depth2: '신분증 직접입력(주민등록증)',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11030600.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11030600_pop',
+							type: 'Modal',
+							depth2: '',
+							depth3: '신분증 직접입력(Modal)',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11030600--type2.html',
+							status: 'end',
+							create: '2023.01.13',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11040000',
+							type: 'Modal',
+							depth2: '플라스틱 카드 전환 안내(인증 실패)',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11040000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '하단 버튼 button 태그로 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB11050000',
+							type: 'Modal',
+							depth2: '플라스틱 카드 전환 안내_멀티카드(인증 실패)',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11050000.html',
+							status: 'end',
+							create: '2022.11.09',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB12000000',
+							type: 'Page',
+							depth2: '카드 비밀번호',
+							depth3: 'Mobile Web',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB12000000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [{ date: '2022.08.24', text: '에러 케이스 삭제: 에러메세지는 .uiFormInvalid 함수 이용(컴포넌트 가이드 참고)' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB12010000',
+							type: 'Page',
+							depth2: '',
+							depth3: 'APP',
+							depth4: '입력',
+							depth5: '',
+							depth6: '',
+							path: '/MOB12010000.html',
+							status: 'end',
+							create: '2022.09.02',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB12020000',
+							type: 'Page',
+							depth2: '',
+							depth3: '',
+							depth4: '확인',
+							depth5: '',
+							depth6: '',
+							path: '/MOB12020000.html',
+							status: 'end',
+							create: '2022.09.02',
+							log: [],
+						},
+					],
+				},
+				{
+					depth1: '완료',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB13010100',
+							type: 'Page',
+							depth2: '신청완료',
+							depth3: '바로발급',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB13010100.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '클래스 추가, 하단 버튼 button 태그로 변경' },
+								{ date: '2022.08.24', text: '문구 줄바꿈 처리' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.09.07', text: '가이드 주석 추가' },
+								{ date: '2022.10.27', text: '동시발급 케이스 추가' },
+								{ date: '2023.04.18', text: '배너 이미지 영역 슬라이드로 변경' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB13010200',
+							type: 'Page',
+							depth2: '',
+							depth3: '빠른발급',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB13010200.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '클래스 추가, 하단 버튼 button 태그로 변경' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.09.07', text: '가로형 추가, 가이드 주석 추가' },
+								{ date: '2022.10.27', text: '동시발급 케이스 추가' },
+								{ date: '2022.11.09', text: '비대면(학생증카드) 케이스 문구 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB13010300',
+							type: 'Page',
+							depth2: '',
+							depth3: '일반발급',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB13010300.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '클래스 추가, 하단 버튼 button 태그로 변경' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+								{ date: '2022.09.07', text: '가이드 주석 추가' },
+								{ date: '2022.10.27', text: '동시발급 케이스 추가' },
+								{ date: '2022.11.09', text: '비대면(학생증카드) 케이스 문구 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB13010400',
+							type: 'Modal',
+							depth2: '',
+							depth3: '앱카드 즉시 사용안내, 앱카드 등록 안내',
+							depth4: 'App_원큐페이 가입자_바로발급',
+							depth5: '',
+							depth6: '',
+							path: '/MOB13010400.html',
+							status: 'end',
+							create: '2022.08.18',
+							log: [
+								{ date: '2022.08.29', text: '클래스, 태그 변경' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB13020400',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: 'App/Mobile Web_원큐페이 미가입자_바로발급',
+							depth5: '',
+							depth6: '',
+							path: '/MOB13020400.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '띄어쓰기' },
+								{ date: '2022.09.02', text: '팝업 바깥영역 클릭시 레이어 닫히지 않도록 관련 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB13040000',
+							type: 'Page',
+							depth2: '신청 실패',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB13040000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '하단 버튼 태그 변경' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB13050000',
+							type: 'Page',
+							depth2: '오류',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB13050000.html',
+							status: 'end',
+							create: '2022.08.12',
+							log: [
+								{ date: '2022.08.18', text: '하단 버튼 태그 변경' },
+								{ date: '2022.08.31', text: '.page-buttons에 .type-fixed.type-no-line 클래스 추가' },
+							],
+						},
+					],
+				},
+				{
+					depth1: '제휴카드',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB15010000',
+							type: 'Page',
+							depth2: '교직원 카드',
+							depth3: '교직원 정보',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB15010000.html',
+							status: 'end',
+							create: '2022.10.27',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB15020000',
+							type: 'Page',
+							depth2: '',
+							depth3: '증명사진 등록',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB15020000.html',
+							status: 'end',
+							create: '2022.10.27',
+							log: [
+								{ date: '2022.11.09', text: '하단 버튼 input 태그로 변경' },
+								{ date: '2022.11.17', text: '안내문구 수정' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB15030000',
+							type: 'Page',
+							depth2: '',
+							depth3: '증명사진 확인',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB15030000.html',
+							status: 'end',
+							create: '2022.10.27',
+							log: [{ date: '2022.11.17', text: '문구수정' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB16010000',
+							type: 'Page',
+							depth2: '의/약사 카드',
+							depth3: '합격서류 등록',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB16010000.html',
+							status: 'end',
+							create: '2022.10.27',
+							log: [
+								{ date: '2022.11.09', text: '하단 버튼 input 태그로 변경' },
+								{ date: '2022.11.17', text: '문구수정' },
+							],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB16020000',
+							type: 'Page',
+							depth2: '',
+							depth3: '합격서류 확인',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB16020000.html',
+							status: 'end',
+							create: '2022.10.27',
+							log: [{ date: '2022.11.17', text: '문구수정' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB17010000',
+							type: 'Page',
+							depth2: '학생증 카드',
+							depth3: '증명사진 등록',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB17010000.html',
+							status: 'end',
+							create: '2022.10.27',
+							log: [{ date: '2022.11.09', text: '하단 버튼 input 태그로 변경' }],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB17020000',
+							type: 'Page',
+							depth2: '',
+							depth3: '증명사진 확인',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB17020000.html',
+							status: 'end',
+							create: '2022.10.27',
+							log: [],
+						},
+					],
+				},
+				{
+					depth1: '하나카드 전화예약 신청',
+					data: [
+						{
+							depthOnly: false,
+							id: 'MOB18000000',
+							type: 'Page',
+							depth2: '하나카드 전화예약 신청',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB18000000.html',
+							status: 'end',
+							create: '2022.11.23',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'MOB18010000',
+							type: 'Page',
+							depth2: '',
+							depth3: '신청 완료',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB18010000.html',
+							status: 'end',
+							create: '2022.11.23',
+							log: [],
+						},
+					],
+				},
+				{
+					depth1: 'PC - 신분증 인증',
+					data: [
+						{
+							depthOnly: false,
+							id: 'PC14040100',
+							type: 'Page',
+							depth2: '신분증촬영',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/PC14040100.html',
+							status: 'end',
+							create: '2023.02.01',
+							log: [{ date: '2023.02.22', text: '이미지 변경 및 이미지 랜덤 노출 케이스 추가' }],
+						},
+						{
+							depthOnly: false,
+							id: 'PC14040300',
+							type: 'Modal',
+							depth2: '',
+							depth3: '인식실패',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/PC14040300.html',
+							status: 'end',
+							create: '2023.02.01',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'PC14050900',
+							type: 'Modal',
+							depth2: '',
+							depth3: '신분증 촬영(OCR) 인증시작',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/PC14050900.html',
+							status: 'end',
+							create: '2023.02.01',
+							log: [{ date: '2023.02.22', text: 'ocr-guide-title 문구수정' }],
+						},
+						{
+							depthOnly: false,
+							id: '',
+							type: 'Modal',
+							depth2: '',
+							depth3: '',
+							depth4: '카메라 화면 전체 버전',
+							depth5: '',
+							depth6: '',
+							path: '/PC14050900--type-full.html',
+							status: 'end',
+							create: '2023.02.01',
+							log: [{ date: '2023.02.22', text: 'ocr-guide-title 문구수정' }],
+						},
+						{
+							depthOnly: false,
+							id: 'PC14040400',
+							type: 'Page',
+							depth2: '신분증인증',
+							depth3: '촬영정보확인',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/PC14040400.html',
+							status: 'end',
+							create: '2023.02.01',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'PC14040600',
+							type: 'Modal',
+							depth2: '',
+							depth3: '진위확인실패',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/PC14040600.html',
+							status: 'end',
+							create: '2023.02.01',
+							log: [],
+						},
+						{
+							depthOnly: false,
+							id: 'PC14040700',
+							type: 'Modal',
+							depth2: '',
+							depth3: '신분증 진위확인 전문오류',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/PC14040700.html',
+							status: 'end',
+							create: '2023.02.01',
+							log: [{ date: '2023.03.16', text: '문구수정 및 하이라이트 문구 변경' }],
+						},
+					],
+				},
+				{
+					depth1: '통합인증 - 신분증 인증',
+					data: [
+						{
+							id: 'MOB11010000',
+							type: '',
+							depth2: '신분증 촬영안내',
+							depth3: '',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11010000--type-ita.html',
+							status: 'end',
+							create: '2023.02.15',
+							log: [
+								{ date: '2023.03.21', text: '신분증 예시 이미지 변경 및 이미지 랜덤 노출 케이스 추가\n약관동의 상세내용 추가 및 UI변경, 타입 클래스 변경' },
+								{ date: '2023.04.11', text: '하단 플로팅 버튼에 클래스 추가 및 삭제, fake영역 추가' },
+							],
+						},
+						{
+							id: 'MOB11010100',
+							type: '팝업',
+							depth2: '',
+							depth3: '모바일 신분증 제출',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11010100.html',
+							status: 'end',
+							create: '2023.02.15',
+							log: [],
+						},
+						{
+							id: 'MOB11010200',
+							type: '팝업',
+							depth2: '',
+							depth3: '모바일 신분증 안내',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11010200.html',
+							status: 'end',
+							create: '2023.02.15',
+							log: [],
+						},
+						{
+							id: 'MOB11030600',
+							type: '',
+							depth2: '신분증 직접입력',
+							depth3: '운전면허증',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11030600--type-ita.html',
+							status: 'end',
+							create: '2023.02.15',
+							log: [
+								{ date: '2023.03.21', text: '신분증 예시 이미지 변경 및 이미지 랜덤 노출 케이스 추가\n약관동의, 모바일신분증으로 제출하기 버튼 추가' },
+								{ date: '2023.04.10', text: '탭형식 변경 ui-tab-area => ui-radio-group\n신분증 촬영 버튼 추가\n모바일신분증 제출버튼 삭제 및 하단 플로팅으로 변경' },
+								{ date: '2023.04.11', text: '하단 플로팅 버튼에 클래스 추가 및 삭제, fake영역 추가' },
+							],
+						},
+						{
+							id: 'MOB11030500',
+							type: '',
+							depth2: '',
+							depth3: '주민등록증',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB11030500.html',
+							status: 'end',
+							create: '2023.02.15',
+							log: [
+								{ date: '2023.03.21', text: '신분증 예시 이미지 변경 및 이미지 랜덤 노출 케이스 추가\n약관동의, 모바일신분증으로 제출하기 버튼 추가' },
+								{ date: '2023.04.10', text: '탭형식 변경 ui-tab-area => ui-radio-group\n신분증 촬영 버튼 추가\n모바일신분증 제출버튼 삭제 및 하단 플로팅으로 변경' },
+								{ date: '2023.04.11', text: '하단 플로팅 버튼에 클래스 추가 및 삭제, fake영역 추가' },
+							],
+						},
+					],
+				},
+				{
+					depth1: '통합인증 - 카드신청',
+					data: [
+						{
+							id: 'MOB06010100',
+							type: '팝업',
+							depth2: '본인인증',
+							depth3: '인증수단 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB06010100.html',
+							status: 'end',
+							create: '2023.02.15',
+							log: [{ date: '2023.03.21', text: '하나원사인 -> 하나인증서로 명칭 변경\nUI 변경으로 인한 클래스명 변경' }],
+						},
+						{
+							id: 'MOB08050901',
+							type: '팝업',
+							depth2: '출금동의',
+							depth3: '인증수단 선택',
+							depth4: '',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08050901.html',
+							status: 'end',
+							create: '2023.02.15',
+							log: [{ date: '2023.03.21', text: '하나원사인 -> 하나인증서로 명칭 변경' }],
+						},
+						{
+							id: '',
+							type: '팝업',
+							depth2: '',
+							depth3: '',
+							depth4: '인증수단 4개일 경우',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08050901--type2.html',
+							status: 'end',
+							create: '2023.03.21',
+							log: [],
+						},
+						{
+							id: 'MOB08051200',
+							type: '팝업',
+							depth2: '제신고',
+							depth3: '결제계좌변경',
+							depth4: '인증수단 선택',
+							depth5: '',
+							depth6: '',
+							path: '/MOB08051200--type-ita.html',
+							status: 'end',
+							create: '2023.02.15',
+							log: [{ date: '2023.03.21', text: '하나원사인 -> 하나인증서로 명칭 변경' }],
+						},
+					],
+				},
+			];
+
+			var html = '';
+			var navHTML = '';
+			var totalIndex = 0;
+			var dates = (function () {
+				var array = [];
+
+				function add(date) {
+					if (typeof date === 'string' && date.length && array.indexOf(date) === -1) {
+						array.push(date);
+					}
+				}
+
+				$.each(tableData, function (i) {
+					var sectionData = tableData[i].data;
+					$.each(sectionData, function (j) {
+						add(this.create);
+						$.each(sectionData[j].log, function (l) {
+							add(this.date);
+						});
+					});
+				});
+
+				array.sort();
+
+				return array;
+			})();
+			var latestDate = dates[dates.length - 1];
+
+			$.each(tableData, function (i) {
+				var sectionIndex = i;
+				var sectionData = tableData[i].data;
+				var tableHTML = '';
+
+				$.each(sectionData, function (j) {
+					var returnVal = function (key, secondTestKey) {
+						var val = sectionData[j][key];
+						var secondTestVal = sectionData[j][secondTestKey];
+						var prevIndex = j - 1;
+						var isPrint = true;
+						/*if (prevIndex >= 0) {
+													if (sectionData[prevIndex][key] === val) {
+														isPrint = false;
+													}
+													if (typeof secondTestKey === 'string' && secondTestKey.length && !sectionData[j].depthOnly) {
+														if (sectionData[prevIndex][key] === val && sectionData[prevIndex][secondTestKey] === secondTestVal) {
+															isPrint = false;
+														} else {
+															isPrint = true;
+														}
+													}
+												}*/
+						return isPrint ? val.replace(/\n/g, '<br>') : '';
+					};
+					var id = returnVal('id');
+					var type = returnVal('type', 'depth2');
+					var depth2 = returnVal('depth2');
+					var depth3 = returnVal('depth3');
+					var depth4 = returnVal('depth4');
+					var depth5 = returnVal('depth5');
+					var depth6 = returnVal('depth6');
+					var path = (function () {
+						var val = sectionData[j].path;
+						var href = '';
+						if (val.match(/^\.\//g)) {
+							href = val;
+						} else {
+							href = './dist' + val;
+						}
+						return val.length ? '<a href="' + href + '" target="_blank">' + val + '</a>' : '';
+					})();
+					var status = (function () {
+						var val = sectionData[j].status;
+						var text = '';
+						if (val === 'confirm') {
+							text = '검수 요청';
+						} else if (val === 'end') {
+							text = '검수 완료';
+						} else if (val === 'moding') {
+							text = '수정중';
+						} else if (val === 'ing') {
+							text = '작업중';
+						} else if (val === 'waiting') {
+							text = '디자인 대기';
+						}
+						return val.length ? '<span class="index-status index-status--' + val + '">' + text + '</span>' : '';
+					})();
+					var create = this.create;
+					var update = '';
+					var log = (function () {
+						var val = sectionData[j].log;
+						var length = val.length;
+						var html = '<ul class="index-log">';
+						$.each(val, function (l) {
+							var date = this.date;
+							var isLatest = date === latestDate;
+							var isMWK = Boolean(this.text.match(/^\(MWK\)/));
+
+							html +=
+								'<li class="index-log__item' +
+								(isLatest ? ' is-emphasis' : '') +
+								(isLatest && isMWK ? ' is-mwk' : '') +
+								'"><div class="index-log__item__date">[' +
+								date +
+								']</div>' +
+								this.text.replace(/\n/g, '<br>') +
+								'</li>';
+							if (length - 1 === l) {
+								update = date;
+							}
+						});
+						html += '</ul>';
+
+						return html;
+					})();
+
+					tableHTML +=
+						'<tr>' +
+						'<td>' +
+						(j + 1) +
+						'</td>' +
+						'<td>' +
+						id +
+						'</td>' +
+						'<td class="index-type">' +
+						type +
+						'</td>' +
+						'<td>' +
+						depth2 +
+						'</td>' +
+						'<td>' +
+						depth3 +
+						'</td>' +
+						'<td>' +
+						depth4 +
+						'</td>' +
+						'<td>' +
+						depth5 +
+						'</td>' +
+						'<td>' +
+						depth6 +
+						'</td>' +
+						'<td>' +
+						path +
+						'</td>' +
+						'<td>' +
+						status +
+						'</td>' +
+						'<td class="' +
+						(create === latestDate ? ' is-emphasis' : '') +
+						'">' +
+						create +
+						'</td>' +
+						'<td class="' +
+						(update === latestDate ? ' is-emphasis' : '') +
+						'">' +
+						update +
+						'</td>' +
+						'<td>' +
+						log +
+						'</td>' +
+						'</tr>';
+
+					totalIndex++;
+				});
+
+				navHTML += '<a href="#section' + i + '">' + tableData[i].depth1 + '</a>';
+
+				html +=
+					'<div class="index-section" id="section' +
+					i +
+					'">' +
+					'<h2 class="index-section__title">' +
+					tableData[i].depth1 +
+					'</h2>' +
+					'<div class="index-table">' +
+					'<table>' +
+					'<colgroup>' +
+					'<col width="55px" />' +
+					'<col width="150px" />' +
+					'<col width="80px" />' +
+					'<col width="150px" />' +
+					'<col width="150px" />' +
+					'<col width="150px" />' +
+					'<col width="150px" />' +
+					'<col width="150px" />' +
+					'<col width="" />' +
+					'<col width="120px" />' +
+					'<col width="110px" />' +
+					'<col width="110px" />' +
+					'<col width="300px" />' +
+					'</colgroup>' +
+					'<thead>' +
+					'<tr>' +
+					'<th>No</th>' +
+					'<th>ID</th>' +
+					'<th>type</th>' +
+					'<th>depth2</th>' +
+					'<th>depth3</th>' +
+					'<th>depth4</th>' +
+					'<th>depth5</th>' +
+					'<th>depth6</th>' +
+					'<th>path</th>' +
+					'<th>status</th>' +
+					'<th>create</th>' +
+					'<th>update</th>' +
+					'<th>log</th>' +
+					'</tr>' +
+					'</thead>' +
+					'<tbody>' +
+					tableHTML +
+					'</tbody>' +
+					'</table>' +
+					'</div>' +
+					'</div>';
+			});
+
+			$('title, .index-title').text(title);
+			$('#nav').append(navHTML);
+			$('#indexTable').append(html);
+
+			var $nav = $('.index-bottom');
+			var $doc = $(document);
+			var $win = $(window);
+
+			function paddingBottom() {
+				$('.index-fake-botttom').css('height', $nav.outerHeight());
+			}
+
+			var clickedTimer = null;
+
+			$doc.on('click', '#nav a', function () {
+				var $this = $(this);
+				var href = $this.attr('href');
+				var $target = $(href);
+				var $sections = $('.index-section');
+
+				$sections.removeClass('index-section--clicked');
+
+				clearTimeout(clickedTimer);
+
+				clickedTimer = setTimeout(function () {
+					$target.addClass('index-section--clicked');
+				}, 100);
+			});
+
+			$win
+				.on('scroll', function () {
+					var scrollLeft = $win.scrollLeft();
+					$nav.css('margin-left', -scrollLeft);
+				})
+				.on('resize', function () {
+					paddingBottom();
+				})
+				.on('load', function () {
+					paddingBottom();
+				});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

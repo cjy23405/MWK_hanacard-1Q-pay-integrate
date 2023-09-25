@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">생활요금</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-tab type-nav margin-bottom-none">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">하나카드에서 신청</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">제휴사에서 신청</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- 2022.07.22 : mod : 탭패널 헤딩 추가 -->
+						<h2 class="for-a11y">제휴사에서 신청</h2>
+
+						<div class="slide-top">
+							<div class="slide-banner">
+								<div class="slide-banner-inner">
+									<div class="slide-banner-controller"></div>
+									<ul class="slide-banner-list">
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.04.27 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-2.png" alt="배너 설명 넣어주세요." class="slide-banner-image" />
+											</a>
+										</li>
+										<!-- DD : 버튼 흰색 버전 이용일 경우 is-white 클래스 값 추가 -->
+										<li class="slide-banner-item is-white">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.04.27 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-2.png" alt="배너 설명 넣어주세요." class="slide-banner-image" />
+											</a>
+										</li>
+										<li class="slide-banner-item">
+											<a href="" class="slide-banner-link">
+												<!-- 2022.04.27 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-2.png" alt="배너 설명 넣어주세요." class="slide-banner-image" />
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="menu-banner-area margin-top-minus-5">
+							<ul class="menu-banner-list type-border">
+								<li class="menu-banner-item">
+									<a href="" class="menu-banner-link" role="button"> <span class="menu-banner-icon type-17"></span>인터넷 </a>
+								</li>
+								<li class="menu-banner-item">
+									<a href="" class="menu-banner-link" role="button"><span class="menu-banner-icon type-18"></span>국세납부</a>
+								</li>
+								<li class="menu-banner-item">
+									<a href="" class="menu-banner-link" role="button"><span class="menu-banner-icon type-19"></span>지방세<br />납부</a>
+								</li>
+								<li class="menu-banner-item">
+									<a href="" class="menu-banner-link" role="button"><span class="menu-banner-icon type-20"></span>렌탈<br />서비스</a>
+								</li>
+								<li class="menu-banner-item">
+									<a href="" class="menu-banner-link" role="button"><span class="menu-banner-icon type-21"></span>보험</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

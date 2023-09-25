@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="272" height="360" viewBox="0 0 272 360">
+    <defs>
+        <style>
+            .cls-2,.cls-4{fill:#fff}.cls-2,.cls-5{font-size:12px;font-family:SpoqaHanSansNeo-Regular,Spoqa Han Sans Neo;letter-spacing:-.025em}.cls-3{fill:#008882}.cls-4,.cls-9{stroke:#e5e5e5}.cls-5{fill:#111}.cls-8{fill:#e5e5e5}.cls-10,.cls-9{fill:none}.cls-11{stroke:none}
+        </style>
+    </defs>
+    <g id="img_revolving_02" transform="translate(-44 -2049)">
+        <g id="그룹_12042" data-name="그룹 12042" transform="translate(-78.641 2230)">
+            <rect id="사각형_11873" data-name="사각형 11873" width="272" height="33" rx="6" transform="translate(122.641 103)" style="fill:#f14a76"/>
+            <text id="청구금액_454_110_원" data-name="청구금액 454,110 원" class="cls-2" transform="translate(258.641 124)"><tspan x="-50.928" y="0">청구금액 454,110 원</tspan></text>
+        </g>
+        <g id="그룹_12043" data-name="그룹 12043" transform="translate(-78.641 2273)">
+            <rect id="사각형_11873-2" data-name="사각형 11873" class="cls-3" width="272" height="33" rx="6" transform="translate(122.641 103)"/>
+            <text id="이월금액_35만원" data-name="이월금액 35만원" class="cls-2" transform="translate(258.641 124)"><tspan x="-40.416" y="0">이월금액 35만원</tspan></text>
+        </g>
+        <g id="그룹_12039" data-name="그룹 12039" transform="translate(29 1946)">
+            <g id="사각형_11873-3" data-name="사각형 11873" class="cls-4" transform="translate(119 103)">
+                <rect class="cls-11" width="84" height="33" rx="6"/>
+                <rect class="cls-10" x=".5" y=".5" width="83" height="32" rx="5.5"/>
+            </g>
+            <text id="이용금액" class="cls-5" transform="translate(161 124)"><tspan x="-21.63" y="0">이용금액</tspan></text>
+        </g>
+        <g id="그룹_9377" data-name="그룹 9377" transform="translate(-11803 7566)">
+            <g id="사각형_11874" data-name="사각형 11874" transform="translate(11847 -5456)" style="stroke:#111;fill:#fff">
+                <rect class="cls-11" width="90" height="51" rx="6"/>
+                <rect class="cls-10" x=".5" y=".5" width="89" height="50" rx="5.5"/>
+            </g>
+            <text id="기타_할부_10만원" data-name="기타(할부) 10만원" class="cls-5" transform="translate(11892 -5435)"><tspan x="-25.386" y="0">기타(할부)</tspan><tspan x="-17.742" y="18">10만원</tspan></text>
+        </g>
+        <g id="그룹_12037" data-name="그룹 12037" transform="translate(-11699 7566)">
+            <g id="사각형_11874-2" data-name="사각형 11874" transform="translate(11851 -5456)" style="fill:#f8f8f8;stroke:#e5e5e5">
+                <rect class="cls-11" width="76" height="51" rx="6"/>
+                <rect class="cls-10" x=".5" y=".5" width="75" height="50" rx="5.5"/>
+            </g>
+            <text id="일시불_20만원" data-name="일시불 20만원" class="cls-5" transform="translate(11889 -5435)"><tspan x="-16.26" y="0">일시불</tspan><tspan x="-17.742" y="18">20만원</tspan></text>
+        </g>
+        <g id="그룹_12038" data-name="그룹 12038" transform="translate(-11615 7566)">
+            <rect id="사각형_11874-3" data-name="사각형 11874" class="cls-3" width="84" height="51" rx="6" transform="translate(11847 -5456)"/>
+            <text id="이월금액_50만원" data-name="이월금액 50만원" class="cls-2" transform="translate(11889 -5435)"><tspan x="-21.63" y="0">이월금액</tspan><tspan x="-17.742" y="18">50만원</tspan></text>
+        </g>
+        <path id="사각형_14330" data-name="사각형 14330" class="cls-8" transform="translate(189 2081)" d="M0 0h1v29H0z"/>
+        <path id="사각형_14335" data-name="사각형 14335" class="cls-8" transform="translate(183 2318)" d="M0 0h1v15H0z"/>
+        <path id="사각형_14331" data-name="사각형 14331" class="cls-8" transform="translate(218 2176)" d="M0 0h1v143H0z"/>
+        <path id="사각형_14334" data-name="사각형 14334" class="cls-8" transform="rotate(90 -1019 1299)" d="M0 0h1v191H0z"/>
+        <path id="사각형_14332" data-name="사각형 14332" class="cls-8" transform="translate(89 2161)" d="M0 0h1v158H0z"/>
+        <path id="사각형_14333" data-name="사각형 14333" class="cls-8" transform="translate(279 2161)" d="M0 0h1v158H0z"/>
+        <path id="패스_10987" data-name="패스 10987" class="cls-9" d="M11486-5320v-15.333h185V-5320" transform="translate(-11397 7430)"/>
+        <path id="패스_12066" data-name="패스 12066" class="cls-9" d="M11486-5335.333V-5320h80v-15.334" transform="translate(-11296.5 7496.334)"/>
+        <g id="그룹_9377-2" data-name="그룹 9377" transform="translate(-11674 7647)">
+            <g id="사각형_11874-4" data-name="사각형 11874" class="cls-4" transform="translate(11840 -5456)">
+                <rect class="cls-11" width="104" height="51" rx="6"/>
+                <rect class="cls-10" x=".5" y=".5" width="103" height="50" rx="5.5"/>
+            </g>
+            <text id="약정결제비율_50_" data-name="약정결제비율 50 %" class="cls-5" transform="translate(11892 -5435)"><tspan x="-32.37" y="0">약정결제비율</tspan><tspan x="-13.572" y="18">50 %</tspan></text>
+        </g>
+        <g id="그룹_12041" data-name="그룹 12041" transform="translate(-11594.969 7708)">
+            <g id="사각형_11874-5" data-name="사각형 11874" class="cls-4" transform="translate(11836.968 -5456)">
+                <rect class="cls-11" width="72" height="51" rx="6"/>
+                <rect class="cls-10" x=".5" y=".5" width="71" height="50" rx="5.5"/>
+            </g>
+            <text id="수수료_10_" data-name="수수료 10 %" class="cls-5" transform="translate(11872.968 -5435)"><tspan x="-16.26" y="0">수수료</tspan><tspan x="-13.572" y="18">10 %</tspan></text>
+        </g>
+        <g id="그룹_12040" data-name="그룹 12040" transform="translate(-11790 7647)">
+            <g id="사각형_11874-6" data-name="사각형 11874" class="cls-4" transform="translate(11834 -5456)">
+                <rect class="cls-11" width="116" height="51" rx="6"/>
+                <rect class="cls-10" x=".5" y=".5" width="115" height="50" rx="5.5"/>
+            </g>
+            <text id="일부결제금액_이월약정미적용" data-name="일부결제금액 이월약정미적용" class="cls-5" transform="translate(11892 -5435)"><tspan x="-32.37" y="0">일부결제금액</tspan><tspan x="-37.74" y="18">이월약정미적용</tspan></text>
+        </g>
+        <path id="사각형_15756" data-name="사각형 15756" class="cls-10" transform="translate(44 2049)" d="M0 0h272v360H0z"/>
+    </g>
+</svg>

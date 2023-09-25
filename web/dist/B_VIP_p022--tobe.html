@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">진행중인 이벤트</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="coupon-detail">
+							<div class="coupon-detail-info">
+								<div class="coupon-detail-name">정기 구독하고 최대 2만5천원 받기!</div>
+								<div class="coupon-detail-date">2021.05.01 ~ 2021.07.31</div>
+								<div class="coupon-detail-buttons">
+									<a href="" class="coupon-detail-button type-share" role="button"><span class="for-a11y">공유하기</span></a>
+									<!-- data-toggle 속성으로 토글기능 사용 / 활성화시 is-active 클래스 추가 -->
+									<button type="button" class="coupon-detail-button type-heart" data-toggle="true"><span class="for-a11y">찜하기</span></button>
+								</div>
+							</div>
+						</div>
+
+						<!-- 제휴쿠폰이 등록된 경우 -->
+						<section class="page-section-group margin-bottom-35">
+							<ul class="coupons-list">
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- DD : 이미지 없을 때 -->
+												<div class="logo-image type-store">
+													<div class="logo-image-inner"></div>
+												</div>
+												<div class="coupon-card-brand">포시즌스 호텔 서울</div>
+												<div class="coupon-card-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- DD : 이미지 에러 -->
+												<div class="logo-image type-store">
+													<div class="logo-image-inner">
+														<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="coupon-card-brand">포시즌스 호텔 서울</div>
+												<div class="coupon-card-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+								<li class="coupons-item">
+									<div class="coupon-card">
+										<div class="coupon-card-left">
+											<div class="coupon-card-info">
+												<!-- DD : 이미지 있을 때 -->
+												<div class="logo-image type-store">
+													<div class="logo-image-inner">
+														<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="coupon-card-brand">포시즌스 호텔 서울</div>
+												<div class="coupon-card-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+												<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+												<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+											</div>
+										</div>
+										<div class="coupon-card-right">
+											<button type="button" class="ui-button coupon-card-action type-download">
+												<span class="for-a11y">다운로드</span>
+											</button>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</section>
+						<!--// 제휴쿠폰이 등록된 경우 -->
+
+						<div class="wcms-data">
+							<section class="vip-event-data">
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">제공 혜택</h2>
+									<a href="" class="wcms-button type-line type-black wcms-margin-regular"><span class="wcms-button-text">온라인 예약 코드번호</span></a>
+								</section>
+
+								<div class="wcms-full-block wcms-margin-large">
+									<img src="./assets/images/_dummy/image.png" alt="이미지 설명" class="wcms-image" />
+								</div>
+
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">대상</h2>
+									<p class="wcms-text wcms-size-normal wcms-color-gray">2022년 하나카드 우수회원 (기업, 선불카드 제외)</p>
+									<ul class="wcms-list wcms-size-small">
+										<li class="wcms-list-item wcms-color-gold" data-symbol="※">
+											<div class="wcms-list-contents">2022년 우수회원으로 선정되신 회원님에게 혜택을 드립니다. 2022년 우수회원 등급은 2022.1.3. 홈페이지에서 확인하실 수 있습니다.</div>
+										</li>
+									</ul>
+								</section>
+
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">예약기간</h2>
+									<p class="wcms-text wcms-size-normal wcms-color-gray">2022.01.13 ~ 2022.03.31</p>
+								</section>
+
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">투숙기간</h2>
+									<p class="wcms-text wcms-size-normal wcms-color-gray">2022.01.13 ~ 2022.03.31</p>
+								</section>
+
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">이용방법</h2>
+									<div class="wcms-flex wcms-margin-normal">
+										<div class="wcms-flex-cell">
+											<img src="./assets/images/event/step-icon-1.png" alt="" class="wcms-image" style="width: 44px" />
+										</div>
+										<div class="wcms-flex-cell type-flexible">
+											<h3 class="wcms-title-small wcms-color-purple wcms-margin-none">STEP 1</h3>
+											<p class="wcms-size-normal wcms-weight-light wcms-margin-none">하단 예약링크 '포시즌스 리조트 오아후 앳 코올리나 하나카드 할인 예약' 클릭</p>
+										</div>
+									</div>
+									<div class="wcms-flex wcms-margin-normal">
+										<div class="wcms-flex-cell">
+											<img src="./assets/images/event/step-icon-2.png" alt="" class="wcms-image" style="width: 44px" />
+										</div>
+										<div class="wcms-flex-cell type-flexible">
+											<h3 class="wcms-title-small wcms-color-purple wcms-margin-none">STEP 2</h3>
+											<p class="wcms-size-normal wcms-weight-light wcms-margin-none">하나카드(국내외겸용)로 예약금 선결제 후 추가 요청사항 (Any Additional Requests?)에 코드번호 입력 필수</p>
+											<ul class="wcms-list wcms-size-small wcms-weight-light">
+												<li class="wcms-list-item wcms-color-gray" data-symbol="*">
+													<div class="wcms-list-contents">코드번호는 상단 쿠폰에서 확인 가능</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="wcms-flex wcms-margin-normal">
+										<div class="wcms-flex-cell">
+											<img src="./assets/images/event/step-icon-3.png" alt="" class="wcms-image" style="width: 44px" />
+										</div>
+										<div class="wcms-flex-cell type-flexible">
+											<h3 class="wcms-title-small wcms-color-purple wcms-margin-none">STEP 3</h3>
+											<p class="wcms-size-normal wcms-weight-light wcms-margin-none">현지 체크아웃 시 예약금 이외 10% 할인된 객실 금액 하나카드로 결제</p>
+										</div>
+									</div>
+								</section>
+
+								<section class="wcms-section-group">
+									<h2 class="wcms-title-medium">혜택</h2>
+									<img src="./assets/images/_dummy/image.png" alt="" class="wcms-image wcms-margin-small" />
+									<div class="wcms-flex wcms-margin-small">
+										<div class="wcms-flex-cell type-flexible">
+											<img src="./assets/images/_dummy/image.png" alt="" class="wcms-image" />
+										</div>
+										<div class="wcms-flex-cell type-flexible">
+											<img src="./assets/images/_dummy/image.png" alt="" class="wcms-image" />
+										</div>
+									</div>
+									<div class="wcms-flex wcms-margin-small">
+										<div class="wcms-flex-cell type-flexible">
+											<img src="./assets/images/_dummy/image.png" alt="" class="wcms-image" />
+										</div>
+										<div class="wcms-flex-cell type-flexible">
+											<img src="./assets/images/_dummy/image.png" alt="" class="wcms-image" />
+										</div>
+									</div>
+								</section>
+
+								<section class="wcms-section-group">
+									<div class="wcms-flex wcms-margin-small">
+										<div class="wcms-flex-cell type-flexible">
+											<h2 class="wcms-title-medium wcms-margin-none">문의</h2>
+										</div>
+										<div class="wcms-flex-cell">
+											<a href="tel:0000-0000" class="wcms-tel-button">1 (080) 679 0079</a>
+										</div>
+									</div>
+									<ul class="wcms-list wcms-size-small wcms-weight-light">
+										<li class="wcms-list-item type-dot wcms-color-gray">
+											<div class="wcms-list-contents">영어 상담만 가능</div>
+										</li>
+										<li class="wcms-list-item type-dot wcms-color-gray">
+											<div class="wcms-list-contents">
+												<div class="wcms-flex type-align-top">
+													<div class="wcms-flex-cell">상담시간 :</div>
+													<div class="wcms-flex-cell type-flexible" style="margin-left: 5px">
+														한국 기준 04:00 ~ 13:00<br />
+														(하와이 현지 09:00 ~ 1800)
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</section>
+
+								<a href="" class="wcms-button type-gold wcms-margin-large">
+									<span class="wcms-button-text">
+										포시즌스 리조트 오아후 앳 코올리나<br />
+										하나카드 할인 예약
+									</span>
+								</a>
+
+								<div class="wcms-notice">
+									<div class="wcms-notice-list">
+										<section class="wcms-notice-item">
+											<div class="wcms-notice-head">
+												<h2 class="wcms-notice-title">이용안내</h2>
+												<button type="button" class="wcms-notice-opener">
+													<span class="wcms-for-a11y"></span>
+												</button>
+											</div>
+											<div class="wcms-notice-layer">
+												<div class="wcms-notice-contents">
+													<ul class="wcms-list wcms-size-small wcms-weight-light">
+														<li class="wcms-list-item type-dot wcms-color-gray">
+															<div class="wcms-list-contents">해당 이벤트는 하나카드 전용 부킹닷컴 홈페이지에서 로그인 후 예약 시에만 캐쉬백 혜택이 제공됩니다.</div>
+														</li>
+														<li class="wcms-list-item type-dot wcms-color-gray">
+															<div class="wcms-list-contents">세금, 수수료 및 기타 요금은 캐쉬백 금액 산출 시 포함되지 않습니다.</div>
+														</li>
+														<li class="wcms-list-item type-dot wcms-color-gray">
+															<div class="wcms-list-contents">해당 이벤트는 취소 및 환급 거래는 제외됩니다.</div>
+														</li>
+														<li class="wcms-list-item type-dot wcms-color-gray">
+															<div class="wcms-list-contents">
+																해당 이벤트의 캐쉬백 금액은 별도로 카드 이용대금명세서에서 마이너스 표기 안내되며, 캐쉬백 처리 기간은 가맹점 외 거래 승인 시점이 따라 달라질 수 있습니다.
+															</div>
+														</li>
+														<li class="wcms-list-item type-dot wcms-color-red">
+															<div class="wcms-list-contents">캐쉬백은 부킹닷컴에서 제공되며 관련 문의사항은 부킹닷컴 고객센터에서 확인바랍니다.</div>
+														</li>
+														<li class="wcms-list-item type-dot wcms-color-red">
+															<div class="wcms-list-contents">
+																카드 결제는 숙박시설에서 직접 진행하며 옵션 요금 부과, 취소규정 등은 숙박시설 기준에 따르며, 각 호텔별 상세 기준은 부킹닷컴 고객센터를 통해서 확인하실 수 있습니다.<br />
+																(부킹닷컴 24시간 한국어 상담 : 국내 <span class="wcms-color-black">02-3483-3225</span> / 해외 <span class="wcms-color-black">82-2-3483-3225</span>)
+															</div>
+														</li>
+														<li class="wcms-list-item type-dot wcms-color-gray">
+															<div class="wcms-list-contents">해당 이벤트는 다른 이벤트 혹은 할인과 중복 적용되지 않습니다.</div>
+														</li>
+														<li class="wcms-list-item type-dot wcms-color-gray">
+															<div class="wcms-list-contents">해당 이벤트는 하나카드 및 제휴사의 사정에 따라 사전 예고 없이 변경되거나 중단될 수 있습니다</div>
+														</li>
+														<li class="wcms-list-item type-dot wcms-color-gray">
+															<div class="wcms-list-contents">
+																<div class="wcms-margin-small">연체이자율(약정이율+최대 3%)은 손님별·이용상품별로 차등 적용되며, 법정 최고금리(20%)를 초과하지 않습니다.</div>
+																<ul class="wcms-list">
+																	<li class="wcms-list-item" data-symbol="※">
+																		<div class="wcms-list-contents">
+																			단, 연체 발생 시점에 약정이율이 없는 경우 아래와 같이 적용함<br />
+																			일시불거래 연체 시 : 거래 발생 시점의 최소기간(2개월) 유이자 할부 금리<br />
+																			무이자 할부거래 연체 시 : 거래 발생 시점의 동일한 할부 계약 기간의 유이자 할부 금리
+																		</div>
+																	</li>
+																</ul>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+
+								<ul class="wcms-list wcms-size-normal wcms-weight-light">
+									<li class="wcms-list-item type-dot">
+										<div class="wcms-list-contents">계약 체결 전 상품 설명서 및 상품약관을 반드시 확인하시기 바랍니다.</div>
+									</li>
+									<li class="wcms-list-item type-dot">
+										<div class="wcms-list-contents">계약 체결 전 상품 설명서 및 상품약관을 반드시 확인하시기 바랍니다.</div>
+									</li>
+									<li class="wcms-list-item type-dot wcms-weight-medium">
+										<div class="wcms-list-contents">계약 체결 전 상품 설명서 및 상품약관을 반드시 확인하시기 바랍니다.</div>
+									</li>
+									<li class="wcms-list-item type-dot wcms-weight-medium">
+										<div class="wcms-list-contents">계약 체결 전 상품 설명서 및 상품약관을 반드시 확인하시기 바랍니다.</div>
+									</li>
+								</ul>
+
+								<p class="wcms-text wcms-size-small wcms-color-gray wcms-margin-regular">준법심의 A-21-1542 (2021.09.29 ~ 2021.11.30)</p>
+							</section>
+						</div>
+
+						<div class="page-section-group">
+							<p class="basic-text">
+								상환능력에 비해 신용카드 사용액이 과도할 경우, 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.<br />
+								신용등급 또는 개인신용평점 하락 시 금융거래와 관련된 불이익이 발생할 수 있습니다.<br />
+								일정기간 원리금을 연체할 경우, 모든 원리금을 변제할 의무가 발생할 수 있습니다.
+							</p>
+						</div>
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-gray" role="button">목록으로 이동</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

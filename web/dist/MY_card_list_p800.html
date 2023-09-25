@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">Priority Pass</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<!-- 2022.02.11 띄어쓰기 수정 -->
+							<h2 class="page-section-title">이용횟수</h2>
+							<div class="form-detail margin-top-15">
+								<div class="form-detail-block">
+									<dl class="form-detail-list type-text-default">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">기준년월</dt>
+											<dd class="form-detail-group type-block">2021-05</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">연간이용가능무료횟수</dt>
+											<dd class="form-detail-group type-block">X 회</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">무료이용횟수</dt>
+											<dd class="form-detail-group type-block">X 회</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">잔여횟수</dt>
+											<dd class="form-detail-group type-block"><span class="color-primary">X</span> 회</dd>
+										</div>
+									</dl>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<section class="page-section type-line">
+							<div class="check-range">
+								<button type="button" class="ui-button-down" title="조회할 년도 선택">2021년</button>
+							</div>
+							<div class="usage-area-head type-no-line">
+								<div class="title">
+									<strong>이용내역</strong>
+									<span class="sub-title">(<strong class="color-secondary">61</strong>건)</span>
+								</div>
+							</div>
+							<div class="usage-default">
+								<ul class="usage-default-list js-ui-accordion">
+									<li class="usage-default-item js-ui-accordion__item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title type-multi-ellipsis">Passenger Lounge</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.01.01</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">100,000 원</div>
+											</div>
+											<button type="button" class="usage-default-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세 내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-default-layer js-ui-accordion__layer">
+											<div class="usage-default-contents type-no-right-margin">
+												<div class="form-detail">
+													<div class="form-detail-block">
+														<dl class="form-detail-list type-text-default">
+															<div class="form-detail-item">
+																<dt class="form-detail-title">전년도실적금액</dt>
+																<dd class="form-detail-group"><strong>999,999,999 원</strong></dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">동반자 수</dt>
+																<dd class="form-detail-group"><strong>2 명</strong></dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">청구 여부</dt>
+																<dd class="form-detail-group"><strong>무료</strong></dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item js-ui-accordion__item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title type-multi-ellipsis">Passenger Lounge</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.01.01</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">100,000 원</div>
+											</div>
+											<button type="button" class="usage-default-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세 내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-default-layer js-ui-accordion__layer">
+											<div class="usage-default-contents type-no-right-margin">
+												<div class="form-detail">
+													<div class="form-detail-block">
+														<dl class="form-detail-list type-text-default">
+															<div class="form-detail-item">
+																<dt class="form-detail-title">전년도실적금액</dt>
+																<dd class="form-detail-group"><strong>999,999,999 원</strong></dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">동반자 수</dt>
+																<dd class="form-detail-group"><strong>2 명</strong></dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">청구 여부</dt>
+																<dd class="form-detail-group"><strong>무료</strong></dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<button type="button" class="ui-button ui-button-more">더보기</button>
+							</div>
+						</section>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									Priority Pass카드 서비스 안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">조회대상 : 개인회원이 소지한 PP카드 이용내역(법인PP카드 이용내역 제외)</li>
+										<li class="info-item">무료이용 횟수 산정기간 : 당해년도 1월~12월 까지(프리머스카드 계열 제외)</li>
+										<li class="info-item">프리머스카드(CLUB Primus 포함)는 프리패키지 서비스 기간을 확인하시기 바랍니다.</li>
+										<li class="info-item">PP카드 라운지 이용건의 청구는 1~2개월 소요되므로 최근 라운지 이용 시 실제 이용가능 잔여횟수에 차이가 있을 수 있습니다.</li>
+										<li class="info-item">PP카드 라운지 이용건의 청구여부는 이용내역 접수 후 잔여 무료이용횟수 확인 등을 거쳐 결정되므로, 1~2일 가량 지난 후 결정됩니다.</li>
+										<li class="info-item">PP카드 라운지 무료 이용을 위한 전년도 실적금액 등의 조건은 각 카드상품약관을 확인하여주시기 바랍니다.</li>
+										<li class="info-item">PP카드 이용이 가능한 라운지 현황은 Priority Pass홈페이지(http://www.PriorityPass.co.kr)에서 확인 가능합니다.</li>
+										<li class="info-item">인천공항 라운지를 카드 인증으로 이용하신 건은 PP카드 인증이 아니므로, 조회되지 않습니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

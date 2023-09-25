@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">스마트신용지킴이</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							월 <span class="color-primary">900</span> 원으로<br />
+							한눈에 보는 스마트한 내 신용관리
+						</h2>
+
+						<!-- section -->
+						<div class="page-section">
+							<ul class="guide-info-list type-wide">
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">
+											신용정보<br />
+											실시간 조회
+										</strong>
+									</div>
+									<span class="guide-info-icon type-icon-7"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">
+											명의 도용<br />
+											방지
+										</strong>
+									</div>
+									<span class="guide-info-icon type-icon-8"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">
+											카드 이용내역<br />
+											SMS
+										</strong>
+									</div>
+									<span class="guide-info-icon type-icon-9"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">
+											신용분석<br />
+											리포트
+										</strong>
+									</div>
+									<span class="guide-info-icon type-icon-1"></span>
+								</li>
+								<li class="guide-info-item">
+									<div class="guide-info-block">
+										<strong class="guide-info-title">
+											Peer 그룹<br />
+											비교 분석 리포트
+										</strong>
+									</div>
+									<span class="guide-info-icon type-icon-1"></span>
+								</li>
+							</ul>
+						</div>
+						<!-- //section -->
+
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button">신청하기</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="accordion-list js-ui-accordion" data-once="true">
+								<div class="accordion-item js-ui-accordion__item">
+									<button type="button" class="accordion-opener js-ui-accordion__opener">
+										<strong class="accordion-opener-title">확인 가능한 신용정보</strong>
+									</button>
+									<div class="js-ui-accordion__layer">
+										<div class="accordion-contents">
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">신용관리 기능</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10">신용정보 조회 및 진단</div>
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">조회 : 신용평점 통계, 동일집단 기준 순위</li>
+														<li class="info-item">진단 : 변동내역, 평점 영향 요인 진단, 신용관리 팁</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">신용거래 현황 및 변동사항</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">일반거래내역 : 신용카드, 체크카드 등</li>
+														<li class="info-item">신용거래내역 : 금융 개설 정보, 신용조회기록</li>
+														<li class="info-item">대출내역 : 대출, 현금서비스, 보증정보</li>
+														<li class="info-item">연체내역 : 채무불이행, 금융질서문란, 공공정보</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">개인정보 보호를 위한 피싱 차단 서비스</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<div class="default-text margin-bottom-10">명의보호 설정</div>
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">본인인증, 아이핀인증, 실명확인 시도 차단·알림</li>
+														<li class="info-item">인증 내역 및 인증 시도 차단 내역 조회</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">카드 사용내역 SMS 알림 서비스</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">월 300원 신용·체크 카드 승인내역 실시간 SMS 알림 서비스 포함</li>
+													</ul>
+												</div>
+											</div>
+											<div class="accordion-section">
+												<div class="accordion-section-head">
+													<h3 class="title">신용분석 리포트</h3>
+												</div>
+												<div class="accordion-section-contents">
+													<ul class="info-list type-inherit type-outside">
+														<li class="info-item">Peer 그룹 비교 분석 리포트</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item type-none-symbol">[신용정보서비스]</li>
+										<li class="info-item">국내최대 신용평가기관 NICE평가정보㈜가 제공하는 신용정보를 기반으로, 신용정보조회와 신용정보변동시의 변동발생 안내를 제공합니다.</li>
+										<li class="info-item">스마트신용지킴이가 제공하는 신용정보는 NICE평가정보㈜의 신용정보 DB를 기반으로 합니다.</li>
+										<li class="info-item">
+											신용정보가 변동되었을 때 발생하는 신용변동 알람은 SMS와 E-mail을 통해 제공되며, 알람 발송은 신용정보 변동 발생 기준 1영업일 이후에 일괄 발송되고 있습니다.
+										</li>
+										<li class="info-item">신용변동내역을 웹사이트에서 조회할 경우는 최근 1개월에 대한 변동내역을 확인하실 수 있습니다.</li>
+										<li class="info-item">변동 알람 SMS 수신 후 통화버튼을 누르시면 바로 신용변동안내 ARS로 연결하실 수 있으며, ARS를 통해 최근 7일간의 변동내역을 들으실 수 있습니다.</li>
+										<li class="info-item type-none-symbol">[명의보호서비스]</li>
+										<li class="info-item">본인 명의로 발생하는 명의도용을 차단할 수 있는 차단기능과, 명의인증 발생내역을 확인할 수 있는 조회기능을 제공합니다.</li>
+										<li class="info-item">타인의 불법적인 명의도용 시도를 차단하고, 본인의 명의사용내역을 조회하여 정보보호에 만전을 기할 수 있습니다.</li>
+										<li class="info-item">
+											스마트신용지킴이의 명의보호 서비스는 본인확인지정기관인 NICE평가정보㈜가 금융기관 및 온라인 서비스업체에 제공하는 실명확인, 본인인증 서비스인 NAMECHECK, CHECKPLUS 서비스를
+											기반으로 제공되고 있습니다.
+										</li>
+										<li class="info-item">일부 온라인서비스의 경우 NICE평가정보㈜ 외의 다른 실명확인을 사용하는데, 이러한 사이트에서는 스마트신용지킴이의 명의보호 서비스가 적용되지 않습니다.</li>
+										<li class="info-item type-none-symbol">[신용조회기록]</li>
+										<li class="info-item">
+											도용 등으로 인해 본인 모르게 발생할 수 있는 신용조회를 차단하기 위해, 금융권에서 발생하는 신용조회에 대해서 실시간으로 SMS알람을 제공하고, ARS와 홈페이지를 통해 신용조회
+											발생내역을 확인할 수 있습니다.
+										</li>
+										<li class="info-item">신용조회기록 실시간 알람은 SMS와 E-mail을 통해 발송되며, 금융기관에서 신용조회가 일어난 시간을 기준으로 최장 10분 이내에 알람을 발송합니다.</li>
+										<li class="info-item">본인이 스마트신용지킴이 등을 통해 직접 자기 신용정보를 조회하는 경우는 신용조회가 아니므로 알람이 발송되지 않습니다.</li>
+										<li class="info-item type-none-symbol">[카드 이용알림 SMS]</li>
+										<li class="info-item">신용카드, 체크카드의 승인이 발생할 경우 고객님께 실시간 SMS를 통해 알려드립니다.</li>
+										<li class="info-item type-none-symbol">[기타안내]</li>
+										<li class="info-item">
+											스마트신용지킴이는 신용평가기관 NICE평가정보㈜와의 제휴를 통해 제공되며, 이에 따라 서비스 세부내역에 대한 책임과 관리는 NICE평가정보㈜에서 담당하고 있습니다.
+										</li>
+										<li class="info-item">
+											NICE평가정보㈜가 제공하는 서비스의 웹페이지 이동 후 온라인 서비스 약관에 동의하고 회원가입하신 뒤, 본인인증을 거치셔야 합니다. 회원가입 없이도 SMS와 ARS등의 서비스는 모두
+											정상적으로 사용하실 수 있습니다.
+										</li>
+										<li class="info-item">ARS의 경우 정보보호를 위해 휴대전화를 통한 본인인증 절차를 거치게 됩니다.</li>
+										<li class="info-item">하나카드에 등록된 휴대전화가 아닐 경우 ARS를 들으실 수 없습니다.</li>
+										<li class="info-item">
+											일부 스팸차단기능을 설정한 휴대전화의 경우 변동알람 SMS수신이 제한될 수 있으며, 음영지역 등에 위치하거나 이통사의 사정 등으로 인해 SMS발송이 간혹 제한적일 수 있습니다.
+										</li>
+										<li class="info-item type-none-symbol color-primary">[서비스 제공주체]</li>
+										<li class="info-item type-none-symbol">NICE평가정보주식회사</li>
+										<li class="info-item type-none-symbol">
+											대표자 : 신희부<br />
+											주소 : 서울시 영등포구 은행로 17<br />
+											전화 : 02-2122-4000
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

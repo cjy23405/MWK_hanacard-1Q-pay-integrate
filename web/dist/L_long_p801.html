@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">대출 미리보기</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<p class="page-title">
+							대출 미리보기를 진행할<br />
+							카드를 선택해 주세요.
+						</p>
+
+						<div class="form-list">
+							<div class="form-item">
+								<div class="card-list">
+									<div class="ui-radio-group type-full">
+										<!-- DD : 이미지 없을 때 -->
+										<div class="ui-radio-block type-box">
+											<a href="" class="ui-label card-block" role="button">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<span class="card-image">
+													<span class="card-image-inner"></span>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<div class="card-info">
+													<span class="card-name">[본인] 모두의 쇼핑</span>
+													<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+												</div>
+											</a>
+										</div>
+										<!-- //DD : 이미지 없을 때 -->
+
+										<!-- DD : 이미지 에러 -->
+										<div class="ui-radio-block type-box">
+											<a href="" class="ui-label card-block" role="button">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<span class="card-image">
+													<span class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<div class="card-info">
+													<span class="card-name">CLUB SK (클럽 SK) 카드</span>
+													<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+												</div>
+											</a>
+										</div>
+										<!-- //DD : 이미지 에러 -->
+
+										<!-- DD : 이미지 있을 때 -->
+										<div class="ui-radio-block type-box">
+											<a href="" class="ui-label card-block" role="button">
+												<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<span class="card-image">
+													<span class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</span>
+												</span>
+												<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+												<div class="card-info">
+													<span class="card-name">CLUB SK (클럽 SK) 카드</span>
+													<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+												</div>
+											</a>
+										</div>
+										<!-- //DD : 이미지 있을 때 -->
+									</div>
+								</div>
+							</div>
+							<!-- [신용카드 미보유 경우] -->
+							<div class="type-none margin-bottom-minus-35">
+								<p class="item-text">서비스 대상 카드가 없습니다.</p>
+							</div>
+							<!-- //[신용카드 미보유 경우] -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

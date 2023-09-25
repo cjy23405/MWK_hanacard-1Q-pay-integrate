@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">일부결제금액이월약정(리볼빙)</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="total-box">
+							<dl class="total-box-item">
+								<dt class="total-box-key">결제일자</dt>
+								<dd class="total-box-val">2021.01.01</dd>
+							</dl>
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">이월금액</dt>
+								<dd class="total-box-val"><span class="color-primary">0</span><span class="total-box-unit">원</span></dd>
+							</dl>
+							<dl class="total-box-item type-sum">
+								<dt class="total-box-key">리볼빙 이월 수수료율</dt>
+								<dd class="total-box-val"><span class="color-primary">0.00</span><span class="total-box-unit">%</span></dd>
+							</dl>
+						</div>
+
+						<section class="page-section margin-top-35">
+							<div class="section-title margin-bottom-25">
+								<h2 class="title">이자율 상세내역</h2>
+							</div>
+							<div class="form-detail">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">기준금리 (a)</dt>
+										<dd class="form-detail-group">00.00 %</dd>
+									</div>
+									<div class="form-detail-item type-block">
+										<dt class="form-detail-title">적용금리 (a-b)</dt>
+										<dd class="form-detail-group type-block">
+											<div class="form-detail margin-top-15">
+												<div class="form-detail-block">
+													<dl class="form-detail-list type-text-default">
+														<div class="form-detail-item">
+															<dt class="form-detail-title">하나은행 결제계좌 우대</dt>
+															<dd class="form-detail-group">
+																<div class="align-right">
+																	<strong><span class="color-primary">0.00%</span> p</strong>
+																</div>
+															</dd>
+														</div>
+														<div class="form-detail-item">
+															<dt class="form-detail-title">하나원큐페이 결제 우대</dt>
+															<dd class="form-detail-group">
+																<div class="align-right">
+																	<strong><span class="color-primary">0.00%</span> p</strong>
+																</div>
+															</dd>
+														</div>
+														<div class="form-detail-item">
+															<dt class="form-detail-title">일시불+할부 이용 우대</dt>
+															<dd class="form-detail-group">
+																<div class="align-right">
+																	<strong><span class="color-primary">0.00%</span> p</strong>
+																</div>
+															</dd>
+														</div>
+														<div class="form-detail-item">
+															<dt class="form-detail-title">마케팅 할인</dt>
+															<dd class="form-detail-group">
+																<div class="align-right">
+																	<strong><span class="color-primary">0.00%</span> p</strong>
+																</div>
+															</dd>
+														</div>
+													</dl>
+												</div>
+											</div>
+										</dd>
+									</div>
+									<div class="form-detail-item">
+										<dt class="form-detail-title">적용금리 (a-b)</dt>
+										<dd class="form-detail-group">0.00 %</dd>
+									</div>
+								</dl>
+							</div>
+						</section>
+
+						<section class="page-section type-line">
+							<div class="usage-area-head type-has-total">
+								<div class="title">
+									<!-- 2022.04.06 : mod : 문구 변경 -->
+									<strong>총 이용내역</strong>
+									<!-- //2022.04.06 : mod : 문구 변경 -->
+									<span class="sub-title">(<strong class="color-secondary">61</strong>건)</span>
+								</div>
+								<div class="total">
+									<strong class="total-text"><span class="color-secondary">1,165,000</span> 원</strong>
+								</div>
+							</div>
+
+							<div class="usage-default">
+								<ul class="usage-default-list js-ui-accordion">
+									<li class="usage-default-item js-ui-accordion__item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title type-multi-ellipsis">교통-후불하이패스 00건</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.01.01</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">100,000 원</div>
+											</div>
+											<button type="button" class="usage-default-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세 내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-default-layer js-ui-accordion__layer">
+											<div class="usage-default-contents">
+												<div class="form-detail">
+													<div class="form-detail-block">
+														<dl class="form-detail-list type-text-default">
+															<div class="form-detail-item">
+																<dt class="form-detail-title">가맹점명</dt>
+																<dd class="form-detail-group">아파트관리비</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이월금액</dt>
+																<dd class="form-detail-group">41,600 원</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이용일자</dt>
+																<dd class="form-detail-group">2021.01.01</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">상품구분</dt>
+																<dd class="form-detail-group">리볼빙</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이용구분</dt>
+																<dd class="form-detail-group">국내</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">결제유형</dt>
+																<dd class="form-detail-group">일시불</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이용금액</dt>
+																<dd class="form-detail-group">300,700 원</dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item js-ui-accordion__item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title type-multi-ellipsis">교통-후불하이패스 00건 교통-후불하이패스 00건 교통-후불하이패스 00건</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.01.01</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">100,000 원</div>
+											</div>
+											<button type="button" class="usage-default-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세 내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-default-layer js-ui-accordion__layer">
+											<div class="usage-default-contents">
+												<div class="form-detail">
+													<div class="form-detail-block">
+														<dl class="form-detail-list type-text-default">
+															<div class="form-detail-item">
+																<dt class="form-detail-title">가맹점명</dt>
+																<dd class="form-detail-group">아파트관리비</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이월금액</dt>
+																<dd class="form-detail-group">41,600 원</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이용일자</dt>
+																<dd class="form-detail-group">2021.01.01</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">상품구분</dt>
+																<dd class="form-detail-group">리볼빙</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이용구분</dt>
+																<dd class="form-detail-group">국내</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">결제유형</dt>
+																<dd class="form-detail-group">일시불</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이용금액</dt>
+																<dd class="form-detail-group">300,700 원</dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="usage-default-item js-ui-accordion__item">
+										<div class="usage-default-block">
+											<div class="usage-default-left">
+												<div class="usage-default-title type-multi-ellipsis">교통-후불하이패스 00건</div>
+												<div class="usage-default-etc">
+													<div class="usage-default-etc-item">2021.01.01</div>
+												</div>
+											</div>
+											<div class="usage-default-right">
+												<div class="usage-default-sum">100,000 원</div>
+											</div>
+											<button type="button" class="usage-default-opener js-ui-accordion__opener">
+												<span class="for-a11y">
+													상세 내용
+													<span class="open-text">열기</span>
+													<span class="close-text">닫기</span>
+												</span>
+											</button>
+										</div>
+										<div class="usage-default-layer js-ui-accordion__layer">
+											<div class="usage-default-contents">
+												<div class="form-detail">
+													<div class="form-detail-block">
+														<dl class="form-detail-list type-text-default">
+															<div class="form-detail-item">
+																<dt class="form-detail-title">가맹점명</dt>
+																<dd class="form-detail-group">아파트관리비</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이월금액</dt>
+																<dd class="form-detail-group">41,600 원</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이용일자</dt>
+																<dd class="form-detail-group">2021.01.01</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">상품구분</dt>
+																<dd class="form-detail-group">리볼빙</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이용구분</dt>
+																<dd class="form-detail-group">국내</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">결제유형</dt>
+																<dd class="form-detail-group">일시불</dd>
+															</div>
+															<div class="form-detail-item">
+																<dt class="form-detail-title">이용금액</dt>
+																<dd class="form-detail-group">300,700 원</dd>
+															</div>
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<button type="button" class="ui-button ui-button-more">더보기</button>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

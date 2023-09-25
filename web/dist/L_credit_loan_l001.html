@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-voice-phishing-check">보이스피싱 사전 체크사항 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 보이스피싱 사전 체크사항 팝업  -->
+			<div class="layer-wrap layer-wrap--slide" data-layer="layer-voice-phishing-check">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">
+									<!-- 2021.12.08 아이콘 추가 -->
+									<span class="header__icon type-warning"></span>
+									잠깐!<br />
+									혹시 보이스피싱은 아닌가요?
+								</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-info">
+									<p class="layer-info-text">
+										다음은 보이스피싱 예방을 위한<br />
+										사전 체크리스트입니다.
+									</p>
+								</div>
+								<ul class="info-list type-text-large type-indent-number type-line">
+									<li class="info-item type-indent">
+										<span class="indent">1.</span>
+										<div class="indent-block">
+											혹시 지금 금융회사 직원이라는 전화나 문자를 받고 진행하고 계신가요?
+											<div class="ui-radio-group-area">
+												<div class="ui-radio-group type-yes-or-no">
+													<div class="ui-radio-block type-circle">
+														<input type="radio" class="ui-radio" name="radiobox1" id="radiobox1-1" />
+														<label for="radiobox1-1" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">네</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-circle">
+														<input type="radio" class="ui-radio" name="radiobox1" id="radiobox1-2" />
+														<label for="radiobox1-2" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">아니오</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="info-item type-indent">
+										<span class="indent">2.</span>
+										<div class="indent-block">
+											혹시 신용등급 상향, 대출 보증비 등의 수수료라며 돈을 먼저 입금하라는 얘기를 듣고 진행하고 계신가요?
+											<div class="ui-radio-group-area">
+												<div class="ui-radio-group type-yes-or-no">
+													<div class="ui-radio-block type-circle">
+														<input type="radio" class="ui-radio" name="radiobox2" id="radiobox2-1" />
+														<label for="radiobox2-1" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">네</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-circle">
+														<input type="radio" class="ui-radio" name="radiobox2" id="radiobox2-2" />
+														<label for="radiobox2-2" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">아니오</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="info-item type-indent">
+										<span class="indent">3.</span>
+										<div class="indent-block">
+											혹시 고금리 대출을 받고 상환하면 저금리로 대출이 가능하다는 얘기를 듣고 진행하고 계신가요?
+											<div class="ui-radio-group-area">
+												<div class="ui-radio-group type-yes-or-no">
+													<div class="ui-radio-block type-circle">
+														<input type="radio" class="ui-radio" name="radiobox3" id="radiobox3-1" />
+														<label for="radiobox3-1" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">네</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-circle">
+														<input type="radio" class="ui-radio" name="radiobox3" id="radiobox3-2" />
+														<label for="radiobox3-2" class="ui-label">
+															<span class="ui-radio-object"></span>
+															<span class="ui-label-text">아니오</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="ui-notice margin-top-35">
+									<div class="ui-notice-text">위 질문들을 통해 보이스피싱이 조금이라도 우려된다면 금융감독원 콜센터 1332, 경찰청 112로 문의하시기 바랍니다.</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button">다음 </a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 보이스피싱 사전 체크사항 팝업  -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-voice-phishing-check');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

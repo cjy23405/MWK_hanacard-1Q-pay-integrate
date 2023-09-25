@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">찜한 혜택</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- 2022.02.22 : mod : .slide-banner 에 type-white 클래스 값 제거 -->
+						<div class="slide-banner type-full type-first">
+							<div class="slide-banner-inner">
+								<div class="slide-banner-controller"></div>
+								<ul class="slide-banner-list">
+									<!-- 2022.03.18 : mod : 배너 구조 변경 -->
+									<li class="slide-banner-item">
+										<a href="" class="vip-event-link type-slide">
+											<div class="vip-event-image">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-8.png" alt="배너 타이틀 넣어주세요." />
+											</div>
+											<div class="vip-event-info">
+												<div class="vip-event-title">타이틀 최대 1줄 노출 타이틀 최대 1줄 노출 타이틀 최대 1줄 노출</div>
+												<div class="vip-event-text">설명 최대 1줄 노출 설명 최대 1줄 노출 설명 최대 1줄 노출 설명 최대 1줄 노출</div>
+												<div class="vip-event-date">2021.05.01 ~ 2021.07.31</div>
+											</div>
+										</a>
+									</li>
+									<!-- 2022.02.22 : add : 주석 추가 -->
+									<!-- DD : 버튼 흰색 버전 이용일 경우 is-white 클래스 값 추가 -->
+									<li class="slide-banner-item is-white">
+										<a href="" class="vip-event-link type-slide">
+											<div class="vip-event-image">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-8.png" alt="배너 타이틀 넣어주세요." />
+											</div>
+											<div class="vip-event-info">
+												<div class="vip-event-title">롯데호텔 서울, 월드</div>
+												<div class="vip-event-text">가을 객실 프로모션</div>
+												<div class="vip-event-date">2021.10.01 ~ 2021.10.31</div>
+											</div>
+										</a>
+									</li>
+									<li class="slide-banner-item">
+										<a href="" class="vip-event-link type-slide">
+											<div class="vip-event-image">
+												<!-- 2022.05.04 : mod : alt 값 변경 -->
+												<img src="./assets/images/_dummy/banner-8.png" alt="배너 타이틀 넣어주세요." />
+											</div>
+											<div class="vip-event-info">
+												<div class="vip-event-title">롯데호텔 서울, 월드</div>
+												<div class="vip-event-text">가을 객실 프로모션</div>
+												<div class="vip-event-date">2021.10.01 ~ 2021.10.31</div>
+											</div>
+										</a>
+									</li>
+									<!-- //2022.03.18 : mod : 배너 구조 변경 -->
+								</ul>
+							</div>
+						</div>
+
+						<p class="ui-notice margin-top-35">찜한 내역을 확인하세요.</p>
+
+						<!-- Case : 내역 없을 때 -->
+						<div class="link-item type-none type-flex type-no-line">
+							<p class="item-text">찜한 내역이 없습니다.</p>
+						</div>
+						<!-- Case : //내역 없을 때 -->
+
+						<div class="counting-nav margin-top-35">
+							<ul class="counting-nav-list">
+								<li class="counting-nav-item">
+									<a href="" class="counting-nav-head type-link margin-bottom-15">
+										<div class="counting-nav-head-title">VIP 초청행사</div>
+										<div class="counting-nav-head-count">150</div>
+									</a>
+
+									<!-- 2022.02.17 : mod : 구조 변경 -->
+									<div class="vip-event">
+										<ul class="vip-event-list">
+											<li class="vip-event-item">
+												<a href="" class="vip-event-link">
+													<div class="vip-event-image">
+														<!-- 2022.05.04 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/banner-5.png" alt="배너 타이틀 넣어주세요." />
+													</div>
+													<div class="vip-event-info">
+														<div class="vip-event-title">타이틀 최대 1줄 노출 타이틀 최대 1줄 노출 타이틀 최대 1줄 노출</div>
+														<div class="vip-event-text">설명 최대 1줄 노출 설명 최대 1줄 노출 설명 최대 1줄 노출 설명 최대 1줄 노출</div>
+														<div class="vip-event-date">2021.05.01 ~ 2021.07.31</div>
+													</div>
+												</a>
+											</li>
+											<li class="vip-event-item">
+												<a href="" class="vip-event-link">
+													<div class="vip-event-image">
+														<!-- 2022.05.04 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/banner-5.png" alt="배너 타이틀 넣어주세요." />
+													</div>
+													<div class="vip-event-info">
+														<div class="vip-event-title">빙고 이벤트</div>
+														<div class="vip-event-text">하나카드 우수회원</div>
+														<div class="vip-event-date">2021.05.01 ~ 2021.07.31</div>
+													</div>
+												</a>
+											</li>
+											<li class="vip-event-item">
+												<a href="" class="vip-event-link">
+													<div class="vip-event-image">
+														<!-- 2022.05.04 : mod : alt 값 변경 -->
+														<img src="./assets/images/_dummy/banner-5.png" alt="배너 타이틀 넣어주세요." />
+													</div>
+													<div class="vip-event-info">
+														<div class="vip-event-title">빙고 이벤트</div>
+														<div class="vip-event-text">하나카드 우수회원</div>
+														<div class="vip-event-date">2021.05.01 ~ 2021.07.31</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<!-- //2022.02.17 : mod : 구조 변경 -->
+								</li>
+
+								<li class="counting-nav-item">
+									<a href="" class="counting-nav-head type-link margin-bottom-15">
+										<div class="counting-nav-head-title">이벤트</div>
+										<div class="counting-nav-head-count">150</div>
+									</a>
+
+									<div class="usage-default">
+										<ul class="usage-default-list">
+											<li class="usage-default-item">
+												<div class="usage-default-block type-event">
+													<a href="" class="usage-default-left-group type-align-middle">
+														<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+														<!-- DD : 이미지 없을 때 -->
+														<div class="logo-image type-store">
+															<div class="logo-image-inner"></div>
+														</div>
+														<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+														<div class="usage-default-left">
+															<div class="usage-default-brand type-multi-ellipsis color-vip">G9</div>
+															<div class="usage-default-title type-multi-ellipsis">이십일년 피.땀.눈.물 닦아드림</div>
+															<div class="usage-default-etc">
+																<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+															</div>
+														</div>
+													</a>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block type-event">
+													<a href="" class="usage-default-left-group type-align-middle">
+														<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+														<!-- DD : 이미지 에러 -->
+														<div class="logo-image type-store">
+															<div class="logo-image-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/brand-icon-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+														<div class="usage-default-left">
+															<div class="usage-default-brand type-multi-ellipsis color-vip">스타벅스</div>
+															<div class="usage-default-title type-multi-ellipsis">스타벅스 정기결제하고 커피한잔 받아가자!</div>
+															<div class="usage-default-etc">
+																<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+															</div>
+														</div>
+													</a>
+												</div>
+											</li>
+											<li class="usage-default-item">
+												<div class="usage-default-block type-event">
+													<a href="" class="usage-default-left-group type-align-middle">
+														<!-- 2022.02.17 : mod : 로고 이미지 구조 변경 -->
+														<!-- DD : 이미지 있을 때 -->
+														<div class="logo-image type-store">
+															<div class="logo-image-inner">
+																<!-- 2022.05.04 : mod : alt 값 변경 -->
+																<img src="./assets/images/_dummy/brand-icon-3.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+															</div>
+														</div>
+														<!-- //2022.02.17 : mod : 로고 이미지 구조 변경 -->
+														<div class="usage-default-left">
+															<div class="usage-default-brand type-multi-ellipsis">
+																<span class="color-vip">브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출</span>
+															</div>
+															<div class="usage-default-title type-multi-ellipsis">이벤트명 최대 2줄 노출 이벤트명 최대 2줄 노출 이벤트명 최대 2줄 노출 이벤트명 최대 2줄 노출</div>
+															<div class="usage-default-etc">
+																<div class="usage-default-etc-item">2021.12.09 ~ 2021.12.31</div>
+															</div>
+														</div>
+													</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+
+								<li class="counting-nav-item">
+									<a href="" class="counting-nav-head type-link margin-bottom-15">
+										<div class="counting-nav-head-title">제휴쿠폰</div>
+										<div class="counting-nav-head-count">22</div>
+									</a>
+
+									<div class="coupons">
+										<ul class="coupons-list">
+											<li class="coupons-item">
+												<div class="coupon-card">
+													<div class="coupon-card-left">
+														<div class="coupon-card-info">
+															<!-- DD : 이미지 없을 때 -->
+															<!-- 2022.05.02 : mod : .logo-image 에 멀티 클래스 값 변경 (type-store -> type-vip-thumb) -->
+															<div class="logo-image type-vip-thumb">
+																<div class="logo-image-inner"></div>
+															</div>
+															<div class="coupon-card-brand">포시즌스 호텔 서울</div>
+															<div class="coupon-card-name">그랜드 불륨 웨딩 진행 시 디럭스룸 1박 제공</div>
+															<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+															<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+														</div>
+													</div>
+													<div class="coupon-card-right">
+														<button type="button" class="ui-button coupon-card-action type-download">
+															<span class="for-a11y">다운로드</span>
+														</button>
+													</div>
+												</div>
+											</li>
+											<li class="coupons-item">
+												<div class="coupon-card">
+													<div class="coupon-card-left">
+														<div class="coupon-card-info">
+															<!-- DD : 이미지 에러 -->
+															<!-- 2022.05.02 : mod : .logo-image 에 멀티 클래스 값 변경 (type-store -> type-vip-thumb) -->
+															<div class="logo-image type-vip-thumb">
+																<div class="logo-image-inner">
+																	<!-- 2022.05.04 : mod : alt 값 변경 -->
+																	<img src="./assets/images/_dummy/event-3 .png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<div class="coupon-card-brand">G9</div>
+															<div class="coupon-card-name">20만원 이상 구매 시, 2만원 즉시 할인</div>
+															<div class="coupon-card-date">2021.05.01 ~ 2021.07.31 <span class="color-wrong">(7일 남음)</span></div>
+															<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+														</div>
+													</div>
+													<div class="coupon-card-right">
+														<button type="button" class="ui-button coupon-card-action type-link">
+															<span class="for-a11y">쿠폰 바로가기</span>
+														</button>
+													</div>
+												</div>
+											</li>
+											<li class="coupons-item">
+												<div class="coupon-card">
+													<div class="coupon-card-left">
+														<div class="coupon-card-info">
+															<!-- DD : 이미지 있을 때 -->
+															<!-- 2022.05.02 : mod : .logo-image 에 멀티 클래스 값 변경 (type-store -> type-vip-thumb) -->
+															<div class="logo-image type-vip-thumb">
+																<div class="logo-image-inner">
+																	<!-- 2022.05.04 : mod : alt 값 변경 -->
+																	<img src="./assets/images/_dummy/event-4.png" alt="브랜드명 넣어주세요." onerror="this.parentNode.className += ' is-error';" />
+																</div>
+															</div>
+															<div class="coupon-card-brand">브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출 브랜드명 최대 2줄 노출</div>
+															<div class="coupon-card-name">쿠폰명 최대 2줄 노출 쿠폰명 최대 2줄 노출 쿠폰명 최대 2줄 노출</div>
+															<div class="coupon-card-date">2021.05.01 ~ 2021.07.31</div>
+															<a href="" class="coupon-card-link"><span class="for-a11y">상세보기</span></a>
+														</div>
+													</div>
+													<div class="coupon-card-right">
+														<button type="button" class="ui-button coupon-card-action type-download">
+															<span class="for-a11y">다운로드</span>
+														</button>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

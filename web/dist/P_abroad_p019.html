@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">해외원화결제(DCC) 차단</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title margin-bottom-none">
+							해외원화결제(DCC) 차단 서비스를<br />
+							설정하실 카드를 선택해주세요.
+						</h2>
+						<div class="ui-notice">설정 정보 변경은 해제 후 재등록 해주세요.</div>
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="section-title">
+								<h2 class="title">해외원화결제 가능</h2>
+								<div class="section-title-right">
+									<div class="ui-checkbox-block section-title-right">
+										<input type="checkbox" class="ui-checkbox" id="checkboxLarge1All" data-checkbox-group="checkboxLarge1" />
+										<label for="checkboxLarge1All" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">전체선택</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-list-area">
+								<ul class="card-list">
+									<!-- [DD] 조회 내역 없을 경우 -->
+									<li class="type-none">
+										<p class="item-text">서비스 대상 카드가 없습니다.</p>
+									</li>
+									<li class="card-item">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-1" data-checkbox-group-child="checkboxLarge1" />
+											<label for="checkboxLarge1-1" class="ui-label">
+												<span class="card-block">
+													<span class="ui-checkbox-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 없을 때 -->
+													<span class="card-image">
+														<span class="card-image-inner"></span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">[본인] 아멕스 아시아나클럽 카드 아멕스 아시아나클럽 카드</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</span>
+											</label>
+										</div>
+									</li>
+									<li class="card-item">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-2" data-checkbox-group-child="checkboxLarge1" />
+											<label for="checkboxLarge1-2" class="ui-label">
+												<span class="card-block">
+													<span class="ui-checkbox-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 에러 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">[본인] 아멕스 아시아나클럽 카드 아멕스 아시아나클럽 카드</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</span>
+											</label>
+										</div>
+									</li>
+									<li class="card-item">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkboxLarge1-3" data-checkbox-group-child="checkboxLarge1" />
+											<label for="checkboxLarge1-3" class="ui-label">
+												<span class="card-block">
+													<span class="ui-checkbox-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 있을 때 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">[본인] 아멕스 아시아나클럽 카드 아멕스 아시아나클럽 카드</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-primary" role="button">결제 차단하기</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="section-title">
+								<h2 class="title">해외원화결제 차단</h2>
+								<div class="section-title-right">
+									<div class="ui-checkbox-block section-title-right">
+										<input type="checkbox" class="ui-checkbox" id="checkboxLarge2All" data-checkbox-group="checkboxLarge2" />
+										<label for="checkboxLarge2All" class="ui-label">
+											<span class="ui-checkbox-object"></span>
+											<span class="ui-label-text">전체선택</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="card-list-area">
+								<ul class="card-list">
+									<!-- [DD] 조회 내역 없을 경우 -->
+									<li class="type-none">
+										<p class="item-text">서비스 대상 카드가 없습니다.</p>
+									</li>
+									<li class="card-item">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkboxLarge2-1" data-checkbox-group-child="checkboxLarge2" />
+											<label for="checkboxLarge2-1" class="ui-label">
+												<span class="card-block">
+													<span class="ui-checkbox-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 없을 때 -->
+													<span class="card-image">
+														<span class="card-image-inner"></span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">[본인] 아멕스 아시아나클럽 카드 아멕스 아시아나클럽 카드</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</span>
+											</label>
+										</div>
+									</li>
+									<li class="card-item">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkboxLarge2-2" data-checkbox-group-child="checkboxLarge2" />
+											<label for="checkboxLarge2-2" class="ui-label">
+												<span class="card-block">
+													<span class="ui-checkbox-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 에러 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">[본인] 아멕스 아시아나클럽 카드 아멕스 아시아나클럽 카드</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</span>
+											</label>
+										</div>
+									</li>
+									<li class="card-item">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkboxLarge2-3" data-checkbox-group-child="checkboxLarge2" />
+											<label for="checkboxLarge2-3" class="ui-label">
+												<span class="card-block">
+													<span class="ui-checkbox-object"></span>
+													<!-- 2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<!-- DD : 이미지 있을 때 -->
+													<span class="card-image">
+														<span class="card-image-inner">
+															<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+															<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+														</span>
+													</span>
+													<!-- //2022.02.17 : mod : 카드 이미지 구조 변경 -->
+													<div class="card-info">
+														<span class="card-name">[본인] 아멕스 아시아나클럽 카드 아멕스 아시아나클럽 카드</span>
+														<div class="card-number"><span class="card-number-item">VISA</span><span class="card-number-item">4365-12**-****-1234</span></div>
+													</div>
+												</span>
+											</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="form-bottom">
+								<div class="ui-buttons">
+									<ul class="ui-buttons-list">
+										<li class="ui-buttons-item">
+											<a href="" class="ui-basic-button type-gray" role="button">차단 해제하기</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">
+											해외원화결제(DCC) 서비스는 해외에서 결제한 금액을 원화로 쉽게 알 수 있는 장점은 있으나, 해당 가맹점에서 현지 통화에서 원화로 전환하는 과정에 수수료가 더 부과될 수 있습니다.
+										</li>
+										<li class="info-item">
+											해외원화결제(DCC) 결제 시 반드시 가맹점에서 고객이 직접 결제통화를 선택하고, 그에 따른 환율 적용에 대해 동의를 해야 하지만, 고의로 이를 지키지 않는 일부 해외가맹점도 생겨남에
+											따라, 민원 및 문의가 발생하고 있습니다. (당사에서 통화 선택에 관여하거나 DCC수수료를 편취하지 않음) 일단 해외원화결제가 발생하는 순간, 고객이 인지하지 못해도 동의로 처리되어
+											분쟁에서 패소하는 경우가 있으므로, 해외원화결제 이용을 원하지 않으시면, 거래 이전에 해외원화결제 차단 등록을 하시기 바랍니다.
+										</li>
+										<li class="info-item">
+											해외원화결제(DCC) 차단 등록 시, 일부 해외원화결제만 가능한 해외가맹점에서는 거래 자체가 불가할 수 있습니다. 이 경우 가맹점과 협의하여 다른 수단(현금 등)으로 결제하시거나,
+											해외원화결제 차단 해제 후 DCC로 거래(원화 결제)해야 할 수 있습니다.
+										</li>
+										<li class="info-item">
+											승인거절 되어 해외원화결제 차단 해제 후 해외원화결제시, 가맹점에서 제시하는 변환환율을 반드시 확인 하셔야 하며, 해외원화결제에 동의한 것이므로 이의신청 대상이 아닙니다.
+										</li>
+										<li class="info-item">
+											만일 해외원화결제 차단하여 승인거절 되었더라도 해당 가맹점으로부터 정상적인 물품 또는 서비스를 제공 받았다면, 사후 매입이나 무승인 매입 등으로 청구될 수 있으며, 이때에는
+											해외원화결제 수수료가 적용되어 청구 될 수 있습니다.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

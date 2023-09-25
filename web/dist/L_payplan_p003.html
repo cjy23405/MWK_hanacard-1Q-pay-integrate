@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">페이플래너 예상하기</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-tab type-nav">
+							<ul class="ui-tab-list">
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link is-active" role="button">리볼빙</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">분할납부</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">장기카드대출</a>
+								</li>
+								<li class="ui-tab-item">
+									<a href="" class="ui-tab-link" role="button">단기카드대출</a>
+								</li>
+							</ul>
+						</div>
+
+						<h2 class="for-a11y">리볼빙</h2>
+
+						<p class="page-title margin-bottom-none">“일부 금액만 결제하고 싶어요.”</p>
+
+						<div class="page-info margin-top-2">
+							<p class="page-info-text">일부결제금액이월약정(리볼빙)</p>
+						</div>
+
+						<div class="form-detail margin-top-35">
+							<dl class="form-detail-list">
+								<div class="form-detail-item">
+									<dt class="form-detail-title">결제예정금액</dt>
+									<dd class="form-detail-group">
+										<div>5,800,000 원</div>
+									</dd>
+								</div>
+								<div class="form-detail-item">
+									<dt class="form-detail-title">약정적용금액</dt>
+									<dd class="form-detail-group">
+										<div><span class="color-primary">5,800,000</span> 원</div>
+									</dd>
+								</div>
+							</dl>
+						</div>
+
+						<p class="ui-notice margin-top-25">결제예정금액은 <span class="color-primary">2020.04.23 선택하신 청구단위</span>의 <span class="color-primary">결제 비율 100%</span> 기준입니다.</p>
+						<p class="ui-notice">약정적용금액은 리볼빙 약정 가능 일시불 금액입니다.</p>
+
+						<section class="page-section type-line">
+							<div class="section-title margin-bottom-25">
+								<h3 class="title">약정결제비율</h3>
+							</div>
+
+							<div class="form-detail">
+								<dl class="form-detail-list">
+									<div class="form-detail-item">
+										<dt class="form-detail-title">최소</dt>
+										<dd class="form-detail-group">10%</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="form-list margin-top-25">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">약정</strong>
+									</div>
+									<div class="form-group">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible">
+												<div class="ui-input-block">
+													<div class="ui-input" id="ratio1-1"></div>
+												</div>
+											</div>
+											<div class="form-flex-cell form-unit">%</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="ui-rangeslider margin-top-50" data-rangeslider-watch="#ratio1-1, #ratio1-2">
+								<input type="range" min="10" max="100" value="10" title="약정결제비율(%)" />
+								<div class="chart-bubble" aria-hidden="true" inert>
+									<div class="chart-bubble-text"><span id="ratio1-2"></span> %</div>
+								</div>
+								<div class="ui-rangeslider-gradation" aria-hidden="true" inert>
+									<div class="ui-rangeslider-gradation-item">
+										<div class="ui-rangeslider-gradation-item-text">10%</div>
+									</div>
+									<div class="ui-rangeslider-gradation-item">
+										<div class="ui-rangeslider-gradation-item-text">50%</div>
+									</div>
+									<div class="ui-rangeslider-gradation-item">
+										<div class="ui-rangeslider-gradation-item-text">100%</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+
+					<div class="page-buttons type-fixed">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">결과보기</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

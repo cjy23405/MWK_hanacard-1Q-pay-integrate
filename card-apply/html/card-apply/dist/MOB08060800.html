@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-terms-detail-select">간편결제 연결서비스</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 간편결제 연결서비스 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select is-not-background-close" data-layer="layer-terms-detail-select">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2022.11.29 : 클래스 수정 header-title => header__title -->
+								<h2 class="header__title">
+									자주 쓰는 페이를 연결하면,<br />
+									결제가 더 빨라져요!
+								</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<!-- 2022.12.06 : mod : margin-top-15 클래스 삭제 -->
+								<div class="ui-checkbox-group type-grid type-col2 pay-brand-selector">
+									<!-- 2022.12.06 : mod : .ui-check-object 위치 변경 -->
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" name="checkboxGrid1" id="checkboxGrid1-1" checked />
+										<label for="checkboxGrid1-1" class="ui-label">
+											<span class="ui-check-object"></span>
+											<span class="pay-brand-logo">
+												<img src="/mkca20/images/contents/ic-pay-kakao-off.png" alt="kakao pay" class="img" />
+												<img src="/mkca20/images/contents/ic-pay-kakao-on.png" alt="kakao pay" class="img selected" />
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" name="checkboxGrid1" id="checkboxGrid1-2" checked />
+										<label for="checkboxGrid1-2" class="ui-label">
+											<span class="ui-check-object"></span>
+											<span class="pay-brand-logo">
+												<img src="/mkca20/images/contents/ic-pay-naver-off.png" alt="naver pay" class="img" />
+												<img src="/mkca20/images/contents/ic-pay-naver-on.png" alt="naver pay" class="img selected" />
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" name="checkboxGrid1" id="checkboxGrid1-3" checked />
+										<label for="checkboxGrid1-3" class="ui-label">
+											<span class="ui-check-object"></span>
+											<span class="pay-brand-logo">
+												<img src="/mkca20/images/contents/ic-pay-toss-off.png" alt="toss" class="img" />
+												<img src="/mkca20/images/contents/ic-pay-toss-on.png" alt="toss" class="img selected" />
+											</span>
+										</label>
+									</div>
+									<div class="ui-checkbox-block type-box">
+										<input type="checkbox" class="ui-checkbox" name="checkboxGrid1" id="checkboxGrid1-4" checked />
+										<label for="checkboxGrid1-4" class="ui-label">
+											<span class="ui-check-object"></span>
+											<span class="pay-brand-logo">
+												<img src="/mkca20/images/contents/ic-pay-lpay-off.png" alt="L pay" class="img" />
+												<img src="/mkca20/images/contents/ic-pay-lpay-on.png" alt="L pay" class="img selected" />
+											</span>
+										</label>
+									</div>
+									<!-- //2022.12.06 : mod : .ui-check-object 위치 변경 -->
+								</div>
+
+								<!-- 2022.12.06 : 문구위치 변경 -->
+								<p class="ui-form-notice type-blur">간편결제 서비스에 카드가 자동으로 등록됩니다.</p>
+
+								<!-- 2022.12.07 : mod : 간격클래스 변경 margin-top-15 => margin-top-20 -->
+								<div class="terms-area margin-top-20">
+									<div class="terms-item">
+										<div class="ui-form-check-block type-large type-align-top">
+											<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" checked />
+											<label for="selectCheckbox1-1" class="ui-label">
+												<span class="ui-check-object"></span>
+												<span class="ui-label-text">개인정보 필수 제공 동의</span>
+											</label>
+											<button type="button" class="ui-arrow-button"><span class="for-a11y">약관 상세 보기</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<!-- 2022.11.17 : del : 버튼 삭제 -->
+									<li class="ui-buttons-item">
+										<!-- 2022.11.17 : 문구수정 -->
+										<button type="button" class="ui-button ui-basic-button type-primary">동의하고 연결</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 간편결제 연결서비스 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-terms-detail-select');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

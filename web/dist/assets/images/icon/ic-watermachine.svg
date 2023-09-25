@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <style>
+            .cls-1,.cls-5{fill:none}.cls-5{stroke:#2d3239;stroke-width:1.5px}.cls-3{fill:#7dedf3}.cls-6{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_watermachine" transform="translate(-23.33 -750.768)">
+        <path id="사각형_7870" data-name="사각형 7870" class="cls-1" transform="translate(23.33 750.768)" d="M0 0h36v36H0z"/>
+        <g id="사각형_14400" data-name="사각형 14400" transform="translate(28.83 753.768)" style="stroke-width:1.5px;stroke:#2d3239;fill:#fff">
+            <rect class="cls-6" width="24" height="30" rx="5"/>
+            <rect class="cls-1" x=".75" y=".75" width="22.5" height="28.5" rx="4.25"/>
+        </g>
+        <rect id="사각형_14404" data-name="사각형 14404" class="cls-3" width="5" height="5" rx="2.5" transform="translate(36.83 759.018)"/>
+        <g id="사각형_14402" data-name="사각형 14402" transform="rotate(90 -359.219 408.049)" style="stroke:#2d3239;fill:none">
+            <rect class="cls-6" width="1.5" height="16" rx=".75"/>
+            <rect class="cls-1" x=".5" y=".5" width=".5" height="15" rx=".25"/>
+        </g>
+        <g id="사각형_14403" data-name="사각형 14403" class="cls-5" transform="translate(37.33 758.018)">
+            <rect class="cls-6" width="7" height="7" rx="3.5"/>
+            <rect class="cls-1" x=".75" y=".75" width="5.5" height="5.5" rx="2.75"/>
+        </g>
+        <g id="사각형_15568" data-name="사각형 15568" class="cls-5">
+            <path class="cls-6" d="M0 0h4v3a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V0z" transform="translate(38.977 767.268)"/>
+            <path class="cls-1" d="M1.5.75h1a.75.75 0 0 1 .75.75V3a.25.25 0 0 1-.25.25H1A.25.25 0 0 1 .75 3V1.5A.75.75 0 0 1 1.5.75z" transform="translate(38.977 767.268)"/>
+        </g>
+        <path id="패스_12248" data-name="패스 12248" class="cls-3" d="M152.262 13.456c-.033-.044-.1-.122-.1-.122a5.986 5.986 0 0 1-1.423-2.046.129.129 0 0 0-.245 0 6.227 6.227 0 0 1-1.434 2.057s-.067.078-.1.122a1.994 1.994 0 0 0-.334 1.312 1.938 1.938 0 0 0 .567 1.178 1.967 1.967 0 0 0 1.2.567 1.416 1.416 0 0 0 .222.011 2.049 2.049 0 0 0 1.334-.5 1.934 1.934 0 0 0 .311-2.579z" transform="translate(-108.465 761.652)"/>
+        <path id="패스_12247" data-name="패스 12247" class="cls-5" d="M152.262 13.456c-.033-.044-.1-.122-.1-.122a5.986 5.986 0 0 1-1.423-2.046.129.129 0 0 0-.245 0 6.227 6.227 0 0 1-1.434 2.057s-.067.078-.1.122a1.994 1.994 0 0 0-.334 1.312 1.938 1.938 0 0 0 .567 1.178 1.967 1.967 0 0 0 1.2.567 1.416 1.416 0 0 0 .222.011 2.049 2.049 0 0 0 1.334-.5 1.934 1.934 0 0 0 .311-2.579z" transform="translate(-109.788 761.652)"/>
+    </g>
+</svg>

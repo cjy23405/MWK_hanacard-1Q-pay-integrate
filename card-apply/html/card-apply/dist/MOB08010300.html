@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-service-myself">내맘대로 서비스(선택)</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 내맘대로 서비스(선택) -->
+			<!-- 2022.09.02 : mod : layer-wrap에 is-not-background-close 클래스 추가 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide is-not-background-close layer-service-myself" data-layer="layer-service-myself">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<!-- 2022.11.28 : mod : 구조변경 및 상단 카드명 추가 -->
+								<div class="header__left">
+									<p class="card-name color-primary">내 맘대로 쁨 카드</p>
+									<!-- 2022.08.12 문구수정 -->
+									<h2 class="header__title">[선택] 어떤 혜택을 추가할까요?</h2>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<!-- 2022.08.24 : mod : 간격클래스 추가 -->
+								<div class="form-list-wrap margin-top-7">
+									<div class="form-item">
+										<!-- 2022.08.24 : mod : 간격클래스 추가 -->
+										<p class="ui-notice margin-bottom-20 margin-top-none">
+											<span class="color-basic normal-text">선택한 서비스에 따라 추가 연회비가 부과됩니다.</span>
+										</p>
+										<div class="ui-checkbox-group type-full">
+											<div class="ui-checkbox-block type-box">
+												<!-- 2022.08.18 : mod : checked 삭제 -->
+												<input type="checkbox" class="ui-checkbox" name="checkbox1" id="checkbox1-1" />
+												<label for="checkbox1-1" class="ui-label type-block">
+													<span class="guide-info-item type-no-padding">
+														<span class="guide-info-item-inner">
+															<span class="guide-info-icon type-regular type-icon-94"></span>
+															<span class="guide-info-block display-block">
+																<span class="guide-info-left display-block">
+																	<div class="guide-info-group">
+																		<div class="guide-info-group-item">
+																			<strong class="guide-info-title">에듀 혜택</strong>
+																		</div>
+																		<div class="guide-info-group-item">
+																			<p class="guide-info-text">연회비 <span class="color-primary font-weight-medium">2만원</span></p>
+																		</div>
+																	</div>
+																	<span class="normal-text color-blur display-block">
+																		<span class="guide-info-text-item font-weight-regular display-block">학원, 헬스장, 수영장 5% 적립</span>
+																	</span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</label>
+											</div>
+											<div class="ui-checkbox-block type-box">
+												<input type="checkbox" class="ui-checkbox" name="checkbox1" id="checkbox1-2" />
+												<label for="checkbox1-2" class="ui-label type-block">
+													<span class="guide-info-item type-no-padding">
+														<span class="guide-info-item-inner">
+															<span class="guide-info-icon type-regular type-icon-97"></span>
+															<span class="guide-info-block display-block">
+																<span class="guide-info-left display-block">
+																	<div class="guide-info-group">
+																		<div class="guide-info-group-item">
+																			<strong class="guide-info-title">케어 혜택</strong>
+																		</div>
+																		<div class="guide-info-group-item">
+																			<p class="guide-info-text">연회비 <span class="color-primary font-weight-medium">1만원</span></p>
+																		</div>
+																	</div>
+																	<span class="normal-text color-blur display-block">
+																		<span class="guide-info-text-item font-weight-regular display-block">병원, 동물병원 10% 적립</span>
+																	</span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</label>
+											</div>
+											<div class="ui-checkbox-block type-box">
+												<!-- 2022.08.18 : mod : checked 삭제 -->
+												<input type="checkbox" class="ui-checkbox" name="checkbox1" id="checkbox1-3" />
+												<label for="checkbox1-3" class="ui-label type-block">
+													<span class="guide-info-item type-no-padding">
+														<span class="guide-info-item-inner">
+															<span class="guide-info-icon type-regular type-icon-95"></span>
+															<span class="guide-info-block display-block">
+																<span class="guide-info-left display-block">
+																	<div class="guide-info-group">
+																		<div class="guide-info-group-item">
+																			<strong class="guide-info-title">여행 혜택</strong>
+																		</div>
+																		<div class="guide-info-group-item">
+																			<p class="guide-info-text">연회비 <span class="color-primary font-weight-medium">1만원</span></p>
+																		</div>
+																	</div>
+																	<span class="normal-text color-blur display-block">
+																		<span class="guide-info-text-item font-weight-regular display-block">숙박, 철도, 항공 10% 적립</span>
+																	</span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</label>
+											</div>
+											<div class="ui-checkbox-block type-box">
+												<input type="checkbox" class="ui-checkbox" name="checkbox1" id="checkbox1-4" />
+												<label for="checkbox1-4" class="ui-label type-block">
+													<span class="guide-info-item type-no-padding">
+														<span class="guide-info-item-inner">
+															<span class="guide-info-icon type-regular type-icon-96"></span>
+															<span class="guide-info-block display-block">
+																<span class="guide-info-left display-block">
+																	<div class="guide-info-group">
+																		<div class="guide-info-group-item">
+																			<strong class="guide-info-title">골프 혜택</strong>
+																		</div>
+																		<div class="guide-info-group-item">
+																			<p class="guide-info-text">연회비 <span class="color-primary font-weight-medium">2만원</span></p>
+																		</div>
+																	</div>
+																	<span class="list-doted normal-text color-blur display-block">
+																		<span class="dot-item guide-info-text-item font-weight-regular display-block">골프장, 연습장, 스크린, 카카오골프 10% 적립</span>
+																		<span class="dot-item guide-info-text-item font-weight-regular display-block">골프장 클럽하우스 커피 무료 4인</span>
+																	</span>
+																</span>
+															</span>
+														</span>
+													</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 2022.09.16 : mod : 버튼 구조 변경 -->
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button" data-role="layerClose">취소</button>
+									</li>
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //2022.09.16 : mod : 버튼 구조 변경 -->
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 내맘대로 서비스(선택) -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-service-myself');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

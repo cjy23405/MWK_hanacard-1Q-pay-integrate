@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- 2022.04.06 : mod : 헤더 공통 수정 -->
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header type-white">
+						<h1 class="header-title align-center">대출신청</h1>
+					</header>
+				</div>
+				<!-- //fix top area -->
+				<!--// 2022.04.06 : mod : 헤더 공통 수정 -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- 2022.01.28 : mod : 전화상담 버튼 추가 및 html구조 변경 -->
+						<div class="page-title-section form-flex type-align-top">
+							<div class="form-flex-cell type-flexible">
+								<h2 class="page-title">
+									결제계좌 정보를<br />
+									입력해 주세요.
+								</h2>
+							</div>
+							<div class="form-flex-cell">
+								<button type="button" class="ui-button ui-basic-button type-secondary type-tiny type-icon-tel" role="button">전화상담</button>
+							</div>
+						</div>
+						<!-- //2022.01.28 : mod : 전화상담 버튼 추가 및 html구조 변경 -->
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">결제/입금계좌</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block type-placeholder">
+											<button type="button" class="ui-button ui-select" title="결제/입금계좌 은행 선택">은행 선택</button>
+										</div>
+									</div>
+									<div class="form-group type-code">
+										<div class="form-flex type-row">
+											<div class="form-flex-cell type-flexible">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="계좌번호 입력" placeholder="‘-’ 제외하고 입력" />
+												</div>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-button ui-basic-button type-small type-gray">계좌확인</button>
+											</div>
+										</div>
+									</div>
+									<p class="ui-notice type-no-icon">대출거래 시 대출금이 입금될 계좌입니다.</p>
+
+									<div class="terms-area">
+										<div class="terms-item">
+											<div class="ui-checkbox-block type-align-top">
+												<input type="checkbox" class="ui-checkbox" id="checkbox2" />
+												<label for="checkbox2" class="ui-label">
+													<span class="ui-checkbox-object"></span>
+													<span class="ui-label-text">본인의 계좌를 통하여 카드결제금액을 자동이체 출금 처리하는 것에 동의합니다.</span>
+												</label>
+											</div>
+											<button type="button" class="ui-arrow type-text-default color-blur">출금 동의 안내</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">결제일 변경</strong>
+									</div>
+									<div class="form-group">
+										<!-- [DD] placeholder 내용이 들어갈 경우 type-placeholder 클래스 추가 -->
+										<div class="ui-select-block">
+											<button type="button" class="ui-button ui-select" title="변경 결제일 선택">선택</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">최초 결제일</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-input-block">
+											<input type="text" class="ui-input" title="최초 결제일 입력" value="2021년 01월 01일" disabled />
+										</div>
+									</div>
+								</div>
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">월 납입금</strong>
+									</div>
+									<div class="form-group">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible type-has-unit">
+												<div class="ui-input-block">
+													<!-- 2022.04.06 : mod : input type 수정, value 추가, disabled로 변경 -->
+													<input type="text" class="ui-input" title="금액 입력" placeholder="금액 입력" value="100,000" disabled />
+												</div>
+												<span class="form-unit">원</span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">초회차 월 납입금</strong>
+									</div>
+									<div class="form-group">
+										<div class="form-flex">
+											<div class="form-flex-cell type-flexible type-has-unit">
+												<div class="ui-input-block">
+													<!-- 2022.04.06 : mod : input type 수정, value 추가, disabled로 변경 -->
+													<input type="text" class="ui-input" title="금액 입력" placeholder="금액 입력" value="100,000" disabled />
+												</div>
+												<span class="form-unit">원</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // section -->
+					</div>
+
+					<div class="page-buttons">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

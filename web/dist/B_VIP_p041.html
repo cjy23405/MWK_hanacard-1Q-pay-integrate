@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">진행 초청행사</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="premium-card margin-bottom-20">
+							<div class="premium-card-info">
+								<p class="premium-card-info-title">
+									하나카드 우수회원님만을 위한<br />
+									특별한 혜택!
+								</p>
+								<p class="premium-card-info-text">
+									다양한 Lifestyle 행사를 통해<br />
+									더욱 소중한 기억을 선사해드리겠습니다.
+								</p>
+							</div>
+						</div>
+
+						<div class="ui-buttons type-scroll">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-tiny type-gray" role="button">찜한 혜택</a>
+								</li>
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-tiny type-gray" role="button">응모현황</a>
+								</li>
+								<li class="ui-buttons-item">
+									<a href="" class="ui-basic-button type-tiny type-gray" role="button">종료 초청행사</a>
+								</li>
+							</ul>
+						</div>
+
+						<!-- Case : 진행중인 초청행사가 없을 때 -->
+						<div class="link-item type-none type-flex type-no-line">
+							<p class="item-text">진행중인 초청행사가 없습니다.</p>
+						</div>
+						<!-- Case : //진행중인 초청행사가 없을 때 -->
+
+						<!-- 2022.02.17 : mod : 구조 변경 -->
+						<div class="vip-event margin-top-10">
+							<ul class="vip-event-list">
+								<li class="vip-event-item">
+									<a href="" class="vip-event-link">
+										<div class="vip-event-image">
+											<!-- 2022.05.04 : mod : alt 값 변경 -->
+											<img src="./assets/images/_dummy/banner-5.png" alt="배너 타이틀 넣어주세요." />
+										</div>
+										<div class="vip-event-info">
+											<div class="vip-event-title">타이틀 최대 1줄 노출 타이틀 최대 1줄 노출 타이틀 최대 1줄 노출</div>
+											<div class="vip-event-text">설명 최대 1줄 노출 설명 최대 1줄 노출 설명 최대 1줄 노출 설명 최대 1줄 노출</div>
+											<div class="vip-event-date">2021.05.01 ~ 2021.07.31</div>
+										</div>
+									</a>
+								</li>
+								<li class="vip-event-item">
+									<a href="" class="vip-event-link">
+										<div class="vip-event-image">
+											<!-- 2022.05.04 : mod : alt 값 변경 -->
+											<img src="./assets/images/_dummy/banner-5.png" alt="배너 타이틀 넣어주세요." />
+										</div>
+										<div class="vip-event-info">
+											<div class="vip-event-title">빙고 이벤트</div>
+											<div class="vip-event-text">하나카드 우수회원</div>
+											<div class="vip-event-date">2021.05.01 ~ 2021.07.31</div>
+										</div>
+									</a>
+								</li>
+								<li class="vip-event-item">
+									<a href="" class="vip-event-link">
+										<div class="vip-event-image">
+											<!-- 2022.05.04 : mod : alt 값 변경 -->
+											<img src="./assets/images/_dummy/banner-5.png" alt="배너 타이틀 넣어주세요." />
+										</div>
+										<div class="vip-event-info">
+											<div class="vip-event-title">빙고 이벤트</div>
+											<div class="vip-event-text">하나카드 우수회원</div>
+											<div class="vip-event-date">2021.05.01 ~ 2021.07.31</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //2022.02.17 : mod : 구조 변경 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

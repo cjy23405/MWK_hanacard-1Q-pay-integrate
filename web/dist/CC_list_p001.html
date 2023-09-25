@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">이메일 상담&middot;제안 및 칭찬 내역</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="inquiry-list">
+							<div class="inquiry-item">
+								<a href="" class="item-block ui-arrow-block" role="button">
+									<!-- 2021.11.15 .item-title div 태그로 변경 -->
+									<!-- 2022.03.25 .ellipsis 클래스 추가(제목 한줄 표기) -->
+									<div class="item-title ellipsis"><span class="category color-secondary">[이벤트]</span>이벤트 참여 문의 드립니다.</div>
+									<div class="item-info">
+										<span class="tag">완료</span>
+										<span class="item">접수일 <span class="date">2021.09.01</span></span>
+										<span class="item">답변일 <span class="date">2021.09.02</span></span>
+									</div>
+								</a>
+							</div>
+							<!-- [DD] 진행중일 경우 type-ing 클래스 추가 -->
+							<div class="inquiry-item type-ing">
+								<a href="" class="item-block ui-arrow-block" role="button">
+									<!-- 2021.11.15 .item-title div 태그로 변경 -->
+									<!-- 2022.03.25 .ellipsis 클래스 추가(제목 한줄 표기) -->
+									<div class="item-title ellipsis"><span class="category color-secondary">[카드상품·서비스]</span>신규카드 발급 문의 드립니다.</div>
+									<div class="item-info">
+										<span class="tag">진행중</span>
+										<span class="item">접수일 <span class="date">2021.09.01</span></span>
+									</div>
+								</a>
+							</div>
+							<!-- [DD] 내역없을 경우 type-none 클래스 추가 -->
+							<div class="inquiry-item type-none">
+								<p class="item-text">상담 내역이 없습니다.</p>
+							</div>
+						</div>
+						<div class="support-notice-area">
+							<p class="support-notice-title">다른 정보가 필요하신가요?</p>
+							<div class="support-notice-contents">
+								<ul class="info-list">
+									<li class="info-item"><a href="../guide-component.html" class="text-underline">컴포넌트 가이드 참조</a></li>
+									<li class="info-item"><a href="../guide-component.html" class="text-underline">컴포넌트 가이드 참조</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

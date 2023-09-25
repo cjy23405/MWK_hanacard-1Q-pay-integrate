@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- progress bar -->
+					<div class="fixed-step">
+						<div class="step-box" role="img" aria-label="총 14단계 중 1단계">
+							<span class="step-bar" style="width: 20%"></span>
+						</div>
+					</div>
+					<!-- //progress bar -->
+
+					<div class="page-contents">
+						<h2 class="page-contents-title">배우자 본인인증을 진행해주세요.</h2>
+
+						<!-- 2022.10.14 : mod : UI변경으로 인한 전반적인 구조 변경 -->
+						<div class="ui-form">
+							<dl class="ui-form-list">
+								<div class="ui-form-item">
+									<dt class="ui-form-key" data-focus-input="tel">휴대폰번호</dt>
+									<dd class="ui-form-val">
+										<div class="ui-form-val-inner">
+											<div class="ui-form-contents">
+												<div class="flex-box">
+													<div class="flex-box-cell">
+														<!-- 2022.11.29 : mod :  input-width-tel-exchange클래스 삭제 -->
+														<div class="in-select-block">
+															<button type="button" class="in-select" title="통신사 선택" data-placeholder="선택" data-focus-input-target="tel"></button>
+														</div>
+													</div>
+													<div class="flex-box-cell type-flexible">
+														<div class="in-input-block">
+															<input type="number" pattern="\d*" class="in-input" title="휴대폰번호 입력" placeholder="- 제외하고 입력" />
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</div>
+							</dl>
+						</div>
+
+						<!-- 약관동의 -->
+						<div class="ui-multiple-list margin-top-40">
+							<div class="ui-check-terms">
+								<div class="ui-check-terms-list-group js-ui-accordion">
+									<!-- 본인인증 약관 전체동의 -->
+									<div class="ui-check-terms-list type-line">
+										<div class="ui-check-terms-item js-ui-accordion__item" data-initial-open="true">
+											<div class="ui-form-check-block type-large type-line">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox2" data-checkbox-group="selectCheckbox2" />
+												<label for="selectCheckbox2" class="ui-label">
+													<span class="ui-check-object"></span>
+													<span class="ui-label-text">본인인증 약관 전체동의</span>
+												</label>
+												<button type="button" class="ui-button ui-check-terms-opener js-ui-accordion__opener">
+													<span class="for-a11y">
+														상세내용
+														<span class="open-text">열기</span>
+														<span class="close-text">닫기</span>
+													</span>
+												</button>
+											</div>
+											<div class="ui-check-terms-layer js-ui-accordion__layer">
+												<div class="ui-check-terms-contents type-margin-6">
+													<div class="ui-check-terms-item">
+														<div class="ui-form-check-block">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-1" data-checkbox-group-child="selectCheckbox2" />
+															<label for="selectCheckbox2-1" class="ui-label">
+																<span class="ui-check-object"></span>
+																<span class="ui-label-text">휴대폰 인증(개인정보 제공동의 약관)</span>
+															</label>
+															<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-form-check-block">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-2" data-checkbox-group-child="selectCheckbox2" />
+															<label for="selectCheckbox2-2" class="ui-label">
+																<span class="ui-check-object"></span>
+																<span class="ui-label-text">휴대폰 인증(고유식별정보 처리 약관)</span>
+															</label>
+															<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-form-check-block">
+															<input type="checkbox" class="ui-checkbox" id="selectCheckbox2-3" data-checkbox-group-child="selectCheckbox2" />
+															<label for="selectCheckbox2-3" class="ui-label">
+																<span class="ui-check-object"></span>
+																<span class="ui-label-text">휴대폰 인증(통신사 이용약관)</span>
+															</label>
+															<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //본인인증 약관 전체동의 -->
+
+									<!-- 개인(신용)정보 필수적 동의서 -->
+									<div class="ui-check-terms-list">
+										<div class="ui-check-terms-item js-ui-accordion__item">
+											<div class="ui-form-check-block type-large">
+												<input
+													type="checkbox"
+													class="ui-checkbox"
+													id="selectCheckbox1-2"
+													data-checkbox-group-child="selectCheckbox"
+													data-checkbox-group="selectCheckbox1-2"
+													data-area-disabled="agree"
+													data-area-disabled-type="multi"
+												/>
+												<label for="selectCheckbox1-2" class="ui-label">
+													<span class="ui-check-object"></span>
+													<span class="ui-label-text">개인(신용)정보 필수적 동의서</span>
+													<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+												</label>
+												<button type="button" class="ui-button ui-check-terms-opener js-ui-accordion__opener">
+													<span class="for-a11y">
+														상세내용
+														<span class="open-text">열기</span>
+														<span class="close-text">닫기</span>
+													</span>
+												</button>
+											</div>
+											<div class="ui-check-terms-layer js-ui-accordion__layer">
+												<div class="ui-check-terms-contents">
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title flex-box">
+															<p class="paragraph flex-box-cell type-flexible">수집/이용에 관한 사항</p>
+															<button type="button" class="ui-arrow flex-box-cell"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+														<div class="ui-select-terms-item">
+															<div class="ui-check-terms-box">
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">고유식별정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title flex-box">
+															<p class="paragraph flex-box-cell type-flexible">조회에 관한 사항</p>
+															<button type="button" class="ui-arrow flex-box-cell"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+														<div class="ui-select-terms-item">
+															<div class="ui-check-terms-box">
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">고유식별정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title flex-box">
+															<p class="paragraph flex-box-cell type-flexible">
+																제공에 관한 사항
+																<span class="paragraph-sub"> 종합신용정보 집중기관 및 신용정보회사에 개인(신용)정보 제공 </span>
+															</p>
+															<button type="button" class="ui-arrow flex-box-cell"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+														<div class="ui-select-terms-item">
+															<div class="ui-check-terms-box">
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">고유식별정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title flex-box">
+															<p class="paragraph flex-box-cell type-flexible">여신금융협회 등에 개인(신용)정보 제공</p>
+															<button type="button" class="ui-arrow flex-box-cell"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+														<div class="ui-select-terms-item">
+															<div class="ui-check-terms-box">
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">고유식별정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title flex-box">
+															<p class="paragraph flex-box-cell type-flexible">고객이 요청한 서비스의 이행 유지를 위한 서비스 제공 업체에 개인(신용)정보 제공(고객이 신청한 서비스에 한함)</p>
+															<button type="button" class="ui-arrow flex-box-cell"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+														<div class="ui-select-terms-item">
+															<div class="ui-check-terms-box">
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">고유식별정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title flex-box">
+															<p class="paragraph flex-box-cell type-flexible">은행 연계 서비스의 이행 유지를 위한 개인(신용)정보 제공(결제 계좌 및 여수신 등 은행 상품 거래자에 한함)</p>
+															<button type="button" class="ui-arrow flex-box-cell"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+														<div class="ui-select-terms-item">
+															<div class="ui-check-terms-box">
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">고유식별정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+																<div class="ui-check-terms-item">
+																	<div class="ui-form-check-block">
+																		<span class="ui-label">
+																			<span class="ui-label-text">개인(신용)정보 수집/이용 동의</span>
+																		</span>
+																		<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //개인(신용)정보 필수적 동의서 -->
+								</div>
+							</div>
+						</div>
+						<!-- //약관동의 -->
+						<!-- //2022.10.14 : mod : UI변경으로 인한 전반적인 구조 변경 -->
+					</div>
+
+					<!-- DD : 모든 필수값 입력됐을 경우 활성화 disabled 속석 삭제 -->
+					<!-- 2022.08.31 : mod : .page-buttons에 .type-fixed.type-no-line 클래스 추가 -->
+					<div class="page-buttons type-fixed type-no-line">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<!-- 2022.10.14 : mod : disabled 속성 추가 -->
+									<button type="button" class="ui-button ui-basic-button type-primary" disabled>다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //DD : 모든 필수값 입력됐을 경우 활성화 disabled 속석 삭제 -->
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			// 카드상품이외 부수서비스~ > 전자적 매체를 통한 광고성정보수신동의의 경우 아래 체크박스 네가지 중 한개만 선택해도 체크가 되어야 함
+		</script>
+		<!-- //script -->
+	</body>
+</html>

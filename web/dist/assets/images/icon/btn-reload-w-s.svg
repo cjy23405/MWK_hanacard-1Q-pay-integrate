@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <defs>
+        <clipPath id="vuztt93x1a">
+            <path data-name="사각형 11737" style="fill:#fff" d="M0 0h18v18H0z"/>
+        </clipPath>
+    </defs>
+    <path data-name="사각형 2470" style="fill:none" d="M0 0h18v18H0z"/>
+    <g data-name="마스크 그룹 168" style="clip-path:url(#vuztt93x1a)">
+        <path data-name="패스 1825" d="m0 0 2.126 2.126L0 4.252" transform="rotate(115 4.3 10.409)" style="stroke-linecap:round;stroke:#fff;stroke-linejoin:round;stroke-width:1.5px;fill:none"/>
+        <g data-name="빼기 367" style="stroke-linecap:round;fill:none">
+            <path d="M15157.863-12354a5.962 5.962 0 0 1-4.148-1.8 5.969 5.969 0 0 1-1.713-4.2 6.006 6.006 0 0 1 6-6 6.008 6.008 0 0 1 6 6 6 6 0 0 1-.682 2.78l-1.67-.146a4.451 4.451 0 0 0 .853-2.634 4.507 4.507 0 0 0-4.5-4.5 4.5 4.5 0 0 0-4.5 4.5 4.507 4.507 0 0 0 4.494 4.5l-.131 1.5z" style="stroke:none" transform="translate(-15149.5 12369.001)"/>
+            <path d="M15157.863-12354.003a5.962 5.962 0 0 1-4.15-1.799 5.97 5.97 0 0 1-1.712-4.198 6.006 6.006 0 0 1 5.997-6.001 6.001 6.001 0 0 1 5.32 8.781l-1.67-.146a4.45 4.45 0 0 0 .853-2.634 4.507 4.507 0 0 0-4.503-4.502 4.505 4.505 0 0 0-4.498 4.502 4.507 4.507 0 0 0 4.494 4.499l-.13 1.498z" style="fill:#fff;stroke:none" transform="translate(-15149.5 12369.001)"/>
+        </g>
+        <path data-name="패스 12585" d="M.75 0h.5a.75.75 0 0 1 0 1.5h-.5a.75.75 0 0 1 0-1.5z" transform="rotate(2 -380.895 219.699)" style="fill:#fff"/>
+    </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="312" height="190" viewBox="0 0 312 190">
+    <defs>
+        <linearGradient id="k47qz1as7a" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#6a4bcb"/>
+            <stop offset="1" stop-color="#8665ef"/>
+        </linearGradient>
+    </defs>
+    <path data-name="사각형 14160" style="fill:#f1f3f5;opacity:.5" d="M0 0h312v190H0z"/>
+    <g data-name="그룹 12809" transform="translate(-120 -597)">
+        <text transform="translate(307 627)" style="letter-spacing:-.025em;font-family:SpoqaHanSansNeo-Light,Spoqa Han Sans Neo;font-weight:300;font-size:12px;fill:#111"><tspan x="0" y="0">이자</tspan></text>
+        <circle data-name="타원 1309" cx="2.5" cy="2.5" r="2.5" transform="rotate(90 -159.5 460.5)" style="fill:url(#k47qz1as7a)"/>
+        <text transform="translate(244 627)" style="letter-spacing:-.025em;font-family:SpoqaHanSansNeo-Light,Spoqa Han Sans Neo;font-weight:300;font-size:12px;fill:#111"><tspan x="0" y="0">원금</tspan></text>
+        <circle data-name="타원 1309" cx="2.5" cy="2.5" r="2.5" transform="rotate(90 -191 429)" style="fill:#c9d2db"/>
+    </g>
+    <g data-name="그룹 12810">
+        <path data-name="사각형 15783" transform="translate(231 89)" style="fill:#c9d2db" d="M0 0h24v70H0z"/>
+        <path data-name="사각형 14206" transform="translate(231 69)" style="fill:url(#k47qz1as7a)" d="M0 0h24v20H0z"/>
+    </g>
+    <g data-name="그룹 12811">
+        <path data-name="사각형 15783" transform="translate(187 89)" style="fill:#c9d2db" d="M0 0h24v70H0z"/>
+        <path data-name="사각형 14206" transform="translate(187 59)" style="fill:url(#k47qz1as7a)" d="M0 0h24v30H0z"/>
+    </g>
+    <g data-name="그룹 12812">
+        <path data-name="사각형 15783" transform="translate(143 89)" style="fill:#c9d2db" d="M0 0h24v70H0z"/>
+        <path data-name="사각형 14206" transform="translate(143 49)" style="fill:url(#k47qz1as7a)" d="M0 0h24v40H0z"/>
+    </g>
+    <path data-name="사각형 15783" transform="translate(99 99)" style="fill:url(#k47qz1as7a)" d="M0 0h24v60H0z"/>
+    <path data-name="사각형 15786" transform="translate(55 99)" style="fill:url(#k47qz1as7a)" d="M0 0h24v60H0z"/>
+    <g data-name="그룹 12813">
+        <text transform="translate(71 86)" style="font-size:10px;letter-spacing:-.025em;font-family:SpoqaHanSansNeo-Light,Spoqa Han Sans Neo;font-weight:300;fill:#111"><tspan x="0" y="0">거치기간</tspan></text>
+        <g data-name="그룹 8308" transform="translate(30 -890.75)">
+            <rect data-name="사각형 11484" width="8" height="1" rx=".5" transform="translate(80 972.25)" style="fill:#111"/>
+            <path data-name="패스 10966" d="m-2758-9258.714 3 3-3 3" transform="translate(2843 10228.464)" style="fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round"/>
+        </g>
+        <g data-name="ic_change">
+            <g data-name="그룹 8308" transform="translate(60 79)">
+                <rect data-name="사각형 11484" width="8" height="1" rx=".5" transform="translate(0 2.5)" style="fill:#111"/>
+                <path data-name="패스 10966" d="m-2755-9258.714-3 3 3 3" transform="translate(2758 9258.714)" style="fill:none;stroke:#111;stroke-linecap:round;stroke-linejoin:round"/>
+            </g>
+        </g>
+    </g>
+    <text data-name="1개월" transform="translate(67 174)" style="font-size:10px;letter-spacing:-.025em;font-family:SpoqaHanSansNeo-Light,Spoqa Han Sans Neo;font-weight:300;fill:#111"><tspan x="-11.895" y="0">1개월</tspan></text>
+    <text data-name="2개월" transform="translate(111 174)" style="font-size:10px;letter-spacing:-.025em;font-family:SpoqaHanSansNeo-Light,Spoqa Han Sans Neo;font-weight:300;fill:#111"><tspan x="-11.895" y="0">2개월</tspan></text>
+    <text data-name="…" transform="translate(176 176)" style="font-size:14px;font-family:SpoqaHanSansNeo-Medium,Spoqa Han Sans Neo;font-weight:500;letter-spacing:-.025em;fill:#111"><tspan x="-7" y="0">…</tspan></text>
+    <text transform="translate(243 174)" style="font-size:10px;letter-spacing:-.025em;font-family:SpoqaHanSansNeo-Light,Spoqa Han Sans Neo;font-weight:300;fill:#111"><tspan x="-13.55" y="0">만기일</tspan></text>
+</svg>

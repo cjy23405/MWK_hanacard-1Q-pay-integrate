@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">기프트카드</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">매뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							기프트카드의 잔액,<br />
+							이용내역 조회가 가능합니다.
+						</h2>
+
+						<div class="menu-link-area">
+							<ul class="menu-link-list">
+								<li class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button" role="button">잔액조회</a>
+								</li>
+								<li class="menu-link-item">
+									<a href="" class="ui-arrow-block menu-link-button" role="button">이용내역</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									이용안내
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">전국 신용카드 가맹점에서 이용이 가능하지만 일부 백화점 및 대형할인점 등에서는 이용하실 수 없습니다.</li>
+										<li class="info-item">무기명식 선불카드를 양도하고자 하는 경우에는 양도 이전에 선불카드의 각종 등록된 정보를 해제하여야 합니다.</li>
+										<li class="info-item">잔액을 모두 사용하였더라도 구매취소 등이 필요한 경우에는 카드실물을 폐기하지 마시고 일정기간 보관해주셔야 합니다.</li>
+										<li class="info-item">카드의 잔액이 권면금액의 40% 이하일 경우 환불이 가능합니다.</li>
+										<li class="info-item">환불 요청 시 요청자와 사용등록(소득공제, 인터넷비밀번호)된 주민번호가 일치해야 환불 가능합니다.</li>
+										<li class="info-item">YES GIFT카드 환불은 하나카드 홈페이지(PC) 및 하나은행 ATM기기, 하나카드 콜센터를 통해 환불처리 가능합니다. 홈페이지 환불 시 하나카드 로그인이 필요합니다.</li>
+										<li class="info-item">무기명식 선불카드는 분실/도난 시 하나카드가 책임지지 않습니다. 소득공제 신청된 기프트카드에 한해 잔액을 환불해드립니다.</li>
+										<li class="info-item">
+											유효기간 경과된 기프트카드는 사용 불가하며 카드 실물이 회수된 경우 환불하여 드립니다. 단, 유효기간에서 5년 경과하면 해당 카드의 미사용 잔액은 소멸될 수 있으니 유의하시기
+											바랍니다.
+										</li>
+										<li class="info-item">기프트카드를 이용한 할부구매 및 현금 서비스는 불가능합니다.</li>
+										<li class="info-item">기프트카드 사용등록 및 비밀번호 설정은 하나카드 홈페이지(PC)에서 가능합니다.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

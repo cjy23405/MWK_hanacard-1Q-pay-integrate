@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<!-- 2022.04.14 : mod : 문구 수정 -->
+							<h1 class="header-title">하나카드 여행서비스</h1>
+						</div>
+						<!-- 2022.04.14 : add : 메뉴버튼 추가 -->
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+						<!--// 2022.04.14 : add : 메뉴버튼 추가 -->
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="life-top-img">
+							<!-- 2022.05.04 : mod : alt값 변경 -->
+							<img src="../dist/assets/images/contents/img-life-01.png" alt="하나카드 여행서비스" class="img" />
+						</div>
+
+						<!-- 서비스 리스트 -->
+						<div class="usage-default margin-top-35">
+							<ul class="usage-default-list">
+								<li class="usage-default-item">
+									<h3 class="usage-default-line-title">
+										<span class="color-basic">국내여행</span>
+										<p class="sub">요즘 핫한 여행지 고르기!</p>
+									</h3>
+									<a href="" class="usage-default-block" role="button">
+										<div class="logo-image type-store type-medium-margin">
+											<div class="logo-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/life/logo-11.png" alt="웹투어" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">웹투어</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">5% 즉시할인</div>
+											</div>
+										</div>
+									</a>
+									<a href="" class="usage-default-block" role="button">
+										<div class="logo-image type-store type-medium-margin">
+											<div class="logo-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/life/logo-16.png" alt="호텔패스" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">호텔패스</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">5천원 즉시할인</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="usage-default-item">
+									<h3 class="usage-default-line-title">
+										<span class="color-basic">해외여행</span>
+										<p class="sub">백신맞고 떠나는 여행!</p>
+									</h3>
+									<a href="" class="usage-default-block" role="button">
+										<div class="logo-image type-store type-medium-margin">
+											<div class="logo-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/life/logo-15.png" alt="하나투어" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">하나투어</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">3% 즉시할인</div>
+											</div>
+										</div>
+									</a>
+									<a href="" class="usage-default-block" role="button">
+										<div class="logo-image type-store type-medium-margin">
+											<div class="logo-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/life/logo-18.png" alt="내일투어" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">내일투어</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">3% 하나머니 적립</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="usage-default-item">
+									<h3 class="usage-default-line-title">
+										<span class="color-basic">해외호텔</span>
+										<p class="sub">꿈꾸던 해외호텔 둘러보기!</p>
+									</h3>
+									<a href="" class="usage-default-block" role="button">
+										<div class="logo-image type-store type-medium-margin">
+											<div class="logo-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/life/logo-18.png" alt="내일투어" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">내일투어</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">8% 즉시할인</div>
+											</div>
+										</div>
+									</a>
+									<a href="" class="usage-default-block" role="button">
+										<div class="logo-image type-store type-medium-margin">
+											<div class="logo-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/life/logo-16.png" alt="호텔패스" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">호텔패스</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">8% 즉시할인</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="usage-default-item">
+									<h3 class="usage-default-line-title">
+										<span class="color-basic">해외유심 / 여행자보험</span>
+										<p class="sub">자유로운 데이터 & 통화와 안전한 여행!</p>
+									</h3>
+									<a href="" class="usage-default-block" role="button">
+										<div class="logo-image type-store type-medium-margin">
+											<div class="logo-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/life/logo-17.png" alt="말톡" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">말톡</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">15% 즉시할인</div>
+											</div>
+										</div>
+									</a>
+									<a href="" class="usage-default-block" role="button">
+										<div class="logo-image type-store type-medium-margin">
+											<div class="logo-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/life/logo-14.png" alt="MG 손해보험" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">MG 손해보험</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">20% 청구할인</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="usage-default-item">
+									<h3 class="usage-default-line-title">
+										<span class="color-basic">렌터카 / 액티비티</span>
+										<p class="sub">편하고 재밌게 즐기는 여행!</p>
+									</h3>
+									<a href="" class="usage-default-block" role="button">
+										<div class="logo-image type-store type-medium-margin">
+											<div class="logo-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/life/logo-12.png" alt="Rentalcars" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">Rentalcars.com</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">5% 즉시할인</div>
+											</div>
+										</div>
+									</a>
+									<a href="" class="usage-default-block" role="button">
+										<div class="logo-image type-store type-medium-margin">
+											<div class="logo-image-inner">
+												<!-- 2022.05.04 : mod : alt값 변경 -->
+												<img src="./assets/images/contents/life/logo-13.png" alt="클룩" onerror="this.parentNode.className += ' is-error';" />
+											</div>
+										</div>
+										<div class="usage-default-left">
+											<div class="usage-default-title">클룩</div>
+											<div class="usage-default-etc">
+												<div class="usage-default-etc-item">4% 즉시할인</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //서비스 리스트 -->
+
+						<!-- 하나카드 추천 해외여행 라운지 -->
+						<div class="page-section type-line">
+							<h2 class="page-section-title">하나카드 추천 해외여행 라운지</h2>
+
+							<div class="round-block margin-top-25">
+								<ul class="round-block-list">
+									<li class="round-block-item">
+										<a href="" class="round-block-box type-has-icon">
+											<span class="round-block-icon type-golf"></span>
+											<div class="round-block-text basic-text">해외 골프여행 라운지</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<div class="banner margin-top-25 margin-bottom-25">
+								<a href="" class="banner-link">
+									<!-- 2022.05.04 : mod : alt값 변경 -->
+									<img src="./assets/images/contents/img-travel-bn-01.png" alt="호텔패스 국내 럭셔리 브랜드 호텔 국내 호텔 1박당 5,000원 할인" class="banner-image" />
+								</a>
+							</div>
+
+							<div class="ui-link-box">
+								<a href="" class="ui-link-block type-align-middle" role="button">
+									<div class="ui-link-right">
+										<strong class="ui-link-title">해외이용가이드</strong>
+										<div class="ui-link-text">해외이용전 확인사항 및 해외카드 상담안내</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- //하나카드 추천 해외여행 라운지 -->
+
+						<!-- 여행상담시간 -->
+						<div class="page-section type-line">
+							<h2 class="page-section-title">여행상담시간</h2>
+							<div class="notice-tell">
+								<div class="notice-tell-item">09:00~18:00</div>
+								<div class="notice-tell-item">토, 일 공휴일 휴무</div>
+							</div>
+
+							<ul class="service-info-list">
+								<li class="service-info-item">
+									<div class="service-info-title type-flex">
+										<p class="title">금융신청</p>
+										<ul class="ui-tel-list">
+											<li><a href="tel:1599-2929" class="ui-tel-link color-blur">1599-2929</a></li>
+										</ul>
+									</div>
+									<a href="" class="ui-button ui-basic-button type-gray" role="button">바로가기</a>
+								</li>
+								<li class="service-info-item">
+									<div class="service-info-title type-flex">
+										<p class="title">내일투어</p>
+										<ul class="ui-tel-list">
+											<li><a href="tel:02-6262-5305" class="ui-tel-link color-blur">02-6262-5305</a></li>
+										</ul>
+									</div>
+									<a href="" class="ui-button ui-basic-button type-gray" role="button">바로가기</a>
+								</li>
+								<li class="service-info-item">
+									<div class="service-info-title type-flex">
+										<p class="title">호텔패스</p>
+										<ul class="ui-tel-list">
+											<li><a href="tel:1599-4420" class="ui-tel-link color-blur">1599-4420 (해외)</a></li>
+											<li><a href="tel:1599-4430" class="ui-tel-link color-blur">1599-4430 (국내)</a></li>
+										</ul>
+									</div>
+									<a href="" class="ui-button ui-basic-button type-gray" role="button">바로가기</a>
+								</li>
+								<li class="service-info-item">
+									<div class="service-info-title type-flex">
+										<p class="title">웹투어</p>
+										<ul class="ui-tel-list">
+											<li><a href="tel:02-2222-6644" class="ui-tel-link color-blur">02-2222-6644</a></li>
+										</ul>
+									</div>
+									<a href="" class="ui-button ui-basic-button type-gray" role="button">바로가기</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //여행상담시간 -->
+
+						<!-- 안내 -->
+						<div class="page-section type-line">
+							<div class="info-area color-blur">
+								<ul class="info-list type-inherit type-outside">
+									<li class="info-item type-presa">각 사별 할인 및 적립 혜택은 각 제휴처의 서비스 내용을 확인 후 이용바랍니다.</li>
+									<li class="info-item type-presa">본 여행서비스는 제휴사에서 제공하는 혜택이며 제휴사의 사정에 따라 변경 또는 중단 될 수 있습니다.</li>
+									<li class="info-item type-presa">하나카드는 통신판매 중개자로서, 여행상품은 해당 여행사의 책임하에 운영됩니다.</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //안내 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

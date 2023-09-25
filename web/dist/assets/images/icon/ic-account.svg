@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <defs>
+        <style>
+            .cls-4{stroke:#2d3239}.cls-4,.cls-9{fill:none}.cls-8{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_account" transform="translate(-252 -1081)">
+        <g id="사각형_11048" data-name="사각형 11048" style="stroke-width:1.5px;stroke:#2d3239;fill:#fff">
+            <path class="cls-8" d="M4 0h18a4 4 0 0 1 4 4v13H0V4a4 4 0 0 1 4-4z" transform="translate(261 1088)"/>
+            <path class="cls-9" d="M4 .75h18A3.25 3.25 0 0 1 25.25 4v11.5a.75.75 0 0 1-.75.75h-23a.75.75 0 0 1-.75-.75V4A3.25 3.25 0 0 1 4 .75z" transform="translate(261 1088)"/>
+        </g>
+        <g id="패스_10926" data-name="패스 10926" style="fill:#fff">
+            <path class="cls-8" d="M23.893 18.272H-.711c-.83 0-1.51-.65-1.538-1.46L-.644 6.75h24.47l1.605 10.061a1.53 1.53 0 0 1-1.538 1.461z" transform="translate(262.408 1097.489)"/>
+            <path d="m-.004 7.5-1.49 9.345c.044.38.378.677.783.677h24.604a.782.782 0 0 0 .784-.677L23.185 7.5H-.004M-1.284 6h25.75l1.716 10.758c0 1.25-1.025 2.264-2.29 2.264H-.71C-1.975 19.022-3 18.008-3 16.758L-1.283 6z" style="fill:#2d3239;stroke:none" transform="translate(262.408 1097.489)"/>
+        </g>
+        <g id="사각형_13452" data-name="사각형 13452" class="cls-4" transform="rotate(90 -406.206 688.795)">
+            <rect class="cls-8" width="1.5" height="7" rx=".75"/>
+            <rect class="cls-9" x=".5" y=".5" width=".5" height="6" rx=".25"/>
+        </g>
+        <g id="사각형_13816" data-name="사각형 13816" class="cls-4" transform="rotate(90 -417.25 690.25)">
+            <rect class="cls-8" width="1.5" height="8" rx=".75"/>
+            <rect class="cls-9" x=".5" y=".5" width=".5" height="7" rx=".25"/>
+        </g>
+        <g id="사각형_13817" data-name="사각형 13817" class="cls-4" transform="rotate(90 -418.25 692.25)">
+            <rect class="cls-8" width="1.5" height="10" rx=".75"/>
+            <rect class="cls-9" x=".5" y=".5" width=".5" height="9" rx=".25"/>
+        </g>
+        <rect id="사각형_13815" data-name="사각형 13815" width="6" height="6" rx="3" transform="translate(267 1094)" style="fill:#7dedf3"/>
+        <g id="사각형_13454" data-name="사각형 13454" transform="translate(265 1093)" style="fill:none;stroke-width:1.5px;stroke:#2d3239">
+            <rect class="cls-8" width="7" height="7" rx="3.5"/>
+            <rect class="cls-9" x=".75" y=".75" width="5.5" height="5.5" rx="2.75"/>
+        </g>
+        <path id="패스_3490" data-name="패스 3490" d="m-10169.5 5362.251 1.768 1.75 3.232-3.5" transform="translate(10446.5 -4252.502)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke-width:1.5px;stroke:#2d3239"/>
+    </g>
+</svg>

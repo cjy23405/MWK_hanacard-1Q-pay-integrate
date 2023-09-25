@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <clipPath id="ixlcvspeca">
+            <path data-name="사각형 17744" transform="translate(175 170)" style="fill:#fff;stroke:#707070" d="M0 0h60v60H0z"/>
+        </clipPath>
+        <filter id="yjd82hokcb" x="-4" y="2" width="67.765" height="62.593" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 14249" transform="translate(-175 -170)" style="clip-path:url(#ixlcvspeca)">
+        <g style="filter:url(#yjd82hokcb)">
+            <path data-name="패스 13735" d="M38.013 24.566 8.655 31.46a3.77 3.77 0 0 1-4.532-2.807L.1 11.528A3.772 3.772 0 0 1 2.909 7L32.267.1A3.77 3.77 0 0 1 36.8 2.908l4.022 17.127a3.77 3.77 0 0 1-2.808 4.531" transform="rotate(22 -361.944 582.417)" style="fill:#abaaaa"/>
+        </g>
+        <g data-name="그룹 14248" transform="rotate(7 1185.816 1404.316)">
+            <path data-name="패스 13736" d="M38.013 24.566 8.655 31.46a3.77 3.77 0 0 1-4.532-2.807L.1 11.528A3.772 3.772 0 0 1 2.909 7L32.267.1A3.77 3.77 0 0 1 36.8 2.908l4.022 17.127a3.77 3.77 0 0 1-2.808 4.531" transform="translate(43 313.035)" style="fill:#525266"/>
+            <path data-name="패스 13737" d="m10 17.253-3.582.842a1.257 1.257 0 0 1-1.51-.936l-.532-2.266a1.255 1.255 0 0 1 .935-1.51l3.589-.842a1.256 1.256 0 0 1 1.51.936l.533 2.266a1.257 1.257 0 0 1-.943 1.51" transform="translate(44.114 316.244)" style="fill:#d6d6d6;opacity:.7"/>
+            <rect data-name="사각형 17743" width="11" height="3" rx="1.5" transform="rotate(-13 1435.106 -125.368)" style="fill:#ced3d8;opacity:.2"/>
+        </g>
+    </g>
+</svg>

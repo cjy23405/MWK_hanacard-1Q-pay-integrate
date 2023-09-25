@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{stroke:#2d3239;stroke-width:1.5px}.cls-5{fill:#2d3239}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_cardissuance_1" transform="translate(102.5 -622)">
+        <path id="사각형_12182" data-name="사각형 12182" class="cls-1" transform="translate(-102.5 622)" d="M0 0h50v50H0z"/>
+        <g id="사각형_11970" data-name="사각형 11970" class="cls-2">
+            <path class="cls-7" d="M5 0h8a8 8 0 0 1 8 8v13a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" transform="translate(-88 634)"/>
+            <path class="cls-1" d="M5 .75h8A7.25 7.25 0 0 1 20.25 8v13A4.25 4.25 0 0 1 16 25.25H5A4.25 4.25 0 0 1 .75 21V5A4.25 4.25 0 0 1 5 .75z" transform="translate(-88 634)"/>
+        </g>
+        <rect id="사각형_13441" data-name="사각형 13441" width="15" height="4" rx="2" transform="rotate(-30 1179.698 472.731)" style="fill:#fff"/>
+        <g id="교차_2" data-name="교차 2" style="fill:none">
+            <path class="cls-7" d="M4.52 7.21a4 4 0 0 1-4-4v-4a8 8 0 0 1 8 8z" transform="translate(-75.52 634.791)"/>
+            <path d="M6.845 5.71A6.522 6.522 0 0 0 2.019.884V3.21c0 1.38 1.122 2.5 2.5 2.5h2.326m1.674 1.5h-4a4 4 0 0 1-4-4l.001-4a8 8 0 0 1 8 8z" style="fill:#2d3239;stroke:none" transform="translate(-75.52 634.791)"/>
+        </g>
+        <rect id="사각형_11973" data-name="사각형 11973" class="cls-5" width="1.5" height="8" rx=".75" transform="rotate(90 -359 283)"/>
+        <rect id="사각형_11973-2" data-name="사각형 11973" class="cls-5" width="1.5" height="11" rx=".75" transform="rotate(90 -359 286)"/>
+        <rect id="사각형_12064" data-name="사각형 12064" width="14.629" height="4" rx="2" transform="rotate(-30 1180.515 468.318)" style="fill:#7dedf3"/>
+        <g id="사각형_12063" data-name="사각형 12063" class="cls-2" transform="rotate(-30 1177.649 471.55)">
+            <rect class="cls-7" width="16" height="5" rx="2.5"/>
+            <rect class="cls-1" x=".75" y=".75" width="14.5" height="3.5" rx="1.75"/>
+        </g>
+    </g>
+</svg>

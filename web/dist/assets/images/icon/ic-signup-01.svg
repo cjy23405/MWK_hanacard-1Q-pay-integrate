@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+    <path data-name="사각형 11493" style="fill:transparent" d="M0 0h44v44H0z"/>
+    <path data-name="사각형 17223" transform="translate(4 4)" style="fill:transparent" d="M0 0h36v36H0z"/>
+    <g data-name="사각형 11970" transform="translate(9 5)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+        <rect width="22" height="32" rx="5" style="stroke:none"/>
+        <rect x=".75" y=".75" width="20.5" height="30.5" rx="4.25" style="fill:none"/>
+    </g>
+    <g data-name="사각형 12414" transform="translate(17.25 10.75)" style="stroke:#2d3239;stroke-width:1.5px;fill:#fff">
+        <rect width="5.5" height="5.5" rx="2" style="stroke:none"/>
+        <rect x=".75" y=".75" width="4" height="4" rx="1.25" style="fill:none"/>
+    </g>
+    <g data-name="그룹 14667" transform="translate(-5087 22371)">
+        <path data-name="사각형 17160" d="M2.5 0A2.5 2.5 0 0 1 5 2.5V10H0V2.5A2.5 2.5 0 0 1 2.5 0z" transform="translate(5110 -22344)" style="fill:#7dedf3"/>
+        <g data-name="사각형 17156" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+            <path d="M3 0a3 3 0 0 1 3 3v7H0V3a3 3 0 0 1 3-3z" style="stroke:none" transform="translate(5108 -22344)"/>
+            <path d="M3 .75A2.25 2.25 0 0 1 5.25 3v6.25H.75V3A2.25 2.25 0 0 1 3 .75z" style="fill:none" transform="translate(5108 -22344)"/>
+        </g>
+        <path data-name="사각형 17158" d="M3 0a3 3 0 0 1 3 3v12H0V3a3 3 0 0 1 3-3z" transform="translate(5115 -22349)" style="fill:#fff"/>
+        <path data-name="사각형 17159" d="M2.5 0A2.5 2.5 0 0 1 5 2.5V14H0V2.5A2.5 2.5 0 0 1 2.5 0z" transform="translate(5117 -22348)" style="fill:#7dedf3"/>
+        <g data-name="사각형 17157" style="fill:none;stroke:#2d3239;stroke-width:1.5px">
+            <path d="M3 0a3 3 0 0 1 3 3v12H0V3a3 3 0 0 1 3-3z" style="stroke:none" transform="translate(5115 -22349)"/>
+            <path d="M3 .75A2.25 2.25 0 0 1 5.25 3v11.25H.75V3A2.25 2.25 0 0 1 3 .75z" style="fill:none" transform="translate(5115 -22349)"/>
+        </g>
+        <rect data-name="사각형 17161" width="16" height="1.5" rx=".75" transform="translate(5107 -22335.5)" style="fill:#2d3239"/>
+    </g>
+</svg>

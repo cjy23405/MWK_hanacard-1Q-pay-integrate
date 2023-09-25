@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-shopping-care">쇼핑케어 이용안내 팝업</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 쇼핑케어 이용안내 -->
+			<!-- 2022.09.02 : mod : layer-wrap에 is-not-background-close 클래스 추가 -->
+			<!-- DD : 슬라이드형 팝업 딤 영역 클릭시 닫힘 기능 비활성시 is-not-background-close 클래스 값 추가 -->
+			<div class="layer-wrap layer-wrap--slide layer-wrap--select is-not-background-close" data-layer="layer-shopping-care">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">쇼핑케어 이용안내</h2>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="ui-layer__body-inner">
+								<div class="layer-contents">
+									<!-- 2022.08.24 : 컨텐츠 추가 및 디자인 변경으로 인한 전반적인 구조 변경 -->
+									<div class="layer-section">
+										<div class="layer-info">
+											<p class="layer-info-text font-weight-regular">다양한 혜택이 가득한 멤버십 쇼핑서비스입니다.</p>
+										</div>
+
+										<div class="info-guide margin-top-20">
+											<div class="info-list type-box">
+												<div class="info-item">
+													<h3 class="basic-text margin-bottom-10">하나카드로 구매한 물품의 손실 보상</h3>
+													<ul class="info-list shopping-info-list">
+														<li class="info-item type-indent">
+															<span class="indent">-</span>구매일로부터 180일 이내 파손/도난된 경우<br />
+															(본인 과실로 인한 단순 분실 제외)
+														</li>
+													</ul>
+												</div>
+												<div class="info-item">
+													<h3 class="basic-text margin-bottom-10">휴대폰 수리비용 보상</h3>
+													<ul class="info-list shopping-info-list">
+														<li class="info-item type-indent"><span class="indent">-</span>서비스 가입 다음날로부터 90일이 지난 경우에 한함</li>
+														<li class="info-item type-indent"><span class="indent">-</span>사고당 최대 10만원(연 10만원 한도 이내, 자기부담금 3만원)</li>
+													</ul>
+												</div>
+												<div class="info-item">
+													<h3 class="basic-text margin-bottom-10">매달 사은품 증정</h3>
+													<ul class="info-list shopping-info-list">
+														<li class="info-item type-indent"><span class="indent">-</span>[오프라인] 대형마트 5,000원 할인권 1매</li>
+														<li class="info-item type-indent"><span class="indent">-</span>[오프라인] 편의점 3,000원 할인권 1매(GS25, CU 중 택1)</li>
+														<li class="info-item type-indent"><span class="indent">-</span>[온라인] 이마트몰, 홈플러스 5,000원 상품권 각 1매(하나카드로 3만원 이상 결제 시 적용)</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="layer-info margin-top-20">
+											<p class="layer-info-text font-weight-regular">※ 서비스 이용료는 월 7,900원이며, 매월 신용카드 결제일에 청구됩니다.</p>
+										</div>
+									</div>
+									<!-- //2022.08.24 : 컨텐츠 추가 및 디자인 변경으로 인한 전반적인 구조 변경 -->
+
+									<!-- 2022.08.24 : add : 추가 -->
+									<div class="layer-section">
+										<div class="form-list-wrap margin-top-none">
+											<div class="form-item">
+												<div class="ui-form-title">
+													<strong class="title">대형마트 할인권 선택</strong>
+												</div>
+												<div class="ui-radio-group type-grid type-col3">
+													<div class="ui-form-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-1" checked />
+														<label for="radioGrid1-1" class="ui-label">
+															<span class="ui-label-text">이마트</span>
+														</label>
+													</div>
+													<div class="ui-form-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-2" />
+														<label for="radioGrid1-2" class="ui-label">
+															<span class="ui-label-text">롯데마트</span>
+														</label>
+													</div>
+													<div class="ui-form-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioGrid1" id="radioGrid1-3" />
+														<label for="radioGrid1-3" class="ui-label">
+															<span class="ui-label-text">홈플러스</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="form-item">
+												<div class="ui-form-title">
+													<strong class="title">편의점 할인권 선택</strong>
+												</div>
+												<div class="ui-radio-group type-grid type-col2">
+													<div class="ui-form-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioGrid2" id="radioGrid2-1" checked />
+														<label for="radioGrid2-1" class="ui-label">
+															<span class="ui-label-text">CU</span>
+														</label>
+													</div>
+													<div class="ui-form-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioGrid2" id="radioGrid2-2" />
+														<label for="radioGrid2-2" class="ui-label">
+															<span class="ui-label-text">GS25</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="layer-section">
+										<div class="ui-multiple-list margin-top-minus-10">
+											<div class="ui-multiple-item type-all type-medium">
+												<div class="ui-form-check-block type-large">
+													<input type="checkbox" class="ui-checkbox" id="selectCheckbox-all" data-checkbox-group="selectCheckbox" />
+													<label for="selectCheckbox-all" class="ui-label">
+														<span class="ui-check-object"></span>
+														<span class="ui-label-text">약관동의</span>
+													</label>
+												</div>
+											</div>
+											<div class="ui-check-terms type-margin-6">
+												<div class="ui-check-terms-list-group">
+													<div class="ui-check-terms-list">
+														<div class="ui-check-terms-item">
+															<div class="ui-form-check-block">
+																<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1-1" data-checkbox-group-child="selectCheckbox" />
+																<label for="selectCheckbox1-1-1" class="ui-label">
+																	<span class="ui-check-object"></span>
+																	<span class="ui-label-text">[필수] 상품 이용약관동의</span>
+																</label>
+																<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+															</div>
+														</div>
+														<div class="ui-check-terms-item">
+															<div class="ui-form-check-block">
+																<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1-2" data-checkbox-group-child="selectCheckbox" />
+																<label for="selectCheckbox1-1-2" class="ui-label">
+																	<span class="ui-check-object"></span>
+																	<span class="ui-label-text">[필수] 개인정보 수집/이용 동의</span>
+																</label>
+																<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+															</div>
+														</div>
+														<div class="ui-check-terms-item">
+															<div class="ui-form-check-block">
+																<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1-3" data-checkbox-group-child="selectCheckbox" />
+																<label for="selectCheckbox1-1-3" class="ui-label">
+																	<span class="ui-check-object"></span>
+																	<span class="ui-label-text">[필수] 개인(신용)정보 제공동의 하나카드귀중</span>
+																</label>
+																<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+															</div>
+														</div>
+														<div class="ui-check-terms-item">
+															<div class="ui-form-check-block">
+																<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1-4" data-checkbox-group-child="selectCheckbox" />
+																<label for="selectCheckbox1-1-4" class="ui-label">
+																	<span class="ui-check-object"></span>
+																	<span class="ui-label-text">[필수] 개인(신용)정보 제공동의 VP귀중</span>
+																</label>
+																<button type="button" class="ui-arrow"><span class="for-a11y">약관 상세 보기</span></button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //2022.08.24 : add : 추가 -->
+								</div>
+							</div>
+						</div>
+
+						<!-- 2022.09.15 : mod : 버튼 구조 변경 -->
+						<div class="ui-layer__foot">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item type-narrow">
+										<button type="button" class="ui-button ui-basic-button" data-role="layerClose">다음에</button>
+									</li>
+									<li class="ui-buttons-item">
+										<a href="" class="ui-basic-button type-primary" role="button">신청</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- //2022.09.15 : mod : 버튼 구조 변경 -->
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 쇼핑케어 이용안내 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-shopping-care');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

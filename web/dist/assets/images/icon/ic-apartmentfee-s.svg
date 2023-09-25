@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+    <defs>
+        <style>
+            .cls-1,.cls-2{fill:none}.cls-2{stroke:#2d3239;stroke-width:1.5px}.cls-4{stroke:none}
+        </style>
+    </defs>
+    <g id="ic_apartmentfee_s" transform="translate(-262 -1407.5)">
+        <path id="사각형_14313" data-name="사각형 14313" class="cls-1" transform="translate(262 1407.5)" d="M0 0h26v26H0z"/>
+        <g id="사각형_14314" data-name="사각형 14314" class="cls-2">
+            <path class="cls-4" d="M4 0h8a4 4 0 0 1 4 4v17H2a2 2 0 0 1-2-2V4a4 4 0 0 1 4-4z" transform="translate(265.5 1410)"/>
+            <path class="cls-1" d="M4 .75h8A3.25 3.25 0 0 1 15.25 4v15.5a.75.75 0 0 1-.75.75H2A1.25 1.25 0 0 1 .75 19V4A3.25 3.25 0 0 1 4 .75z" transform="translate(265.5 1410)"/>
+        </g>
+        <g id="사각형_14315" data-name="사각형 14315" class="cls-2">
+            <path class="cls-4" d="M0 0h1a4 4 0 0 1 4 4v6a2 2 0 0 1-2 2H0V0z" transform="translate(280 1419)"/>
+            <path class="cls-1" d="M1.406.75A2.844 2.844 0 0 1 4.25 3.594v6.563a1.094 1.094 0 0 1-1.094 1.093h-1.75a.656.656 0 0 1-.656-.656V1.406A.656.656 0 0 1 1.406.75z" transform="translate(280 1419)"/>
+        </g>
+        <g id="사각형_7957" data-name="사각형 7957" class="cls-2" transform="translate(269 1413.75)">
+            <rect class="cls-4" width="4" height="4" rx="2"/>
+            <rect class="cls-1" x=".75" y=".75" width="2.5" height="2.5" rx="1.25"/>
+        </g>
+        <g id="사각형_14323" data-name="사각형 14323" class="cls-2" transform="translate(269 1418.75)">
+            <rect class="cls-4" width="4" height="4" rx="2"/>
+            <rect class="cls-1" x=".75" y=".75" width="2.5" height="2.5" rx="1.25"/>
+        </g>
+        <g id="사각형_14321" data-name="사각형 14321" class="cls-2" transform="translate(274 1413.75)">
+            <rect class="cls-4" width="4" height="4" rx="2"/>
+            <rect class="cls-1" x=".75" y=".75" width="2.5" height="2.5" rx="1.25"/>
+        </g>
+        <g id="사각형_14322" data-name="사각형 14322" class="cls-2" transform="translate(274 1418.75)">
+            <rect class="cls-4" width="4" height="4" rx="2"/>
+            <rect class="cls-1" x=".75" y=".75" width="2.5" height="2.5" rx="1.25"/>
+        </g>
+        <path id="사각형_7969" data-name="사각형 7969" d="M0 0h3.5A1.5 1.5 0 0 1 5 1.5V7H0V0z" transform="translate(272.5 1424)" style="fill:#7dedf3"/>
+        <g id="사각형_14317" data-name="사각형 14317" class="cls-2" transform="translate(270.5 1424)">
+            <path class="cls-4" d="M1.5 0h3A1.5 1.5 0 0 1 6 1.5V7H0V1.5A1.5 1.5 0 0 1 1.5 0z"/>
+            <rect class="cls-1" x=".75" y=".75" width="4.5" height="5.5" rx=".75"/>
+        </g>
+    </g>
+</svg>

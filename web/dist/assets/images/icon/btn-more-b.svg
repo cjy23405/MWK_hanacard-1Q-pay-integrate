@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111;stroke-linecap:round;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="btn_more_b" transform="translate(-310 -513)">
+        <path id="선_249" data-name="선 249" class="cls-2" transform="translate(311.75 518)" d="M0 0h6.5"/>
+        <path id="선_250" data-name="선 250" class="cls-2" transform="rotate(90 -99.875 414.875)" d="M0 0h6.5"/>
+    </g>
+</svg>

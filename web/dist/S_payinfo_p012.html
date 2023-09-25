@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">명세서 수신 방법</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<!-- section -->
+						<div class="page-section">
+							<div class="form-list">
+								<div class="form-item">
+									<div class="form-title">
+										<strong class="title">청구단위구분</strong>
+									</div>
+									<div class="form-group">
+										<div class="ui-select-block">
+											<button type="button" class="ui-button ui-select" title="청구단위구분">하나카드 (통합)</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section type-line">
+							<div class="page-section-group">
+								<div class="form-detail">
+									<div class="form-detail-head">
+										<h2 class="title">현재 수령 방법</h2>
+									</div>
+									<dl class="form-detail-list">
+										<div class="form-detail-item">
+											<dt class="form-detail-title">결제일</dt>
+											<dd class="form-detail-group">매월5일</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">수령방법</dt>
+											<dd class="form-detail-group">E-mail</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">휴대폰</dt>
+											<dd class="form-detail-group">010-1234-****</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">이메일</dt>
+											<dd class="form-detail-group">aaeeaa**@naver.com</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">이메일유형</dt>
+											<dd class="form-detail-group">보안메일</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">부가서비스</dt>
+											<dd class="form-detail-group">영문명세서 서비스</dd>
+										</div>
+										<div class="form-detail-item">
+											<dt class="form-detail-title">주소</dt>
+											<dd class="form-detail-group">
+												15265<br />
+												서울특별시 중구 남대문로 9길 24<br />
+												하나카드
+											</dd>
+										</div>
+									</dl>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<!-- 2021.12.31 추가 -->
+								<div class="section-title">
+									<h2 class="title">변경할 수령 방법 선택</h2>
+								</div>
+								<!-- //2021.12.31 추가 -->
+								<!-- 2021.12.31 section-contents 태그 추가 -->
+								<div class="section-contents">
+									<div class="form-list">
+										<!-- [DD] 수령 방법에 따라 항목 노출/미노출 -->
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">수령 방법</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-select-block type-placeholder">
+													<button type="button" class="ui-button ui-select" title="수령 방법 선택">선택</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">휴대폰 번호</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block">
+													<input type="text" class="ui-input" title="휴대폰 번호" value="010-1111-****" disabled />
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">주소</strong>
+											</div>
+											<div class="form-group type-address">
+												<div class="ui-input-block">
+													<input type="number" pattern="\d*" class="ui-input" title="우편번호 입력" placeholder="우편번호" value="08008" disabled />
+												</div>
+												<div class="ui-input-block type-use-delete type-row">
+													<input type="text" class="ui-input" title="기본주소 입력" placeholder="주소" value="서울 양천구 목동로12길 80" disabled />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+												<div class="ui-input-block type-use-delete type-row">
+													<input type="text" class="ui-input" title="상세주소 입력" placeholder="상세주소" value="106동 1810호" disabled />
+													<button type="button" class="ui-button ui-input-delete">
+														<span class="for-a11y">입력 내용 지우기</span>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">이메일</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-input-block type-placeholder">
+													<input type="text" class="ui-input" title="이메일" value="Hana**@naver.com" disabled />
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">이메일 유형</strong>
+												<a href="" class="ui-arrow type-black" role="button">보안메일이란</a>
+											</div>
+											<div class="form-group">
+												<div class="ui-radio-group type-panel">
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-1" checked />
+														<label for="radioPanel1-1" class="ui-label">
+															<span class="ui-label-text">보안메일</span>
+														</label>
+													</div>
+													<div class="ui-radio-block type-box">
+														<input type="radio" class="ui-radio" name="radioPanel1" id="radioPanel1-2" />
+														<label for="radioPanel1-2" class="ui-label">
+															<span class="ui-label-text">일반메일</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-item">
+											<div class="form-title">
+												<strong class="title">부가서비스</strong>
+											</div>
+											<div class="form-group">
+												<div class="ui-checkbox-block margin-top-10">
+													<input type="checkbox" class="ui-checkbox" id="checkbox1" />
+													<label for="checkbox1" class="ui-label">
+														<span class="ui-checkbox-object"></span>
+														<span class="ui-label-text">영문 명세서 서비스</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<!-- //[DD] 수령 방법에 따라 항목 노출/미노출 -->
+									</div>
+								</div>
+							</div>
+							<div class="page-section-group">
+								<div class="ui-notice">
+									<div class="ui-notice-text">회원기본정보(직장/자택주소/이메일 등)의 등록 및 변경은 개인정보변경에서 하시기 바랍니다.</div>
+									<a href="" class="ui-arrow" role="button">개인 정보 변경</a>
+								</div>
+								<p class="ui-notice">개인정보 유출 방지를 위해 디지털명세서(이메일,모바일)를 권장합니다.</p>
+								<p class="ui-notice">우편 수령을 원하시는 손님은 고객센터(1800-1111)로 연락 주시기 바랍니다.</p>
+							</div>
+
+							<!-- 스마트명세서 선택 한 경우 + 청구단위구분 영역 없을 경우 -->
+							<div class="page-section-group">
+								<div class="section-title">
+									<h2 class="title">변경할 수령 방법 선택</h2>
+								</div>
+								<div class="type-none type-insert margin-bottom-none">
+									<p class="item-text">
+										T스마트청구서 앱에서 서비스 해지 후<br />
+										수령 방법 변경 가능합니다.
+									</p>
+								</div>
+							</div>
+							<!-- //스마트명세서 선택 한 경우 + 청구단위구분 영역 없을 경우 -->
+						</div>
+						<!-- //section -->
+					</div>
+				</div>
+
+				<!-- 하단 버튼영역 -->
+				<div class="page-buttons">
+					<div class="ui-buttons">
+						<ul class="ui-buttons-list">
+							<li class="ui-buttons-item">
+								<a href="" class="ui-basic-button type-primary" role="button">변경</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--// 하단 버튼영역 -->
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

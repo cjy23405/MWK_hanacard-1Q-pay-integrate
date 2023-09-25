@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap NaverPay">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title"></h1>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<h2 class="page-title">
+							마음에 드는 카드를<br />
+							골라주세요
+						</h2>					
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-contents">
+									<div class="js-ui-tab-panel">
+										<div data-tab="card-tab1">
+											<div class="card-image">
+												<div class="img-area">
+													<!-- 2022.04.27 : mod : alt 값 변경 -->
+													<img src="/images/naverpay/img_card_naver_white.svg" alt="" onerror="this.parentNode.className += ' is-error';" class="img" />
+												</div>
+											</div>
+										</div>
+										<div data-tab="card-tab2">
+											<div class="card-image">
+												<div class="img-area">
+													<!-- 2022.04.27 : mod : alt 값 변경 -->
+													<img src="/images/naverpay/img_card_naver_green.svg" alt="" onerror="this.parentNode.className += ' is-error';" class="img" />
+												</div>
+											</div>
+										</div>
+										<div data-tab="card-tab3">
+											<div class="card-image">
+												<div class="img-area">
+													<!-- 2022.04.27 : mod : alt 값 변경 -->
+													<img src="/images/naverpay/img_card_naver_blue.svg" alt="" onerror="this.parentNode.className += ' is-error';" class="img" />
+												</div>
+											</div>
+										</div>
+										<div class="sorting-area">
+											<div class="sorting-contents">
+												<div class="sorting-list">
+													<div class="sorting-item">
+														<div class="ui-radio-block type-tab">
+															<button type="button" class="ui-label" data-tab-open="card-tab1">
+																<span class="ui-label-text"></span>
+															</button>
+														</div>
+													</div>
+													<div class="sorting-item">
+														<div class="ui-radio-block type-tab tab2">
+															<button type="button" class="ui-label" data-tab-open="card-tab2">
+																<span class="ui-label-text"></span>
+															</button>
+														</div>
+													</div>
+													<div class="sorting-item">
+														<div class="ui-radio-block type-tab tab3">
+															<button type="button" class="ui-label" data-tab-open="card-tab3">
+																<span class="ui-label-text"></span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+
+						<!-- section -->
+						<div class="page-section">
+							<div class="page-section-group">
+								<div class="section-contents">
+									<div class="ui-checkbox-wrap">
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkbox1_1" checked />
+											<label for="checkbox1_1" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">교통카드</span>
+											</label>
+										</div>
+										<div class="ui-checkbox-block type-large">
+											<input type="checkbox" class="ui-checkbox" id="checkbox1_2" checked />
+											<label for="checkbox1_2" class="ui-label">
+												<span class="ui-checkbox-object"></span>
+												<span class="ui-label-text">해외 겸용</span>
+												<span class="ui-img">
+													<img src="/images/contents/global-card-brand/mastercard.png" alt="" class="img" />
+												</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //section -->
+					</div>
+
+					<div class="page-buttons type-naver-button">
+						<div class="form-bottom">
+							<div class="ui-buttons">
+								<ul class="ui-buttons-list">
+									<li class="ui-buttons-item">
+										<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

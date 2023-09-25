@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">통합검색</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-search-form">
+							<div class="search-word-area">
+								<!-- 2022.05.30 : mod : .type-search-black .type-input-group 클래스 삭제 -->
+								<div class="ui-input-block type-use-delete type-search">
+									<input type="search" class="ui-input" title="검색어 입력" placeholder="검색어를 입력해 주세요." />
+									<button type="button" class="ui-button ui-input-delete">
+										<span class="for-a11y">입력 내용 지우기</span>
+									</button>
+									<!-- 2022.05.18 : mod : 검색 버튼 추가 -->
+									<button type="button" class="ui-button ui-input-search">
+										<span class="for-a11y">검색</span>
+									</button>
+								</div>
+							</div>
+
+							<!-- 2022.03.04 : mod : 최근 검색어, 자동 완성 검색어 영역 수정 -->
+							<!-- 최근 검색어 -->
+							<!-- DD : 최근 검색어 없을 시 is-empty 클래스 값 추가 -->
+							<div class="ui-search-kewords-layer type-latest is-empty">
+								<div class="ui-search-kewords">
+									<ul class="ui-search-kewords-list"></ul>
+								</div>
+							</div>
+							<!-- //최근 검색어 -->
+
+							<!-- 자동 완성 검색어 -->
+							<div class="ui-search-kewords-layer type-auto">
+								<div class="ui-search-kewords type-auto">
+									<ul class="ui-search-kewords-list">
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">자동 완성 검색어 최대 2줄 노출 자동 완성 검색어 최대 2줄 노출 자동 완성 검색어 최대 2줄 노출 자동 완성 검색어 최대 2줄 노출</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">하나멤버스 1Q(원큐) <mark>카드</mark> ALL in</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">아모레퍼시픽 <mark>카드</mark></span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">새해에도 해외 교육비 & 해외 시험은 하나<mark>카드</mark>와 함께!</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">하나<mark>카드</mark> 글로벌서비스 Welcome Kit를 챙겨보세요!</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">[개인] 혜택 &gt; <mark>카드</mark>혜택 &gt; Sync<mark>카드</mark> 서비스 &gt; Sync <mark>카드</mark> 이용실적</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">[개인] 혜택 &gt; <mark>카드</mark>혜택 &gt; Sync<mark>카드</mark> 서비스 &gt; Sync <mark>카드</mark> 혜택금액</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">[개인] 금융 &gt; 장기<mark>카드</mark>대출(<mark>카드</mark>론) &gt; 대출계약철회 &gt; 대출계약철회조회/취소</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">[개인] 금융 &gt; 장기<mark>카드</mark>대출(<mark>카드</mark>론) &gt; 이용동의/거절신청 &gt; 이용동의신청</span>
+											</a>
+										</li>
+										<li class="ui-search-kewords-item">
+											<a href="" class="ui-search-kewords-link">
+												<span class="ui-search-kewords-text">[개인] 금융 &gt; 장기<mark>카드</mark>대출(<mark>카드</mark>론) &gt; 이용동의/거절신청 &gt; 이용거절신청</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //자동 완성 검색어 -->
+							<!-- //2022.03.04 : mod : 최근 검색어, 자동 완성 검색어 영역 수정 -->
+						</div>
+
+						<!-- 컨텐츠 -->
+						<div class="ui-search-contents">
+							<section class="menu-group">
+								<h2 class="menu-title margin-bottom-25">인기 검색어</h2>
+								<div class="rank-kewords">
+									<div class="rank-kewords-inner">
+										<ul class="rank-kewords-list">
+											<li class="rank-kewords-item">
+												<a href="" class="rank-kewords-link">
+													<span class="rank-kewords-num">1</span>
+													<span class="rank-kewords-text">나만의 Pick</span>
+												</a>
+											</li>
+											<li class="rank-kewords-item">
+												<a href="" class="rank-kewords-link">
+													<span class="rank-kewords-num">2</span>
+													<span class="rank-kewords-text">실적조회</span>
+												</a>
+											</li>
+											<li class="rank-kewords-item">
+												<a href="" class="rank-kewords-link">
+													<span class="rank-kewords-num">3</span>
+													<span class="rank-kewords-text">#tag1카드 Orange</span>
+												</a>
+											</li>
+											<li class="rank-kewords-item">
+												<a href="" class="rank-kewords-link">
+													<span class="rank-kewords-num">4</span>
+													<span class="rank-kewords-text">장기카드대출</span>
+												</a>
+											</li>
+											<li class="rank-kewords-item">
+												<a href="" class="rank-kewords-link">
+													<span class="rank-kewords-num">5</span>
+													<span class="rank-kewords-text">분할납부 서비스</span>
+												</a>
+											</li>
+											<li class="rank-kewords-item">
+												<a href="" class="rank-kewords-link">
+													<span class="rank-kewords-num">6</span>
+													<span class="rank-kewords-text">하나 THE 서비스</span>
+												</a>
+											</li>
+											<li class="rank-kewords-item">
+												<a href="" class="rank-kewords-link">
+													<span class="rank-kewords-num">7</span>
+													<span class="rank-kewords-text">이용대금명세서</span>
+												</a>
+											</li>
+											<li class="rank-kewords-item">
+												<a href="" class="rank-kewords-link">
+													<span class="rank-kewords-num">8</span>
+													<span class="rank-kewords-text">단기카드대출</span>
+												</a>
+											</li>
+											<li class="rank-kewords-item">
+												<a href="" class="rank-kewords-link">
+													<span class="rank-kewords-num">9</span>
+													<span class="rank-kewords-text">모바일 쿠폰</span>
+												</a>
+											</li>
+											<li class="rank-kewords-item">
+												<a href="" class="rank-kewords-link">
+													<span class="rank-kewords-num">10</span>
+													<span class="rank-kewords-text">결제일 변경</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</section>
+						</div>
+						<!-- //컨텐츠 -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

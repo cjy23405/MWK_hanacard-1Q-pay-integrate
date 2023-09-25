@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">해외매장결제 안내</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- 2022.03.16 : add : 컨텐츠 추가 -->
+					<div class="page-contents">
+						<p class="page-title">
+							해외에서 원큐페이를 이용하는 방법!<br />
+							유니온페이와 함께 QR로 결제하세요!
+						</p>
+						<section class="margin-top-35">
+							<div class="section-title">
+								<h3 class="title">대상카드</h3>
+							</div>
+							<ul class="info-list type-text-large type-outside">
+								<li class="info-item color-blur font-weight-regular">유니온페이 신용/체크카드</li>
+								<li class="info-item color-blur font-weight-regular">카드 앞, 뒷면의 유니온페이 로고를 확인하세요.</li>
+							</ul>
+						</section>
+						<section class="margin-top-35">
+							<div class="section-title">
+								<h3 class="title">대상 가맹점</h3>
+							</div>
+							<ul class="info-list type-text-large type-outside">
+								<li class="info-item color-blur font-weight-regular">매장 내 유니온페이 로고가 있는 해외 현지 가맹점</li>
+							</ul>
+						</section>
+						<section class="margin-top-35">
+							<div class="section-title">
+								<h3 class="title">이용지역</h3>
+							</div>
+							<div class="ui-radio-group type-grid type-half">
+								<div class="ui-radio-block type-box">
+									<div class="ui-label">
+										<div class="ui-label-text">
+											<div class="small-text color-basic">중국 본토</div>
+										</div>
+									</div>
+								</div>
+								<div class="ui-radio-block type-box">
+									<div class="ui-label">
+										<div class="ui-label-text">
+											<div class="small-text color-basic">
+												기타 지역<br />
+												(홍콩, 마카오, 대만 등)
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="margin-top-35">
+							<div class="section-title">
+								<h3 class="title">주의사항</h3>
+							</div>
+							<ul class="info-list type-text-large type-outside">
+								<li class="info-item color-blur font-weight-regular">반드시 이용 지역을 확인해 주세요. 중국 본토와 기타 지역에서 쓸 수 있는 QR이 다릅니다.</li>
+								<li class="info-item color-blur font-weight-regular">QR 결제 이용 시, 국내 사용이 불가합니다. 귀국 후 반드시 QR 설정을 해제해 주세요.</li>
+							</ul>
+						</section>
+						<section class="margin-top-35">
+							<div class="section-title">
+								<h3 class="title">결제방법</h3>
+							</div>
+							<ul class="info-list type-text-large type-outside">
+								<li class="info-item color-blur font-weight-regular">결제 카드 선택 > 매장결제 > QR을 매장에 제시 > QR 리더기 스캔 후 결제 완료</li>
+								<li class="info-item color-blur font-weight-regular">QR스캔 기능으로 가맹점에 있는 QR 촬영 > 금액 등 정보 입력 후 결제 진행 > 결제 완료</li>
+							</ul>
+						</section>
+						<section class="margin-top-35">
+							<div class="section-title">
+								<h3 class="title">주로 이용 가능 매장</h3>
+							</div>
+							<section class="margin-top-15">
+								<h2 class="default-text color-blur font-weight-medium margin-bottom-10">1. 카페, 레스토랑</h2>
+								<div class="store-logos">
+									<ul class="store-logos-list">
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-41.png" alt="Starbucks" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-42.png" alt="KFC" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-43.png" alt="Pizza Hut" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-44.png" alt="Burger King" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-45.png" alt="Paris Baguette" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-46.png" alt="Domino's Pizza" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-47.png" alt="Honeymoon Dessert" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="store-logos-cell">
+												<div class="store-logos-text">등</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+							<section class="margin-top-25">
+								<h2 class="default-text color-blur font-weight-medium margin-bottom-10">2. 편의점, 드럭 스토어</h2>
+								<div class="store-logos">
+									<ul class="store-logos-list">
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-48.png" alt="Lawson" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-49.png" alt="Watsons" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-50.png" alt="Tesco Lotus" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-51.png" alt="Walmart" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-52.png" alt="Faily Mart" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="store-logos-cell">
+												<div class="store-logos-text">등</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+							<section class="margin-top-25">
+								<h2 class="default-text color-blur font-weight-medium margin-bottom-10">3. 쇼핑</h2>
+								<div class="store-logos">
+									<ul class="store-logos-list">
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-53.png" alt="Xiaomi" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-54.png" alt="MINISO" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-55.png" alt="UNIQLO" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-56.png" alt="GAP" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="logo-image type-store type-medium-large">
+												<div class="logo-image-inner">
+													<img src="./assets/images/contents/offline-affiliate/logo-57.png" alt="IKEA" onerror="this.parentNode.className += ' is-error';" />
+												</div>
+											</div>
+										</li>
+										<li class="store-logos-item">
+											<div class="store-logos-cell">
+												<div class="store-logos-text">등</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+							<ul class="info-list type-default type-outside margin-top-25">
+								<li class="info-item type-presa font-weight-regular color-blur">이용 지역에 따라 주요 이용 가능 매장의 차이가 있습니다. 해외 현지 가맹점에서 유니온페이 로고를 꼭 확인해 주세요.</li>
+							</ul>
+						</section>
+					</div>
+					<!-- //2022.03.16 : add : 컨텐츠 추가 -->
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

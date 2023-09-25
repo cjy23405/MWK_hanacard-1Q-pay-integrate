@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">관심사에 맞는 카드 찾기</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="keywords type-has-reset margin-bottom-35" data-query-keywords="findCardKeywords">
+							<ul class="keywords-list">
+								<!--
+								<li class="keywords-item">
+									<div class="keywords-tag">
+										<div class="keywords-text">남</div>
+									</div>
+								</li>
+								-->
+							</ul>
+							<button type="button" class="ui-button keywords-reset" data-query-keywords-reset="findCardKeywords" data-step-slide-start="find-card">초기화</button>
+						</div>
+
+						<!--
+							DD :
+								특정 페이지 이동 함수 uiJSStepSlide.goTo('find-card', 2) 이용.
+								파라미터 순서 (name, index)
+						-->
+						<div class="step-slide" data-step-slide="find-card">
+							<div class="step-slide-inner">
+								<div class="step-slide-list">
+									<!-- 성별 -->
+									<div class="step-slide-item" data-query-keywords-form="findCardKeywords">
+										<div class="form-list">
+											<div class="form-item">
+												<div class="form-title margin-bottom-15">
+													<span class="title">
+														<span class="basic-text font-weight-light color-basic">성별을 선택해 주세요.</span>
+													</span>
+												</div>
+												<div class="form-group">
+													<div class="ui-radio-group type-panel js-query-keywords-checkboxs">
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check1" id="check1-1" data-area-disabled="find-card-1-next" data-query-keywords-text="남" />
+															<label for="check1-1" class="ui-label">
+																<span class="ui-label-text">남</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check1" id="check1-2" data-area-disabled="find-card-1-next" data-query-keywords-text="여" />
+															<label for="check1-2" class="ui-label">
+																<span class="ui-label-text">여</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-flex margin-top-35">
+											<div class="form-flex-cell type-flexible">
+												<button type="button" class="default-text basic-link color-blur" data-step-slide-next="find-card">SKIP</button>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-arrow type-black js-query-keywords-next" data-step-slide-next="find-card" data-area-disabled-target="find-card-1-next">
+													<span class="default-text">다음</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<!-- //성별 -->
+
+									<!-- 나이 -->
+									<div class="step-slide-item" data-query-keywords-form="findCardKeywords">
+										<div class="form-list">
+											<div class="form-item">
+												<div class="form-title margin-bottom-15">
+													<span class="title">
+														<span class="basic-text font-weight-light color-basic">나이를 선택해 주세요.</span>
+													</span>
+												</div>
+												<div class="form-group">
+													<div class="ui-radio-group type-grid js-query-keywords-checkboxs">
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check2" id="check2-1" data-area-disabled="find-card-2-next" data-query-keywords-text="10대" />
+															<label for="check2-1" class="ui-label">
+																<span class="ui-label-text">10대</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check2" id="check2-2" data-area-disabled="find-card-2-next" data-query-keywords-text="20대" />
+															<label for="check2-2" class="ui-label">
+																<span class="ui-label-text">20대</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check2" id="check2-3" data-area-disabled="find-card-2-next" data-query-keywords-text="30대" />
+															<label for="check2-3" class="ui-label">
+																<span class="ui-label-text">30대</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check2" id="check2-4" data-area-disabled="find-card-2-next" data-query-keywords-text="40대" />
+															<label for="check2-4" class="ui-label">
+																<span class="ui-label-text">40대</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check2" id="check2-5" data-area-disabled="find-card-2-next" data-query-keywords-text="50대" />
+															<label for="check2-5" class="ui-label">
+																<span class="ui-label-text">50대</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check2" id="check2-6" data-area-disabled="find-card-2-next" data-query-keywords-text="60대" />
+															<label for="check2-6" class="ui-label">
+																<span class="ui-label-text">60대</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-flex margin-top-35">
+											<div class="form-flex-cell type-flexible">
+												<button type="button" class="default-text basic-link color-blur" data-step-slide-next="find-card">SKIP</button>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-arrow type-black js-query-keywords-next" data-step-slide-next="find-card" data-area-disabled-target="find-card-2-next">
+													<span class="default-text">다음</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<!-- //나이 -->
+
+									<!-- 소비금액 -->
+									<div class="step-slide-item" data-query-keywords-form="findCardKeywords">
+										<div class="form-list">
+											<div class="form-item">
+												<div class="form-title margin-bottom-15">
+													<span class="title">
+														<span class="basic-text font-weight-light color-basic">한달 카드 소비 금액을 입력해 주세요.</span>
+													</span>
+												</div>
+												<div class="form-group">
+													<div class="ui-radio-group type-grid js-query-keywords-checkboxs">
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check3" id="check3-1" data-area-disabled="find-card-3-next" data-query-keywords-text="100만원" />
+															<label for="check3-1" class="ui-label">
+																<span class="ui-label-text">100만원</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check3" id="check3-2" data-area-disabled="find-card-3-next" data-query-keywords-text="200만원" />
+															<label for="check3-2" class="ui-label">
+																<span class="ui-label-text">200만원</span>
+															</label>
+														</div>
+														<div class="ui-radio-block type-box">
+															<input type="radio" class="ui-radio" name="check3" id="check3-3" data-area-disabled="find-card-3-next" data-query-keywords-text="300만원" />
+															<label for="check3-3" class="ui-label">
+																<span class="ui-label-text">300만원</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="form-flex margin-top-35">
+											<div class="form-flex-cell type-flexible">
+												<button type="button" class="default-text basic-link color-blur" data-step-slide-next="find-card">SKIP</button>
+											</div>
+											<div class="form-flex-cell">
+												<button type="button" class="ui-arrow type-black js-query-keywords-next" data-step-slide-next="find-card" data-area-disabled-target="find-card-3-next">
+													<span class="default-text">다음</span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<!-- //소비금액 -->
+
+									<!-- 카테고리 -->
+									<div class="step-slide-item" data-query-keywords-form="findCardKeywords">
+										<div class="form-list">
+											<div class="form-item">
+												<div class="form-title margin-bottom-15">
+													<span class="title">
+														<div class="form-flex type-narrow">
+															<div class="form-flex-cell">
+																<span class="basic-text font-weight-light color-basic">관심 카테고리를 선택해 주세요.</span>
+															</div>
+															<div class="form-flex-cell">
+																<span class="basic-text font-weight-light color-blur">(최대 5개)</span>
+															</div>
+														</div>
+													</span>
+												</div>
+												<div class="form-group">
+													<div class="ui-radio-group type-grid js-query-keywords-checkboxs" data-limit-max="5">
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-1" data-area-disabled="find-card-4-next" data-query-keywords-text="전가맹점" />
+															<label for="check4-1" class="ui-label">
+																<span class="ui-label-text">전가맹점</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-2" data-area-disabled="find-card-4-next" data-query-keywords-text="간편결제" />
+															<label for="check4-2" class="ui-label">
+																<span class="ui-label-text">간편결제</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-3" data-area-disabled="find-card-4-next" data-query-keywords-text="교통" />
+															<label for="check4-3" class="ui-label">
+																<span class="ui-label-text">교통</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-4" data-area-disabled="find-card-4-next" data-query-keywords-text="구독" />
+															<label for="check4-4" class="ui-label">
+																<span class="ui-label-text">구독</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-5" data-area-disabled="find-card-4-next" data-query-keywords-text="레저" />
+															<label for="check4-5" class="ui-label">
+																<span class="ui-label-text">레저</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-6" data-area-disabled="find-card-4-next" data-query-keywords-text="마일리지" />
+															<label for="check4-6" class="ui-label">
+																<span class="ui-label-text">마일리지</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-7" data-area-disabled="find-card-4-next" data-query-keywords-text="마트" />
+															<label for="check4-7" class="ui-label">
+																<span class="ui-label-text">마트</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-8" data-area-disabled="find-card-4-next" data-query-keywords-text="배달" />
+															<label for="check4-8" class="ui-label">
+																<span class="ui-label-text">배달</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-9" data-area-disabled="find-card-4-next" data-query-keywords-text="병원" />
+															<label for="check4-9" class="ui-label">
+																<span class="ui-label-text">병원</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-10" data-area-disabled="find-card-4-next" data-query-keywords-text="생활" />
+															<label for="check4-10" class="ui-label">
+																<span class="ui-label-text">생활</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-11" data-area-disabled="find-card-4-next" data-query-keywords-text="쇼핑" />
+															<label for="check4-11" class="ui-label">
+																<span class="ui-label-text">쇼핑</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-12" data-area-disabled="find-card-4-next" data-query-keywords-text="여행" />
+															<label for="check4-12" class="ui-label">
+																<span class="ui-label-text">여행</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-13" data-area-disabled="find-card-4-next" data-query-keywords-text="영화" />
+															<label for="check4-13" class="ui-label">
+																<span class="ui-label-text">영화</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-14" data-area-disabled="find-card-4-next" data-query-keywords-text="외식" />
+															<label for="check4-14" class="ui-label">
+																<span class="ui-label-text">외식</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-15" data-area-disabled="find-card-4-next" data-query-keywords-text="주유" />
+															<label for="check4-15" class="ui-label">
+																<span class="ui-label-text">주유</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-16" data-area-disabled="find-card-4-next" data-query-keywords-text="커피" />
+															<label for="check4-16" class="ui-label">
+																<span class="ui-label-text">커피</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-17" data-area-disabled="find-card-4-next" data-query-keywords-text="통신" />
+															<label for="check4-17" class="ui-label">
+																<span class="ui-label-text">통신</span>
+															</label>
+														</div>
+														<div class="ui-checkbox-block type-box">
+															<input type="checkbox" class="ui-checkbox" name="check4" id="check4-18" data-area-disabled="find-card-4-next" data-query-keywords-text="해외" />
+															<label for="check4-18" class="ui-label">
+																<span class="ui-label-text">해외</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="link-row align-right margin-top-35">
+											<button type="button" class="ui-arrow type-black js-query-keywords-next" data-area-disabled-target="find-card-4-next">
+												<span class="default-text">확인</span>
+											</button>
+										</div>
+									</div>
+									<!-- //카테고리 -->
+								</div>
+							</div>
+						</div>
+
+						<div class="page-section type-line">
+							<!-- 2022.03.30 추가 -->
+							<div class="img-area type-240">
+								<!-- 2022.04.27 : mod : alt 값 변경 -->
+								<img src="../dist/assets/images/contents/recommendation-card.gif" alt="카드가 커지며 선물들이 튀어나오는 이미지" class="img" />
+							</div>
+							<!-- //2022.03.30 추가 -->
+							<div class="total-amount type-no-line">
+								<div class="total-amount-head">
+									<div class="form-flex type-narrow">
+										<div class="form-flex-cell">
+											<h3 class="total-amount-title">예상 최대혜택 금액</h3>
+										</div>
+										<div class="form-flex-cell">
+											<button type="button" class="ui-button-question type-default-align">
+												<span class="for-a11y">(도움말)</span>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="total-amount-val"><span class="color-secondary">월 14,000 원</span></div>
+							</div>
+
+							<div class="info-cards type-regular">
+								<div class="info-cards-inner">
+									<ul class="info-cards-list">
+										<li class="info-cards-item">
+											<a href="" class="info-cards-link">
+												<!-- DD : 이미지 없을 때 -->
+												<div class="card-image">
+													<div class="card-image-inner"></div>
+												</div>
+												<div class="info-cards-explain">
+													<div class="info-cards-title">
+														<div class="medium-text">멀티카드</div>
+													</div>
+													<div class="info-cards-text margin-top-10">해외 이용 시 1.5% 캐쉬백 예상혜택 금액 <strong class="color-primary">14,000</strong> 원</div>
+												</div>
+											</a>
+										</li>
+										<li class="info-cards-item">
+											<a href="" class="info-cards-link">
+												<!-- DD : 이미지 에러 -->
+												<div class="card-image">
+													<div class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/card .png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="info-cards-explain">
+													<div class="info-cards-title">
+														<div class="medium-text">멀티카드</div>
+													</div>
+													<div class="info-cards-text margin-top-10">해외 이용 시 1.5% 캐쉬백 예상혜택 금액 <strong class="color-primary">14,000</strong> 원</div>
+												</div>
+											</a>
+										</li>
+										<li class="info-cards-item">
+											<a href="" class="info-cards-link">
+												<!-- DD : 이미지 있을 때 -->
+												<div class="card-image">
+													<div class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="info-cards-explain">
+													<div class="info-cards-title">
+														<div class="medium-text">멀티카드</div>
+													</div>
+													<div class="info-cards-text margin-top-10">해외 이용 시 1.5% 캐쉬백 예상혜택 금액 <strong class="color-primary">14,000</strong> 원</div>
+												</div>
+											</a>
+										</li>
+										<li class="info-cards-item">
+											<a href="" class="info-cards-link">
+												<div class="card-image">
+													<div class="card-image-inner">
+														<!-- 2022.05.19 : mod : alt 값 빈 값으로 변경 -->
+														<img src="./assets/images/_dummy/card.png" alt="" onerror="this.parentNode.className += ' is-error';" />
+													</div>
+												</div>
+												<div class="info-cards-explain">
+													<div class="info-cards-title">
+														<div class="medium-text">멀티카드</div>
+													</div>
+													<div class="info-cards-text margin-top-10">해외 이용 시 1.5% 캐쉬백 예상혜택 금액 <strong class="color-primary">14,000</strong> 원</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script type="text/javascript">
+			// 테스트 소스
+			$(document).on('uiQueryKeywordsNext', '[data-query-keywords-form]', function () {
+				console.log($(this));
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

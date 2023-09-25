@@ -1,0 +1,24 @@
+<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="none" d="M0 0h44v44H0z"/>
+        <path fill="none" d="M4 4h36v36H4z"/>
+        <g transform="translate(9 4)">
+            <rect fill="#FFF" fill-rule="nonzero" width="22" height="33" rx="5.5"/>
+            <rect stroke="#2D3239" stroke-width="1.5" x=".75" y=".75" width="20.5" height="31.5" rx="4.75"/>
+        </g>
+        <path fill="#2D3239" fill-rule="nonzero" d="M10.25 31h13.5v1.5h-13.5zM10 8.5h20V10H10z"/>
+        <path d="M22.125 14.875a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5z" fill="#7DEDF3" fill-rule="nonzero"/>
+        <g transform="translate(14.5 13.75)">
+            <circle cx="6" cy="6" r="6"/>
+            <circle stroke="#2D3239" stroke-width="1.5" cx="6" cy="6" r="5.25"/>
+        </g>
+        <path stroke="#2D3239" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m18.188 19.75 1.592 1.5 2.908-3"/>
+        <g>
+            <g fill-rule="nonzero">
+                <path d="M32.772 38.5h-4a4.24 4.24 0 0 1-2.87-1.115l-.073-.068-.09-.046a1.752 1.752 0 0 1-.437-.32l-4.715-4.714c-.33-.33-.513-.77-.513-1.237 0-.468.182-.907.513-1.238.33-.33.77-.513 1.238-.513.467 0 .907.183 1.237.513l.18.18 1.28 1.28V20.75c0-.966.785-1.751 1.75-1.751s1.75.785 1.75 1.75V26h7.75c.69 0 1.25.56 1.25 1.25v7a4.255 4.255 0 0 1-4.25 4.25z" fill="#FFF"/>
+                <path d="M32.772 37.75c1.93 0 3.5-1.57 3.5-3.5v-7a.5.5 0 0 0-.5-.5h-8.5v-6a1.001 1.001 0 0 0-2 0v12.281l-2.74-2.739a.994.994 0 0 0-.707-.293.994.994 0 0 0-.708.293.994.994 0 0 0-.293.708c0 .267.104.517.293.706l4.715 4.715c.075.075.159.136.25.184l.179.091.148.136a3.49 3.49 0 0 0 2.363.918h4m0 1.5h-4a4.983 4.983 0 0 1-3.376-1.312 2.5 2.5 0 0 1-.624-.456l-4.715-4.715a2.5 2.5 0 1 1 3.536-3.535l.179.179v-8.66a2.5 2.5 0 0 1 5 0v4.5h7a2 2 0 0 1 2 1.999v7a5 5 0 0 1-5 5z" fill="#2D3239"/>
+            </g>
+            <path stroke="#2D3239" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M28.022 26.15v2M31.022 26.15v2M34.022 26.15v2"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-search-zip-code-detail">우편번호 찾기 - 상세주소입력</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 우편번호 찾기 - 상세주소입력 -->
+			<div class="layer-wrap layer-wrap--full layer-wrap--zip" data-layer="layer-search-zip-code-detail">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<h2 class="header__title">우편번호 찾기</h2>
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="header">
+								<!-- 2022.10.27 : mod : .header__title에 .type-light 클래스 삭제 / 문구수정 -->
+								<h2 class="header__title">상세 주소를 입력해주세요.</h2>
+							</div>
+							<div class="ui-layer__body-inner">
+								<div class="page-section">
+									<div class="ui-form">
+										<div class="ui-form-list">
+											<!-- DD : 앞단계에서 선택된 주소 정보 출력 .type-inputed 클래스 추가 -->
+											<div class="ui-form-item type-inputed">
+												<dt class="ui-form-key">기본주소</dt>
+												<dd class="ui-form-val">
+													<button type="button" class="ui-form-hidden-button"></button>
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="form-inputed-text">인천 서구 에코로 181 통합데이터센터</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">상세주소</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="search" class="in-input" title="상세주소 입력" placeholder="상세주소 입력" data-focus-input-target="name" value="5층" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</div>
+									</div>
+									<div class="form-bottom margin-top-20">
+										<div class="ui-buttons">
+											<ul class="ui-buttons-list">
+												<li class="ui-buttons-item">
+													<!-- 2022.12.07 : 타입클래스 변경 .type-secondary => type-primary -->
+													<button type="button" class="ui-button ui-basic-button type-primary">확인</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- 검색결과가 있는 경우 -->
+								<!-- 2022.10.11 : mod : .page-section에 .type-line 클래스 삭제, 간격클래스 추가 -->
+								<div class="page-section margin-top-30">
+									<!-- 2022.10.11 : mod : .zip-area에 타입클래스 추가 -->
+									<div class="zip-area type-apply">
+										<div class="zip-head">
+											<p class="text">아래 해당하는 주소를 선택해주세요.</p>
+										</div>
+										<div class="zip-list">
+											<div class="zip-item">
+												<div class="zip-item-head"><strong class="number">22742</strong></div>
+												<button type="button" class="zip-item-block">
+													<span class="category">도로명</span>
+													<span class="text">인천 서구 에코로 163 청라국제도시역</span>
+												</button>
+											</div>
+											<div class="zip-item">
+												<div class="zip-item-head"><strong class="number">22742</strong></div>
+												<button type="button" class="zip-item-block">
+													<span class="category">지번</span>
+													<span class="text">인천 서구 경서동 519-2 청라국제도시역</span>
+												</button>
+											</div>
+										</div>
+										<!-- 2022.10.11 : del : 더보기 버튼 삭제 -->
+									</div>
+								</div>
+								<!-- //검색결과가 있는 경우 -->
+								<!-- 검색결과가 없는 경우 -->
+								<!-- 2022.10.11 : mod : .page-section에 .type-line 클래스 삭제, 간격클래스 추가 -->
+								<div class="page-section margin-top-20">
+									<div class="zip-confirm-area">
+										<!-- 2022.10.11 : mod : .type-none에 .type-bg 클래스 추가 -->
+										<div class="type-none type-bg">
+											<!-- 2022.11.17 : mod : 문구수정 -->
+											<p class="item-text normal-text">
+												조회되지 않는 주소입니다.<br />
+												상세주소를 정확히 입력해주세요.
+											</p>
+										</div>
+
+										<!-- 2022.10.11 : mod : 전반적인 구조변경 -->
+										<div class="row-contents-group type-line">
+											<div class="zip-area type-apply margin-bottom-20">
+												<div class="zip-list">
+													<div class="zip-item">
+														<div class="zip-item-head"><strong class="number">22742</strong></div>
+														<button type="button" class="zip-item-block">
+															<span class="category">도로명</span>
+															<span class="text">인천 서구 에코로 163 청라국제도시역</span>
+														</button>
+													</div>
+												</div>
+											</div>
+											<!-- 2022.11.30 : mod : 클래스 변경 ui-button-manual => type-translucent -->
+											<button type="button" class="ui-button ui-basic-button type-small type-translucent">해당 주소로 입력</button>
+										</div>
+										<!-- //2022.10.11 : mod : 전반적인 구조변경 -->
+									</div>
+								</div>
+								<!-- //검색결과가 없는 경우 -->
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 우편번호 찾기 - 상세주소입력 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-search-zip-code-detail');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

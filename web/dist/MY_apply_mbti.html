@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button" data-layer-open="layer-card-mbti-main">MBTI 카드찾기</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- layer: 	MBTI 카드찾기 -->
+			<div class="layer-wrap layer-wrap--full layer-card-mbti-main" data-layer="layer-card-mbti-main">
+				<div class="layer-container">
+					<section class="ui-layer">
+						<div class="ui-layer__head">
+							<div class="header">
+								<div class="header__right">
+									<button type="button" class="ui-button header__button header__button--close" data-role="layerClose">
+										<span class="for-a11y">레이어 닫기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="ui-layer__body">
+							<div class="card-mbti">
+								<div class="card-mbti-inner">
+									<h2 class="card-mbti-title">카드 MBTI</h2>
+									<p class="card-mbti-text">
+										나는 어떤 카드가<br />
+										어울리는 사람일까?
+									</p>
+									<button type="button" class="card-mbti-go">
+										<span class="for-a11y">확인하기</span>
+									</button>
+								</div>
+							</div>
+
+							<div class="mbti-tags">
+								<!-- 2022.07.01 : mod : slide 기능 변경 swiper적용 -->
+								<div class="slide-mbti-tags">
+									<div class="slide-mbti-controller"></div>
+									<div class="slide-mbti-reverse mbti-tags-row typr-reverse">
+										<ul class="mbti-tags-list">
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-1">카페인러버</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-2">영화관출석</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-3">미식가</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-4">뚜벅이</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-5">건강이 최고</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-6">독서는 마음의 양식</div>
+											</li>
+										</ul>
+									</div>
+									<div class="slide-mbti-forward mbti-tags-row">
+										<ul class="mbti-tags-list">
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-7">내 꿈은 세계일주</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-8">이불 밖은 위험해</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-9">이 구역의 큰 손</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-10">내가 제일 잘나가</div>
+											</li>
+											<li class="mbti-tags-item">
+												<div class="mbti-tags-block type-11">편의점만랩</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- //2022.07.01 : mod : slide 기능 변경 swiper적용 -->
+								<p class="mbti-tags-info">지금까지 <span class="color-primary">12,032</span> 명 참여했어요.</p>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //layer: 	MBTI 카드찾기 -->
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<script>
+			$(function () {
+				uiJSLayer.open('layer-card-mbti-main');
+			});
+		</script>
+		<!-- //script -->
+	</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="./assets/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="./assets/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="./assets/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="./assets/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="./assets/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="./assets/css/wcms-data.css" />
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">대출계약철회 조회/취소</h1>
+						</div>
+						<div class="header-right">
+							<button type="button" class="header-button type-close"><span class="for-a11y">닫기</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<div class="page-contents">
+						<div class="check-range">
+							<button type="button" class="ui-button-down">2021.01.01 ~ 2021.02.01</button>
+						</div>
+
+						<div class="check-detail-list">
+							<!-- Case : 내역 없는 경우 -->
+							<div class="type-none">
+								<p class="item-text">대출계약철회 내역이 없습니다.</p>
+							</div>
+							<!-- //Case : 내역 없는 경우 -->
+
+							<h3 class="check-detail-title">신청내역</h3>
+
+							<div class="form-detail">
+								<div class="form-detail-block">
+									<div class="form-detail-block-head type-white font-weight-medium">
+										<span class="title">철회진행상태</span>
+										<span class="title-right">철회신청</span>
+									</div>
+									<div class="form-detail-list type-text-default margin-top-5">
+										<dl class="form-detail-list">
+											<div class="form-detail-item default-text">
+												<dt class="form-detail-title">상품명</dt>
+												<dd class="form-detail-group"><strong>거치후원리금균등</strong></dd>
+											</div>
+											<div class="form-detail-item default-text">
+												<dt class="form-detail-title">철회신청일자</dt>
+												<dd class="form-detail-group"><strong>2021.01.01</strong></dd>
+											</div>
+											<div class="form-detail-item default-text">
+												<dt class="form-detail-title">대출일자</dt>
+												<dd class="form-detail-group"><strong>2021.01.01</strong></dd>
+											</div>
+											<div class="form-detail-item default-text">
+												<dt class="form-detail-title">대출금액</dt>
+												<dd class="form-detail-group"><strong>8,000,000 원</strong></dd>
+											</div>
+											<div class="form-detail-item default-text">
+												<dt class="form-detail-title">이자율</dt>
+												<dd class="form-detail-group"><strong>10.00%</strong></dd>
+											</div>
+										</dl>
+										<a href="" class="ui-basic-button type-secondary type-small margin-top-20">취소 신청</a>
+									</div>
+								</div>
+								<div class="form-detail-block">
+									<div class="form-detail-block-head type-white font-weight-medium">
+										<span class="title">철회진행상태</span>
+										<span class="title-right">철회완료</span>
+									</div>
+									<div class="form-detail-list type-text-default margin-top-5">
+										<dl class="form-detail-list">
+											<div class="form-detail-item default-text">
+												<dt class="form-detail-title">상품명</dt>
+												<dd class="form-detail-group"><strong>거치후원리금균등</strong></dd>
+											</div>
+											<div class="form-detail-item default-text">
+												<dt class="form-detail-title">철회신청일자</dt>
+												<dd class="form-detail-group"><strong>2021.01.01</strong></dd>
+											</div>
+											<div class="form-detail-item default-text">
+												<dt class="form-detail-title">대출일자</dt>
+												<dd class="form-detail-group"><strong>2021.01.01</strong></dd>
+											</div>
+											<div class="form-detail-item default-text">
+												<dt class="form-detail-title">대출금액</dt>
+												<dd class="form-detail-group"><strong>8,000,000 원</strong></dd>
+											</div>
+											<div class="form-detail-item default-text">
+												<dt class="form-detail-title">이자율</dt>
+												<dd class="form-detail-group"><strong>10.00%</strong></dd>
+											</div>
+										</dl>
+										<!-- 2022.02.17 철회신청외의 경우 미노출
+											<a href="" class="ui-basic-button type-secondary type-small margin-top-20">취소 신청</a> -->
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="use-notice-area js-ui-accordion">
+							<div class="use-notice-item js-ui-accordion__item">
+								<button type="button" class="use-notice-opener js-ui-accordion__opener">
+									꼭 확인해 주세요!
+									<span class="for-a11y">
+										상세 내용
+										<span class="open-text">열기</span>
+										<span class="close-text">닫기</span>
+									</span>
+								</button>
+								<div class="use-notice-contents js-ui-accordion__layer">
+									<ul class="info-list">
+										<li class="info-item">
+											철회 신청 당일까지 원금, 이자를 모두 상환(철회 신청일 이전 완납한 경우 포함)하신 경우에만 철회가 완료되며 상환하지 않는 경우에는 자동 취소되니, 상환 후 다시 철회하여 주시기
+											바랍니다.
+										</li>
+										<li class="info-item">철회진행상태가 신청인 대출건만 취소 가능하며, 완료된 건에 대한 철회 취소는 불가합니다.</li>
+										<li class="info-item">철회가능내역에 조회되지 않는 대출 건은 철회신청이 불가합니다.</li>
+										<li class="info-item">철회 신청은 전체 금융회사 대상 1개월 이내 1회, 금융회사별 1년 이내 2회로 한정됩니다.</li>
+										<li class="info-item">대출 철회에 따른 신용정보 변경은 일부 기간이 소요될 수 있습니다</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="./assets/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="./assets/js/swiper.min.js"></script>
+		<script type="text/javascript" src="./assets/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="./assets/js/highcharts.js"></script>
+		<script type="text/javascript" src="./assets/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="./assets/js/ui-script.js"></script>
+		<script type="text/javascript" src="./assets/js/wcms-data.js"></script>
+		<!-- //script -->
+	</body>
+</html>

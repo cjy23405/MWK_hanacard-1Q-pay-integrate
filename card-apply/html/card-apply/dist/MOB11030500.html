@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>하나카드 원큐페이 통합</title>
+
+		<meta charset="euc-kr" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- favicon -->
+		<link rel="icon" href="/images/common/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/common/appicon-57.png" />
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/common/appicon-60.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/common/appicon-72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/common/appicon-76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/common/appicon-114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/common/appicon-120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/common/appicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/common/appicon-152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/common/appicon-180.png" />
+		<link rel="apple-touch-icon" sizes="512x512" href="/images/common/appicon-512.png" />
+		<!-- //favicon -->
+
+		<!-- style -->
+		<link type="text/css" rel="stylesheet" href="/css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="/css/rangeslider.css" />
+		<link type="text/css" rel="stylesheet" href="/css/common.css" />
+		<link type="text/css" rel="stylesheet" href="/css/ui-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/page-style.css" />
+		<link type="text/css" rel="stylesheet" href="/css/wcms-data.css" />
+		<!-- 카드신청 css -->
+		<link type="text/css" rel="stylesheet" href="/mkca20/css/card-apply.css" />
+		<!-- //카드신청 css -->
+		<!-- //style -->
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="layout-wrap">
+				<!-- fix top area -->
+				<div class="fix-top-wrap">
+					<header class="header">
+						<div class="header-left">
+							<button type="button" class="header-button type-back"><span class="for-a11y">이전</span></button>
+							<h1 class="header-title">카드신청</h1>
+						</div>
+						<div class="header-right">
+							<a href="" class="header-button type-home" role="button"><span class="for-a11y">홈</span></a>
+							<button type="button" class="header-button type-menu"><span class="for-a11y">메뉴</span></button>
+						</div>
+					</header>
+				</div>
+				<!-- //fix top area -->
+
+				<div class="contents-wrap">
+					<!-- progress bar -->
+					<div class="fixed-step">
+						<div class="step-box" role="img" aria-label="총 14단계 중 1단계">
+							<span class="step-bar" style="width: 20%"></span>
+						</div>
+					</div>
+					<!-- //progress bar -->
+
+					<div class="page-contents">
+						<h2 class="page-contents-title">신분증정보를 입력해주세요.</h2>
+
+						<!-- 2023.04.10 : del : 전체 감싸는 .js-ui-tab-panel.page-tab-panel.type-certificate 삭제 : start
+						<div class="js-ui-tab-panel page-tab-panel type-certificate"> 
+						-->
+						<!-- 2023.04.10 : mod : 탭 형식 변경 ui-tab-area => .ui-radio-group.type-integrated-auth -->
+						<div class="ui-radio-group type-integrated-auth">
+							<div class="ui-radio-block">
+								<input type="radio" class="ui-radio" name="radioToggle" id="driverToggle" data-checkbox-tab="driverToggle" checked />
+								<label for="driverToggle" class="ui-label">
+									<span class="ui-label-icon type-driver-license"></span>
+									<span class="ui-label-text">운전면허증</span>
+								</label>
+							</div>
+							<div class="ui-radio-block">
+								<input type="radio" class="ui-radio" name="radioToggle" id="idCardToggle" data-checkbox-tab="idCardToggle" />
+								<label for="idCardToggle" class="ui-label">
+									<span class="ui-label-text">주민등록증</span>
+								</label>
+							</div>
+						</div>
+						<!-- //2023.04.10 : mod : 탭 형식 변경 ui-tab-area => .ui-radio-group.type-integrated-auth -->
+
+						<!-- tab contents -->
+						<!-- tab: 운전면허증 -->
+						<!-- 2023.04.10 : mod : 클래스 및 data속성 변경 
+							.ui-tab-panel.panel-id-card => .page-section.margin-top-30
+							data-tab => data-checkbox-tab-panel
+						-->
+						<div class="page-section margin-top-30" data-checkbox-tab-panel="driverToggle">
+							<div class="img-area type-id-card">
+								<!-- DD : 두개 케이스 중 랜덤 노출 / 이미지 경로변경 -->
+								<!-- case : 여성형 아바타 이미지 -- >
+									<div class="img-inner">
+										<img src="/mkca20/images/contents/img-driver-woman.png" alt="운전면허증 촬영 예시 이미지" class="img" />
+									</div>
+									< !-- //case : 여성형 아바타 이미지 -->
+								<!-- case : 남성형 아바타의 이미지 -->
+								<div class="img-inner">
+									<img src="/mkca20/images/contents/img-driver-man.png" alt="운전면허증 촬영 예시 이미지" class="img" />
+								</div>
+								<!-- //case : 남성형 아바타의 이미지 -->
+								<!-- //DD : 두개 케이스 중 랜덤 노출 / 이미지 경로변경 -->
+							</div>
+
+							<!-- 2023.04.10 : add : 신분증 촬영 버튼 추가 -->
+							<div class="margin-top-14 align-right">
+								<button type="button" class="ui-button basic-link ui-button-camera">신분증 촬영</button>
+							</div>
+							<!-- //2023.04.10 : add : 신분증 촬영 버튼 추가 -->
+
+							<!-- 2023.04.10 : mod : form-list-wrap에 margin-top-20 클래스 추가 -->
+							<div class="form-list-wrap margin-top-20">
+								<div class="form-item">
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">운전면허번호</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="flex-box type-align-top">
+																<div class="flex-box-cell">
+																	<div class="in-select-block input-width-tel-agency">
+																		<button type="button" class="in-select" title="발급기관 선택" data-placeholder="선택" data-focus-input-target="name"></button>
+																	</div>
+																</div>
+																<div class="flex-box-cell type-flexible">
+																	<div class="in-input-block">
+																		<input type="number" pattern="\d*" class="in-input" title="10자리 숫자 입력" placeholder="10자리 숫자 입력" />
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+							<div class="ui-check-terms type-bottom-line margin-top-20">
+								<div class="ui-check-terms-list-group">
+									<!-- 개인(신용)정보 필수적 동의서 -->
+									<div class="ui-check-terms-list js-ui-accordion">
+										<div class="ui-check-terms-item js-ui-accordion__item">
+											<div class="ui-form-check-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-1" />
+												<label for="selectCheckbox1-1" class="ui-label">
+													<span class="ui-check-object"></span>
+													<span class="ui-label-text">개인(신용)정보 필수적 동의서</span>
+												</label>
+												<button type="button" class="ui-button ui-check-terms-opener js-ui-accordion__opener">
+													<span class="for-a11y">
+														상세내용
+														<span class="open-text">열기</span>
+														<span class="close-text">닫기</span>
+													</span>
+												</button>
+											</div>
+											<div class="ui-check-terms-layer js-ui-accordion__layer">
+												<div class="ui-check-terms-contents">
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title">
+															<p class="paragraph padding-right-20">아래의 사항은 카드발급 및 유지를 위해 필수적으로 동의하셔야 하며, 필수적 동의서에 동의하시면 카드 발급이 가능합니다.</p>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title flex-box">
+															<p class="paragraph flex-box-cell type-flexible">
+																개인(신용)정보 필수적 수집, 이용에 관한 사항
+																<span class="paragraph-sub">
+																	본인은 귀사가 상기조회목적으로 다음과 같은 본인의 고유식별 정보를 처리하는 것에 동의합니다.<br />
+																	(고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호)
+																</span>
+															</p>
+															<button type="button" class="ui-arrow flex-box-cell"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title flex-box">
+															<p class="paragraph flex-box-cell type-flexible">
+																개인(신용)정보 조회에 관한 사항
+																<span class="paragraph-sub">
+																	본인은 귀사가 상기조회목적으로 다음과 같은 본인의 고유식별 정보를 처리하는 것에 동의합니다.<br />
+																	(고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호)
+																</span>
+															</p>
+															<button type="button" class="ui-arrow flex-box-cell"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //개인(신용)정보 필수적 동의서 -->
+								</div>
+							</div>
+							<!-- 2023.04.10 : del : 삭제
+							<div class="mobile-id-card margin-top-30">
+								<div class="mobile-id-card-box">
+									<div class="mobile-id-card-item">
+										<button type="button" class="mobile-id-card-button">모바일신분증으로 제출하기</button>
+									</div>
+									<div class="mobile-id-card-item">
+										<button type="button" class="ui-button-help"><span class="for-a11y">(도움말)</span></button>
+									</div>
+								</div>
+							</div>
+							-->
+							<!-- 2023.04.11 : add : 모바일신분증으로 제출하기 fake영역 추가 -->
+							<div class="page-fake-bottom"></div>
+							<!-- //2023.04.11 : add : 모바일신분증으로 제출하기 fake영역 추가 -->
+						</div>
+						<!-- //tab: 운전면허증 -->
+
+						<!-- tab: 주민등록증 -->
+						<!-- 2023.04.10 : mod : 클래스 및 data속성 변경 
+							.ui-tab-panel.panel-id-card => .page-section.margin-top-30
+							data-tab => data-checkbox-tab-panel
+						-->
+						<div class="page-section margin-top-30" data-checkbox-tab-panel="idCardToggle">
+							<div class="img-area type-id-card">
+								<!-- DD : 두개 케이스 중 랜덤 노출 / 이미지 경로변경 -->
+								<!-- case : 여성형 아바타 이미지 -- >
+									<div class="img-inner">
+										<img src="/mkca20/images/contents/img-id-woman.png" alt="운전면허증 촬영 예시 이미지" class="img" />
+									</div>
+									< !-- //case : 여성형 아바타 이미지 -->
+								<!-- case : 남성형 아바타의 이미지 -->
+								<div class="img-inner">
+									<img src="/mkca20/images/contents/img-id-man.png" alt="운전면허증 촬영 예시 이미지" class="img" />
+								</div>
+								<!-- //case : 남성형 아바타의 이미지 -->
+								<!-- //DD : 두개 케이스 중 랜덤 노출 / 이미지 경로변경 -->
+							</div>
+
+							<!-- 2023.04.10 : add : 신분증 촬영 버튼 추가 -->
+							<div class="margin-top-14 align-right">
+								<button type="button" class="ui-button basic-link ui-button-camera">신분증 촬영</button>
+							</div>
+							<!-- //2023.04.10 : add : 신분증 촬영 버튼 추가 -->
+
+							<!-- 2023.04.10 : mod : form-list-wrap에 margin-top-20 클래스 추가 -->
+							<div class="form-list-wrap margin-top-20">
+								<div class="form-item">
+									<div class="ui-form">
+										<dl class="ui-form-list">
+											<div class="ui-form-item">
+												<dt class="ui-form-key" data-focus-input="name">발급일</dt>
+												<dd class="ui-form-val">
+													<div class="ui-form-val-inner">
+														<div class="ui-form-contents">
+															<div class="in-input-block">
+																<input type="number" pattern="\d*" class="in-input" title="발급일 8자리 숫자 입력" placeholder="8자리 숫자 입력" data-focus-input-target="name" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</div>
+										</dl>
+									</div>
+								</div>
+							</div>
+
+							<div class="ui-check-terms type-bottom-line margin-top-20">
+								<div class="ui-check-terms-list-group">
+									<!-- 개인(신용)정보 필수적 동의서 -->
+									<div class="ui-check-terms-list js-ui-accordion">
+										<div class="ui-check-terms-item js-ui-accordion__item">
+											<div class="ui-form-check-block type-large">
+												<input type="checkbox" class="ui-checkbox" id="selectCheckbox1-2" />
+												<label for="selectCheckbox1-2" class="ui-label">
+													<span class="ui-check-object"></span>
+													<span class="ui-label-text">개인(신용)정보 필수적 동의서</span>
+												</label>
+												<button type="button" class="ui-button ui-check-terms-opener js-ui-accordion__opener">
+													<span class="for-a11y">
+														상세내용
+														<span class="open-text">열기</span>
+														<span class="close-text">닫기</span>
+													</span>
+												</button>
+											</div>
+											<div class="ui-check-terms-layer js-ui-accordion__layer">
+												<div class="ui-check-terms-contents">
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title">
+															<p class="paragraph padding-right-20">아래의 사항은 카드발급 및 유지를 위해 필수적으로 동의하셔야 하며, 필수적 동의서에 동의하시면 카드 발급이 가능합니다.</p>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title flex-box">
+															<p class="paragraph flex-box-cell type-flexible">
+																개인(신용)정보 필수적 수집, 이용에 관한 사항
+																<span class="paragraph-sub">
+																	본인은 귀사가 상기조회목적으로 다음과 같은 본인의 고유식별 정보를 처리하는 것에 동의합니다.<br />
+																	(고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호)
+																</span>
+															</p>
+															<button type="button" class="ui-arrow flex-box-cell"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+													<div class="ui-check-terms-item">
+														<div class="ui-check-list-title flex-box">
+															<p class="paragraph flex-box-cell type-flexible">
+																개인(신용)정보 조회에 관한 사항
+																<span class="paragraph-sub">
+																	본인은 귀사가 상기조회목적으로 다음과 같은 본인의 고유식별 정보를 처리하는 것에 동의합니다.<br />
+																	(고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호)
+																</span>
+															</p>
+															<button type="button" class="ui-arrow flex-box-cell"><span class="for-a11y">약관 상세 보기</span></button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //개인(신용)정보 필수적 동의서 -->
+								</div>
+							</div>
+
+							<!-- 2023.04.10 : del : 삭제
+							<div class="mobile-id-card margin-top-30">
+								<div class="mobile-id-card-box">
+									<div class="mobile-id-card-item">
+										<button type="button" class="mobile-id-card-button">모바일신분증으로 제출하기</button>
+									</div>
+									<div class="mobile-id-card-item">
+										<button type="button" class="ui-button-help"><span class="for-a11y">(도움말)</span></button>
+									</div>									
+								</div>
+							</div>
+							-->
+						</div>
+						<!-- //tab: 주민등록증 -->
+						<!-- //tab contents -->
+						<!-- //2023.04.10 : del : 전체 감싸는 .js-ui-tab-panel.page-tab-panel.type-certificate 삭제 : end
+						</div> 
+						-->
+					</div>
+
+					<!-- 2023.04.11 : mod : page-buttons type-fixed type-no-line에 type-floating-wrap 클래스 추가 -->
+					<div class="page-buttons type-fixed type-no-line type-floating-wrap">
+						<!-- 2023.04.10 : add : 모바일신분증으로 제출하기 버튼 추가 -->
+						<!-- tab: 운전면허증 -->
+						<!-- 2023.04.11 : mod : mobile-id-card에 margin-bottom-20 클래스 삭제 -->
+						<div class="mobile-id-card" data-checkbox-tab-panel="driverToggle">
+							<div class="mobile-id-card-box">
+								<div class="mobile-id-card-item">
+									<button type="button" class="mobile-id-card-button">모바일신분증으로 제출하기</button>
+								</div>
+								<div class="mobile-id-card-item">
+									<button type="button" class="ui-button-help"><span class="for-a11y">(도움말)</span></button>
+								</div>
+							</div>
+						</div>
+						<!-- //tab: 운전면허증 -->
+						<!-- //2023.04.10 : add : 모바일신분증으로 제출하기 버튼 추가 -->
+						<div class="ui-buttons">
+							<ul class="ui-buttons-list">
+								<li class="ui-buttons-item">
+									<button type="button" class="ui-button ui-basic-button type-primary">다음</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- script -->
+		<script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="/js/swiper.min.js"></script>
+		<script type="text/javascript" src="/js/rangeslider.min.js"></script>
+		<script type="text/javascript" src="/js/highcharts.js"></script>
+		<script type="text/javascript" src="/js/duet-date-picker/duet.js"></script>
+		<script type="text/javascript" src="/js/ui-script.js"></script>
+		<script type="text/javascript" src="/js/wcms-data.js"></script>
+		<!-- 카드신청 js -->
+		<script type="text/javascript" src="/mkca20/js/card-apply.js"></script>
+		<!-- //카드신청 js -->
+		<!-- //script -->
+	</body>
+</html>
